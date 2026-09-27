@@ -1,0 +1,149 @@
+{
+  "version": "0.1.0",
+  "run_kind": "live_models",
+  "started_at": "2026-09-27T10:22:19.323981+00:00",
+  "status": "completed",
+  "python": "3.14.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "source_sha256": "584fd33626cb850ea845464f06d51fdcbac7614d0b0a1d68e2cf25e74b739bd5",
+  "rubric_version": "evidence-qa-v1",
+  "config": {
+    "command": "run",
+    "dataset": "/Users/yashbaruah/Desktop/Halt IQ/data/diagnostic.jsonl",
+    "split": "dev",
+    "limit": 8,
+    "max_rounds": 3,
+    "output": "/Users/yashbaruah/Desktop/Halt IQ/results/local-verified",
+    "critics": "fixed,llm,local-typed",
+    "ollama_url": "http://localhost:11434",
+    "writer_model": "qwen3:8b",
+    "critic_model": "qwen3:8b",
+    "seed": 42,
+    "timeout": 180.0,
+    "threshold": 0.8,
+    "jev_model": "jev-1.13.0",
+    "openjev_url": "http://localhost:8080",
+    "openjev_model": "openjev-latest",
+    "budget_usd": 5.0,
+    "budget_ledger": "/Users/yashbaruah/Desktop/Halt IQ/.haltiq/budget.sqlite",
+    "arms": [
+      "fixed",
+      "llm",
+      "local-typed"
+    ],
+    "local_models": [
+      {
+        "name": "qwen3:14b",
+        "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+        "size": 9276198565,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "14.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 5120
+        }
+      },
+      {
+        "name": "gemma3:12b",
+        "digest": "f4031aab637d1ffa37b42570452ae0e4fad0314754d17ded67322e4b95836f8a",
+        "size": 8149190253,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3"
+          ],
+          "parameter_size": "12.2B",
+          "quantization_level": "Q4_K_M"
+        }
+      },
+      {
+        "name": "qwen3:8b",
+        "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "size": 5225388164,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "qwen3-vl:8b",
+        "digest": "901cae73216286ea8c5aba8b46d307ff7188f737285ec500c795a12f05225d28",
+        "size": 6140415879,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3vl",
+          "families": [
+            "qwen3vl"
+          ],
+          "parameter_size": "8.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "deepseek-r1:8b",
+        "digest": "6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+        "size": 5225376047,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "llama3.1:8b-instruct-q4_K_M",
+        "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+        "size": 4920753328,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "8.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096
+        }
+      }
+    ]
+  },
+  "task_ids": [
+    "dev-001",
+    "dev-002",
+    "dev-003",
+    "dev-004",
+    "dev-005",
+    "dev-006",
+    "dev-007",
+    "dev-008"
+  ],
+  "dataset_sha256": "680b7ca9f8cc6c677c2ea8e17eea40c9dab9d9abc4a32a6fbd0adb7c636e1c46",
+  "finished_at": "2026-09-27T10:22:46.006321+00:00"
+}

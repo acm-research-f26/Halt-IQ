@@ -1,0 +1,51 @@
+{
+  "run_kind": "scripted_demo",
+  "status": "completed",
+  "arms": {
+    "fixed": {
+      "episodes": 8,
+      "completed": 8,
+      "failures": 0,
+      "success_rate": 0.75,
+      "mean_token_f1": 0.875,
+      "mean_rounds": 3,
+      "mean_writer_calls": 3,
+      "mean_judge_calls": 0,
+      "judge_calls": 0,
+      "typed_questions": 0,
+      "mean_judge_latency_ms": null,
+      "operational_input_tokens": 0,
+      "operational_output_tokens": 0,
+      "api_cost_usd": 0.0,
+      "approvals": 0,
+      "false_approvals": 0,
+      "false_approval_rate": null
+    },
+    "mock-typed": {
+      "episodes": 8,
+      "completed": 8,
+      "failures": 0,
+      "success_rate": 0.75,
+      "mean_token_f1": 0.8125,
+      "mean_rounds": 2,
+      "mean_writer_calls": 2,
+      "mean_judge_calls": 2,
+      "judge_calls": 16,
+      "typed_questions": 48,
+      "mean_judge_latency_ms": 0.0,
+      "operational_input_tokens": 0,
+      "operational_output_tokens": 0,
+      "api_cost_usd": 0.0,
+      "approvals": 7,
+      "false_approvals": 1,
+      "false_approval_rate": 0.14285714285714285
+    }
+  },
+  "actual_experiment": {
+    "successful_model_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "api_cost_usd": 0,
+    "note": "Shared first drafts are counted once here, once per arm in operational metrics. Failed calls may retain budget reservations; see manifest budget."
+  }
+}

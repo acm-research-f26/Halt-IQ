@@ -1,0 +1,7 @@
+{
+  "reference_url": "https://raw.githubusercontent.com/hotpotqa/hotpot/master/hotpot_evaluate_v1.py",
+  "reference_sha256": "d35fc91a6db21d791dbdda11daf3856e9359f5701d54e3eefba20d88fecc02c0",
+  "answer_pairs_checked": 529,
+  "status": "all_match",
+  "scope": "Answer EM/F1 parity; no supporting-fact or joint scoring."
+}

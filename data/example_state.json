@@ -1,0 +1,5 @@
+{
+  "question": "Which city contains the archive directed by Mira?",
+  "evidence": ["Mira directs the Cedar Archive.", "The Cedar Archive is in Bellport.", "The Oak Archive is in Hillford."],
+  "draft": "Hillford"
+}

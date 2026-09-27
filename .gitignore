@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.haltiq/
+.DS_Store
+results/runs/
+*.egg-info/
+dist/
+build/
+
+# Local background materials and superseded exploratory output.
+Docs/*.pdf
+Docs/*.pptx
+Docs/*.zip
+results/local-pilot/

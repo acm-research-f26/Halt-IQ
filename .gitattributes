@@ -1,0 +1,4 @@
+# Preserve source/dataset hashes across macOS and Windows checkouts.
+* text eol=lf
+# Python's CSV writer uses CRLF; preserve archived result bytes.
+*.csv -text whitespace=cr-at-eol

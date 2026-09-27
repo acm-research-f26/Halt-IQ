@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haltiq-jev-critic"
+version = "0.1.0"
+description = "A budget-aware Jev critic experiment with a local writer"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+data = ["pyarrow==25.0.1"]
+
+[project.scripts]
+haltiq = "haltiq.cli:main"
+
+[tool.setuptools]
+packages = ["haltiq"]

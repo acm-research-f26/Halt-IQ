@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "run_kind": "scripted_demo",
+  "started_at": "2026-09-27T10:17:52.948795+00:00",
+  "status": "completed",
+  "python": "3.14.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "source_sha256": "e4fccd7c0c02b5734151787d03da32454e9f997128fce7e5e1f560121a122538",
+  "rubric_version": "evidence-qa-v1",
+  "config": {
+    "command": "demo",
+    "dataset": "/Users/yashbaruah/Desktop/Halt IQ/data/diagnostic.jsonl",
+    "split": "dev",
+    "limit": null,
+    "max_rounds": 3,
+    "output": "/Users/yashbaruah/Desktop/Halt IQ/results/demo",
+    "ollama_url": "http://localhost:11434",
+    "writer_model": "qwen3:8b",
+    "critic_model": "qwen3:8b",
+    "seed": 42,
+    "timeout": 180.0,
+    "threshold": 0.8,
+    "jev_model": "jev-1.13.0",
+    "openjev_url": "http://localhost:8080",
+    "openjev_model": "openjev-latest",
+    "budget_usd": 5.0,
+    "budget_ledger": "/Users/yashbaruah/Desktop/Halt IQ/.haltiq/budget.sqlite",
+    "arms": [
+      "fixed",
+      "mock-typed"
+    ],
+    "local_models": []
+  },
+  "task_ids": [
+    "dev-001",
+    "dev-002",
+    "dev-003",
+    "dev-004",
+    "dev-005",
+    "dev-006",
+    "dev-007",
+    "dev-008"
+  ],
+  "dataset_sha256": "680b7ca9f8cc6c677c2ea8e17eea40c9dab9d9abc4a32a6fbd0adb7c636e1c46",
+  "finished_at": "2026-09-27T10:17:52.973939+00:00"
+}
