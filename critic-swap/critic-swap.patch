@@ -15,10 +15,10 @@ index 29d15d0..9b2ce7e 100644
  
 diff --git a/experiments/compare_critics.py b/experiments/compare_critics.py
 new file mode 100644
-index 0000000..83f689e
+index 0000000..22b661a
 --- /dev/null
 +++ b/experiments/compare_critics.py
-@@ -0,0 +1,152 @@
+@@ -0,0 +1,159 @@
 +"""
 +compare_critics.py
 +
@@ -36,6 +36,9 @@ index 0000000..83f689e
 +    latency_s      mean writer+critic wall time up to the stop round
 +                   (judge time excluded; near zero and meaningless in --mock)
 +    final_is       mean Information Score of the final draft
++    ar_mean        mean RAGAS answer_relevancy of the final draft
++    ar_zero_rate   fraction of final drafts with answer_relevancy == 0 (RAGAS
++                   zeroes it for noncommittal answers, which drags final_is down)
 +
 +Usage (from backend/):
 +    python experiments/compare_critics.py --mock --split dev --success is
@@ -84,7 +87,7 @@ index 0000000..83f689e
 +        cells = [r for r in rows if r.policy == policy]
 +        if not cells:
 +            continue
-+        succ = rounds = judge = critic_llm = latency = fin_is = 0.0
++        succ = rounds = judge = critic_llm = latency = fin_is = ar = ar_zero = 0.0
 +        for r in cells:
 +            traj = trajs.get(r.scenario_id) or trajs.setdefault(
 +                r.scenario_id, store.load_trajectory(r.scenario_id))
@@ -95,11 +98,14 @@ index 0000000..83f689e
 +            critic_llm += sum(x.critic_llm_calls for x in ran)
 +            latency += sum(x.writer_latency_s + x.critic_latency_s for x in ran)
 +            fin_is += r.final_is
++            ar += r.answer_relevancy
++            ar_zero += r.answer_relevancy == 0.0
 +        n = len(cells)
 +        out.append({
 +            "policy": policy, "n": n, "success_rate": succ / n, "avg_rounds": rounds / n,
 +            "judge_calls": judge / n, "critic_llm": critic_llm / n,
 +            "latency_s": latency / n, "final_is": fin_is / n,
++            "ar_mean": ar / n, "ar_zero_rate": ar_zero / n,
 +        })
 +    return out
 +
@@ -148,9 +154,10 @@ index 0000000..83f689e
 +            table.append({"critic": critic, **row})
 +
 +    cols = ["critic", "policy", "n", "success_rate", "avg_rounds", "judge_calls",
-+            "critic_llm", "latency_s", "final_is"]
++            "critic_llm", "latency_s", "final_is", "ar_mean", "ar_zero_rate"]
 +    fmt = {"success_rate": "{:.3f}", "avg_rounds": "{:.2f}", "judge_calls": "{:.2f}",
-+           "critic_llm": "{:.2f}", "latency_s": "{:.3f}", "final_is": "{:.4f}"}
++           "critic_llm": "{:.2f}", "latency_s": "{:.3f}", "final_is": "{:.4f}",
++           "ar_mean": "{:.4f}", "ar_zero_rate": "{:.3f}"}
 +    cell = lambda r, c: fmt.get(c, "{}").format(r[c])
 +
 +    success_def = (f"final IS >= {args.is_threshold}" if args.success == "is"
@@ -284,6 +291,33 @@ index d06d4e6..6626529 100644
      ap.add_argument("--ablations", action="store_true",
                      help="Also run the per-signal ablation matrix (free on cached trajectories).")
      ap.add_argument("--mock", action="store_true", help="Offline synthetic self-test (no API).")
+diff --git a/shp/config.py b/shp/config.py
+index 3948358..efb5960 100644
+--- a/shp/config.py
++++ b/shp/config.py
+@@ -27,6 +27,10 @@ PROVIDER_MODELS: dict[str, list[str]] = {
+         # These two are the currently-serving free-tier models.
+         "llama-3.1-8b-instant",
+         "llama-3.3-70b-versatile",
++        # The Llama models above are no longer served to newer Groq keys;
++        # gpt-oss are reasoning models (see GROQ_REASONING_EFFORT).
++        "openai/gpt-oss-20b",
++        "openai/gpt-oss-120b",
+     ],
+     "openai": [
+         "gpt-4o-mini",
+@@ -66,6 +70,11 @@ EVAL_LLM_TEMPERATURE: float = 0.0
+ EVAL_LLM_MAX_TOKENS: int = 4096
+ EVAL_LLM_MAX_RETRIES: int = 3
+ 
++# Reasoning effort for Groq reasoning models (gpt-oss). Reasoning tokens count
++# against max_tokens, so keep it low to leave room for the actual answer.
++GROQ_REASONING_EFFORT: str = os.getenv("GROQ_REASONING_EFFORT", "low")
++GROQ_REASONING_MODEL_PREFIXES: tuple[str, ...] = ("openai/gpt-oss",)
++
+ # ─────────────────────────────────────────────────────────────
+ # Embedding model — always local, provider-independent
+ # ─────────────────────────────────────────────────────────────
 diff --git a/shp/critics.py b/shp/critics.py
 new file mode 100644
 index 0000000..d02d521
@@ -451,6 +485,48 @@ index 0000000..d02d521
 +    if name == "jev":
 +        return make_jev_critic_node(llm, JevClient(mock=mock), emit)
 +    raise ValueError(f"Unknown critic '{name}'. Choices: {CRITIC_CHOICES}")
+diff --git a/shp/providers.py b/shp/providers.py
+index 331f29f..f002be3 100644
+--- a/shp/providers.py
++++ b/shp/providers.py
+@@ -27,6 +27,8 @@ from shp.config import (
+     EVAL_LLM_TEMPERATURE,
+     EVAL_LLM_MAX_TOKENS,
+     EVAL_LLM_MAX_RETRIES,
++    GROQ_REASONING_EFFORT,
++    GROQ_REASONING_MODEL_PREFIXES,
+     PROVIDER_MODELS,
+ )
+ from shp.token_meter import METER
+@@ -155,6 +157,7 @@ def get_llm(
+             temperature=temperature,
+             max_tokens=max_tokens,
+             api_key=api_key,
++            **_groq_reasoning_kwargs(model),
+         )
+ 
+     if provider == "openai":
+@@ -199,6 +202,7 @@ def get_ragas_llm(provider: str, model: str) -> LangchainLLMWrapper:
+             max_tokens=EVAL_LLM_MAX_TOKENS,
+             max_retries=EVAL_LLM_MAX_RETRIES,
+             api_key=api_key,
++            **_groq_reasoning_kwargs(model),
+         ))
+ 
+     if provider == "openai":
+@@ -232,6 +236,12 @@ def list_providers() -> dict[str, list[str]]:
+ # ─────────────────────────────────────────────────────────────
+ # Private helpers
+ # ─────────────────────────────────────────────────────────────
++def _groq_reasoning_kwargs(model: str) -> dict:
++    if model.startswith(GROQ_REASONING_MODEL_PREFIXES):
++        return {"reasoning_effort": GROQ_REASONING_EFFORT}
++    return {}
++
++
+ def _require_key(env_var: str, provider: str) -> str:
+     key = os.getenv(env_var)
+     if not key:
 diff --git a/shp/trajectory.py b/shp/trajectory.py
 index 1ef258f..1a6d9ea 100644
 --- a/shp/trajectory.py
