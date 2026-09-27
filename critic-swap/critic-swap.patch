@@ -1,0 +1,558 @@
+diff --git a/experiments/checkpoint.py b/experiments/checkpoint.py
+index 29d15d0..9b2ce7e 100644
+--- a/experiments/checkpoint.py
++++ b/experiments/checkpoint.py
+@@ -93,6 +93,10 @@ class CheckpointStore:
+                 distance=r["distance"],
+                 embedding=embeddings[i] if i < len(embeddings) else [],
+                 writer_tokens=r["writer_tokens"], critic_tokens=r["critic_tokens"],
++                writer_latency_s=r.get("writer_latency_s", 0.0),
++                critic_latency_s=r.get("critic_latency_s", 0.0),
++                critic_confidence=r.get("critic_confidence"),
++                critic_llm_calls=r.get("critic_llm_calls", 1),
+             ))
+         return traj
+ 
+diff --git a/experiments/compare_critics.py b/experiments/compare_critics.py
+new file mode 100644
+index 0000000..83f689e
+--- /dev/null
++++ b/experiments/compare_critics.py
+@@ -0,0 +1,152 @@
++"""
++compare_critics.py
++
++Run the same scenarios once per critic (via run_experiment.run, so trajectories,
++judge cache and rows are reused/resumable) and print one table per critic ×
++halt policy:
++
++    success_rate   fraction of scenarios whose final draft counts as a success
++                   (--success contains: normalized ground truth appears in the
++                   answer; --success is: final IS >= --is-threshold)
++    avg_rounds     mean stop round
++    judge_calls    mean OPERATIONAL RAGAS calls per scenario (one per round for
++                   policies that need IS at runtime; 0 otherwise)
++    critic_llm     mean critic LLM calls per scenario (jev skips it on approve)
++    latency_s      mean writer+critic wall time up to the stop round
++                   (judge time excluded; near zero and meaningless in --mock)
++    final_is       mean Information Score of the final draft
++
++Usage (from backend/):
++    python experiments/compare_critics.py --mock --split dev --success is
++    python experiments/compare_critics.py --split dev --critics default jev --limit 10
++"""
++
++from __future__ import annotations
++
++import argparse
++import os
++import re
++import string
++import sys
++
++sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
++
++from shp.config import DEFAULT_PROVIDER, MAX_ROUNDS
++from shp.critics import CRITIC_CHOICES
++from shp.halting import HaltConfig
++from experiments.checkpoint import CheckpointStore
++from experiments.policies import default_policy_suite, ablation_policy_suite
++from experiments.run_experiment import build_argparser, run
++
++
++def _normalize(text: str) -> str:
++    text = text.lower()
++    text = "".join(ch for ch in text if ch not in set(string.punctuation))
++    text = re.sub(r"\b(a|an|the)\b", " ", text)
++    return " ".join(text.split())
++
++
++def _is_success(mode: str, draft: str, ground_truth: str, final_is: float, threshold: float) -> bool:
++    if mode == "is":
++        return final_is >= threshold
++    gt = _normalize(ground_truth)
++    return bool(gt) and f" {gt} " in f" {_normalize(draft)} "
++
++
++def summarize(root: str, policies: list[str], uses_judge: dict[str, bool],
++              success: str, threshold: float) -> list[dict]:
++    store = CheckpointStore(root)
++    rows = [r for r in store.load_rows() if r.policy in policies]
++    trajs: dict = {}
++    out = []
++    for policy in policies:
++        cells = [r for r in rows if r.policy == policy]
++        if not cells:
++            continue
++        succ = rounds = judge = critic_llm = latency = fin_is = 0.0
++        for r in cells:
++            traj = trajs.get(r.scenario_id) or trajs.setdefault(
++                r.scenario_id, store.load_trajectory(r.scenario_id))
++            ran = traj.rounds[:r.stop_round]
++            succ += _is_success(success, ran[-1].draft, traj.ground_truth, r.final_is, threshold)
++            rounds += r.stop_round
++            judge += r.stop_round if uses_judge.get(policy, False) else 0
++            critic_llm += sum(x.critic_llm_calls for x in ran)
++            latency += sum(x.writer_latency_s + x.critic_latency_s for x in ran)
++            fin_is += r.final_is
++        n = len(cells)
++        out.append({
++            "policy": policy, "n": n, "success_rate": succ / n, "avg_rounds": rounds / n,
++            "judge_calls": judge / n, "critic_llm": critic_llm / n,
++            "latency_s": latency / n, "final_is": fin_is / n,
++        })
++    return out
++
++
++def main() -> None:
++    ap = argparse.ArgumentParser(description="Compare critics on identical scenarios")
++    ap.add_argument("--critics", nargs="+", default=list(CRITIC_CHOICES), choices=CRITIC_CHOICES)
++    ap.add_argument("--policies", nargs="+", default=["critic_only", "shp"],
++                    help="Halt policies to report (critic_only isolates the critic's stop decision).")
++    ap.add_argument("--success", choices=["contains", "is"], default="contains")
++    ap.add_argument("--is-threshold", type=float, default=0.65)
++    ap.add_argument("--tag", default=None, help="Run-id prefix (default: derived from split/provider).")
++    ap.add_argument("--out", default=None, help="CSV path (default: results/compare_<tag>.csv).")
++    # Pass-through to run_experiment.
++    ap.add_argument("--scenarios", default="data/scenarios_hotpot.json")
++    ap.add_argument("--split", default="dev", choices=["dev", "test", "all"])
++    ap.add_argument("--provider", default=DEFAULT_PROVIDER, choices=["groq", "openai", "nvidia"])
++    ap.add_argument("--agent-model", default=None)
++    ap.add_argument("--eval-model", default=None)
++    ap.add_argument("--max-rounds", type=int, default=min(6, MAX_ROUNDS))
++    ap.add_argument("--limit", type=int, default=None)
++    ap.add_argument("--mock", action="store_true")
++    args = ap.parse_args()
++
++    tag = args.tag or f"cmp_{args.split}_{args.provider}_mr{args.max_rounds}{'_mock' if args.mock else ''}"
++    halt_cfg = HaltConfig(max_rounds=args.max_rounds)
++    uses_judge = {p.name: p.uses_judge
++                  for p in default_policy_suite(halt_cfg) + ablation_policy_suite(halt_cfg)}
++
++    table = []
++    for critic in args.critics:
++        run_id = f"{tag}_critic-{critic}"
++        run_argv = [
++            "--scenarios", args.scenarios, "--split", args.split, "--provider", args.provider,
++            "--max-rounds", str(args.max_rounds), "--run-id", run_id, "--critic", critic,
++        ]
++        for flag, val in (("--agent-model", args.agent_model), ("--eval-model", args.eval_model),
++                          ("--limit", args.limit)):
++            if val is not None:
++                run_argv += [flag, str(val)]
++        if args.mock:
++            run_argv.append("--mock")
++        run(build_argparser().parse_args(run_argv))
++        for row in summarize(os.path.join("results", run_id), args.policies, uses_judge,
++                             args.success, args.is_threshold):
++            table.append({"critic": critic, **row})
++
++    cols = ["critic", "policy", "n", "success_rate", "avg_rounds", "judge_calls",
++            "critic_llm", "latency_s", "final_is"]
++    fmt = {"success_rate": "{:.3f}", "avg_rounds": "{:.2f}", "judge_calls": "{:.2f}",
++           "critic_llm": "{:.2f}", "latency_s": "{:.3f}", "final_is": "{:.4f}"}
++    cell = lambda r, c: fmt.get(c, "{}").format(r[c])
++
++    success_def = (f"final IS >= {args.is_threshold}" if args.success == "is"
++                   else "normalized ground truth contained in final answer")
++    print(f"\nsuccess = {success_def}{'   [MOCK — synthetic, not a result]' if args.mock else ''}\n")
++    print("| " + " | ".join(cols) + " |")
++    print("|" + "|".join("---" for _ in cols) + "|")
++    for r in table:
++        print("| " + " | ".join(cell(r, c) for c in cols) + " |")
++
++    out = args.out or os.path.join("results", f"compare_{tag}.csv")
++    with open(out, "w", encoding="utf-8") as fh:
++        fh.write(",".join(cols) + "\n")
++        for r in table:
++            fh.write(",".join(cell(r, c) for c in cols) + "\n")
++    print(f"\nCSV → {out}")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/experiments/run_experiment.py b/experiments/run_experiment.py
+index d06d4e6..6626529 100644
+--- a/experiments/run_experiment.py
++++ b/experiments/run_experiment.py
+@@ -32,6 +32,7 @@ import json
+ import logging
+ import os
+ import sys
++import time
+ 
+ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ 
+@@ -39,6 +40,7 @@ from shp.config import DEFAULT_PROVIDER, MAX_ROUNDS, METRIC_COLS, DEFAULT_IS_WEI
+ from shp.halting import HaltConfig
+ from shp.trajectory import Trajectory, RoundRecord, TrajectoryGenerator
+ from shp.agent_workflow import _load_is_weights
++from shp.critics import CRITIC_CHOICES, get_critic_node
+ 
+ from experiments.metrics_schema import ResultRow, RoundScore
+ from experiments.checkpoint import CheckpointStore
+@@ -60,23 +62,43 @@ def _seeded(text: str) -> float:
+     return (int(hashlib.sha1(text.encode()).hexdigest(), 16) % 10_000) / 10_000.0
+ 
+ 
+-def mock_trajectory(scenario: dict, max_rounds: int) -> Trajectory:
+-    """Fabricate a plausible converging trajectory (distances ↓, occasional approval)."""
++def mock_trajectory(scenario: dict, max_rounds: int, critic: str = "default") -> Trajectory:
++    """
++    Fabricate a plausible converging trajectory (distances ↓, occasional approval).
++    critic="default" keeps the original synthetic approval rule; any other critic
++    runs its real node in mock mode (no LLM) to decide approval per round.
++    """
+     traj = Trajectory(
+         scenario_id=scenario["id"], topic=scenario.get("topic", ""),
+         question=scenario["question"], contexts=scenario["contexts"],
+         ground_truth=scenario["ground_truth"],
+     )
+     base = _seeded(scenario["id"])
++    critic_fn = None if critic == "default" else get_critic_node(critic, None, mock=True)
++    state = {"scenario": scenario, "history": [], "loop_count": 0}
+     for i in range(max_rounds):
+         draft = f"[mock answer {scenario['id']} round {i+1}] base={base:.3f}"
+         # Distance decays geometrically toward 0 with mild noise.
+         dist = None if i == 0 else round(0.30 * (0.45 ** (i - 1)) + 0.01 * _seeded(draft), 6)
+-        approved = (i + 1) >= max(2, int(2 + 4 * base))  # approves partway through
++        if critic_fn is None:
++            approved = (i + 1) >= max(2, int(2 + 4 * base))  # approves partway through
++            feedback, conf, llm_calls, c_lat = (
++                "APPROVED" if approved else f"improve point {i+1}"), None, 1, 0.0
++        else:
++            state["current_draft"] = draft
++            t0 = time.perf_counter()
++            state.update(critic_fn(state))
++            c_lat = time.perf_counter() - t0
++            last = state["history"][-1]
++            feedback, conf = last["feedback"], last.get("critic_confidence")
++            approved = feedback.startswith("APPROVED")
++            llm_calls = 0 if approved else 1   # mock: count the feedback LLM a real run would call
+         traj.rounds.append(RoundRecord(
+-            round=i + 1, draft=draft, feedback=("APPROVED" if approved else f"improve point {i+1}"),
++            round=i + 1, draft=draft, feedback=feedback,
+             is_approved=approved, word_count=20, distance=dist,
+-            embedding=[base, 1 - base], writer_tokens=200 + i * 10, critic_tokens=80 + i * 5,
++            embedding=[base, 1 - base], writer_tokens=200 + i * 10,
++            critic_tokens=(80 + i * 5) * llm_calls,
++            critic_latency_s=round(c_lat, 6), critic_confidence=conf, critic_llm_calls=llm_calls,
+         ))
+     return traj
+ 
+@@ -130,7 +152,8 @@ def run(args) -> None:
+         existing = {p.name for p in policies}
+         policies += [p for p in ablation_policy_suite(halt_cfg) if p.name not in existing]
+ 
+-    run_id = args.run_id or f"{args.split}_{args.provider}_mr{args.max_rounds}{'_mock' if args.mock else ''}"
++    critic_tag = "" if args.critic == "default" else f"_critic-{args.critic}"
++    run_id = args.run_id or f"{args.split}_{args.provider}_mr{args.max_rounds}{critic_tag}{'_mock' if args.mock else ''}"
+     root = os.path.join("results", run_id)
+     store = CheckpointStore(root)
+     store.save_config_snapshot({
+@@ -138,8 +161,8 @@ def run(args) -> None:
+         "halt_config": halt_cfg.__dict__, "n_scenarios": len(scenarios),
+         "policies": [p.name for p in policies], "mock": args.mock,
+     })
+-    logger.info("Run '%s': %d scenarios, %d policies, max_rounds=%d, mock=%s",
+-                run_id, len(scenarios), len(policies), args.max_rounds, args.mock)
++    logger.info("Run '%s': %d scenarios, %d policies, max_rounds=%d, critic=%s, mock=%s",
++                run_id, len(scenarios), len(policies), args.max_rounds, args.critic, args.mock)
+ 
+     generator = None  # built lazily only for real runs
+     judge = None
+@@ -154,10 +177,11 @@ def run(args) -> None:
+             traj = store.load_trajectory(qid)
+         else:
+             if args.mock:
+-                traj = mock_trajectory(scenario, args.max_rounds)
++                traj = mock_trajectory(scenario, args.max_rounds, args.critic)
+             else:
+                 if generator is None:
+-                    generator = TrajectoryGenerator(args.provider, args.agent_model)
++                    generator = TrajectoryGenerator(args.provider, args.agent_model,
++                                                    critic=args.critic)
+                 traj = generator.generate(scenario, args.max_rounds)
+             store.save_trajectory(traj)
+ 
+@@ -298,6 +322,8 @@ def build_argparser() -> argparse.ArgumentParser:
+                     help="Exit cleanly after this many judge tokens (Groq daily cap).")
+     ap.add_argument("--random-seeds", type=int, nargs="+", default=[0, 1, 2])
+     ap.add_argument("--run-id", default=None)
++    ap.add_argument("--critic", default="default", choices=CRITIC_CHOICES,
++                    help="Critic in the Writer→Critic loop (cached per run-id).")
+     ap.add_argument("--ablations", action="store_true",
+                     help="Also run the per-signal ablation matrix (free on cached trajectories).")
+     ap.add_argument("--mock", action="store_true", help="Offline synthetic self-test (no API).")
+diff --git a/shp/critics.py b/shp/critics.py
+new file mode 100644
+index 0000000..d02d521
+--- /dev/null
++++ b/shp/critics.py
+@@ -0,0 +1,161 @@
++"""
++critics.py
++
++Swappable critic registry for the Writer→Critic loop.
++
++  default — the original LLM editor (agents.make_critic_node): one call that
++            returns either "APPROVED" or one critique.
++  jev     — Jev (TypeSafe AI) decides approve/revise with a calibrated
++            confidence and returns no text. Only on "revise" does the regular
++            agent LLM write feedback, so approvals cost zero LLM tokens.
++
++Every critic keeps the same node contract: it appends {"draft", "feedback"} to
++history and bumps loop_count. On approval the feedback is exactly "APPROVED",
++so halting.shp_should_halt and every replay policy work unchanged.
++"""
++
++from __future__ import annotations
++
++import hashlib
++import logging
++import os
++from dataclasses import dataclass
++
++from langchain_core.language_models import BaseChatModel
++from langchain_core.messages import SystemMessage, HumanMessage
++
++from shp.agents import make_critic_node, _format_contexts, _llm_call_with_retry
++
++logger = logging.getLogger(__name__)
++
++CRITIC_CHOICES = ("default", "jev")
++
++# Feedback prompt used only after Jev has already decided "revise", so the
++# APPROVED escape hatch is removed: Jev is the sole approve/revise authority.
++_JEV_FEEDBACK_SYSTEM = """\
++You are a strict, detail-oriented editor. A verifier has already determined that
++the answer below needs revision. Provide ONE specific, actionable critique.
++
++Rules:
++- Give exactly ONE critique in 1-3 sentences. Be precise about what is missing,
++  unsupported, or factually incomplete relative to the context and question.
++- Prioritise substantive gaps: a missing reasoning hop, a claim not supported by
++  the context, an unanswered part of the question, or a factual error.
++- Do NOT nitpick synonyms, style, or wording. Do NOT approve the answer.
++"""
++
++_FALLBACK_FEEDBACK = (
++    "Re-check every claim against the context passages and make each reasoning "
++    "step explicit."
++)
++
++
++@dataclass
++class JevVerdict:
++    decision: str      # "approve" | "revise"
++    confidence: float  # calibrated P(decision is correct), in [0, 1]
++
++    @property
++    def approved(self) -> bool:
++        return self.decision == "approve"
++
++
++class JevClient:
++    """
++    Thin client for Jev. Mock mode returns a deterministic verdict so the whole
++    comparison pipeline runs offline; the real call is not wired yet.
++    """
++
++    def __init__(self, mock: bool = False):
++        self.mock = mock
++
++    def decide(self, question: str, contexts: list, draft: str) -> JevVerdict:
++        if self.mock:
++            return _mock_verdict(draft)
++        # TODO: call the TypeSafe AI Jev endpoint here and map its structured
++        # response onto JevVerdict. Credentials via env (e.g. JEV_API_KEY).
++        raise NotImplementedError(
++            "Real Jev client not wired yet; run with --mock or implement JevClient.decide."
++        )
++
++
++def _mock_verdict(draft: str) -> JevVerdict:
++    """Deterministic stand-in: approval gets likelier in later rounds."""
++    h = (int(hashlib.sha1(draft.encode()).hexdigest(), 16) % 10_000) / 10_000.0
++    try:
++        rnd = int(draft.split("round ")[1].split("]")[0])  # mock drafts carry the round
++    except Exception:
++        rnd = 1
++    p_approve = min(0.95, 0.15 + 0.2 * (rnd - 1))
++    approved = h < p_approve
++    confidence = round(0.5 + 0.5 * abs(h - p_approve) / max(p_approve, 1 - p_approve), 4)
++    return JevVerdict("approve" if approved else "revise", confidence)
++
++
++def make_jev_critic_node(feedback_llm: BaseChatModel | None, jev: JevClient, emit=None):
++    """
++    Return a LangGraph critic node where Jev makes the decision and
++    ``feedback_llm`` writes the critique only when Jev says revise.
++    """
++    _emit = emit or (lambda e: None)
++
++    def critic_node(state: dict) -> dict:
++        scenario   = state.get("scenario", {})
++        draft      = state.get("current_draft", "")
++        loop_count = state.get("loop_count", 0)
++        history    = list(state.get("history", []))
++        question   = scenario.get("question", "") or scenario.get("topic", "")
++        contexts   = scenario.get("contexts", [])
++
++        verdict = jev.decide(question, contexts, draft)
++        llm_calls = 0
++
++        if verdict.approved:
++            feedback = "APPROVED"
++        elif feedback_llm is None:
++            feedback = _FALLBACK_FEEDBACK
++        else:
++            user_content = (
++                f"Question: {question}\n\n"
++                f"Context passages:\n{_format_contexts(contexts)}\n\n"
++                f"Answer Draft:\n{draft}\n\n"
++                "Provide your critique."
++            )
++            response = _llm_call_with_retry(
++                feedback_llm,
++                [SystemMessage(content=_JEV_FEEDBACK_SYSTEM), HumanMessage(content=user_content)],
++                context="Critic[jev-feedback]",
++            )
++            llm_calls = 1
++            feedback = response.content.strip()
++            # The feedback LLM must not override Jev's decision.
++            if feedback.upper().startswith("APPROVED"):
++                feedback = _FALLBACK_FEEDBACK
++
++        logger.info("[Critic:jev] round %d → %s (conf=%.3f)",
++                    loop_count + 1, verdict.decision, verdict.confidence)
++        _emit({
++            "type":        "critic_feedback",
++            "round":       loop_count + 1,
++            "feedback":    feedback,
++            "is_approved": verdict.approved,
++            "confidence":  verdict.confidence,
++        })
++
++        history.append({
++            "draft": draft, "feedback": feedback,
++            "critic_confidence": verdict.confidence, "critic_llm_calls": llm_calls,
++        })
++        return {"history": history, "loop_count": loop_count + 1}
++
++    return critic_node
++
++
++def get_critic_node(name: str, llm: BaseChatModel | None, emit=None, mock: bool = False):
++    """Build the critic node selected by ``--critic`` / the CRITIC env var."""
++    name = name or os.getenv("CRITIC", "default")
++    if name == "default":
++        return make_critic_node(llm, emit)
++    if name == "jev":
++        return make_jev_critic_node(llm, JevClient(mock=mock), emit)
++    raise ValueError(f"Unknown critic '{name}'. Choices: {CRITIC_CHOICES}")
+diff --git a/shp/trajectory.py b/shp/trajectory.py
+index 1ef258f..1a6d9ea 100644
+--- a/shp/trajectory.py
++++ b/shp/trajectory.py
+@@ -33,6 +33,7 @@ round (``is_approved``) for the critic-halt policy to consult during replay.
+ from __future__ import annotations
+ 
+ import logging
++import time
+ from dataclasses import dataclass, field
+ from typing import Any, Callable, Dict, List, Optional
+ 
+@@ -40,7 +41,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
+ 
+ from shp.config import EMBEDDING_MODEL_NAME, DEFAULT_AGENT_MODELS, DEFAULT_PROVIDER
+ from shp.semantic_entropy import SemanticEntropyCalculator
+-from shp.agents import make_writer_node, make_critic_node
++from shp.agents import make_writer_node
++from shp.critics import get_critic_node
+ from shp.providers import get_llm
+ from shp.token_meter import METER
+ 
+@@ -59,6 +61,10 @@ class RoundRecord:
+     embedding: List[float]          # draft embedding (cached; judging is separate)
+     writer_tokens: int
+     critic_tokens: int
++    writer_latency_s: float = 0.0
++    critic_latency_s: float = 0.0
++    critic_confidence: Optional[float] = None   # set by critics that report one (jev)
++    critic_llm_calls: int = 1                   # jev skips the LLM on approve
+ 
+     def public(self) -> Dict[str, Any]:
+         """Serialisable view WITHOUT the bulky embedding (kept in a side file)."""
+@@ -71,6 +77,10 @@ class RoundRecord:
+             "distance": self.distance,
+             "writer_tokens": self.writer_tokens,
+             "critic_tokens": self.critic_tokens,
++            "writer_latency_s": self.writer_latency_s,
++            "critic_latency_s": self.critic_latency_s,
++            "critic_confidence": self.critic_confidence,
++            "critic_llm_calls": self.critic_llm_calls,
+         }
+ 
+ 
+@@ -105,18 +115,20 @@ class TrajectoryGenerator:
+         provider: str = DEFAULT_PROVIDER,
+         agent_model: str | None = None,
+         emit: Callable[[Dict[str, Any]], None] | None = None,
++        critic: str = "default",
+     ) -> None:
+         agent_model = agent_model or DEFAULT_AGENT_MODELS[provider]
+         self.provider = provider
+         self.agent_model = agent_model
++        self.critic = critic
+         self._emit = emit or (lambda e: None)
+ 
+-        logger.info("TrajectoryGenerator: provider=%s agent=%s", provider, agent_model)
++        logger.info("TrajectoryGenerator: provider=%s agent=%s critic=%s", provider, agent_model, critic)
+         agent_llm = get_llm(provider, agent_model)
+         self.embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
+         self.calculator = SemanticEntropyCalculator(embedding_model=self.embeddings)
+         self.writer_fn = make_writer_node(agent_llm, self._emit)
+-        self.critic_fn = make_critic_node(agent_llm, self._emit)
++        self.critic_fn = get_critic_node(critic, agent_llm, self._emit)
+ 
+     def _role_total(self, role: str) -> int:
+         return METER.snapshot().get(role, {}).get("total_tokens", 0)
+@@ -147,8 +159,10 @@ class TrajectoryGenerator:
+         for i in range(max_rounds):
+             # ── Writer ───────────────────────────────────────────────
+             w_before = self._role_total("writer")
++            t0 = time.perf_counter()
+             with METER.scope("writer"):
+                 state.update(self.writer_fn(state))
++            writer_latency = time.perf_counter() - t0
+             writer_tokens = self._role_total("writer") - w_before
+ 
+             draft = state["current_draft"]
+@@ -162,11 +176,14 @@ class TrajectoryGenerator:
+ 
+             # ── Critic ───────────────────────────────────────────────
+             c_before = self._role_total("critic")
++            t0 = time.perf_counter()
+             with METER.scope("critic"):
+                 state.update(self.critic_fn(state))   # appends to history, bumps loop_count
++            critic_latency = time.perf_counter() - t0
+             critic_tokens = self._role_total("critic") - c_before
+ 
+-            feedback = state["history"][-1]["feedback"]
++            last = state["history"][-1]
++            feedback = last["feedback"]
+             is_approved = feedback.strip().upper().startswith("APPROVED")
+ 
+             traj.rounds.append(RoundRecord(
+@@ -179,6 +196,10 @@ class TrajectoryGenerator:
+                 embedding=new_emb,
+                 writer_tokens=writer_tokens,
+                 critic_tokens=critic_tokens,
++                writer_latency_s=round(writer_latency, 4),
++                critic_latency_s=round(critic_latency, 4),
++                critic_confidence=last.get("critic_confidence"),
++                critic_llm_calls=last.get("critic_llm_calls", 1),
+             ))
+ 
+             logger.info(
