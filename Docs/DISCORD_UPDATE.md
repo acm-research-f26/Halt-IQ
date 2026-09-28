@@ -12,6 +12,7 @@ The regular critic corrected two initially wrong answers. The typed critic stopp
 The local typed critic uses Qwen to score support, completeness, and relevance. It isn't Jev. The Jev adapter and spending guard are implemented and tested, but the live Jev comparison still needs a TypeSafe API key. All 63 tests pass, hosted API spending is $0, and I've kept 80 questions aside for later evaluation.
 
 Questions for the meeting:
+
 1. Should we compare the full revision loops, or have both critics judge identical drafts to isolate the stopping decision?
 2. Should we manually review exact-match failures to separate wrong answers from wording differences?
 3. Should we tune Jev's threshold to preserve baseline accuracy or target a maximum false-approval rate?

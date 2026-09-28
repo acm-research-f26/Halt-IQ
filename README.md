@@ -12,6 +12,8 @@ The writer runs locally through Ollama. You can swap a conventional language-mod
 
 **Latest results (September 28):** [20-question comparison and one-draft baseline](results/hotpotqa-dev-20-20260928/analysis.md). [Discord update and meeting questions](Docs/DISCORD_UPDATE.md).
 
+**Professor prep:** [Short answers and results figure](Docs/PROFESSOR_PREP.md).
+
 **Start here:** `python3 -m haltiq demo` works offline immediately. For an actual HotpotQA run, use `python3 -m haltiq run --environment hotpotqa --limit 4`. The 100-question subset is already prepared. Python 3.10+ is the only Python requirement; no pip install is needed when running from this folder. Windows uses `py -3` in place of `python3`.
 
 ## Benchmark environment
