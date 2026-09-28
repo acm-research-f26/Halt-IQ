@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "benchmark": "hotpotqa-distractor",
+  "source": {
+    "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+    "homepage": "https://hotpotqa.github.io/",
+    "filename": "hotpot_dev_distractor_v1.json",
+    "split": "official_dev",
+    "sha256": "674e6c8b4e8c7e020ddd59b9b9b801966c663ae170d4e177a214b8c8c6439e7e",
+    "row_count": 7405,
+    "type_counts": {
+      "bridge": 5918,
+      "comparison": 1487
+    },
+    "context_paragraph_count_distribution": {
+      "2": 21,
+      "3": 7,
+      "4": 9,
+      "5": 6,
+      "6": 8,
+      "7": 2,
+      "8": 4,
+      "9": 3,
+      "10": 7345
+    },
+    "annotation_warnings": {
+      "task_count": 1,
+      "code_counts": {
+        "supporting_sentence_out_of_range": 1
+      },
+      "details": [
+        {
+          "source_id": "5ae61bfd5542992663a4f261",
+          "warnings": [
+            {
+              "code": "supporting_sentence_out_of_range",
+              "fact_index": 3
+            }
+          ]
+        }
+      ]
+    },
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "parameters": {
+    "dev_size": 20,
+    "test_size": 80,
+    "seed": 42
+  },
+  "sampling": {
+    "method": "Proportional largest-remainder type quotas; SHA-256(seed, split, source ID) ranking",
+    "order": "dev first, then test from remaining unique questions",
+    "question_normalization": "NFKC, casefold, punctuation to spaces, collapse whitespace",
+    "duplicate_policy": "Keep lexicographically smallest source ID per normalized question",
+    "eligible_count": 7405,
+    "eligible_type_counts": {
+      "bridge": 5918,
+      "comparison": 1487
+    },
+    "excluded_duplicate_question_count": 0,
+    "excluded_duplicate_questions": [],
+    "selection_uses_gold_answers": false,
+    "selection_uses_model_outcomes": false
+  },
+  "splits": {
+    "dev": {
+      "count": 20,
+      "type_counts": {
+        "bridge": 16,
+        "comparison": 4
+      },
+      "context_paragraph_count_distribution": {
+        "2": 1,
+        "10": 19
+      },
+      "annotation_warnings": {
+        "task_count": 0,
+        "code_counts": {},
+        "details": []
+      },
+      "source_ids": [
+        "5ab833ad5542990e739ec86f",
+        "5abfc8675542993fe9a41e52",
+        "5a74b4e555429929fddd84c2",
+        "5ae6860e5542991bbc976112",
+        "5adeb95d5542992fa25da827",
+        "5abbcfaf5542993f40c73ba9",
+        "5adf98215542993344016d19",
+        "5ac240ef55429951e9e684ef",
+        "5ac2db67554299657fa290a6",
+        "5ae13b085542997b2ef7d146",
+        "5a7b6e1d5542997c3ec9716e",
+        "5a8f08c2554299458435d531",
+        "5a84b7db5542991dd0999db0",
+        "5ac4d2cd5542995c82c4ad73",
+        "5a7b8d4955429927d897bfeb",
+        "5a7d043755429909bec768f7",
+        "5ab70f79554299110f219aa9",
+        "5a8f0986554299458435d535",
+        "5a825bb455429940e5e1a874",
+        "5ae1388e5542997b2ef7d13a"
+      ]
+    },
+    "test": {
+      "count": 80,
+      "type_counts": {
+        "bridge": 64,
+        "comparison": 16
+      },
+      "context_paragraph_count_distribution": {
+        "10": 80
+      },
+      "annotation_warnings": {
+        "task_count": 0,
+        "code_counts": {},
+        "details": []
+      },
+      "source_ids": [
+        "5a80c74f554299260e20a158",
+        "5ae4f2c75542993aec5ec0fb",
+        "5a710a915542994082a3e504",
+        "5ae3294155429928c423963d",
+        "5ae66b055542995703ce8b61",
+        "5a7ab1e955429931da12c95d",
+        "5adee8ff55429975fa854fb8",
+        "5ae3789b5542992e3233c412",
+        "5ae67fba5542996d980e7b9a",
+        "5addf0fd5542997dc79070d2",
+        "5a7f1e805542993067513640",
+        "5abd889f55429924427fd046",
+        "5a904f6355429916514e746e",
+        "5abac35055429901930fa8ae",
+        "5ae7f6be554299540e5a56db",
+        "5a7757215542993569682d58",
+        "5a8c8f24554299653c1aa0ba",
+        "5a7e49e05542991319bc9463",
+        "5ae12fcf5542990adbacf72c",
+        "5ac079e9554299294b218fff",
+        "5a79c2955542994f819ef097",
+        "5a87b30c5542994846c1cdcf",
+        "5a8a43eb5542996c9b8d5e82",
+        "5ae2196b554299495565da02",
+        "5a792f3e554299029c4b5f20",
+        "5adfa1f9554299025d62a308",
+        "5a772c925542993735360208",
+        "5a7bacf2554299294a54aa8d",
+        "5a8c5b635542996e8ac88a75",
+        "5adbfaa655429947ff173888",
+        "5ac01bb8554299012d1db5a6",
+        "5ae794215542997ec27276a8",
+        "5a7dedef5542995f4f40231a",
+        "5ae713af554299572ea546bb",
+        "5a75639255429916b01642f7",
+        "5a7e355055429934daa2fbf4",
+        "5a80c79155429938b61421da",
+        "5ac4f7e955429924173fb523",
+        "5a8e32d35542995a26add480",
+        "5ac13d5c5542996f0d89cc78",
+        "5abab18d55429901930fa89e",
+        "5ab7e4dc5542995dae37e9df",
+        "5a73354f5542991f9a20c687",
+        "5ae61ac355429929b0807ac6",
+        "5a84c4135542994c784dda31",
+        "5a8843a455429938390d3f0c",
+        "5a7a83b3554299042af8f652",
+        "5ac30a79554299657fa290e2",
+        "5a85b2d95542997b5ce40028",
+        "5ab209ec554299722f9b4ca2",
+        "5ae096d755429906c02daadf",
+        "5ab804065542990e739ec7e0",
+        "5ae4f2c45542990ba0bbb1a9",
+        "5ac2ea1a5542990b17b154a1",
+        "5abec9b25542997ec76fd366",
+        "5a729fe55542991f9a20c53b",
+        "5ae55d1e55429960a22e02cb",
+        "5ae1384355429920d5234329",
+        "5adfd42555429942ec259b52",
+        "5a8b057255429971feec4611",
+        "5ab6c65e554299710c8d1f58",
+        "5ae533535542993aec5ec173",
+        "5a762f4755429976ec32bd44",
+        "5abce43855429959677d6b18",
+        "5ac4edf155429924173fb4e3",
+        "5ac3d68f554299076e296ca6",
+        "5a7c716d55429935c91b51b3",
+        "5ab42b905542992339550040",
+        "5a8c66db554299585d9e3683",
+        "5a7e1cad55429965cec5ea75",
+        "5ae1cf355542997f29b3c126",
+        "5a8e40f65542995a26add498",
+        "5ae1e1e55542997f29b3c15e",
+        "5ae268f35542994d89d5b416",
+        "5adc0f8d55429947ff1738ef",
+        "5a7fd7a25542992e7d278dc3",
+        "5a81b92a5542995ce29dcc52",
+        "5ab7af9d5542993667793fe9",
+        "5ab811395542990e739ec80f",
+        "5a79c1335542994bb9457066"
+      ]
+    }
+  },
+  "output": {
+    "filename": "tasks.jsonl",
+    "sha256": "9bcdd373cb93d36c37faef3a0341b464352cd67415a7f13962425b276c1bea79"
+  },
+  "evaluation": {
+    "metric": "hotpotqa",
+    "scope": "Answer exact match and token F1 only; not supporting-fact or joint leaderboard scores",
+    "test_split_is_official_test": false,
+    "split_notice": "Both internal splits derive from official development data; test is locally held out.",
+    "model_inputs": [
+      "question",
+      "evidence"
+    ],
+    "gold_only_fields": [
+      "answers",
+      "metadata.supporting_facts",
+      "metadata.annotation_warnings"
+    ],
+    "context_policy": "All supplied paragraphs (up to 10) in original order; no truncation or gold filtering",
+    "annotation_policy": "Supporting-fact issues are evaluator-only warnings; no rows are excluded based on gold annotations"
+  },
+  "derived_data_license": "CC-BY-SA-4.0",
+  "download": {
+    "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+    "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+    "parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "parquet_bytes": 27452575,
+    "canonical_json_sha256": "674e6c8b4e8c7e020ddd59b9b9b801966c663ae170d4e177a214b8c8c6439e7e",
+    "rows": 7405,
+    "pyarrow_version": "25.0.1",
+    "context_count_distribution": {
+      "10": 7345,
+      "2": 21,
+      "5": 6,
+      "8": 4,
+      "4": 9,
+      "6": 8,
+      "9": 3,
+      "7": 2,
+      "3": 7
+    },
+    "note": "Hugging Face mirror of the official development/validation distractor split; converted to upstream JSON field layout."
+  }
+}

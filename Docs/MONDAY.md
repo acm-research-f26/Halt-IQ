@@ -10,25 +10,30 @@ Here, “critic” means an answer checker, not a learned RL value network. Ther
 
 ## What actually ran
 
-The [HotpotQA development pilot](../results/hotpotqa-dev-pilot/report.md) ran on eight real benchmark questions using local Qwen3 8B Q4_K_M, seed 42, temperature 0, thinking disabled, and a 32,768-token context. All 24 episodes completed without provider failures. Ollama reported 100% GPU execution and approximately 10 GB loaded model/context memory on the Mac.
+The [September 28 HotpotQA run](../results/hotpotqa-dev-20-20260928/report.md) covered all 20 development questions using local Qwen3 8B Q4_K_M, seed 42, temperature 0, thinking disabled, and a 32,768-token context. All 60 episodes completed without provider failures. Ollama reported 100% GPU execution and approximately 10 GB loaded model/context memory on the Mac. The [checked analysis](../results/hotpotqa-dev-20-20260928/analysis.md) adds a one-draft baseline by scoring the recorded shared initial answers; it required no extra inference.
 
 | System | Answer EM | Answer F1 | Mean drafts | Critic requests | EM-based false approvals |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Fixed three drafts, self-revision | 4/8 (50%) | 57.5% | 3.00 | 0 | Not applicable |
-| Conventional local LLM critic | 5/8 (62.5%) | 70.0% | 1.375 | 11 | 3/7 approvals |
-| Local typed critic | 4/8 (50%) | 57.5% | 1.25 | 10 | 4/7 approvals |
+| One draft, no critic | 11/20 (55%) | 61.3% | 1.00 | 0 | Not applicable |
+| Fixed three drafts, self-revision | 11/20 (55%) | 61.3% | 3.00 | 0 | Not applicable |
+| Conventional local LLM critic | 13/20 (65%) | 71.3% | 1.20 | 24 | 7/19 approvals |
+| Local typed critic | 11/20 (55%) | 61.3% | 1.10 | 22 | 9/19 approvals |
 
-The run made 50 model requests, with 85,207 reported input tokens and 1,351 output tokens. **Hosted API spend was $0.** Local hardware and electricity are not priced. This eight-question development pilot verifies the real benchmark pipeline; it is too small to establish significance or Jev superiority.
+The run made 112 model requests, with 205,901 reported input tokens and 2,594 output tokens. **Hosted API spend was $0.** Local hardware and electricity are not priced. The conventional critic repaired two initial exact-match failures and introduced no exact-match regressions. Fixed revision and the local typed critic produced no repairs or regressions. The one-draft comparison matters: fewer drafts than the fixed baseline alone would not show that a critic improved the initial answer. These 20 development questions are too few to establish significance or general superiority, and they do not measure Jev.
+
+The [earlier eight-question pilot](../results/hotpotqa-dev-pilot/report.md) is retained as a historical record. Its questions overlap the new run, so the results must not be pooled as 28 independent cases.
 
 The answer scorer matches the official HotpotQA answer EM/F1 conventions. A separate parity check compared it with the official evaluator on 529 answer pairs, including punctuation and yes/no/noanswer edge cases; every result matched. The [parity record](../results/hotpotqa-metric-parity.json) includes the reference file hash. Supporting-fact and joint leaderboard scores are not implemented because the writer currently outputs answers only.
 
-All 63 automated tests pass, including dataset preparation, split isolation, answer metric behavior, spending enforcement, HTTP transport, and conservative input-size checks. The earlier [synthetic diagnostic pilot](../results/local-verified/report.md) remains a separate historical result and must not be pooled with HotpotQA.
+All 63 automated tests pass, including dataset preparation, split isolation, answer metric behavior, spending enforcement, HTTP transport, and conservative input-size checks. The analysis helper also verified the new run's snapshot hashes, task selection, shared first drafts, saved scores, CSV/trace agreement, and reported aggregates. It checks consistency with the saved gold and matching scorer; it does not independently judge factual correctness. Reproduce it with `python scripts/analyze_run.py results/hotpotqa-dev-20-20260928`. The earlier [synthetic diagnostic pilot](../results/local-verified/report.md) remains a separate historical result and must not be pooled with HotpotQA.
 
 **Official Jev remains unrun.** No TypeSafe key is configured. The adapter is implemented and contract-tested, but authentication, availability, and live Jev behavior still need to be checked. The local typed critic is a generative Qwen baseline with uncalibrated scores; it is neither Jev nor OpenJev. No OpenJev server has been installed.
 
 ## A failure case worth discussing
 
 One question asks the founding year of a joint venture involving RLJ Companies and a film studio founded in 2005. The reference answer is **2006**. The shared writer draft answers **2005**. The local typed critic approves it, and the fixed-round arm finishes incorrectly as well. The conventional critic prompts a correction and finishes correctly after two drafts. Inspect source ID `5ac240ef55429951e9e684ef` in the saved traces.
+
+The second repair concerns Gerd Neggo's training. The shared first answer is "modern dance," while the question asks for the type of dance analysis founded by her teacher. The conventional critic prompts the answer "Laban Movement Analysis," matching the reference. The other two arms retain "modern dance." Inspect source ID `5a8f0986554299458435d535`.
 
 Another response uses a longer, factually related phrase about Emilie du Chatelet than the gold answer and earns token F1 of 0.6 but exact match of 0. This illustrates a metric limitation: an “EM-based false approval” is an approval of a non-matching answer, not always proof of a factual mistake. Keep both EM and F1, and manually inspect disagreements without silently changing the gold answers.
 
@@ -59,3 +64,11 @@ Freeze prompts, threshold, model settings, and round cap using only development 
 Yash owns the typed critic interface, checks, error handling, local environment, and saved records. Vedanshi can run the same question IDs through the baseline and Jev paths or insert the adapter into her existing harness using [the integration note](INTEGRATION.md). Compare independent answer scores, rounds, critic calls, wrong approvals, latency, and cost.
 
 The defensible progress statement is: **the critic comparison now works on genuine HotpotQA data, with reproducible subsets and benchmark answer scoring; the next experiment measures official Jev using the prepared adapter.**
+
+## Questions for the professor
+
+1. Should we compare complete feedback-and-stopping systems, or have both critics judge identical draft sequences to isolate the stopping decision? Our current run compares the full systems because feedback changes later answers.
+2. Should exact-match failures receive manual review to separate factual mistakes from acceptable wording differences? We already retain F1 and the raw answers, and at least one saved example earns partial overlap for a longer related phrase.
+3. Should we choose Jev's threshold to preserve baseline accuracy, or target a maximum false-approval rate and then reduce rounds? The current 0.8 threshold is an initial development choice, not a tuned optimum.
+
+The [Discord update](DISCORD_UPDATE.md) is a short version with the measured results and these questions.

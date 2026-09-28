@@ -10,6 +10,8 @@ The writer runs locally through Ollama. You can swap a conventional language-mod
 
 **Monday explanation:** [Walkthrough and measured results](Docs/MONDAY.md).
 
+**Latest results (September 28):** [20-question comparison and one-draft baseline](results/hotpotqa-dev-20-20260928/analysis.md). [Discord update and meeting questions](Docs/DISCORD_UPDATE.md).
+
 **Start here:** `python3 -m haltiq demo` works offline immediately. For an actual HotpotQA run, use `python3 -m haltiq run --environment hotpotqa --limit 4`. The 100-question subset is already prepared. Python 3.10+ is the only Python requirement; no pip install is needed when running from this folder. Windows uses `py -3` in place of `python3`.
 
 ## Benchmark environment
@@ -153,7 +155,15 @@ Every run creates a new folder under `results/runs/`, or the new directory suppl
 
 The reference labels are never passed to writers or critics. Success is normalized exact match; token F1 is a secondary diagnostic. Critic approval and actual success are different fields. The report keeps false approvals and operational failures visible. Semantic equivalence beyond the listed aliases can be missed by exact match, so inspect disputed answers before making research claims.
 
-The [HotpotQA development pilot](results/hotpotqa-dev-pilot/report.md) uses actual benchmark questions and local Qwen calls. The earlier [synthetic pilot](results/local-verified/report.md) remains a separate historical run; do not pool its results with HotpotQA. The separate [offline demo](results/demo/report.md) uses scripted drafts and scores. Neither is evidence about official Jev's performance.
+The [September 28 HotpotQA run](results/hotpotqa-dev-20-20260928/report.md) covers all 20 development questions: 60 completed local episodes, zero failures, and $0 hosted cost. Its [checked analysis](results/hotpotqa-dev-20-20260928/analysis.md) also scores the saved initial answers as a one-draft baseline. One draft and fixed three-draft revision each score 11/20; the conventional critic scores 13/20 with 1.20 mean drafts, and the local typed critic scores 11/20 with 1.10 mean drafts. The conventional critic repairs two initial exact-match failures; these small development results do not establish general superiority. Official Jev remains unrun.
+
+Recheck the saved records and regenerate the derived analysis without model calls:
+
+```bash
+python scripts/analyze_run.py results/hotpotqa-dev-20-20260928
+```
+
+The helper checks snapshot hashes, saved scores, shared initial drafts, CSV/trace agreement, and reported aggregates. It uses the matching answer scorer and does not independently adjudicate the gold answers. The [initial eight-question HotpotQA pilot](results/hotpotqa-dev-pilot/report.md) overlaps the new run and must not be pooled with it as independent data. The earlier [synthetic pilot](results/local-verified/report.md) measures a separate dataset. The [offline demo](results/demo/report.md) uses scripted drafts and scores.
 
 To use the critic in Vedanshi's existing harness, review [Docs/INTEGRATION.md](Docs/INTEGRATION.md). The single-state CLI is also available:
 

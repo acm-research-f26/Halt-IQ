@@ -1,0 +1,170 @@
+{
+  "version": "0.1.0",
+  "run_kind": "live_models",
+  "started_at": "2026-09-28T14:26:45.762720+00:00",
+  "status": "completed",
+  "python": "3.14.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "source_sha256": "77de4bc938836f6f49c2c60dbfb0dc1ac347927310b024a56578e1ea4de8842a",
+  "rubric_version": "evidence-qa-v1",
+  "benchmarks": [
+    "hotpotqa-distractor"
+  ],
+  "metrics": [
+    "hotpotqa"
+  ],
+  "evaluation_scope": "answer-only",
+  "config": {
+    "command": "run",
+    "dataset": "/Users/yashbaruah/Desktop/Halt IQ/data/hotpotqa/tasks.jsonl",
+    "environment": "hotpotqa",
+    "split": "dev",
+    "limit": null,
+    "max_rounds": 3,
+    "output": "/Users/yashbaruah/Desktop/Halt IQ/results/hotpotqa-dev-20-20260928",
+    "critics": "fixed,llm,local-typed",
+    "ollama_url": "http://localhost:11434",
+    "writer_model": "qwen3:8b",
+    "critic_model": "qwen3:8b",
+    "seed": 42,
+    "timeout": 180.0,
+    "context_tokens": 32768,
+    "threshold": 0.8,
+    "jev_model": "jev-1.13.0",
+    "openjev_url": "http://localhost:8080",
+    "openjev_model": "openjev-latest",
+    "budget_usd": 5.0,
+    "budget_ledger": "/Users/yashbaruah/Desktop/Halt IQ/.haltiq/budget.sqlite",
+    "arms": [
+      "fixed",
+      "llm",
+      "local-typed"
+    ],
+    "local_models": [
+      {
+        "name": "qwen3:14b",
+        "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+        "size": 9276198565,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "14.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 5120
+        }
+      },
+      {
+        "name": "gemma3:12b",
+        "digest": "f4031aab637d1ffa37b42570452ae0e4fad0314754d17ded67322e4b95836f8a",
+        "size": 8149190253,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3"
+          ],
+          "parameter_size": "12.2B",
+          "quantization_level": "Q4_K_M"
+        }
+      },
+      {
+        "name": "qwen3:8b",
+        "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "size": 5225388164,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "qwen3-vl:8b",
+        "digest": "901cae73216286ea8c5aba8b46d307ff7188f737285ec500c795a12f05225d28",
+        "size": 6140415879,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3vl",
+          "families": [
+            "qwen3vl"
+          ],
+          "parameter_size": "8.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "deepseek-r1:8b",
+        "digest": "6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+        "size": 5225376047,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096
+        }
+      },
+      {
+        "name": "llama3.1:8b-instruct-q4_K_M",
+        "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+        "size": 4920753328,
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "8.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096
+        }
+      }
+    ]
+  },
+  "task_ids": [
+    "hotpotqa:5ab833ad5542990e739ec86f",
+    "hotpotqa:5abfc8675542993fe9a41e52",
+    "hotpotqa:5a74b4e555429929fddd84c2",
+    "hotpotqa:5ae6860e5542991bbc976112",
+    "hotpotqa:5adeb95d5542992fa25da827",
+    "hotpotqa:5abbcfaf5542993f40c73ba9",
+    "hotpotqa:5adf98215542993344016d19",
+    "hotpotqa:5ac240ef55429951e9e684ef",
+    "hotpotqa:5ac2db67554299657fa290a6",
+    "hotpotqa:5ae13b085542997b2ef7d146",
+    "hotpotqa:5a7b6e1d5542997c3ec9716e",
+    "hotpotqa:5a8f08c2554299458435d531",
+    "hotpotqa:5a84b7db5542991dd0999db0",
+    "hotpotqa:5ac4d2cd5542995c82c4ad73",
+    "hotpotqa:5a7b8d4955429927d897bfeb",
+    "hotpotqa:5a7d043755429909bec768f7",
+    "hotpotqa:5ab70f79554299110f219aa9",
+    "hotpotqa:5a8f0986554299458435d535",
+    "hotpotqa:5a825bb455429940e5e1a874",
+    "hotpotqa:5ae1388e5542997b2ef7d13a"
+  ],
+  "dataset_sha256": "9bcdd373cb93d36c37faef3a0341b464352cd67415a7f13962425b276c1bea79",
+  "finished_at": "2026-09-28T14:38:12.308746+00:00"
+}
