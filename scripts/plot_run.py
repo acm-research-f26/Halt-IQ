@@ -72,6 +72,8 @@ def main():
              fontsize=10, color="#475569")
     for extension in ("png", "svg"):
         fig.savefig(args.run_directory / f"comparison.{extension}", dpi=180, facecolor="white")
+    svg = args.run_directory / "comparison.svg"
+    svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
     print(f"Saved comparison.png and comparison.svg in {args.run_directory}")
 
