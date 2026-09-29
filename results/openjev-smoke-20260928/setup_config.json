@@ -1,0 +1,12 @@
+{
+  "implementation": "daseinlabs/open-jev",
+  "upstream_url": "https://github.com/daseinlabs/open-jev.git",
+  "upstream_revision": "6cb37c3cee9d8477d49d8ac0c99056e48ccc292c",
+  "mlx_model": {
+    "repo_id": "mlx-community/gemma-3-4b-it-4bit",
+    "revision": "93724907d4ed1745d2fe50baadf3b0b01a65abf2",
+    "directory": "gemma-3-4b-it-4bit",
+    "model_id": "openjev-dasein-gemma3-4b-4bit"
+  },
+  "max_prompt_tokens": 32768
+}

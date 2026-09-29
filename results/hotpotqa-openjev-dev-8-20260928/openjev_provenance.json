@@ -1,0 +1,112 @@
+{
+  "implementation": "daseinlabs/open-jev",
+  "upstream_revision": "6cb37c3cee9d8477d49d8ac0c99056e48ccc292c",
+  "model_id": "openjev-dasein-gemma3-4b-4bit",
+  "model_repository": "mlx-community/gemma-3-4b-it-4bit",
+  "model_revision": "93724907d4ed1745d2fe50baadf3b0b01a65abf2",
+  "backend": "mlx",
+  "max_prompt_tokens": 32768,
+  "files": {
+    "added_tokens.json": {
+      "bytes": 35,
+      "sha256": "50b2f405ba56a26d4913fd772089992252d7f942123cc0a034d96424221ba946"
+    },
+    "chat_template.json": {
+      "bytes": 1615,
+      "sha256": "fe16baf728db49457cde32802cd7efc0ac8a7a9877dbe22fe3322b2d9dc6ccd9"
+    },
+    "config.json": {
+      "bytes": 1072,
+      "sha256": "5ccdde91da736e6e6f8f138268c620adcbf1219c973b884240b719a54122465b"
+    },
+    "generation_config.json": {
+      "bytes": 192,
+      "sha256": "e04ecb65db447404710114fb282baaac482d22a95e2244ecaab428b81672ba78"
+    },
+    "model.safetensors": {
+      "bytes": 3400569562,
+      "sha256": "94d3d701367d78584a9334ca00672b1c86e4aefa6a94167556c0485381e74af3"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 90558,
+      "sha256": "77f4b67de084c31c7bcd373b039908108eee6c6181607e6d53da730e5f0bc659"
+    },
+    "preprocessor_config.json": {
+      "bytes": 570,
+      "sha256": "f688d6bb20c5017601c4011de7ca656da8485b540b05013efdaf986c0fcc918d"
+    },
+    "processor_config.json": {
+      "bytes": 70,
+      "sha256": "3ffd5f11778dc73e2b69b3c00535e4121e1badf7018136263cd17b5b34fbaa53"
+    },
+    "special_tokens_map.json": {
+      "bytes": 662,
+      "sha256": "2f7b0adf4fb469770bb1490e3e35df87b1dc578246c5e7e6fc76ecf33213a397"
+    },
+    "tokenizer.json": {
+      "bytes": 33384568,
+      "sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795"
+    },
+    "tokenizer.model": {
+      "bytes": 4689074,
+      "sha256": "1299c11d7cf632ef3b4e11937501358ada021bbdf7c47638d13c0ee982f2e79c"
+    },
+    "tokenizer_config.json": {
+      "bytes": 1157007,
+      "sha256": "0d95398b39395e5cfb290683a78f3fb0551223c672d8b033333c1a5307473760"
+    }
+  },
+  "decision_method": "softmax of yes/no continuation log probabilities; uncalibrated",
+  "normalization": "sum",
+  "packages": {
+    "Jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "click": "8.5.0",
+    "fastapi": "0.141.1",
+    "filelock": "4.0.5",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.6.0",
+    "httpcore": "1.0.9",
+    "httptools": "0.8.0",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.33.0",
+    "idna": "3.20",
+    "markdown-it-py": "4.2.0",
+    "mdurl": "0.1.2",
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "mlx-metal": "0.32.2",
+    "numpy": "2.5.3",
+    "openjev": "0.1.0",
+    "packaging": "26.3",
+    "pip": "26.0",
+    "protobuf": "7.36.2",
+    "pydantic": "2.13.5",
+    "pydantic_core": "2.46.5",
+    "python-dotenv": "1.2.3",
+    "regex": "2026.9.10",
+    "rich": "15.0.0",
+    "safetensors": "0.8.0",
+    "sentencepiece": "0.2.2",
+    "shellingham": "1.5.4",
+    "starlette": "1.7.0",
+    "tokenizers": "0.23.2",
+    "tqdm": "4.70.1",
+    "transformers": "5.17.0",
+    "typer": "0.27.2",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "uvicorn": "0.54.0",
+    "uvloop": "0.22.1",
+    "watchfiles": "1.3.0",
+    "websockets": "17.1"
+  },
+  "server_sha256": "1ccbb876e47a8a4a6013945b11104aa2706379be0d06376eec976fccd013f6c4"
+}

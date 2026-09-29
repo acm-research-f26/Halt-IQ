@@ -19,6 +19,8 @@ The implemented environment is **static question answering with supplied evidenc
 
 All arms share a question's initial draft. Their later answers can differ because feedback differs. The experiment therefore compares complete critic-and-revision systems; it does not isolate the stopping threshold alone. `local-typed` is a generative model producing uncalibrated scores, not Jev or OpenJev.
 
+The [OpenJev guide](OPENJEV.md) describes the installed community server, its separate environment, and the eight-question live comparison. The [code walkthrough](CODE_WALKTHROUGH.md) explains the regular writer and critic path.
+
 **The prepared dataset is ready to run.** [tasks.jsonl](../data/hotpotqa/tasks.jsonl) contains 100 genuine benchmark questions: 20 for development and 80 for local held-out evaluation. Both subsets derive from the **official public development split**, not the hidden official test set. The split is proportional by question type: 16 bridge / 4 comparison development cases and 64 bridge / 16 comparison held-out cases.
 
 The source contains 7,405 cases. Seed 42, stable source IDs, and proportional allocation determine the subset; answers and model performance do not influence selection. IDs and normalized questions cannot cross the two local splits. The [data manifest](../data/hotpotqa/manifest.json) records the seed, selected IDs, type counts, duplicate handling, source hashes, and output hash. No duplicate normalized questions were found in this source.

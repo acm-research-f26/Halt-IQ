@@ -4,7 +4,7 @@ A working Python prototype for Yash and Vedanshi's Monday discussion: **can a ty
 
 Yash's implementation lives on the [`Yash` branch of acm-research-f26/Halt-IQ](https://github.com/acm-research-f26/Halt-IQ/tree/Yash).
 
-The writer runs locally through Ollama. You can swap a conventional language-model critic for official Jev, a compatible local OpenJev server, or an explicitly labeled local typed baseline. A separate evaluator scores short answers against reference labels. The research environment is now **HotpotQA distractor**, with complete supplied Wikipedia evidence and official answer EM/F1 conventions. There is no model training or separate CUDA Python dependency.
+The writer runs locally through Ollama. You can swap a conventional language-model critic for official Jev, the installed community OpenJev setup, or an explicitly labeled local typed baseline. A separate evaluator scores short answers against reference labels. The research environment is now **HotpotQA distractor**, with complete supplied Wikipedia evidence and official answer EM/F1 conventions. There is no model training. OpenJev has its own environment; the main HaltIQ inference code has no Python dependencies.
 
 **Environment and setup:** [HotpotQA research environment](Docs/ENVIRONMENT.md).
 
@@ -13,6 +13,8 @@ The writer runs locally through Ollama. You can swap a conventional language-mod
 **Latest results (September 28):** [20-question comparison and one-draft baseline](results/hotpotqa-dev-20-20260928/analysis.md). [Discord update and meeting questions](Docs/DISCORD_UPDATE.md).
 
 **Professor prep:** [Short answers and results figure](Docs/PROFESSOR_PREP.md).
+
+**OpenJev:** [Local setup and measured limitations](Docs/OPENJEV.md). [How the regular writer/critic code works](Docs/CODE_WALKTHROUGH.md).
 
 **Start here:** `python3 -m haltiq demo` works offline immediately. For an actual HotpotQA run, use `python3 -m haltiq run --environment hotpotqa --limit 4`. The 100-question subset is already prepared. Python 3.10+ is the only Python requirement; no pip install is needed when running from this folder. Windows uses `py -3` in place of `python3`.
 
@@ -44,7 +46,7 @@ The default cap is three drafts (the initial answer and at most two revisions). 
 | `llm` | Local Qwen, ordinary critique | Generated explanation | Approval or cap |
 | `jev` | Official TypeSafe Jev | Templates for failed typed checks | All checks pass or cap |
 | `local-typed` | Local Qwen, JSON scores | Same templates as Jev | All checks pass or cap |
-| `openjev` | User-supplied compatible local server | Same templates as Jev | All checks pass or cap |
+| `openjev` | Local daseinlabs OpenJev with Gemma 3 4B | Same templates as Jev | All checks pass or cap |
 
 Jev evaluates **supported**, **complete**, and **relevant** in one request with three `noul` questions. Approval requires every probability to be at least `0.8`; a high relevance score cannot hide low factual support. These probabilities are not multiplied into a purported joint confidence. The threshold is an initial development choice, not a validated optimum.
 
@@ -131,17 +133,24 @@ At that price, 100 tasks × three rounds means at most **300 Jev requests** (eac
 
 The guard covers this harness at the verified model price. It is not an account-wide billing limit and does not include credit purchases, taxes, changed provider prices, other applications, or electricity. Disable automatic credit refill in your account if appropriate. **Do not delete or replace the ledger to restart spending.** When moving between PC and Mac, use the same ledger sequentially or allocate separate allowances whose sum stays below $30; independent ledgers cannot coordinate a global cap.
 
-## OpenJev option
+## Run OpenJev locally
 
-Several unrelated projects use the name OpenJev. They are independent implementations, not official Jev weights. A local compatible server can be used like this:
+The verified Mac setup uses [daseinlabs/open-jev](https://github.com/daseinlabs/open-jev) with a pinned 4-bit Gemma 3 4B checkpoint through MLX. It is a community implementation, not official Jev. From the project folder, use Python 3.12+:
 
 ```bash
-python3 -m haltiq run --critics fixed,llm,openjev --openjev-url http://localhost:8080 --openjev-model openjev-latest --split dev --limit 4
+python3 scripts/setup_openjev.py
+.haltiq/openjev-venv/bin/python scripts/serve_openjev.py
 ```
 
-The API root must be loopback; the client adds `/v1/systemone`. Supply the model identifier actually supported by your server. No TypeSafe environment key is forwarded to the local server. No OpenJev model/server was installed or tested in this implementation.
+Keep that server running. In another terminal with Ollama running:
 
-For example, [razorback16/openjev](https://github.com/razorback16/openjev) documents a DiffusionGemma backend requiring at least 24 GB NVIDIA VRAM, or an MLX path using roughly 16 GB on a Mac. That makes it a poor default for the 5070 Ti. Your Mac could be a candidate for that MLX path, but validate memory and server compatibility separately. The lightweight hosted Jev adapter plus local writer is the practical first experiment.
+```bash
+.venv/bin/python -m haltiq run --critics fixed,llm,openjev --split dev --limit 8
+```
+
+The API listens only on `127.0.0.1:8080`. No TypeSafe key is needed or forwarded. Source and model revisions are pinned, model hashes are checked at startup, and the actual model identity is recorded in responses. See [Docs/OPENJEV.md](Docs/OPENJEV.md) for dependencies, Windows instructions, and validation. The PC backend is documented but has not been executed here.
+
+The [eight-question live comparison](results/hotpotqa-openjev-dev-8-20260928/report.md) completed all 24 episodes: fixed revision scored 4/8, the regular critic 5/8, and OpenJev 4/8. OpenJev approved none of its 24 reviewed drafts and rejected 12 drafts that matched the reference answer. It always reached three drafts. Its zero false approvals therefore do not establish useful stopping behavior. This setup works, but the current model/rubric/0.8 threshold combination needs development before it can help with early stopping. The run used no hosted inference and overlaps the earlier development cases; do not pool them as independent examples.
 
 ## Results and collaboration
 

@@ -1,0 +1,21 @@
+loaded .haltiq/models/gemma-3-4b-it-4bit in 1.3s
+ctx_tokens=   6 options= 4 max_abs_diff=0.3672 max_rel_diff=2.7523%
+    cached=   -0.339 naive=   -0.339  ' Paris'
+    cached=   -9.401 naive=   -9.401  ' Berlin'
+    cached=  -13.707 naive=  -13.340  ' a city in Europe'
+    cached=  -10.839 naive=  -10.839  ' Lyon'
+ctx_tokens=  14 options= 4 max_abs_diff=0.1157 max_rel_diff=0.3997%
+    cached=   -0.004 naive=   -0.004  ' 4'
+    cached=  -15.129 naive=  -15.129  ' 5'
+    cached=  -15.376 naive=  -15.376  ' four'
+    cached=  -28.824 naive=  -28.940  ' twenty-two'
+ctx_tokens=1501 options= 8 max_abs_diff=0.3754 max_rel_diff=0.3017%
+    cached= -108.147 naive= -107.841  'river orbit signal velvet meadow quiet c'
+    cached= -128.567 naive= -128.554  'cloud granite stone cloud cipher ledger '
+    cached= -133.083 naive= -133.145  'meadow cloud orbit meadow ledger river v'
+    cached= -121.046 naive= -121.116  'cipher signal lantern stone meadow meado'
+    cached= -121.133 naive= -121.454  'river engine quiet lantern lantern harbo'
+    cached= -119.616 naive= -119.638  'velvet quiet signal quiet cloud orbit si'
+    cached= -131.994 naive= -132.176  'granite stone granite stone meadow river'
+    cached= -124.061 naive= -124.436  'meadow quiet market meadow cloud velvet '
+OK

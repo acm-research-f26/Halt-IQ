@@ -1,0 +1,94 @@
+{
+  "verification": "passed",
+  "method": "Artifact consistency audit; round EM/F1 are rechecked with the current scorer only after verifying it matches the saved scorer. No independent gold adjudication or new inference. Checksums establish agreement with the saved manifest, not external authenticity.",
+  "checks": [
+    "source and dataset snapshot hashes",
+    "matching scorer and round scores versus saved gold",
+    "prepared dataset hash and task selection",
+    "complete paired episodes",
+    "CSV versus trace fields",
+    "shared first-draft reuse and scoring",
+    "final scores and stopping",
+    "recomputed arm aggregates",
+    "physical model calls and usage"
+  ],
+  "input_sha256": {
+    "manifest.json": "b8b3bafe2fc30fc376f21002451af80d029bec45ef01c6be32871728541be75b",
+    "summary.json": "91122ab7cd153f801936e2281e3a0ff7942224f785edee8bb0d10044feccce47",
+    "episodes.csv": "373684be05815384b903931f1a7f3c2e6624ad884f6aa9ca547cce66c424347a",
+    "traces.jsonl": "e3a7bf440d98370e3d80069a06d3ab6f0d8c1e44d6b16d80990b21ea1578324b",
+    "dataset_snapshot.jsonl": "9bcdd373cb93d36c37faef3a0341b464352cd67415a7f13962425b276c1bea79"
+  },
+  "analysis_script_sha256": "084d2abceace7f5d8c6a001165800d82577a36d6cc5de7e2c2def416c1337ec3",
+  "source_sha256": "77de4bc938836f6f49c2c60dbfb0dc1ac347927310b024a56578e1ea4de8842a",
+  "task_ids": [
+    "hotpotqa:5ab833ad5542990e739ec86f",
+    "hotpotqa:5abfc8675542993fe9a41e52",
+    "hotpotqa:5a74b4e555429929fddd84c2",
+    "hotpotqa:5ae6860e5542991bbc976112",
+    "hotpotqa:5adeb95d5542992fa25da827",
+    "hotpotqa:5abbcfaf5542993f40c73ba9",
+    "hotpotqa:5adf98215542993344016d19",
+    "hotpotqa:5ac240ef55429951e9e684ef"
+  ],
+  "one_draft_baseline": {
+    "episodes": 8,
+    "correct": 4,
+    "answer_em": 0.5,
+    "answer_f1": 0.575,
+    "mean_drafts": 1.0,
+    "judge_calls": 0,
+    "note": "Derived from the saved shared first drafts, not an additional model run."
+  },
+  "arms": {
+    "fixed": {
+      "correct": 4,
+      "answer_em": 0.5,
+      "answer_f1": 0.575,
+      "mean_drafts": 3,
+      "judge_calls": 0,
+      "repairs": 0,
+      "regressions": 0,
+      "repair_task_ids": [],
+      "regression_task_ids": [],
+      "em_mismatching_approvals": 0,
+      "approvals": 0
+    },
+    "llm": {
+      "correct": 5,
+      "answer_em": 0.625,
+      "answer_f1": 0.7,
+      "mean_drafts": 1.375,
+      "judge_calls": 11,
+      "repairs": 1,
+      "regressions": 0,
+      "repair_task_ids": [
+        "hotpotqa:5ac240ef55429951e9e684ef"
+      ],
+      "regression_task_ids": [],
+      "em_mismatching_approvals": 3,
+      "approvals": 7
+    },
+    "openjev": {
+      "correct": 4,
+      "answer_em": 0.5,
+      "answer_f1": 0.575,
+      "mean_drafts": 3,
+      "judge_calls": 24,
+      "repairs": 0,
+      "regressions": 0,
+      "repair_task_ids": [],
+      "regression_task_ids": [],
+      "em_mismatching_approvals": 0,
+      "approvals": 0
+    }
+  },
+  "limitations": [
+    "Development results are exploratory; no significance or broad superiority claim.",
+    "A repair or regression is defined by answer exact match, not manual factual adjudication.",
+    "A non-matching approved answer can be a wording mismatch; inspect F1 and raw answers.",
+    "Later drafts differ across arms because feedback differs.",
+    "Local typed scores are uncalibrated Qwen outputs, not Jev results.",
+    "The OpenJev arm uses a separate community model; its scores and results do not establish official Jev performance."
+  ]
+}

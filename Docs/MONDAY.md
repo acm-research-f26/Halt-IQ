@@ -27,7 +27,7 @@ The answer scorer matches the official HotpotQA answer EM/F1 conventions. A sepa
 
 All 63 automated tests pass, including dataset preparation, split isolation, answer metric behavior, spending enforcement, HTTP transport, and conservative input-size checks. The analysis helper also verified the new run's snapshot hashes, task selection, shared first drafts, saved scores, CSV/trace agreement, and reported aggregates. It checks consistency with the saved gold and matching scorer; it does not independently judge factual correctness. Reproduce it with `python scripts/analyze_run.py results/hotpotqa-dev-20-20260928`. The earlier [synthetic diagnostic pilot](../results/local-verified/report.md) remains a separate historical result and must not be pooled with HotpotQA.
 
-**Official Jev remains unrun.** No TypeSafe key is configured. The adapter is implemented and contract-tested, but authentication, availability, and live Jev behavior still need to be checked. The local typed critic is a generative Qwen baseline with uncalibrated scores; it is neither Jev nor OpenJev. No OpenJev server has been installed.
+**Official Jev remains unrun.** No TypeSafe key is configured. The adapter is implemented and contract-tested, but authentication, availability, and live Jev behavior still need to be checked. The local typed critic is a generative Qwen baseline with uncalibrated scores; it is neither Jev nor OpenJev. A separate [community OpenJev setup and eight-question run](OPENJEV.md) is now available: it scored 4/8 and approved no drafts at the current threshold, so it did not improve early stopping. Keep that run separate from the 20-question comparison above.
 
 ## A failure case worth discussing
 

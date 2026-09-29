@@ -187,7 +187,9 @@ def analyze(directory):
                         "A repair or regression is defined by answer exact match, not manual factual adjudication.",
                         "A non-matching approved answer can be a wording mismatch; inspect F1 and raw answers.",
                         "Later drafts differ across arms because feedback differs.",
-                        "Local typed scores are uncalibrated Qwen outputs, not Jev results."],
+                        "Local typed scores are uncalibrated Qwen outputs, not Jev results."]
+                       + (["The OpenJev arm uses a separate community model; its scores and results do not establish official Jev performance."]
+                          if "openjev" in arms else []),
     }
 
 
