@@ -1,6 +1,6 @@
 # Critic benchmark report
 
-Label: **strict** (exact match).
+Label: **lenient** (exact match or token F1 >= 0.8).
 
 ## Draft set `first`: 20 drafts, 11 correct (55%)
 
@@ -44,4 +44,4 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 
 Sample size: n = 25, so any accuracy here is uncertain by roughly ±20% (95% interval, worst case p = 0.5). Accuracy-when-approved uses even fewer drafts.
 
-![Reliability chart](reliability.png)
+![Reliability chart](reliability-lenient.png)

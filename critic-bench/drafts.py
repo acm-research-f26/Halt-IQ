@@ -1,18 +1,34 @@
-"""Load the fixed test set of drafts from Yash's Sept 28 run (read-only).
+"""Load the fixed test sets of drafts. Every critic judges exactly these drafts.
 
-Every critic judges exactly these drafts, so nothing is regenerated.
-A draft is "correct" when its saved HotpotQA exact_match is True (the same
-label Yash's analyze_run.py uses).
+- first / all: drafts from Yash's Sept 28 run (read-only).
+- extra: first drafts for ~200 more HotpotQA dev questions (made by make_extra.py).
+
+Two labels per draft, both from Yash's HotpotQA scorer (haltiq/metrics.py):
+- correct (strict): exact match after normalization, as analyze_run.py uses.
+- lenient: exact match OR token F1 >= 0.8.
 """
 
 import hashlib
 import json
 import re
 import string
+import sys
 from pathlib import Path
 
-RUN_DIR = (Path(__file__).resolve().parents[2] / "halt-iq-yash" / "results" / "runs"
-           / "run-20260928T234403183653Z")
+YASH_REPO = Path(__file__).resolve().parents[2] / "halt-iq-yash"
+RUN_DIR = YASH_REPO / "results" / "runs" / "run-20260928T234403183653Z"
+EXTRA_DIR = Path(__file__).resolve().parent / "extra"
+LENIENT_F1 = 0.8
+
+sys.dont_write_bytecode = True  # import Yash's package without writing anything into his folder
+sys.path.insert(0, str(YASH_REPO))
+from haltiq.metrics import hotpot_evaluate  # noqa: E402
+
+
+def labels(draft, gold):
+    score = hotpot_evaluate(draft, gold)
+    return {"correct": score["exact_match"], "f1": score["token_f1"],
+            "lenient": score["exact_match"] or score["token_f1"] >= LENIENT_F1}
 
 
 def read_jsonl(path):
@@ -32,7 +48,14 @@ def draft_id(task_id, draft):
 
 
 def load_drafts(which="first", run_dir=RUN_DIR):
-    """which = "first" (20 shared first drafts) or "all" (every unique labeled draft)."""
+    """which = "first" (20 shared first drafts), "all" (every unique labeled draft), or "extra"."""
+    if which == "extra":
+        tasks = {t["id"]: t for t in read_jsonl(EXTRA_DIR / "tasks.jsonl")}
+        return [{"draft_id": draft_id(row["task_id"], row["draft"]), "task_id": row["task_id"],
+                 "question": tasks[row["task_id"]]["question"], "evidence": tasks[row["task_id"]]["evidence"],
+                 "draft": row["draft"], "is_first": True, **labels(row["draft"], tasks[row["task_id"]]["answers"])}
+                for row in read_jsonl(EXTRA_DIR / "drafts.jsonl")]
+
     tasks = {t["id"]: t for t in read_jsonl(run_dir / "dataset_snapshot.jsonl") if t["split"] == "dev"}
     events = read_jsonl(run_dir / "traces.jsonl")
     first = {(e["task_id"], e["draft"]) for e in events if e["event"] == "shared_writer"}
@@ -45,10 +68,11 @@ def load_drafts(which="first", run_dir=RUN_DIR):
             if which == "first" and not is_first:
                 continue
             key = draft_id(task["id"], rnd["draft"])
+            label = labels(rnd["draft"], task["answers"])
+            assert label["correct"] == rnd["exact_match"], "rescored label differs from the saved one"
             drafts.setdefault(key, {
                 "draft_id": key, "task_id": task["id"], "question": task["question"],
-                "evidence": task["evidence"], "draft": rnd["draft"],
-                "correct": rnd["exact_match"], "is_first": is_first,
+                "evidence": task["evidence"], "draft": rnd["draft"], "is_first": is_first, **label,
             })
     return list(drafts.values())
 

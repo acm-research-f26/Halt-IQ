@@ -1,16 +1,19 @@
 """Compare every critic in scores/ on the same drafts; write report.md and reliability.png.
 
-Usage: python3 report.py
+Usage: python3 report.py [--label strict|lenient]
 
+strict = exact match (writes report.md, reliability.png);
+lenient = exact match or token F1 >= 0.8 (writes report-lenient.md, reliability-lenient.png).
 "Approve" means score >= threshold for probability critics (same rule as Yash's
 loop, default 0.8) or decision == "approve" for text-only critics.
 """
 
+import argparse
 import json
 import math
 from pathlib import Path
 
-from drafts import load_drafts
+from drafts import EXTRA_DIR, load_drafts
 
 HERE = Path(__file__).resolve().parent
 THRESHOLDS = (0.5, 0.6, 0.7, 0.8, 0.9)
@@ -46,9 +49,9 @@ def errors(rows, threshold):
     return wrong_ok, right_no
 
 
-def evaluate(critic_rows, drafts):
+def evaluate(critic_rows, drafts, label):
     """Join cached scores to this draft set's labels; drafts a critic never scored are left out."""
-    rows = [{**critic_rows[d["draft_id"]], "correct": d["correct"]} for d in drafts if d["draft_id"] in critic_rows]
+    rows = [{**critic_rows[d["draft_id"]], "correct": d[label]} for d in drafts if d["draft_id"] in critic_rows]
     n_right = sum(r["correct"] for r in rows)
     approved = [r for r in rows if approves(r, 0.8)]
     wrong_ok, right_no = errors(rows, 0.8)
@@ -64,7 +67,7 @@ def evaluate(critic_rows, drafts):
     }
 
 
-def reliability_chart(results, path):
+def reliability_chart(results, path, title):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -87,7 +90,7 @@ def reliability_chart(results, path):
                    label=f"{critic} (n={res['n']})")
     ax.set(xlim=(-0.03, 1.03), ylim=(-0.03, 1.03), xlabel="Critic's predicted P(correct), binned",
            ylabel="Fraction actually correct (exact match)")
-    ax.set_title("Critic reliability on all unique drafts\n(marker size = drafts in bin)", fontsize=11, loc="left")
+    ax.set_title(title + "\n(marker size = drafts in bin)", fontsize=11, loc="left")
     ax.grid(color="#e6e5df", linewidth=0.8)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
@@ -96,13 +99,18 @@ def reliability_chart(results, path):
     fig.savefig(path)
 
 
-def main():
+def main(label):
     scores = load_scores()
-    lines = []
-    for which in ("first", "all"):
+    suffix = "" if label == "strict" else "-" + label
+    key = "correct" if label == "strict" else "lenient"  # field name in each draft (see drafts.py)
+    sets = ["first", "all"] + (["extra"] if (EXTRA_DIR / "drafts.jsonl").exists() else [])
+    chart_set = sets[-1]  # the largest set
+    lines = [f"Label: **{label}** ({'exact match' if label == 'strict' else 'exact match or token F1 >= 0.8'}).", ""]
+    for which in sets:
         drafts = load_drafts(which)
-        n, n_right = len(drafts), sum(d["correct"] for d in drafts)
-        results = {critic: evaluate(rows, drafts) for critic, rows in scores.items()}
+        n, n_right = len(drafts), sum(d[key] for d in drafts)
+        results = {critic: evaluate(rows, drafts, key) for critic, rows in scores.items()}
+        results = {critic: r for critic, r in results.items() if r["n"]}
         lines += [f"## Draft set `{which}`: {n} drafts, {n_right} correct ({n_right / n:.0%})", "",
                   f"Approving everything would be right {n_right}/{n} ({n_right / n:.0%}) of the time; "
                   "a useful critic beats this on accuracy when approved.", "",
@@ -122,13 +130,16 @@ def main():
         margin = 1.96 * math.sqrt(0.25 / n)
         lines += ["", f"Sample size: n = {n}, so any accuracy here is uncertain by roughly ±{margin:.0%} "
                       f"(95% interval, worst case p = 0.5). Accuracy-when-approved uses even fewer drafts.", ""]
-        if which == "all":
-            reliability_chart(results, HERE / "reliability.png")
-    lines += ["![Reliability chart](reliability.png)", ""]
+        if which == chart_set:
+            reliability_chart(results, HERE / f"reliability{suffix}.png",
+                              f"Critic reliability on draft set '{which}' ({label} label)")
+    lines += [f"![Reliability chart](reliability{suffix}.png)", ""]
     text = "# Critic benchmark report\n\n" + "\n".join(lines)
-    (HERE / "report.md").write_text(text, encoding="utf-8")
+    (HERE / f"report{suffix}.md").write_text(text, encoding="utf-8")
     print(text)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--label", choices=["strict", "lenient"], default="strict")
+    main(parser.parse_args().label)
