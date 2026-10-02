@@ -67,7 +67,7 @@ Approving everything would be right 126/200 (63%) of the time; a useful critic b
 | llm | Yash's critic; saved + live | 200/200 | 106/159 (67%) | 53/74 | 20/126 | — (text only) | 10.23 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 200/200 | 0/1 (0%) | 1/74 | 126/126 | 0.50 | 0.86 | $0 (local) |
 | laya | new | 200/200 | 50/65 (77%) | 15/74 | 76/126 | 0.64 | 0.22 | $0 (local) |
-| evidence_match | new, no model | 200/200 | 119/178 (67%) | 59/74 | 7/126 | 0.58 | 0.00 | $0 (local) |
+| evidence_match | new, no model | 200/200 | 119/177 (67%) | 58/74 | 7/126 | 0.58 | 0.00 | $0 (local) |
 | consistency | new, 3 writer samples | 60/200 | 36/51 (71%) | 15/21 | 3/39 | 0.61 | 8.70 | $0 (local) |
 
 Threshold sweep (probability critics): wrong approvals / wrongly rejected
@@ -76,7 +76,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 |---|---:|---:|---:|---:|---:|
 | kev | 22 / 101 | 10 / 121 | 3 / 125 | 1 / 126 | 0 / 126 |
 | laya | 57 / 23 | 47 / 31 | 32 / 42 | 15 / 76 | 1 / 121 |
-| evidence_match | 60 / 4 | 59 / 7 | 59 / 7 | 59 / 7 | 59 / 7 |
+| evidence_match | 59 / 4 | 58 / 7 | 58 / 7 | 58 / 7 | 58 / 7 |
 | consistency | 17 / 2 | 17 / 2 | 15 / 3 | 15 / 3 | 15 / 3 |
 
 Sample size: n = 200, so any accuracy here is uncertain by roughly ±7% (95% interval, worst case p = 0.5). Accuracy-when-approved uses even fewer drafts.

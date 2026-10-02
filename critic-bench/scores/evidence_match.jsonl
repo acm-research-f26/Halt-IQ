@@ -31,11 +31,11 @@
 {"critic": "evidence_match", "draft_id": "5a79c6a55542994bb9457091-a84ecd53", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5a81fbc25542990a1d231f09-b23a6a84", "score": 0.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ade51515542992fa25da745-38825288", "score": 1.0, "decision": null, "seconds": 0.0}
-{"critic": "evidence_match", "draft_id": "5ae33cf45542990afbd1e0ea-f0fa6c43", "score": 1.0, "decision": null, "seconds": 0.001}
+{"critic": "evidence_match", "draft_id": "5ae33cf45542990afbd1e0ea-f0fa6c43", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5a8af3b155429950cd6afc2c-e54dd704", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ae5a0765542992663a4f1fb-255ac64f", "score": 1.0, "decision": null, "seconds": 0.001}
 {"critic": "evidence_match", "draft_id": "5a7754d85542993735360234-51bec148", "score": 1.0, "decision": null, "seconds": 0.0}
-{"critic": "evidence_match", "draft_id": "5a7345185542992359bc32cb-ee139bd0", "score": 0.0, "decision": null, "seconds": 0.001}
+{"critic": "evidence_match", "draft_id": "5a7345185542992359bc32cb-ee139bd0", "score": 0.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5abfa9745542997ec76fd426-5ad55990", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ae236445542992decbdcc69-1394cb60", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ae5fd395542996de7b71ab3-86e3200a", "score": 1.0, "decision": null, "seconds": 0.0}
@@ -132,7 +132,7 @@
 {"critic": "evidence_match", "draft_id": "5a72634d5542997f82783994-ccafb803", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ae16ea85542990adbacf790-25daa1b4", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ae7ee41554299540e5a56b0-da6e2f53", "score": 1.0, "decision": null, "seconds": 0.0}
-{"critic": "evidence_match", "draft_id": "5ae5b25d5542990ba0bbb2bb-b23a6a84", "score": 1.0, "decision": null, "seconds": 0.0}
+{"critic": "evidence_match", "draft_id": "5ae5b25d5542990ba0bbb2bb-b23a6a84", "score": 0.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5ab2b61d5542991669774065-e8eb4b70", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5a72339855429971e9dc934d-cfebec12", "score": 1.0, "decision": null, "seconds": 0.0}
 {"critic": "evidence_match", "draft_id": "5a7dc2495542997cc2c4749a-725f7560", "score": 1.0, "decision": null, "seconds": 0.0}

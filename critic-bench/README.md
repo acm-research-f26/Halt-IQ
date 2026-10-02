@@ -43,6 +43,7 @@ from Yash's `haltiq/metrics.py`.
 | `make_extra.py` | `select` / `estimate` / `write`: builds the `extra` set with Yash's downloader, selection helpers, and Writer. |
 | `make_samples.py` | Draws 3 extra writer answers per `subset80` question at temperature 0.7 (Yash's Writer and prompt; seeds 1–3) into `samples/consistency.jsonl`. |
 | `run_all.sh` | Runs the scoring stages in order, one Ollama job at a time, stopping at a set deadline. |
+| `combos.py` | `python3 combos.py`: compares stop rules (e.g. evidence_match as a free gate before llm) on `extra` and `subset80`; writes `combos.md`. |
 | `report.py` | `python3 report.py [--label strict\|lenient]`: writes `report.md` / `report-lenient.md` and the reliability charts. |
 | `scores/` | Cached critic scores (critic, draft id, score or decision, seconds). |
 | `extra/` | The 200 extra tasks (`tasks.jsonl`) and their first drafts (`drafts.jsonl`). |
@@ -55,7 +56,7 @@ from Yash's `haltiq/metrics.py`.
 | `local-typed` | P = min of 3 scores | qwen3:8b self-reported 0–1 scores (saved only). |
 | `kev` | P = min of 3 noul probabilities | Kev-0.8B through Yash's openjev arm. Saved scores reused; live calls reproduce saved scores exactly. |
 | `laya` | P(yes) | Laya noul question "Is the proposed answer correct and supported by the evidence?" |
-| `evidence_match` | 1 / 0 (0.5 for yes/no) | No model: 1 if the normalized answer appears word-for-word in the evidence the critic sees (all 10 paragraphs, not gold supporting facts). A "yes"/"no" answer can't be matched, so it gets 0.5. |
+| `evidence_match` | 1 / 0 (0.5 for yes/no) | No model: 1 if the normalized answer appears word-for-word in the evidence the critic sees (all 10 paragraphs, not gold supporting facts). A "yes"/"no" answer can't be matched, so it gets 0.5; `UNKNOWN` gets 0. |
 | `consistency` | 0, ⅓, ⅔, 1 | Share of 3 resampled writer answers (temperature 0.7) that match the first draft after normalization. Only for first drafts of the 80 `subset80` questions; its time is the 3 extra writer calls. |
 
 The min of three scores is used because the loop approves only when all three
@@ -102,7 +103,7 @@ Full tables for every draft set: `report.md` (strict label) and `report-lenient.
 | llm (qwen3:8b) | 200 | 100/159 (63%) | 59/85 | 15/115 | — | 10.23 |
 | kev (Kev-0.8B) | 200 | 0/1 | 1/85 | 115/115 | 0.48 | 0.86 |
 | laya | 200 | 45/65 (69%) | 20/85 | 70/115 | 0.60 | 0.22 |
-| evidence_match | 200 | 111/178 (62%) | 67/85 | 4/115 | 0.59 | 0.00 |
+| evidence_match | 200 | 111/177 (63%) | 66/85 | 4/115 | 0.60 | 0.00 |
 | consistency | 60 | 32/51 (63%) | 19/26 | 2/34 | 0.61 | 8.70 |
 
 All critics run locally ($0).
@@ -116,5 +117,7 @@ All critics run locally ($0).
 - Laya is the only critic that is selective at 0.8, but it rejects most right answers too (70/115 on `extra`), and it is not better than chance on `subset80`.
 - The free, model-free `evidence_match` ranks drafts about as well as anything else tested.
 - With the lenient label (EM or F1 ≥ 0.8), 11 of the 85 wrong `extra` drafts become right. The ranking of critics does not change (see `report-lenient.md`).
+
+**Stop rules** (`combos.md`): gating llm with evidence_match (send a draft to llm only if its answer appears in the evidence) gives the best accuracy when stopping (66% on `extra`, 69% on `subset80`, vs 62–63% for llm alone) and saves 9–12% of llm calls. Its 95% intervals still overlap "approve everything".
 
 Not yet run: the qwen3:8b logprob critic (Step 5) and the qwen3:14b text critic (Step 6).

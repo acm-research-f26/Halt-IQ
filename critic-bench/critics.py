@@ -70,10 +70,12 @@ def saved_then_live(arm):
 def evidence_match(draft):
     """1 if the normalized answer appears word-for-word in the evidence the critic sees, else 0.
 
-    A yes/no answer never appears verbatim, so it gets 0.5 (no information).
+    A yes/no answer never appears verbatim, so it gets 0.5 (no information). UNKNOWN gets 0.
     Uses all evidence paragraphs, not gold supporting facts (those are evaluation-only).
     """
     answer = normalize(draft["draft"])
+    if answer == "unknown":
+        return 0.0  # a non-answer, even if the word "unknown" appears in the evidence
     if answer in ("yes", "no"):
         return 0.5
     evidence = " ".join(normalize(paragraph) for paragraph in draft["evidence"])
