@@ -1,6 +1,6 @@
 """Score a draft set with one critic and cache every score to JSONL.
 
-Usage: python3 score_drafts.py CRITIC {first,all,extra}
+Usage: python3 score_drafts.py CRITIC {first,all,extra,subset80} [--limit N]
 
 Scores go to scores/CRITIC.jsonl, one line per draft, written as soon as each
 draft is scored. Drafts already in the cache are skipped, so reruns are free
@@ -26,10 +26,10 @@ def load_cache(critic):
     return {row["draft_id"]: row for row in rows}
 
 
-def score(critic, which):
+def score(critic, which, limit=None):
     cache = load_cache(critic)
     drafts = load_drafts(which)
-    todo = [d for d in drafts if d["draft_id"] not in cache]
+    todo = [d for d in drafts if d["draft_id"] not in cache][:limit]
     print(f"{critic} on {which}: {len(drafts)} drafts, {len(drafts) - len(todo)} cached, {len(todo)} to score")
 
     SCORES_DIR.mkdir(exist_ok=True)
@@ -55,6 +55,7 @@ def score(critic, which):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("critic", choices=sorted(CRITICS))
-    parser.add_argument("draft_set", choices=["first", "all", "extra"])
+    parser.add_argument("draft_set", choices=["first", "all", "extra", "subset80"])
+    parser.add_argument("--limit", type=int, help="score at most N uncached drafts (e.g. a timing check)")
     args = parser.parse_args()
-    score(args.critic, args.draft_set)
+    score(args.critic, args.draft_set, args.limit)

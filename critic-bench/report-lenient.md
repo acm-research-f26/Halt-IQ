@@ -67,6 +67,7 @@ Approving everything would be right 126/200 (63%) of the time; a useful critic b
 | llm | Yash's critic; saved + live | 200/200 | 106/159 (67%) | 53/74 | 20/126 | — (text only) | 10.23 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 200/200 | 0/1 (0%) | 1/74 | 126/126 | 0.50 | 0.86 | $0 (local) |
 | laya | new | 200/200 | 50/65 (77%) | 15/74 | 76/126 | 0.64 | 0.22 | $0 (local) |
+| qwen8b-logprob | new, qwen3:8b P(yes) | 200/200 | 103/150 (69%) | 47/74 | 23/126 | 0.62 | 7.14 | $0 (local) |
 | evidence_match | new, no model | 200/200 | 119/177 (67%) | 58/74 | 7/126 | 0.58 | 0.00 | $0 (local) |
 | consistency | new, 3 writer samples | 200/200 | 116/172 (67%) | 56/74 | 10/126 | 0.58 | 8.79 | $0 (local) |
 
@@ -76,6 +77,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 |---|---:|---:|---:|---:|---:|
 | kev | 22 / 101 | 10 / 121 | 3 / 125 | 1 / 126 | 0 / 126 |
 | laya | 57 / 23 | 47 / 31 | 32 / 42 | 15 / 76 | 1 / 121 |
+| qwen8b-logprob | 52 / 22 | 48 / 23 | 48 / 23 | 47 / 23 | 47 / 26 |
 | evidence_match | 59 / 4 | 58 / 7 | 58 / 7 | 58 / 7 | 58 / 7 |
 | consistency | 67 / 3 | 67 / 3 | 56 / 10 | 56 / 10 | 56 / 10 |
 
@@ -93,6 +95,7 @@ Approving everything would be right 50/80 (62%) of the time; a useful critic bea
 | local-typed | Yash's critic; saved | 20/80 | 10/19 (53%) | 9/9 | 1/11 | 0.45 | 7.26 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 80/80 | 0/0 | 0/30 | 50/50 | 0.51 | 1.23 | $0 (local) |
 | laya | new | 80/80 | 15/23 (65%) | 8/30 | 35/50 | 0.55 | 0.26 | $0 (local) |
+| qwen8b-logprob | new, qwen3:8b P(yes) | 60/80 | 33/44 (75%) | 11/21 | 6/39 | 0.72 | 6.60 | $0 (local) |
 | evidence_match | new, no model | 80/80 | 48/69 (70%) | 21/30 | 2/50 | 0.63 | 0.00 | $0 (local) |
 | consistency | new, 3 writer samples | 80/80 | 45/68 (66%) | 23/30 | 5/50 | 0.57 | 8.82 | $0 (local) |
 
@@ -103,6 +106,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 | local-typed | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 |
 | kev | 10 / 36 | 3 / 47 | 0 / 49 | 0 / 50 | 0 / 50 |
 | laya | 25 / 8 | 20 / 11 | 16 / 21 | 8 / 35 | 0 / 49 |
+| qwen8b-logprob | 15 / 6 | 12 / 6 | 12 / 6 | 11 / 6 | 11 / 8 |
 | evidence_match | 21 / 1 | 21 / 2 | 21 / 2 | 21 / 2 | 21 / 2 |
 | consistency | 26 / 4 | 26 / 4 | 23 / 5 | 23 / 5 | 23 / 5 |
 

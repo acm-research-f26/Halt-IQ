@@ -23,12 +23,19 @@ COLORS = {"local-typed": "#2a78d6", "kev": "#eb6834", "laya": "#1baf7a", "qwen8b
           "evidence_match": "#e87ba4", "consistency": "#008300"}
 MARKERS = {"local-typed": "o", "kev": "s", "laya": "^", "qwen8b-logprob": "D", "evidence_match": "v", "consistency": "P"}
 SOURCE = {"llm": "Yash's critic; saved + live", "local-typed": "Yash's critic; saved", "kev": "Kev-0.8B; saved + live",
-          "laya": "new", "evidence_match": "new, no model", "consistency": "new, 3 writer samples"}
+          "laya": "new", "evidence_match": "new, no model", "consistency": "new, 3 writer samples",
+          "qwen8b-logprob": "new, qwen3:8b P(yes)", "qwen14b": "Yash's LLMCritic, qwen3:14b"}
+
+
+# qwen3:14b ran out of memory after 9/80 drafts (see README), so it stays out of the tables.
+EXCLUDED = {"qwen14b"}
 
 
 def load_scores():
     scores = {}
     for path in sorted((HERE / "scores").glob("*.jsonl")):
+        if path.stem in EXCLUDED:
+            continue
         rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
         scores[path.stem] = {row["draft_id"]: row for row in rows}
     return dict(sorted(scores.items(), key=lambda kv: ORDER.index(kv[0]) if kv[0] in ORDER else 99))

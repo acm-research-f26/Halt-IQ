@@ -13,6 +13,8 @@ Each rule decides, per draft, whether the loop stops (approves) or revises. Seco
 | 5. laya ≥ 0.8 alone | 65/200 | 45/65 (69%, 57%–79%) | 20/85 | 70/115 | 0.22 | 100% |
 | 6. evidence_match = 1 AND laya ≥ 0.5 | 143/200 | 90/143 (63%, 55%–70%) | 53/85 | 25/115 | 0.20 | 100% |
 | 7. consistency = 1.0 AND evidence_match = 1 | 156/200 | 104/156 (67%, 59%–74%) | 52/85 | 11/115 | 7.79 | 100% |
+| 8. logprob ≥ 0.8 alone | 150/200 | 97/150 (65%, 57%–72%) | 53/85 | 18/115 | 7.14 | 100% |
+| 9. evidence_match = 1 AND logprob ≥ 0.5 | 145/200 | 95/145 (66%, 57%–73%) | 50/85 | 20/115 | 6.30 | 100% |
 
 ## `subset80`: 80 drafts, 45 correct (56%)
 
@@ -25,6 +27,8 @@ Each rule decides, per draft, whether the loop stops (approves) or revises. Seco
 | 5. laya ≥ 0.8 alone | 23/80 | 12/23 (52%, 33%–71%) | 11/35 | 33/45 | 0.26 | 100% |
 | 6. evidence_match = 1 AND laya ≥ 0.5 | 57/80 | 35/57 (61%, 48%–73%) | 22/35 | 10/45 | 0.23 | 100% |
 | 7. consistency = 1.0 AND evidence_match = 1 | 61/80 | 40/61 (66%, 53%–76%) | 21/35 | 5/45 | 7.68 | 100% |
+| 8. logprob ≥ 0.8 alone (only 60/80 drafts scored) | 44/60 | 30/44 (68%, 53%–80%) | 14/26 | 4/34 | 6.60 | 100% |
+| 9. evidence_match = 1 AND logprob ≥ 0.5 (only 60/80 drafts scored) | 43/60 | 28/43 (65%, 50%–78%) | 15/26 | 6/34 | 5.69 | 100% |
 
 ## Summary
 

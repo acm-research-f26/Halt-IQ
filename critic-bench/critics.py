@@ -103,6 +103,32 @@ def consistency(draft):
     return agree, sum(s["seconds"] for s in samples)  # cost = the 3 extra writer calls
 
 
+def logprob(draft):
+    from logprob_critic import logprob as run  # qwen3:8b P("yes") from first-token logprobs
+    return run(draft)
+
+
+_qwen14b = None
+
+
+def qwen14b(draft):
+    """Yash's LLMCritic with the Sept 28 config, only the model changed to qwen3:14b.
+
+    Stopped after 9/80 subset80 drafts: on this 24 GB Mac it ran out of memory and swapped.
+    """
+    global _qwen14b
+    if _qwen14b is None:
+        import json
+        from drafts import RUN_DIR
+        from haltiq.critics import LLMCritic
+        from haltiq.providers import OllamaClient
+        config = json.loads((RUN_DIR / "manifest.json").read_text())["config"]
+        _qwen14b = LLMCritic(OllamaClient(base_url=config["ollama_url"], model="qwen3:14b", seed=config["seed"],
+                                          timeout=config["timeout"], num_ctx=config["context_tokens"]))
+    review = _qwen14b.review({"question": draft["question"], "evidence": draft["evidence"], "draft": draft["draft"]})
+    return ("approve" if review.approved else "revise"), review.call.latency_ms / 1000
+
+
 def laya(draft):
     from laya_critic import laya as run  # imported lazily so other critics don't load MLX
     return run(draft)
@@ -110,6 +136,8 @@ def laya(draft):
 
 CRITICS = {
     "laya": laya,                          # Laya noul: P(correct and supported)
+    "qwen8b-logprob": logprob,             # qwen3:8b P("yes"), first-token logprobs
+    "qwen14b": qwen14b,                    # qwen3:14b with Yash's LLMCritic prompt
     "evidence_match": evidence_match,      # answer string found in evidence (no model)
     "consistency": consistency,            # agreement of 3 resampled writer answers
     "llm": saved_then_live("llm"),         # qwen3:8b approve/revise

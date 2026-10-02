@@ -63,14 +63,29 @@ def consistency_and_evidence(s, d):
     return c == 1.0, sec, False
 
 
+def logprob_alone(s, d):
+    p, sec = run(s, "qwen8b-logprob", d)
+    return p >= 0.8, sec, False
+
+
+def evidence_and_logprob(s, d):
+    if run(s, "evidence_match", d)[0] != 1:
+        return False, 0.0, False
+    p, sec = run(s, "qwen8b-logprob", d)
+    return p >= 0.5, sec, False
+
+
+# (name, rule, critics it needs). A rule runs on the drafts that every needed critic has scored.
 RULES = [
-    ("1. approve everything", approve_all),
-    ("2. llm alone", llm_alone),
-    ("3. evidence_match alone", evidence_alone),
-    ("4. gate: evidence_match, then llm", gate),
-    ("5. laya ≥ 0.8 alone", laya_alone),
-    ("6. evidence_match = 1 AND laya ≥ 0.5", evidence_and_laya),
-    ("7. consistency = 1.0 AND evidence_match = 1", consistency_and_evidence),
+    ("1. approve everything", approve_all, []),
+    ("2. llm alone", llm_alone, ["llm"]),
+    ("3. evidence_match alone", evidence_alone, ["evidence_match"]),
+    ("4. gate: evidence_match, then llm", gate, ["evidence_match", "llm"]),
+    ("5. laya ≥ 0.8 alone", laya_alone, ["laya"]),
+    ("6. evidence_match = 1 AND laya ≥ 0.5", evidence_and_laya, ["evidence_match", "laya"]),
+    ("7. consistency = 1.0 AND evidence_match = 1", consistency_and_evidence, ["evidence_match", "consistency"]),
+    ("8. logprob ≥ 0.8 alone", logprob_alone, ["qwen8b-logprob"]),
+    ("9. evidence_match = 1 AND logprob ≥ 0.5", evidence_and_logprob, ["evidence_match", "qwen8b-logprob"]),
 ]
 
 
@@ -85,24 +100,29 @@ def wilson(k, n, z=1.96):
 
 
 def table(which, scores):
-    drafts = load_drafts(which)
-    n, n_right = len(drafts), sum(d["correct"] for d in drafts)
+    all_drafts = load_drafts(which)
+    n, n_right = len(all_drafts), sum(d["correct"] for d in all_drafts)
     lines = [f"## `{which}`: {n} drafts, {n_right} correct ({n_right / n:.0%})", "",
              "| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected "
              "| Avg s/draft | llm calls saved vs rule 2 |",
              "|---|---:|---:|---:|---:|---:|---:|"]
-    for name, rule in RULES:
+    for name, rule, needs in RULES:
+        drafts = [d for d in all_drafts if all(d["draft_id"] in scores.get(c, {}) for c in needs)]
+        if not drafts:
+            continue  # no scores for this critic on this set
+        if len(drafts) < n:
+            name += f" (only {len(drafts)}/{n} drafts scored)"
+        rule_n, rule_right = len(drafts), sum(d["correct"] for d in drafts)
         results = [(d, *rule(scores, d["draft_id"])) for d in drafts]
         approved = [d for d, ok, _, _ in results if ok]
         right = sum(d["correct"] for d in approved)
         ci = wilson(right, len(approved))
         accuracy = f"{right}/{len(approved)} ({right / len(approved):.0%}, {ci[0]:.0%}–{ci[1]:.0%})" if approved else "—"
         wrong_ok = sum(not d["correct"] for d in approved)
-        right_no = n_right - right
-        seconds = sum(sec for _, _, sec, _ in results) / n
-        saved = 1 - sum(called for *_, called in results) / n
-        lines.append(f"| {name} | {len(approved)}/{n} | {accuracy} | {wrong_ok}/{n - n_right} "
-                     f"| {right_no}/{n_right} | {seconds:.2f} | {saved:.0%} |")
+        seconds = sum(sec for _, _, sec, _ in results) / rule_n
+        saved = 1 - sum(called for *_, called in results) / rule_n
+        lines.append(f"| {name} | {len(approved)}/{rule_n} | {accuracy} | {wrong_ok}/{rule_n - rule_right} "
+                     f"| {rule_right - right}/{rule_right} | {seconds:.2f} | {saved:.0%} |")
     return lines
 
 
