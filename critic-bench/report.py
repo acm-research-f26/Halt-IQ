@@ -13,15 +13,17 @@ import json
 import math
 from pathlib import Path
 
-from drafts import EXTRA_DIR, load_drafts
+from drafts import EXTRA_DIR, gold_answers, load_drafts, normalize
 
 HERE = Path(__file__).resolve().parent
 THRESHOLDS = (0.5, 0.6, 0.7, 0.8, 0.9)
 # Fixed order and color per critic, so a critic keeps its color across reruns.
-ORDER = ["llm", "local-typed", "kev", "laya", "qwen8b-logprob", "qwen14b"]
-COLORS = {"local-typed": "#2a78d6", "kev": "#eb6834", "laya": "#1baf7a", "qwen8b-logprob": "#eda100"}
-MARKERS = {"local-typed": "o", "kev": "s", "laya": "^", "qwen8b-logprob": "D"}
-SOURCE = {"llm": "reused (Yash run)", "local-typed": "reused (Yash run)", "kev": "reused (Sept 28 run)"}
+ORDER = ["llm", "local-typed", "kev", "laya", "qwen8b-logprob", "qwen14b", "evidence_match", "consistency"]
+COLORS = {"local-typed": "#2a78d6", "kev": "#eb6834", "laya": "#1baf7a", "qwen8b-logprob": "#eda100",
+          "evidence_match": "#e87ba4", "consistency": "#008300"}
+MARKERS = {"local-typed": "o", "kev": "s", "laya": "^", "qwen8b-logprob": "D", "evidence_match": "v", "consistency": "P"}
+SOURCE = {"llm": "Yash's critic; saved + live", "local-typed": "Yash's critic; saved", "kev": "Kev-0.8B; saved + live",
+          "laya": "new", "evidence_match": "new, no model", "consistency": "new, 3 writer samples"}
 
 
 def load_scores():
@@ -52,6 +54,8 @@ def errors(rows, threshold):
 def evaluate(critic_rows, drafts, label):
     """Join cached scores to this draft set's labels; drafts a critic never scored are left out."""
     rows = [{**critic_rows[d["draft_id"]], "correct": d[label]} for d in drafts if d["draft_id"] in critic_rows]
+    if not rows:
+        return {"n": 0}
     n_right = sum(r["correct"] for r in rows)
     approved = [r for r in rows if approves(r, 0.8)]
     wrong_ok, right_no = errors(rows, 0.8)
@@ -85,16 +89,19 @@ def reliability_chart(results, path, title):
                 ys.append(sum(r["correct"] for r in in_bin) / len(in_bin))
                 ns.append(len(in_bin))
         ax.plot(xs, ys, color=COLORS.get(critic, "#7a7a7a"), linewidth=2, zorder=2)
-        ax.scatter(xs, ys, s=[30 + 18 * n for n in ns], color=COLORS.get(critic, "#7a7a7a"),
+        ax.scatter(xs, ys, s=[25 + 400 * n / res["n"] for n in ns], color=COLORS.get(critic, "#7a7a7a"),
                    marker=MARKERS.get(critic, "o"), edgecolor="white", linewidth=2, zorder=3,
                    label=f"{critic} (n={res['n']})")
     ax.set(xlim=(-0.03, 1.03), ylim=(-0.03, 1.03), xlabel="Critic's predicted P(correct), binned",
            ylabel="Fraction actually correct (exact match)")
-    ax.set_title(title + "\n(marker size = drafts in bin)", fontsize=11, loc="left")
+    ax.set_title(title + "\n(marker size = share of drafts in bin)", fontsize=11, loc="left")
     ax.grid(color="#e6e5df", linewidth=0.8)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
-    ax.legend(frameon=False, fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3, markerscale=0.6)
+    legend = ax.legend(frameon=False, fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3)
+    for handle in legend.legend_handles[1:]:
+        handle.set_sizes([60])
+        handle.set_linewidth(0)
     fig.tight_layout()
     fig.savefig(path)
 
@@ -103,15 +110,20 @@ def main(label):
     scores = load_scores()
     suffix = "" if label == "strict" else "-" + label
     key = "correct" if label == "strict" else "lenient"  # field name in each draft (see drafts.py)
-    sets = ["first", "all"] + (["extra"] if (EXTRA_DIR / "drafts.jsonl").exists() else [])
-    chart_set = sets[-1]  # the largest set
+    sets = ["first", "all"] + (["extra", "subset80"] if (EXTRA_DIR / "drafts.jsonl").exists() else [])
+    chart_set = "extra" if "extra" in sets else "all"  # the largest set
+    gold = gold_answers()
     lines = [f"Label: **{label}** ({'exact match' if label == 'strict' else 'exact match or token F1 >= 0.8'}).", ""]
     for which in sets:
         drafts = load_drafts(which)
         n, n_right = len(drafts), sum(d[key] for d in drafts)
         results = {critic: evaluate(rows, drafts, key) for critic, rows in scores.items()}
         results = {critic: r for critic, r in results.items() if r["n"]}
+        yes_no_gold = sum(normalize(gold[d["task_id"]][0]) in ("yes", "no") for d in drafts)
+        yes_no_draft = sum(normalize(d["draft"]) in ("yes", "no") for d in drafts)
         lines += [f"## Draft set `{which}`: {n} drafts, {n_right} correct ({n_right / n:.0%})", "",
+                  f"Yes/no questions (by gold answer): {yes_no_gold}/{n}. Drafts answering yes/no "
+                  f"(evidence_match scores these 0.5): {yes_no_draft}/{n}.", "",
                   f"Approving everything would be right {n_right}/{n} ({n_right / n:.0%}) of the time; "
                   "a useful critic beats this on accuracy when approved.", "",
                   "| Critic | Source | n scored | Accuracy when approved (@0.8) | Wrong approvals @0.8 "

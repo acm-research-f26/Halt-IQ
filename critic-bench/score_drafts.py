@@ -1,6 +1,6 @@
 """Score a draft set with one critic and cache every score to JSONL.
 
-Usage: python3 score_drafts.py CRITIC {first,all}
+Usage: python3 score_drafts.py CRITIC {first,all,extra}
 
 Scores go to scores/CRITIC.jsonl, one line per draft, written as soon as each
 draft is scored. Drafts already in the cache are skipped, so reruns are free
@@ -55,6 +55,6 @@ def score(critic, which):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("critic", choices=sorted(CRITICS))
-    parser.add_argument("draft_set", choices=["first", "all"])
+    parser.add_argument("draft_set", choices=["first", "all", "extra"])
     args = parser.parse_args()
     score(args.critic, args.draft_set)
