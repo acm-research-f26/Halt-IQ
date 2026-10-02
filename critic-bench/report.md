@@ -68,7 +68,7 @@ Approving everything would be right 115/200 (57%) of the time; a useful critic b
 | kev | Kev-0.8B; saved + live | 200/200 | 0/1 (0%) | 1/85 | 115/115 | 0.48 | 0.86 | $0 (local) |
 | laya | new | 200/200 | 45/65 (69%) | 20/85 | 70/115 | 0.60 | 0.22 | $0 (local) |
 | evidence_match | new, no model | 200/200 | 111/177 (63%) | 66/85 | 4/115 | 0.60 | 0.00 | $0 (local) |
-| consistency | new, 3 writer samples | 60/200 | 32/51 (63%) | 19/26 | 2/34 | 0.61 | 8.70 | $0 (local) |
+| consistency | new, 3 writer samples | 200/200 | 107/172 (62%) | 65/85 | 8/115 | 0.58 | 8.79 | $0 (local) |
 
 Threshold sweep (probability critics): wrong approvals / wrongly rejected
 
@@ -77,7 +77,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 | kev | 25 / 93 | 12 / 112 | 3 / 114 | 1 / 115 | 0 / 115 |
 | laya | 67 / 22 | 57 / 30 | 40 / 39 | 20 / 70 | 1 / 110 |
 | evidence_match | 67 / 1 | 66 / 4 | 66 / 4 | 66 / 4 | 66 / 4 |
-| consistency | 21 / 1 | 21 / 1 | 19 / 2 | 19 / 2 | 19 / 2 |
+| consistency | 77 / 2 | 77 / 2 | 65 / 8 | 65 / 8 | 65 / 8 |
 
 Sample size: n = 200, so any accuracy here is uncertain by roughly ±7% (95% interval, worst case p = 0.5). Accuracy-when-approved uses even fewer drafts.
 

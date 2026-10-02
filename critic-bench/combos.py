@@ -64,13 +64,13 @@ def consistency_and_evidence(s, d):
 
 
 RULES = [
-    ("1. approve everything", approve_all, False),
-    ("2. llm alone", llm_alone, False),
-    ("3. evidence_match alone", evidence_alone, False),
-    ("4. gate: evidence_match, then llm", gate, False),
-    ("5. laya ≥ 0.8 alone", laya_alone, False),
-    ("6. evidence_match = 1 AND laya ≥ 0.5", evidence_and_laya, False),
-    ("7. consistency = 1.0 AND evidence_match = 1", consistency_and_evidence, True),  # subset80 only
+    ("1. approve everything", approve_all),
+    ("2. llm alone", llm_alone),
+    ("3. evidence_match alone", evidence_alone),
+    ("4. gate: evidence_match, then llm", gate),
+    ("5. laya ≥ 0.8 alone", laya_alone),
+    ("6. evidence_match = 1 AND laya ≥ 0.5", evidence_and_laya),
+    ("7. consistency = 1.0 AND evidence_match = 1", consistency_and_evidence),
 ]
 
 
@@ -91,9 +91,7 @@ def table(which, scores):
              "| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected "
              "| Avg s/draft | llm calls saved vs rule 2 |",
              "|---|---:|---:|---:|---:|---:|---:|"]
-    for name, rule, subset80_only in RULES:
-        if subset80_only and which != "subset80":
-            continue
+    for name, rule in RULES:
         results = [(d, *rule(scores, d["draft_id"])) for d in drafts]
         approved = [d for d, ok, _, _ in results if ok]
         right = sum(d["correct"] for d in approved)
@@ -110,11 +108,12 @@ def table(which, scores):
 
 SUMMARY = ("No stop rule is clearly better than approving every draft: every interval for accuracy when approved "
            "overlaps the 51–64% interval for \"approve everything\" on `extra`. "
-           "The best trade-off is the gate (rule 4), where the free evidence_match check rejects drafts whose answer is "
-           "not in the evidence before calling llm: it is right 66–69% of the time when it stops, against 62–63% for llm alone, "
-           "with fewer wrong approvals and 9–12% fewer llm calls. "
-           "Laya alone is the most precise on `extra` (69%), but it rejects 70 of 115 right answers and drops to 52% on `subset80`, "
-           "so it would mostly just make the loop run more rounds.")
+           "The two best rules both start with the free evidence_match check: gating llm with it (rule 4) and requiring "
+           "3 resampled writer answers to agree (rule 7) are each right 66–69% of the time when they stop, against "
+           "62–63% for llm alone, with fewer wrong approvals; rule 7 also wrongly rejects fewer right drafts on `extra` "
+           "(11 vs 16) and needs no critic model. "
+           "Laya alone is the most precise on `extra` (69%), but it rejects 70 of 115 right answers and drops to 52% on "
+           "`subset80`, so it would mostly just make the loop run more rounds.")
 
 
 def main():
@@ -127,7 +126,7 @@ def main():
         lines += table(which, scores) + [""]
     lines += ["## Summary", "", SUMMARY, "",
               "Notes: \"llm calls saved\" counts calls to the llm critic only; rule 7's time is its 3 extra writer "
-              "samples. A yes/no draft (evidence_match = 0.5) is sent to llm by the gate and rejected by rules 3, 6, and 7.", ""]
+              "samples (temperature 0.7) per question. A yes/no draft (evidence_match = 0.5) is sent to llm by the gate and rejected by rules 3, 6, and 7.", ""]
     text = "\n".join(lines)
     (HERE / "combos.md").write_text(text + "\n", encoding="utf-8")
     print(text)

@@ -41,7 +41,7 @@ from Yash's `haltiq/metrics.py`.
 | `score_drafts.py` | `python3 score_drafts.py CRITIC {first,all,extra}`. Scores a draft set and appends each score to `scores/CRITIC.jsonl` immediately, so reruns skip finished drafts. |
 | `laya_critic.py` | Laya yes/no critic. `python3 laya_critic.py measure` reports token lengths vs Laya's 512-token limit. |
 | `make_extra.py` | `select` / `estimate` / `write`: builds the `extra` set with Yash's downloader, selection helpers, and Writer. |
-| `make_samples.py` | Draws 3 extra writer answers per `subset80` question at temperature 0.7 (Yash's Writer and prompt; seeds 1–3) into `samples/consistency.jsonl`. |
+| `make_samples.py` | Draws 3 extra writer answers per `subset80` question (`python3 make_samples.py extra`: every `extra` question too) at temperature 0.7 (Yash's Writer and prompt; seeds 1–3) into `samples/consistency.jsonl`. |
 | `run_all.sh` | Runs the scoring stages in order, one Ollama job at a time, stopping at a set deadline. |
 | `combos.py` | `python3 combos.py`: compares stop rules (e.g. evidence_match as a free gate before llm) on `extra` and `subset80`; writes `combos.md`. |
 | `report.py` | `python3 report.py [--label strict\|lenient]`: writes `report.md` / `report-lenient.md` and the reliability charts. |
@@ -57,7 +57,7 @@ from Yash's `haltiq/metrics.py`.
 | `kev` | P = min of 3 noul probabilities | Kev-0.8B through Yash's openjev arm. Saved scores reused; live calls reproduce saved scores exactly. |
 | `laya` | P(yes) | Laya noul question "Is the proposed answer correct and supported by the evidence?" |
 | `evidence_match` | 1 / 0 (0.5 for yes/no) | No model: 1 if the normalized answer appears word-for-word in the evidence the critic sees (all 10 paragraphs, not gold supporting facts). A "yes"/"no" answer can't be matched, so it gets 0.5; `UNKNOWN` gets 0. |
-| `consistency` | 0, ⅓, ⅔, 1 | Share of 3 resampled writer answers (temperature 0.7) that match the first draft after normalization. Only for first drafts of the 80 `subset80` questions; its time is the 3 extra writer calls. |
+| `consistency` | 0, ⅓, ⅔, 1 | Share of 3 resampled writer answers (temperature 0.7) that match the first draft after normalization. Only for first drafts (all 20 `first` + all 200 `extra` questions are sampled); its time is the 3 extra writer calls. |
 
 The min of three scores is used because the loop approves only when all three
 checks reach the threshold, so `min ≥ 0.8` is exactly the loop's rule.
@@ -104,7 +104,7 @@ Full tables for every draft set: `report.md` (strict label) and `report-lenient.
 | kev (Kev-0.8B) | 200 | 0/1 | 1/85 | 115/115 | 0.48 | 0.86 |
 | laya | 200 | 45/65 (69%) | 20/85 | 70/115 | 0.60 | 0.22 |
 | evidence_match | 200 | 111/177 (63%) | 66/85 | 4/115 | 0.60 | 0.00 |
-| consistency | 60 | 32/51 (63%) | 19/26 | 2/34 | 0.61 | 8.70 |
+| consistency | 200 | 107/172 (62%) | 65/85 | 8/115 | 0.58 | 8.79 |
 
 All critics run locally ($0).
 
@@ -118,6 +118,10 @@ All critics run locally ($0).
 - The free, model-free `evidence_match` ranks drafts about as well as anything else tested.
 - With the lenient label (EM or F1 ≥ 0.8), 11 of the 85 wrong `extra` drafts become right. The ranking of critics does not change (see `report-lenient.md`).
 
-**Stop rules** (`combos.md`): gating llm with evidence_match (send a draft to llm only if its answer appears in the evidence) gives the best accuracy when stopping (66% on `extra`, 69% on `subset80`, vs 62–63% for llm alone) and saves 9–12% of llm calls. Its 95% intervals still overlap "approve everything".
+**Stop rules** (`combos.md`): the best two rules both start with the free evidence_match check.
+- **Gate (rule 4):** send a draft to llm only if its answer appears in the evidence. It is right 66% of the time when it stops on `extra` and 69% on `subset80`, against 62–63% for llm alone, and it saves 9–12% of llm calls.
+- **Rule 7:** stop only if all 3 resampled writer answers agree with the draft and the answer is in the evidence. It matches the gate (67% and 66%) with no critic model and fewer wrongly rejected right drafts on `extra` (11 vs 16).
+
+All 95% intervals still overlap "approve everything".
 
 Not yet run: the qwen3:8b logprob critic (Step 5) and the qwen3:14b text critic (Step 6).

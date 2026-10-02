@@ -238,3 +238,423 @@
 {"task_id": "hotpotqa:5a83305d55429966c78a6b4a", "seed": 1, "temperature": 0.7, "answer": "Washington, D.C.", "seconds": 6.613}
 {"task_id": "hotpotqa:5a83305d55429966c78a6b4a", "seed": 2, "temperature": 0.7, "answer": "Washington, D.C.", "seconds": 0.543}
 {"task_id": "hotpotqa:5a83305d55429966c78a6b4a", "seed": 3, "temperature": 0.7, "answer": "Washington, D.C.", "seconds": 0.554}
+{"task_id": "hotpotqa:5a82accd55429966c78a6a78", "seed": 1, "temperature": 0.7, "answer": "Barton Mine,No,Hermiston-McCauley Mine,No", "seconds": 11.786}
+{"task_id": "hotpotqa:5a82accd55429966c78a6a78", "seed": 2, "temperature": 0.7, "answer": "Barton Mine, Hermiston-McCauley Mine", "seconds": 0.775}
+{"task_id": "hotpotqa:5a82accd55429966c78a6a78", "seed": 3, "temperature": 0.7, "answer": "Barton Mine, Hermiston-McCauley Mine", "seconds": 0.823}
+{"task_id": "hotpotqa:5abc40835542993a06baf8ba", "seed": 1, "temperature": 0.7, "answer": "1999", "seconds": 5.91}
+{"task_id": "hotpotqa:5abc40835542993a06baf8ba", "seed": 2, "temperature": 0.7, "answer": "1999", "seconds": 0.485}
+{"task_id": "hotpotqa:5abc40835542993a06baf8ba", "seed": 3, "temperature": 0.7, "answer": "1999", "seconds": 0.508}
+{"task_id": "hotpotqa:5aba89fb5542994dbf019933", "seed": 1, "temperature": 0.7, "answer": "books, films, other media", "seconds": 7.802}
+{"task_id": "hotpotqa:5aba89fb5542994dbf019933", "seed": 2, "temperature": 0.7, "answer": "books, films, other media", "seconds": 0.593}
+{"task_id": "hotpotqa:5aba89fb5542994dbf019933", "seed": 3, "temperature": 0.7, "answer": "books, films and other media", "seconds": 0.571}
+{"task_id": "hotpotqa:5ac37dd6554299218029dbdb", "seed": 1, "temperature": 0.7, "answer": "Unknown", "seconds": 5.692}
+{"task_id": "hotpotqa:5ac37dd6554299218029dbdb", "seed": 2, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.34}
+{"task_id": "hotpotqa:5ac37dd6554299218029dbdb", "seed": 3, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.36}
+{"task_id": "hotpotqa:5a82f05255429966c78a6aa2", "seed": 1, "temperature": 0.7, "answer": "Crips", "seconds": 8.645}
+{"task_id": "hotpotqa:5a82f05255429966c78a6aa2", "seed": 2, "temperature": 0.7, "answer": "West Side Crips", "seconds": 0.476}
+{"task_id": "hotpotqa:5a82f05255429966c78a6aa2", "seed": 3, "temperature": 0.7, "answer": "West Side Crips", "seconds": 0.514}
+{"task_id": "hotpotqa:5a7b69b155429927d897bfbc", "seed": 1, "temperature": 0.7, "answer": "Clitheroe", "seconds": 5.049}
+{"task_id": "hotpotqa:5a7b69b155429927d897bfbc", "seed": 2, "temperature": 0.7, "answer": "Clitheroe", "seconds": 0.472}
+{"task_id": "hotpotqa:5a7b69b155429927d897bfbc", "seed": 3, "temperature": 0.7, "answer": "Clitheroe", "seconds": 0.531}
+{"task_id": "hotpotqa:5a7f0be055429930675135fe", "seed": 1, "temperature": 0.7, "answer": "Minette Walters", "seconds": 4.371}
+{"task_id": "hotpotqa:5a7f0be055429930675135fe", "seed": 2, "temperature": 0.7, "answer": "Minette Walters", "seconds": 0.439}
+{"task_id": "hotpotqa:5a7f0be055429930675135fe", "seed": 3, "temperature": 0.7, "answer": "Minette Walters", "seconds": 0.439}
+{"task_id": "hotpotqa:5a7a96b055429941d65f26d7", "seed": 1, "temperature": 0.7, "answer": "Council of Forty-four", "seconds": 7.273}
+{"task_id": "hotpotqa:5a7a96b055429941d65f26d7", "seed": 2, "temperature": 0.7, "answer": "Council of Forty-four", "seconds": 0.498}
+{"task_id": "hotpotqa:5a7a96b055429941d65f26d7", "seed": 3, "temperature": 0.7, "answer": "Council of Forty-four", "seconds": 0.516}
+{"task_id": "hotpotqa:5ab615cf554299488d4d9aa3", "seed": 1, "temperature": 0.7, "answer": "Australia's Lucille Ball", "seconds": 6.698}
+{"task_id": "hotpotqa:5ab615cf554299488d4d9aa3", "seed": 2, "temperature": 0.7, "answer": "Australia's Lucille Ball", "seconds": 0.567}
+{"task_id": "hotpotqa:5ab615cf554299488d4d9aa3", "seed": 3, "temperature": 0.7, "answer": "Australia's Lucille Ball", "seconds": 0.558}
+{"task_id": "hotpotqa:5abbd66a5542993f40c73bd8", "seed": 1, "temperature": 0.7, "answer": "singer", "seconds": 5.309}
+{"task_id": "hotpotqa:5abbd66a5542993f40c73bd8", "seed": 2, "temperature": 0.7, "answer": "singer", "seconds": 0.433}
+{"task_id": "hotpotqa:5abbd66a5542993f40c73bd8", "seed": 3, "temperature": 0.7, "answer": "singer", "seconds": 0.443}
+{"task_id": "hotpotqa:5a8077ca5542992bc0c4a729", "seed": 1, "temperature": 0.7, "answer": "mainland Scotland", "seconds": 9.806}
+{"task_id": "hotpotqa:5a8077ca5542992bc0c4a729", "seed": 2, "temperature": 0.7, "answer": "mainland Scotland", "seconds": 0.485}
+{"task_id": "hotpotqa:5a8077ca5542992bc0c4a729", "seed": 3, "temperature": 0.7, "answer": "mainland Scotland", "seconds": 0.485}
+{"task_id": "hotpotqa:5a7a3cea5542994f819ef182", "seed": 1, "temperature": 0.7, "answer": "Kaunas, Lithuania", "seconds": 8.058}
+{"task_id": "hotpotqa:5a7a3cea5542994f819ef182", "seed": 2, "temperature": 0.7, "answer": "Kaunas, Lithuania", "seconds": 0.493}
+{"task_id": "hotpotqa:5a7a3cea5542994f819ef182", "seed": 3, "temperature": 0.7, "answer": "Kaunas, Lithuania", "seconds": 0.517}
+{"task_id": "hotpotqa:5adfef32554299603e4183ca", "seed": 1, "temperature": 0.7, "answer": "Coronation Street", "seconds": 9.362}
+{"task_id": "hotpotqa:5adfef32554299603e4183ca", "seed": 2, "temperature": 0.7, "answer": "Coronation Street", "seconds": 0.475}
+{"task_id": "hotpotqa:5adfef32554299603e4183ca", "seed": 3, "temperature": 0.7, "answer": "Coronation Street", "seconds": 0.483}
+{"task_id": "hotpotqa:5ae4c01e55429913cc2044f3", "seed": 1, "temperature": 0.7, "answer": "John Underhill", "seconds": 7.74}
+{"task_id": "hotpotqa:5ae4c01e55429913cc2044f3", "seed": 2, "temperature": 0.7, "answer": "Captain John Underhill", "seconds": 0.527}
+{"task_id": "hotpotqa:5ae4c01e55429913cc2044f3", "seed": 3, "temperature": 0.7, "answer": "Captain John Underhill", "seconds": 0.525}
+{"task_id": "hotpotqa:5adc75525542994650320d0e", "seed": 1, "temperature": 0.7, "answer": "Russian tracker", "seconds": 7.126}
+{"task_id": "hotpotqa:5adc75525542994650320d0e", "seed": 2, "temperature": 0.7, "answer": "Russian tracker", "seconds": 0.398}
+{"task_id": "hotpotqa:5adc75525542994650320d0e", "seed": 3, "temperature": 0.7, "answer": "Russian tracker", "seconds": 0.435}
+{"task_id": "hotpotqa:5ac0aa595542992a796ded5a", "seed": 1, "temperature": 0.7, "answer": "Mercedes Sosa", "seconds": 8.714}
+{"task_id": "hotpotqa:5ac0aa595542992a796ded5a", "seed": 2, "temperature": 0.7, "answer": "Mercedes Sosa", "seconds": 0.505}
+{"task_id": "hotpotqa:5ac0aa595542992a796ded5a", "seed": 3, "temperature": 0.7, "answer": "Mercedes Sosa", "seconds": 0.533}
+{"task_id": "hotpotqa:5abcf46255429959677d6b6b", "seed": 1, "temperature": 0.7, "answer": "Rhode Island", "seconds": 7.013}
+{"task_id": "hotpotqa:5abcf46255429959677d6b6b", "seed": 2, "temperature": 0.7, "answer": "Rhode Island", "seconds": 0.49}
+{"task_id": "hotpotqa:5abcf46255429959677d6b6b", "seed": 3, "temperature": 0.7, "answer": "Rhode Island", "seconds": 0.469}
+{"task_id": "hotpotqa:5ab51ddf5542990594ba9d11", "seed": 1, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 9.34}
+{"task_id": "hotpotqa:5ab51ddf5542990594ba9d11", "seed": 2, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.354}
+{"task_id": "hotpotqa:5ab51ddf5542990594ba9d11", "seed": 3, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.391}
+{"task_id": "hotpotqa:5ae484f855429970de88d999", "seed": 1, "temperature": 0.7, "answer": "Oregon Ducks", "seconds": 9.048}
+{"task_id": "hotpotqa:5ae484f855429970de88d999", "seed": 2, "temperature": 0.7, "answer": "Oregon Ducks", "seconds": 0.383}
+{"task_id": "hotpotqa:5ae484f855429970de88d999", "seed": 3, "temperature": 0.7, "answer": "Oregon Ducks", "seconds": 0.43}
+{"task_id": "hotpotqa:5add4f3a5542997545bbbd2c", "seed": 1, "temperature": 0.7, "answer": "Lord's Resistance Movement", "seconds": 11.621}
+{"task_id": "hotpotqa:5add4f3a5542997545bbbd2c", "seed": 2, "temperature": 0.7, "answer": "Lord's Resistance Movement", "seconds": 0.52}
+{"task_id": "hotpotqa:5add4f3a5542997545bbbd2c", "seed": 3, "temperature": 0.7, "answer": "Lord's Resistance Movement", "seconds": 0.542}
+{"task_id": "hotpotqa:5a84e0a45542991dd0999e11", "seed": 1, "temperature": 0.7, "answer": "Wicked Twister", "seconds": 9.187}
+{"task_id": "hotpotqa:5a84e0a45542991dd0999e11", "seed": 2, "temperature": 0.7, "answer": "Wicked Twister", "seconds": 0.589}
+{"task_id": "hotpotqa:5a84e0a45542991dd0999e11", "seed": 3, "temperature": 0.7, "answer": "Wicked Twister", "seconds": 0.491}
+{"task_id": "hotpotqa:5a83a4bc554299123d8c217f", "seed": 1, "temperature": 0.7, "answer": "1978", "seconds": 6.087}
+{"task_id": "hotpotqa:5a83a4bc554299123d8c217f", "seed": 2, "temperature": 0.7, "answer": "1978", "seconds": 0.699}
+{"task_id": "hotpotqa:5a83a4bc554299123d8c217f", "seed": 3, "temperature": 0.7, "answer": "1978", "seconds": 0.859}
+{"task_id": "hotpotqa:5a8f73455542997ba9cb3269", "seed": 1, "temperature": 0.7, "answer": "University of Texas at Austin", "seconds": 11.345}
+{"task_id": "hotpotqa:5a8f73455542997ba9cb3269", "seed": 2, "temperature": 0.7, "answer": "University of Texas at Austin", "seconds": 0.627}
+{"task_id": "hotpotqa:5a8f73455542997ba9cb3269", "seed": 3, "temperature": 0.7, "answer": "University of Texas at Austin", "seconds": 0.609}
+{"task_id": "hotpotqa:5adccdd55542992c1e3a2408", "seed": 1, "temperature": 0.7, "answer": "Waimea Bay", "seconds": 7.752}
+{"task_id": "hotpotqa:5adccdd55542992c1e3a2408", "seed": 2, "temperature": 0.7, "answer": "Waimea Bay", "seconds": 0.89}
+{"task_id": "hotpotqa:5adccdd55542992c1e3a2408", "seed": 3, "temperature": 0.7, "answer": "Waimea Bay", "seconds": 0.648}
+{"task_id": "hotpotqa:5ab28e2a5542993be8fa9947", "seed": 1, "temperature": 0.7, "answer": "Eddie \"The Eagle\" Edwards", "seconds": 12.607}
+{"task_id": "hotpotqa:5ab28e2a5542993be8fa9947", "seed": 2, "temperature": 0.7, "answer": "Eddie \"The Eagle\" Edwards", "seconds": 0.824}
+{"task_id": "hotpotqa:5ab28e2a5542993be8fa9947", "seed": 3, "temperature": 0.7, "answer": "Eddie \"The Eagle\" Edwards", "seconds": 0.653}
+{"task_id": "hotpotqa:5a762d53554299109176e6a7", "seed": 1, "temperature": 0.7, "answer": "Toni Kukoč", "seconds": 14.018}
+{"task_id": "hotpotqa:5a762d53554299109176e6a7", "seed": 2, "temperature": 0.7, "answer": "Toni Kukoč", "seconds": 0.743}
+{"task_id": "hotpotqa:5a762d53554299109176e6a7", "seed": 3, "temperature": 0.7, "answer": "Toni Kukoč", "seconds": 0.788}
+{"task_id": "hotpotqa:5a802b595542995d8a8ddf51", "seed": 1, "temperature": 0.7, "answer": "Neptune", "seconds": 7.829}
+{"task_id": "hotpotqa:5a802b595542995d8a8ddf51", "seed": 2, "temperature": 0.7, "answer": "Neptune", "seconds": 0.468}
+{"task_id": "hotpotqa:5a802b595542995d8a8ddf51", "seed": 3, "temperature": 0.7, "answer": "Mission Boston", "seconds": 0.446}
+{"task_id": "hotpotqa:5a77691455429966f1a36d2b", "seed": 1, "temperature": 0.7, "answer": "National Socialist black metal", "seconds": 10.743}
+{"task_id": "hotpotqa:5a77691455429966f1a36d2b", "seed": 2, "temperature": 0.7, "answer": "National Socialist black metal", "seconds": 0.504}
+{"task_id": "hotpotqa:5a77691455429966f1a36d2b", "seed": 3, "temperature": 0.7, "answer": "National Socialist black metal", "seconds": 0.558}
+{"task_id": "hotpotqa:5ade28cf5542997c77aded85", "seed": 1, "temperature": 0.7, "answer": "Rutgers University,Brown University", "seconds": 7.587}
+{"task_id": "hotpotqa:5ade28cf5542997c77aded85", "seed": 2, "temperature": 0.7, "answer": "Rutgers University,Brown University", "seconds": 0.63}
+{"task_id": "hotpotqa:5ade28cf5542997c77aded85", "seed": 3, "temperature": 0.7, "answer": "Rutgers University,Brown University", "seconds": 0.668}
+{"task_id": "hotpotqa:5a80aeef5542992097ad301a", "seed": 1, "temperature": 0.7, "answer": "The Shins", "seconds": 7.738}
+{"task_id": "hotpotqa:5a80aeef5542992097ad301a", "seed": 2, "temperature": 0.7, "answer": "The Shins", "seconds": 0.472}
+{"task_id": "hotpotqa:5a80aeef5542992097ad301a", "seed": 3, "temperature": 0.7, "answer": "The Shins", "seconds": 0.475}
+{"task_id": "hotpotqa:5ab492155542991779162ce3", "seed": 1, "temperature": 0.7, "answer": "Edmund Allenby", "seconds": 6.752}
+{"task_id": "hotpotqa:5ab492155542991779162ce3", "seed": 2, "temperature": 0.7, "answer": "Edmund Allenby", "seconds": 0.519}
+{"task_id": "hotpotqa:5ab492155542991779162ce3", "seed": 3, "temperature": 0.7, "answer": "Edmund Allenby", "seconds": 0.521}
+{"task_id": "hotpotqa:5abdb5b455429965af743dfa", "seed": 1, "temperature": 0.7, "answer": "Sun Woong", "seconds": 6.5}
+{"task_id": "hotpotqa:5abdb5b455429965af743dfa", "seed": 2, "temperature": 0.7, "answer": "Sun Woong", "seconds": 0.536}
+{"task_id": "hotpotqa:5abdb5b455429965af743dfa", "seed": 3, "temperature": 0.7, "answer": "Sun Woong", "seconds": 0.519}
+{"task_id": "hotpotqa:5ab6d04c554299710c8d1f70", "seed": 1, "temperature": 0.7, "answer": "Lardizabalaceae", "seconds": 1.273}
+{"task_id": "hotpotqa:5ab6d04c554299710c8d1f70", "seed": 2, "temperature": 0.7, "answer": "Lardizabalaceae", "seconds": 0.555}
+{"task_id": "hotpotqa:5ab6d04c554299710c8d1f70", "seed": 3, "temperature": 0.7, "answer": "Lardizabalaceae", "seconds": 0.556}
+{"task_id": "hotpotqa:5a8b7cb95542995d1e6f13bb", "seed": 1, "temperature": 0.7, "answer": "Dalton Gang", "seconds": 6.563}
+{"task_id": "hotpotqa:5a8b7cb95542995d1e6f13bb", "seed": 2, "temperature": 0.7, "answer": "Dalton Gang", "seconds": 0.446}
+{"task_id": "hotpotqa:5a8b7cb95542995d1e6f13bb", "seed": 3, "temperature": 0.7, "answer": "Dalton Gang", "seconds": 0.467}
+{"task_id": "hotpotqa:5a7e6df35542997cc2c47544", "seed": 1, "temperature": 0.7, "answer": "Quarry Bank Mill", "seconds": 8.641}
+{"task_id": "hotpotqa:5a7e6df35542997cc2c47544", "seed": 2, "temperature": 0.7, "answer": "Quarry Bank Mill", "seconds": 0.516}
+{"task_id": "hotpotqa:5a7e6df35542997cc2c47544", "seed": 3, "temperature": 0.7, "answer": "Quarry Bank Mill", "seconds": 0.515}
+{"task_id": "hotpotqa:5adc51375542996e68525300", "seed": 1, "temperature": 0.7, "answer": "Bonnie Prince Charlie", "seconds": 6.631}
+{"task_id": "hotpotqa:5adc51375542996e68525300", "seed": 2, "temperature": 0.7, "answer": "Bonnie Prince Charlie", "seconds": 0.513}
+{"task_id": "hotpotqa:5adc51375542996e68525300", "seed": 3, "temperature": 0.7, "answer": "Bonnie Prince Charlie", "seconds": 0.515}
+{"task_id": "hotpotqa:5a8b5c8155429949d91db56d", "seed": 1, "temperature": 0.7, "answer": "Salford, Lancashire", "seconds": 5.493}
+{"task_id": "hotpotqa:5a8b5c8155429949d91db56d", "seed": 2, "temperature": 0.7, "answer": "Salford, Lancashire", "seconds": 0.569}
+{"task_id": "hotpotqa:5a8b5c8155429949d91db56d", "seed": 3, "temperature": 0.7, "answer": "Salford, Lancashire", "seconds": 0.6}
+{"task_id": "hotpotqa:5abbf9b355429931dba145fe", "seed": 1, "temperature": 0.7, "answer": "Jack", "seconds": 4.351}
+{"task_id": "hotpotqa:5abbf9b355429931dba145fe", "seed": 2, "temperature": 0.7, "answer": "Jack", "seconds": 0.359}
+{"task_id": "hotpotqa:5abbf9b355429931dba145fe", "seed": 3, "temperature": 0.7, "answer": "Jack", "seconds": 0.38}
+{"task_id": "hotpotqa:5a81b7205542990a1d231e79", "seed": 1, "temperature": 0.7, "answer": "29 years", "seconds": 8.903}
+{"task_id": "hotpotqa:5a81b7205542990a1d231e79", "seed": 2, "temperature": 0.7, "answer": "29 years", "seconds": 0.461}
+{"task_id": "hotpotqa:5a81b7205542990a1d231e79", "seed": 3, "temperature": 0.7, "answer": "29 years", "seconds": 0.489}
+{"task_id": "hotpotqa:5a89e6615542992e4fca8462", "seed": 1, "temperature": 0.7, "answer": "1822", "seconds": 7.974}
+{"task_id": "hotpotqa:5a89e6615542992e4fca8462", "seed": 2, "temperature": 0.7, "answer": "1822", "seconds": 0.544}
+{"task_id": "hotpotqa:5a89e6615542992e4fca8462", "seed": 3, "temperature": 0.7, "answer": "1822", "seconds": 0.575}
+{"task_id": "hotpotqa:5ae1d1995542997283cd226c", "seed": 1, "temperature": 0.7, "answer": "India", "seconds": 7.545}
+{"task_id": "hotpotqa:5ae1d1995542997283cd226c", "seed": 2, "temperature": 0.7, "answer": "India", "seconds": 0.553}
+{"task_id": "hotpotqa:5ae1d1995542997283cd226c", "seed": 3, "temperature": 0.7, "answer": "India", "seconds": 0.486}
+{"task_id": "hotpotqa:5ac19ba355429963665198b7", "seed": 1, "temperature": 0.7, "answer": "New York City", "seconds": 7.25}
+{"task_id": "hotpotqa:5ac19ba355429963665198b7", "seed": 2, "temperature": 0.7, "answer": "New York City", "seconds": 0.438}
+{"task_id": "hotpotqa:5ac19ba355429963665198b7", "seed": 3, "temperature": 0.7, "answer": "New York City", "seconds": 0.482}
+{"task_id": "hotpotqa:5a901d6c5542995651fb50bd", "seed": 1, "temperature": 0.7, "answer": "Test Icicles", "seconds": 6.801}
+{"task_id": "hotpotqa:5a901d6c5542995651fb50bd", "seed": 2, "temperature": 0.7, "answer": "Test Icicles", "seconds": 0.55}
+{"task_id": "hotpotqa:5a901d6c5542995651fb50bd", "seed": 3, "temperature": 0.7, "answer": "Test Icicles", "seconds": 0.632}
+{"task_id": "hotpotqa:5a7d61775542991319bc93b9", "seed": 1, "temperature": 0.7, "answer": "Stapleton Cotton, 1st Viscount Combermere", "seconds": 8.901}
+{"task_id": "hotpotqa:5a7d61775542991319bc93b9", "seed": 2, "temperature": 0.7, "answer": "Stapleton Cotton, 1st Viscount Combermere", "seconds": 0.831}
+{"task_id": "hotpotqa:5a7d61775542991319bc93b9", "seed": 3, "temperature": 0.7, "answer": "Stapleton Cotton, 1st Viscount Combermere", "seconds": 0.911}
+{"task_id": "hotpotqa:5ac3ac1855429939154138ab", "seed": 1, "temperature": 0.7, "answer": "shrubs, bulbs", "seconds": 6.307}
+{"task_id": "hotpotqa:5ac3ac1855429939154138ab", "seed": 2, "temperature": 0.7, "answer": "plants", "seconds": 0.409}
+{"task_id": "hotpotqa:5ac3ac1855429939154138ab", "seed": 3, "temperature": 0.7, "answer": "plants", "seconds": 0.363}
+{"task_id": "hotpotqa:5ae528e655429908b632652c", "seed": 1, "temperature": 0.7, "answer": "Collins", "seconds": 7.538}
+{"task_id": "hotpotqa:5ae528e655429908b632652c", "seed": 2, "temperature": 0.7, "answer": "Collins", "seconds": 0.412}
+{"task_id": "hotpotqa:5ae528e655429908b632652c", "seed": 3, "temperature": 0.7, "answer": "Collins", "seconds": 0.429}
+{"task_id": "hotpotqa:5a72634d5542997f82783994", "seed": 1, "temperature": 0.7, "answer": "Abidjan", "seconds": 9.456}
+{"task_id": "hotpotqa:5a72634d5542997f82783994", "seed": 2, "temperature": 0.7, "answer": "Abidjan", "seconds": 0.456}
+{"task_id": "hotpotqa:5a72634d5542997f82783994", "seed": 3, "temperature": 0.7, "answer": "Abidjan", "seconds": 0.487}
+{"task_id": "hotpotqa:5ae16ea85542990adbacf790", "seed": 1, "temperature": 0.7, "answer": "31 July 1975", "seconds": 8.803}
+{"task_id": "hotpotqa:5ae16ea85542990adbacf790", "seed": 2, "temperature": 0.7, "answer": "31 July 1975", "seconds": 0.687}
+{"task_id": "hotpotqa:5ae16ea85542990adbacf790", "seed": 3, "temperature": 0.7, "answer": "31 July 1975", "seconds": 0.683}
+{"task_id": "hotpotqa:5ae7ee41554299540e5a56b0", "seed": 1, "temperature": 0.7, "answer": "2016", "seconds": 10.013}
+{"task_id": "hotpotqa:5ae7ee41554299540e5a56b0", "seed": 2, "temperature": 0.7, "answer": "2016", "seconds": 0.517}
+{"task_id": "hotpotqa:5ae7ee41554299540e5a56b0", "seed": 3, "temperature": 0.7, "answer": "2016", "seconds": 0.537}
+{"task_id": "hotpotqa:5ae5b25d5542990ba0bbb2bb", "seed": 1, "temperature": 0.7, "answer": "Christopher Guest", "seconds": 8.281}
+{"task_id": "hotpotqa:5ae5b25d5542990ba0bbb2bb", "seed": 2, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.357}
+{"task_id": "hotpotqa:5ae5b25d5542990ba0bbb2bb", "seed": 3, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.413}
+{"task_id": "hotpotqa:5ab2b61d5542991669774065", "seed": 1, "temperature": 0.7, "answer": "Han Solo", "seconds": 9.415}
+{"task_id": "hotpotqa:5ab2b61d5542991669774065", "seed": 2, "temperature": 0.7, "answer": "Han Solo", "seconds": 0.522}
+{"task_id": "hotpotqa:5ab2b61d5542991669774065", "seed": 3, "temperature": 0.7, "answer": "Han Solo", "seconds": 0.44}
+{"task_id": "hotpotqa:5a72339855429971e9dc934d", "seed": 1, "temperature": 0.7, "answer": "1-800-273-8255", "seconds": 10.548}
+{"task_id": "hotpotqa:5a72339855429971e9dc934d", "seed": 2, "temperature": 0.7, "answer": "1-800-273-8255", "seconds": 0.923}
+{"task_id": "hotpotqa:5a72339855429971e9dc934d", "seed": 3, "temperature": 0.7, "answer": "1-800-273-8255", "seconds": 0.974}
+{"task_id": "hotpotqa:5a7dc2495542997cc2c4749a", "seed": 1, "temperature": 0.7, "answer": "1984 South Asian Games", "seconds": 8.201}
+{"task_id": "hotpotqa:5a7dc2495542997cc2c4749a", "seed": 2, "temperature": 0.7, "answer": "1984 South Asian Games", "seconds": 0.669}
+{"task_id": "hotpotqa:5a7dc2495542997cc2c4749a", "seed": 3, "temperature": 0.7, "answer": "1984 South Asian Games", "seconds": 0.693}
+{"task_id": "hotpotqa:5a8c7232554299585d9e36a6", "seed": 1, "temperature": 0.7, "answer": "Malta", "seconds": 7.79}
+{"task_id": "hotpotqa:5a8c7232554299585d9e36a6", "seed": 2, "temperature": 0.7, "answer": "Malta", "seconds": 0.432}
+{"task_id": "hotpotqa:5a8c7232554299585d9e36a6", "seed": 3, "temperature": 0.7, "answer": "Malta", "seconds": 0.438}
+{"task_id": "hotpotqa:5a85f98e5542996432c57152", "seed": 1, "temperature": 0.7, "answer": "Princeton University, Massachusetts Institute of Technology", "seconds": 7.508}
+{"task_id": "hotpotqa:5a85f98e5542996432c57152", "seed": 2, "temperature": 0.7, "answer": "Princeton University and Massachusetts Institute of Technology", "seconds": 0.686}
+{"task_id": "hotpotqa:5a85f98e5542996432c57152", "seed": 3, "temperature": 0.7, "answer": "Princeton University and Massachusetts Institute of Technology", "seconds": 0.692}
+{"task_id": "hotpotqa:5ac2cb3e5542996773102627", "seed": 1, "temperature": 0.7, "answer": "1382", "seconds": 6.722}
+{"task_id": "hotpotqa:5ac2cb3e5542996773102627", "seed": 2, "temperature": 0.7, "answer": "1382", "seconds": 0.486}
+{"task_id": "hotpotqa:5ac2cb3e5542996773102627", "seed": 3, "temperature": 0.7, "answer": "1382", "seconds": 0.525}
+{"task_id": "hotpotqa:5a8ee3a755429917b4a5be02", "seed": 1, "temperature": 0.7, "answer": "Bing Crosby", "seconds": 4.449}
+{"task_id": "hotpotqa:5a8ee3a755429917b4a5be02", "seed": 2, "temperature": 0.7, "answer": "Bing Crosby", "seconds": 0.454}
+{"task_id": "hotpotqa:5a8ee3a755429917b4a5be02", "seed": 3, "temperature": 0.7, "answer": "Bing Crosby", "seconds": 0.464}
+{"task_id": "hotpotqa:5a81dbfc55429903bc27b9f2", "seed": 1, "temperature": 0.7, "answer": "Johnny Cage", "seconds": 6.094}
+{"task_id": "hotpotqa:5a81dbfc55429903bc27b9f2", "seed": 2, "temperature": 0.7, "answer": "Johnny Cage", "seconds": 0.394}
+{"task_id": "hotpotqa:5a81dbfc55429903bc27b9f2", "seed": 3, "temperature": 0.7, "answer": "Johnny Cage", "seconds": 0.413}
+{"task_id": "hotpotqa:5add63845542992ae4cec541", "seed": 1, "temperature": 0.7, "answer": "March 24, 2001, US$129", "seconds": 8.787}
+{"task_id": "hotpotqa:5add63845542992ae4cec541", "seed": 2, "temperature": 0.7, "answer": "April 29, 2005, US$129.95", "seconds": 1.105}
+{"task_id": "hotpotqa:5add63845542992ae4cec541", "seed": 3, "temperature": 0.7, "answer": "April 29, 2005, US$129.95", "seconds": 1.147}
+{"task_id": "hotpotqa:5a7280105542994cef4bc2e4", "seed": 1, "temperature": 0.7, "answer": "Somerville", "seconds": 7.161}
+{"task_id": "hotpotqa:5a7280105542994cef4bc2e4", "seed": 2, "temperature": 0.7, "answer": "Somerville", "seconds": 0.438}
+{"task_id": "hotpotqa:5a7280105542994cef4bc2e4", "seed": 3, "temperature": 0.7, "answer": "Somerville", "seconds": 0.429}
+{"task_id": "hotpotqa:5ab56db7554299494045efc6", "seed": 1, "temperature": 0.7, "answer": "York", "seconds": 6.218}
+{"task_id": "hotpotqa:5ab56db7554299494045efc6", "seed": 2, "temperature": 0.7, "answer": "York", "seconds": 0.36}
+{"task_id": "hotpotqa:5ab56db7554299494045efc6", "seed": 3, "temperature": 0.7, "answer": "York", "seconds": 0.399}
+{"task_id": "hotpotqa:5a7a4f405542994f819ef1c0", "seed": 1, "temperature": 0.7, "answer": "Jonathan A. Rosenbaum", "seconds": 7.061}
+{"task_id": "hotpotqa:5a7a4f405542994f819ef1c0", "seed": 2, "temperature": 0.7, "answer": "Jonathan A. Rosenbaum", "seconds": 0.551}
+{"task_id": "hotpotqa:5a7a4f405542994f819ef1c0", "seed": 3, "temperature": 0.7, "answer": "Jonathan A. Rosenbaum", "seconds": 0.571}
+{"task_id": "hotpotqa:5abc0e095542996583600417", "seed": 1, "temperature": 0.7, "answer": "Horace Meek Hickam", "seconds": 3.936}
+{"task_id": "hotpotqa:5abc0e095542996583600417", "seed": 2, "temperature": 0.7, "answer": "Horace Meek Hickam", "seconds": 0.583}
+{"task_id": "hotpotqa:5abc0e095542996583600417", "seed": 3, "temperature": 0.7, "answer": "Horace Meek Hickam", "seconds": 0.592}
+{"task_id": "hotpotqa:5a88db445542993b751ca88a", "seed": 1, "temperature": 0.7, "answer": "Antonio Salieri", "seconds": 6.903}
+{"task_id": "hotpotqa:5a88db445542993b751ca88a", "seed": 2, "temperature": 0.7, "answer": "Antonio Salieri", "seconds": 0.512}
+{"task_id": "hotpotqa:5a88db445542993b751ca88a", "seed": 3, "temperature": 0.7, "answer": "Antonio Salieri", "seconds": 0.542}
+{"task_id": "hotpotqa:5a728f505542992359bc30f5", "seed": 1, "temperature": 0.7, "answer": "Dumb and Dumber", "seconds": 6.447}
+{"task_id": "hotpotqa:5a728f505542992359bc30f5", "seed": 2, "temperature": 0.7, "answer": "Dumb and Dumber", "seconds": 0.546}
+{"task_id": "hotpotqa:5a728f505542992359bc30f5", "seed": 3, "temperature": 0.7, "answer": "Dumb and Dumber", "seconds": 0.549}
+{"task_id": "hotpotqa:5a8843cd5542994846c1ce75", "seed": 1, "temperature": 0.7, "answer": "Mwabvi river", "seconds": 7.315}
+{"task_id": "hotpotqa:5a8843cd5542994846c1ce75", "seed": 2, "temperature": 0.7, "answer": "Mwabvi", "seconds": 0.516}
+{"task_id": "hotpotqa:5a8843cd5542994846c1ce75", "seed": 3, "temperature": 0.7, "answer": "Mwabvi", "seconds": 0.539}
+{"task_id": "hotpotqa:5ab613985542992aa134a418", "seed": 1, "temperature": 0.7, "answer": "aluminum foil", "seconds": 7.07}
+{"task_id": "hotpotqa:5ab613985542992aa134a418", "seed": 2, "temperature": 0.7, "answer": "aluminum foil", "seconds": 0.476}
+{"task_id": "hotpotqa:5ab613985542992aa134a418", "seed": 3, "temperature": 0.7, "answer": "aluminum foil", "seconds": 0.471}
+{"task_id": "hotpotqa:5ab2a292554299194fa93496", "seed": 1, "temperature": 0.7, "answer": "Hindi", "seconds": 6.763}
+{"task_id": "hotpotqa:5ab2a292554299194fa93496", "seed": 2, "temperature": 0.7, "answer": "Hindi", "seconds": 0.397}
+{"task_id": "hotpotqa:5ab2a292554299194fa93496", "seed": 3, "temperature": 0.7, "answer": "Hindi", "seconds": 0.427}
+{"task_id": "hotpotqa:5ae720e9554299572ea54715", "seed": 1, "temperature": 0.7, "answer": "George M. Dallas", "seconds": 7.746}
+{"task_id": "hotpotqa:5ae720e9554299572ea54715", "seed": 2, "temperature": 0.7, "answer": "George Mifflin Dallas", "seconds": 0.597}
+{"task_id": "hotpotqa:5ae720e9554299572ea54715", "seed": 3, "temperature": 0.7, "answer": "George Mifflin Dallas", "seconds": 0.597}
+{"task_id": "hotpotqa:5a84cf175542992a431d1aa2", "seed": 1, "temperature": 0.7, "answer": "Ratatat", "seconds": 6.876}
+{"task_id": "hotpotqa:5a84cf175542992a431d1aa2", "seed": 2, "temperature": 0.7, "answer": "Ratatat", "seconds": 0.467}
+{"task_id": "hotpotqa:5a84cf175542992a431d1aa2", "seed": 3, "temperature": 0.7, "answer": "Ratatat", "seconds": 0.463}
+{"task_id": "hotpotqa:5a7148005542994082a3e759", "seed": 1, "temperature": 0.7, "answer": "Kinnairdy Castle", "seconds": 4.566}
+{"task_id": "hotpotqa:5a7148005542994082a3e759", "seed": 2, "temperature": 0.7, "answer": "Kinnairdy Castle", "seconds": 0.538}
+{"task_id": "hotpotqa:5a7148005542994082a3e759", "seed": 3, "temperature": 0.7, "answer": "Kinnairdy Castle", "seconds": 0.544}
+{"task_id": "hotpotqa:5abb7e4f5542996cc5e4a00b", "seed": 1, "temperature": 0.7, "answer": "December 25, 2009", "seconds": 10.719}
+{"task_id": "hotpotqa:5abb7e4f5542996cc5e4a00b", "seed": 2, "temperature": 0.7, "answer": "December 25, 2009", "seconds": 0.749}
+{"task_id": "hotpotqa:5abb7e4f5542996cc5e4a00b", "seed": 3, "temperature": 0.7, "answer": "December 25, 2009", "seconds": 0.959}
+{"task_id": "hotpotqa:5ae212c9554299495565d9de", "seed": 1, "temperature": 0.7, "answer": "Jacobite uprising of 1745", "seconds": 8.608}
+{"task_id": "hotpotqa:5ae212c9554299495565d9de", "seed": 2, "temperature": 0.7, "answer": "Jacobite rising of 1745", "seconds": 0.705}
+{"task_id": "hotpotqa:5ae212c9554299495565d9de", "seed": 3, "temperature": 0.7, "answer": "Jacobite rising of 1745", "seconds": 0.765}
+{"task_id": "hotpotqa:5abfea825542994516f45527", "seed": 1, "temperature": 0.7, "answer": "Peter Chelsom", "seconds": 6.951}
+{"task_id": "hotpotqa:5abfea825542994516f45527", "seed": 2, "temperature": 0.7, "answer": "Peter Chelsom", "seconds": 0.489}
+{"task_id": "hotpotqa:5abfea825542994516f45527", "seed": 3, "temperature": 0.7, "answer": "Peter Chelsom", "seconds": 0.523}
+{"task_id": "hotpotqa:5ab455dc5542991779162c77", "seed": 1, "temperature": 0.7, "answer": "brother-in-law", "seconds": 8.8}
+{"task_id": "hotpotqa:5ab455dc5542991779162c77", "seed": 2, "temperature": 0.7, "answer": "brother-in-law", "seconds": 0.456}
+{"task_id": "hotpotqa:5ab455dc5542991779162c77", "seed": 3, "temperature": 0.7, "answer": "brother-in-law", "seconds": 0.523}
+{"task_id": "hotpotqa:5ab67f4c55429953192ad2d9", "seed": 1, "temperature": 0.7, "answer": "ice hockey", "seconds": 7.931}
+{"task_id": "hotpotqa:5ab67f4c55429953192ad2d9", "seed": 2, "temperature": 0.7, "answer": "ice hockey", "seconds": 0.41}
+{"task_id": "hotpotqa:5ab67f4c55429953192ad2d9", "seed": 3, "temperature": 0.7, "answer": "ice hockey", "seconds": 0.433}
+{"task_id": "hotpotqa:5ae4885e55429970de88d99d", "seed": 1, "temperature": 0.7, "answer": "140 million", "seconds": 6.284}
+{"task_id": "hotpotqa:5ae4885e55429970de88d99d", "seed": 2, "temperature": 0.7, "answer": "140 million", "seconds": 0.512}
+{"task_id": "hotpotqa:5ae4885e55429970de88d99d", "seed": 3, "temperature": 0.7, "answer": "140 million", "seconds": 0.503}
+{"task_id": "hotpotqa:5a8afb9955429971feec45c2", "seed": 1, "temperature": 0.7, "answer": "Paradise Pier", "seconds": 7.434}
+{"task_id": "hotpotqa:5a8afb9955429971feec45c2", "seed": 2, "temperature": 0.7, "answer": "Disney California Adventure", "seconds": 0.471}
+{"task_id": "hotpotqa:5a8afb9955429971feec45c2", "seed": 3, "temperature": 0.7, "answer": "Disney California Adventure", "seconds": 0.465}
+{"task_id": "hotpotqa:5ac0805f5542992a796ded29", "seed": 1, "temperature": 0.7, "answer": "1947", "seconds": 6.459}
+{"task_id": "hotpotqa:5ac0805f5542992a796ded29", "seed": 2, "temperature": 0.7, "answer": "1947", "seconds": 0.572}
+{"task_id": "hotpotqa:5ac0805f5542992a796ded29", "seed": 3, "temperature": 0.7, "answer": "1947", "seconds": 0.547}
+{"task_id": "hotpotqa:5a8f12705542997ba9cb31be", "seed": 1, "temperature": 0.7, "answer": "Black Abbots", "seconds": 6.613}
+{"task_id": "hotpotqa:5a8f12705542997ba9cb31be", "seed": 2, "temperature": 0.7, "answer": "Black Abbots", "seconds": 0.468}
+{"task_id": "hotpotqa:5a8f12705542997ba9cb31be", "seed": 3, "temperature": 0.7, "answer": "Black Abbots", "seconds": 0.474}
+{"task_id": "hotpotqa:5a8466a75542993344746108", "seed": 1, "temperature": 0.7, "answer": "Paride ed Elena", "seconds": 8.189}
+{"task_id": "hotpotqa:5a8466a75542993344746108", "seed": 2, "temperature": 0.7, "answer": "Paride ed Elena", "seconds": 0.51}
+{"task_id": "hotpotqa:5a8466a75542993344746108", "seed": 3, "temperature": 0.7, "answer": "Paride ed Elena", "seconds": 0.527}
+{"task_id": "hotpotqa:5abd82dc5542993062266cb6", "seed": 1, "temperature": 0.7, "answer": "due to the onset and progression of Alzheimer's disease", "seconds": 8.234}
+{"task_id": "hotpotqa:5abd82dc5542993062266cb6", "seed": 2, "temperature": 0.7, "answer": "Alzheimer's disease", "seconds": 0.472}
+{"task_id": "hotpotqa:5abd82dc5542993062266cb6", "seed": 3, "temperature": 0.7, "answer": "Alzheimer's disease", "seconds": 0.536}
+{"task_id": "hotpotqa:5a858dc85542997b5ce40002", "seed": 1, "temperature": 0.7, "answer": "Richardson, Texas", "seconds": 8.755}
+{"task_id": "hotpotqa:5a858dc85542997b5ce40002", "seed": 2, "temperature": 0.7, "answer": "Richardson, Texas", "seconds": 0.494}
+{"task_id": "hotpotqa:5a858dc85542997b5ce40002", "seed": 3, "temperature": 0.7, "answer": "Richardson, Texas", "seconds": 0.511}
+{"task_id": "hotpotqa:5ab52cb2554299637185c4f1", "seed": 1, "temperature": 0.7, "answer": "Northern Kentucky University", "seconds": 7.549}
+{"task_id": "hotpotqa:5ab52cb2554299637185c4f1", "seed": 2, "temperature": 0.7, "answer": "Highland Heights", "seconds": 0.449}
+{"task_id": "hotpotqa:5ab52cb2554299637185c4f1", "seed": 3, "temperature": 0.7, "answer": "Highland Heights", "seconds": 0.469}
+{"task_id": "hotpotqa:5a862f985542991e771815af", "seed": 1, "temperature": 0.7, "answer": "Gus Van Sant", "seconds": 7.605}
+{"task_id": "hotpotqa:5a862f985542991e771815af", "seed": 2, "temperature": 0.7, "answer": "Gus Van Sant", "seconds": 0.508}
+{"task_id": "hotpotqa:5a862f985542991e771815af", "seed": 3, "temperature": 0.7, "answer": "Gus Van Sant", "seconds": 0.514}
+{"task_id": "hotpotqa:5a7e4af3554299495941998c", "seed": 1, "temperature": 0.7, "answer": "sarod", "seconds": 7.358}
+{"task_id": "hotpotqa:5a7e4af3554299495941998c", "seed": 2, "temperature": 0.7, "answer": "sarod", "seconds": 0.411}
+{"task_id": "hotpotqa:5a7e4af3554299495941998c", "seed": 3, "temperature": 0.7, "answer": "sarod", "seconds": 0.445}
+{"task_id": "hotpotqa:5abb7ff15542996cc5e4a015", "seed": 1, "temperature": 0.7, "answer": "Firestorm", "seconds": 5.573}
+{"task_id": "hotpotqa:5abb7ff15542996cc5e4a015", "seed": 2, "temperature": 0.7, "answer": "Firestorm", "seconds": 0.43}
+{"task_id": "hotpotqa:5abb7ff15542996cc5e4a015", "seed": 3, "temperature": 0.7, "answer": "Firestorm", "seconds": 0.429}
+{"task_id": "hotpotqa:5ae27f22554299495565da8d", "seed": 1, "temperature": 0.7, "answer": "1926", "seconds": 7.948}
+{"task_id": "hotpotqa:5ae27f22554299495565da8d", "seed": 2, "temperature": 0.7, "answer": "1926", "seconds": 0.519}
+{"task_id": "hotpotqa:5ae27f22554299495565da8d", "seed": 3, "temperature": 0.7, "answer": "1926", "seconds": 0.534}
+{"task_id": "hotpotqa:5ae249925542994d89d5b3c1", "seed": 1, "temperature": 0.7, "answer": "Jim Pugh", "seconds": 11.188}
+{"task_id": "hotpotqa:5ae249925542994d89d5b3c1", "seed": 2, "temperature": 0.7, "answer": "Jim Pugh", "seconds": 0.461}
+{"task_id": "hotpotqa:5ae249925542994d89d5b3c1", "seed": 3, "temperature": 0.7, "answer": "Jim Pugh", "seconds": 0.492}
+{"task_id": "hotpotqa:5a8ed30655429917b4a5bdcd", "seed": 1, "temperature": 0.7, "answer": "Atlético Madrid", "seconds": 5.569}
+{"task_id": "hotpotqa:5a8ed30655429917b4a5bdcd", "seed": 2, "temperature": 0.7, "answer": "Atlético Madrid", "seconds": 0.5}
+{"task_id": "hotpotqa:5a8ed30655429917b4a5bdcd", "seed": 3, "temperature": 0.7, "answer": "Atlético Madrid", "seconds": 0.486}
+{"task_id": "hotpotqa:5ac23f5655429951e9e684d9", "seed": 1, "temperature": 0.7, "answer": "China", "seconds": 13.537}
+{"task_id": "hotpotqa:5ac23f5655429951e9e684d9", "seed": 2, "temperature": 0.7, "answer": "China", "seconds": 0.472}
+{"task_id": "hotpotqa:5ac23f5655429951e9e684d9", "seed": 3, "temperature": 0.7, "answer": "China", "seconds": 0.457}
+{"task_id": "hotpotqa:5ab8284d5542990e739ec83f", "seed": 1, "temperature": 0.7, "answer": "1972", "seconds": 11.012}
+{"task_id": "hotpotqa:5ab8284d5542990e739ec83f", "seed": 2, "temperature": 0.7, "answer": "1972", "seconds": 0.548}
+{"task_id": "hotpotqa:5ab8284d5542990e739ec83f", "seed": 3, "temperature": 0.7, "answer": "1972", "seconds": 0.548}
+{"task_id": "hotpotqa:5a79240955429974737f79a4", "seed": 1, "temperature": 0.7, "answer": "Basset Bleu de Gascogne", "seconds": 6.941}
+{"task_id": "hotpotqa:5a79240955429974737f79a4", "seed": 2, "temperature": 0.7, "answer": "Basset Bleu de Gascogne", "seconds": 0.697}
+{"task_id": "hotpotqa:5a79240955429974737f79a4", "seed": 3, "temperature": 0.7, "answer": "Basset Bleu de Gascogne", "seconds": 0.714}
+{"task_id": "hotpotqa:5a893fc855429951533612f0", "seed": 1, "temperature": 0.7, "answer": "Chien Français Blanc et Orange,Cretan Hound", "seconds": 6.843}
+{"task_id": "hotpotqa:5a893fc855429951533612f0", "seed": 2, "temperature": 0.7, "answer": "Chien Français Blanc et Orange,Cretan Hound", "seconds": 1.071}
+{"task_id": "hotpotqa:5a893fc855429951533612f0", "seed": 3, "temperature": 0.7, "answer": "Chien Français Blanc et Orange,Cretan Hound", "seconds": 1.009}
+{"task_id": "hotpotqa:5a77aa095542995d83181260", "seed": 1, "temperature": 0.7, "answer": "Pratt & Whitney F100", "seconds": 7.777}
+{"task_id": "hotpotqa:5a77aa095542995d83181260", "seed": 2, "temperature": 0.7, "answer": "Pratt & Whitney F100", "seconds": 0.594}
+{"task_id": "hotpotqa:5a77aa095542995d83181260", "seed": 3, "temperature": 0.7, "answer": "Pratt & Whitney F100", "seconds": 0.749}
+{"task_id": "hotpotqa:5ab865195542990e739ec8e3", "seed": 1, "temperature": 0.7, "answer": "AFC", "seconds": 7.264}
+{"task_id": "hotpotqa:5ab865195542990e739ec8e3", "seed": 2, "temperature": 0.7, "answer": "AFC", "seconds": 0.414}
+{"task_id": "hotpotqa:5ab865195542990e739ec8e3", "seed": 3, "temperature": 0.7, "answer": "AFC", "seconds": 0.475}
+{"task_id": "hotpotqa:5a76648f5542992db9473795", "seed": 1, "temperature": 0.7, "answer": "Blue Origin", "seconds": 7.324}
+{"task_id": "hotpotqa:5a76648f5542992db9473795", "seed": 2, "temperature": 0.7, "answer": "Blue Origin", "seconds": 0.417}
+{"task_id": "hotpotqa:5a76648f5542992db9473795", "seed": 3, "temperature": 0.7, "answer": "Blue Origin", "seconds": 0.459}
+{"task_id": "hotpotqa:5a800ca555429969796c1bac", "seed": 1, "temperature": 0.7, "answer": "Plato", "seconds": 6.428}
+{"task_id": "hotpotqa:5a800ca555429969796c1bac", "seed": 2, "temperature": 0.7, "answer": "Plato", "seconds": 0.426}
+{"task_id": "hotpotqa:5a800ca555429969796c1bac", "seed": 3, "temperature": 0.7, "answer": "Plato", "seconds": 0.462}
+{"task_id": "hotpotqa:5a8aff3d55429971feec45df", "seed": 1, "temperature": 0.7, "answer": "Eric Allan Kramer", "seconds": 8.439}
+{"task_id": "hotpotqa:5a8aff3d55429971feec45df", "seed": 2, "temperature": 0.7, "answer": "Eric Allan Kramer", "seconds": 0.488}
+{"task_id": "hotpotqa:5a8aff3d55429971feec45df", "seed": 3, "temperature": 0.7, "answer": "Eric Allan Kramer", "seconds": 0.5}
+{"task_id": "hotpotqa:5a825f2155429954d2e2eb1b", "seed": 1, "temperature": 0.7, "answer": "William H. Seward", "seconds": 6.353}
+{"task_id": "hotpotqa:5a825f2155429954d2e2eb1b", "seed": 2, "temperature": 0.7, "answer": "William H. Seward", "seconds": 0.554}
+{"task_id": "hotpotqa:5a825f2155429954d2e2eb1b", "seed": 3, "temperature": 0.7, "answer": "William H. Seward", "seconds": 0.565}
+{"task_id": "hotpotqa:5abda6b255429965af743d9a", "seed": 1, "temperature": 0.7, "answer": "University College of North Staffordshire", "seconds": 7.178}
+{"task_id": "hotpotqa:5abda6b255429965af743d9a", "seed": 2, "temperature": 0.7, "answer": "University College of North Staffordshire", "seconds": 0.587}
+{"task_id": "hotpotqa:5abda6b255429965af743d9a", "seed": 3, "temperature": 0.7, "answer": "University College of North Staffordshire", "seconds": 0.635}
+{"task_id": "hotpotqa:5ae08a0455429924de1b70fc", "seed": 1, "temperature": 0.7, "answer": "Enigma", "seconds": 6.513}
+{"task_id": "hotpotqa:5ae08a0455429924de1b70fc", "seed": 2, "temperature": 0.7, "answer": "Enigma", "seconds": 0.425}
+{"task_id": "hotpotqa:5ae08a0455429924de1b70fc", "seed": 3, "temperature": 0.7, "answer": "Enigma", "seconds": 0.446}
+{"task_id": "hotpotqa:5ab87b2955429934fafe6df4", "seed": 1, "temperature": 0.7, "answer": "Shankar", "seconds": 8.342}
+{"task_id": "hotpotqa:5ab87b2955429934fafe6df4", "seed": 2, "temperature": 0.7, "answer": "Shankar", "seconds": 0.435}
+{"task_id": "hotpotqa:5ab87b2955429934fafe6df4", "seed": 3, "temperature": 0.7, "answer": "Shankar", "seconds": 0.511}
+{"task_id": "hotpotqa:5ac10c5e554299294b219074", "seed": 1, "temperature": 0.7, "answer": "Minnesota", "seconds": 7.724}
+{"task_id": "hotpotqa:5ac10c5e554299294b219074", "seed": 2, "temperature": 0.7, "answer": "Minnesota", "seconds": 0.418}
+{"task_id": "hotpotqa:5ac10c5e554299294b219074", "seed": 3, "temperature": 0.7, "answer": "Minnesota", "seconds": 0.412}
+{"task_id": "hotpotqa:5ac1928655429964131be234", "seed": 1, "temperature": 0.7, "answer": "Lithuania", "seconds": 12.888}
+{"task_id": "hotpotqa:5ac1928655429964131be234", "seed": 2, "temperature": 0.7, "answer": "Lithuanian", "seconds": 0.618}
+{"task_id": "hotpotqa:5ac1928655429964131be234", "seed": 3, "temperature": 0.7, "answer": "Lithuanian", "seconds": 0.54}
+{"task_id": "hotpotqa:5a72b9155542992359bc3187", "seed": 1, "temperature": 0.7, "answer": "Acela Express", "seconds": 6.6}
+{"task_id": "hotpotqa:5a72b9155542992359bc3187", "seed": 2, "temperature": 0.7, "answer": "Acela Express", "seconds": 0.429}
+{"task_id": "hotpotqa:5a72b9155542992359bc3187", "seed": 3, "temperature": 0.7, "answer": "Acela Express", "seconds": 0.52}
+{"task_id": "hotpotqa:5ac0d5a1554299294b219025", "seed": 1, "temperature": 0.7, "answer": "Milo Yiannopoulos", "seconds": 6.418}
+{"task_id": "hotpotqa:5ac0d5a1554299294b219025", "seed": 2, "temperature": 0.7, "answer": "Milo Yiannopoulos", "seconds": 0.537}
+{"task_id": "hotpotqa:5ac0d5a1554299294b219025", "seed": 3, "temperature": 0.7, "answer": "Milo Yiannopoulos", "seconds": 0.567}
+{"task_id": "hotpotqa:5add39e75542997545bbbcc4", "seed": 1, "temperature": 0.7, "answer": "American", "seconds": 7.126}
+{"task_id": "hotpotqa:5add39e75542997545bbbcc4", "seed": 2, "temperature": 0.7, "answer": "American", "seconds": 0.363}
+{"task_id": "hotpotqa:5add39e75542997545bbbcc4", "seed": 3, "temperature": 0.7, "answer": "American", "seconds": 0.393}
+{"task_id": "hotpotqa:5a8ff83c55429916514e73f3", "seed": 1, "temperature": 0.7, "answer": "Tony Manero", "seconds": 7.975}
+{"task_id": "hotpotqa:5a8ff83c55429916514e73f3", "seed": 2, "temperature": 0.7, "answer": "Tony Manero", "seconds": 0.472}
+{"task_id": "hotpotqa:5a8ff83c55429916514e73f3", "seed": 3, "temperature": 0.7, "answer": "Tony Manero", "seconds": 0.462}
+{"task_id": "hotpotqa:5ae4a3265542995ad6573de5", "seed": 1, "temperature": 0.7, "answer": "Japan", "seconds": 6.284}
+{"task_id": "hotpotqa:5ae4a3265542995ad6573de5", "seed": 2, "temperature": 0.7, "answer": "Japan", "seconds": 0.35}
+{"task_id": "hotpotqa:5ae4a3265542995ad6573de5", "seed": 3, "temperature": 0.7, "answer": "Japan", "seconds": 0.373}
+{"task_id": "hotpotqa:5a8ce584554299585d9e375c", "seed": 1, "temperature": 0.7, "answer": "Jaffrey", "seconds": 5.607}
+{"task_id": "hotpotqa:5a8ce584554299585d9e375c", "seed": 2, "temperature": 0.7, "answer": "Jaffrey", "seconds": 0.489}
+{"task_id": "hotpotqa:5a8ce584554299585d9e375c", "seed": 3, "temperature": 0.7, "answer": "Jaffrey", "seconds": 0.493}
+{"task_id": "hotpotqa:5a8da97c554299068b959d84", "seed": 1, "temperature": 0.7, "answer": "Fairleigh Dickinson University", "seconds": 5.267}
+{"task_id": "hotpotqa:5a8da97c554299068b959d84", "seed": 2, "temperature": 0.7, "answer": "Fairleigh Dickinson University", "seconds": 0.498}
+{"task_id": "hotpotqa:5a8da97c554299068b959d84", "seed": 3, "temperature": 0.7, "answer": "Fairleigh Dickinson University", "seconds": 0.502}
+{"task_id": "hotpotqa:5a834ed95542990548d0b1ca", "seed": 1, "temperature": 0.7, "answer": "712 Fifth Avenue", "seconds": 6.802}
+{"task_id": "hotpotqa:5a834ed95542990548d0b1ca", "seed": 2, "temperature": 0.7, "answer": "712 Fifth Avenue", "seconds": 0.551}
+{"task_id": "hotpotqa:5a834ed95542990548d0b1ca", "seed": 3, "temperature": 0.7, "answer": "712 Fifth Avenue", "seconds": 0.553}
+{"task_id": "hotpotqa:5ae74890554299572ea547af", "seed": 1, "temperature": 0.7, "answer": "1987", "seconds": 8.883}
+{"task_id": "hotpotqa:5ae74890554299572ea547af", "seed": 2, "temperature": 0.7, "answer": "1987", "seconds": 0.512}
+{"task_id": "hotpotqa:5ae74890554299572ea547af", "seed": 3, "temperature": 0.7, "answer": "1987", "seconds": 0.523}
+{"task_id": "hotpotqa:5ae226bd5542994d89d5b379", "seed": 1, "temperature": 0.7, "answer": "13 May 2018", "seconds": 10.124}
+{"task_id": "hotpotqa:5ae226bd5542994d89d5b379", "seed": 2, "temperature": 0.7, "answer": "13 May 2018", "seconds": 0.714}
+{"task_id": "hotpotqa:5ae226bd5542994d89d5b379", "seed": 3, "temperature": 0.7, "answer": "13 May 2018", "seconds": 0.792}
+{"task_id": "hotpotqa:5a8a231a55429930ff3c0cb4", "seed": 1, "temperature": 0.7, "answer": "North Dakota, Minnesota", "seconds": 5.3}
+{"task_id": "hotpotqa:5a8a231a55429930ff3c0cb4", "seed": 2, "temperature": 0.7, "answer": "North Dakota, Minnesota", "seconds": 0.498}
+{"task_id": "hotpotqa:5a8a231a55429930ff3c0cb4", "seed": 3, "temperature": 0.7, "answer": "North Dakota, Minnesota", "seconds": 0.512}
+{"task_id": "hotpotqa:5a864ff7554299211dda2af2", "seed": 1, "temperature": 0.7, "answer": "Taylor Swift", "seconds": 8.411}
+{"task_id": "hotpotqa:5a864ff7554299211dda2af2", "seed": 2, "temperature": 0.7, "answer": "Taylor Swift", "seconds": 0.406}
+{"task_id": "hotpotqa:5a864ff7554299211dda2af2", "seed": 3, "temperature": 0.7, "answer": "Taylor Swift", "seconds": 0.437}
+{"task_id": "hotpotqa:5a836d8a554299123d8c2113", "seed": 1, "temperature": 0.7, "answer": "Bonnie Franklin", "seconds": 5.285}
+{"task_id": "hotpotqa:5a836d8a554299123d8c2113", "seed": 2, "temperature": 0.7, "answer": "Bonnie Franklin", "seconds": 0.44}
+{"task_id": "hotpotqa:5a836d8a554299123d8c2113", "seed": 3, "temperature": 0.7, "answer": "Bonnie Franklin", "seconds": 0.473}
+{"task_id": "hotpotqa:5ab8750255429934fafe6dd1", "seed": 1, "temperature": 0.7, "answer": "14th Street", "seconds": 9.716}
+{"task_id": "hotpotqa:5ab8750255429934fafe6dd1", "seed": 2, "temperature": 0.7, "answer": "14th Street", "seconds": 0.517}
+{"task_id": "hotpotqa:5ab8750255429934fafe6dd1", "seed": 3, "temperature": 0.7, "answer": "14th Street", "seconds": 0.535}
+{"task_id": "hotpotqa:5addcb215542997dc7907033", "seed": 1, "temperature": 0.7, "answer": "Naomi Campbell", "seconds": 11.929}
+{"task_id": "hotpotqa:5addcb215542997dc7907033", "seed": 2, "temperature": 0.7, "answer": "Naomi Campbell", "seconds": 0.586}
+{"task_id": "hotpotqa:5addcb215542997dc7907033", "seed": 3, "temperature": 0.7, "answer": "Naomi Campbell", "seconds": 0.446}
+{"task_id": "hotpotqa:5aba14195542994dbf0198a9", "seed": 1, "temperature": 0.7, "answer": "15", "seconds": 13.023}
+{"task_id": "hotpotqa:5aba14195542994dbf0198a9", "seed": 2, "temperature": 0.7, "answer": "15", "seconds": 0.417}
+{"task_id": "hotpotqa:5aba14195542994dbf0198a9", "seed": 3, "temperature": 0.7, "answer": "15", "seconds": 0.444}
+{"task_id": "hotpotqa:5a875154554299211dda2be7", "seed": 1, "temperature": 0.7, "answer": "Mickey Gilley", "seconds": 9.392}
+{"task_id": "hotpotqa:5a875154554299211dda2be7", "seed": 2, "temperature": 0.7, "answer": "Mickey Gilley", "seconds": 0.485}
+{"task_id": "hotpotqa:5a875154554299211dda2be7", "seed": 3, "temperature": 0.7, "answer": "Mickey Gilley", "seconds": 0.509}
+{"task_id": "hotpotqa:5ab9535a5542996be202047e", "seed": 1, "temperature": 0.7, "answer": "10", "seconds": 7.64}
+{"task_id": "hotpotqa:5ab9535a5542996be202047e", "seed": 2, "temperature": 0.7, "answer": "10", "seconds": 0.463}
+{"task_id": "hotpotqa:5ab9535a5542996be202047e", "seed": 3, "temperature": 0.7, "answer": "10", "seconds": 0.427}
+{"task_id": "hotpotqa:5ae4a45b55429970de88d9ed", "seed": 1, "temperature": 0.7, "answer": "Take That", "seconds": 9.387}
+{"task_id": "hotpotqa:5ae4a45b55429970de88d9ed", "seed": 2, "temperature": 0.7, "answer": "Take That", "seconds": 0.432}
+{"task_id": "hotpotqa:5ae4a45b55429970de88d9ed", "seed": 3, "temperature": 0.7, "answer": "Take That", "seconds": 0.453}
+{"task_id": "hotpotqa:5ae53c9655429960a22e0290", "seed": 1, "temperature": 0.7, "answer": "11 to 18", "seconds": 7.792}
+{"task_id": "hotpotqa:5ae53c9655429960a22e0290", "seed": 2, "temperature": 0.7, "answer": "11 to 18", "seconds": 0.617}
+{"task_id": "hotpotqa:5ae53c9655429960a22e0290", "seed": 3, "temperature": 0.7, "answer": "11 to 18", "seconds": 0.632}
+{"task_id": "hotpotqa:5abe64bf55429976d4830b13", "seed": 1, "temperature": 0.7, "answer": "Secret Intelligence Service", "seconds": 6.042}
+{"task_id": "hotpotqa:5abe64bf55429976d4830b13", "seed": 2, "temperature": 0.7, "answer": "Secret Intelligence Service", "seconds": 0.618}
+{"task_id": "hotpotqa:5abe64bf55429976d4830b13", "seed": 3, "temperature": 0.7, "answer": "Secret Intelligence Service", "seconds": 0.564}
+{"task_id": "hotpotqa:5ae7e1fc55429952e35ea9cc", "seed": 1, "temperature": 0.7, "answer": "orange", "seconds": 8.551}
+{"task_id": "hotpotqa:5ae7e1fc55429952e35ea9cc", "seed": 2, "temperature": 0.7, "answer": "orange", "seconds": 0.4}
+{"task_id": "hotpotqa:5ae7e1fc55429952e35ea9cc", "seed": 3, "temperature": 0.7, "answer": "orange", "seconds": 0.417}
+{"task_id": "hotpotqa:5a72160e55429971e9dc9253", "seed": 1, "temperature": 0.7, "answer": "Benjamin Cheever", "seconds": 8.596}
+{"task_id": "hotpotqa:5a72160e55429971e9dc9253", "seed": 2, "temperature": 0.7, "answer": "Benjamin Cheever", "seconds": 0.543}
+{"task_id": "hotpotqa:5a72160e55429971e9dc9253", "seed": 3, "temperature": 0.7, "answer": "Benjamin Cheever", "seconds": 0.555}
+{"task_id": "hotpotqa:5ae622495542995703ce8b20", "seed": 1, "temperature": 0.7, "answer": "comedy", "seconds": 6.402}
+{"task_id": "hotpotqa:5ae622495542995703ce8b20", "seed": 2, "temperature": 0.7, "answer": "Comedy", "seconds": 0.396}
+{"task_id": "hotpotqa:5ae622495542995703ce8b20", "seed": 3, "temperature": 0.7, "answer": "Comedy", "seconds": 0.454}
+{"task_id": "hotpotqa:5ae518655542993aec5ec139", "seed": 1, "temperature": 0.7, "answer": "40", "seconds": 7.278}
+{"task_id": "hotpotqa:5ae518655542993aec5ec139", "seed": 2, "temperature": 0.7, "answer": "40", "seconds": 0.437}
+{"task_id": "hotpotqa:5ae518655542993aec5ec139", "seed": 3, "temperature": 0.7, "answer": "40", "seconds": 0.445}
+{"task_id": "hotpotqa:5a74760b55429974ef308c03", "seed": 1, "temperature": 0.7, "answer": "Gaspare Spontini", "seconds": 6.644}
+{"task_id": "hotpotqa:5a74760b55429974ef308c03", "seed": 2, "temperature": 0.7, "answer": "Gaspare Spontini", "seconds": 0.568}
+{"task_id": "hotpotqa:5a74760b55429974ef308c03", "seed": 3, "temperature": 0.7, "answer": "Gaspare Spontini", "seconds": 0.562}
+{"task_id": "hotpotqa:5ac1a4ed5542994d76dcce90", "seed": 1, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 7.655}
+{"task_id": "hotpotqa:5ac1a4ed5542994d76dcce90", "seed": 2, "temperature": 0.7, "answer": "Bret Easton Ellis", "seconds": 0.54}
+{"task_id": "hotpotqa:5ac1a4ed5542994d76dcce90", "seed": 3, "temperature": 0.7, "answer": "Bret Easton Ellis", "seconds": 0.562}
+{"task_id": "hotpotqa:5a8078d85542995d8a8ddf78", "seed": 1, "temperature": 0.7, "answer": "Kill Hannah", "seconds": 7.922}
+{"task_id": "hotpotqa:5a8078d85542995d8a8ddf78", "seed": 2, "temperature": 0.7, "answer": "Kill Hannah", "seconds": 0.411}
+{"task_id": "hotpotqa:5a8078d85542995d8a8ddf78", "seed": 3, "temperature": 0.7, "answer": "Kill Hannah", "seconds": 0.452}
+{"task_id": "hotpotqa:5ab6b6fd5542995eadef006b", "seed": 1, "temperature": 0.7, "answer": "The Wolfhounds", "seconds": 6.595}
+{"task_id": "hotpotqa:5ab6b6fd5542995eadef006b", "seed": 2, "temperature": 0.7, "answer": "The Wolfhounds", "seconds": 0.589}
+{"task_id": "hotpotqa:5ab6b6fd5542995eadef006b", "seed": 3, "temperature": 0.7, "answer": "The Wolfhounds", "seconds": 0.493}
+{"task_id": "hotpotqa:5a84b6ed5542994c784dda18", "seed": 1, "temperature": 0.7, "answer": "Yes", "seconds": 8.092}
+{"task_id": "hotpotqa:5a84b6ed5542994c784dda18", "seed": 2, "temperature": 0.7, "answer": "Yes", "seconds": 0.357}
+{"task_id": "hotpotqa:5a84b6ed5542994c784dda18", "seed": 3, "temperature": 0.7, "answer": "Yes", "seconds": 0.372}
+{"task_id": "hotpotqa:5ac39844554299741d48a2ac", "seed": 1, "temperature": 0.7, "answer": "Broad Peak", "seconds": 9.152}
+{"task_id": "hotpotqa:5ac39844554299741d48a2ac", "seed": 2, "temperature": 0.7, "answer": "Broad Peak", "seconds": 0.387}
+{"task_id": "hotpotqa:5ac39844554299741d48a2ac", "seed": 3, "temperature": 0.7, "answer": "Broad Peak", "seconds": 0.432}
+{"task_id": "hotpotqa:5adc2f53554299438c868d6d", "seed": 1, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 9.974}
+{"task_id": "hotpotqa:5adc2f53554299438c868d6d", "seed": 2, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.36}
+{"task_id": "hotpotqa:5adc2f53554299438c868d6d", "seed": 3, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.381}
+{"task_id": "hotpotqa:5a8b349a55429971feec466b", "seed": 1, "temperature": 0.7, "answer": "NO", "seconds": 7.663}
+{"task_id": "hotpotqa:5a8b349a55429971feec466b", "seed": 2, "temperature": 0.7, "answer": "NO", "seconds": 0.354}
+{"task_id": "hotpotqa:5a8b349a55429971feec466b", "seed": 3, "temperature": 0.7, "answer": "No", "seconds": 0.371}
+{"task_id": "hotpotqa:5ac370ce5542995ef918c18c", "seed": 1, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 6.527}
+{"task_id": "hotpotqa:5ac370ce5542995ef918c18c", "seed": 2, "temperature": 0.7, "answer": "UNKNOWN", "seconds": 0.359}
+{"task_id": "hotpotqa:5ac370ce5542995ef918c18c", "seed": 3, "temperature": 0.7, "answer": "YES", "seconds": 0.376}
+{"task_id": "hotpotqa:5ac0e74d554299294b219052", "seed": 1, "temperature": 0.7, "answer": "Avantages", "seconds": 8.89}
+{"task_id": "hotpotqa:5ac0e74d554299294b219052", "seed": 2, "temperature": 0.7, "answer": "Avantages", "seconds": 0.38}
+{"task_id": "hotpotqa:5ac0e74d554299294b219052", "seed": 3, "temperature": 0.7, "answer": "Avantages", "seconds": 0.428}

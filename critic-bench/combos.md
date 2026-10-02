@@ -12,6 +12,7 @@ Each rule decides, per draft, whether the loop stops (approves) or revises. Seco
 | 4. gate: evidence_match, then llm | 149/200 | 99/149 (66%, 59%–74%) | 50/85 | 16/115 | 9.21 | 9% |
 | 5. laya ≥ 0.8 alone | 65/200 | 45/65 (69%, 57%–79%) | 20/85 | 70/115 | 0.22 | 100% |
 | 6. evidence_match = 1 AND laya ≥ 0.5 | 143/200 | 90/143 (63%, 55%–70%) | 53/85 | 25/115 | 0.20 | 100% |
+| 7. consistency = 1.0 AND evidence_match = 1 | 156/200 | 104/156 (67%, 59%–74%) | 52/85 | 11/115 | 7.79 | 100% |
 
 ## `subset80`: 80 drafts, 45 correct (56%)
 
@@ -27,7 +28,7 @@ Each rule decides, per draft, whether the loop stops (approves) or revises. Seco
 
 ## Summary
 
-No stop rule is clearly better than approving every draft: every interval for accuracy when approved overlaps the 51–64% interval for "approve everything" on `extra`. The best trade-off is the gate (rule 4), where the free evidence_match check rejects drafts whose answer is not in the evidence before calling llm: it is right 66–69% of the time when it stops, against 62–63% for llm alone, with fewer wrong approvals and 9–12% fewer llm calls. Laya alone is the most precise on `extra` (69%), but it rejects 70 of 115 right answers and drops to 52% on `subset80`, so it would mostly just make the loop run more rounds.
+No stop rule is clearly better than approving every draft: every interval for accuracy when approved overlaps the 51–64% interval for "approve everything" on `extra`. The two best rules both start with the free evidence_match check: gating llm with it (rule 4) and requiring 3 resampled writer answers to agree (rule 7) are each right 66–69% of the time when they stop, against 62–63% for llm alone, with fewer wrong approvals; rule 7 also wrongly rejects fewer right drafts on `extra` (11 vs 16) and needs no critic model. Laya alone is the most precise on `extra` (69%), but it rejects 70 of 115 right answers and drops to 52% on `subset80`, so it would mostly just make the loop run more rounds.
 
-Notes: "llm calls saved" counts calls to the llm critic only; rule 7's time is its 3 extra writer samples. A yes/no draft (evidence_match = 0.5) is sent to llm by the gate and rejected by rules 3, 6, and 7.
+Notes: "llm calls saved" counts calls to the llm critic only; rule 7's time is its 3 extra writer samples (temperature 0.7) per question. A yes/no draft (evidence_match = 0.5) is sent to llm by the gate and rejected by rules 3, 6, and 7.
 
