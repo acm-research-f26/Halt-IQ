@@ -32,7 +32,13 @@ def reused(arm):
     return critic
 
 
+def laya(draft):
+    from laya_critic import laya as run  # imported lazily so other critics don't load MLX
+    return run(draft)
+
+
 CRITICS = {
+    "laya": laya,                          # Laya noul: P(correct and supported)
     "llm": reused("llm"),                  # qwen3:8b approve/revise
     "local-typed": reused("local-typed"),  # qwen3:8b, 3 self-reported scores
     "kev": reused("openjev"),              # Kev-0.8B via the openjev arm
