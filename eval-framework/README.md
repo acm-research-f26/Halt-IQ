@@ -104,7 +104,8 @@ if the rule approves"*: how many drafts each rule stops on, the EM and F1 of tho
 critic's cost. Rejected drafts would go on to round 2, which was not run, so these rows are
 **not** on the same scale as the main table. The best rules (the evidence_match gate and
 consistency + evidence_match) stop on about 75–78% of drafts at 66–67% EM, against 57% for
-stopping on everything.
+stopping on everything. The evidence_match + Jev gate stops on 63% of drafts at 74% EM, at about
+0.2 s and $0.00008 per draft (Jev is a paid API; its cost comes from the Jev budget ledger).
 
 ## Files
 

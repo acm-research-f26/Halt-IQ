@@ -57,6 +57,7 @@ from Yash's `haltiq/metrics.py`.
 |---|---|---|
 | `llm` | approve/revise | qwen3:8b with Yash's `LLMCritic` prompt. Saved decisions reused; live calls for drafts the run never judged. |
 | `local-typed` | P = min of 3 scores | qwen3:8b self-reported 0–1 scores (saved only). |
+| `jev` | P = min of 3 noul probabilities | Official Jev 1.13 (TypeSafe API) through Yash's `JevCritic`/`JevClient`, Sept 28 config (same 3 questions, threshold 0.8). The key is read only from `TYPESAFE_API_KEY`; spend is tracked in `.jev-budget.sqlite` (gitignored). |
 | `kev` | P = min of 3 noul probabilities | Kev-0.8B through Yash's openjev arm. Saved scores reused; live calls reproduce saved scores exactly. |
 | `laya` | P(yes) | Laya noul question "Is the proposed answer correct and supported by the evidence?" |
 | `qwen8b-logprob` | P(yes) | qwen3:8b asked "Is the proposed answer correct and supported by the evidence?" with Yash's critic boundary text and state. Score = P(yes) / (P(yes) + P(no)) over the first token's top-20 logprobs (case and spacing variants summed). Ollama 0.30.11 returns logprobs, so no extra server was needed. |
@@ -97,6 +98,7 @@ Full tables for every draft set: `report.md` (strict label) and `report-lenient.
 | llm (qwen3:8b) | 80 | 41/66 (62%) | 25/35 | 4/45 | — | 9.59 |
 | local-typed (qwen3:8b) | 20 | 10/19 (53%) | 9/9 | 1/11 | 0.45 | 7.26 |
 | kev (Kev-0.8B) | 80 | approves none | 0/35 | 45/45 | 0.45 | 1.23 |
+| jev (Jev 1.13, API) | 80 | 38/54 (70%) | 16/35 | 7/45 | 0.76 | 0.18 |
 | laya | 80 | 12/23 (52%) | 11/35 | 33/45 | 0.50 | 0.26 |
 | evidence_match | 80 | 43/69 (62%) | 26/35 | 2/45 | 0.61 | 0.00 |
 | consistency | 80 | 41/68 (60%) | 27/35 | 4/45 | 0.57 | 8.82 |
@@ -107,17 +109,19 @@ Full tables for every draft set: `report.md` (strict label) and `report-lenient.
 |---|---:|---:|---:|---:|---:|---:|
 | llm (qwen3:8b) | 200 | 100/159 (63%) | 59/85 | 15/115 | — | 10.23 |
 | kev (Kev-0.8B) | 200 | 0/1 | 1/85 | 115/115 | 0.48 | 0.86 |
+| jev (Jev 1.13, API) | 200 | 94/133 (71%) | 39/85 | 21/115 | 0.71 | 0.19 |
 | laya | 200 | 45/65 (69%) | 20/85 | 70/115 | 0.60 | 0.22 |
 | qwen8b-logprob | 200 | 97/150 (65%) | 53/85 | 18/115 | 0.63 | 7.14 |
 | evidence_match | 200 | 111/177 (63%) | 66/85 | 4/115 | 0.60 | 0.00 |
 | consistency | 200 | 107/172 (62%) | 65/85 | 8/115 | 0.58 | 8.79 |
 
-All critics run locally ($0).
+All critics run locally ($0) except Jev, a paid API: $0.00009 per decision (mean 2,158 input tokens at $0.042 per million; $0.02 for all 220 drafts).
 
 ![Reliability chart](reliability.png)
 
 **Takeaways so far.**
-- No critic is much better than "always approve": the best accuracy-when-approved is 62–69%, against a 56–57% baseline, and no single critic's AUROC is above 0.63.
+- Before Jev, no critic was much better than "always approve": the best accuracy-when-approved was 62–69%, against a 56–57% baseline, and no AUROC was above 0.63.
+- **Jev is the strongest critic**: AUROC 0.71 on `extra` and 0.76 on `subset80`. It is right 71% of the time when it approves at 0.8, with 39/85 wrong approvals vs 59/85 for the llm critic, at 0.2 s and $0.00009 per decision.
 - The loop's current llm critic approves about 80% of drafts, including about 70% of the wrong ones.
 - Kev-0.8B rejects almost everything at 0.8, and its ranking is at chance level.
 - Laya is the only critic that is selective at 0.8, but it rejects most right answers too (70/115 on `extra`), and it is not better than chance on `subset80`.
@@ -131,7 +135,9 @@ All critics run locally ($0).
 
 - **Logprob rules** (`extra`): logprob ≥ 0.8 alone is right 65% of the time when it stops (97/150, 53 wrong approvals); evidence_match = 1 AND logprob ≥ 0.5 is right 66% (95/145, 50 wrong approvals). Both are about the same as the gate and rule 7.
 
-All 95% intervals still overlap "approve everything".
+- **Jev rules:** Jev ≥ 0.8 alone is right 71% of the time when it stops on `extra`. Gating it with evidence_match is right 74% (95% interval 66–81%), with 32 wrong approvals, at $0.00008 per draft. It is the only rule whose interval clears "approve everything" (51–64%), but it rejects 22 right drafts (vs 15 for llm alone).
+
+Every other rule's 95% interval still overlaps "approve everything".
 
 **Combining critics** (`combine.py` → `combine.md`): a logistic regression on `extra` uses evidence_match, consistency, laya, logprob (as log-odds), the llm decision, and yes/no and UNKNOWN flags. Scored out-of-fold with 5-fold cross-validation, it reaches AUROC 0.686, against 0.633 for the best single critic (logprob). When it approves the same number of drafts as llm alone (159), it is right on 103 (65%) vs 100 (63%), with 56 vs 59 wrong approvals. That is a small gain, well within the noise at n = 200. evidence_match (+0.79) and consistency (+0.56) carry the most weight. These are exploratory numbers on dev data; the weights would need to be checked on new questions before they are used.
 

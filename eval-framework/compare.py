@@ -85,6 +85,12 @@ def scatter(stats, path):
     fig.savefig(path)
 
 
+def api_cost(results, jev_cost, n):
+    """Jev API spend per draft: mean cost per Jev call x share of drafts on which the rule calls Jev."""
+    calls = sum(called == "jev" for *_, called in results)
+    return f"${calls * jev_cost / n:.6f}" if calls and jev_cost else "$0"
+
+
 def critic_bench_section():
     """Vedanshi's critic-bench stop rules on the 200 `extra` first drafts (cached scores, no model calls)."""
     if not (CRITIC_BENCH / "scores").exists():
@@ -93,7 +99,7 @@ def critic_bench_section():
     sys.path.insert(0, str(CRITIC_BENCH))
     from combos import RULES  # noqa: E402  (critic-bench)
     from drafts import EXTRA_DIR, load_drafts, read_jsonl  # noqa: E402
-    from report import load_scores  # noqa: E402
+    from report import jev_cost_per_decision, load_scores  # noqa: E402
 
     scores, drafts = load_scores(), load_drafts("extra")
     writer_seconds = mean([r["seconds"] for r in read_jsonl(EXTRA_DIR / "drafts.jsonl")])
@@ -103,10 +109,13 @@ def critic_bench_section():
              "scored as *\"stop after round 1 if the rule approves\"*: how many drafts it stops on, and how good those are. "
              "What happens after a rejection (more rounds) was not run, so there is no final F1 for rejected drafts. "
              f"Writer cost for the first draft: {writer_seconds:.1f} s per question (qwen3:8b), the same for every rule; "
-             "critic cost is extra. Strict exact-match label.", "",
+             "critic cost is extra. Jev is a paid API (cost from its budget ledger); every other critic runs locally. "
+             "Strict exact-match label.", "",
              f"{n} drafts, {right} correct ({right / n:.0%}).", "",
-             "| Rule | Stops at round 1 | EM of stopped drafts | Mean F1 of stopped drafts | Wrong stops | Right drafts sent on | Critic s per draft |",
-             "|---|---:|---:|---:|---:|---:|---:|"]
+             "| Rule | Stops at round 1 | EM of stopped drafts | Mean F1 of stopped drafts | Wrong stops | Right drafts sent on "
+             "| Critic s per draft | API $ per draft |",
+             "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    jev_cost = jev_cost_per_decision()
     f1 = {d["draft_id"]: d["f1"] for d in drafts}
     for name, rule, needs in RULES:
         usable = [d for d in drafts if all(d["draft_id"] in scores.get(c, {}) for c in needs)]
@@ -117,7 +126,8 @@ def critic_bench_section():
         em = sum(d["correct"] for d in stopped)
         lines.append(f"| {name} | {len(stopped)}/{n} | {em}/{len(stopped)} ({em / len(stopped):.0%}) "
                      f"| {mean([f1[d['draft_id']] for d in stopped]):.3f} | {len(stopped) - em}/{n - right} "
-                     f"| {right - em}/{right} | {mean([sec for _, _, sec, _ in results]):.2f} |")
+                     f"| {right - em}/{right} | {mean([sec for _, _, sec, _ in results]):.2f} "
+                     f"| {api_cost(results, jev_cost, n)} |")
     return lines + [""]
 
 

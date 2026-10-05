@@ -4,35 +4,39 @@ Each rule decides, per draft, whether the loop stops (approves) or revises. Seco
 
 ## `extra`: 200 drafts, 115 correct (57%)
 
-| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected | Avg s/draft | llm calls saved vs rule 2 |
-|---|---:|---:|---:|---:|---:|---:|
-| 1. approve everything | 200/200 | 115/200 (57%, 51%–64%) | 85/85 | 0/115 | 0.00 | 100% |
-| 2. llm alone | 159/200 | 100/159 (63%, 55%–70%) | 59/85 | 15/115 | 10.23 | 0% |
-| 3. evidence_match alone | 177/200 | 111/177 (63%, 55%–69%) | 66/85 | 4/115 | 0.00 | 100% |
-| 4. gate: evidence_match, then llm | 149/200 | 99/149 (66%, 59%–74%) | 50/85 | 16/115 | 9.21 | 9% |
-| 5. laya ≥ 0.8 alone | 65/200 | 45/65 (69%, 57%–79%) | 20/85 | 70/115 | 0.22 | 100% |
-| 6. evidence_match = 1 AND laya ≥ 0.5 | 143/200 | 90/143 (63%, 55%–70%) | 53/85 | 25/115 | 0.20 | 100% |
-| 7. consistency = 1.0 AND evidence_match = 1 | 156/200 | 104/156 (67%, 59%–74%) | 52/85 | 11/115 | 7.79 | 100% |
-| 8. logprob ≥ 0.8 alone | 150/200 | 97/150 (65%, 57%–72%) | 53/85 | 18/115 | 7.14 | 100% |
-| 9. evidence_match = 1 AND logprob ≥ 0.5 | 145/200 | 95/145 (66%, 57%–73%) | 50/85 | 20/115 | 6.30 | 100% |
+| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected | Avg s/draft | llm calls saved vs rule 2 | API $ per draft |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1. approve everything | 200/200 | 115/200 (57%, 51%–64%) | 85/85 | 0/115 | 0.00 | 100% | $0 |
+| 2. llm alone | 159/200 | 100/159 (63%, 55%–70%) | 59/85 | 15/115 | 10.23 | 0% | $0 |
+| 3. evidence_match alone | 177/200 | 111/177 (63%, 55%–69%) | 66/85 | 4/115 | 0.00 | 100% | $0 |
+| 4. gate: evidence_match, then llm | 149/200 | 99/149 (66%, 59%–74%) | 50/85 | 16/115 | 9.21 | 9% | $0 |
+| 5. laya ≥ 0.8 alone | 65/200 | 45/65 (69%, 57%–79%) | 20/85 | 70/115 | 0.22 | 100% | $0 |
+| 6. evidence_match = 1 AND laya ≥ 0.5 | 143/200 | 90/143 (63%, 55%–70%) | 53/85 | 25/115 | 0.20 | 100% | $0 |
+| 7. consistency = 1.0 AND evidence_match = 1 | 156/200 | 104/156 (67%, 59%–74%) | 52/85 | 11/115 | 7.79 | 100% | $0 |
+| 8. logprob ≥ 0.8 alone | 150/200 | 97/150 (65%, 57%–72%) | 53/85 | 18/115 | 7.14 | 100% | $0 |
+| 9. evidence_match = 1 AND logprob ≥ 0.5 | 145/200 | 95/145 (66%, 57%–73%) | 50/85 | 20/115 | 6.30 | 100% | $0 |
+| 10. jev ≥ 0.8 alone | 133/200 | 94/133 (71%, 62%–78%) | 39/85 | 21/115 | 0.19 | 100% | $0.000091 |
+| 11. gate: evidence_match, then jev ≥ 0.8 | 125/200 | 93/125 (74%, 66%–81%) | 32/85 | 22/115 | 0.17 | 100% | $0.000082 |
 
 ## `subset80`: 80 drafts, 45 correct (56%)
 
-| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected | Avg s/draft | llm calls saved vs rule 2 |
-|---|---:|---:|---:|---:|---:|---:|
-| 1. approve everything | 80/80 | 45/80 (56%, 45%–67%) | 35/35 | 0/45 | 0.00 | 100% |
-| 2. llm alone | 66/80 | 41/66 (62%, 50%–73%) | 25/35 | 4/45 | 9.59 | 0% |
-| 3. evidence_match alone | 69/80 | 43/69 (62%, 51%–73%) | 26/35 | 2/45 | 0.00 | 100% |
-| 4. gate: evidence_match, then llm | 58/80 | 40/58 (69%, 56%–79%) | 18/35 | 5/45 | 8.37 | 12% |
-| 5. laya ≥ 0.8 alone | 23/80 | 12/23 (52%, 33%–71%) | 11/35 | 33/45 | 0.26 | 100% |
-| 6. evidence_match = 1 AND laya ≥ 0.5 | 57/80 | 35/57 (61%, 48%–73%) | 22/35 | 10/45 | 0.23 | 100% |
-| 7. consistency = 1.0 AND evidence_match = 1 | 61/80 | 40/61 (66%, 53%–76%) | 21/35 | 5/45 | 7.68 | 100% |
-| 8. logprob ≥ 0.8 alone (only 60/80 drafts scored) | 44/60 | 30/44 (68%, 53%–80%) | 14/26 | 4/34 | 6.60 | 100% |
-| 9. evidence_match = 1 AND logprob ≥ 0.5 (only 60/80 drafts scored) | 43/60 | 28/43 (65%, 50%–78%) | 15/26 | 6/34 | 5.69 | 100% |
+| Rule | Approved | Accuracy when approved (95% CI) | Wrong approvals | Wrongly rejected | Avg s/draft | llm calls saved vs rule 2 | API $ per draft |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1. approve everything | 80/80 | 45/80 (56%, 45%–67%) | 35/35 | 0/45 | 0.00 | 100% | $0 |
+| 2. llm alone | 66/80 | 41/66 (62%, 50%–73%) | 25/35 | 4/45 | 9.59 | 0% | $0 |
+| 3. evidence_match alone | 69/80 | 43/69 (62%, 51%–73%) | 26/35 | 2/45 | 0.00 | 100% | $0 |
+| 4. gate: evidence_match, then llm | 58/80 | 40/58 (69%, 56%–79%) | 18/35 | 5/45 | 8.37 | 12% | $0 |
+| 5. laya ≥ 0.8 alone | 23/80 | 12/23 (52%, 33%–71%) | 11/35 | 33/45 | 0.26 | 100% | $0 |
+| 6. evidence_match = 1 AND laya ≥ 0.5 | 57/80 | 35/57 (61%, 48%–73%) | 22/35 | 10/45 | 0.23 | 100% | $0 |
+| 7. consistency = 1.0 AND evidence_match = 1 | 61/80 | 40/61 (66%, 53%–76%) | 21/35 | 5/45 | 7.68 | 100% | $0 |
+| 8. logprob ≥ 0.8 alone (only 60/80 drafts scored) | 44/60 | 30/44 (68%, 53%–80%) | 14/26 | 4/34 | 6.60 | 100% | $0 |
+| 9. evidence_match = 1 AND logprob ≥ 0.5 (only 60/80 drafts scored) | 43/60 | 28/43 (65%, 50%–78%) | 15/26 | 6/34 | 5.69 | 100% | $0 |
+| 10. jev ≥ 0.8 alone | 54/80 | 38/54 (70%, 57%–81%) | 16/35 | 7/45 | 0.18 | 100% | $0.000091 |
+| 11. gate: evidence_match, then jev ≥ 0.8 | 50/80 | 37/50 (74%, 60%–84%) | 13/35 | 8/45 | 0.16 | 100% | $0.000079 |
 
 ## Summary
 
-No stop rule is clearly better than approving every draft: every interval for accuracy when approved overlaps the 51–64% interval for "approve everything" on `extra`. The two best rules both start with the free evidence_match check: gating llm with it (rule 4) and requiring 3 resampled writer answers to agree (rule 7) are each right 66–69% of the time when they stop, against 62–63% for llm alone, with fewer wrong approvals; rule 7 also wrongly rejects fewer right drafts on `extra` (11 vs 16) and needs no critic model. Laya alone is the most precise on `extra` (69%), but it rejects 70 of 115 right answers and drops to 52% on `subset80`, so it would mostly just make the loop run more rounds.
+Jev is the first critic that clearly separates right from wrong drafts: gating it with the free evidence_match check (rule 11) is right 74% of the time when it stops on `extra` (95% interval 66–81%), the only rule whose interval does not overlap "approve everything" (51–64%), with 32 wrong approvals against 59 for the current llm critic, at about 0.2 s and $0.00008 per draft. The trade-off is more rejected right answers (22 vs 15 for llm alone), which would cost extra rounds. Among the free rules, the evidence_match gate before llm (rule 4) and consistency + evidence_match (rule 7) remain the best, at 66–69% when they stop.
 
-Notes: "llm calls saved" counts calls to the llm critic only; rule 7's time is its 3 extra writer samples (temperature 0.7) per question. A yes/no draft (evidence_match = 0.5) is sent to llm by the gate and rejected by rules 3, 6, and 7.
+Notes: "llm calls saved" counts calls to the qwen3:8b llm critic only (Jev rules call the paid Jev API instead; API $ per draft is from the Jev budget ledger: mean spend per settled call x share of drafts that call Jev); rule 7's time is its 3 extra writer samples (temperature 0.7) per question. A yes/no draft (evidence_match = 0.5) is sent on to the critic by the gates (rules 4 and 11) and rejected by rules 3, 6, 7, and 9.
 

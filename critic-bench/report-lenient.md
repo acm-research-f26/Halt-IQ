@@ -13,6 +13,7 @@ Approving everything would be right 11/20 (55%) of the time; a useful critic bea
 | llm | Yash's critic; saved + live | 20/20 | 10/17 (59%) | 7/9 | 1/11 | — (text only) | 7.81 | $0 (local) |
 | local-typed | Yash's critic; saved | 20/20 | 10/19 (53%) | 9/9 | 1/11 | 0.45 | 7.26 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 20/20 | 0/0 | 0/9 | 11/11 | 0.54 | 1.01 | $0 (local) |
+| jev | official Jev 1.13 (API) | 20/20 | 10/13 (77%) | 3/9 | 1/11 | 0.88 | 0.18 | $0.000091 (API) |
 | laya | new | 20/20 | 0/2 (0%) | 2/9 | 11/11 | 0.48 | 0.17 | $0 (local) |
 | evidence_match | new, no model | 20/20 | 11/17 (65%) | 6/9 | 0/11 | 0.67 | 0.00 | $0 (local) |
 | consistency | new, 3 writer samples | 20/20 | 9/17 (53%) | 8/9 | 2/11 | 0.45 | 9.19 | $0 (local) |
@@ -23,6 +24,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 |---|---:|---:|---:|---:|---:|
 | local-typed | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 |
 | kev | 3 / 7 | 1 / 10 | 0 / 10 | 0 / 11 | 0 / 11 |
+| jev | 5 / 1 | 4 / 1 | 3 / 1 | 3 / 1 | 1 / 4 |
 | laya | 7 / 1 | 5 / 1 | 5 / 5 | 2 / 11 | 0 / 11 |
 | evidence_match | 6 / 0 | 6 / 0 | 6 / 0 | 6 / 0 | 6 / 0 |
 | consistency | 9 / 2 | 9 / 2 | 8 / 2 | 8 / 2 | 8 / 2 |
@@ -40,6 +42,7 @@ Approving everything would be right 13/25 (52%) of the time; a useful critic bea
 | llm | Yash's critic; saved + live | 22/25 | 12/19 (63%) | 7/9 | 1/13 | — (text only) | 7.27 | $0 (local) |
 | local-typed | Yash's critic; saved | 20/25 | 10/19 (53%) | 9/9 | 1/11 | 0.45 | 7.26 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 21/25 | 0/0 | 0/10 | 11/11 | 0.56 | 0.98 | $0 (local) |
+| jev | official Jev 1.13 (API) | 20/25 | 10/13 (77%) | 3/9 | 1/11 | 0.88 | 0.18 | $0.000091 (API) |
 | laya | new | 25/25 | 1/4 (25%) | 3/12 | 12/13 | 0.55 | 0.17 | $0 (local) |
 | evidence_match | new, no model | 25/25 | 13/21 (62%) | 8/12 | 0/13 | 0.67 | 0.00 | $0 (local) |
 | consistency | new, 3 writer samples | 20/25 | 9/17 (53%) | 8/9 | 2/11 | 0.45 | 9.19 | $0 (local) |
@@ -50,6 +53,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 |---|---:|---:|---:|---:|---:|
 | local-typed | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 |
 | kev | 3 / 7 | 1 / 10 | 0 / 10 | 0 / 11 | 0 / 11 |
+| jev | 5 / 1 | 4 / 1 | 3 / 1 | 3 / 1 | 1 / 4 |
 | laya | 8 / 1 | 6 / 1 | 6 / 5 | 3 / 12 | 0 / 13 |
 | evidence_match | 8 / 0 | 8 / 0 | 8 / 0 | 8 / 0 | 8 / 0 |
 | consistency | 9 / 2 | 9 / 2 | 8 / 2 | 8 / 2 | 8 / 2 |
@@ -66,6 +70,7 @@ Approving everything would be right 126/200 (63%) of the time; a useful critic b
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | llm | Yash's critic; saved + live | 200/200 | 106/159 (67%) | 53/74 | 20/126 | — (text only) | 10.23 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 200/200 | 0/1 (0%) | 1/74 | 126/126 | 0.50 | 0.86 | $0 (local) |
+| jev | official Jev 1.13 (API) | 200/200 | 102/133 (77%) | 31/74 | 24/126 | 0.74 | 0.19 | $0.000091 (API) |
 | laya | new | 200/200 | 50/65 (77%) | 15/74 | 76/126 | 0.64 | 0.22 | $0 (local) |
 | qwen8b-logprob | new, qwen3:8b P(yes) | 200/200 | 103/150 (69%) | 47/74 | 23/126 | 0.62 | 7.14 | $0 (local) |
 | evidence_match | new, no model | 200/200 | 119/177 (67%) | 58/74 | 7/126 | 0.58 | 0.00 | $0 (local) |
@@ -76,6 +81,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 | Critic | @0.5 | @0.6 | @0.7 | @0.8 | @0.9 |
 |---|---:|---:|---:|---:|---:|
 | kev | 22 / 101 | 10 / 121 | 3 / 125 | 1 / 126 | 0 / 126 |
+| jev | 42 / 5 | 38 / 7 | 35 / 11 | 31 / 24 | 21 / 52 |
 | laya | 57 / 23 | 47 / 31 | 32 / 42 | 15 / 76 | 1 / 121 |
 | qwen8b-logprob | 52 / 22 | 48 / 23 | 48 / 23 | 47 / 23 | 47 / 26 |
 | evidence_match | 59 / 4 | 58 / 7 | 58 / 7 | 58 / 7 | 58 / 7 |
@@ -94,6 +100,7 @@ Approving everything would be right 50/80 (62%) of the time; a useful critic bea
 | llm | Yash's critic; saved + live | 80/80 | 44/66 (67%) | 22/30 | 6/50 | — (text only) | 9.59 | $0 (local) |
 | local-typed | Yash's critic; saved | 20/80 | 10/19 (53%) | 9/9 | 1/11 | 0.45 | 7.26 | $0 (local) |
 | kev | Kev-0.8B; saved + live | 80/80 | 0/0 | 0/30 | 50/50 | 0.51 | 1.23 | $0 (local) |
+| jev | official Jev 1.13 (API) | 80/80 | 42/54 (78%) | 12/30 | 8/50 | 0.80 | 0.18 | $0.000091 (API) |
 | laya | new | 80/80 | 15/23 (65%) | 8/30 | 35/50 | 0.55 | 0.26 | $0 (local) |
 | qwen8b-logprob | new, qwen3:8b P(yes) | 60/80 | 33/44 (75%) | 11/21 | 6/39 | 0.72 | 6.60 | $0 (local) |
 | evidence_match | new, no model | 80/80 | 48/69 (70%) | 21/30 | 2/50 | 0.63 | 0.00 | $0 (local) |
@@ -105,6 +112,7 @@ Threshold sweep (probability critics): wrong approvals / wrongly rejected
 |---|---:|---:|---:|---:|---:|
 | local-typed | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 | 9 / 1 |
 | kev | 10 / 36 | 3 / 47 | 0 / 49 | 0 / 50 | 0 / 50 |
+| jev | 16 / 2 | 15 / 3 | 13 / 3 | 12 / 8 | 5 / 21 |
 | laya | 25 / 8 | 20 / 11 | 16 / 21 | 8 / 35 | 0 / 49 |
 | qwen8b-logprob | 15 / 6 | 12 / 6 | 12 / 6 | 11 / 6 | 11 / 8 |
 | evidence_match | 21 / 1 | 21 / 2 | 21 / 2 | 21 / 2 | 21 / 2 |

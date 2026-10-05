@@ -18,12 +18,12 @@ from drafts import EXTRA_DIR, gold_answers, load_drafts, normalize
 HERE = Path(__file__).resolve().parent
 THRESHOLDS = (0.5, 0.6, 0.7, 0.8, 0.9)
 # Fixed order and color per critic, so a critic keeps its color across reruns.
-ORDER = ["llm", "local-typed", "kev", "laya", "qwen8b-logprob", "qwen14b", "evidence_match", "consistency"]
-COLORS = {"local-typed": "#2a78d6", "kev": "#eb6834", "laya": "#1baf7a", "qwen8b-logprob": "#eda100",
+ORDER = ["llm", "local-typed", "kev", "jev", "laya", "qwen8b-logprob", "qwen14b", "evidence_match", "consistency"]
+COLORS = {"jev": "#4a3aa7", "local-typed": "#2a78d6", "kev": "#eb6834", "laya": "#1baf7a", "qwen8b-logprob": "#eda100",
           "evidence_match": "#e87ba4", "consistency": "#008300"}
-MARKERS = {"local-typed": "o", "kev": "s", "laya": "^", "qwen8b-logprob": "D", "evidence_match": "v", "consistency": "P"}
+MARKERS = {"jev": "X", "local-typed": "o", "kev": "s", "laya": "^", "qwen8b-logprob": "D", "evidence_match": "v", "consistency": "P"}
 SOURCE = {"llm": "Yash's critic; saved + live", "local-typed": "Yash's critic; saved", "kev": "Kev-0.8B; saved + live",
-          "laya": "new", "evidence_match": "new, no model", "consistency": "new, 3 writer samples",
+          "laya": "new", "jev": "official Jev 1.13 (API)", "evidence_match": "new, no model", "consistency": "new, 3 writer samples",
           "qwen8b-logprob": "new, qwen3:8b P(yes)", "qwen14b": "Yash's LLMCritic, qwen3:14b"}
 
 
@@ -39,6 +39,17 @@ def load_scores():
         rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
         scores[path.stem] = {row["draft_id"]: row for row in rows}
     return dict(sorted(scores.items(), key=lambda kv: ORDER.index(kv[0]) if kv[0] in ORDER else 99))
+
+
+def jev_cost_per_decision():
+    """Mean API cost per settled Jev call, read (read-only) from the run's budget ledger; None if absent."""
+    import sqlite3
+    path = HERE / ".jev-budget.sqlite"
+    if not path.exists():
+        return None
+    with sqlite3.connect(f"file:{path}?mode=ro", uri=True) as db:
+        spent, settled = db.execute("SELECT SUM(charge_nanos), COUNT(*) FROM attempts WHERE settled = 1").fetchone()
+    return spent / 1e9 / settled if settled else None
 
 
 def approves(row, threshold):
@@ -120,6 +131,7 @@ def main(label):
     sets = ["first", "all"] + (["extra", "subset80"] if (EXTRA_DIR / "drafts.jsonl").exists() else [])
     chart_set = "extra" if "extra" in sets else "all"  # the largest set
     gold = gold_answers()
+    jev_cost = jev_cost_per_decision()
     lines = [f"Label: **{label}** ({'exact match' if label == 'strict' else 'exact match or token F1 >= 0.8'}).", ""]
     for which in sets:
         drafts = load_drafts(which)
@@ -138,8 +150,9 @@ def main(label):
                   "|---|---|---:|---:|---:|---:|---:|---:|---:|"]
         for critic, r in results.items():
             auc = f"{r['auroc']:.2f}" if r["auroc"] is not None else "— (text only)"
+            cost = f"${jev_cost:.6f} (API)" if critic == "jev" and jev_cost else "$0 (local)"
             lines.append(f"| {critic} | {SOURCE.get(critic, 'new (critic-bench)')} | {r['n']}/{n} | {r['approval_acc']} "
-                         f"| {r['wrong_ok']} | {r['right_no']} | {auc} | {r['seconds']:.2f} | $0 (local) |")
+                         f"| {r['wrong_ok']} | {r['right_no']} | {auc} | {r['seconds']:.2f} | {cost} |")
         lines += ["", "Threshold sweep (probability critics): wrong approvals / wrongly rejected", "",
                   "| Critic | " + " | ".join(f"@{t}" for t in THRESHOLDS) + " |",
                   "|---|" + "---:|" * len(THRESHOLDS)]

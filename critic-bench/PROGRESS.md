@@ -18,6 +18,7 @@ All code is in `critic-bench/` on the `vedanshi` branch. Full tables: `critic-be
   - **evidence_match**: is the answer literally in the evidence? No model, free.
   - **consistency**: does the writer give the same answer when asked 3 more times?
   - **logprob**: qwen3:8b's probability of "yes" from token logprobs, turning an open LLM into a probability critic.
+  - **Jev**: the official Jev 1.13 API through Yash's client (same questions and 0.8 threshold as his loop), on the same 220 drafts. The API key is read only from the environment.
 - `report.py`: AUROC, wrong approvals, wrong rejections, threshold sweep, reliability chart, confidence intervals.
 - `combos.py`: stop rules that combine critics, with cost.
 - `combine.py`: a learned combination (logistic regression, 5-fold cross-validation).
@@ -29,7 +30,8 @@ Approving every draft is right 57% of the time. A useful critic has to beat that
 | Critic | Right when it approves | Wrong answers approved | Right answers rejected | AUROC | Seconds per decision |
 |---|---:|---:|---:|---:|---:|
 | Current LLM critic (qwen3:8b) | 63% | 59 / 85 | 15 / 115 | — | 10.2 |
-| logprob (qwen3:8b P(yes)) | 65% | 53 / 85 | 18 / 115 | **0.63** | 7.1 |
+| **Jev 1.13 (≥ 0.8, API)** | **71%** | **39 / 85** | 21 / 115 | **0.71** | 0.2 ($0.00009) |
+| logprob (qwen3:8b P(yes)) | 65% | 53 / 85 | 18 / 115 | 0.63 | 7.1 |
 | Laya (≥ 0.8) | 69% | 20 / 85 | 70 / 115 | 0.60 | 0.2 |
 | evidence_match | 63% | 66 / 85 | 4 / 115 | 0.60 | **0** |
 | consistency (all 3 agree) | 62% | 65 / 85 | 8 / 115 | 0.58 | 8.7 |
@@ -42,23 +44,24 @@ AUROC = chance a random right answer scores above a random wrong one (0.5 = coin
 | Stop rule (200 new questions) | Right when it stops | Wrong answers approved | Right answers rejected | Seconds per draft |
 |---|---:|---:|---:|---:|
 | Current LLM critic alone | 63% | 59 | 15 | 10.2 |
-| Gate: evidence_match first, LLM only if it passes | 66% | **50** | 16 | 9.2 (9% fewer LLM calls) |
-| consistency AND evidence_match (no critic model) | **67%** | 52 | **11** | 7.8 |
+| Gate: evidence_match first, LLM only if it passes | 66% | 50 | 16 | 9.2 (9% fewer LLM calls) |
+| consistency AND evidence_match (no critic model) | 67% | 52 | **11** | 7.8 |
+| **Gate: evidence_match first, then Jev ≥ 0.8** | **74%** | **32** | 22 | 0.2 ($0.00008) |
 | Learned combination (cross-validated) | 65% | 56 | 12 | — |
 
-Learned combination AUROC: **0.69**, the best of anything tested (best single critic: 0.63). evidence_match and consistency carry the most weight.
+Learned combination AUROC (without Jev): **0.69**, against 0.63 for the best non-Jev critic. evidence_match and consistency carry the most weight. Jev alone reaches 0.71.
 
 ## What this means
 
 1. **The current LLM critic barely beats approving everything** (63% vs 57%), approves 59 of 85 wrong answers, and costs about 10 s per decision.
 2. **A free check matches it.** evidence_match is as accurate as the LLM critic at zero cost.
 3. **Cheap signals combined beat the current critic.** Requiring the writer to agree with itself and the answer to appear in the evidence gives fewer wrong approvals, fewer wrong rejections, and about 25% less time, with no critic model.
-4. **No single critic is reliable yet** (AUROC ≤ 0.63). The critic is the bottleneck, not the threshold, so tuning the threshold won't help much until a critic has more signal.
-5. **This sets Jev's bar.** To be worth paying for, Jev has to beat a free evidence check and the combined rule.
+4. **Jev clears the bar.** On the same 200 drafts, Jev ranks right above wrong answers better than any other critic (AUROC 0.71, vs 0.63 for logprob and 0.60 for evidence_match), and stopping on its approval is right 71% of the time vs 63% for the current LLM critic, with 39 instead of 59 wrong approvals, at about 0.2 s and $0.00009 per decision instead of 10 s.
+5. **Best rule: the free evidence check, then Jev.** It is right 74% of the time when it stops (95% interval 66–81%), the only rule whose interval doesn't overlap "approve everything" (51–64%). The cost: it rejects more right answers (22 vs 15), which means extra rounds.
 
 ## Caveats
 
-- **Not statistically significant yet.** The improvements are consistent, but the 95% intervals overlap. They need a larger test to confirm.
+- **Mostly not significant yet.** Only the evidence_match + Jev gate has a 95% interval clear of "approve everything"; the free rules' intervals still overlap it. Non-overlap is a rough check, not a formal test.
 - Small samples overstate results: consistency looked better on 60 questions (AUROC 0.61) than on 200 (0.58).
 - Laya's 512-token limit truncates most inputs (19 of 20 on the first set), so it only sees part of the evidence.
 - The logprob critic is very overconfident: 138 of 200 scores are ≥ 0.99.
@@ -67,7 +70,7 @@ Learned combination AUROC: **0.69**, the best of anything tested (best single cr
 
 ## Next steps
 
-- **Score Jev on the same 200 drafts** for a direct comparison with the current critic and the free checks.
-- **Jev inside the gate:** free check first, Jev only when the answer passes (cheaper routing).
+- **Run the loop with the evidence_match + Jev gate as the stop rule**, to measure what its extra rejections cost in rounds and whether revisions fix them.
+- **Add Jev to the learned combination** (`combine.py`).
 - Confirm the combined rule on new dev questions before the team uses it.
 - Possible inputs for the learned stop policy: evidence_match and consistency are cheap signals with real weight.
