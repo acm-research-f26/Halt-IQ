@@ -29,27 +29,26 @@ def load_cache(critic):
 def score(critic, which, limit=None):
     cache = load_cache(critic)
     drafts = load_drafts(which)
-    todo = [d for d in drafts if d["draft_id"] not in cache][:limit]
-    print(f"{critic} on {which}: {len(drafts)} drafts, {len(drafts) - len(todo)} cached, {len(todo)} to score")
-
+    uncached = [d for d in drafts if d["draft_id"] not in cache]
+    todo = uncached[:limit]
+    print(f"{critic} on {which}: {len(drafts)} drafts, {len(drafts) - len(uncached)} cached, {len(todo)} to score")
     SCORES_DIR.mkdir(exist_ok=True)
-    with (SCORES_DIR / f"{critic}.jsonl").open("a", encoding="utf-8") as out:
-        for i, draft in enumerate(todo, 1):
-            start = time.perf_counter()
-            result = CRITICS[critic](draft)
-            seconds = time.perf_counter() - start
-            if isinstance(result, tuple):
-                result, seconds = result
-            if result is None:
-                print(f"  [{i}/{len(todo)}] {draft['draft_id']}: no score available, skipped")
-                continue
-            row = {"critic": critic, "draft_id": draft["draft_id"],
-                   "score": result if isinstance(result, float) else None,
-                   "decision": result if isinstance(result, str) else None,
-                   "seconds": round(seconds, 3)}
+    for i, draft in enumerate(todo, 1):
+        start = time.perf_counter()
+        result = CRITICS[critic](draft)
+        seconds = time.perf_counter() - start
+        if isinstance(result, tuple):
+            result, seconds = result
+        if result is None:
+            print(f"  [{i}/{len(todo)}] {draft['draft_id']}: no score available, skipped")
+            continue
+        row = {"critic": critic, "draft_id": draft["draft_id"],
+               "score": result if isinstance(result, float) else None,
+               "decision": result if isinstance(result, str) else None,
+               "seconds": round(seconds, 3)}
+        with (SCORES_DIR / f"{critic}.jsonl").open("a", encoding="utf-8") as out:  # one append per score
             out.write(json.dumps(row) + "\n")
-            out.flush()
-            print(f"  [{i}/{len(todo)}] {draft['draft_id']} {draft['draft']!r} -> {result}")
+        print(f"  [{i}/{len(todo)}] {draft['draft_id']} {draft['draft']!r} -> {result}", flush=True)
 
 
 if __name__ == "__main__":

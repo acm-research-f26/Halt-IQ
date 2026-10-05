@@ -1,3 +1,4 @@
 __pycache__/
 data-cache/
 *.log
+.jev-budget.sqlite*

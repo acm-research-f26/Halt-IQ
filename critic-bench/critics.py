@@ -59,6 +59,36 @@ def live(arm):
     return judge
 
 
+_jev = None
+
+
+def jev(draft):
+    """Official Jev (TypeSafe API) through Yash's JevCritic/JevClient, with the Sept 28 config:
+    model jev-1.13.0, the same three noul questions, threshold 0.8, $5 budget, 60 s timeout.
+
+    The API key is read only from the TYPESAFE_API_KEY environment variable (by Yash's
+    JevClient); it is never written, printed, or logged here. Spending is tracked in our
+    own ledger, critic-bench/.jev-budget.sqlite (gitignored), not in Yash's repo folder.
+    """
+    global _jev
+    if _jev is None:
+        import json
+        import os
+        from drafts import HERE, RUN_DIR
+        if not os.environ.get("TYPESAFE_API_KEY", "").strip():
+            raise SystemExit("Jev: TYPESAFE_API_KEY is missing from the environment. "
+                             "Run `read -s TYPESAFE_API_KEY && export TYPESAFE_API_KEY` first. Nothing was sent.")
+        from haltiq.budget import BudgetLedger
+        from haltiq.critics import JevCritic
+        from haltiq.providers import JevClient
+        config = json.loads((RUN_DIR / "manifest.json").read_text())["config"]
+        ledger = BudgetLedger(HERE / ".jev-budget.sqlite", limit_usd=config["budget_usd"])
+        _jev = JevCritic(JevClient(model=config["jev_model"], budget=ledger, timeout=min(config["timeout"], 60)),
+                         config["threshold"])
+    review = _jev.review({"question": draft["question"], "evidence": draft["evidence"], "draft": draft["draft"]})
+    return min(review.scores.values()), review.call.latency_ms / 1000  # min of 3 checks = the loop's rule
+
+
 def saved_then_live(arm):
     """Reuse the run's saved decision when there is one; otherwise call the critic live."""
     saved, fresh = reused(arm), live(arm)
@@ -143,4 +173,5 @@ CRITICS = {
     "llm": saved_then_live("llm"),         # qwen3:8b approve/revise
     "local-typed": reused("local-typed"),  # qwen3:8b, 3 self-reported scores (saved only)
     "kev": saved_then_live("openjev"),     # Kev-0.8B via the openjev arm
+    "jev": jev,                            # official Jev 1.13 (paid API; key from the environment only)
 }
