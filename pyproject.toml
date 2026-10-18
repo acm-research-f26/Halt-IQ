@@ -15,6 +15,7 @@ plots = ["matplotlib>=3.8,<4"]
 
 [project.scripts]
 haltiq = "haltiq.cli:main"
+haltiq-study-control = "pc_strands.control:main"
 
 [tool.setuptools]
-packages = ["haltiq"]
+packages = ["haltiq", "pc_strands"]
