@@ -176,11 +176,27 @@ the predeclared `[0.25,6]` temperature bounds and threshold `0.8`. These checks 
 no model loads. They check recorded tensor/weight provenance; the pre-fresh runtime
 qualification separately performs the actual tensor comparison.
 
-The physical-work table currently covers the explicit `--train-run` and selected
-confirmation phases. If a new 120 writer run is selected, the earlier 591-call
-partial source remains a separate physical expense: preserve its audited report
-and receipts. Do not describe the new report's table as a cumulative campaign
-total or silently infer missing historical expense from a proposed plan's counts.
+The physical-work table covers the explicit `--train-run`, an optional explicitly
+selected historical TRAIN source, and selected confirmation phases. With a new
+120 writer source, retain the earlier preparation expense through separate inputs:
+
+```powershell
+--train-run study-runs/train120-original-v4-fixed1 --historical-train-run study-runs/train600-fixed1 --historical-train-segment writer-supervision/train600-background-v2-ram7-q8-v5/segment-1-final
+```
+
+The historical source has its own journal, reconciliation, archive identity and
+wall/idle table. The original 591 completed calls are charged once, separately
+from new 120-run calls; archived cumulative counters are not added again. Questions
+may repeat across real writer executions, but historical questions, references,
+caches and denominators are never pooled into current training or confirmation.
+An archive cannot bind to a different source; do not pass the original600 archive
+as a current120 `--train-segment`. Selecting the same current/historical directory
+twice, copied journals, or overlapping timestamped dispatch identities are rejected.
+Historical missing trajectories remain missing, and an
+incomplete source cannot be relabeled terminal. No source is inferred from plan
+text or copied into a canonical alias to satisfy this option. Preserve the actual
+receipts, and do not describe this phase table as a complete campaign-cost total:
+unprovided setup, baseline or other phases remain separate evidence.
 
 Public sources:
 - https://github.com/strands-labs/strands-decider

@@ -201,6 +201,36 @@ def train_invocation_timings(evidence, train, manifest, archive_dirs):
     return result
 
 
+def train_source_evidence(evidence, train, archives, role="TRAIN"):
+    """Reconcile one physical writer source; never merge different source journals."""
+    manifest = evidence.read(train / "manifest.json", role + " generation manifest") or {}
+    control = evidence.read(train / "control-status.json", role + " resource/control observation") or {}
+    trajectories = evidence.read(train / "trajectories.json", role + " attempted trajectories") or []
+    tasks = evidence.read(train / "tasks-evaluator-only.json", role + " original partition metadata") or []
+    events = evidence.read(train / "requests.jsonl", role + " physical request journal", lines=True) or []
+    journal = journal_counts(events)
+    by_id = {t["id"]: t for t in tasks}
+    ids = manifest.get("frozen", {}).get("task_ids", [])
+    saved = [t["task_id"] for t in trajectories]
+    if (len(by_id) != len(tasks) or len(set(saved)) != len(saved)
+            or set(by_id) != set(ids) or any(q not in ids or q not in by_id for q in saved)):
+        raise ValueError("duplicate or foreign TRAIN trajectory/task identifiers")
+    if manifest.get("status") in TERMINAL and len(saved) != len(ids):
+        raise ValueError("terminal TRAIN source lacks its full planned trajectories")
+    usage = manifest.get("actual_evaluation_usage", {})
+    if (usage.get("completed_requests_including_invalid_outputs") != journal["completed"]
+            or usage.get("unreconciled_requests", journal["pending"]) != journal["pending"]):
+        raise ValueError("TRAIN manifest and physical journal counts differ")
+    return {"manifest": manifest, "control": control, "trajectories": trajectories,
+        "journal": journal, "planned": len(ids),
+        "journal_sha256": evidence.files[evidence.path(train / "requests.jsonl")]["sha256"],
+        "physical_dispatches": {(r["request_id"], timestamp(r["at_utc"]).astimezone(timezone.utc).isoformat())
+            for r in events if r["event"] == "request_started" and r.get("at_utc")},
+        "partitions": Counter(by_id[t["task_id"]].get("partition", "unknown") for t in trajectories),
+        "reconciliation": train_reconciliation(manifest, trajectories, events),
+        "timings": train_invocation_timings(evidence, train, manifest, archives)}
+
+
 def baseline_valid(receipt):
     from pc_strands.train_head import validate_baseline_receipt
     try:
@@ -502,7 +532,8 @@ def section(title, paragraphs=(), headers=(), rows=()):
     return {"title": title, "paragraphs": list(paragraphs), "headers": list(headers), "rows": list(rows)}
 
 
-def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=None, campaign_run=None, train_segments=()):
+def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=None, campaign_run=None,
+                   train_segments=(), historical_train_run=None, historical_train_segments=()):
     if fresh_n not in (0, 20, 50, 100):
         raise ValueError("explicit fresh N must be0,20,50 or100")
     as_of = timestamp(as_of).isoformat()
@@ -515,32 +546,29 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     train = evidence.path(train_run)
     if paths["train_source"] is not None and train != paths["train_source"]:
         raise ValueError("explicit TRAIN source differs from reviewed campaign cache source")
-    manifest = evidence.read(train / "manifest.json", "TRAIN generation manifest") or {}
-    train_control = evidence.read(train / "control-status.json", "last TRAIN resource/control observation") or {}
-    trajectories = evidence.read(train / "trajectories.json", "TRAIN attempted trajectories") or []
-    tasks = evidence.read(train / "tasks-evaluator-only.json", "TRAIN original partition metadata") or []
-    train_events = evidence.read(train / "requests.jsonl", "TRAIN physical request journal", lines=True) or []
-    journal = journal_counts(train_events)
-    by_id = {t["id"]: t for t in tasks}
-    planned_ids = manifest.get("frozen", {}).get("task_ids", [])
-    trajectory_ids = [t["task_id"] for t in trajectories]
-    if (len(by_id) != len(tasks) or len(set(trajectory_ids)) != len(trajectory_ids)
-            or any(q not in planned_ids or q not in by_id for q in trajectory_ids)):
-        raise ValueError("duplicate or foreign TRAIN trajectory/task identifiers")
-    physical = manifest.get("actual_evaluation_usage", {})
-    if (physical.get("completed_requests_including_invalid_outputs") != journal["completed"]
-            or physical.get("unreconciled_requests", journal["pending"]) != journal["pending"]):
-        raise ValueError("TRAIN manifest and physical journal counts differ")
-    partitions = Counter(by_id.get(t["task_id"], {}).get("partition", "unknown") for t in trajectories)
-    planned = len(manifest.get("frozen", {}).get("task_ids", []))
-    reconciliation = train_reconciliation(manifest, trajectories, train_events)
-    timings = train_invocation_timings(evidence, train, manifest, train_segments)
+    current = train_source_evidence(evidence, train, train_segments)
+    manifest, train_control, trajectories = current["manifest"], current["control"], current["trajectories"]
+    journal, partitions, planned = current["journal"], current["partitions"], current["planned"]
+    reconciliation, timings = current["reconciliation"], current["timings"]
+    if historical_train_segments and not historical_train_run:
+        raise ValueError("historical TRAIN segments require an explicit historical source")
+    historical_path = evidence.path(historical_train_run) if historical_train_run else None
+    if historical_path == train:
+        raise ValueError("historical TRAIN source duplicates the current physical source")
+    historical = (train_source_evidence(evidence, historical_path, historical_train_segments, "Historical TRAIN")
+                  if historical_path else None)
+    if historical and (current["physical_dispatches"] & historical["physical_dispatches"]
+            or (current["journal"]["started"] and current["journal_sha256"] == historical["journal_sha256"])):
+        raise ValueError("historical TRAIN evidence repeats current physical dispatches")
     baseline = evidence.read(paths["baseline"], "untouched real-forward gate") if paths["baseline"] else None
     proof = evidence.read(paths["trained"] / "training-proof.json", "actual trained-head proof") if paths["trained"] else None
     gate, trained = baseline_valid(baseline), training_valid(proof)
     warnings, validation_errors = [], []
     if reconciliation["completed_calls_without_saved_round"]:
         warnings.append(f"{reconciliation['completed_calls_without_saved_round']} completed TRAIN provider call(s) have no saved trajectory round. Their physical work is charged; they are not invented scored drafts.")
+    if historical:
+        saved_missing = historical["reconciliation"]["completed_calls_without_saved_round"]
+        warnings.append(f"Historical TRAIN preparation is a separate physical source: {historical['journal']['completed']} completed calls; {saved_missing} completed call(s) without a saved round. Its questions, caches and denominator are not pooled with the selected TRAIN source.")
     if baseline:
         released_hash = evidence.record_file(paths["released"] / "head.safetensors", "released untouched head weights") if paths["released"] else None
         if released_hash != baseline.get("checkpoint_head_sha256"):
@@ -755,6 +783,8 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
             number(usage.get("reported_request_seconds", usage.get("encoding_seconds"))), number(usage.get("hosted_cost_usd"), 6)])
     if manifest.get("actual_evaluation_usage"):
         add_usage("TRAIN writer", manifest["actual_evaluation_usage"])
+    if historical and historical["manifest"].get("actual_evaluation_usage"):
+        add_usage("Historical TRAIN preparation", historical["manifest"]["actual_evaluation_usage"])
     if paired:
         for key in ("writer_generation_once", "real_encoder_features_once", "untuned_head_scoring", "tuned_head_scoring"):
             if paired.get("physical_evaluation_usage", {}).get(key):
@@ -770,16 +800,29 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         f"TRAIN invocation wall={number(manifest.get('this_invocation_wall_seconds'))}s; intentional idle={number(manifest.get('this_invocation_intentional_idle_seconds'))}s. Resumed invocations must not be confused with cumulative journal usage.",
         "Local hosted API cost of $0 leaves hardware/electricity unpriced. Counterfactual policy prefixes are not additional physical API calls or demonstrated deployment savings. Missing usage stays unknown or a stated lower bound, never fabricated zero. The historical Jev development PDF is a separate cohort/profile and is preserved unchanged.",
     ], ["Phase", "Calls/forwards", "Input tokens", "Output tokens", "Model seconds", "Hosted USD"], usage_rows))
-    if timings:
+    if historical:
+        old = historical["reconciliation"]
+        sections.append(section("Historical TRAIN preparation coverage", [
+            "This explicitly selected earlier source contributes physical preparation expense only. Its questions, trajectories, references, feature caches and planned denominator are not added to the selected training cohort or confirmation quality. Repeated questions in a new writer run still incur new physical calls.",
+            "Historical cumulative journal usage is charged once. Its archived cumulative counters supply timing provenance and are not additional calls/tokens. These rows remain a partial accounting of the campaign, with hardware/electricity and unprovided phases unpriced.",
+        ], ["Source state", "Planned", "Saved", "Physical calls", "Missing", "Completed without saved round"], [[
+            historical["manifest"].get("status", "not recorded"), str(old["planned_questions"]),
+            str(old["saved_trajectories"]), str(historical["journal"]["completed"]),
+            str(old["missing_trajectories"]), str(old["completed_calls_without_saved_round"])]]))
+    timing_sources = [("TRAIN invocation timing", timings, train_segments),
+        ("Historical TRAIN invocation timing", historical["timings"] if historical else [], historical_train_segments)]
+    for timing_title, source_timings, source_archives in timing_sources:
+        if not source_timings:
+            continue
         rows = [[f"Invocation {t['invocation']} ({'archived' if t['archived'] else 'current'})",
             number(t["wall_seconds"]), number(t["intentional_idle_seconds"]),
             f"+{t['additional_physical_calls']} since prior snapshot" if t["additional_physical_calls"] is not None else f"{t['cumulative_physical_calls']} cumulative; increment not isolated",
-            t["finish_before_unload_utc"]] for t in timings]
-        if train_segments:
-            rows.append(["Sum of selected invocations", number(sum(t["wall_seconds"] for t in timings)),
-                number(sum(t["intentional_idle_seconds"] for t in timings)),
-                f"{timings[-1]['cumulative_physical_calls']} final cumulative", "excludes gaps / unload"])
-        sections.append(section("TRAIN invocation timing", [
+            t["finish_before_unload_utc"]] for t in source_timings]
+        if source_archives:
+            rows.append(["Sum of selected invocations", number(sum(t["wall_seconds"] for t in source_timings)),
+                number(sum(t["intentional_idle_seconds"] for t in source_timings)),
+                f"{source_timings[-1]['cumulative_physical_calls']} final cumulative", "excludes gaps / unload"])
+        sections.append(section(timing_title, [
             "Archived invocations are included only when explicitly selected, receipt-hash verified and journal-prefix matched to the current source. Their worker intervals must not overlap. Starts are derived from recorded finish minus measured invocation wall time; source started_at may retain the first invocation timestamp after resume.",
             "Wall/idle sums exclude the gap between invocations, wrapper startup and final unload/cleanup. Physical token/call usage above is already cumulative and is counted once. The first selected snapshot has no proven prior counter; later increments are differences between selected snapshots, not additional expenses to add to the cumulative total. Without selected archives, only the latest invocation is shown.",
         ], ["Invocation", "Worker wall s", "Intentional idle s", "Physical call counter", "Recorded finish UTC"], rows))
@@ -797,6 +840,11 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         "validation": {"untouched_gate": gate, "trained_head_proof": trained,
                        "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete},
         "train_reconciliation": reconciliation, "train_invocations": timings,
+        "historical_train_expense": ({"run": str(historical_path),
+            "status": historical["manifest"].get("status"),
+            "actual_evaluation_usage": historical["manifest"].get("actual_evaluation_usage", {}),
+            "reconciliation": historical["reconciliation"], "invocations": historical["timings"]}
+            if historical else None),
         "warnings": warnings, "validation_errors": validation_errors}
 
 
@@ -903,9 +951,12 @@ def main():
     parser.add_argument("--cohort-manifest")
     parser.add_argument("--campaign-run")
     parser.add_argument("--train-segment", action="append", default=[], help="Explicit archived TRAIN segment directory, in chronological order; receipt required")
+    parser.add_argument("--historical-train-run", help="One explicit earlier TRAIN writer source, physical expense only; never merged into the selected cohort")
+    parser.add_argument("--historical-train-segment", action="append", default=[], help="Explicit archive of that historical source, in chronological order; receipt required")
     args = parser.parse_args()
     report = collect_report(args.input_root, args.train_run, args.fresh_n, args.as_of,
-        cohort_manifest=args.cohort_manifest, campaign_run=args.campaign_run, train_segments=args.train_segment)
+        cohort_manifest=args.cohort_manifest, campaign_run=args.campaign_run, train_segments=args.train_segment,
+        historical_train_run=args.historical_train_run, historical_train_segments=args.historical_train_segment)
     provenance = write_report(report, args.output_dir)
     print(json.dumps({"status": report["status"], "pdf_pages": provenance["pdf_pages"], "output": str(args.output_dir)}))
 

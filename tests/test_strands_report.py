@@ -232,6 +232,38 @@ def segment_fixture(root):
     return train, archive, seal
 
 
+def historical_expense_fixture(root):
+    """Distinct synthetic writer executions, deliberately sharing question IDs."""
+    current, historical = root / "study-runs/current120", root / "study-runs/historical600"
+    for directory, planned, saved, physical in ((current, 120, 120, 120), (historical, 600, 590, 591)):
+        ids = [f"train{i}" for i in range(planned)]
+        write(directory / "tasks-evaluator-only.json", [{"id": qid, "partition": "fit"}
+            for qid in ids])
+        write(directory / "trajectories.json", [{"task_id": qid, "status": "completed",
+            "rounds": [{"round": 1}]} for qid in ids[:saved]])
+        events = [{"event": event, "request_id": f"{qid}|fixed|writer|1",
+            "at_utc": "2026-10-18T23:00:00+00:00" if planned == 120 else "2026-10-18T21:00:00+00:00"}
+            for qid in ids[:physical] for event in ("request_started", "request_completed")]
+        (directory / "requests.jsonl").write_text("".join(json.dumps(e)+"\n" for e in events))
+        write(directory / "manifest.json", {"status": "completed" if planned == saved else "interrupted",
+            "frozen": {"task_ids": ids, "config": {"dataset_sha256": f"synthetic-{planned}"}},
+            "finished_at_utc": "2026-10-18T19:00:00-05:00" if planned == 120 else "2026-10-18T17:20:00-05:00",
+            "this_invocation_wall_seconds": 20., "this_invocation_intentional_idle_seconds": 8.,
+            "actual_evaluation_usage": {"completed_requests_including_invalid_outputs": physical,
+                "unreconciled_requests": 0, "reported_physical_input_tokens": physical*10,
+                "reported_output_tokens": physical, "hosted_cost_usd": 0}})
+    archive = root / "archive/historical-first328"
+    previous = json.loads((historical / "manifest.json").read_text())
+    previous.update(finished_at_utc="2026-10-18T17:00:00-05:00",
+        this_invocation_wall_seconds=10., this_invocation_intentional_idle_seconds=5.)
+    previous["actual_evaluation_usage"]["completed_requests_including_invalid_outputs"] = 328
+    write(archive / "manifest.json", previous)
+    (archive / "requests.jsonl").write_text("".join((historical / "requests.jsonl").read_text().splitlines(keepends=True)[:656]))
+    write(archive / "snapshot-receipt.json", {"source": str(historical), "files_sha256":
+        {name: report.digest(archive / name) for name in ("manifest.json", "requests.jsonl")}})
+    return current, historical, archive
+
+
 class ReportTests(unittest.TestCase):
     def test_partial_preserves_denominator_and_omits_quality_and_private_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -526,6 +558,68 @@ class ReportTests(unittest.TestCase):
             evidence.record_file(root / "input.json", "before parse")
             write(root / "input.json", {"x": 2})
             with self.assertRaisesRegex(ValueError, "changed before parsing"): evidence.read("input.json", "parse")
+
+    def test_historical591_and_current120_are_separate_physical_expenses_once(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); current, historical, archive = historical_expense_fixture(root)
+            result = report.collect_report(root, current, 0, AS_OF,
+                historical_train_run=historical, historical_train_segments=[archive])
+            self.assertEqual(result["train_reconciliation"]["planned_questions"], 120)
+            self.assertEqual(result["train_reconciliation"]["saved_trajectories"], 120)
+            old = result["historical_train_expense"]
+            self.assertEqual(old["reconciliation"]["planned_questions"], 600)
+            self.assertEqual(old["reconciliation"]["saved_trajectories"], 590)
+            self.assertEqual(old["reconciliation"]["completed_calls_without_saved_round"], 1)
+            self.assertEqual(old["actual_evaluation_usage"]["completed_requests_including_invalid_outputs"], 591)
+            usage = next(s for s in result["sections"] if s["title"].startswith("6."))["rows"]
+            self.assertEqual([(r[0], r[1]) for r in usage], [("TRAIN writer", "120"), ("Historical TRAIN preparation", "591")])
+            self.assertEqual([v["additional_physical_calls"] for v in old["invocations"]], [None, 263])
+            self.assertEqual(sum(v["wall_seconds"] for v in old["invocations"]), 30.)
+            self.assertTrue(any(s["title"] == "Historical TRAIN invocation timing" for s in result["sections"]))
+            self.assertNotIn("EM %", report.plain_text(result))
+            self.assertNotIn(str(root), report.plain_text(result))
+
+    def test_historical_archive_cannot_be_cross_bound_to_current_source(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); current, historical, archive = historical_expense_fixture(root)
+            with self.assertRaisesRegex(ValueError, "receipt does not bind this source"):
+                report.collect_report(root, current, 0, AS_OF, train_segments=[archive], historical_train_run=historical)
+
+    def test_historical_source_cannot_duplicate_current_or_omit_its_source_argument(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); current, _, archive = historical_expense_fixture(root)
+            with self.assertRaisesRegex(ValueError, "duplicates the current physical source"):
+                report.collect_report(root, current, 0, AS_OF, historical_train_run=current)
+            with self.assertRaisesRegex(ValueError, "segments require an explicit historical source"):
+                report.collect_report(root, current, 0, AS_OF, historical_train_segments=[archive])
+
+    def test_copied_or_partly_overlapping_physical_sources_cannot_be_charged_twice(self):
+        for overlap in ("whole", "one-dispatch"):
+            with self.subTest(overlap=overlap), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); current, historical, _ = historical_expense_fixture(root)
+                if overlap == "whole":
+                    historical = root / "copied-current"
+                    shutil.copytree(current, historical)
+                else:
+                    path = historical / "requests.jsonl"
+                    rows = [json.loads(v) for v in path.read_text().splitlines()]
+                    rows[0]["at_utc"] = "2026-10-18T18:00:00-05:00"  # Same physical UTC instant.
+                    path.write_text("".join(json.dumps(v)+"\n" for v in rows))
+                with self.assertRaisesRegex(ValueError, "repeats current physical dispatches"):
+                    report.collect_report(root, current, 0, AS_OF, historical_train_run=historical)
+
+    def test_partial_historical_source_cannot_be_relabelled_terminal_or_hide_bad_journal(self):
+        for change in ("terminal", "journal"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); current, historical, _ = historical_expense_fixture(root)
+                if change == "terminal":
+                    path = historical / "manifest.json"; value = json.loads(path.read_text())
+                    value["status"] = "completed"; write(path, value)
+                else:
+                    with (historical / "requests.jsonl").open("a") as stream:
+                        stream.write(json.dumps({"event": "request_completed", "request_id": "foreign|fixed|writer|1"})+"\n")
+                with self.assertRaises(ValueError):
+                    report.collect_report(root, current, 0, AS_OF, historical_train_run=historical)
 
 
 if __name__ == "__main__": unittest.main()
