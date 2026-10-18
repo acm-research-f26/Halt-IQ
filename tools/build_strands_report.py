@@ -282,12 +282,143 @@ def checkpoint_fingerprint(evidence, directory):
     return fingerprint({str(p.relative_to(path)): evidence.record_file(p, "current checkpoint identity") for p in files})
 
 
-def calibration_valid(evidence, kind, excluded):
-    directory = "checkpoints/released-calibrated" if kind == "untuned" else "checkpoints/head-trained"
-    fit = evidence.read(f"study-runs/calibration-{kind}/temperature-fit.json", f"{kind} temperature fit")
-    proof = evidence.read(f"{directory}/calibration-proof.json", f"{kind} checkpoint calibration proof")
-    config = evidence.read(f"{directory}/strands_decider_config.json", f"{kind} calibrated config")
-    weight = evidence.record_file(f"{directory}/head.safetensors", f"{kind} calibrated head weights")
+def artifact_paths(evidence, plan, n, campaign_dir=None):
+    """Resolve declared roles; an explicit plan never falls back to old artifacts."""
+    defaults = {
+        "baseline": "study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json",
+        "released": "models/decider", "trained": "checkpoints/head-trained",
+        "untuned": "checkpoints/released-calibrated", "train_source": None,
+        "freeze": "fresh-N-freeze.json",
+        **{f"cache_{p}": f"feature-caches/{p}.jsonl" for p in ("fit", "tune", "calibration")},
+        **{f"calibration_{k}": f"study-runs/calibration-{k}/temperature-fit.json" for k in ("untuned", "trained")},
+    }
+    if plan is None:
+        return {k: evidence.path(v) if v is not None else None for k, v in defaults.items()}
+    roles = {k: None for k in defaults}
+
+    def path(value):
+        if campaign_dir:
+            value = value.replace("{run}", str(evidence.path(campaign_dir)))
+        if "{" in value or "}" in value:
+            raise ValueError("unresolved campaign artifact path")
+        return evidence.path(value)
+
+    def arg(step, flag, required=True):
+        argv = step.get("argv", [])
+        places = [i for i, value in enumerate(argv) if value == flag]
+        if not places and not required:
+            return None
+        if len(places) != 1 or places[0] + 1 >= len(argv):
+            raise ValueError(f"exactly one {flag} required for report artifact role")
+        return argv[places[0] + 1]
+
+    def module(step, name, mode=None):
+        argv = step.get("argv", [])
+        return any(argv[i:i+2] == ["-m", name] and (mode is None or argv[i+2:i+3] == [mode])
+                   for i in range(len(argv)))
+
+    def put(role, value):
+        value = path(value)
+        if roles.get(role) is not None and roles[role] != value:
+            raise ValueError(f"conflicting reviewed campaign paths for {role}")
+        roles[role] = value
+
+    steps = plan.get("steps", [])
+    for step in steps:
+        if module(step, "pc_strands.train_head"):
+            for role, flag in (("trained", "--output"), ("released", "--checkpoint"),
+                               ("baseline", "--baseline-receipt"), ("cache_fit", "--fit-cache"),
+                               ("cache_tune", "--tune-cache")):
+                put(role, arg(step, flag))
+        elif module(step, "pc_strands.evaluate", "replay") and arg(step, "--phase", False) == "untuned_pretraining":
+            put("baseline", str(path(arg(step, "--output")) / "untuned-pretraining-receipt.json"))
+            put("released", arg(step, "--checkpoint-dir"))
+        elif module(step, "pc_strands.decider", "cache"):
+            partition = arg(step, "--partition", False)
+            if partition in ("fit", "tune", "calibration"):
+                put("cache_" + partition, arg(step, "--output"))
+                put("train_source", arg(step, "--trajectory-dir"))
+    for step in steps:
+        if module(step, "pc_strands.calibrate"):
+            checkpoint = path(arg(step, "--checkpoint"))
+            kind = "trained" if checkpoint == roles["trained"] else "untuned"
+            put(kind, str(checkpoint))
+            put("calibration_" + kind, arg(step, "--output"))
+    if roles["untuned"] is not None:
+        copied = {roles["untuned"] / name for name in ("head.safetensors", "training-proof.json")}
+        owners = [s for s in steps if copied <= {path(o["path"]) for o in s.get("outputs", [])}]
+        if len(owners) > 1:
+            raise ValueError("ambiguous reviewed control-copy output owner")
+        roles["control_copy_stage"] = owners[0]["id"] if owners else None
+    roles["freeze"] = path(plan.get("operator_fresh_freeze_path", "fresh-N-freeze.json"))
+    if not n:
+        return roles
+    options = [o for o in plan.get("fresh_options", []) if o.get("n") == n]
+    if len(options) != 1:
+        raise ValueError("exactly one reviewed fresh option required")
+    option = options[0]
+    put("dataset", option["dataset"])
+    comparisons = [s for s in option.get("steps", []) if module(s, "pc_strands.compare")]
+    if len(comparisons) != 1:
+        raise ValueError("one explicit canonical comparison stage required")
+    comparison = comparisons[0]
+    for role, flag in (("fresh_untuned", "--untuned"), ("fresh_trained", "--tuned"),
+                       ("fresh_source", "--trajectory-dir"), ("fresh_cache", "--feature-cache"),
+                       ("fresh_analysis", "--output")):
+        put(role, arg(comparison, flag))
+    generators = [s for s in option.get("steps", []) if module(s, "pc_strands.evaluate", "generate")
+                  and path(arg(s, "--output")) == roles["fresh_source"]]
+    encoders = [s for s in option.get("steps", []) if module(s, "pc_strands.decider", "cache")
+                and path(arg(s, "--output")) == roles["fresh_cache"]]
+    if (len(generators) != 1 or len(encoders) != 1
+            or path(arg(generators[0], "--dataset")) != roles["dataset"]
+            or path(arg(encoders[0], "--trajectory-dir")) != roles["fresh_source"]):
+        raise ValueError("fresh generator/encoder roles differ from reviewed comparison")
+    for kind in ("untuned", "trained"):
+        matches = [s for s in option.get("steps", []) if module(s, "pc_strands.evaluate", "head-replay")
+                   and path(arg(s, "--output")) == roles["fresh_" + kind]]
+        if len(matches) != 1 or roles[kind] is None:
+            raise ValueError(f"explicit {kind} head/calibration report roles required")
+        step = matches[0]
+        for flag, role in (("--checkpoint-dir", kind), ("--feature-cache", "fresh_cache"),
+                           ("--trajectory-dir", "fresh_source"), ("--dataset", "dataset")):
+            if path(arg(step, flag)) != roles[role]:
+                raise ValueError("fresh replay paths differ from reviewed comparison/checkpoints")
+        roles[kind + "_policy"] = arg(step, "--policy-name")
+    return roles
+
+
+def control_valid(evidence, paths, trained, baseline, campaign):
+    """Receipt tensor identity permits honest safetensors reserialization."""
+    if not trained or not baseline or any(paths.get(k) is None for k in ("released", "trained", "untuned")):
+        return False
+    proof = evidence.read(paths["untuned"] / "training-proof.json", "unchanged control tensor proof") or {}
+    stage = (campaign or {}).get("stages", {}).get(paths.get("control_copy_stage"), {})
+    captured = {evidence.path(path): value for path, value in stage.get("output_sha256", {}).items()}
+    if stage.get("status") != "completed":
+        return False
+    for name in ("head.safetensors", "training-proof.json"):
+        actual = evidence.record_file(paths["untuned"] / name, "pre-calibration control-copy output")
+        if not actual or actual != captured.get(paths["untuned"] / name):
+            return False
+    original = evidence.record_file(paths["released"] / "head.safetensors", "released control source head")
+    adapters = [evidence.record_file(paths[k] / "lora/adapter_model.safetensors", k + " frozen adapter identity")
+                for k in ("released", "trained", "untuned")]
+    return bool(proof.get("status") == "untuned_control_copy" and proof.get("weights_updated") is False
+        and proof.get("head_tensor_sha256")
+        and proof["head_tensor_sha256"] == trained.get("initial_head_tensor_sha256")
+        and original and original == trained.get("original_head_file_sha256") == baseline.get("checkpoint_head_sha256")
+        and all(value and value == trained.get("frozen_adapter_sha256") for value in adapters))
+
+
+def calibration_valid(evidence, kind, excluded, paths):
+    directory, fit_path = paths.get(kind), paths.get("calibration_" + kind)
+    if directory is None or fit_path is None:
+        return False
+    fit = evidence.read(fit_path, f"{kind} temperature fit")
+    proof = evidence.read(directory / "calibration-proof.json", f"{kind} checkpoint calibration proof")
+    config = evidence.read(directory / "strands_decider_config.json", f"{kind} calibrated config")
+    weight = evidence.record_file(directory / "head.safetensors", f"{kind} calibrated head weights")
     ids = (fit or {}).get("question_ids", [])
     return bool(fit and fit == proof and fit.get("status") == "fitted_on_calibration_only_not_test"
         and ids and len(set(ids)) == len(ids) and not set(ids) & set(excluded)
@@ -296,13 +427,13 @@ def calibration_valid(evidence, kind, excluded):
         and config.get("temperature_by_kind", {}).get("noul") == fit.get("temperature"))
 
 
-def confirmation(evidence, n, as_of, campaign_dir, campaign, plan):
+def confirmation(evidence, n, as_of, campaign_dir, campaign, plan, paths, baseline, trained):
     """Verify cohort timing and independently recompute the canonical pure join."""
     from pc_strands.compare import compare_runs
     from pc_strands.data import load_tasks
     if not campaign_dir or not campaign or not plan:
         raise ValueError("positive fresh N requires an explicit frozen campaign and plan")
-    freeze = evidence.read("fresh-N-freeze.json", "answer-blind fresh cohort freeze")
+    freeze = evidence.read(paths["freeze"], "answer-blind fresh cohort freeze")
     if not freeze or (freeze.get("n") != n or freeze.get("answer_blind") is not True
             or freeze.get("fresh_scoring_started") is not False or freeze.get("basis") != "measured_throughput_and_resources"):
         raise ValueError("positive fresh N requires its explicit matching answer-blind pre-score freeze")
@@ -310,11 +441,11 @@ def confirmation(evidence, n, as_of, campaign_dir, campaign, plan):
     if freeze.get("plan_sha256") != plan_hash or campaign.get("plan_sha256") != plan_hash:
         raise ValueError("campaign/fresh freeze plan identity differs")
     copied = evidence.record_file(evidence.path(campaign_dir) / "fresh-freeze.json", "campaign copied pre-score freeze")
-    operator_hash = digest(evidence.path("fresh-N-freeze.json"))
+    operator_hash = digest(paths["freeze"])
     if copied != operator_hash or campaign.get("fresh_freeze_sha256") != copied or campaign.get("fresh_n") != n:
         raise ValueError("campaign did not adopt the exact operator fresh freeze")
     options = [o for o in plan.get("fresh_options", []) if o.get("n") == n]
-    dataset = evidence.path(f"candidate-panels/fresh{n}/tasks.jsonl")
+    dataset = paths["dataset"]
     dataset_hash = evidence.record_file(dataset, "exact frozen confirmation dataset")
     if (len(options) != 1 or evidence.path(options[0]["dataset"]) != dataset
             or dataset_hash != freeze.get("dataset_sha256") or options[0].get("dataset_sha256", dataset_hash) != dataset_hash):
@@ -322,12 +453,12 @@ def confirmation(evidence, n, as_of, campaign_dir, campaign, plan):
     ids = [t.id for t in load_tasks(dataset)]
     if len(ids) != n:
         raise ValueError("actual fresh cohort differs from explicit N")
-    source = evidence.path(f"study-runs/fresh{n}-fixed10")
+    source = paths["fresh_source"]
     generation = evidence.read(source / "manifest.json", "fresh generation start and cleanup")
     frozen_at = timestamp(freeze["frozen_at"])
     if frozen_at > timestamp(as_of) or frozen_at > timestamp(generation["started_at_utc"]):
         raise ValueError("fresh freeze must precede fresh generation and report checkpoint")
-    raw = evidence.read(f"study-runs/fresh{n}-paired-analysis/paired-analysis.json", "terminal paired confirmation analysis")
+    raw = evidence.read(paths["fresh_analysis"] / "paired-analysis.json", "terminal paired confirmation analysis")
     if not raw:
         return None
     validate_comparison(raw, n)
@@ -342,23 +473,28 @@ def confirmation(evidence, n, as_of, campaign_dir, campaign, plan):
     planned_retain = any("--retain-best" in s.get("argv", []) for s in options[0].get("steps", []))
     if retain != planned_retain:
         raise ValueError("secondary analysis differs from frozen plan")
-    actual = compare_runs(evidence.path(f"study-runs/fresh{n}-untuned"),
-        evidence.path(f"study-runs/fresh{n}-trained"), source,
-        evidence.path(f"feature-caches/fresh{n}-allrounds.jsonl"), retain_best=retain)
+    actual = compare_runs(paths["fresh_untuned"], paths["fresh_trained"], source,
+        paths["fresh_cache"], retain_best=retain)
     for key, value in actual.items():
         if key not in {"created_at_utc", "input_sha256"} and raw.get(key) != value:
             raise ValueError(f"published comparison differs from authoritative pure comparison: {key}")
     for path, expected in actual["input_sha256"].items():
         if evidence.record_file(path, "independently rejoined canonical input") != expected:
             raise ValueError("canonical comparison input changed")
-    for name, directory in (("strands-untuned", "checkpoints/released-calibrated"),
-                            ("strands-trained", "checkpoints/head-trained")):
+    for kind in ("untuned", "trained"):
+        name, directory = paths[kind + "_policy"], paths[kind]
         if raw.get("model_fingerprints", {}).get(name) != checkpoint_fingerprint(evidence, directory):
             raise ValueError("comparison does not bind current primary checkpoints")
-    proof = evidence.read("checkpoints/head-trained/training-proof.json", "actual trained-head proof") or {}
-    excluded = ids + proof.get("fit_question_ids", []) + proof.get("tune_question_ids", [])
-    if not all(calibration_valid(evidence, kind, excluded) for kind in ("untuned", "trained")):
+    if not control_valid(evidence, paths, trained, baseline, campaign):
+        raise ValueError("unchanged control tensor/adapter/source-head linkage is not verified")
+    excluded = ids + trained.get("fit_question_ids", []) + trained.get("tune_question_ids", [])
+    if not all(calibration_valid(evidence, kind, excluded, paths) for kind in ("untuned", "trained")):
         raise ValueError("both current primary heads require disjoint hash-bound calibration")
+    fits = [evidence.read(paths["calibration_" + k], k + " shared calibration protocol") for k in ("untuned", "trained")]
+    if (fits[0].get("question_ids") != fits[1].get("question_ids")
+            or any(f.get("bounds") != [.25, 6.] or f.get("objective") != "calibration-question NLL"
+                   or any(f.get(phase, {}).get("threshold") != .8 for phase in ("before", "after")) for f in fits)):
+        raise ValueError("untouched/trained calibration IDs or predeclared protocol differ")
     return raw
 
 
@@ -371,7 +507,14 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         raise ValueError("explicit fresh N must be0,20,50 or100")
     as_of = timestamp(as_of).isoformat()
     evidence = Evidence(input_root)
+    campaign = evidence.read(evidence.path(campaign_run) / "campaign.json", "explicit campaign state") if campaign_run else None
+    plan = evidence.read(evidence.path(campaign_run) / "plan.json", "explicit frozen campaign plan") if campaign_run else None
+    if campaign_run and plan is None:
+        raise ValueError("explicit campaign plan is missing; canonical artifacts cannot supply its roles")
+    paths = artifact_paths(evidence, plan, 0, campaign_run)
     train = evidence.path(train_run)
+    if paths["train_source"] is not None and train != paths["train_source"]:
+        raise ValueError("explicit TRAIN source differs from reviewed campaign cache source")
     manifest = evidence.read(train / "manifest.json", "TRAIN generation manifest") or {}
     train_control = evidence.read(train / "control-status.json", "last TRAIN resource/control observation") or {}
     trajectories = evidence.read(train / "trajectories.json", "TRAIN attempted trajectories") or []
@@ -392,19 +535,19 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     planned = len(manifest.get("frozen", {}).get("task_ids", []))
     reconciliation = train_reconciliation(manifest, trajectories, train_events)
     timings = train_invocation_timings(evidence, train, manifest, train_segments)
-    baseline = evidence.read("study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json", "untouched real-forward gate")
-    proof = evidence.read("checkpoints/head-trained/training-proof.json", "actual trained-head proof")
+    baseline = evidence.read(paths["baseline"], "untouched real-forward gate") if paths["baseline"] else None
+    proof = evidence.read(paths["trained"] / "training-proof.json", "actual trained-head proof") if paths["trained"] else None
     gate, trained = baseline_valid(baseline), training_valid(proof)
     warnings, validation_errors = [], []
     if reconciliation["completed_calls_without_saved_round"]:
         warnings.append(f"{reconciliation['completed_calls_without_saved_round']} completed TRAIN provider call(s) have no saved trajectory round. Their physical work is charged; they are not invented scored drafts.")
     if baseline:
-        released_hash = evidence.record_file("models/decider/head.safetensors", "released untouched head weights")
+        released_hash = evidence.record_file(paths["released"] / "head.safetensors", "released untouched head weights") if paths["released"] else None
         if released_hash != baseline.get("checkpoint_head_sha256"):
             gate = False
             warnings.append("Untouched gate does not bind the actual released head.")
         for name, key in (("manifest.json", "manifest_sha256"), ("episodes.json", "episodes_sha256")):
-            path = evidence.path("study-runs/untuned-dev20-decisions") / name
+            path = paths["baseline"].parent / name
             evidence.read(path, "untouched receipt bound result")
             if not path.is_file() or digest(path) != baseline.get(key):
                 gate = False
@@ -413,7 +556,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         if proof.get("original_head_file_sha256") != baseline.get("checkpoint_head_sha256"):
             trained = False
             warnings.append("Training proof and untouched released-head identity differ.")
-        baseline_path = evidence.path("study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json")
+        baseline_path = paths["baseline"]
         if proof.get("baseline_receipt_sha256") != digest(baseline_path):
             trained = False
             warnings.append("Training proof does not bind the supplied untouched gate.")
@@ -422,16 +565,20 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
             trained = False
             warnings.append("Untouched development IDs overlap the training/tuning proof.")
     if proof:
-        head_hash = evidence.record_file("checkpoints/head-trained/head.safetensors", "saved trained pointer weights")
+        head_hash = evidence.record_file(paths["trained"] / "head.safetensors", "saved trained pointer weights")
         if not head_hash or head_hash != proof.get("checkpoint_head_sha256"):
             trained = False
             warnings.append("Actual trained-head file is missing or differs from training proof.")
-        adapter = evidence.record_file("models/decider/lora/adapter_model.safetensors", "released frozen adapter")
+        adapter = evidence.record_file(paths["released"] / "lora/adapter_model.safetensors", "released frozen adapter") if paths["released"] else None
         if not adapter or adapter != proof.get("frozen_adapter_sha256"):
             trained = False
             warnings.append("Training proof does not bind the actual released adapter.")
         for partition in ("fit", "tune"):
-            cache_path = evidence.path(f"feature-caches/{partition}.jsonl")
+            cache_path = paths["cache_" + partition]
+            if cache_path is None:
+                trained = False
+                warnings.append(f"Training proof {partition} cache is not declared by the reviewed plan.")
+                continue
             actual_hash = evidence.record_file(cache_path, f"{partition} training cache")
             manifest_hash = evidence.record_file(str(cache_path)+".manifest.json", f"{partition} training cache manifest")
             if (not actual_hash or actual_hash != proof.get(f"{partition}_cache_sha256")
@@ -441,14 +588,14 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     subset = evidence.read(cohort_manifest, "explicit selected TRAIN cohort") if cohort_manifest else None
     if subset and "PROPOSED" in subset.get("status", ""):
         warnings.append("Supplied TRAIN subset remains proposed; it is not an adopted training result.")
-    campaign = evidence.read(evidence.path(campaign_run) / "campaign.json", "explicit campaign state") if campaign_run else None
-    plan = evidence.read(evidence.path(campaign_run) / "plan.json", "explicit frozen campaign plan") if campaign_run else None
+    control = control_valid(evidence, paths, proof, baseline, campaign)
     paired = None
     if fresh_n:
         if not campaign_run:
             raise ValueError("positive fresh N requires an explicit frozen campaign and plan")
         try:
-            paired = confirmation(evidence, fresh_n, as_of, campaign_run, campaign, plan)
+            paths = artifact_paths(evidence, plan, fresh_n, campaign_run)
+            paired = confirmation(evidence, fresh_n, as_of, campaign_run, campaign, plan, paths, baseline, proof or {})
             if paired and not (gate and trained):
                 raise ValueError("untouched gate and trained-head proof must both be verified")
         except (ValueError, KeyError, TypeError, OSError) as error:
@@ -532,15 +679,17 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         ["Head delta L2 / reload error", f"{number((proof or {}).get('head_delta_l2'), 8)} / {number((proof or {}).get('reload_max_logit_error'), 8)}"],
         ["Selection / elapsed seconds", f"{(proof or {}).get('selection', 'not recorded')} / {number((proof or {}).get('elapsed_seconds'))}"],
         ["Source head / adapter unchanged", f"{(proof or {}).get('source_head_unchanged', 'not recorded')} / {(proof or {}).get('source_adapter_unchanged', 'not recorded')}"],
+        ["Untouched control tensor / adapter linkage", "verified" if control else "not verified"],
         ["Released head SHA256", str((baseline or {}).get("checkpoint_head_sha256", "not recorded"))],
         ["Saved trained head SHA256", str((proof or {}).get("checkpoint_head_sha256", "not recorded"))],
     ]
     calibration_rows = []
     for kind in ("untuned", "trained"):
-        fit = evidence.read(f"study-runs/calibration-{kind}/temperature-fit.json", f"{kind} temperature fit")
+        fit_path = paths.get("calibration_" + kind)
+        fit = evidence.read(fit_path, f"{kind} temperature fit") if fit_path else None
         if fit:
             excluded = set((proof or {}).get("fit_question_ids", [])) | set((proof or {}).get("tune_question_ids", []))
-            if calibration_valid(evidence, kind, excluded):
+            if calibration_valid(evidence, kind, excluded, paths):
                 calibration_rows.append([kind, str(len(fit.get("question_ids", []))), number(fit.get("temperature")),
                     number(fit.get("before", {}).get("nll")), number(fit.get("after", {}).get("nll"))])
             else:
@@ -611,7 +760,8 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
             if paired.get("physical_evaluation_usage", {}).get(key):
                 add_usage(key, paired["physical_evaluation_usage"][key])
     for partition in ("fit", "tune", "calibration"):
-        feature = evidence.read(f"feature-caches/{partition}.jsonl.manifest.json", f"{partition} real encoder coverage")
+        cache_path = paths.get("cache_" + partition)
+        feature = evidence.read(str(cache_path) + ".manifest.json", f"{partition} real encoder coverage") if cache_path else None
         if feature:
             add_usage(f"TRAIN encoder {partition}", feature.get("physical_encoding_usage", {}))
             warnings.append(f"{partition} features: selected={feature.get('selected_questions')}; overflow rows={feature.get('total_overflow_rows')}; unreconciled={feature.get('unreconciled_inferences')}.")
@@ -643,8 +793,9 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     return {"title": "HaltIQ Strands study", "status": status, "as_of": as_of,
         "fresh_n": fresh_n, "train_run": str(train), "sections": sections,
         "input_files": list(evidence.files.values()), "missing_inputs": evidence.missing,
+        "artifact_roles": {k: str(v) if isinstance(v, Path) else v for k, v in paths.items()},
         "validation": {"untouched_gate": gate, "trained_head_proof": trained,
-                       "paired_analysis": bool(paired), "complete_checkpoint": complete},
+                       "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete},
         "train_reconciliation": reconciliation, "train_invocations": timings,
         "warnings": warnings, "validation_errors": validation_errors}
 

@@ -20,7 +20,26 @@ def write(path, value):
     path.write_text(json.dumps(value), encoding="utf-8")
 
 
-def fixture(root, terminal=False):
+def fixture(root, terminal=False, alternate=False, reserialized_control=False):
+    def where(relative):
+        if alternate:
+            replacements = {
+                "checkpoints/head-trained": "checkpoints/train120-original-v4/head-trained",
+                "checkpoints/released-calibrated": "checkpoints/train120-original-v4/released-calibrated",
+                "study-runs/untuned-dev20-decisions": "gates/original20-cap1",
+                "study-runs/calibration-": "study-runs/train120-original-v4-calibration-",
+                "study-runs/fresh20-": "study-runs/fresh20-v4-",
+                "feature-caches/fit.jsonl": "feature-caches/train120-original-v4/fit.jsonl",
+                "feature-caches/tune.jsonl": "feature-caches/train120-original-v4/tune.jsonl",
+                "feature-caches/calibration.jsonl": "feature-caches/train120-original-v4/calibration.jsonl",
+                "feature-caches/fresh20-allrounds.jsonl": "feature-caches/fresh20-v4-allrounds.jsonl",
+                "candidate-panels/fresh20": "prepared/confirmation20",
+            }
+            for original, replacement in replacements.items():
+                if relative.startswith(original):
+                    relative = replacement + relative[len(original):]
+                    break
+        return root / relative
     train = root / "study-runs/train"
     ids = ["train0", "train1", "train2"]
     write(train / "manifest.json", {"status": "interrupted", "python": "fixture",
@@ -34,7 +53,7 @@ def fixture(root, terminal=False):
               for kind in ("request_started", "request_completed")]
     (train / "requests.jsonl").write_text("".join(json.dumps(x)+"\n" for x in events))
     if not terminal: return
-    baseline = root / "study-runs/untuned-dev20-decisions"
+    baseline = where("study-runs/untuned-dev20-decisions")
     write(baseline / "manifest.json", {"status": "completed"})
     write(baseline / "episodes.json", [])
     released = root / "models/decider/head.safetensors"
@@ -47,7 +66,7 @@ def fixture(root, terminal=False):
         "planned_task_ids": [f"dev{i}" for i in range(20)],
         "manifest_sha256": report.digest(baseline / "manifest.json"),
         "episodes_sha256": report.digest(baseline / "episodes.json")})
-    trained = root / "checkpoints/head-trained"
+    trained = where("checkpoints/head-trained")
     trained.mkdir(parents=True)
     (trained / "head.safetensors").write_bytes(b"SYNTHETIC CHANGED HEAD; NOT MODEL WEIGHTS")
     write(trained / "training-proof.json", {"status": "trained", "fit_question_ids": ["fit1"],
@@ -59,15 +78,22 @@ def fixture(root, terminal=False):
         "original_head_file_sha256": report.digest(released),
         "baseline_receipt_sha256": report.digest(receipt),
         "checkpoint_head_sha256": report.digest(trained / "head.safetensors")})
-    calibrated = root / "checkpoints/released-calibrated"
+    calibrated = where("checkpoints/released-calibrated")
     calibrated.mkdir(parents=True)
     shutil.copyfile(released, calibrated / "head.safetensors")
+    if reserialized_control:
+        (calibrated / "head.safetensors").write_bytes(b"SYNTHETIC SAME TENSORS DIFFERENT SERIALIZATION AT COPY")
     adapter = root / "models/decider/lora/adapter_model.safetensors"
     adapter.parent.mkdir(parents=True); adapter.write_bytes(b"SYNTHETIC ADAPTER")
+    for checkpoint in (trained, calibrated):
+        (checkpoint / "lora").mkdir()
+        shutil.copyfile(adapter, checkpoint / "lora/adapter_model.safetensors")
+    write(calibrated / "training-proof.json", {"status": "untuned_control_copy", "weights_updated": False,
+        "head_tensor_sha256": "initial-fixture"})
     proof_path = trained / "training-proof.json"; proof = json.loads(proof_path.read_text())
     proof.update(frozen_adapter_sha256=report.digest(adapter), feature_manifest_sha256={})
     for partition in ("fit", "tune"):
-        cache_path = root / f"feature-caches/{partition}.jsonl"
+        cache_path = where(f"feature-caches/{partition}.jsonl")
         write(cache_path, {"synthetic_fixture": True})
         write(Path(str(cache_path)+".manifest.json"), {"synthetic_fixture": True})
         proof[f"{partition}_cache_sha256"] = report.digest(cache_path)
@@ -75,8 +101,10 @@ def fixture(root, terminal=False):
     write(proof_path, proof)
     for kind, checkpoint in (("untuned", calibrated), ("trained", trained)):
         fit = {"status": "fitted_on_calibration_only_not_test", "question_ids": ["calibration1"],
-            "temperature": 1., "checkpoint_head_sha256": report.digest(checkpoint / "head.safetensors")}
-        write(root / f"study-runs/calibration-{kind}/temperature-fit.json", fit)
+            "temperature": 1., "checkpoint_head_sha256": report.digest(checkpoint / "head.safetensors"),
+            "bounds": [.25, 6.], "objective": "calibration-question NLL",
+            "before": {"threshold": .8}, "after": {"threshold": .8}}
+        write(where(f"study-runs/calibration-{kind}/temperature-fit.json"), fit)
         write(checkpoint / "calibration-proof.json", fit)
         write(checkpoint / "strands_decider_config.json", {"temperature": 1., "temperature_by_kind": {"noul": 1.}})
     # Expand the maintained independent comparison fixture to the explicit N20 panel.
@@ -85,18 +113,18 @@ def fixture(root, terminal=False):
     originals = json.loads((old_generation / "tasks-evaluator-only.json").read_text())
     rows = [{**copy.deepcopy(originals[i % 3]), "id": f"hotpotqa:fresh{i}",
              "question": f"Unique synthetic question{i}?", "local_partition": "confirmation"} for i in range(20)]
-    dataset = root / "candidate-panels/fresh20/tasks.jsonl"; dataset.parent.mkdir(parents=True)
+    dataset = where("candidate-panels/fresh20/tasks.jsonl"); dataset.parent.mkdir(parents=True)
     dataset.write_text("".join(json.dumps(r)+"\n" for r in rows))
     tasks = [asdict(t) for t in load_tasks(dataset)]; ids = [t["id"] for t in tasks]
     original_tr = json.loads((old_generation / "trajectories.json").read_text())
     trajectories = [{**copy.deepcopy(original_tr[i % 3]), "task_id": ids[i]} for i in range(20)]
-    generation = root / "study-runs/fresh20-fixed10"
+    generation = where("study-runs/fresh20-fixed10")
     write(generation / "tasks-evaluator-only.json", tasks)
     write(generation / "trajectories.json", trajectories)
     gen = json.loads((old_generation / "manifest.json").read_text())
     gen["started_at_utc"] = "2026-10-18T19:01:00-05:00"
     write(generation / "manifest.json", gen)
-    cache = root / "feature-caches/fresh20-allrounds.jsonl"; cache.parent.mkdir(parents=True, exist_ok=True)
+    cache = where("feature-caches/fresh20-allrounds.jsonl"); cache.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(old_cache, cache)
     cache_manifest = json.loads(Path(str(old_cache)+".manifest.json").read_text())
     cache_manifest["frozen"].update(trajectories_sha256=report.digest(generation / "trajectories.json"),
@@ -105,7 +133,7 @@ def fixture(root, terminal=False):
     runs = []
     for old, name, checkpoint in ((old_untuned, "strands-untuned", calibrated),
                                   (old_tuned, "strands-trained", trained)):
-        run = root / ("study-runs/fresh20-untuned" if name == "strands-untuned" else "study-runs/fresh20-trained")
+        run = where("study-runs/fresh20-untuned" if name == "strands-untuned" else "study-runs/fresh20-trained")
         run.mkdir(parents=True); shutil.copytree(old / "source_snapshot", run / "source_snapshot")
         old_episodes = json.loads((old / "episodes.json").read_text()); episodes = []
         for i, qid in enumerate(ids):
@@ -128,20 +156,59 @@ def fixture(root, terminal=False):
                 for p in sorted(checkpoint.rglob("*")) if p.is_file()}))
         manifest["actual_evaluation_usage"]["completed_requests_including_invalid_outputs"] = 20
         write(run / "manifest.json", manifest); runs.append(run)
-    write(root / "study-runs/fresh20-paired-analysis/paired-analysis.json", compare_runs(*runs, generation, cache))
-    write(root / "campaign/plan.json", {"fresh_options": [{"n": 20, "dataset": str(dataset),
-        "dataset_sha256": report.digest(dataset), "steps": []}]})
+    analysis = where("study-runs/fresh20-paired-analysis")
+    write(analysis / "paired-analysis.json", compare_runs(*runs, generation, cache))
+    def command(module, *args):
+        return ["python", "-m", module, *map(str, args)]
+    core = [{"argv": command("pc_strands.train_head", "--output", trained, "--checkpoint", released.parent,
+        "--baseline-receipt", receipt, "--fit-cache", where("feature-caches/fit.jsonl"),
+        "--tune-cache", where("feature-caches/tune.jsonl"))}]
+    for partition in ("fit", "tune", "calibration"):
+        core.append({"argv": command("pc_strands.decider", "cache", "--partition", partition,
+            "--output", where(f"feature-caches/{partition}.jsonl"), "--trajectory-dir", train)})
+    for kind, checkpoint in (("untuned", calibrated), ("trained", trained)):
+        core.append({"argv": command("pc_strands.calibrate", "--checkpoint", checkpoint,
+            "--output", where(f"study-runs/calibration-{kind}/temperature-fit.json"))})
+    core.append({"id": "copy_released_for_calibration", "argv": ["python", "-c", "synthetic copy fixture; never executed"],
+        "outputs": [{"path": str(calibrated / name)} for name in ("head.safetensors", "training-proof.json")]})
+    fresh_steps = [{"argv": command("pc_strands.evaluate", "generate", "--dataset", dataset, "--output", generation)},
+        {"argv": command("pc_strands.decider", "cache", "--output", cache, "--trajectory-dir", generation)},
+        *[{"argv": command("pc_strands.evaluate", "head-replay", "--dataset", dataset, "--output", run,
+            "--checkpoint-dir", checkpoint, "--feature-cache", cache, "--trajectory-dir", generation,
+            "--policy-name", name)} for run, checkpoint, name in zip(runs, (calibrated, trained), ("strands-untuned", "strands-trained"))],
+        {"argv": command("pc_strands.compare", "--untuned", runs[0], "--tuned", runs[1],
+            "--trajectory-dir", generation, "--feature-cache", cache, "--output", analysis)}]
+    write(root / "campaign/plan.json", {"steps": core, "operator_fresh_freeze_path": str(root / "fresh-N-freeze.json"),
+        "fresh_options": [{"n": 20, "dataset": str(dataset),
+        "dataset_sha256": report.digest(dataset), "steps": fresh_steps}]})
     freeze = {"n": 20, "answer_blind": True, "basis": "measured_throughput_and_resources",
         "fresh_scoring_started": False, "frozen_at": "2026-10-18T19:00:00-05:00",
         "dataset_sha256": report.digest(dataset), "plan_sha256": report.digest(root / "campaign/plan.json")}
     write(root / "fresh-N-freeze.json", freeze)
     shutil.copyfile(root / "fresh-N-freeze.json", root / "campaign/fresh-freeze.json")
     write(root / "campaign/campaign.json", {"status": "completed", "fresh_n": 20,
-        "plan_sha256": freeze["plan_sha256"], "fresh_freeze_sha256": report.digest(root / "fresh-N-freeze.json")})
+        "plan_sha256": freeze["plan_sha256"], "fresh_freeze_sha256": report.digest(root / "fresh-N-freeze.json"),
+        "stages": {"copy_released_for_calibration": {"status": "completed", "output_sha256":
+            {str(calibrated / name): report.digest(calibrated / name) for name in ("head.safetensors", "training-proof.json")}}}})
 
 
 def collect(root, n=20):
-    return report.collect_report(root, "study-runs/train", n, AS_OF, campaign_run="campaign")
+    return report.collect_report(root, "study-runs/train", n, AS_OF,
+        campaign_run="campaign" if (root / "campaign/plan.json").exists() else None)
+
+
+def rebound_comparison(root):
+    """Rebind synthetic fingerprints so identity-link tests reach the control gate."""
+    evidence = report.Evidence(root)
+    plan = json.loads((root / "campaign/plan.json").read_text())
+    paths = report.artifact_paths(evidence, plan, 20, "campaign")
+    for kind in ("untuned", "trained"):
+        path = paths["fresh_" + kind] / "manifest.json"
+        manifest = json.loads(path.read_text())
+        manifest["frozen"]["config"]["model_fingerprint"] = report.checkpoint_fingerprint(evidence, paths[kind])
+        write(path, manifest)
+    write(paths["fresh_analysis"] / "paired-analysis.json", compare_runs(paths["fresh_untuned"],
+        paths["fresh_trained"], paths["fresh_source"], paths["fresh_cache"]))
 
 
 def segment_fixture(root):
@@ -184,6 +251,147 @@ class ReportTests(unittest.TestCase):
             root = Path(temporary); fixture(root, True); result = collect(root)
             self.assertTrue(result["validation"]["complete_checkpoint"], result["warnings"])
             self.assertIn("EM %", report.plain_text(result))
+
+    def test_nested_plan_paths_work_without_canonical_alias_copies(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True, alternate=True); result = collect(root)
+            self.assertTrue(result["validation"]["complete_checkpoint"], result["validation_errors"])
+            self.assertTrue(result["validation"]["unchanged_control_proof"])
+            self.assertFalse((root / "checkpoints/head-trained").exists())
+            self.assertFalse((root / "study-runs/fresh20-untuned").exists())
+            self.assertEqual(result["artifact_roles"]["trained"], str(root / "checkpoints/train120-original-v4/head-trained"))
+            self.assertIn("EM %", report.plain_text(result))
+            self.assertNotIn(str(root), report.plain_text(result))
+
+    def test_control_tensor_adapter_and_source_links_are_independently_required(self):
+        for change in ("control-tensor", "initial-tensor", "missing-control-proof", "control-adapter", "trained-adapter", "source-head"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); fixture(root, True, alternate=True)
+                plan = json.loads((root / "campaign/plan.json").read_text())
+                paths = report.artifact_paths(report.Evidence(root), plan, 20, "campaign")
+                if change in ("control-tensor", "missing-control-proof"):
+                    path = paths["untuned"] / "training-proof.json"
+                    if change == "missing-control-proof": path.unlink()
+                    else:
+                        proof = json.loads(path.read_text()); proof["head_tensor_sha256"] = "wrong-control-tensor"; write(path, proof)
+                elif change.endswith("adapter"):
+                    kind = "untuned" if change == "control-adapter" else "trained"
+                    (paths[kind] / "lora/adapter_model.safetensors").write_bytes(b"SYNTHETIC TAMPERED ADAPTER")
+                else:
+                    path = paths["trained"] / "training-proof.json"; proof = json.loads(path.read_text())
+                    proof["initial_head_tensor_sha256" if change == "initial-tensor" else "original_head_file_sha256"] = "wrong-source"
+                    write(path, proof)
+                # Current-checkpoint fingerprints now bind the altered files.
+                # The independent original/control linkage must still fail.
+                rebound_comparison(root)
+                result = collect(root)
+                self.assertFalse(result["validation"]["unchanged_control_proof"])
+                self.assertNotIn("EM %", report.plain_text(result))
+
+    def test_control_reserialized_bytes_can_differ_with_matching_tensor_proof(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True, alternate=True, reserialized_control=True)
+            plan = json.loads((root / "campaign/plan.json").read_text())
+            paths = report.artifact_paths(report.Evidence(root), plan, 20, "campaign")
+            head = paths["untuned"] / "head.safetensors"
+            result = collect(root)
+            self.assertTrue(result["validation"]["complete_checkpoint"], result["validation_errors"])
+            self.assertNotEqual(report.digest(head), report.digest(paths["released"] / "head.safetensors"))
+
+    def test_post_copy_head_change_cannot_be_hidden_by_rebinding_calibration_and_comparison(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True, alternate=True)
+            plan = json.loads((root / "campaign/plan.json").read_text())
+            paths = report.artifact_paths(report.Evidence(root), plan, 20, "campaign")
+            head = paths["untuned"] / "head.safetensors"
+            head.write_bytes(b"SYNTHETIC POST-COPY WEIGHT MUTATION")
+            fit_path = paths["calibration_untuned"]; fit = json.loads(fit_path.read_text())
+            fit["checkpoint_head_sha256"] = report.digest(head)
+            write(fit_path, fit); write(paths["untuned"] / "calibration-proof.json", fit)
+            rebound_comparison(root)
+            result = collect(root)
+            self.assertFalse(result["validation"]["unchanged_control_proof"])
+            self.assertNotIn("EM %", report.plain_text(result))
+
+    def test_explicit_missing_plan_cannot_read_valid_canonical_decoys(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True); (root / "campaign/plan.json").unlink()
+            with self.assertRaisesRegex(ValueError, "explicit campaign plan is missing"):
+                report.collect_report(root, "study-runs/train", 0, AS_OF, campaign_run="campaign")
+
+    def test_same_calibration_questions_and_predeclared_protocol_are_required(self):
+        for change in ("ids", "bounds", "threshold"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); fixture(root, True)
+                path = root / "study-runs/calibration-trained/temperature-fit.json"; fit = json.loads(path.read_text())
+                if change == "ids": fit["question_ids"] = ["different-calibration-question"]
+                elif change == "bounds": fit["bounds"] = [.1, 10.]
+                else: fit["after"]["threshold"] = .7
+                write(path, fit); write(root / "checkpoints/head-trained/calibration-proof.json", fit)
+                rebound_comparison(root)
+                self.assertNotIn("EM %", report.plain_text(collect(root)))
+
+    def test_explicit_freeze_path_is_used_and_bound_without_canonical_alias(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True, alternate=True)
+            path = root / "campaign/plan.json"; plan = json.loads(path.read_text())
+            selected = root / "explicit-freezes/selected.json"; selected.parent.mkdir()
+            plan["operator_fresh_freeze_path"] = str(selected); write(path, plan)
+            freeze = json.loads((root / "fresh-N-freeze.json").read_text())
+            freeze["plan_sha256"] = report.digest(path)
+            write(selected, freeze); write(root / "campaign/fresh-freeze.json", freeze)
+            write(root / "fresh-N-freeze.json", {"invalid_canonical_decoy": True})
+            campaign = json.loads((root / "campaign/campaign.json").read_text())
+            campaign.update(plan_sha256=freeze["plan_sha256"], fresh_freeze_sha256=report.digest(selected))
+            write(root / "campaign/campaign.json", campaign)
+            self.assertTrue(collect(root)["validation"]["complete_checkpoint"])
+
+    def test_missing_or_conflicting_plan_roles_cannot_use_old_canonical_artifacts(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True)
+            path = root / "campaign/plan.json"; plan = json.loads(path.read_text())
+            plan["fresh_options"][0]["steps"].pop()  # Old canonical comparison remains present.
+            write(path, plan)
+            result = collect(root)
+            self.assertNotIn("EM %", report.plain_text(result))
+            self.assertIn("canonical comparison stage", result["validation_errors"][0]["detail"])
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True)
+            plan = json.loads((root / "campaign/plan.json").read_text())
+            replay = plan["fresh_options"][0]["steps"][2]["argv"]
+            replay[replay.index("--feature-cache") + 1] = str(root / "foreign-features.jsonl")
+            with self.assertRaisesRegex(ValueError, "fresh replay paths differ"):
+                report.artifact_paths(report.Evidence(root), plan, 20, "campaign")
+
+    def test_explicit_training_source_must_match_reviewed_cache_source(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True)
+            with self.assertRaisesRegex(ValueError, "TRAIN source differs"):
+                report.collect_report(root, "study-runs/unrelated", 20, AS_OF, campaign_run="campaign")
+
+    def test_baseline_only_plan_reports_partial_historical_train_without_optional_roles(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root, True)
+            # Same two role-bearing CLI stages as the adopted real V3, with no
+            # TRAIN, calibration, checkpoint-copy or fresh branches. Canonical
+            # old trained artifacts deliberately remain as unrelated decoys.
+            write(root / "campaign/plan.json", {"steps": [
+                {"id": "dev20_writer1", "argv": ["python", "-m", "pc_strands.evaluate", "generate",
+                    "--output", str(root / "study-runs/dev20-fixed1-v3"), "--max-drafts", "1"]},
+                {"id": "untuned_before_training", "argv": ["python", "-m", "pc_strands.evaluate", "replay",
+                    "--phase", "untuned_pretraining", "--max-drafts", "1",
+                    "--output", str(root / "study-runs/untuned-dev20-decisions"),
+                    "--checkpoint-dir", str(root / "models/decider")]}]})
+            result = collect(root, 0)
+            self.assertEqual(result["status"], "DRAFT / PARTIAL CHECKPOINT")
+            self.assertTrue(result["validation"]["untouched_gate"])
+            self.assertFalse(result["validation"]["trained_head_proof"])
+            self.assertIsNone(result["artifact_roles"]["trained"])
+            self.assertIsNone(result["artifact_roles"]["cache_fit"])
+            self.assertNotIn("EM %", report.plain_text(result))
+            self.assertEqual(result["train_reconciliation"]["saved_trajectories"], 2)
+            self.assertNotIn(str(root / "checkpoints/head-trained/training-proof.json"),
+                {r["path"] for r in result["input_files"]})
 
     def test_missing_baseline_or_training_proof_cannot_render_quality(self):
         for name in ("study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json", "checkpoints/head-trained/training-proof.json"):

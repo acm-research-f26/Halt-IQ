@@ -147,6 +147,41 @@ Public PDF/text references use relative source labels; provenance retains local
 paths. Render every page with Poppler and inspect all pages before sharing.
 Synthetic tests validate reporting contracts; they are not Strands results.
 
+The report resolves artifact roles from the selected frozen plan's explicit stage
+arguments: the training command supplies its baseline, source checkpoint, trained
+checkpoint and fit/tune caches; native cache commands identify their TRAIN source;
+calibration commands identify their checkpoint and temperature-fit output; the
+selected fresh option's comparison and replay commands identify the shared writer
+trajectories, features, heads and analysis. Nested paths such as
+`checkpoints/train120-original-v4/head-trained` and `study-runs/fresh20-v4-trained`
+therefore need no canonical aliases or copied results. Conflicting/missing declared
+roles cannot fall back to older canonical artifacts. An explicit `--train-run`
+must match the plan's declared TRAIN cache source. A baseline-only plan with no
+TRAIN/cache/trained/fresh roles still permits a partial report on an explicitly
+selected historical TRAIN source; it does not adopt unrelated old trained files.
+Private provenance records the resolved role paths. The operator freeze comes
+from `operator_fresh_freeze_path` (the historical default is `fresh-N-freeze.json`)
+and must exactly match the campaign's copied, plan-bound freeze.
+
+The unchanged-control proof must link its head tensor hash to the trained proof's
+original tensor hash. The released source head must also match the untouched gate
+and training proof, and the released, control and trained adapter files must all
+match the frozen adapter SHA256. A newly serialized unchanged head may have
+different file bytes; its actual file hash remains bound by calibration and
+checkpoint fingerprints. The actual control head and copy-proof hashes must also
+match the completed copy stage's captured output hashes from before calibration;
+rebinding later calibration or comparison fingerprints cannot hide a post-copy
+mutation. Both calibration fits must use the same question IDs,
+the predeclared `[0.25,6]` temperature bounds and threshold `0.8`. These checks add
+no model loads. They check recorded tensor/weight provenance; the pre-fresh runtime
+qualification separately performs the actual tensor comparison.
+
+The physical-work table currently covers the explicit `--train-run` and selected
+confirmation phases. If a new 120 writer run is selected, the earlier 591-call
+partial source remains a separate physical expense: preserve its audited report
+and receipts. Do not describe the new report's table as a cumulative campaign
+total or silently infer missing historical expense from a proposed plan's counts.
+
 Public sources:
 - https://github.com/strands-labs/strands-decider
 - https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610
