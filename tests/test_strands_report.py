@@ -27,10 +27,10 @@ def fixture(root, terminal=False):
         "frozen": {"task_ids": ids, "config": {}}, "writer_unload_verified": True,
         "actual_evaluation_usage": {"completed_requests_including_invalid_outputs": 2,
             "reported_physical_input_tokens": 100, "hosted_cost_usd": 0}})
-    write(train / "trajectories.json", [{"task_id": ids[0], "status": "completed"},
-                                      {"task_id": ids[1], "status": "failed"}])
+    write(train / "trajectories.json", [{"task_id": ids[0], "status": "completed", "rounds": [{"round": 1}]},
+                                      {"task_id": ids[1], "status": "failed", "rounds": [{"round": 1}]}])
     write(train / "tasks-evaluator-only.json", [{"id": x, "partition": "fit"} for x in ids])
-    events = [{"event": kind, "request_id": str(i)} for i in range(2)
+    events = [{"event": kind, "request_id": f"{ids[i]}|fixed|writer|1"} for i in range(2)
               for kind in ("request_started", "request_completed")]
     (train / "requests.jsonl").write_text("".join(json.dumps(x)+"\n" for x in events))
     if not terminal: return
@@ -144,6 +144,27 @@ def collect(root, n=20):
     return report.collect_report(root, "study-runs/train", n, AS_OF, campaign_run="campaign")
 
 
+def segment_fixture(root):
+    fixture(root)
+    train, archive = root / "study-runs/train", root / "archive/segment1"
+    current = json.loads((train / "manifest.json").read_text())
+    current.update(finished_at_utc="2026-10-18T17:20:00-05:00",
+        this_invocation_wall_seconds=20., this_invocation_intentional_idle_seconds=8.)
+    write(train / "manifest.json", current)
+    previous = copy.deepcopy(current)
+    previous.update(finished_at_utc="2026-10-18T17:00:00-05:00",
+        this_invocation_wall_seconds=10., this_invocation_intentional_idle_seconds=5.)
+    previous["actual_evaluation_usage"]["completed_requests_including_invalid_outputs"] = 1
+    write(archive / "manifest.json", previous)
+    first_call = (train / "requests.jsonl").read_text().splitlines(keepends=True)[:2]
+    (archive / "requests.jsonl").write_text("".join(first_call))
+    def seal():
+        write(archive / "snapshot-receipt.json", {"source": str(train), "files_sha256":
+            {name: report.digest(archive / name) for name in ("manifest.json", "requests.jsonl")}})
+    seal()
+    return train, archive, seal
+
+
 class ReportTests(unittest.TestCase):
     def test_partial_preserves_denominator_and_omits_quality_and_private_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -228,6 +249,75 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(report.journal_counts([{"event": "request_started", "request_id": "x"}])["pending"], 1)
         with self.assertRaises(ValueError): report.journal_counts([{"event": "request_completed", "request_id": "x"}])
         with self.assertRaises(ValueError): report.timestamp("2026-10-18T20:00:00")
+
+    def test_completed_call_without_trajectory_remains_charged_and_missing(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); fixture(root); train = root / "study-runs/train"
+            ids = [f"train{i}" for i in range(600)]
+            write(train / "tasks-evaluator-only.json", [{"id": qid, "partition":
+                "fit" if i < 400 else "tune" if i < 500 else "calibration"} for i, qid in enumerate(ids)])
+            write(train / "trajectories.json", [{"task_id": qid, "status": "completed",
+                "rounds": [{"round": 1}]} for qid in ids[:590]])
+            events = [{"event": event, "request_id": f"{qid}|fixed|writer|1"}
+                for qid in ids[:591] for event in ("request_started", "request_completed")]
+            (train / "requests.jsonl").write_text("".join(json.dumps(e)+"\n" for e in events))
+            write(train / "manifest.json", {"status": "interrupted", "frozen": {"task_ids": ids},
+                "actual_evaluation_usage": {"completed_requests_including_invalid_outputs": 591,
+                    "reported_physical_input_tokens": 1052407, "reported_output_tokens": 5827}})
+            result = collect(root, 0)
+            self.assertEqual(result["train_reconciliation"], {"planned_questions": 600,
+                "saved_trajectories": 590, "missing_trajectories": 10, "undispatched_questions": 9,
+                "completed_calls_without_saved_round": 1, "completed_questions_without_saved_trajectory": 1,
+                "saved_trajectory_failures": 0})
+            usage = next(s for s in result["sections"] if s["title"].startswith("6."))["rows"]
+            self.assertEqual(usage[0][1:4], ["591", "1,052,407", "5,827"])
+            self.assertIn("not invented scored drafts", report.plain_text(result))
+            self.assertNotIn("EM %", report.plain_text(result))
+
+    def test_archived_and_current_timing_sum_without_double_counting_calls(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); train, archive, _ = segment_fixture(root)
+            result = report.collect_report(root, train, 0, AS_OF, train_segments=[archive])
+            timings = result["train_invocations"]
+            self.assertEqual([t["additional_physical_calls"] for t in timings], [None, 1])
+            self.assertEqual([t["cumulative_physical_calls"] for t in timings], [1, 2])
+            self.assertEqual(sum(t["wall_seconds"] for t in timings), 30.)
+            self.assertEqual(sum(t["intentional_idle_seconds"] for t in timings), 13.)
+            usage = next(s for s in result["sections"] if s["title"].startswith("6."))["rows"]
+            self.assertEqual(usage[0][1], "2")  # Current journal is cumulative, not an increment.
+            self.assertEqual(len({r["id"] for r in result["input_files"]}), len(result["input_files"]))
+
+    def test_changed_unrelated_or_overlapping_archives_rejected(self):
+        for change in ("hash", "prefix", "source", "overlap", "duplicate"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); train, archive, seal = segment_fixture(root)
+                archives = [archive]
+                if change in ("hash", "prefix"):
+                    with (archive / "requests.jsonl").open("a") as stream: stream.write("\n")
+                    if change == "prefix": seal()
+                elif change == "source":
+                    raw = json.loads((archive / "manifest.json").read_text())
+                    raw["frozen"]["config"]["seed"] = 99; write(archive / "manifest.json", raw); seal()
+                elif change == "overlap":
+                    raw = json.loads((train / "manifest.json").read_text())
+                    raw["finished_at_utc"] = "2026-10-18T17:00:15-05:00"; write(train / "manifest.json", raw)
+                else: archives.append(archive)
+                with self.assertRaises(ValueError):
+                    report.collect_report(root, train, 0, AS_OF, train_segments=archives)
+
+    def test_latest_timing_only_does_not_invent_additional_call_count(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); train, _, _ = segment_fixture(root)
+            result = report.collect_report(root, train, 0, AS_OF)
+            self.assertIsNone(result["train_invocations"][0]["additional_physical_calls"])
+            self.assertNotIn("Sum of selected invocations", report.plain_text(result))
+
+    def test_recorded_evidence_mutation_before_parse_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); write(root / "input.json", {"x": 1}); evidence = report.Evidence(root)
+            evidence.record_file(root / "input.json", "before parse")
+            write(root / "input.json", {"x": 2})
+            with self.assertRaisesRegex(ValueError, "changed before parsing"): evidence.read("input.json", "parse")
 
 
 if __name__ == "__main__": unittest.main()

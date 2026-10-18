@@ -39,11 +39,21 @@ explicit failure; evidence is never silently truncated.
 
 1. Generate TRAIN-only drafts with the frozen writer settings, keeping references
    outside all prompts. Store a durable started/completed request journal.
-2. Generate the original twenty development questions up to ten total drafts.
-   Evaluate actual untouched Strands BEFORE any weight update. The trainer checks
-   the hash-bound baseline receipt, all twenty attempted questions and at least
-   one real valid model forward; failures remain in the denominator.
-3. Cache frozen torso/adapter representations in question-disjoint fit, tuning
+2. The adopted V3 baseline-only plan generates one draft for each of the original
+   twenty development questions, retaining every question and full native context.
+   It waits for truthful writer cleanup/ownership proof, then evaluates actual
+   untouched Strands BEFORE any weight update, once verified weights, installation
+   and CUDA health are ready. No quality-based or token-length case selection is
+   allowed. The trainer checks the hash-bound baseline receipt, all twenty attempted
+   questions and at least one real valid model forward; failures remain in the
+   denominator. This cap-one gate measures first-draft decisions and native
+   throughput, not repair or ten-draft benefit. It does not automatically launch
+   training or fresh testing.
+3. After measured native throughput, adopt a NEW downstream plan: use original
+   TRAIN600 only if its actual generation is complete, or explicitly select a
+   separate original-partition 120 protocol with 80 fit / 20 tune / 20 calibration and its
+   own writer run. A proposed subset alone is not an adopted training protocol.
+   Cache frozen torso/adapter representations in question-disjoint fit, tuning
    and calibration groups. Default cache CLI uses both option orders; this bounded
    study explicitly passes `--canonical-order-only`. No transformer backward graph
    is needed for head-only training.
@@ -52,16 +62,19 @@ explicit failure; evidence is never silently truncated.
    on tuning NLL; calibrate separately. Calibrate an unchanged released-head copy
    as a control so calibration gain is distinct from weight training.
 5. Freeze one fresh20/50/100question panel from measured throughput before viewing
-   its outcomes. Generate common trajectories; compare Fixed1/2/3/5/10, released
-   and tuned stopping policies, with cap-three partner parity.
+   its outcomes. The primary fresh protocol remains ten total drafts on common
+   trajectories; compare Fixed1/2/3/5/10, released and tuned stopping policies,
+   with derived cap-three partner parity. The cap-one development gate does not
+   shorten this fresh protocol.
 6. Report paired question-level intervals, failures, repairs/regressions, probability
    coverage and all physical work. A predeclared secondary confidence selector may
    retain an earlier visited draft at the same stop boundary, with no gold-based
    selection, extra inference, cost rewind or rescue of failed episodes.
 
 The campaign runner accepts a reviewed JSON plan with explicit argv, file/hash
-prerequisites, output contracts and exactly one answer-blind fresh-N freeze. It
-copies and hashes source before execution, contains only its own children and
+prerequisites and output contracts. A plan with fresh options requires exactly
+one answer-blind fresh-N freeze; the adopted baseline-only V3 has no fresh branch.
+It copies and hashes source before execution, contains only its own children and
 refuses automatic retry of started/failed stages. Native health probes acquire the
 same OS GPU lease as model workers. The operator hands off the CUDA-health marker
 only after writer cleanup; the campaign does not create that marker itself.
@@ -98,10 +111,33 @@ Use the document Python with ReportLab and pypdf installed; study runtime packag
 alone do not supply the PDF renderer. For a partial checkpoint, pass fresh N0:
 
 ```powershell
-<document-python> -X utf8 -B tools/build_strands_report.py --input-root <runtime> --train-run study-runs/train600-fixed1 --fresh-n 0 --campaign-run campaign-main-v2-20261018 --as-of 2026-10-18T20:30:00-05:00 --output-dir <new-empty-report-directory>
+<document-python> -X utf8 -B tools/build_strands_report.py --input-root <runtime> --train-run study-runs/train600-fixed1 --fresh-n 0 --campaign-run <actual-campaign-directory> --as-of <checkpoint-ISO8601-with-offset> --output-dir <new-empty-report-directory>
 ```
 
-Choose the actual checkpoint timestamp rather than copying the example date.
+Choose the actual campaign directory and checkpoint timestamp with a UTC offset;
+do not substitute an unused or superseded campaign. For a resumed TRAIN source,
+optionally append each preserved invocation archive in chronological order:
+
+```powershell
+--train-segment writer-supervision/train600-background-v2-ram7-q8-v5/segment-1-final
+```
+
+The archive must include its snapshot receipt and matching source/journal hashes.
+The builder checks source identity, cumulative journal prefixes and nonoverlapping
+worker intervals before summing selected wall/idle durations. Those sums exclude
+gaps between invocations and wrapper startup/unload. The first selected snapshot's
+physical counter is cumulative; subsequent counter differences are between
+selected snapshots. Current cumulative physical calls/tokens are charged once,
+not added to an archived cumulative counter. Without selected archives, only the
+latest invocation timing is shown.
+
+Completed provider calls and saved trajectories have separate counts. For example,
+the original 600 run retained 590 trajectories but 591 completed calls after a
+deadline during post-call rest: one completed call had no assembled trajectory,
+nine questions were never dispatched, and ten trajectories remained missing.
+All 591 calls still count as physical work. Zero saved trajectory failures does
+not mean complete planned coverage or authorize relabeling a partial run complete.
+
 For N20/50/100, the builder requires the explicit campaign plan, its adopted
 answer-blind freeze, exact cohort IDs and pre-generation timing. It re-runs the
 pure canonical comparison, verifies current trained/untouched checkpoints and
