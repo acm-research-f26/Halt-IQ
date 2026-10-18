@@ -802,7 +802,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
          "gate verified" if gate else "not verified; no baseline accuracy claim"],
         ["Pointer-head training", "disjoint fit/tune", str((proof or {}).get("fit_questions", 0)),
          "weight/reload proof verified" if trained else "not verified; no trained-model claim"],
-        ["Fresh paired confirmation", str(fresh_n or "not selected"), str(paired["planned_n"] if paired else 0),
+        ["Fresh paired confirmation", str(fresh_n or "not supplied"), str(paired["planned_n"] if paired else 0),
          "terminal matched replay" if paired else "no validated paired result supplied"],
     ]
     sections.append(section("1. Evidence and completion", [
@@ -820,7 +820,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     evidence.record_file(evidence.root.parent / "preflight-2026-10-18/PROFESSOR-METHODS-DRAFT.txt", "historical methods and HotpotQA attribution")
     sections.append(section("2. Dataset and architecture", [
         "The task is short-answer HotpotQA with all supplied distractor paragraphs, titles and sentence order. Questions, evidence and the current draft are public model inputs; references, supporting facts and correctness labels are evaluator-only. Answer metrics use official-style normalized exact match and token F1.",
-        "Official TRAIN and public validation must be disjoint by ID and normalized question. The original 600-question training proposal uses 400 fit / 100 tune / 100 calibration cases; its six fixed 100-row source blocks are not an IID sample of all 90,447 TRAIN questions. A resource-driven repartition requires a separately adopted manifest before learning, with original partitions and parent provenance preserved.",
+        "Official TRAIN and public validation must be disjoint by ID and normalized question. The original 600-question training proposal uses 400 fit / 100 tune / 100 calibration cases; its six fixed 100-row source blocks are not an IID sample of all 90,447 TRAIN questions. A resource-driven TRAIN reduction requires a separately adopted manifest before learning, with original partitions and parent provenance preserved.",
         f"Dataset attribution: HotpotQA (https://hotpotqa.github.io/), CC-BY-SA 4.0; selected source revision {dataset_metadata.get('source_revision', 'not supplied')}. Preserve source attribution and the recorded ID/question exclusion audit when distributing derived data.",
         f"Selected training dataset SHA256: {config.get('dataset_sha256', 'not supplied')}. "
         f"Explicit cohort manifest status: {(subset or {}).get('status', 'none supplied')}; "
