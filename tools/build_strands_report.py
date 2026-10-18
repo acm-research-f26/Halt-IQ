@@ -240,6 +240,158 @@ def baseline_valid(receipt):
     return bool(receipt.get("checkpoint_head_sha256"))
 
 
+def baseline_diagnostics(evidence, receipt_path, receipt, plan, campaign, campaign_dir):
+    """Recompute cap-one development evidence; never consume its loose summary."""
+    from pc_strands.data import fingerprint
+    from pc_strands.metrics import evaluate
+
+    directory = receipt_path.parent
+    manifest = evidence.read(directory / "manifest.json", "bound untouched development manifest")
+    episodes = evidence.read(directory / "episodes.json", "bound untouched development episodes")
+    tasks = evidence.read(directory / "tasks-evaluator-only.json", "untouched evaluator task snapshot")
+    events = evidence.read(directory / "requests.jsonl", "untouched physical native request journal", lines=True)
+    if any(value is None for value in (manifest, episodes, tasks, events)):
+        raise ValueError("complete baseline manifest/episodes/tasks/journal required")
+    for name, key in (("manifest.json", "manifest_sha256"), ("episodes.json", "episodes_sha256")):
+        if evidence.record_file(directory / name, "baseline receipt identity") != receipt.get(key):
+            raise ValueError("baseline receipt/result fingerprint differs")
+    journal_path = directory / "requests.jsonl"
+    anchors = [receipt["requests_sha256"]] if receipt.get("requests_sha256") else []
+    reuse = (plan or {}).get("baseline_reuse", {})
+    if reuse:
+        if evidence.path(reuse["run"]) != directory:
+            raise ValueError("reviewed baseline reuse points at a different run")
+        hashes = reuse.get("hashes", {})
+        for name, key in ((receipt_path.name, "baseline_receipt"), ("manifest.json", "baseline_manifest"),
+                          ("episodes.json", "baseline_episodes")):
+            if hashes.get(key) != evidence.record_file(directory / name, "reviewed baseline reuse identity"):
+                raise ValueError("reviewed baseline reuse fingerprint differs")
+        if hashes.get("baseline_requests"):
+            anchors.append(hashes["baseline_requests"])
+    for stage in (campaign or {}).get("stages", {}).values():
+        captured = {evidence.path(k): value for k, value in stage.get("output_sha256", {}).items()}
+        if stage.get("status") == "completed" and captured.get(receipt_path) == digest(receipt_path):
+            if (not campaign_dir or campaign.get("plan_sha256") != evidence.record_file(
+                    evidence.path(campaign_dir) / "plan.json", "executed baseline plan")):
+                raise ValueError("captured baseline journal lacks matching executed plan")
+            if captured.get(journal_path):
+                anchors.append(captured[journal_path])
+    journal_hash = evidence.record_file(journal_path, "hash-bound baseline native journal")
+    if not anchors or any(anchor != journal_hash for anchor in anchors):
+        raise ValueError("baseline native journal requires an exact receipt/plan/captured-output hash")
+    frozen, ids = manifest.get("frozen", {}), receipt["planned_task_ids"]
+    config = frozen.get("config", {})
+    if (manifest.get("status") not in TERMINAL or frozen.get("task_ids") != ids
+            or [t["id"] for t in tasks] != ids or fingerprint(tasks) != frozen.get("dataset_state_sha256")
+            or frozen.get("source_sha256") != receipt.get("source_sha256")
+            or config.get("phase") != "untuned_pretraining" or config.get("max_drafts") != 1
+            or config.get("mode") != "replay" or config.get("decision_device") != "cuda"
+            or config.get("threshold") != .8 or receipt.get("model", {}).get("max_length") != 4096):
+        raise ValueError("baseline requires exact original task/source/native cap-one protocol")
+    counts = journal_counts(events)
+    if counts["pending"] or counts["errors"]:
+        raise ValueError("baseline journal has unresolved or error requests")
+    policy = config["policy_name"]
+    rows = {(r["task_id"], r["policy"]): r for r in episodes}
+    if len(rows) != len(episodes) or set(rows) != {(qid, p) for qid in ids for p in (policy, "fixed-1-prefix")}:
+        raise ValueError("baseline planned question-policy coverage differs")
+    started = {r["request_id"]: r for r in events if r["event"] == "request_started"}
+    completed = {r["request_id"]: r for r in events if r["event"] == "request_completed"}
+    if any(key not in {f"{qid}|{policy}|decision|1" for qid in ids} for key in started):
+        raise ValueError("foreign baseline native request")
+    quality = {p: {"planned_n": len(ids), "completed": 0, "em": 0., "token_f1": 0.}
+               for p in (policy, "fixed-1-prefix")}
+    approvals = correct_approvals = correct_rejections = valid = 0
+    for task in tasks:
+        qid = task["id"]
+        primary, fixed = rows[qid, policy], rows[qid, "fixed-1-prefix"]
+        if primary["final_answer"] != fixed["final_answer"]:
+            raise ValueError("cap-one baseline and Fixed1 answers differ")
+        score = evaluate(fixed["final_answer"], task["answers"])
+        first_correct = fixed["status"] == "completed" and score["exact_match"]
+        for name, row in ((policy, primary), ("fixed-1-prefix", fixed)):
+            if row["status"] not in {"completed", "failed"}:
+                raise ValueError("nonterminal baseline episode")
+            actual = score if row["status"] == "completed" else {"exact_match": False, "token_f1": 0.}
+            if (type(row.get("exact_match")) is not bool or row["exact_match"] != actual["exact_match"]
+                    or not math.isclose(row["token_f1"], actual["token_f1"], abs_tol=1e-12)
+                    or row.get("first_draft_exact_match") != first_correct):
+                raise ValueError("baseline stored quality differs from canonical answer scoring")
+            quality[name]["completed"] += row["status"] == "completed"
+            quality[name]["em"] += actual["exact_match"] / len(ids)
+            quality[name]["token_f1"] += actual["token_f1"] / len(ids)
+        key = f"{qid}|{policy}|decision|1"
+        decisions, call = primary.get("decisions", []), completed.get(key)
+        if primary.get("decision_calls") != int(call is not None):
+            raise ValueError("baseline episode/native request count differs")
+        if call is None or "failure" in call["result"]:
+            if decisions or primary["status"] != "failed":
+                raise ValueError("missing baseline native score represented as success")
+            continue
+        raw, request = call["result"], started[key]
+        expected_state = {"question": task["question"], "evidence": task["evidence"], "draft": fixed["final_answer"]}
+        if (request["input"].get("state") != expected_state
+                or set(request["input"]["state"]) != {"question", "evidence", "draft"}
+                or request["input"].get("model") != config.get("model_fingerprint")
+                or request["input_sha256"] != fingerprint(request["input"])
+                or call["input_sha256"] != request["input_sha256"]
+                or len(decisions) != 1 or decisions[0].get("score") != raw):
+            raise ValueError("baseline public state/raw critic response differs from journal")
+        probability, logits, temperature = raw["p_true"], raw["logits"], raw["temperature"]
+        if (type(probability) not in (int, float) or not math.isfinite(probability) or not 0 <= probability <= 1
+                or len(logits) != 2 or any(type(x) not in (int, float) or not math.isfinite(x) for x in logits)
+                or type(temperature) not in (int, float) or not math.isfinite(temperature) or temperature <= 0
+                or type(raw.get("physical_input_tokens")) is not int or raw["physical_input_tokens"] <= 0
+                or raw.get("reused_encoding") is not False or raw.get("input_tokens") != raw["physical_input_tokens"]
+                or raw["input_tokens"] > 4096 or primary.get("decision_input_tokens") != raw["input_tokens"]):
+            raise ValueError("baseline requires finite raw logits and a real untruncated native forward")
+        x = (logits[1] - logits[0]) / temperature
+        calculated = 1 / (1 + math.exp(-x)) if x >= 0 else math.exp(x) / (1 + math.exp(x))
+        approved = probability >= config["threshold"]
+        if (not math.isclose(calculated, probability, abs_tol=1e-12)
+                or decisions[0].get("round") != 1 or type(decisions[0].get("approved")) is not bool
+                or decisions[0]["approved"] != approved or decisions[0].get("draft_exact_match") != first_correct
+                or primary.get("stop_reason") != ("approved" if approved else "round_cap")):
+            raise ValueError("baseline probability/approval differs from raw score or threshold")
+        valid += 1
+        approvals += approved
+        correct_approvals += approved and first_correct
+        correct_rejections += not approved and first_correct
+    if (quality[policy]["completed"] != receipt["completed"] or valid != receipt["valid_decision_forwards"]
+            or manifest.get("actual_decision_requests") != counts["completed"]):
+        raise ValueError("baseline receipt counts differ from actual episodes/native calls")
+    calls = list(completed.values())
+    usage = {"completed_requests_including_invalid_outputs": len(calls), "unreconciled_requests": 0,
+        "reported_physical_input_tokens": sum(c["result"].get("physical_input_tokens", 0) for c in calls),
+        "reported_output_tokens": sum(c["result"].get("output_tokens", 0) for c in calls),
+        "requests_with_unknown_usage": sum(c["result"].get("input_tokens") is None for c in calls),
+        "reported_request_seconds": sum(c["request_elapsed_seconds"] for c in calls),
+        "hosted_cost_usd": sum(c["result"].get("cost_usd", 0) for c in calls)}
+    recorded = manifest.get("actual_evaluation_usage", {})
+    for key, value in usage.items():
+        if (type(value) not in (int, float) or not math.isfinite(value) or value < 0
+                or type(recorded.get(key)) not in (int, float)
+                or not math.isclose(value, recorded[key], abs_tol=1e-9)):
+            raise ValueError("baseline physical usage differs from native journal")
+    def duration(value):
+        if value is not None and (type(value) not in (int, float) or not math.isfinite(value) or value < 0):
+            raise ValueError("invalid bound baseline timing")
+        return value
+    phase, idle = (duration(manifest.get(k)) for k in ("this_invocation_wall_seconds", "this_invocation_intentional_idle_seconds"))
+    startup = manifest.get("backend_startup_this_invocation", {})
+    startup_wall, startup_idle = (duration(startup.get(k)) for k in ("wall_seconds", "intentional_idle_seconds"))
+    if (phase is not None and idle is not None and idle > phase
+            or startup_wall is not None and startup_idle is not None and startup_idle > startup_wall):
+        raise ValueError("baseline idle exceeds its corresponding wall scope")
+    return {"scope": "DEVELOPMENT cap1 before training; not fresh or repair performance", "policies": quality,
+        "approvals": approvals, "correct_approvals": correct_approvals, "wrong_approvals": approvals - correct_approvals,
+        "rejections_of_correct_drafts": correct_rejections, "valid_native_forwards": valid, "usage": usage,
+        "timing": {"startup_wall_seconds": startup_wall, "startup_idle_seconds": startup_idle,
+            "phase_wall_seconds": phase, "phase_idle_seconds": idle,
+            "startup_plus_phase_wall_seconds": startup_wall + phase if startup_wall is not None and phase is not None else None},
+        "journal_sha256": journal_hash}
+
+
 def training_valid(proof):
     if not proof:
         return False
@@ -563,7 +715,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     baseline = evidence.read(paths["baseline"], "untouched real-forward gate") if paths["baseline"] else None
     proof = evidence.read(paths["trained"] / "training-proof.json", "actual trained-head proof") if paths["trained"] else None
     gate, trained = baseline_valid(baseline), training_valid(proof)
-    warnings, validation_errors = [], []
+    warnings, validation_errors, baseline_result = [], [], None
     if reconciliation["completed_calls_without_saved_round"]:
         warnings.append(f"{reconciliation['completed_calls_without_saved_round']} completed TRAIN provider call(s) have no saved trajectory round. Their physical work is charged; they are not invented scored drafts.")
     if historical:
@@ -580,6 +732,13 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
             if not path.is_file() or digest(path) != baseline.get(key):
                 gate = False
                 warnings.append("Untouched gate result hash is missing or inconsistent.")
+        if gate:
+            try:
+                baseline_result = baseline_diagnostics(evidence, paths["baseline"], baseline, plan, campaign, campaign_run)
+            except (ValueError, KeyError, TypeError, OSError, OverflowError) as error:
+                gate = False
+                validation_errors.append({"stage": "untouched development baseline", "type": type(error).__name__, "detail": str(error)})
+                warnings.append("Untouched development diagnostics and native expense omitted: bound baseline evidence is incomplete or inconsistent.")
     if proof and baseline:
         if proof.get("original_head_file_sha256") != baseline.get("checkpoint_head_sha256"):
             trained = False
@@ -726,6 +885,16 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         "The untouched real-model 20-question gate must precede weight updates and bind final manifest/episode hashes. Successful native inference is distinct from mocked tests or CPU head replay. Training proof requires changed tensor hashes, positive weight delta, unchanged released source/adapter and matching reload logits.",
         "Training selects by disjoint tuning-question NLL; separate calibration questions fit each head's temperature using the same predeclared procedure. Neither phase may read fresh outcomes. Better training loss, successful reload and a changed head are not held-out improvement.",
     ], ["Proof", "Observed"], proof_rows))
+    if baseline_result:
+        sections.append(section("Untouched DEVELOPMENT first-draft results", [
+            "Recomputed from receipt-bound episodes and evaluator tasks, with raw critic responses/public inputs reconciled against the hash-bound native journal. The standalone summary is not used. All original planned questions remain in the denominator; failed episodes score zero.",
+            "This is the pre-training cap-one development gate. Fixed1 and completed Strands episodes return the same first answer; there is no revision opportunity, fresh comparison or training gain in these numbers.",
+            f"Approvals: {baseline_result['approvals']}; EM-correct approvals: {baseline_result['correct_approvals']}; "
+            f"EM-wrong approvals: {baseline_result['wrong_approvals']}; rejections of EM-correct drafts: {baseline_result['rejections_of_correct_drafts']}. "
+            "Approval correctness is conditional on approval, not all-question answer accuracy.",
+        ], ["Policy", "Complete/N", "Answer EM", "Token F1", "Scope"], [[
+            name, f"{row['completed']}/{row['planned_n']}", number(100 * row["em"], 2) + "%",
+            number(row["token_f1"], 6), "DEVELOPMENT / cap1"] for name, row in baseline_result["policies"].items()]))
     if calibration_rows:
         sections.append(section("Calibration evidence", ["Calibration NLL is measured on the fitting data, not confirmation performance."],
             ["Head", "Questions", "Temperature", "NLL T1", "NLL fitted"], calibration_rows))
@@ -785,6 +954,8 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         add_usage("TRAIN writer", manifest["actual_evaluation_usage"])
     if historical and historical["manifest"].get("actual_evaluation_usage"):
         add_usage("Historical TRAIN preparation", historical["manifest"]["actual_evaluation_usage"])
+    if baseline_result:
+        add_usage("Untouched DEVELOPMENT native decisions", baseline_result["usage"])
     if paired:
         for key in ("writer_generation_once", "real_encoder_features_once", "untuned_head_scoring", "tuned_head_scoring"):
             if paired.get("physical_evaluation_usage", {}).get(key):
@@ -800,6 +971,17 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         f"TRAIN invocation wall={number(manifest.get('this_invocation_wall_seconds'))}s; intentional idle={number(manifest.get('this_invocation_intentional_idle_seconds'))}s. Resumed invocations must not be confused with cumulative journal usage.",
         "Local hosted API cost of $0 leaves hardware/electricity unpriced. Counterfactual policy prefixes are not additional physical API calls or demonstrated deployment savings. Missing usage stays unknown or a stated lower bound, never fabricated zero. The historical Jev development PDF is a separate cohort/profile and is preserved unchanged.",
     ], ["Phase", "Calls/forwards", "Input tokens", "Output tokens", "Model seconds", "Hosted USD"], usage_rows))
+    if baseline_result:
+        timing = baseline_result["timing"]
+        sections.append(section("Untouched DEVELOPMENT wall and idle scopes", [
+            "Native request seconds in the physical-work table are a subset of replay-phase wall time. Backend startup is separate from that phase; only startup wall plus phase wall is summed here. Do not add request time again. Writer draft generation is a separate expense and is not included in this native-decision timing.",
+            "Phase intentional idle includes rests, resource holds and scheduling overshoot. Their residual is not an exact RAM-pause measurement. Hardware/electricity remain unpriced, and local hosted USD0 is not zero total cost.",
+        ], ["Timing scope", "Recorded seconds", "Interpretation"], [
+            ["Backend startup wall", number(timing["startup_wall_seconds"], 6), "Admission/construction/placement/rest"],
+            ["Replay phase wall", number(timing["phase_wall_seconds"], 6), "Native requests, phase rests and holds"],
+            ["Phase intentional idle", number(timing["phase_idle_seconds"], 6), "Inside phase wall; not added again"],
+            ["Startup plus phase wall", number(timing["startup_plus_phase_wall_seconds"], 6), "Separate scopes summed once"],
+        ]))
     if historical:
         old = historical["reconciliation"]
         sections.append(section("Historical TRAIN preparation coverage", [
@@ -838,7 +1020,9 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         "input_files": list(evidence.files.values()), "missing_inputs": evidence.missing,
         "artifact_roles": {k: str(v) if isinstance(v, Path) else v for k, v in paths.items()},
         "validation": {"untouched_gate": gate, "trained_head_proof": trained,
-                       "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete},
+                       "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete,
+                       "baseline_diagnostics": bool(baseline_result)},
+        "baseline_development": baseline_result,
         "train_reconciliation": reconciliation, "train_invocations": timings,
         "historical_train_expense": ({"run": str(historical_path),
             "status": historical["manifest"].get("status"),

@@ -3,6 +3,7 @@ from dataclasses import asdict
 from pathlib import Path
 import copy
 import json
+import math
 import shutil
 import tempfile
 import unittest
@@ -18,6 +19,60 @@ AS_OF = "2026-10-18T20:00:00-05:00"
 def write(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value), encoding="utf-8")
+
+
+def native_baseline_fixture(root, directory=None, released=None):
+    """Synthetic native-shaped records; never an actual model experiment."""
+    directory = directory or root / "study-runs/untuned-dev20-decisions"
+    released = released or root / "models/decider/head.safetensors"
+    if not released.exists():
+        released.parent.mkdir(parents=True, exist_ok=True)
+        released.write_bytes(b"SYNTHETIC RELEASED HEAD; NOT MODEL WEIGHTS")
+    tasks, episodes, events = [], [], []
+    for i in range(20):
+        qid, answer, correct = f"dev{i}", f"gold{i}" if i < 9 else f"wrong{i}", i < 9
+        task = {"id": qid, "question": f"Synthetic baseline question {i}?", "evidence": ["Synthetic evidence"],
+            "answers": [f"gold{i}"], "partition": "dev"}
+        tasks.append(task)
+        probability = .9 if i % 2 == 0 else .4
+        raw = {"p_true": probability, "logits": [0., math.log(probability / (1-probability))],
+            "temperature": 1., "input_tokens": 100+i, "physical_input_tokens": 100+i,
+            "elapsed_seconds": .01, "encoding_seconds": .005, "reused_encoding": False,
+            "answer": "true" if probability > .5 else "false", "model_id": "SYNTHETIC"}
+        public = {"state": {"question": task["question"], "evidence": task["evidence"], "draft": answer},
+            "model": "synthetic-baseline", "temperature": None}
+        request = f"{qid}|strands-untuned|decision|1"
+        events.extend([{"event": "request_started", "request_id": request, "input": public,
+            "input_sha256": fingerprint(public), "at_utc": f"2026-10-18T22:00:{i:02d}+00:00"},
+            {"event": "request_completed", "request_id": request, "input_sha256": fingerprint(public),
+            "result": raw, "request_elapsed_seconds": .5+i*.001}])
+        fixed = {"task_id": qid, "policy": "fixed-1-prefix", "status": "completed", "final_answer": answer,
+            "rounds": 1, "exact_match": correct, "token_f1": float(correct), "first_draft_exact_match": correct,
+            "decision_calls": 0, "decision_input_tokens": 0}
+        episodes.extend([fixed, {**fixed, "policy": "strands-untuned", "decision_calls": 1,
+            "decision_input_tokens": raw["input_tokens"], "stop_reason": "approved" if probability >= .8 else "round_cap",
+            "decisions": [{"round": 1, "approved": probability >= .8, "draft_exact_match": correct, "score": raw}]}])
+    write(directory / "tasks-evaluator-only.json", tasks)
+    write(directory / "episodes.json", episodes)
+    (directory / "requests.jsonl").write_text("".join(json.dumps(e)+"\n" for e in events))
+    write(directory / "manifest.json", {"status": "completed", "frozen": {"task_ids": [t["id"] for t in tasks],
+        "dataset_state_sha256": fingerprint(tasks), "source_sha256": "SYNTHETIC SOURCE",
+        "config": {"phase": "untuned_pretraining", "mode": "replay", "max_drafts": 1, "threshold": .8,
+            "decision_device": "cuda", "model_fingerprint": "synthetic-baseline", "policy_name": "strands-untuned"}},
+        "actual_decision_requests": 20, "actual_evaluation_usage": {"completed_requests_including_invalid_outputs": 20,
+            "unreconciled_requests": 0, "reported_physical_input_tokens": 2190, "reported_output_tokens": 0,
+            "requests_with_unknown_usage": 0, "reported_request_seconds": sum(.5+i*.001 for i in range(20)), "hosted_cost_usd": 0},
+        "this_invocation_wall_seconds": 120., "this_invocation_intentional_idle_seconds": 100.,
+        "backend_startup_this_invocation": {"wall_seconds": 3., "intentional_idle_seconds": 1.}})
+    receipt = directory / "untuned-pretraining-receipt.json"
+    write(receipt, {"phase": "untuned_pretraining", "attempted": 20, "completed": 20, "failed": 0,
+        "valid_decision_forwards": 20, "pending_requests": 0, "uncertain_requests": 0,
+        "checkpoint_head_sha256": report.digest(released), "planned_task_ids": [t["id"] for t in tasks],
+        "source_sha256": "SYNTHETIC SOURCE", "model": {"max_length": 4096},
+        "manifest_sha256": report.digest(directory / "manifest.json"),
+        "episodes_sha256": report.digest(directory / "episodes.json"),
+        "requests_sha256": report.digest(directory / "requests.jsonl")})
+    return directory
 
 
 def fixture(root, terminal=False, alternate=False, reserialized_control=False):
@@ -54,18 +109,11 @@ def fixture(root, terminal=False, alternate=False, reserialized_control=False):
     (train / "requests.jsonl").write_text("".join(json.dumps(x)+"\n" for x in events))
     if not terminal: return
     baseline = where("study-runs/untuned-dev20-decisions")
-    write(baseline / "manifest.json", {"status": "completed"})
-    write(baseline / "episodes.json", [])
     released = root / "models/decider/head.safetensors"
     released.parent.mkdir(parents=True)
     released.write_bytes(b"SYNTHETIC RELEASED HEAD; NOT MODEL WEIGHTS")
+    native_baseline_fixture(root, baseline, released)
     receipt = baseline / "untuned-pretraining-receipt.json"
-    write(receipt, {"phase": "untuned_pretraining", "attempted": 20, "completed": 20,
-        "failed": 0, "valid_decision_forwards": 20, "pending_requests": 0,
-        "uncertain_requests": 0, "checkpoint_head_sha256": report.digest(released),
-        "planned_task_ids": [f"dev{i}" for i in range(20)],
-        "manifest_sha256": report.digest(baseline / "manifest.json"),
-        "episodes_sha256": report.digest(baseline / "episodes.json")})
     trained = where("checkpoints/head-trained")
     trained.mkdir(parents=True)
     (trained / "head.safetensors").write_bytes(b"SYNTHETIC CHANGED HEAD; NOT MODEL WEIGHTS")
@@ -414,6 +462,14 @@ class ReportTests(unittest.TestCase):
                     "--phase", "untuned_pretraining", "--max-drafts", "1",
                     "--output", str(root / "study-runs/untuned-dev20-decisions"),
                     "--checkpoint-dir", str(root / "models/decider")]}]})
+            directory = root / "study-runs/untuned-dev20-decisions"
+            receipt = directory / "untuned-pretraining-receipt.json"
+            value = json.loads(receipt.read_text()); value.pop("requests_sha256"); write(receipt, value)
+            write(root / "campaign/campaign.json", {"status": "completed",
+                "plan_sha256": report.digest(root / "campaign/plan.json"), "stages": {
+                    "untuned_before_training": {"status": "completed", "output_sha256": {
+                        str(directory / name): report.digest(directory / name)
+                        for name in ("untuned-pretraining-receipt.json", "requests.jsonl")}}}})
             result = collect(root, 0)
             self.assertEqual(result["status"], "DRAFT / PARTIAL CHECKPOINT")
             self.assertTrue(result["validation"]["untouched_gate"])
@@ -422,6 +478,19 @@ class ReportTests(unittest.TestCase):
             self.assertIsNone(result["artifact_roles"]["cache_fit"])
             self.assertNotIn("EM %", report.plain_text(result))
             self.assertEqual(result["train_reconciliation"]["saved_trajectories"], 2)
+            self.assertTrue(result["validation"]["baseline_diagnostics"])
+            native = result["baseline_development"]
+            self.assertAlmostEqual(native["policies"]["strands-untuned"]["em"], .45)
+            self.assertAlmostEqual(native["policies"]["fixed-1-prefix"]["token_f1"], .45)
+            self.assertEqual((native["approvals"], native["correct_approvals"], native["wrong_approvals"],
+                              native["rejections_of_correct_drafts"]), (10, 5, 5, 4))
+            self.assertEqual(native["usage"]["completed_requests_including_invalid_outputs"], 20)
+            self.assertEqual(native["usage"]["reported_physical_input_tokens"], 2190)
+            self.assertEqual(native["timing"]["startup_plus_phase_wall_seconds"], 123.)
+            self.assertIn("DEVELOPMENT / cap1", report.plain_text(result))
+            usage = next(s for s in result["sections"] if s["title"].startswith("6."))["rows"]
+            self.assertEqual([(r[0], r[1]) for r in usage],
+                [("TRAIN writer", "2"), ("Untouched DEVELOPMENT native decisions", "20")])
             self.assertNotIn(str(root / "checkpoints/head-trained/training-proof.json"),
                 {r["path"] for r in result["input_files"]})
 
@@ -489,6 +558,45 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(report.journal_counts([{"event": "request_started", "request_id": "x"}])["pending"], 1)
         with self.assertRaises(ValueError): report.journal_counts([{"event": "request_completed", "request_id": "x"}])
         with self.assertRaises(ValueError): report.timestamp("2026-10-18T20:00:00")
+        for change in ("missing-journal", "unbound-journal", "quality", "raw-score", "usage", "tasks", "public-state", "idle", "summary", "missing-startup"):
+            with self.subTest(baseline_change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); fixture(root); directory = native_baseline_fixture(root)
+                receipt_path = directory / "untuned-pretraining-receipt.json"
+                receipt = json.loads(receipt_path.read_text())
+                if change == "missing-journal": (directory / "requests.jsonl").unlink()
+                elif change == "unbound-journal": receipt.pop("requests_sha256")
+                elif change == "quality":
+                    path = directory / "episodes.json"; rows = json.loads(path.read_text())
+                    rows[1]["exact_match"] = False; write(path, rows); receipt["episodes_sha256"] = report.digest(path)
+                elif change in ("usage", "idle", "missing-startup"):
+                    path = directory / "manifest.json"; value = json.loads(path.read_text())
+                    if change == "usage": value["actual_evaluation_usage"]["reported_physical_input_tokens"] += 1
+                    elif change == "idle": value["this_invocation_intentional_idle_seconds"] = 121.
+                    else: value.pop("backend_startup_this_invocation")
+                    write(path, value); receipt["manifest_sha256"] = report.digest(path)
+                elif change == "tasks":
+                    path = directory / "tasks-evaluator-only.json"; rows = json.loads(path.read_text())
+                    rows[0]["answers"] = ["different reference"]; write(path, rows)
+                elif change in ("raw-score", "public-state"):
+                    path = directory / "requests.jsonl"; rows = [json.loads(s) for s in path.read_text().splitlines()]
+                    if change == "raw-score": rows[1]["result"]["p_true"] = .1
+                    else:
+                        rows[0]["input"]["state"]["question"] = "Foreign public state"
+                        rows[0]["input_sha256"] = rows[1]["input_sha256"] = fingerprint(rows[0]["input"])
+                    path.write_text("".join(json.dumps(r)+"\n" for r in rows)); receipt["requests_sha256"] = report.digest(path)
+                else: write(directory / "summary.json", {"em": 1., "fabricated_summary": True})
+                write(receipt_path, receipt)
+                result = collect(root, 0)
+                if change in ("summary", "missing-startup"):
+                    self.assertTrue(result["validation"]["baseline_diagnostics"], result["validation_errors"])
+                    self.assertAlmostEqual(result["baseline_development"]["policies"]["strands-untuned"]["em"], .45)
+                    if change == "missing-startup":
+                        self.assertIsNone(result["baseline_development"]["timing"]["startup_plus_phase_wall_seconds"])
+                    self.assertNotIn(str(directory / "summary.json"), {r["path"] for r in result["input_files"]})
+                else:
+                    self.assertFalse(result["validation"]["untouched_gate"])
+                    self.assertIsNone(result["baseline_development"])
+                    self.assertFalse(any(r[0] == "Untouched DEVELOPMENT native decisions" for s in result["sections"] for r in s["rows"]))
 
     def test_completed_call_without_trajectory_remains_charged_and_missing(self):
         with tempfile.TemporaryDirectory() as temporary:

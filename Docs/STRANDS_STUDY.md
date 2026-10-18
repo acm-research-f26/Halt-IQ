@@ -6,10 +6,11 @@ and a compatible result export as the partner framework. The new writer prompt,
 PC hardware and resource profile are declared rather than treated as identical
 to historical partner runs. The primary model is Strands; Jev is a comparator.
 
-This is an experimental implementation checkpoint. Control/protocol tests and a
-20-request native Qwen writer pilot pass. Real Strands model inference, CUDA
-compatibility, trained weights and fresh evaluation need their own receipts;
-unit tests do not establish these results.
+This is an experimental implementation checkpoint. The actual untouched
+20-question Strands development gate has its own receipt-bound native journal,
+episodes and evaluator tasks. It is separate from control/protocol tests and the
+Qwen writer pilot. Trained weights and fresh evaluation still require their own
+receipts; unit tests do not establish model results.
 
 The pinned runtime queue is in
 `configs/strands/windows312-20261018-downloads.json`. It contains only public URLs,
@@ -177,7 +178,8 @@ no model loads. They check recorded tensor/weight provenance; the pre-fresh runt
 qualification separately performs the actual tensor comparison.
 
 The physical-work table covers the explicit `--train-run`, an optional explicitly
-selected historical TRAIN source, and selected confirmation phases. With a new
+selected historical TRAIN source, a validated untouched native development gate,
+and selected confirmation phases. With a new
 120 writer source, retain the earlier preparation expense through separate inputs:
 
 ```powershell
@@ -196,7 +198,34 @@ Historical missing trajectories remain missing, and an
 incomplete source cannot be relabeled terminal. No source is inferred from plan
 text or copied into a canonical alias to satisfy this option. Preserve the actual
 receipts, and do not describe this phase table as a complete campaign-cost total:
-unprovided setup, baseline or other phases remain separate evidence.
+unprovided setup, writer-generation, training or other phases remain separate
+evidence.
+
+The baseline table is explicitly **DEVELOPMENT / cap1 / before training**. Its
+official-style answer EM/token F1 are recomputed from receipt-bound episodes and
+the evaluator task snapshot, whose fingerprint must match the bound manifest.
+The loose `summary.json` is never an authority. Both Fixed1 and completed Strands
+episodes return the same first answer, so this gate cannot establish repair,
+fresh accuracy or a fine-tuning gain. Approval precision and rejection diagnostics
+are distinct from all-question answer accuracy, and failures keep the planned
+denominator.
+
+The native request journal also needs an exact SHA from the receipt, the reviewed
+plan's explicit `baseline_reuse` hashes, or a completed baseline stage's captured
+outputs under a matching executed plan. Every public question/evidence/draft input,
+raw critic response, probability/threshold decision and physical usage total is
+reconciled. Missing or inconsistent evidence suppresses baseline metrics/native
+expense and invalidates the untouched gate; it never falls back to an unrelated
+summary. These diagnostics can appear with the actual baseline-only V3 plan before
+any trained checkpoint or fresh result exists.
+
+Baseline native forwards/tokens/request seconds are charged once, separately from
+current and historical TRAIN writer expense. Backend-startup wall and replay-phase
+wall have separate recorded scopes; their sum excludes writer generation and
+request seconds must not be added again. Phase idle includes rests, resource holds
+and scheduling overshoot, so no residual is labeled exact RAM-pause time. Missing
+startup timing remains unknown rather than zero. This remains a partial physical
+phase table, not a complete campaign-cost or hardware/electricity estimate.
 
 Public sources:
 - https://github.com/strands-labs/strands-decider
