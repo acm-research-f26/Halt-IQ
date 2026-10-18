@@ -464,7 +464,7 @@ def checkpoint_fingerprint(evidence, directory):
     return fingerprint({str(p.relative_to(path)): evidence.record_file(p, "current checkpoint identity") for p in files})
 
 
-def artifact_paths(evidence, plan, n, campaign_dir=None):
+def artifact_paths(evidence, plan, n, campaign_dir=None, *, training_roles=None):
     """Resolve declared roles; an explicit plan never falls back to old artifacts."""
     defaults = {
         "baseline": "study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json",
@@ -476,7 +476,8 @@ def artifact_paths(evidence, plan, n, campaign_dir=None):
     }
     if plan is None:
         return {k: evidence.path(v) if v is not None else None for k, v in defaults.items()}
-    roles = {k: None for k in defaults}
+    roles = ({k: training_roles.get(k) for k in (*defaults, "control_copy_stage")}
+             if training_roles is not None else {k: None for k in defaults})
 
     def path(value):
         if campaign_dir:
@@ -526,7 +527,7 @@ def artifact_paths(evidence, plan, n, campaign_dir=None):
             kind = "trained" if checkpoint == roles["trained"] else "untuned"
             put(kind, str(checkpoint))
             put("calibration_" + kind, arg(step, "--output"))
-    if roles["untuned"] is not None:
+    if roles["untuned"] is not None and training_roles is None:
         copied = {roles["untuned"] / name for name in ("head.safetensors", "training-proof.json")}
         owners = [s for s in steps if copied <= {path(o["path"]) for o in s.get("outputs", [])}]
         if len(owners) > 1:
@@ -570,6 +571,64 @@ def artifact_paths(evidence, plan, n, campaign_dir=None):
     return roles
 
 
+def external_training_owner(evidence, directory, fresh_dir, fresh_plan, fresh_campaign):
+    """Validate a separate completed owner; never synthesize imported stages."""
+    from pc_strands.campaign import condition
+
+    directory, fresh_dir = evidence.path(directory), evidence.path(fresh_dir)
+    if directory == fresh_dir or fresh_plan.get("steps"):
+        raise ValueError("separate fresh plan must not import training stages")
+    fresh_ids = [s.get("id") for option in fresh_plan.get("fresh_options", []) for s in option.get("steps", [])]
+    if (not fresh_ids or any(not isinstance(name, str) or not name or
+            any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in name)
+            for name in fresh_ids) or len(set(fresh_ids)) != len(fresh_ids)
+            or not set((fresh_campaign or {}).get("stages", {})) <= set(fresh_ids)):
+        raise ValueError("fresh campaign state contains foreign/imported or ambiguous stage IDs")
+    plan = evidence.read(directory / "plan.json", "separate training frozen plan")
+    campaign = evidence.read(directory / "campaign.json", "separate completed training campaign")
+    if not plan or not campaign or plan.get("fresh_options") or campaign.get("status") != "completed":
+        raise ValueError("separate training owner requires its completed training-only campaign")
+    plan_hash = evidence.record_file(directory / "plan.json", "separate training plan identity")
+    reference = fresh_plan.get("training_campaign_reference", {})
+    if (not reference.get("path") or evidence.path(reference["path"]) != directory
+            or reference.get("final_plan_sha256") != plan_hash or campaign.get("plan_sha256") != plan_hash
+            or reference.get("terminal_campaign_sha256") != evidence.record_file(
+                directory / "campaign.json", "separate terminal training identity")):
+        raise ValueError("fresh plan does not bind the exact separate training plan/campaign")
+    source = plan.get("reviewed_source_sha256", {})
+    if (len(source) != 15 or source != campaign.get("source_sha256")
+            or source != fresh_plan.get("reviewed_source_sha256")
+            or source != (fresh_campaign or {}).get("source_sha256")
+            or not plan.get("model_pins") or plan["model_pins"] != fresh_plan.get("model_pins")):
+        raise ValueError("separate training/fresh source or model pins differ")
+    for owner in (directory, fresh_dir):
+        package = owner / "source/pc_strands"
+        if {p.name for p in package.glob("*.py")} != set(source):
+            raise ValueError("separate campaign frozen source coverage differs")
+        for name, expected in source.items():
+            if evidence.record_file(package / name, "separate campaign frozen runtime") != expected:
+                raise ValueError("separate campaign frozen source changed")
+    steps = plan.get("steps", [])
+    ids = [s.get("id") for s in steps]
+    if (not ids or None in ids or len(set(ids)) != len(ids) or set(campaign.get("stages", {})) != set(ids)
+            or set(ids) & set(fresh_ids)):
+        raise ValueError("separate training stage coverage differs from its actual plan")
+    for step in steps:
+        stage = campaign["stages"][step["id"]]
+        expected_argv = [x.replace("{source}", str(directory / "source")).replace("{run}", str(directory))
+                         for x in step["argv"]]
+        outputs = {evidence.path(o["path"]): o for o in step.get("outputs", [])}
+        captured = {evidence.path(p): h for p, h in stage.get("output_sha256", {}).items()}
+        if (stage.get("status") != "completed" or stage.get("exit_code") != 0
+                or stage.get("argv") != expected_argv or not outputs or set(outputs) != set(captured)):
+            raise ValueError("separate training completed stage/captured-output contract differs")
+        for path, spec in outputs.items():
+            if (evidence.record_file(path, "actual training owning-stage output") != captured[path]
+                    or not condition(spec)):
+                raise ValueError("separate training captured stage output changed")
+    return plan, campaign, directory
+
+
 def control_valid(evidence, paths, trained, baseline, campaign):
     """Receipt tensor identity permits honest safetensors reserialization."""
     if not trained or not baseline or any(paths.get(k) is None for k in ("released", "trained", "untuned")):
@@ -609,7 +668,7 @@ def calibration_valid(evidence, kind, excluded, paths):
         and config.get("temperature_by_kind", {}).get("noul") == fit.get("temperature"))
 
 
-def confirmation(evidence, n, as_of, campaign_dir, campaign, plan, paths, baseline, trained):
+def confirmation(evidence, n, as_of, campaign_dir, campaign, plan, paths, baseline, trained, *, control_campaign=None):
     """Verify cohort timing and independently recompute the canonical pure join."""
     from pc_strands.compare import compare_runs
     from pc_strands.data import load_tasks
@@ -667,7 +726,7 @@ def confirmation(evidence, n, as_of, campaign_dir, campaign, plan, paths, baseli
         name, directory = paths[kind + "_policy"], paths[kind]
         if raw.get("model_fingerprints", {}).get(name) != checkpoint_fingerprint(evidence, directory):
             raise ValueError("comparison does not bind current primary checkpoints")
-    if not control_valid(evidence, paths, trained, baseline, campaign):
+    if not control_valid(evidence, paths, trained, baseline, control_campaign if control_campaign is not None else campaign):
         raise ValueError("unchanged control tensor/adapter/source-head linkage is not verified")
     excluded = ids + trained.get("fit_question_ids", []) + trained.get("tune_question_ids", [])
     if not all(calibration_valid(evidence, kind, excluded, paths) for kind in ("untuned", "trained")):
@@ -685,7 +744,8 @@ def section(title, paragraphs=(), headers=(), rows=()):
 
 
 def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=None, campaign_run=None,
-                   train_segments=(), historical_train_run=None, historical_train_segments=()):
+                   train_segments=(), historical_train_run=None, historical_train_segments=(),
+                   training_campaign_run=None):
     if fresh_n not in (0, 20, 50, 100):
         raise ValueError("explicit fresh N must be0,20,50 or100")
     as_of = timestamp(as_of).isoformat()
@@ -694,7 +754,14 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     plan = evidence.read(evidence.path(campaign_run) / "plan.json", "explicit frozen campaign plan") if campaign_run else None
     if campaign_run and plan is None:
         raise ValueError("explicit campaign plan is missing; canonical artifacts cannot supply its roles")
-    paths = artifact_paths(evidence, plan, 0, campaign_run)
+    owner_plan, owner_campaign, owner_dir = plan, campaign, campaign_run
+    if training_campaign_run:
+        if not campaign_run or not plan:
+            raise ValueError("separate training owner requires an explicit fresh campaign/plan")
+        owner_plan, owner_campaign, owner_dir = external_training_owner(
+            evidence, training_campaign_run, campaign_run, plan, campaign)
+    paths = artifact_paths(evidence, owner_plan, 0, owner_dir)
+    training_roles = paths.copy() if training_campaign_run else None
     train = evidence.path(train_run)
     if paths["train_source"] is not None and train != paths["train_source"]:
         raise ValueError("explicit TRAIN source differs from reviewed campaign cache source")
@@ -734,7 +801,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
                 warnings.append("Untouched gate result hash is missing or inconsistent.")
         if gate:
             try:
-                baseline_result = baseline_diagnostics(evidence, paths["baseline"], baseline, plan, campaign, campaign_run)
+                baseline_result = baseline_diagnostics(evidence, paths["baseline"], baseline, owner_plan, owner_campaign, owner_dir)
             except (ValueError, KeyError, TypeError, OSError, OverflowError) as error:
                 gate = False
                 validation_errors.append({"stage": "untouched development baseline", "type": type(error).__name__, "detail": str(error)})
@@ -775,14 +842,15 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     subset = evidence.read(cohort_manifest, "explicit selected TRAIN cohort") if cohort_manifest else None
     if subset and "PROPOSED" in subset.get("status", ""):
         warnings.append("Supplied TRAIN subset remains proposed; it is not an adopted training result.")
-    control = control_valid(evidence, paths, proof, baseline, campaign)
+    control = control_valid(evidence, paths, proof, baseline, owner_campaign)
     paired = None
     if fresh_n:
         if not campaign_run:
             raise ValueError("positive fresh N requires an explicit frozen campaign and plan")
         try:
-            paths = artifact_paths(evidence, plan, fresh_n, campaign_run)
-            paired = confirmation(evidence, fresh_n, as_of, campaign_run, campaign, plan, paths, baseline, proof or {})
+            paths = artifact_paths(evidence, plan, fresh_n, campaign_run, training_roles=training_roles)
+            paired = confirmation(evidence, fresh_n, as_of, campaign_run, campaign, plan, paths, baseline, proof or {},
+                control_campaign=owner_campaign)
             if paired and not (gate and trained):
                 raise ValueError("untouched gate and trained-head proof must both be verified")
         except (ValueError, KeyError, TypeError, OSError) as error:
@@ -813,6 +881,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         f"reasons: {', '.join(train_control.get('reasons', [])) or 'none recorded'}. "
         "A resource hold preserves completed requests rather than repeating them.",
         f"Explicit campaign state: {(campaign or {}).get('status', 'not supplied')}. Launching a supervisor is not a model forward.",
+        *( ["A separate completed training campaign owns TRAIN caches, checkpoint updates and calibration. Its actual stage captures are verified directly; fresh evaluation does not import or recreate those stages."] if training_campaign_run else [] ),
     ], ["Evidence", "Declared", "Observed", "Interpretation"], coverage))
     config = manifest.get("frozen", {}).get("config", {})
     writer, settings = config.get("writer", {}), config.get("writer_settings", {})
@@ -1017,6 +1086,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     evidence.stable()
     return {"title": "HaltIQ Strands study", "status": status, "as_of": as_of,
         "fresh_n": fresh_n, "train_run": str(train), "sections": sections,
+        "training_campaign_run": str(evidence.path(training_campaign_run)) if training_campaign_run else None,
         "input_files": list(evidence.files.values()), "missing_inputs": evidence.missing,
         "artifact_roles": {k: str(v) if isinstance(v, Path) else v for k, v in paths.items()},
         "validation": {"untouched_gate": gate, "trained_head_proof": trained,
@@ -1134,13 +1204,15 @@ def main():
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--cohort-manifest")
     parser.add_argument("--campaign-run")
+    parser.add_argument("--training-campaign-run", help="Explicit completed training-only owner for a separate fresh-only campaign; exact plan/state/source/output identities required")
     parser.add_argument("--train-segment", action="append", default=[], help="Explicit archived TRAIN segment directory, in chronological order; receipt required")
     parser.add_argument("--historical-train-run", help="One explicit earlier TRAIN writer source, physical expense only; never merged into the selected cohort")
     parser.add_argument("--historical-train-segment", action="append", default=[], help="Explicit archive of that historical source, in chronological order; receipt required")
     args = parser.parse_args()
     report = collect_report(args.input_root, args.train_run, args.fresh_n, args.as_of,
         cohort_manifest=args.cohort_manifest, campaign_run=args.campaign_run, train_segments=args.train_segment,
-        historical_train_run=args.historical_train_run, historical_train_segments=args.historical_train_segment)
+        historical_train_run=args.historical_train_run, historical_train_segments=args.historical_train_segment,
+        training_campaign_run=args.training_campaign_run)
     provenance = write_report(report, args.output_dir)
     print(json.dumps({"status": report["status"], "pdf_pages": provenance["pdf_pages"], "output": str(args.output_dir)}))
 

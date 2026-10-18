@@ -245,6 +245,60 @@ def collect(root, n=20):
         campaign_run="campaign" if (root / "campaign/plan.json").exists() else None)
 
 
+def split_campaign_fixture(root):
+    """Separate synthetic owners; no training rows imported into fresh state."""
+    fixture(root, True, alternate=True)
+    fresh = root / "campaign"
+    original = json.loads((fresh / "plan.json").read_text())
+    owner = root / "training-campaign-v8"
+    core = copy.deepcopy(original["steps"])
+    for i, step in enumerate(core):
+        step.setdefault("id", f"training-stage-{i}")
+        argv = step["argv"]
+        if "pc_strands.train_head" in argv:
+            directory = Path(argv[argv.index("--output")+1])
+            outputs = [directory / "head.safetensors", directory / "training-proof.json"]
+        elif "pc_strands.decider" in argv:
+            path = Path(argv[argv.index("--output")+1])
+            if not path.exists(): write(path, {"synthetic_calibration_features": True})
+            outputs = [path]
+        elif "pc_strands.calibrate" in argv:
+            directory = Path(argv[argv.index("--checkpoint")+1])
+            outputs = [Path(argv[argv.index("--output")+1]), directory / "calibration-proof.json",
+                directory / "strands_decider_config.json", directory / "head.safetensors"]
+        else:
+            outputs = [Path(o["path"]) for o in step["outputs"]]
+        step["outputs"] = [{"path": str(path)} for path in outputs]
+    source = {}
+    for i, name in enumerate(sorted(p.name for p in (Path(report.__file__).parents[1] / "pc_strands").glob("*.py"))):
+        for directory in (owner, fresh):
+            path = directory / "source/pc_strands" / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(f"# Synthetic source identity only {i}; never executed\n")
+        source[name] = report.digest(path)
+    pins = {"base_revision": "synthetic-base", "decider_revision": "synthetic-decider"}
+    training_plan = {"steps": core, "fresh_options": [], "reviewed_source_sha256": source, "model_pins": pins}
+    write(owner / "plan.json", training_plan)
+    write(owner / "campaign.json", {"status": "completed", "plan_sha256": report.digest(owner / "plan.json"),
+        "source_sha256": source, "stages": {step["id"]: {"status": "completed", "exit_code": 0,
+            "argv": step["argv"], "output_sha256": {o["path"]: report.digest(o["path"]) for o in step["outputs"]}}
+            for step in core}})
+    original.update(steps=[], reviewed_source_sha256=source, model_pins=pins,
+        training_campaign_reference={"path": str(owner), "final_plan_sha256": report.digest(owner / "plan.json"),
+            "terminal_campaign_sha256": report.digest(owner / "campaign.json")})
+    for i, step in enumerate(original["fresh_options"][0]["steps"]):
+        step["id"] = f"fresh20-stage-{i}"
+    write(fresh / "plan.json", original)
+    freeze = json.loads((root / "fresh-N-freeze.json").read_text())
+    freeze["plan_sha256"] = report.digest(fresh / "plan.json")
+    write(root / "fresh-N-freeze.json", freeze); write(fresh / "fresh-freeze.json", freeze)
+    state = json.loads((fresh / "campaign.json").read_text())
+    state.update(plan_sha256=freeze["plan_sha256"], fresh_freeze_sha256=report.digest(root / "fresh-N-freeze.json"),
+        source_sha256=source, stages={})
+    write(fresh / "campaign.json", state)
+    return owner, fresh
+
+
 def rebound_comparison(root):
     """Rebind synthetic fingerprints so identity-link tests reach the control gate."""
     evidence = report.Evidence(root)
@@ -313,6 +367,61 @@ def historical_expense_fixture(root):
 
 
 class ReportTests(unittest.TestCase):
+    def test_separate_training_owner_supplies_real_roles_without_imported_stages(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); owner, fresh = split_campaign_fixture(root)
+            result = report.collect_report(root, "study-runs/train", 20, AS_OF,
+                campaign_run=fresh, training_campaign_run=owner)
+            self.assertTrue(result["validation"]["complete_checkpoint"], result["validation_errors"])
+            self.assertTrue(result["validation"]["unchanged_control_proof"])
+            self.assertEqual(result["training_campaign_run"], str(owner))
+            self.assertEqual(json.loads((fresh / "campaign.json").read_text())["stages"], {})
+            self.assertEqual(Path(result["artifact_roles"]["trained"]),
+                root / "checkpoints/train120-original-v4/head-trained")
+            self.assertNotIn(str(root), report.plain_text(result))
+            partial = report.collect_report(root, "study-runs/train", 0, AS_OF,
+                campaign_run=fresh, training_campaign_run=owner)
+            self.assertEqual(partial["status"], "DRAFT / PARTIAL CHECKPOINT")
+            self.assertTrue(partial["validation"]["baseline_diagnostics"])
+            self.assertNotIn("EM %", report.plain_text(partial))
+
+    def test_separate_training_plan_stage_source_and_import_tampering_fail_closed(self):
+        for change in ("plan", "stage-capture", "stage-argv", "source", "import", "state-import", "reference"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); owner, fresh = split_campaign_fixture(root)
+                if change == "plan":
+                    path = owner / "plan.json"; value = json.loads(path.read_text()); value["tampered"] = True
+                elif change in ("stage-capture", "stage-argv"):
+                    path = owner / "campaign.json"; value = json.loads(path.read_text())
+                    stage = next(iter(value["stages"].values()))
+                    if change == "stage-capture": stage["output_sha256"][next(iter(stage["output_sha256"]))] = "wrong"
+                    else: stage["argv"].append("unrecorded-change")
+                    write(path, value)
+                    fp = fresh / "plan.json"; f = json.loads(fp.read_text())
+                    f["training_campaign_reference"]["terminal_campaign_sha256"] = report.digest(path); write(fp, f)
+                elif change == "source":
+                    path = fresh / "source/pc_strands/decider.py"; path.write_text("# Synthetic changed frozen source\n")
+                elif change == "state-import":
+                    path = fresh / "campaign.json"; value = json.loads(path.read_text())
+                    value["stages"]["copy_released_for_calibration"] = {"status": "completed"}; write(path, value)
+                else:
+                    path = fresh / "plan.json"; value = json.loads(path.read_text())
+                    if change == "import": value["steps"] = json.loads((owner / "plan.json").read_text())["steps"]
+                    else: value["training_campaign_reference"]["path"] = str(root / "unrelated-training")
+                if change in ("plan", "import", "reference"): write(path, value)
+                with self.assertRaises(ValueError):
+                    report.collect_report(root, "study-runs/train", 20, AS_OF,
+                        campaign_run=fresh, training_campaign_run=owner)
+
+    def test_separate_training_owner_is_explicit_and_cannot_fallback_to_old_roles(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); owner, fresh = split_campaign_fixture(root)
+            without_owner = report.collect_report(root, "study-runs/train", 20, AS_OF, campaign_run=fresh)
+            self.assertFalse(without_owner["validation"]["complete_checkpoint"])
+            self.assertIsNone(without_owner["artifact_roles"]["trained"])
+            with self.assertRaisesRegex(ValueError, "explicit fresh campaign"):
+                report.collect_report(root, "study-runs/train", 0, AS_OF, training_campaign_run=owner)
+
     def test_partial_preserves_denominator_and_omits_quality_and_private_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); fixture(root); result = collect(root, 0)

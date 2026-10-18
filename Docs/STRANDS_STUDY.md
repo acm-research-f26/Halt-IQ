@@ -164,6 +164,31 @@ Private provenance records the resolved role paths. The operator freeze comes
 from `operator_fresh_freeze_path` (the historical default is `fresh-N-freeze.json`)
 and must exactly match the campaign's copied, plan-bound freeze.
 
+If genuine training/calibration and later fresh evaluation belong to separate
+campaigns, keep both owners explicit:
+
+```powershell
+--campaign-run <actual-fresh-only-campaign> --training-campaign-run <actual-completed-training-only-campaign>
+```
+
+The fresh-only plan must have no imported base stages. Its
+recorded stage IDs must be a subset of its uniquely declared fresh-option stages,
+with no training-stage names imported into fresh state. Its
+`training_campaign_reference` must name that training directory and bind its exact
+frozen plan and terminal campaign hashes. The builder checks completed training
+stage coverage, resolved actual argv, every captured output hash/output contract,
+both frozen fifteen-file source snapshots and identical model pins. Training
+commands supply TRAIN/cache/checkpoint/calibration roles; fresh commands supply
+only the held-out roles. The unchanged-control copy remains owned by its actual
+training stage, including the pre-calibration captured hashes. It is never copied
+into fresh campaign state. Missing or tampered ownership is rejected, with no
+canonical aliases or silent role fallback. All existing canonical rescoring,
+baseline, weight-change, adapter, calibration, cohort-freeze and physical-expense
+checks still apply. The existing single-campaign interface remains valid; use it
+with fresh N0 to report a partial training-only checkpoint before a later fresh
+campaign exists. The two-owner option does not establish training completion or
+held-out improvement without the actual validated evidence.
+
 The unchanged-control proof must link its head tensor hash to the trained proof's
 original tensor hash. The released source head must also match the untouched gate
 and training proof, and the released, control and trained adapter files must all
