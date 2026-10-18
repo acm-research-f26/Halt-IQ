@@ -257,6 +257,31 @@ class StudyEvaluationTests(unittest.TestCase):
             manifest = json.loads((base / "e/manifest.json").read_text())
             self.assertEqual(manifest["actual_evaluation_usage"]["reported_physical_input_tokens"], 0)
 
+    def test_replay_phase_idle_excludes_prior_startup_wait(self):
+        from unittest.mock import patch
+        clock = {"seconds": 0.0}
+        class PriorStartupGuard(NoWait):
+            idle_seconds = 100.0
+            def after(self, elapsed):
+                clock["seconds"] += elapsed
+                self.idle_seconds += elapsed
+        class TimedDecider(FakeDecider):
+            def score(self, *args, **kwargs):
+                clock["seconds"] += 2.0
+                return super().score(*args, **kwargs)
+        task = Task("hotpotqa:1", "q", ["e"], ["right"])
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            trajectories = generate_trajectories([task], FakeWriter(), base / "source", config(1), NoWait())
+            with patch("pc_strands.evaluate.time.perf_counter", side_effect=lambda: clock["seconds"]):
+                replay_trajectories([task], trajectories, TimedDecider(), base / "result", config(1),
+                                    PriorStartupGuard(), startup_metadata={"intentional_idle_seconds": 100.0})
+            manifest = json.loads((base / "result/manifest.json").read_text())
+            self.assertEqual(manifest["this_invocation_wall_seconds"], 4.0)
+            self.assertEqual(manifest["this_invocation_intentional_idle_seconds"], 2.0)
+            self.assertLessEqual(manifest["this_invocation_intentional_idle_seconds"], manifest["this_invocation_wall_seconds"])
+            self.assertEqual(manifest["backend_startup_this_invocation"]["intentional_idle_seconds"], 100.0)
+
     def test_head_replay_rejects_changed_cache_before_loading_torch(self):
         with tempfile.TemporaryDirectory() as d:
             cache = Path(d) / "cache.jsonl"
@@ -288,7 +313,7 @@ class StudyEvaluationTests(unittest.TestCase):
                 generate_trajectories(tasks, FakeWriter(), base / "source", {**config(1), "writer_system": WRITER_SYSTEM}, NoWait())
                 checkpoint = base / "checkpoint"
                 checkpoint.mkdir()
-                state, events = {"held": False, "admitted": False}, []
+                state, events = {"held": False, "admitted": False, "constructed": False, "activated": False}, []
                 test = self
                 lock = base / "shared.lock"
                 class ObservedLease:
@@ -309,6 +334,8 @@ class StudyEvaluationTests(unittest.TestCase):
                         self.deadline = float("inf")
                     def before(self):
                         test.assertTrue(state["held"])
+                        if mode == "replay" and state["constructed"] and not state["activated"]:
+                            raise RuntimeError("simulated low host RAM until CPU weights move to CUDA")
                         state["admitted"] = True
                         events.append("admitted")
                 class Backend(FakeDecider):
@@ -320,8 +347,15 @@ class StudyEvaluationTests(unittest.TestCase):
                                 pass
                         events.append("constructed")
                         super().__init__()
+                        state["constructed"] = True
                         self.frozen = {"trajectories_sha256": hashlib.sha256((base / "source/trajectories.json").read_bytes()).hexdigest()}
                         self.cache_manifest_sha256 = "observed-cache-manifest"
+                    def activate(self):
+                        test.assertEqual(mode, "replay", "CPU head-only replay must not activate a torso")
+                        test.assertTrue(state["held"] and state["admitted"])
+                        state["activated"] = True
+                        events.append("activated")
+                        return 0
                     def metadata(self):
                         test.assertTrue(state["held"] and state["admitted"])
                         return {**super().metadata(), "feature_cache_sha256": "observed-cache"}
@@ -337,6 +371,11 @@ class StudyEvaluationTests(unittest.TestCase):
                           "--max-drafts", "1", "--gpu-lock", str(lock), "--deadline", "2099-01-01T20:00:00-05:00"])
                 self.assertEqual(events[:3], ["owned", "admitted", "constructed"])
                 self.assertEqual(events[-2:], ["offloaded", "released"])
+                saved = json.loads((base / "result/manifest.json").read_text())
+                self.assertEqual(saved["backend_startup_this_invocation"]["explicit_activation"], mode == "replay")
+                self.assertNotIn("backend_startup_this_invocation", saved["frozen"]["config"])
+                if mode == "replay":
+                    self.assertLess(events.index("activated"), len(events) - 2)
 
     def test_cli_denied_startup_never_constructs_backend(self):
         from unittest.mock import patch

@@ -6,6 +6,7 @@ import math
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from pc_strands.calibrate import binary_metrics, fit_temperature, validate_rows
 from pc_strands.decider import (
@@ -62,6 +63,113 @@ class PublicInputTests(unittest.TestCase):
 
 
 class CachedTrainingTests(unittest.TestCase):
+    def test_cache_cli_activates_admitted_cpu_load_before_rechecking_ram(self):
+        from pc_strands.decider import main
+        from pc_strands.control import GpuLease as ActualLease, ResourcePressure
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "tasks-evaluator-only.json").write_text(json.dumps([{"id": "q", "question": "Q?",
+                "evidence": ["E"], "answers": ["reference"], "partition": "fit"}]))
+            (root / "trajectories.json").write_text(json.dumps([{"task_id": "q", "status": "completed",
+                "rounds": [{"round": 1, "status": "completed", "draft": "draft"}]}]))
+            (root / "manifest.json").write_text(json.dumps({"status": "completed", "writer_unload_verified": True}))
+            lock, output = root / "owned.lock", root / "features.jsonl"
+            state, events = {"held": False, "loaded": False, "active": False}, []
+            test = self
+            class Lease:
+                def __init__(self, path, _): self.actual = ActualLease(path, "test")
+                def __enter__(self):
+                    self.actual.__enter__(); state["held"] = True; events.append("owned")
+                def __exit__(self, *args):
+                    self.actual.__exit__(*args); state["held"] = False; events.append("released")
+            class Admission:
+                def __init__(self, *args): pass
+                def before_work(self, **kwargs):
+                    test.assertTrue(state["held"])
+                    if state["loaded"] and not state["active"]:
+                        raise RuntimeError("simulated host RAM below threshold until placement")
+                    events.append("admitted")
+                def rest_after_block(self, _):
+                    test.assertTrue(state["active"])
+            class Backend:
+                device, max_length = "cuda", 4096
+                def __init__(self, *args, **kwargs):
+                    test.assertTrue(state["held"])
+                    test.assertEqual(events[-1], "admitted")
+                    with test.assertRaises(ResourcePressure):
+                        with ActualLease(lock, "conflict"): pass
+                    state["loaded"] = True; events.append("loaded_cpu")
+                def activate(self): state["active"] = True; events.append("activated"); return 0
+                def metadata(self): return {"adapter_sha256": "mock-only"}
+                def extract(self, state_value, order):
+                    test.assertTrue(state["active"])
+                    return FeatureRecord([0.] * 2048, [[0.] * 2048, [1.] * 2048], tuple(order), 100, "p", "s", .1)
+                def offload(self): state["active"] = False; events.append("offloaded")
+            argv = ["decider", "cache", "--checkpoint", str(root / "checkpoint"), "--base", str(root / "base"),
+                    "--trajectory-dir", str(root), "--output", str(output), "--partition", "fit",
+                    "--canonical-order-only", "--deadline", "2099-01-01T20:00:00-05:00", "--gpu-lock", str(lock)]
+            with patch("sys.argv", argv), patch("pc_strands.control.GpuLease", Lease), \
+                 patch("pc_strands.control.RunControl", Admission), patch("pc_strands.decider.StrandsDecider", Backend):
+                main()
+            self.assertEqual(events[:4], ["owned", "admitted", "loaded_cpu", "activated"])
+            self.assertEqual(events[-1], "released")
+            saved = json.loads(Path(str(output) + ".manifest.json").read_text())
+            self.assertTrue(saved["backend_startup_this_invocation"]["explicit_activation"])
+            self.assertEqual(saved["physical_encoding_usage"]["completed_encoder_forwards"], 1)
+
+    def test_cache_activation_failure_cleans_owned_backend_and_releases_lease(self):
+        from pc_strands.decider import main
+        from pc_strands.control import GpuLease as ActualLease
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); lock = root / "owned.lock"; events = []
+            class Admission:
+                def __init__(self, *args): pass
+                def before_work(self, **kwargs): pass
+            class Backend:
+                def __init__(self, *args, **kwargs): events.append("constructed")
+                def activate(self): raise RuntimeError("mock placement failure")
+                def offload(self): events.append("offloaded")
+            argv = ["decider", "cache", "--checkpoint", "unused", "--base", "unused", "--trajectory-dir", str(root),
+                    "--output", str(root / "features"), "--deadline", "2099-01-01T20:00:00-05:00", "--gpu-lock", str(lock)]
+            with patch("sys.argv", argv), patch("pc_strands.control.RunControl", Admission), \
+                 patch("pc_strands.decider.StrandsDecider", Backend), self.assertRaisesRegex(RuntimeError, "placement failure"):
+                main()
+            self.assertEqual(events, ["constructed", "offloaded"])
+            with ActualLease(lock, "successfully reacquired"):
+                pass
+
+    def test_cache_phase_idle_excludes_prior_startup_wait(self):
+        clock = {"seconds": 0.0}
+        class Control:
+            idle_seconds = 100.0
+            def before_work(self, **kwargs):
+                clock["seconds"] += 3.0
+                self.idle_seconds += 3.0
+            def rest_after_block(self, elapsed):
+                clock["seconds"] += elapsed
+                self.idle_seconds += elapsed
+        class Backend:
+            device, max_length = "cpu", 4096
+            def metadata(self): return {"adapter_sha256": "mock-only"}
+            def extract(self, state, order):
+                clock["seconds"] += 2.0
+                return FeatureRecord([0.] * 2048, [[0.] * 2048, [1.] * 2048], tuple(order), 100, "p", "s", 2.0)
+            def offload(self): pass
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "tasks-evaluator-only.json").write_text(json.dumps([{"id": "q", "question": "Q?",
+                "evidence": ["E"], "answers": ["reference"], "partition": "fit"}]))
+            (root / "trajectories.json").write_text(json.dumps([{"task_id": "q", "status": "completed",
+                "rounds": [{"round": 1, "status": "completed", "draft": "draft"}]}]))
+            (root / "manifest.json").write_text(json.dumps({"status": "completed", "writer_unload_verified": True}))
+            with patch("pc_strands.decider.time.perf_counter", side_effect=lambda: clock["seconds"]):
+                result = cache_trajectories(Backend(), root, root / "features.jsonl", control=Control(),
+                                            startup_metadata={"intentional_idle_seconds": 100.0})
+            self.assertEqual(result["this_invocation_wall_seconds"], 7.0)
+            self.assertEqual(result["this_invocation_intentional_idle_seconds"], 3.0)
+            self.assertLessEqual(result["this_invocation_intentional_idle_seconds"], result["this_invocation_wall_seconds"])
+            self.assertEqual(result["backend_startup_this_invocation"]["intentional_idle_seconds"], 100.0)
+
     def test_baseline_keeps_failure_denominator_but_requires_real_finished_forward(self):
         receipt = {"phase": "untuned_pretraining", "planned_task_ids": [f"q{i}" for i in range(20)],
                    "attempted": 20, "completed": 0, "failed": 20, "valid_decision_forwards": 1,

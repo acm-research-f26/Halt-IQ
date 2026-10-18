@@ -373,7 +373,8 @@ class StrandsDecider:
 
 def cache_trajectories(decider: StrandsDecider, trajectory_dir: str | Path, output: str | Path, *,
                        partition: str | None = None, all_rounds: bool = False,
-                       both_orders: bool = True, control=None, resume: bool = False) -> dict:
+                       both_orders: bool = True, control=None, resume: bool = False,
+                       startup_metadata=None) -> dict:
     """Encode public trajectory states once; evaluator labels stay outside state.
 
     Call under the study's GPU lease after unloading its writer. Resume refuses
@@ -382,6 +383,8 @@ def cache_trajectories(decider: StrandsDecider, trajectory_dir: str | Path, outp
     from .data import Task
     from .metrics import evaluate
 
+    phase_started = time.perf_counter()
+    idle_at_phase_entry = getattr(control, "idle_seconds", 0.0)
     source, destination = Path(trajectory_dir), Path(output)
     tasks_file, rounds_file = source / "tasks-evaluator-only.json", source / "trajectories.json"
     source_manifest = json.loads((source / "manifest.json").read_text(encoding="utf-8"))
@@ -477,6 +480,8 @@ def cache_trajectories(decider: StrandsDecider, trajectory_dir: str | Path, outp
                 "selected_questions": len(tasks), "resumed": resume,
                 "source_trajectories_not_completed": sum(by_id[t.id].get("status") != "completed" for t in tasks),
                 "measurement_mode": "real_frozen_encoder_features_not_head_replay"}
+    if startup_metadata is not None:
+        manifest["backend_startup_this_invocation"] = startup_metadata
     atomic_json(manifest_path, manifest)
     orders = ((0, 1), (1, 0)) if both_orders else ((0, 1),)
     block_start, failed, encoded = None, 0, 0
@@ -541,7 +546,10 @@ def cache_trajectories(decider: StrandsDecider, trajectory_dir: str | Path, outp
                         finished_dispatches=len(completed), cached_rows_sha256=(
                             sha256_file(destination) if destination.exists() else None),
                         events_sha256=sha256_file(events_path) if events_path.exists() else None,
-                        failures_sha256=sha256_file(failures_path) if failures_path.exists() else None)
+                        failures_sha256=sha256_file(failures_path) if failures_path.exists() else None,
+                        this_invocation_wall_seconds=time.perf_counter() - phase_started,
+                        this_invocation_intentional_idle_seconds=getattr(control, "idle_seconds", 0.0) - idle_at_phase_entry,
+                        timing_scope="feature-cache phase only; startup admission/construction/placement/rest are separate")
         events = ([json.loads(x) for x in events_path.read_text(encoding="utf-8").splitlines()]
                   if events_path.exists() else [])
         successes = [e for e in events if e["event"] == "completed"]
@@ -574,25 +582,41 @@ def main() -> None:
     parser.add_argument("--deadline", required=True, help="ISO8601 with timezone offset")
     parser.add_argument("--gpu-lock", required=True)
     args = parser.parse_args()
+    if args.mode == "cache" and not args.trajectory_dir:
+        parser.error("cache requires --trajectory-dir")
+    if args.mode == "preflight" and not args.state_json:
+        parser.error("preflight requires --state-json")
     control = RunControl(Path(str(args.output) + ".control"), args.deadline)
-    control.before_work(require_gpu=args.device == "cuda")
     with GpuLease(Path(args.gpu_lock), "strands-feature-encoding"):
-        decider = StrandsDecider(DeciderPaths(args.checkpoint, args.base), device=args.device)
-        if args.mode == "cache":
-            if not args.trajectory_dir:
-                parser.error("cache requires --trajectory-dir")
-            cache_trajectories(decider, args.trajectory_dir, args.output, partition=args.partition,
-                               all_rounds=args.all_rounds, both_orders=not args.canonical_order_only,
-                               control=control, resume=args.resume)
-        else:
-            if not args.state_json:
-                parser.error("preflight requires --state-json")
-            try:
+        startup_started = time.perf_counter()
+        idle_before_startup = getattr(control, "idle_seconds", 0.0)
+        control.before_work(require_gpu=args.device == "cuda")
+        decider = None
+        try:
+            started = time.perf_counter()
+            decider = StrandsDecider(DeciderPaths(args.checkpoint, args.base), device=args.device)
+            construction = time.perf_counter() - started
+            started = time.perf_counter()
+            decider.activate()
+            startup = {"device": args.device, "explicit_activation": True,
+                       "construction_seconds": construction,
+                       "placement_seconds": time.perf_counter() - started}
+            control.rest_after_block(startup["construction_seconds"] + startup["placement_seconds"])
+            startup["intentional_idle_seconds"] = getattr(control, "idle_seconds", 0.0) - idle_before_startup
+            startup["wall_seconds"] = time.perf_counter() - startup_started
+            if args.mode == "cache":
+                cache_trajectories(decider, args.trajectory_dir, args.output, partition=args.partition,
+                                   all_rounds=args.all_rounds, both_orders=not args.canonical_order_only,
+                                   control=control, resume=args.resume, startup_metadata=startup)
+            else:
+                control.before_work(require_gpu=args.device == "cuda")
                 state = json.loads(Path(args.state_json).read_text(encoding="utf-8"))
                 result = decider.score(state).to_dict()
                 result["metadata"] = decider.metadata()
+                result["backend_startup_this_invocation"] = startup
                 Path(args.output).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-            finally:
+        finally:
+            if decider is not None:
                 decider.offload()
 
 

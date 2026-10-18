@@ -524,7 +524,8 @@ def validate_trajectories(tasks, trajectories):
     return by_id
 
 
-def replay_trajectories(tasks, trajectories, decider, output, config, guard, *, resume=False):
+def replay_trajectories(tasks, trajectories, decider, output, config, guard, *, resume=False,
+                        startup_metadata=None):
     """Score real cached public states, then replay identical generic-feedback loops.
 
     This is not live wall-time evidence. Operational prefixes and physical scoring
@@ -540,6 +541,7 @@ def replay_trajectories(tasks, trajectories, decider, output, config, guard, *, 
         policies.append(policy + "-cap3")
     episodes = []
     started = time.perf_counter()
+    idle_at_phase_entry = guard.idle_seconds
     try:
         for task in tasks:
             _assert_source(manifest)
@@ -616,11 +618,14 @@ def replay_trajectories(tasks, trajectories, decider, output, config, guard, *, 
         decider.offload()
         manifest.update(finished_at_utc=datetime.now(timezone.utc).isoformat(),
             this_invocation_wall_seconds=time.perf_counter() - started,
-            this_invocation_intentional_idle_seconds=guard.idle_seconds,
+            this_invocation_intentional_idle_seconds=guard.idle_seconds - idle_at_phase_entry,
+            timing_scope="replay phase only; backend startup admission/construction/placement/rest are separate",
             measurement_mode="trajectory_replay_not_live_wall_time",
             actual_decision_requests=len(journal.completed),
             actual_evaluation_usage=physical_usage(journal),
             operational_cost="Observed writer/decision prefixes are counterfactual policy usage; complete cache generation/scoring is evaluation expense")
+        if startup_metadata is not None:
+            manifest["backend_startup_this_invocation"] = startup_metadata
         completed_decisions = sum(r["status"] == "completed" and r["policy"] == policy for r in episodes)
         attempted = sum(r["policy"] == policy for r in episodes)
         valid_forwards = sum("p_true" in e["result"] and e["result"].get("physical_input_tokens", 0) > 0 for e in journal.completed.values())
@@ -740,6 +745,8 @@ def main(argv=None):
         trajectories = [r for r in trajectories if r["task_id"] in keep]
         validate_trajectories(tasks, trajectories)
         with GpuLease(Path(args.gpu_lock), "strands-trajectory-replay"):
+            startup_started = time.perf_counter()
+            idle_before_startup = guard.idle_seconds
             guard.before()
             from .decider import DeciderPaths, StrandsDecider
             files = sorted(p for p in Path(args.checkpoint_dir).rglob("*") if p.is_file())
@@ -747,17 +754,35 @@ def main(argv=None):
                 threshold=args.threshold, temperature=args.temperature, policy_name=args.policy_name,
                 backend_source_sha256=hashlib.sha256((Path(__file__).parent / "decider.py").read_bytes()).hexdigest(),
                 model_fingerprint=fingerprint({str(p.relative_to(args.checkpoint_dir)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}))
-            if args.mode == "head-replay":
-                decider = CachedHeadDecider(args.checkpoint_dir, args.feature_cache, max_drafts=args.max_drafts)
-                if decider.frozen["trajectories_sha256"] != config["trajectory_sha256"]:
-                    raise ValueError("Feature cache came from a different writer trajectory")
-                config.update(feature_cache_sha256=decider.metadata()["feature_cache_sha256"],
-                              feature_manifest_sha256=decider.cache_manifest_sha256,
-                              head_replay_no_torso_loaded=True)
-            else:
-                decider = StrandsDecider(DeciderPaths(Path(args.checkpoint_dir), Path(args.base_dir)), device=args.device, seed=42)
-            replay_trajectories(tasks, trajectories, decider,
-                                args.output, config, guard, resume=args.resume)
+            decider, startup = None, {"device": config["decision_device"], "explicit_activation": args.mode == "replay"}
+            try:
+                started = time.perf_counter()
+                if args.mode == "head-replay":
+                    decider = CachedHeadDecider(args.checkpoint_dir, args.feature_cache, max_drafts=args.max_drafts)
+                else:
+                    decider = StrandsDecider(DeciderPaths(Path(args.checkpoint_dir), Path(args.base_dir)), device=args.device, seed=42)
+                startup["construction_seconds"] = time.perf_counter() - started
+                started = time.perf_counter()
+                if args.mode == "replay":
+                    # The admitted startup block includes CPU->target placement.
+                    # A second RAM gate while weights are still on CPU can prevent
+                    # the move that releases their host storage.
+                    decider.activate()
+                startup["placement_seconds"] = time.perf_counter() - started
+                if args.mode == "head-replay":
+                    if decider.frozen["trajectories_sha256"] != config["trajectory_sha256"]:
+                        raise ValueError("Feature cache came from a different writer trajectory")
+                    config.update(feature_cache_sha256=decider.metadata()["feature_cache_sha256"],
+                                  feature_manifest_sha256=decider.cache_manifest_sha256,
+                                  head_replay_no_torso_loaded=True)
+                guard.after(startup["construction_seconds"] + startup["placement_seconds"])
+                startup["intentional_idle_seconds"] = guard.idle_seconds - idle_before_startup
+                startup["wall_seconds"] = time.perf_counter() - startup_started
+                replay_trajectories(tasks, trajectories, decider,
+                                    args.output, config, guard, resume=args.resume, startup_metadata=startup)
+            finally:
+                if decider is not None:
+                    decider.offload()
 
 
 if __name__ == "__main__":
