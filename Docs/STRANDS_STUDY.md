@@ -91,6 +91,26 @@ honest experiment is acceptable. Do not claim six hours of active testing from
 setup/download/waiting time, a quality gain from training proof alone, or a
 successful Strands run before actual native receipts exist.
 
+## Professor report generation
+
+The maintained builder reads explicit evidence without model loads or API calls.
+Use the document Python with ReportLab and pypdf installed; study runtime packages
+alone do not supply the PDF renderer. For a partial checkpoint, pass fresh N0:
+
+```powershell
+<document-python> -X utf8 -B tools/build_strands_report.py --input-root <runtime> --train-run study-runs/train600-fixed1 --fresh-n 0 --campaign-run campaign-main-v2-20261018 --as-of 2026-10-18T20:30:00-05:00 --output-dir <new-empty-report-directory>
+```
+
+Choose the actual checkpoint timestamp rather than copying the example date.
+For N20/50/100, the builder requires the explicit campaign plan, its adopted
+answer-blind freeze, exact cohort IDs and pre-generation timing. It re-runs the
+pure canonical comparison, verifies current trained/untouched checkpoints and
+calibration, and omits quality tables if proof is incomplete. It emits a new PDF,
+plain text and private provenance JSON; it refuses to overwrite older reports.
+Public PDF/text references use relative source labels; provenance retains local
+paths. Render every page with Poppler and inspect all pages before sharing.
+Synthetic tests validate reporting contracts; they are not Strands results.
+
 Public sources:
 - https://github.com/strands-labs/strands-decider
 - https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610
