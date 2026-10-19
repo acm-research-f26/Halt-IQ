@@ -860,6 +860,106 @@ def development_sections(result):
     return sections
 
 
+def selected_train_description(evidence, plan, campaign, owner, manifest, tasks):
+    """Describe the selected source; ancestor proposals are a separate cohort."""
+    counts = Counter(t.get("partition", "unknown") for t in tasks)
+    description = (f"Selected TRAIN for this report: {len(tasks)} planned questions, "
+        f"FIT {counts['fit']} / TUNE {counts['tune']} / CALIBRATION {counts['calibration']}. "
+        "This source's generation and native features are separate from historical preparation expense.")
+    source = (plan or {}).get("training_source", {})
+    if not source or not owner:
+        return description
+    if (not isinstance(source, dict) or not isinstance(campaign, dict) or not isinstance(manifest, dict)
+            or not isinstance(manifest.get("frozen"), dict) or not isinstance(manifest["frozen"].get("config"), dict)):
+        raise ValueError("selected TRAIN owner/source state is missing or malformed")
+    selected = [s for specs in plan.get("prerequisites", {}).values()
+        for s in (specs if isinstance(specs, list) else [specs])
+        if s.get("sha256") == source.get("manifest_sha256")]
+    if len(selected) != 1:
+        raise ValueError("selected TRAIN manifest is not uniquely pinned by its owner")
+    selection = evidence.read(selected[0]["path"], "selected TRAIN blind original-partition sampling")
+    if not isinstance(selection, dict) or not isinstance(selection.get("selection"), dict):
+        raise ValueError("selected TRAIN sampling manifest is missing or malformed")
+    if (campaign.get("status") != "completed" or campaign.get("plan_sha256") != evidence.record_file(
+            evidence.path(owner) / "plan.json", "selected TRAIN adopted plan")
+            or evidence.record_file(selected[0]["path"], "selected TRAIN sampling identity") != source["manifest_sha256"]
+            or source.get("dataset_sha256") != manifest.get("frozen", {}).get("config", {}).get("dataset_sha256")
+            or source.get("planned_n") != len(tasks)
+            or selection.get("count") != len(tasks) or selection.get("ordered_task_ids") != [t["id"] for t in tasks]
+            or selection.get("partition_counts") != dict(counts)
+            or selection.get("selection", {}).get("uses_only") != ["canonical_question_id", "local_partition", "source_row.type"]
+            or selection["selection"].get("no_repartitioning") is not True):
+        raise ValueError("selected TRAIN source/sampling/adoption identities differ")
+    return description + (" Its answer-blind reduction ranked canonical IDs by a seed42 hash within original "
+        "partition and public question type, retained original order/partitions, and excluded answers, outcomes, "
+        "draft availability and context length from selection. The preserved selection manifest still says "
+        "PROPOSED; actual execution is established separately by the completed owning campaign.")
+
+
+def captured_phase_usage(evidence, plan, campaign, owner, step, expected_ids, *, head=False):
+    """Reuse captured-stage audit and the existing pure physical-usage reducer."""
+    from types import SimpleNamespace
+    from pc_strands.evaluate import physical_usage
+    if not isinstance(plan, dict) or not isinstance(campaign, dict):
+        raise ValueError("physical-phase owning plan/state is missing or malformed")
+    q = development_auditor(evidence).q
+    owner = evidence.path(owner); bound = q.Evidence()
+    if (campaign.get("status") != "completed" or campaign.get("plan_sha256") != evidence.record_file(
+            owner / "plan.json", "physical-phase owning plan")):
+        raise ValueError("physical-phase campaign is not its completed frozen owner")
+    stage = q.stage(bound, campaign, step, owner / "source", owner)
+    for path, expected in bound.files.items():
+        if evidence.record_file(path, "captured physical-phase input") != expected:
+            raise ValueError("physical-phase captured output changed")
+    directory = evidence.path(q.argument(step, "--output"))
+    captured = {evidence.path(p) for p in stage.get("output_sha256", {})}
+    if not {directory / name for name in ("manifest.json", "requests.jsonl", "tasks-evaluator-only.json")} <= captured:
+        raise ValueError("physical-phase owning capture omits manifest/journal/tasks")
+    manifest = evidence.read(directory / "manifest.json", "physical-phase manifest")
+    events = evidence.read(directory / "requests.jsonl", "physical-phase raw journal", lines=True)
+    tasks = evidence.read(directory / "tasks-evaluator-only.json", "physical-phase planned tasks")
+    if (not isinstance(manifest, dict) or not isinstance(manifest.get("frozen"), dict)
+            or not isinstance(manifest["frozen"].get("config"), dict)
+            or not isinstance(tasks, list) or any(not isinstance(t, dict) for t in tasks)):
+        raise ValueError("physical-phase manifest/tasks are missing or malformed")
+    counts = journal_counts(events); cfg = manifest["frozen"]["config"]
+    if (manifest["status"] not in TERMINAL or manifest["frozen"]["task_ids"] != expected_ids
+            or [t["id"] for t in tasks] != expected_ids
+            or any(t.get("partition") != ("calibration" if head else "dev") for t in tasks)
+            or cfg.get("max_drafts") != 1 or cfg.get("mode") != ("head-replay" if head else "generate")
+            or cfg.get("phase") != "development"
+            or counts["pending"] or counts["errors"]):
+        raise ValueError("physical-phase protocol/coverage/journal differs")
+    policy = cfg.get("policy_name") if head else "fixed"
+    wanted = {f"{qid}|{policy}|{'decision' if head else 'writer'}|1" for qid in expected_ids}
+    if {e["request_id"] for e in events} != wanted:
+        raise ValueError("physical-phase requests differ from planned first drafts")
+    completed = {e["request_id"]: e for e in events if e["event"] == "request_completed"}
+    for event in completed.values():
+        result = event["result"]
+        if not isinstance(result, dict):
+            raise ValueError("physical-phase raw result is malformed")
+        values = (result.get("input_tokens"), result.get("physical_input_tokens", result.get("input_tokens")),
+            result.get("output_tokens", 0), result.get("cost_usd", 0),
+            event.get("request_elapsed_seconds", result.get("elapsed_seconds")))
+        if any(type(v) not in (int, float) or not math.isfinite(v) or v < 0 for v in values):
+            raise ValueError("physical-phase request usage is missing or invalid")
+    actual = physical_usage(SimpleNamespace(completed=completed, pending=set()))
+    usage = manifest["actual_evaluation_usage"]
+    if not isinstance(usage, dict):
+        raise ValueError("physical-phase usage is malformed")
+    for key, value in actual.items():
+        if key == "note": continue
+        if (type(value) not in (int, float) or not math.isfinite(value) or value < 0
+                or type(usage.get(key)) not in (int, float) or not math.isclose(usage[key], value, abs_tol=1e-9)):
+            raise ValueError("physical-phase manifest/raw usage differs")
+    if actual["requests_with_unknown_usage"] or (head and (cfg.get("decision_device") != "cpu"
+            or cfg.get("head_replay_no_torso_loaded") is not True or actual["reported_physical_input_tokens"] != 0
+            or any(e["result"].get("reused_encoding") is not True or e["result"].get("physical_input_tokens") != 0 for e in completed.values()))):
+        raise ValueError("physical-phase usage is unknown or CPU cache reuse differs")
+    return directory, actual
+
+
 def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=None, campaign_run=None,
                    train_segments=(), historical_train_run=None, historical_train_segments=(),
                    training_campaign_run=None, development_diagnostic=None):
@@ -1011,11 +1111,18 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     ], ["Evidence", "Declared", "Observed", "Interpretation"], coverage))
     config = manifest.get("frozen", {}).get("config", {})
     writer, settings = config.get("writer", {}), config.get("writer_settings", {})
+    tasks = evidence.read(train / "tasks-evaluator-only.json", "selected TRAIN planned partitions") or []
+    try:
+        selected_description = selected_train_description(evidence, owner_plan, owner_campaign, owner_dir, manifest, tasks)
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        selected_description = f"Selected TRAIN source: {planned} planned questions; saved partitions {dict(partitions)}. Original-partition selection provenance was not verified."
+        warnings.append("Selected TRAIN sampling description omitted: owner-bound evidence differs.")
     dataset_metadata = evidence.read(evidence.root.parent / "research-2026-10-18-strands/official-train600-candidate/manifest.json", "official TRAIN selection and exclusion audit") or {}
     evidence.record_file(evidence.root.parent / "preflight-2026-10-18/PROFESSOR-METHODS-DRAFT.txt", "historical methods and HotpotQA attribution")
     sections.append(section("2. Dataset and architecture", [
         "The task is short-answer HotpotQA with all supplied distractor paragraphs, titles and sentence order. Questions, evidence and the current draft are public model inputs; references, supporting facts and correctness labels are evaluator-only. Answer metrics use official-style normalized exact match and token F1.",
         "Official TRAIN and public validation must be disjoint by ID and normalized question. The original 600-question training proposal uses 400 fit / 100 tune / 100 calibration cases; its six fixed 100-row source blocks are not an IID sample of all 90,447 TRAIN questions. A resource-driven TRAIN reduction requires a separately adopted manifest before learning, with original partitions and parent provenance preserved.",
+        selected_description,
         f"Dataset attribution: HotpotQA (https://hotpotqa.github.io/), CC-BY-SA 4.0; selected source revision {dataset_metadata.get('source_revision', 'not supplied')}. Preserve source attribution and the recorded ID/question exclusion audit when distributing derived data.",
         f"Selected training dataset SHA256: {config.get('dataset_sha256', 'not supplied')}. "
         f"Explicit cohort manifest status: {(subset or {}).get('status', 'none supplied')}; "
@@ -1061,6 +1168,8 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         ["Fit questions / tune questions / rows", f"{(proof or {}).get('fit_questions', 'not recorded')} / {(proof or {}).get('tune_questions', 'not recorded')} / {(proof or {}).get('fit_rows', 'not recorded')}+{(proof or {}).get('tune_rows', 'not recorded')}"],
         ["Head delta L2 / reload error", f"{number((proof or {}).get('head_delta_l2'), 8)} / {number((proof or {}).get('reload_max_logit_error'), 8)}"],
         ["Selection / elapsed seconds", f"{(proof or {}).get('selection', 'not recorded')} / {number((proof or {}).get('elapsed_seconds'))}"],
+        ["Total candidate-fit epochs / optimizer steps", f"{len((proof or {}).get('history', []))} / {sum(r.get('optimizer_steps', 0) for r in (proof or {}).get('history', []))}" if (proof or {}).get('history') else "not recorded"],
+        ["Selected saved checkpoint LR / epoch", f"{(proof or {}).get('selected', {}).get('lr', 'not recorded')} / {(proof or {}).get('selected', {}).get('epoch', 'not recorded')}"],
         ["Source head / adapter unchanged", f"{(proof or {}).get('source_head_unchanged', 'not recorded')} / {(proof or {}).get('source_adapter_unchanged', 'not recorded')}"],
         ["Untouched control tensor / adapter linkage", "verified" if control else "not verified"],
         ["Released head SHA256", str((baseline or {}).get("checkpoint_head_sha256", "not recorded"))],
@@ -1080,6 +1189,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     sections.append(section("4. Untouched baseline, training and calibration", [
         "The untouched real-model 20-question gate must precede weight updates and bind final manifest/episode hashes. Successful native inference is distinct from mocked tests or CPU head replay. Training proof requires changed tensor hashes, positive weight delta, unchanged released source/adapter and matching reload logits.",
         "Training selects by disjoint tuning-question NLL; separate calibration questions fit each head's temperature using the same predeclared procedure. Neither phase may read fresh outcomes. Better training loss, successful reload and a changed head are not held-out improvement.",
+        "Optimizer steps and candidate epochs describe total candidate-fit work across learning-rate trials. The selected saved checkpoint contains its selected trial/epoch prefix; it need not accumulate every candidate's updates.",
     ], ["Proof", "Observed"], proof_rows))
     if baseline_result:
         sections.append(section("Untouched DEVELOPMENT first-draft results", [
@@ -1154,6 +1264,49 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         add_usage("Historical TRAIN preparation", historical["manifest"]["actual_evaluation_usage"])
     if baseline_result:
         add_usage("Untouched DEVELOPMENT native decisions", baseline_result["usage"])
+    extra_phases = {train, paths["baseline"].parent} if paths.get("baseline") else {train}
+    if historical_path: extra_phases.add(historical_path)
+    if owner_plan and owner_dir and baseline_result:
+        try:
+            wanted = owner_plan.get("baseline_reuse", {}).get("actual_v3_plan_sha256")
+            specs = [s for group in owner_plan.get("prerequisites", {}).values()
+                for s in (group if isinstance(group, list) else [group]) if wanted and s.get("sha256") == wanted]
+            if len(specs) == 1:
+                old_plan = evidence.read(specs[0]["path"], "original DEVELOPMENT writer owner")
+                old_owner = evidence.path(specs[0]["path"]).parent
+                old_state = evidence.read(old_owner / "campaign.json", "original DEVELOPMENT completed owner")
+                if evidence.record_file(specs[0]["path"], "original DEVELOPMENT plan identity") != wanted:
+                    raise ValueError("original DEVELOPMENT plan changed")
+                candidates = [s for s in old_plan["steps"] if "pc_strands.evaluate" in s["argv"] and "generate" in s["argv"]]
+                if len(candidates) != 1: raise ValueError("ambiguous original DEVELOPMENT writer")
+                directory, usage = captured_phase_usage(evidence, old_plan, old_state, old_owner, candidates[0], baseline["planned_task_ids"])
+                if evidence.read(directory / "tasks-evaluator-only.json", "original DEVELOPMENT writer tasks") != evidence.read(paths["baseline"].parent / "tasks-evaluator-only.json", "original DEVELOPMENT baseline tasks"):
+                    raise ValueError("original DEVELOPMENT writer tasks differ")
+                if directory in extra_phases: raise ValueError("duplicate physical phase")
+                extra_phases.add(directory); add_usage("Original DEVELOPMENT writer once", usage)
+        except (ValueError, KeyError, TypeError, OSError):
+            warnings.append("Original DEVELOPMENT writer expense omitted: owning-stage/raw accounting was not verified.")
+    if (owner_plan and owner_dir and gate and trained and control
+            and any("head-replay" in s.get("argv", []) for s in owner_plan.get("steps", []))):
+        for kind in ("untuned", "trained"):
+            try:
+                q = development_auditor(evidence).q
+                fit_path = paths.get("calibration_" + kind)
+                if fit_path is None: raise ValueError("CAL fit role not supplied")
+                directory = fit_path.parent
+                matches = [s for s in owner_plan["steps"] if "head-replay" in s["argv"]
+                    and evidence.path(q.argument(s, "--output")) == directory
+                    and evidence.path(q.argument(s, "--checkpoint-dir")) == paths[kind]
+                    and q.argument(s, "--partition") == "calibration"]
+                if len(matches) != 1: continue
+                fit = evidence.read(paths["calibration_" + kind], kind + " CAL planned questions")
+                ids = evidence.read(directory / "manifest.json", kind + " CAL order")["frozen"]["task_ids"]
+                if set(ids) != set(fit["question_ids"]): raise ValueError("CAL planned IDs differ")
+                directory, usage = captured_phase_usage(evidence, owner_plan, owner_campaign, owner_dir, matches[0], ids, head=True)
+                if directory in extra_phases: raise ValueError("duplicate physical phase")
+                extra_phases.add(directory); add_usage("CALIBRATION " + kind + " CPU head", usage)
+            except (ValueError, KeyError, TypeError, OSError):
+                warnings.append(kind + " CAL CPU expense omitted: owning-stage/raw accounting was not verified.")
     if development:
         encoding = development["encoding_expense"]
         add_usage("Secondary DEVELOPMENT encoder once", {"completed_encoder_forwards": encoding["physical_encoder_forwards"],

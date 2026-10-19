@@ -289,6 +289,28 @@ are descriptive. New native encoding and each CPU head replay are charged once
 as separate physical phases; the reused writer drafts incur no new writer calls.
 Private provenance and machine paths are not public website assets.
 
+The report names the **actual selected TRAIN cohort** and planned original
+FIT/TUNE/CALIBRATION counts separately from the ancestor600 proposal and its
+historical physical expense. A blind-reduction description requires the adopted
+owner's pinned selection manifest, matching dataset/order/counts and ID/partition/
+public-type selection fields. A preserved `PROPOSED` data-manifest label is not
+rewritten: completed execution belongs to the separate actual campaign. Total
+candidate-fit epochs/optimizer steps come from `training-proof.json` history;
+selected LR/epoch is shown separately because the saved checkpoint need not
+contain updates from every candidate trial.
+
+When explicitly owned by the current protocol, the physical table also counts
+the original development writer once and each CALIBRATION CPU head replay once.
+The original writer owner is resolved through the already-pinned V3 prerequisite
+plan SHA, and its tasks must match the native baseline. Existing captured-stage
+auditing verifies terminal argv/output identities; raw request journals recompute
+manifest totals using the frozen physical-usage definitions. Pending/unknown,
+negative/nonfinite or inconsistent usage is omitted with a qualification. CAL
+head rows require declared calibration/head roles and real CPU cache reuse with
+zero additional physical encoder tokens. These rows are separate from native
+baseline decisions, TRAIN encoders and optional post-training development work;
+no row sum becomes a complete hardware/campaign-cost claim.
+
 Public sources:
 - https://github.com/strands-labs/strands-decider
 - https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610

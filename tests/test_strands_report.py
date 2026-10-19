@@ -404,6 +404,78 @@ def historical_expense_fixture(root):
 
 
 class ReportTests(unittest.TestCase):
+    def test_selected_actual90_description_preserves_blind_groups_not_ancestor600(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary); owner=root/"owner"
+            tasks=[{"id":f"s{i}","partition":"fit" if i<60 else "tune" if i<75 else "calibration"} for i in range(90)]
+            selection={"status":"PROPOSED_NOT_ADOPTED","count":90,"ordered_task_ids":[t["id"] for t in tasks],
+                "partition_counts":{"fit":60,"tune":15,"calibration":15},"selection":{"uses_only":["canonical_question_id","local_partition","source_row.type"],"no_repartitioning":True}}
+            chosen=root/"selection.json";write(chosen,selection)
+            plan={"training_source":{"manifest_sha256":report.digest(chosen),"dataset_sha256":"selected-dataset","planned_n":90},
+                "prerequisites":{"selected":[{"path":str(chosen),"sha256":report.digest(chosen)}]}}
+            write(owner/"plan.json",plan);state={"status":"completed","plan_sha256":report.digest(owner/"plan.json")}
+            manifest={"frozen":{"config":{"dataset_sha256":"selected-dataset"}}}
+            value=report.selected_train_description(report.Evidence(root),plan,state,owner,manifest,tasks)
+            self.assertIn("90 planned questions, FIT 60 / TUNE 15 / CALIBRATION 15",value)
+            self.assertIn("answer-blind reduction",value);self.assertIn("historical preparation expense",value)
+            self.assertIn("manifest still says PROPOSED",value)
+            with self.assertRaisesRegex(ValueError,"owner/source state"):
+                report.selected_train_description(report.Evidence(root),plan,None,owner,manifest,tasks)
+            write(chosen,["malformed"])
+            with self.assertRaisesRegex(ValueError,"sampling manifest"):
+                report.selected_train_description(report.Evidence(root),plan,state,owner,manifest,tasks)
+            selection["selection"]["uses_only"].append("outcome");write(chosen,selection)
+            with self.assertRaises(ValueError):report.selected_train_description(report.Evidence(root),plan,state,owner,manifest,tasks)
+
+    def test_training_work_total_is_distinct_from_selected_checkpoint_prefix(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);fixture(root,True);path=root/"checkpoints/head-trained/training-proof.json"
+            proof=json.loads(path.read_text());proof.update(history=[{"lr":lr,"epoch":epoch,"optimizer_steps":2} for lr in (1e-5,5e-5) for epoch in (1,2,3)],selected={"lr":1e-5,"epoch":1});write(path,proof)
+            result=collect(root,0);rows=next(s for s in result["sections"] if s["title"].startswith("4."))["rows"]
+            self.assertIn(["Total candidate-fit epochs / optimizer steps","6 / 12"],rows)
+            self.assertIn(["Selected saved checkpoint LR / epoch","1e-05 / 1"],rows)
+            self.assertIn("need not accumulate every candidate's updates",report.plain_text(result))
+
+    def test_captured_physical_usage_reconciles_raw_writer_and_zero_encoder_cpu_head(self):
+        from types import SimpleNamespace
+        # The independently reviewed capture auditor is mocked only at its boundary.
+        for head,n in ((False,20),(True,15)):
+            with self.subTest(head=head),tempfile.TemporaryDirectory() as temporary:
+                root=Path(temporary);owner=root/"owner";directory=root/"phase";ids=[f"q{i}" for i in range(n)]
+                step={"id":"phase","argv":["python","--output",str(directory)]};plan={"steps":[step]};write(owner/"plan.json",plan)
+                state={"status":"completed","plan_sha256":report.digest(owner/"plan.json")};events=[]
+                for qid in ids:
+                    key=f"{qid}|{'critic|decision' if head else 'fixed|writer'}|1"
+                    events.extend([{"event":"request_started","request_id":key},{"event":"request_completed","request_id":key,"request_elapsed_seconds":.5,
+                        "result":{"input_tokens":100,"output_tokens":0 if head else 3,"physical_input_tokens":0 if head else 100,"reused_encoding":head,"cost_usd":0}}])
+                directory.mkdir();journal=directory/"requests.jsonl";journal.write_text(''.join(json.dumps(e)+'\n' for e in events))
+                usage={"completed_requests_including_invalid_outputs":n,"unreconciled_requests":0,"reported_physical_input_tokens":0 if head else 100*n,
+                    "reported_output_tokens":0 if head else 3*n,"requests_with_unknown_usage":0,"reported_request_seconds":.5*n,"hosted_cost_usd":0}
+                m={"status":"completed","frozen":{"task_ids":ids,"config":{"mode":"head-replay" if head else "generate","phase":"development","max_drafts":1,
+                    "policy_name":"critic","decision_device":"cpu","head_replay_no_torso_loaded":True}},"actual_evaluation_usage":usage}
+                write(directory/"manifest.json",m)
+                write(directory/"tasks-evaluator-only.json",[{"id":qid,"partition":"calibration" if head else "dev"} for qid in ids])
+                capture={"output_sha256":{str(directory/name):report.digest(directory/name) for name in ("manifest.json","requests.jsonl","tasks-evaluator-only.json")}}
+                q=SimpleNamespace(Evidence=lambda:SimpleNamespace(files={}),stage=Mock(return_value=capture),argument=lambda s,flag:s["argv"][s["argv"].index(flag)+1])
+                with patch.object(report,"development_auditor",return_value=SimpleNamespace(q=q)):
+                    _,actual=report.captured_phase_usage(report.Evidence(root),plan,state,owner,step,ids,head=head)
+                    self.assertEqual(actual["completed_requests_including_invalid_outputs"],n)
+                    self.assertEqual(actual["reported_physical_input_tokens"],0 if head else 100*n)
+                    q.stage.assert_called_once()
+                    with self.assertRaisesRegex(ValueError,"owning plan/state"):
+                        report.captured_phase_usage(report.Evidence(root),plan,None,owner,step,ids,head=head)
+                    for change in ("aggregate","pending","negative","phase","capture","manifest","tasks"):
+                        write(directory/"manifest.json",m);journal.write_text(''.join(json.dumps(e)+'\n' for e in events));q.stage.side_effect=None
+                        if change=="aggregate":bad=copy.deepcopy(m);bad["actual_evaluation_usage"]["reported_request_seconds"]+=1;write(directory/"manifest.json",bad)
+                        elif change=="pending":journal.write_text(''.join(json.dumps(e)+'\n' for e in events[:-1]))
+                        elif change=="negative":bad=copy.deepcopy(events);bad[1]["result"]["cost_usd"]=-1;journal.write_text(''.join(json.dumps(e)+'\n' for e in bad))
+                        elif change=="phase":bad=copy.deepcopy(m);bad["frozen"]["config"]["phase"]="confirmation";write(directory/"manifest.json",bad)
+                        elif change=="manifest":write(directory/"manifest.json",["malformed"])
+                        elif change=="tasks":write(directory/"tasks-evaluator-only.json",["malformed"])
+                        else:q.stage.side_effect=ValueError("captured output changed")
+                        with self.subTest(change=change),self.assertRaises(ValueError):report.captured_phase_usage(report.Evidence(root),plan,state,owner,step,ids,head=head)
+                        write(directory/"tasks-evaluator-only.json",[{"id":qid,"partition":"calibration" if head else "dev"} for qid in ids])
+
     def test_secondary_development_validated_audit_is_separate_and_expense_once(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); path, receipt, _, _ = development_receipt_fixture(root)
