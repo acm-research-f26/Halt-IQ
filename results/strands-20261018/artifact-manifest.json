@@ -1,6 +1,6 @@
 {
   "scope": "GitHub review bundle; original evidence SHA differs from sanitized export SHA",
-  "as_of": "2026-10-18T22:00:28.0447967-05:00",
+  "as_of": "2026-10-18T22:14:34.6179938-05:00",
   "manifest_excludes_itself": true,
   "files": {
     ".gitattributes": {
@@ -188,8 +188,8 @@
       "bytes": 68988
     },
     "README.md": {
-      "sha256": "3412ba37ae615f214bb6d55b8d2f262fb7638dfe66561463e9ac0f33278baffb",
-      "bytes": 11524
+      "sha256": "6ac99e5f8e0ef298864cd466c4f11cf12b4c3599454777e2e3afc4f29e7d24a9",
+      "bytes": 11817
     },
     "reports/optional-jev-companion.pdf": {
       "sha256": "89cc4dbd4bf2875c806914dfc60d0362891146524fe5f93e8de8f9dc1667d158",
@@ -199,6 +199,10 @@
       "sha256": "38caa18fde31af39a180fae66bab306889aafeec493f47fe7325366d2ad0a8da",
       "bytes": 47100
     },
+    "reports/strands-head-finetuning-writeup.pdf": {
+      "sha256": "353e2264e2b3e8cd4c1a911ab3130fcf99fa997bf5caec6557b0e3c7b181e488",
+      "bytes": 19714
+    },
     "reports/team-progress.pdf": {
       "sha256": "8cd4dad13cb120b8255ad3d248474c71b5b08018ac6289e6ed575bd554b04807",
       "bytes": 12955
@@ -206,6 +210,10 @@
     "SCHEMA.md": {
       "sha256": "e6b7bc665b99d7de7669d3c798c2f0b8bb7b064b35d3b7bbd006469fd3d5eb8b",
       "bytes": 3040
+    },
+    "strands-head-finetuning-writeup.md": {
+      "sha256": "b495d81bf2f13f225f938ec7fc78c44b920fe8364d569d03fb166387222efb46",
+      "bytes": 16606
     },
     "team-progress.md": {
       "sha256": "9dd840e1caa6bff9f24f0d9b48a2cc851abafe7692e5d56544be7057492973a8",

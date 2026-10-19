@@ -9,7 +9,9 @@ population equivalence or broad model superiority.
 
 ## Read and share
 
-- [Team progress document](reports/team-progress.pdf) — concise team-facing account.
+- [Research write-up](reports/strands-head-finetuning-writeup.pdf) — six-page technical account of the architecture, head fine-tuning, results, error analysis and two next experiments.
+- [Editable research write-up](strands-head-finetuning-writeup.md), including the pipeline diagram.
+- [Team progress document](reports/team-progress.pdf) — preserved four-page quick summary.
 - [Editable team progress text](team-progress.md).
 - [Professor report](reports/professor-review.pdf) — approved 18-page primary report.
 - [Optional Jev comparison](reports/optional-jev-companion.pdf) — approved four-page companion.

@@ -109,16 +109,13 @@ PAGES = [
 ]
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, required=True)
-    args = parser.parse_args()
-    out = args.output_dir
+def build_document(pages, out: Path, stem: str, title: str, footer_label: str) -> None:
+    """Render a dated PDF and its editable text with the same readable styles."""
     out.mkdir(parents=True, exist_ok=True)
-    pdf = out / "team-progress.pdf"
-    md = out / "team-progress.md"
+    pdf = out / f"{stem}.pdf"
+    md = out / f"{stem}.md"
     if pdf.exists() or md.exists():
-        parser.error("Use a new output directory to preserve reviewed versions")
+        raise ValueError("Use a new output directory to preserve reviewed versions")
     styles = StyleSheet1()
     for name, size, leading, after in [
         ("body", 10.8, 14.5, 8), ("title", 23, 27, 13),
@@ -128,12 +125,17 @@ def main() -> None:
         styles.add(ParagraphStyle(name, fontName="Helvetica-Bold" if name in ("title", "h1", "h2") else "Helvetica", fontSize=size, leading=leading, textColor=colors.black, spaceAfter=after, spaceBefore=9 if name in ("h1", "h2") else 0, keepWithNext=name in ("title", "h1", "h2")))
     story = []
     markdown = []
-    for page_i, blocks in enumerate(PAGES):
+    for page_i, blocks in enumerate(pages):
         if page_i:
             story.append(PageBreak())
         for block in blocks:
             kind = block[0]
-            if kind == "table":
+            if kind == "diagram":
+                story += [block[1], Paragraph(escape(block[2]), styles["meta"])]
+                markdown += [block[2], ""]
+                if len(block) > 3:
+                    markdown += ["```mermaid", block[3], "```", ""]
+            elif kind == "table":
                 rows, widths = block[1:]
                 rendered = [[Paragraph(escape(str(value)), styles["cell"]) for value in row] for row in rows]
                 table = Table(rendered, colWidths=widths, repeatRows=1, hAlign="LEFT")
@@ -158,7 +160,7 @@ def main() -> None:
                 markdown += [f"[{label}]({url})", ""]
             else:
                 value = block[1]
-                style = "body" if kind in ("p", "bullet") else kind
+                style = "body" if kind in ("p", "bullet", "step") else kind
                 story.append(Paragraph(escape(value), styles[style], bulletText="-" if kind == "bullet" else None))
                 prefix = {"title": "# ", "h1": "## ", "h2": "### ", "bullet": "- "}.get(kind, "")
                 markdown += [prefix + value, ""]
@@ -167,15 +169,22 @@ def main() -> None:
         canvas.saveState()
         canvas.setFont("Helvetica", 8)
         canvas.setFillColor(colors.HexColor("#555555"))
-        canvas.drawString(48, 25, "HaltIQ team progress | October 18 2026")
+        canvas.drawString(48, 25, footer_label)
         canvas.drawRightString(564, 25, str(document.page))
         canvas.restoreState()
 
-    doc = BaseDocTemplate(str(pdf), pagesize=letter, leftMargin=48, rightMargin=48, topMargin=38, bottomMargin=42, title="HaltIQ Strands team progress report", author="Yash", subject="Completed implementation and matched evaluation for team review")
+    doc = BaseDocTemplate(str(pdf), pagesize=letter, leftMargin=48, rightMargin=48, topMargin=38, bottomMargin=42, title=title, author="Yash", subject="Completed implementation and matched evaluation for team review")
     doc.addPageTemplates(PageTemplate(id="body", frames=[Frame(48, 42, 516, 712, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)], onPage=footer))
     doc.build(story)
     md.write_text("\n".join(markdown), encoding="utf-8")
     print(f"Created {pdf.name} and {md.name}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, required=True)
+    args = parser.parse_args()
+    build_document(PAGES, args.output_dir, "team-progress", "HaltIQ Strands team progress report", "HaltIQ team progress | October 18 2026")
 
 
 if __name__ == "__main__":
