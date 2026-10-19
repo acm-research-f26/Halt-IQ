@@ -437,6 +437,24 @@ class ReportTests(unittest.TestCase):
             self.assertIn(["Selected saved checkpoint optimizer steps","2"],rows)
             self.assertIn("need not accumulate every candidate's updates",report.plain_text(result))
 
+    def test_proposed_selection_label_does_not_contradict_verified_execution_or_invent_it(self):
+        for terminal in (False,True):
+            with self.subTest(terminal=terminal),tempfile.TemporaryDirectory() as temporary:
+                root=Path(temporary);fixture(root,terminal);selection=root/"selection.json"
+                write(selection,{"status":"PROPOSED_NOT_ADOPTED"})
+                result=report.collect_report(root,"study-runs/train",20 if terminal else 0,AS_OF,
+                    campaign_run="campaign" if terminal else None,cohort_manifest=selection)
+                text=report.plain_text(result)
+                self.assertIn("preserves its PROPOSED data-preparation label",text)
+                self.assertIn("separately verified owning-campaign and training-proof evidence",text)
+                self.assertNotIn("it is not an adopted training result",text)
+                self.assertNotIn("not additional measured results in a partial checkpoint",text)
+                self.assertIn("These metrics are reported only when their result-specific evidence gates are verified",text)
+                expected="The evaluated Strands stop controller" if terminal else "The proposed Strands stop controller"
+                self.assertIn(expected,text)
+                self.assertEqual(result["validation"]["complete_checkpoint"],terminal)
+                self.assertEqual(result["validation"]["trained_head_proof"],terminal)
+
     def test_selected_steps_use_complete_selected_trial_prefix_not_total_or_last_epoch(self):
         proof={"selected":{"lr":5e-5,"epoch":2},"history":[
             {"lr":lr,"epoch":epoch,"optimizer_steps":steps}

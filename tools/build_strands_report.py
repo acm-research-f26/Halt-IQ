@@ -1139,7 +1139,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
                 warnings.append(f"Training proof {partition} cache fingerprints are not verified.")
     subset = evidence.read(cohort_manifest, "explicit selected TRAIN cohort") if cohort_manifest else None
     if subset and "PROPOSED" in subset.get("status", ""):
-        warnings.append("Supplied TRAIN subset remains proposed; it is not an adopted training result.")
+        warnings.append("The supplied TRAIN selection manifest preserves its PROPOSED data-preparation label. That label alone establishes neither adoption nor execution; this report's separately verified owning-campaign and training-proof evidence determine what actually ran.")
     control = control_valid(evidence, paths, proof, baseline, owner_campaign)
     development = None
     if development_diagnostic:
@@ -1214,9 +1214,9 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         f"Selected training dataset SHA256: {config.get('dataset_sha256', 'not supplied')}. "
         f"Explicit cohort manifest status: {(subset or {}).get('status', 'none supplied')}; "
         f"recorded partition counts: {(subset or {}).get('partition_counts', dict(partitions))}.",
-        "The proposed Strands controller scores binary draft correctness and stops at probability >=0.8 or continues a generic revision loop. Strands accepts at most 4,096 fully rendered tokens, without truncation; overflow remains an explicit coverage failure. The writer has a separate 16k context. Ten total drafts and cap-three parity share recorded trajectories. The released 2B encoder and adapter remain frozen; actual supervised fine-tuning updates the released pointer head only. One EM correctness proxy is not three independently labeled rubric targets. LoRA/backbone training and RL are separate future work.",
+        ("The evaluated Strands stop controller" if paired else "The proposed Strands stop controller") + " scores binary draft correctness and stops at probability >=0.8 or continues a generic revision loop. Strands accepts at most 4,096 fully rendered tokens, without truncation; overflow remains an explicit coverage failure. The writer has a separate 16k context. Ten total drafts and cap-three parity share recorded trajectories. The released 2B encoder and adapter remain frozen; actual supervised fine-tuning updates the released pointer head only. One EM correctness proxy is not three independently labeled rubric targets. LoRA/backbone training and RL are separate future work.",
         "Confirmation is a once-frozen subset of 20, 50 or 100 public validation questions, not an official hidden-test score. Shared Fixed 1/2/3/5/10 controls use the identical observations. The unchanged Vedanshi v0 export is a schema contract, not proof of identical hardware; canonical planned-N summaries retain failures/zero-draft cases that v0 cannot express.",
-        "The shared comparison measures all-planned-question answer EM and token F1, first-draft repairs and regressions, approval precision with coverage, and first-decision AUROC, Brier score and NLL. Question-paired bootstrap intervals use 5,000 draws and seed42; counterfactual prefix costs and actual physical work are separate. These are the comparison methods, not additional measured results in a partial checkpoint.",
+        "The shared comparison measures all-planned-question answer EM and token F1, first-draft repairs and regressions, approval precision with coverage, and first-decision AUROC, Brier score and NLL. Question-paired bootstrap intervals use 5,000 draws and seed42; counterfactual prefix costs and actual physical work are separate. These metrics are reported only when their result-specific evidence gates are verified.",
     ]))
     install = evidence.read("install-status.json", "actual installation state") or {}
     health = evidence.read("health.json", "actual import/CUDA health") or {}
