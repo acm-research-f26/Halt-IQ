@@ -1,192 +1,131 @@
-# Revision depth and head fine tuning with Strands Decider
+# Strands study: what I built and learned
 
-Yash | HaltIQ research write up | October 18 2026
+Yash | Team research update | October 18, 2026
 
-## Summary
+## The main finding
 
-I tested whether an open Strands correctness controller could use additional writer drafts effectively, and whether supervised adaptation of its existing decision head would improve those choices. I ran an untouched-model baseline before training, fitted and separately calibrated a decision head, and compared both heads with fixed draft budgets on 20 fresh HotpotQA questions. Each question had an initial answer and nine recorded revisions.
+I tested whether Strands could decide when an answer was good enough to stop revising, and whether fine-tuning would improve those decisions. I also compared it with Jev. On the final 20 questions, every tested approach answered 10 correctly. Extra drafts and fine-tuning did not improve the final answers in this test.
 
-All 13 primary policies returned 10/20 exact matches (50%) and token F1 0.540. No repair, regression or answer-quality gain was observed. Eighteen answers repeated unchanged across all ten drafts. The optional Jev comparison returned the same answer scores but stronger first-decision correctness ranking on this panel: AUROC 0.915 versus 0.380 for both Strands heads. These are small-panel findings, not population equivalence or a general model ranking.
+## What I built
 
-## Work completed
+- Set up Strands locally and checked that it could run on my PC.
 
-- Set up the actual local Strands decider and verified CUDA, model files and native inference. Tested all 20 original development questions before updating weights.
+- Tested the original model before training it, then fine-tuned its decision-making part.
 
-- Implemented disjoint fit, tuning and calibration stages, actual updates of the released pointer head, frozen-weight checks and save/reload verification.
+- Built a fair comparison using the same questions and saved answers for each approach, with up to ten drafts per question.
 
-- Ran common-trajectory Fixed1/2/3/5/10 controls, released/trained controllers at caps three and ten, and four predeclared visited-confidence retention variants.
+- Recorded answer quality, the quality of the model's judgments, failures and actual work performed. The code, results and trained weights are on GitHub.
 
-- Added common-schema exports, planned-question failure accounting, question-paired uncertainty, separate physical expense reporting and the optional Jev replay.
+## How the system works
 
-## Dataset
+The writer, Qwen, produces an answer using the question and the supplied evidence. Strands acts as the checker: it estimates whether the answer is correct. If its confidence reaches 80%, it accepts the answer. Otherwise, the system considers another draft, until it reaches the draft limit.
 
-HotpotQA distractor questions retain the complete supplied evidence, paragraph titles and sentence order. Only question, evidence and current draft enter the decider. Gold answers and supporting-fact labels stay evaluator-only. TRAIN and validation cohorts are disjoint, checked by ID and normalized question. Seed-42 answer-blind hash selection preserves the original training partitions.
-
-| Cohort | N | Role |
-| --- | --- | --- |
-| Original development | 20 | Untouched baseline before any updates |
-| Adopted TRAIN | 90 | 60 fit / 15 tuning / 15 calibration |
-| Fresh public validation | 20 | 16 bridge / 4 comparison; ten drafts each |
-
-Fresh IDs were frozen before writer or critic outcomes. This is public validation, not the official hidden test. The 200 draft states are clustered within 20 independent questions. Earlier incomplete 600-question preparation is separate from the executed TRAIN90 source and its expense.
-
-## Environment
-
-| Component | Recorded configuration |
-| --- | --- |
-| Local PC | Windows 11; Ryzen 7 9800X3D; RTX 5070 Ti about 16 GB VRAM; 31.06 GiB RAM |
-| Runtime | Python 3.12.10; Torch 2.7.1+cu128; Transformers 5.17.0; PEFT 0.21.0 |
-| Writer | Qwen3:8B, 16,384-token context, 512 maximum output tokens, temperature 0, seed 42, thinking off |
-| Decider | Strands Decider 2B qwen3.5 v1 release; Qwen3.5-2B-Base; 4,096 fully rendered tokens |
-| Background limits | One study GPU owner, four writer/encoder CPU threads, 7 GiB RAM and 3 GiB free VRAM reserves, deliberate rests |
-
-The released checkpoint revision is 216d1ccb46a9e9b036eb9187b248db98480f77d4; the base revision is b1485b2fa6dfa1287294f269f5fb618e03d52d7c. Full prompts are tokenized with truncation disabled. An overflow is a recorded coverage failure, not a reason to remove a question or select gold paragraphs. There were no fresh-panel overflows.
-
-## Architecture
-
-Strands is a binary correctness and stopping controller. It does not generate answer revisions or textual repair advice in this experiment. The frozen BF16 text torso and released rank-48, alpha-96 LoRA adapter encode the full public state. They produce one 2,048-dimensional final-position vector and two 2,048-dimensional option vectors for false and true.
-
-The existing FP32 pointer head uses shared LayerNorm and 2,048-to-768 query/key projections. Scaled dot products produce two logits. Applying sigmoid to (true logit - false logit) / temperature gives the true probability. The rule is STOP at probability at least 0.8; otherwise visit the next generic writer revision, until the cap. No passage reranker or top-k evidence selection was used.
-
-Figure 1. Common-trajectory evaluation. All ten writer drafts are generated first; physical native features are encoded once, then both head policies select prefixes on the same observations. Jev reads the saved public state separately and does not consume Strands feature vectors.
+The decision rule being tested. For the comparison, I saved the drafts first and then applied each checker to the same answers.
 
 ```mermaid
 flowchart LR
-    I[Question and full evidence] --> W[Qwen writer ten saved drafts]
-    W --> E[Frozen Strands native features]
-    E --> H[Released or trained head plus temperature]
-    H --> P[STOP or next visited draft]
-    W --> J[Jev public state replay]
-    J --> C[Matched comparison]
-    P --> C
+    Q[Question and evidence] --> W[Writer creates an answer]
+    W --> S[Strands checks the answer]
+    S --> D[Accept or try another draft]
 ```
 
-## Pipeline
+Strands decides whether to stop; it does not write corrections or explain how to fix an answer in this experiment. That distinction matters because a checker can recognize a problem without helping the writer produce a better answer.
 
-1. Save ten full-context writer drafts per question and every actual call's usage.
+## What fine-tuning changed
 
-2. Encode all 200 states once; keep failures in the planned denominator.
+I trained only the small decision layer that turns the model's understanding into a correctness judgment. The rest of Strands stayed unchanged. I checked that training changed the intended weights and that the saved model worked the same way after reloading. This was supervised training; reinforcement learning was not used.
 
-3. Replay heads at caps three and ten; retention can choose only visited drafts.
+## How I tested it fairly
 
-4. Compare fixed depths and Jev; keep physical work separate from replay prefix costs.
+I used HotpotQA, a question-answering dataset that provides a question and several evidence passages. The writer and checker saw the supplied evidence, but never the reference answer. The reference was used only to score their output.
 
-## Head fine tuning and calibration
-
-Before learning, the untouched model completed 20 valid native development forwards. I then generated a new, disjoint TRAIN90 source. Each question supplies one first-draft state in canonical false/true option order. Native features are extracted before the official normalized exact-match label is attached. Fit has 37 correct and 23 incorrect states; tuning has 11/4 and calibration 9/6.
-
-Only the existing six-tensor pointer head is trained: LayerNorm weight/bias of size 2,048, query/key matrices of size 768 by 2,048, and their two 768-element biases. Total trainable parameters are 3,151,360. The backbone and released adapter remain frozen.
-
-| Training choice | Actual method |
-| --- | --- |
-| Loss | Plain two-option cross entropy from strict answer EM; no class weighting, KL or RL objective |
-| Optimizer | AdamW; betas 0.9 / 0.95; epsilon 1e-8; weight decay 0.01 |
-| Candidate fit | Learning rates 1e-5 and 5e-5; batch size 32; FP32 head; dropout 0.05; gradient clip 1.0; seed 42 |
-| Selection | Minimum question-averaged tuning NLL; stop after two nonimproving epochs; maximum five epochs per candidate |
-| Selected checkpoint | Learning rate 1e-5, epoch one, two saved optimizer steps; six epochs / 12 steps across all candidate work |
-
-Both candidates actually ran three epochs before early stopping. The selected head changed by L2 norm 0.02861134; frozen components were unchanged and reloaded logits matched exactly. Fitting took about 0.509 seconds, excluding native feature encoding, startup and resource rests. That fitting duration is not an end-to-end training runtime.
-
-The same 15 calibration questions fit separate scalar temperatures for the unchanged and trained heads: 1.438330 and 1.426638. Calibration searches 0.25 to 6 with 64 log-space golden-section steps. Its fitted NLL near 0.5505 is a fitting statistic, not held-out improvement. No LoRA, backbone or reinforcement-learning updates were performed.
-
-## Evaluation framework and common metrics
-
-Answer quality uses HotpotQA normalized exact match and token F1. Strict EM is also the correctness label. Repairs and regressions measure transitions from the first draft to the chosen answer. AUROC measures correctness ranking; approval precision is correct approved divided by all approved, and coverage is approved divided by all planned questions. Brier and NLL measure probability quality.
-
-Every planned question remains in EM/F1 denominators; failures would score zero. Common result exports follow Vedanshi's v0 schema, with provenance and failures kept separately. Paired 95% intervals resample questions 5,000 times with seed 42. Weights, temperatures, threshold and cohort were fixed before fresh outcomes. This matches answer scoring and row format, not historical hardware or prompts.
-
-## Results
-
-Fresh20 used identical saved trajectories and full public inputs for the Strands policies. All 20 planned questions completed, with zero failed or missing episodes, repairs or regressions. Fixed controls and all four retention variants are included in the 13 primary policies.
-
-| Policy | EM | Token F1 | Mean drafts |
-| --- | --- | --- | --- |
-| Fixed 1 / 2 / 3 / 5 / 10 | 50% | 0.540 | 1 / 2 / 3 / 5 / 10 |
-| Released Strands cap ten | 50% | 0.540 | 5.50 |
-| Trained Strands cap ten | 50% | 0.540 | 5.50 |
-| Either Strands head cap three | 50% | 0.540 | 2.00 |
-| Four retention variants caps three / ten | 50% | 0.540 | 2.00 / 5.50 |
-| Optional Jev cap ten / cap three | 50% | 0.540 | 3.75 / 1.65 |
-
-## First decision correctness
-
-| Metric | Released Strands | Trained Strands | Jev |
-| --- | --- | --- | --- |
-| AUROC | 0.380 | 0.380 | 0.915 |
-| Brier score | 0.336260 | 0.336322 | 0.141200 |
-| NLL | 0.910647 | 0.910822 | 0.469715 |
-| Correct approved / approved | 5/10 = 50% | 5/10 = 50% | 10/13 = 76.92% |
-| Approval coverage | 10/20 = 50% | 10/20 = 50% | 13/20 = 65% |
-
-Jev supplies probabilities without raw logits; its probability NLL uses epsilon 1e-15, with no endpoint clipping in this panel. Jev's final stopping approvals are separately 10 correct out of 14, with 14/20 coverage. These conditional approval rates must not be reported as all-question answer accuracy.
-
-## Selected paired contrasts
-
-| Contrast and metric | Difference | Paired 95% interval |
+| Question group | Size | Purpose |
 | --- | --- | --- |
-| Trained minus released answer EM / F1 | 0 / 0 | [0, 0] / [0, 0] |
-| Trained minus released first NLL | +0.000174 | [+0.000065, +0.000286] |
-| Jev minus released first AUROC | +0.535 | [+0.275, +0.771] |
+| Initial check | 20 | Test the original Strands model before training |
+| Training and preparation | 90 | 60 for learning, 15 for choosing the trained version, 15 for adjusting confidence scores |
+| Final comparison | 20 new | Compare every approach on questions kept separate from training |
 
-These are descriptive intervals from 5,000 question-paired draws on 20 observed pairs. Identical answer scores do not establish population equivalence. No multiple-comparison correction or general superiority claim is made.
+The final questions were chosen before seeing the models' answers. Each question had ten drafts: one initial answer and nine revisions. I compared stopping after exactly 1, 2, 3, 5 or 10 drafts with letting Strands or Jev decide when to stop. I also tested keeping the highest-confidence answer among drafts already considered.
 
-## Reading the results
+I tested both the original and fine-tuned Strands versions. Each had its confidence scores adjusted using the same separate preparation questions. This adjustment, called calibration, aims to make confidence more meaningful. It does not change an answer or prove better performance.
 
-More drafts created no observed repair opportunities here. Eighteen questions repeated the same raw answer throughout all ten drafts; two changed incorrect wording without changing EM. Both calibrated Strands heads made the same stopping choices. Their cap-ten mean selected depth was 5.5, but final answers were no better than Fixed1. Retaining the highest confidence among visited drafts also produced no answer gain.
+## What the scores mean
 
-The trained head's AUROC matched the released control and its Brier/NLL were slightly worse. Successful weight updates and improved calibration fitting loss therefore do not establish useful fresh performance. This run does not isolate whether more fit data, more updates or a different training target would help.
+- Exact match: the share of answers matching an accepted reference after standard text cleanup. This is the main answer-quality score.
 
-## A persistent incorrect answer
+- Token F1: how much the answer's words overlap the reference. It gives partial credit when an answer is not an exact match.
 
-For the Gilgamesh location question, the reference was 'the Waters of Death'; all ten writer drafts answered 'the shore'. Strands gave a correctness probability near 0.599 and kept revising to the cap. Jev gave 0.88 on the first draft and stopped. Both selected an incorrect answer. Rejecting an answer does not itself supply a better correction, while high confidence can still approve the same error.
+- Judgment quality: whether the checker gives correct answers higher confidence than incorrect ones, and how reliable those confidence scores are. The technical report includes ranking and confidence-error measures.
 
-## Physical expense and time
+- Repairs and regressions: whether later drafts fix an initially wrong answer or spoil an initially correct one. Failed questions still count in the final score.
 
-| Work | Actual fresh execution |
-| --- | --- |
-| Writer generation | 200 calls; 387,901 input and 1,855 output tokens |
-| Strands encoder | 200 real native forwards; 364,275 encoded tokens |
-| Head scoring | 110 CPU scores per head; cached features avoid repeated torso forwards |
-| Optional Jev | 75 hosted calls; 163,044 input and 1,500 output tokens; $0.006847848 |
+I used the same standard answer scoring and compatible result format as Vedanshi's framework. Hardware, prompts and model limits can differ, so scores from separate experiments are not automatically direct comparisons.
 
-The five-stage primary campaign took about 38 minutes 25 seconds including startup and deliberate idle time. Mean selected drafts and replay prefix seconds are counterfactual costs; the writer physically generated all ten drafts. They do not prove live latency or token savings. Cumulative hosted accounting is 606 settled calls / $0.054730032 with zero reserved or unsettled; local hardware and electricity are unpriced.
+## Where it ran
 
-Earlier TRAIN600 preparation stopped at 590 saved trajectories from 591 physical calls, with one completed but unsaved call and nine questions undispatched. That expense is counted separately and once. The completed TRAIN90 source was newly generated rather than relabeling the partial600 run.
+Qwen and Strands ran on my Windows PC with an NVIDIA graphics card. I limited background resource use and added rests so the PC remained available for other work. Jev ran through its hosted API. Full software versions and settings are available in the technical report.
 
-## Limits of this experiment
+## What happened
 
-Independent fresh N is 20, not 200 drafts. Head fitting used 60 first drafts and labels based on strict answer matching; later-round generalization and alternative training losses were not isolated. Native Strands has a 4,096-token limit and hosted Jev a different context capacity. Common-trajectory replay does not test live action effects. Historical development uses different cohorts. Cross-report percentages require matched question IDs, drafts, evidence, prompts, checkpoints and cost scope.
+All approaches scored 50% exact match and 0.54 token F1 on the same 20 final questions. No later draft fixed an initially wrong answer, and none spoiled an initially correct one. All final questions completed without a failed episode.
 
-## Future ideas
+| Approach | Correct answers | Average drafts selected |
+| --- | --- | --- |
+| Stop after a fixed number of drafts | 10 out of 20 at every tested depth | 1, 2, 3, 5 or 10 |
+| Original Strands, up to ten drafts | 10 out of 20 | 5.5 |
+| Fine-tuned Strands, up to ten drafts | 10 out of 20 | 5.5 |
+| Jev, up to ten drafts | 10 out of 20 | 3.75 |
 
-### Evidence specialist feedback under Strands control
+The shorter three-draft checks and the versions that kept the highest-confidence visited answer also returned the same answer scores. The fine-tuned Strands model made the same stopping choices as the original version.
 
-What: when Strands rejects a draft, obtain short specialist feedback cited to supplied evidence, then revise while Strands retains final STOP authority. Limit the proposed intervention to one specialist call per revision and two per question.
+## Why extra drafts did not help here
 
-Why: the observed generic drafts usually repeated the same answer. The next intervention should test whether concrete evidence feedback changes the candidate rather than only changing the stopping score.
+For 18 of the 20 questions, the writer repeated the same answer through all ten drafts. The remaining two changed their wording but stayed incorrect. The checker was choosing among answers with the same correctness, so stopping earlier or later could not improve the final score.
 
-Pros: targeted corrections and citations make a proposed repair inspectable. Cons: extra calls add cost and latency; incorrect feedback can introduce new errors. Test: compare generic and cited feedback on a newly frozen disjoint panel, with matched writer settings, full role-level expense, repairs/regressions and the same answer and probability metrics.
+For example, one question expected 'the Waters of Death', but every draft answered 'the shore'. Strands kept asking for another attempt; Jev accepted the first answer. Both ended with the same wrong answer. Detecting doubt is useful only if the next step can produce a better candidate.
 
-### Budget aware STOP and VERIFY utility learning
+## What I learned about the checkers
 
-What: learn from disjoint TRAIN continuations whether verification's expected answer benefit exceeds its token and time cost. Begin with bounded one-step full-information supervised targets before considering RL.
+Jev did a better job of giving correct first answers higher confidence than incorrect ones. That did not translate into more correct final answers. Fine-tuning did not improve Strands' judgments on this final set; its confidence-error scores were slightly worse.
 
-Why: correctness confidence is not a direct estimate of whether another action will improve an answer. The current replay can reject a wrong draft repeatedly without producing a correct alternative.
+A checker's accuracy among answers it approves is different from overall answer accuracy. I kept those measures separate in the detailed results. Recognizing correctness and improving an answer are two different capabilities.
 
-Pros: decisions would target the joint quality and budget objective. Cons: reward weights, noisy EM proxies and replay or off-policy bias can distort action value. Test: select the utility model and calibrate only on TRAIN partitions, then compare with correctness-only Strands and fixed depths on a new held-out panel. A later matched live test is needed for action effects and latency. Neither proposed idea was run here.
+## How far these results go
 
-## Review and reproduction materials
+This was a small test of 20 independent questions. The 200 saved drafts are repeated attempts on those questions, not 200 independent examples. The result shows no improvement in this test; it does not prove that fine-tuning or additional revisions can never help. The initial check used different questions, so it is not a before-and-after accuracy comparison.
 
-The GitHub bundle includes public full-context cohorts, 200 recorded drafts, common-schema exports, all 13 primary policy analyses, original-versus-sanitized provenance, training/calibration proofs and the selected 12.6 MB trained head with licenses and restore instructions. Upstream source, base and released adapter are pinned download dependencies.
+## What I would try next
 
-[Open the experiment bundle and offline verifier](https://github.com/acm-research-f26/Halt-IQ/tree/Yash/results/strands-20261018)
+### 1. Give the writer useful feedback
 
-[Read the full 18 page professor report](https://github.com/acm-research-f26/Halt-IQ/blob/Yash/results/strands-20261018/reports/professor-review.pdf)
+Proposal: when Strands rejects an answer, ask a separate evidence checker to identify a specific mistake and cite the relevant passage. Give that feedback to the writer before it revises.
 
-[Read the separate four page Jev comparison](https://github.com/acm-research-f26/Halt-IQ/blob/Yash/results/strands-20261018/reports/optional-jev-companion.pdf)
+Benefit: this could produce a genuinely different answer instead of repeating a generic self-check. Risk: the extra checker adds cost and delay, and its feedback could be wrong.
 
-[Open the implementation and model restoration instructions](https://github.com/acm-research-f26/Halt-IQ/tree/Yash/results/strands-20261018/checkpoints/selected-head)
+Test: compare ordinary revisions with evidence-based feedback on new questions. Keep the writer settings the same, limit extra checker calls, and measure repairs, regressions, answer quality and total cost.
 
-Offline verification loads no model and calls no API. Full native reruns require pinned upstream components, a fresh external runtime and newly reviewed paths, deadlines and resource admission. Historical portable plans are data only. The selected head is reusable but did not improve this fresh panel. No credentials, live API ledger, large upstream weights or feature caches are distributed.
+### 2. Train the decision to ask whether another step is worth it
 
-Data attribution: Yang et al., HotpotQA, EMNLP 2018, CC BY-SA 4.0, https://hotpotqa.github.io/. Model attribution: Strands Decider contributors and Qwen, with pinned revisions and full selected-head licenses in the bundle. Model/evaluation source baseline 8f48a545; audited team delivery baseline 7425369. All findings describe the completed October 18 runs, not new experiments.
+Proposal: train the controller to estimate whether another verification step is likely to improve the answer enough to justify its cost. Start with supervised examples before considering reinforcement learning.
+
+Benefit: this connects the stopping decision to the value of another action, rather than confidence alone. Risk: it needs richer training examples, and a poorly chosen reward could teach the wrong behavior.
+
+Test: develop it on separate training questions, then compare it with the current checker and fixed draft limits on a new final set. Measure answer quality and the work each approach actually performs. Neither proposed experiment has been run.
+
+## Time, cost and practical limits
+
+The final local comparison took about 38 minutes, including startup and planned rests. It generated 200 drafts and checked each with Strands. The final Jev comparison cost less than one cent; total hosted spending across the study was about five cents. Local hardware and electricity were not priced.
+
+Because all drafts were generated before comparing stopping rules, choosing fewer drafts does not demonstrate real speed or token savings. That needs a later test where the system actually stops generation. An earlier preparation run ended incomplete; it was kept separate from the completed training and final comparison.
+
+## Where the work is available
+
+GitHub contains the implementation, recorded answers, scores, trained decision layer and instructions for checking the results. The detailed reports hold the exact model settings and evidence needed for reproduction.
+
+[Code, results and trained model](https://github.com/acm-research-f26/Halt-IQ/tree/Yash/results/strands-20261018)
+
+[Detailed methods and Strands results](https://github.com/acm-research-f26/Halt-IQ/blob/Yash/results/strands-20261018/reports/professor-review.pdf)
+
+[Detailed Jev comparison](https://github.com/acm-research-f26/Halt-IQ/blob/Yash/results/strands-20261018/reports/optional-jev-companion.pdf)
+
+Dataset: HotpotQA, Yang and colleagues, EMNLP 2018, shared under CC BY-SA 4.0. Model credits and full licenses are included with the GitHub materials.
