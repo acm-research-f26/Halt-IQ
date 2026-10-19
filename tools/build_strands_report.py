@@ -1414,7 +1414,7 @@ def render_pdf(report, path):
     from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
     from reportlab.platypus import LongTable, Paragraph, SimpleDocTemplate, Spacer, TableStyle
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name="BodyReport", fontName="Helvetica", fontSize=9.5, leading=13.4, spaceAfter=8, splitLongWords=True))
+    styles.add(ParagraphStyle(name="BodyReport", fontName="Helvetica", fontSize=9.5, leading=13.4, spaceAfter=8, splitLongWords=True, allowWidows=0))
     styles.add(ParagraphStyle(name="CellReport", fontName="Helvetica", fontSize=8, leading=10.5, splitLongWords=True))
     styles.add(ParagraphStyle(name="SourceReport", fontName="Helvetica", fontSize=7.4, leading=10, spaceAfter=5, splitLongWords=True))
     styles["Title"].fontName, styles["Title"].fontSize, styles["Title"].leading = "Helvetica-Bold", 28, 32
