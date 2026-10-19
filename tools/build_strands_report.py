@@ -410,6 +410,87 @@ def training_valid(proof):
         and proof.get("calibration_used") is False and proof.get("fresh100_used") is False)
 
 
+def selected_optimizer_steps(proof):
+    """Count only the saved trial's complete epoch prefix, never all trials."""
+    selected, history = (proof or {}).get("selected", {}), (proof or {}).get("history", [])
+    if not isinstance(selected, dict) or not isinstance(history, list):
+        return None
+    lr, epoch = selected.get("lr"), selected.get("epoch")
+    if (type(lr) not in (int, float) or not math.isfinite(lr) or lr <= 0
+            or type(epoch) is not int or epoch < 1):
+        return None
+    prefix = {}
+    for row in history:
+        if not isinstance(row, dict) or row.get("lr") != lr:
+            continue
+        current = row.get("epoch")
+        if type(current) is not int or not 1 <= current <= epoch:
+            continue
+        steps = row.get("optimizer_steps")
+        if current in prefix or type(steps) is not int or steps < 0:
+            return None
+        prefix[current] = steps
+    if set(prefix) != set(range(1, epoch + 1)):
+        return None
+    return sum(prefix.values())
+
+
+def fresh_phase_timings(evidence, paths, paired, campaign, as_of):
+    """Read terminal, comparison-bound timings without treating replay as live."""
+    pins = {evidence.path(p): h for p, h in paired.get("input_sha256", {}).items()}
+    specifications = (("Writer generation once", paths["fresh_source"] / "manifest.json"),
+        ("Native encoder cache once", Path(str(paths["fresh_cache"]) + ".manifest.json")),
+        ("Untuned CPU head replay", paths["fresh_untuned"] / "manifest.json"),
+        ("Trained CPU head replay", paths["fresh_trained"] / "manifest.json"))
+    result = []
+    for phase, path in specifications:
+        path = evidence.path(path)
+        actual_hash = evidence.record_file(path, "comparison-bound fresh timing manifest")
+        if not actual_hash or pins.get(path) != actual_hash:
+            raise ValueError("fresh timing manifest is not bound by the terminal comparison")
+        manifest = evidence.read(path, "terminal fresh timing scope")
+        status = manifest.get("status") if isinstance(manifest, dict) else None
+        if not isinstance(status, str) or not status.startswith("completed"):
+            raise ValueError("fresh timing scope is not terminal")
+
+        def duration(value):
+            if value is not None and (type(value) not in (int, float) or not math.isfinite(value) or value < 0):
+                raise ValueError("invalid fresh timing duration")
+            return value
+
+        startup = manifest.get("backend_startup_this_invocation", {})
+        if not isinstance(startup, dict):
+            raise ValueError("invalid fresh startup timing scope")
+        startup_wall, startup_idle = (duration(startup.get(k)) for k in ("wall_seconds", "intentional_idle_seconds"))
+        phase_wall, phase_idle = (duration(manifest.get(k)) for k in (
+            "this_invocation_wall_seconds", "this_invocation_intentional_idle_seconds"))
+        if (startup_wall is not None and startup_idle is not None and startup_idle > startup_wall
+                or phase_wall is not None and phase_idle is not None and phase_idle > phase_wall):
+            raise ValueError("fresh intentional idle exceeds its corresponding wall scope")
+        owners = [stage for stage in (campaign or {}).get("stages", {}).values()
+            if path in {evidence.path(p) for p in stage.get("output_sha256", {})}]
+        if len(owners) > 1:
+            raise ValueError("fresh timing manifest has ambiguous owning stages")
+        stage_wall = None
+        if owners:
+            owner = owners[0]
+            captured = {evidence.path(p): h for p, h in owner["output_sha256"].items()}
+            if owner.get("status") != "completed" or owner.get("exit_code") != 0 or captured[path] != actual_hash:
+                raise ValueError("fresh timing owning stage is not its completed captured output")
+            if owner.get("started_at") is not None and owner.get("finished_at") is not None:
+                start, finish = (timestamp(owner[k]) for k in ("started_at", "finished_at"))
+                stage_wall = (finish - start).total_seconds()
+                if stage_wall < 0 or finish > timestamp(as_of):
+                    raise ValueError("fresh timing owning-stage interval is invalid for the checkpoint")
+        result.append({"phase": phase, "manifest_sha256": actual_hash,
+            "startup_wall_seconds": startup_wall, "startup_idle_seconds": startup_idle,
+            "phase_wall_seconds": phase_wall, "phase_idle_seconds": phase_idle,
+            "startup_plus_phase_wall_seconds": (startup_wall + phase_wall
+                if startup_wall is not None and phase_wall is not None else None),
+            "owning_stage_wall_seconds": stage_wall})
+    return result
+
+
 def validate_comparison(data, n):
     """Check the published comparison contract, without choosing or rescoring runs."""
     if data.get("status") != "independently_joined_terminal_paired_replays":
@@ -1069,7 +1150,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         except (ValueError, KeyError, TypeError, OSError, OverflowError) as error:
             validation_errors.append({"stage": "secondary development diagnostics", "type": type(error).__name__, "detail": str(error)})
             warnings.append("Secondary post-training DEVELOPMENT diagnostics omitted: the explicit receipt or its bound evidence is missing/inconsistent. Primary confirmation gates are unchanged.")
-    paired = None
+    paired, fresh_timings = None, []
     if fresh_n:
         if not campaign_run:
             raise ValueError("positive fresh N requires an explicit frozen campaign and plan")
@@ -1083,6 +1164,12 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
             validation_errors.append({"stage": "paired confirmation", "type": type(error).__name__, "detail": str(error)})
             warnings.append(f"Paired quality evidence omitted ({type(error).__name__}); inspect private provenance and validation inputs.")
             paired = None
+    if paired:
+        try:
+            fresh_timings = fresh_phase_timings(evidence, paths, paired, campaign, as_of)
+        except (ValueError, KeyError, TypeError, OSError) as error:
+            validation_errors.append({"stage": "fresh timing scopes", "type": type(error).__name__, "detail": str(error)})
+            warnings.append("Fresh timing-scope table omitted: terminal comparison-bound timings are inconsistent. Primary quality gates are unchanged.")
     complete = bool(paired and gate and trained)
     status = "TERMINAL PAIRED REPLAY CHECKPOINT" if complete else "DRAFT / PARTIAL CHECKPOINT"
     sections = []
@@ -1162,6 +1249,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         "The profile preserves one study GPU owner, four CPU threads, background rests and memory admission. A resource pause does not authorize lowering the floor or closing user applications. Package targets are not installation or kernel evidence.",
         "Pinned target: upstream Strands source at 930e6d5de16309be32579f5631a7369a3322140c; released decider at 216d1ccb46a9e9b036eb9187b248db98480f77d4; Qwen3.5-2B-Base revision b1485b2fa6dfa1287294f269f5fb618e03d52d7c. These are intended source identities until actual weight/inference receipts establish use. New 16k/q8 results must not be pooled with historical 32k/f16 development results.",
     ], ["Item", "Recorded evidence"], environment_rows))
+    selected_steps = selected_optimizer_steps(proof)
     proof_rows = [["Untouched gate", "verified" if gate else "missing or invalid"],
         ["Attempted / successful / failed / valid forwards", " / ".join(str((baseline or {}).get(k, "not recorded")) for k in ("attempted", "completed", "failed", "valid_decision_forwards"))],
         ["Training status / actual head parameters", f"{(proof or {}).get('status', 'not recorded')} / {(proof or {}).get('head_parameters', 'not recorded')}"],
@@ -1170,6 +1258,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         ["Selection / elapsed seconds", f"{(proof or {}).get('selection', 'not recorded')} / {number((proof or {}).get('elapsed_seconds'))}"],
         ["Total candidate-fit epochs / optimizer steps", f"{len((proof or {}).get('history', []))} / {sum(r.get('optimizer_steps', 0) for r in (proof or {}).get('history', []))}" if (proof or {}).get('history') else "not recorded"],
         ["Selected saved checkpoint LR / epoch", f"{(proof or {}).get('selected', {}).get('lr', 'not recorded')} / {(proof or {}).get('selected', {}).get('epoch', 'not recorded')}"],
+        ["Selected saved checkpoint optimizer steps", str(selected_steps) if selected_steps is not None else "not recorded"],
         ["Source head / adapter unchanged", f"{(proof or {}).get('source_head_unchanged', 'not recorded')} / {(proof or {}).get('source_adapter_unchanged', 'not recorded')}"],
         ["Untouched control tensor / adapter linkage", "verified" if control else "not verified"],
         ["Released head SHA256", str((baseline or {}).get("checkpoint_head_sha256", "not recorded"))],
@@ -1331,6 +1420,15 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         f"TRAIN invocation wall={number(manifest.get('this_invocation_wall_seconds'))}s; intentional idle={number(manifest.get('this_invocation_intentional_idle_seconds'))}s. Resumed invocations must not be confused with cumulative journal usage.",
         "Local hosted API cost of $0 leaves hardware/electricity unpriced. Counterfactual policy prefixes are not additional physical API calls or demonstrated deployment savings. Missing usage stays unknown or a stated lower bound, never fabricated zero. The historical Jev development PDF is a separate cohort/profile and is preserved unchanged.",
     ], ["Phase", "Calls/forwards", "Input tokens", "Output tokens", "Model seconds", "Hosted USD"], usage_rows))
+    if fresh_timings:
+        sections.append(section("Fresh confirmation wall and idle scopes", [
+            "These are elapsed scopes of the completed physical experiment, not live controller latency. Shared writer generation and native encoding occur once; each CPU replay is a separate physical phase. Request/model seconds in the preceding table are already inside phase wall time and are not added again.",
+            "Startup and work-phase wall are separate only where recorded. Startup plus phase is calculated only when both exist; missing startup or partial timing fields remain not recorded. The owning-stage wall also encloses process/wrapper setup and cleanup, so its overlapping wall, request and idle columns must not be summed. A residual is not an exact startup, resource-pause or utilization measurement.",
+            "Intentional idle is inside its corresponding startup or phase wall and includes configured rests, holds and scheduling overshoot. Counterfactual policy-prefix seconds remain a separate replay estimate; these physical elapsed times establish no live latency or deployment-saving benefit.",
+        ], ["Physical phase", "Startup wall s", "Startup idle s", "Phase wall s", "Phase idle s", "Startup+phase s", "Stage wall s"], [
+            [row["phase"], *(number(row[key]) for key in ("startup_wall_seconds", "startup_idle_seconds",
+                "phase_wall_seconds", "phase_idle_seconds", "startup_plus_phase_wall_seconds", "owning_stage_wall_seconds"))]
+            for row in fresh_timings]))
     if baseline_result:
         timing = baseline_result["timing"]
         sections.append(section("Untouched DEVELOPMENT wall and idle scopes", [
@@ -1384,6 +1482,7 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
                        "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete,
                        "baseline_diagnostics": bool(baseline_result), "secondary_development_diagnostics": bool(development)},
         "baseline_development": baseline_result,
+        "fresh_timing_scopes": fresh_timings,
         "secondary_development": development,
         "train_reconciliation": reconciliation, "train_invocations": timings,
         "historical_train_expense": ({"run": str(historical_path),

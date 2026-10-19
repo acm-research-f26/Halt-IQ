@@ -434,7 +434,94 @@ class ReportTests(unittest.TestCase):
             result=collect(root,0);rows=next(s for s in result["sections"] if s["title"].startswith("4."))["rows"]
             self.assertIn(["Total candidate-fit epochs / optimizer steps","6 / 12"],rows)
             self.assertIn(["Selected saved checkpoint LR / epoch","1e-05 / 1"],rows)
+            self.assertIn(["Selected saved checkpoint optimizer steps","2"],rows)
             self.assertIn("need not accumulate every candidate's updates",report.plain_text(result))
+
+    def test_selected_steps_use_complete_selected_trial_prefix_not_total_or_last_epoch(self):
+        proof={"selected":{"lr":5e-5,"epoch":2},"history":[
+            {"lr":lr,"epoch":epoch,"optimizer_steps":steps}
+            for lr,steps_by_epoch in ((1e-5,(20,20,20)),(5e-5,(1,3,7)))
+            for epoch,steps in enumerate(steps_by_epoch,1)]}
+        self.assertEqual(report.selected_optimizer_steps(proof),4)
+        for change in ("absent","missing-epoch","duplicate","boolean-steps","boolean-epoch"):
+            bad=copy.deepcopy(proof)
+            if change=="absent":bad.pop("history")
+            elif change=="missing-epoch":bad["history"].pop(3)
+            elif change=="duplicate":bad["history"].append(copy.deepcopy(bad["history"][3]))
+            elif change=="boolean-steps":bad["history"][3]["optimizer_steps"]=True
+            else:bad["selected"]["epoch"]=True
+            with self.subTest(change=change):self.assertIsNone(report.selected_optimizer_steps(bad))
+
+    def test_fresh_timing_scopes_bind_all_four_manifests_without_adding_overlapping_wall(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);paths={"fresh_source":root/"writer","fresh_cache":root/"cache.jsonl",
+                "fresh_untuned":root/"untuned","fresh_trained":root/"trained"}
+            manifests=[paths["fresh_source"]/"manifest.json",Path(str(paths["fresh_cache"])+".manifest.json"),
+                paths["fresh_untuned"]/"manifest.json",paths["fresh_trained"]/"manifest.json"]
+            pins={};stages={}
+            for i,path in enumerate(manifests):
+                value={"status":"completed","this_invocation_wall_seconds":100.+i,
+                    "this_invocation_intentional_idle_seconds":80.+i}
+                if i:value["backend_startup_this_invocation"]={"wall_seconds":10.+i,"intentional_idle_seconds":5.}
+                write(path,value);pins[str(path)]=report.digest(path)
+                stages[str(i)]={"status":"completed","exit_code":0,"output_sha256":{str(path):pins[str(path)]},
+                    "started_at":"2026-10-18T19:00:00-05:00","finished_at":"2026-10-18T19:03:00-05:00"}
+            evidence=report.Evidence(root)
+            rows=report.fresh_phase_timings(evidence,paths,{"input_sha256":pins},{"stages":stages},AS_OF)
+            self.assertEqual(len(rows),4);self.assertEqual(len(evidence.files),4)
+            self.assertIsNone(rows[0]["startup_wall_seconds"])
+            self.assertIsNone(rows[0]["startup_plus_phase_wall_seconds"])
+            self.assertEqual(rows[1]["startup_plus_phase_wall_seconds"],112.)
+            self.assertEqual(rows[1]["phase_idle_seconds"],81.)
+            self.assertEqual(rows[1]["owning_stage_wall_seconds"],180.)
+            self.assertEqual(rows[1]["manifest_sha256"],pins[str(manifests[1])])
+            # Missing fields are unknown, never zero, even on a completed manifest.
+            write(manifests[0],{"status":"completed","backend_startup_this_invocation":{"intentional_idle_seconds":2.}})
+            pins[str(manifests[0])]=report.digest(manifests[0]);stages["0"]["output_sha256"]=dict(list(pins.items())[:1])
+            rows=report.fresh_phase_timings(report.Evidence(root),paths,{"input_sha256":pins},{"stages":stages},AS_OF)
+            self.assertIsNone(rows[0]["phase_wall_seconds"]);self.assertEqual(rows[0]["startup_idle_seconds"],2.)
+            self.assertIsNone(rows[0]["startup_plus_phase_wall_seconds"])
+
+    def test_fresh_timing_unbound_running_invalid_or_future_scopes_are_rejected(self):
+        for change in ("unbound","running","boolean","nan","negative","idle","startup-idle","startup-shape","capture","future","duplicate-owner"):
+            with self.subTest(change=change),tempfile.TemporaryDirectory() as temporary:
+                root=Path(temporary);paths={"fresh_source":root/"writer","fresh_cache":root/"cache.jsonl",
+                    "fresh_untuned":root/"untuned","fresh_trained":root/"trained"}
+                manifests=[paths["fresh_source"]/"manifest.json",Path(str(paths["fresh_cache"])+".manifest.json"),
+                    paths["fresh_untuned"]/"manifest.json",paths["fresh_trained"]/"manifest.json"]
+                pins={};stages={}
+                for path in manifests:
+                    write(path,{"status":"completed","this_invocation_wall_seconds":100.,"this_invocation_intentional_idle_seconds":80.})
+                    pins[str(path)]=report.digest(path)
+                path=manifests[0];value=json.loads(path.read_text())
+                if change=="unbound":pins.pop(str(path))
+                elif change=="running":value["status"]="running"
+                elif change in ("boolean","nan","negative"):value["this_invocation_wall_seconds"]={"boolean":True,"nan":float("nan"),"negative":-1.}[change]
+                elif change=="idle":value["this_invocation_intentional_idle_seconds"]=101.
+                elif change=="startup-idle":value["backend_startup_this_invocation"]={"wall_seconds":1.,"intentional_idle_seconds":2.}
+                elif change=="startup-shape":value["backend_startup_this_invocation"]=None
+                write(path,value)
+                if change!="unbound":pins[str(path)]=report.digest(path)
+                if change in ("capture","future","duplicate-owner"):
+                    stage={"status":"completed","exit_code":0,"output_sha256":{str(path):pins[str(path)]},
+                        "started_at":"2026-10-18T19:00:00-05:00","finished_at":"2026-10-18T19:03:00-05:00"}
+                    if change=="capture":stage["output_sha256"][str(path)]="changed"
+                    elif change=="future":stage["finished_at"]="2026-10-18T21:00:00-05:00"
+                    else:stages["duplicate"]=copy.deepcopy(stage)
+                    stages["owner"]=stage
+                with self.assertRaises(ValueError):report.fresh_phase_timings(report.Evidence(root),paths,{"input_sha256":pins},{"stages":stages},AS_OF)
+
+    def test_invalid_optional_fresh_timing_does_not_bypass_or_erase_primary_quality_gates(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);fixture(root,True)
+            with patch.object(report,"fresh_phase_timings",side_effect=ValueError("synthetic timing inconsistency")):
+                result=collect(root)
+            self.assertTrue(result["validation"]["paired_analysis"])
+            self.assertTrue(result["validation"]["complete_checkpoint"])
+            self.assertEqual(result["fresh_timing_scopes"],[])
+            self.assertEqual([e["stage"] for e in result["validation_errors"]],["fresh timing scopes"])
+            self.assertIn("EM %",report.plain_text(result))
+            self.assertIn("Fresh timing-scope table omitted",report.plain_text(result))
 
     def test_captured_physical_usage_reconciles_raw_writer_and_zero_encoder_cpu_head(self):
         from types import SimpleNamespace
@@ -640,6 +727,8 @@ class ReportTests(unittest.TestCase):
             self.assertEqual(result["status"], "DRAFT / PARTIAL CHECKPOINT")
             self.assertEqual(result["sections"][0]["rows"][0][1:3], ["3", "2"])
             self.assertNotIn("EM %", report.plain_text(result)); self.assertNotIn(str(root), report.plain_text(result))
+            self.assertEqual(result["fresh_timing_scopes"],[])
+            self.assertNotIn("Fresh confirmation wall and idle scopes",report.plain_text(result))
 
     def test_positive_n_requires_explicit_campaign(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -652,6 +741,12 @@ class ReportTests(unittest.TestCase):
             root = Path(temporary); fixture(root, True); result = collect(root)
             self.assertTrue(result["validation"]["complete_checkpoint"], result["warnings"])
             self.assertIn("EM %", report.plain_text(result))
+            self.assertEqual(len(result["fresh_timing_scopes"]),4)
+            self.assertTrue(all(row["owning_stage_wall_seconds"] is None for row in result["fresh_timing_scopes"]))
+            text=report.plain_text(result)
+            self.assertIn("Fresh confirmation wall and idle scopes",text)
+            self.assertIn("not live controller latency",text)
+            self.assertIn("must not be summed",text)
 
     def test_nested_plan_paths_work_without_canonical_alias_copies(self):
         with tempfile.TemporaryDirectory() as temporary:
