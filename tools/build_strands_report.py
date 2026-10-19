@@ -11,6 +11,7 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 import hashlib
 from html import escape
+import importlib.util
 import json
 import math
 from pathlib import Path
@@ -21,6 +22,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 TERMINAL = {"completed", "completed_with_errors"}
+DEVELOPMENT_AUDITOR_SHA = "5fa27dcaa09030d95ef0d77057a417b4343b05671029918c71f931f844e60fb1"
+DEVELOPMENT_EVIDENCE_SHA = "2ecdc14f67781d16b8e242b13bdd6909b411a5270a00a29545bfd1f54b596062"
 
 
 def digest(path):
@@ -743,9 +746,123 @@ def section(title, paragraphs=(), headers=(), rows=()):
     return {"title": title, "paragraphs": list(paragraphs), "headers": list(headers), "rows": list(rows)}
 
 
+def development_auditor(evidence):
+    """Load only the exact reviewed, read-only stdlib audit, never receipt code."""
+    helper = evidence.root / "operator_dev20_diagnostics.py"
+    for path, expected in ((helper, DEVELOPMENT_AUDITOR_SHA),
+                           (helper.with_name("operatorqualification.py"), DEVELOPMENT_EVIDENCE_SHA)):
+        if evidence.record_file(path, "pinned read-only DEVELOPMENT auditor") != expected:
+            raise ValueError("reviewed DEVELOPMENT auditor is missing or changed")
+    spec = importlib.util.spec_from_file_location("report_development20_audit", helper)
+    module = importlib.util.module_from_spec(spec)
+    previous = sys.dont_write_bytecode
+    try:
+        sys.dont_write_bytecode = True
+        raw = helper.read_bytes()
+        if hashlib.sha256(raw).hexdigest() != DEVELOPMENT_AUDITOR_SHA:
+            raise ValueError("reviewed DEVELOPMENT auditor changed before loading")
+        # Execute the pinned bytes, never a potentially stale cached .pyc.
+        exec(compile(raw, str(helper), "exec"), module.__dict__)
+    finally:
+        sys.dont_write_bytecode = previous
+    return module
+
+
+def development_diagnostics(evidence, receipt_path, paths, owner_dir, as_of):
+    """Re-audit explicit secondary evidence without changing primary gates."""
+    receipt = evidence.read(receipt_path, "explicit secondary DEVELOPMENT20 diagnostics")
+    if not isinstance(receipt, dict) or not receipt:
+        raise ValueError("explicit DEVELOPMENT diagnostic receipt is missing")
+    # Strict types prevent JSON true from masquerading as an integer denominator.
+    if (receipt.get("status") != "verified_secondary_development20_posttraining_diagnostics"
+            or receipt.get("phase") != "development"
+            or type(receipt.get("planned_n")) is not int or receipt["planned_n"] != 20
+            or type(receipt.get("max_drafts")) is not int or receipt["max_drafts"] != 1
+            or len(receipt.get("task_ids", [])) != 20 or len(set(receipt["task_ids"])) != 20
+            or receipt.get("analysis_helper_sha256") != DEVELOPMENT_AUDITOR_SHA
+            or receipt.get("all20_original_development_questions_verified") is not True
+            or receipt.get("no_fresh_confirmation") is not True
+            or receipt.get("no_further_weight_or_temperature_selection") is not True
+            or receipt.get("held_out_improvement_claim") is not False):
+        raise ValueError("secondary evidence must be all 20 DEVELOPMENT questions at cap1")
+    if timestamp(receipt["audited_at_utc"]) > timestamp(as_of):
+        raise ValueError("DEVELOPMENT audit postdates this report checkpoint")
+    roles = receipt["artifact_roles"]
+    expected = {"original_baseline_directory": paths["baseline"].parent,
+                "untuned_checkpoint_directory": paths["untuned"],
+                "trained_checkpoint_directory": paths["trained"]}
+    if not owner_dir or any(value is None or evidence.path(roles[key]) != value
+                            for key, value in expected.items()):
+        raise ValueError("DEVELOPMENT baseline/checkpoints differ from report training owner")
+    qualification = evidence.read(roles["matched_training_control_CAL_qualification"],
+                                  "DEVELOPMENT matched training/control/CAL owner")
+    owner = evidence.path(owner_dir)
+    if (not isinstance(qualification, dict)
+            or qualification.get("actual_training_campaign_plan_sha256") != evidence.record_file(
+                owner / "plan.json", "DEVELOPMENT actual training plan")
+            or qualification.get("actual_training_campaign_sha256") != evidence.record_file(
+                owner / "campaign.json", "DEVELOPMENT actual training terminal state")):
+        raise ValueError("DEVELOPMENT qualification belongs to another training campaign")
+    hashes = receipt.get("input_files_sha256")
+    if not isinstance(hashes, dict) or not hashes:
+        raise ValueError("DEVELOPMENT input fingerprints absent")
+    for path, expected_hash in hashes.items():
+        if evidence.record_file(path, "secondary DEVELOPMENT bound input") != expected_hash:
+            raise ValueError("DEVELOPMENT input fingerprint changed or disappeared")
+    auditor = development_auditor(evidence)
+    actual = auditor.analyze(evidence.path(roles["plan"]), evidence.path(roles["campaign"]).parent)
+    # JSON normalizes integer mapping keys just as the persisted receipt does.
+    actual = json.loads(json.dumps(actual, allow_nan=False))
+    if {k:v for k,v in receipt.items() if k != "audited_at_utc"} != {
+            k:v for k,v in actual.items() if k != "audited_at_utc"}:
+        raise ValueError("DEVELOPMENT receipt differs from the authoritative read-only re-audit")
+    # Bind all newly rejoined source evidence too, then freeze these bytes at report end.
+    for path, expected_hash in actual["input_files_sha256"].items():
+        if evidence.record_file(path, "independently rejoined DEVELOPMENT input") != expected_hash:
+            raise ValueError("DEVELOPMENT evidence changed during re-audit")
+    return actual
+
+
+def development_sections(result):
+    """Keep reused-cohort diagnostics visually separate from fresh confirmation."""
+    metric = lambda value: "undefined" if value is None else number(value, 6)
+    rows = []
+    for kind in ("untuned", "trained"):
+        arm = result["per_policy"][kind]; p = arm["first_draft_diagnostics"]
+        rows.append([kind + " calibrated", f"{p['scored_first_drafts']}/20",
+            metric(p["auroc"]), metric(p["brier"]), metric(p["nll"]),
+            metric(p["first_draft_approval_precision"]), metric(p["approval_coverage_of_planned"])])
+    quality = result["source_writer_answer_quality"]
+    sections = [section("Secondary post-training DEVELOPMENT probability diagnostics", [
+        "The same 20 development questions were inspected before training. These cap1 results describe probabilities on saved first drafts; they establish neither repair benefit, answer improvement nor fresh generalization. Released and trained heads each use their separately fitted CAL temperature; weights and temperatures are not selected again here.",
+        f"The shared saved writer answers have EM {100*quality['em']:.2f}% and token F1 {quality['token_f1']:.6f}. A head failure can reduce its failure-inclusive episode EM, but cannot improve these saved answers. Missing/overflow probabilities remain missing; all 20 stay in coverage denominators. Undefined AUROC or precision is not zero.",
+    ], ["Calibrated head", "Scored/N", "AUROC", "Brier", "NLL", "Precision", "Approval/N"], rows)]
+    paired = result["paired_deltas"]; rows = []
+    for name in ("nll", "brier", "accuracy", "approval_coverage_of_planned"):
+        value = paired[name + "_trained_minus_untuned"]
+        rows.append(["Decision classification accuracy" if name == "accuracy" else name,
+            metric(value["candidate_minus_baseline"]) if value else "undefined",
+            "[" + ", ".join(metric(x) for x in value["bootstrap95"]) + "]" if value else "undefined",
+            str(value["planned_n"]) if value else "0", "5,000 / 0" if value else "not drawn"])
+    for name in ("auroc", "approval_precision"):
+        value = paired[name + "_paired_bootstrap"]
+        a = result["per_policy"]["trained"]["first_draft_diagnostics"]
+        b = result["per_policy"]["untuned"]["first_draft_diagnostics"]
+        key = "auroc" if name == "auroc" else "first_draft_approval_precision"
+        delta = a[key] - b[key] if a[key] is not None and b[key] is not None else None
+        interval = value["bootstrap95"]
+        rows.append([name, metric(delta), "[" + ", ".join(metric(x) for x in interval) + "]" if interval else "undefined",
+            str(paired["paired_scored_n"]), f"{value['valid_draws']} / {value['undefined_draws']}"])
+    sections.append(section("Secondary DEVELOPMENT paired probability differences", [
+        f"Trained minus released calibrated head; 5,000 paired draws, seed 42, original development question as unit. Probability differences use the {paired['paired_scored_n']}/20 observed pairs; {paired['missing_probability_pairs']} absent pairs are not imputed. Approval coverage uses all 20, with absent decisions counted as no approval. Decision classification accuracy concerns correctness prediction, not answer EM.",
+        "AUROC/precision point differences use each arm's observed scores; their paired intervals use only the observed-pair intersection. Nonadditive intervals exclude and count draws undefined in either arm. Additive intervals, when defined, use all 5,000 draws. These small, reused-cohort intervals are descriptive.",
+    ], ["Statistic", "Point delta", "Paired95% interval", "Pair N", "Valid/undefined draws"], rows))
+    return sections
+
+
 def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=None, campaign_run=None,
                    train_segments=(), historical_train_run=None, historical_train_segments=(),
-                   training_campaign_run=None):
+                   training_campaign_run=None, development_diagnostic=None):
     if fresh_n not in (0, 20, 50, 100):
         raise ValueError("explicit fresh N must be0,20,50 or100")
     as_of = timestamp(as_of).isoformat()
@@ -843,6 +960,15 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     if subset and "PROPOSED" in subset.get("status", ""):
         warnings.append("Supplied TRAIN subset remains proposed; it is not an adopted training result.")
     control = control_valid(evidence, paths, proof, baseline, owner_campaign)
+    development = None
+    if development_diagnostic:
+        try:
+            if not (gate and trained and control):
+                raise ValueError("secondary diagnostics require this report's verified baseline/trained/control proofs")
+            development = development_diagnostics(evidence, development_diagnostic, paths, owner_dir, as_of)
+        except (ValueError, KeyError, TypeError, OSError, OverflowError) as error:
+            validation_errors.append({"stage": "secondary development diagnostics", "type": type(error).__name__, "detail": str(error)})
+            warnings.append("Secondary post-training DEVELOPMENT diagnostics omitted: the explicit receipt or its bound evidence is missing/inconsistent. Primary confirmation gates are unchanged.")
     paired = None
     if fresh_n:
         if not campaign_run:
@@ -968,6 +1094,8 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
     if calibration_rows:
         sections.append(section("Calibration evidence", ["Calibration NLL is measured on the fitting data, not confirmation performance."],
             ["Head", "Questions", "Temperature", "NLL T1", "NLL fitted"], calibration_rows))
+    if development:
+        sections.extend(development_sections(development))
     if paired:
         quality = []
         probability = []
@@ -1026,6 +1154,15 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         add_usage("Historical TRAIN preparation", historical["manifest"]["actual_evaluation_usage"])
     if baseline_result:
         add_usage("Untouched DEVELOPMENT native decisions", baseline_result["usage"])
+    if development:
+        encoding = development["encoding_expense"]
+        add_usage("Secondary DEVELOPMENT encoder once", {"completed_encoder_forwards": encoding["physical_encoder_forwards"],
+            "input_tokens": encoding["physical_encoder_input_tokens"], "encoding_seconds": encoding["encoding_seconds"], "hosted_cost_usd": 0})
+        for kind in ("untuned", "trained"):
+            arm = development["per_policy"][kind]
+            add_usage("Secondary DEVELOPMENT " + kind + " CPU head", {"completed_requests_including_invalid_outputs": arm["head_score_requests_including_known_failures"],
+                "reported_physical_input_tokens": 0, "reported_output_tokens": 0,
+                "reported_request_seconds": arm["request_seconds"], "hosted_cost_usd": 0})
     if paired:
         for key in ("writer_generation_once", "real_encoder_features_once", "untuned_head_scoring", "tuned_head_scoring"):
             if paired.get("physical_evaluation_usage", {}).get(key):
@@ -1092,8 +1229,9 @@ def collect_report(input_root, train_run, fresh_n, as_of, *, cohort_manifest=Non
         "artifact_roles": {k: str(v) if isinstance(v, Path) else v for k, v in paths.items()},
         "validation": {"untouched_gate": gate, "trained_head_proof": trained,
                        "unchanged_control_proof": control, "paired_analysis": bool(paired), "complete_checkpoint": complete,
-                       "baseline_diagnostics": bool(baseline_result)},
+                       "baseline_diagnostics": bool(baseline_result), "secondary_development_diagnostics": bool(development)},
         "baseline_development": baseline_result,
+        "secondary_development": development,
         "train_reconciliation": reconciliation, "train_invocations": timings,
         "historical_train_expense": ({"run": str(historical_path),
             "status": historical["manifest"].get("status"),
@@ -1206,6 +1344,7 @@ def main():
     parser.add_argument("--cohort-manifest")
     parser.add_argument("--campaign-run")
     parser.add_argument("--training-campaign-run", help="Explicit completed training-only owner for a separate fresh-only campaign; exact plan/state/source/output identities required")
+    parser.add_argument("--development-diagnostic", help="Explicit secondary DEVELOPMENT20/cap1 receipt; missing/inconsistent evidence suppresses secondary diagnostics only")
     parser.add_argument("--train-segment", action="append", default=[], help="Explicit archived TRAIN segment directory, in chronological order; receipt required")
     parser.add_argument("--historical-train-run", help="One explicit earlier TRAIN writer source, physical expense only; never merged into the selected cohort")
     parser.add_argument("--historical-train-segment", action="append", default=[], help="Explicit archive of that historical source, in chronological order; receipt required")
@@ -1213,7 +1352,7 @@ def main():
     report = collect_report(args.input_root, args.train_run, args.fresh_n, args.as_of,
         cohort_manifest=args.cohort_manifest, campaign_run=args.campaign_run, train_segments=args.train_segment,
         historical_train_run=args.historical_train_run, historical_train_segments=args.historical_train_segment,
-        training_campaign_run=args.training_campaign_run)
+        training_campaign_run=args.training_campaign_run, development_diagnostic=args.development_diagnostic)
     provenance = write_report(report, args.output_dir)
     print(json.dumps({"status": report["status"], "pdf_pages": provenance["pdf_pages"], "output": str(args.output_dir)}))
 

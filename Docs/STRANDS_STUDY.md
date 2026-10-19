@@ -252,6 +252,43 @@ and scheduling overshoot, so no residual is labeled exact RAM-pause time. Missin
 startup timing remains unknown rather than zero. This remains a partial physical
 phase table, not a complete campaign-cost or hardware/electricity estimate.
 
+The optional report argument `--development-diagnostic <explicit-receipt.json>`
+adds a separately labeled **secondary post-training DEVELOPMENT20 / cap1**
+probability diagnostic, only after its actual three-stage native-cache and two
+CPU head-replay campaign finishes. It reuses the same saved first drafts and the
+matched, separately calibrated released/trained heads. This reused development
+cohort was inspected before training; it cannot establish answer improvement,
+repair benefit or fresh generalization, and never satisfies the primary fresh
+confirmation gates. The saved writer answer EM/F1 stays distinct from
+failure-inclusive head-episode quality and correctness-classification accuracy.
+
+The consumer requires the exact reviewed stdlib audit and evidence helper hashes,
+re-runs their read-only joins without models/Torch/network or bytecode writes,
+and compares every normalized receipt field except its audit timestamp. Those
+joins validate all 20 original tasks/full contexts, the three owning stages,
+15 frozen source files, native features/events/overflows, raw head journals,
+episodes, logits, labels and current calibrated checkpoints. The report also
+requires its actual training owner and baseline/head roles to match the receipt,
+checks every input-file hash, and rejects audit timestamps after the report.
+Missing, changed or inconsistent explicit evidence omits **all secondary metrics
+and secondary expense**, with the reason recorded privately. It does not change
+the primary baseline/training/confirmation validation results. Neither a missing
+receipt nor an unfinished campaign is replaced with synthetic scores.
+
+AUROC/Brier/NLL use observed probabilities; missing/overflow scores remain absent.
+Approval precision is conditional on approval, alongside approval coverage over
+all 20 planned questions. Undefined AUROC/precision is displayed as undefined.
+Question-paired differences use 5,000 draws/seed 42; NLL/Brier/classification accuracy
+use only the observed-pair intersection. Approval coverage uses all 20, treating
+an absent decision as no approval without inventing its probability. AUROC and
+precision intervals use paired observed questions, exclude and count undefined
+bootstrap draws, and show the actual pair denominator. Their point differences
+are each arm's observed-cohort differences, explicitly distinguished from those
+paired intervals when score availability differs. These small-cohort intervals
+are descriptive. New native encoding and each CPU head replay are charged once
+as separate physical phases; the reused writer drafts incur no new writer calls.
+Private provenance and machine paths are not public website assets.
+
 Public sources:
 - https://github.com/strands-labs/strands-decider
 - https://huggingface.co/StrandsAgents/strands-decider-2B-qwen3.5-v1-2610

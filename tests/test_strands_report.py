@@ -7,6 +7,7 @@ import math
 import shutil
 import tempfile
 import unittest
+from unittest.mock import Mock, patch
 
 from tools import build_strands_report as report
 from pc_strands.compare import compare_runs
@@ -245,6 +246,42 @@ def collect(root, n=20):
         campaign_run="campaign" if (root / "campaign/plan.json").exists() else None)
 
 
+def development_receipt_fixture(root):
+    """Synthetic consumer boundary: the separately tested auditor is not inference."""
+    from pc_strands.compare import first_draft_diagnostics
+    fixture(root, True)
+    owner = root / "campaign"
+    paths = report.artifact_paths(report.Evidence(root), json.loads((owner / "plan.json").read_text()), 0, owner)
+    qualification = root / "synthetic-matched-qualification.json"
+    write(qualification, {"actual_training_campaign_plan_sha256": report.digest(owner / "plan.json"),
+        "actual_training_campaign_sha256": report.digest(owner / "campaign.json")})
+    baseline = json.loads((paths["baseline"].parent / "episodes.json").read_text())
+    diagnostics = first_draft_diagnostics({r["task_id"]:r for r in baseline if r["policy"] == "strands-untuned"}, [f"dev{i}" for i in range(20)])
+    delta = {"candidate_minus_baseline":0., "bootstrap95":[0.,0.], "planned_n":20,
+        "complete_pair_n":20, "draws":5000, "seed":42}
+    pairs = {"planned_n":20,"paired_scored_n":20,"missing_probability_pairs":0,"draws":5000,"seed":42,
+        **{k+"_trained_minus_untuned":copy.deepcopy(delta) for k in ("nll","brier","accuracy","approval_coverage_of_planned")},
+        **{k+"_paired_bootstrap":{"valid_draws":5000,"undefined_draws":0,"bootstrap95":[0.,0.]}
+            for k in ("auroc","approval_precision")}}
+    roles = {"plan":str(owner / "plan.json"),"campaign":str(owner / "campaign.json"),
+        "original_baseline_directory":str(paths["baseline"].parent),
+        "untuned_checkpoint_directory":str(paths["untuned"]),"trained_checkpoint_directory":str(paths["trained"]),
+        "matched_training_control_CAL_qualification":str(qualification)}
+    receipt = {"status":"verified_secondary_development20_posttraining_diagnostics","phase":"development",
+        "planned_n":20,"max_drafts":1,"task_ids":[f"dev{i}" for i in range(20)],
+        "analysis_helper_sha256":report.DEVELOPMENT_AUDITOR_SHA,"audited_at_utc":"2026-10-18T19:30:00-05:00",
+        "all20_original_development_questions_verified":True,"no_fresh_confirmation":True,
+        "no_further_weight_or_temperature_selection":True,"held_out_improvement_claim":False,"artifact_roles":roles,
+        "input_files_sha256":{str(p):report.digest(p) for p in (owner/"plan.json",owner/"campaign.json",qualification)},
+        "source_writer_answer_quality":{"planned_n":20,"em":.45,"token_f1":.45,"same_saved_answers_in_both_arms":True},
+        "encoding_expense":{"physical_encoder_forwards":20,"physical_encoder_input_tokens":2190,"encoding_seconds":.1},
+        "paired_deltas":pairs,"per_policy":{k:{"first_draft_diagnostics":copy.deepcopy(diagnostics),
+            "head_score_requests_including_known_failures":20,"request_seconds":.02,"failed_or_missing_episodes":0}
+            for k in ("untuned","trained")}}
+    path = root / "synthetic-development-diagnostic.json"; write(path, receipt)
+    return path, receipt, paths, owner
+
+
 def split_campaign_fixture(root):
     """Separate synthetic owners; no training rows imported into fresh state."""
     fixture(root, True, alternate=True)
@@ -367,6 +404,109 @@ def historical_expense_fixture(root):
 
 
 class ReportTests(unittest.TestCase):
+    def test_secondary_development_validated_audit_is_separate_and_expense_once(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, receipt, _, _ = development_receipt_fixture(root)
+            auditor = Mock(); auditor.analyze.return_value = copy.deepcopy(receipt)
+            with patch.object(report, "development_auditor", return_value=auditor):
+                result = report.collect_report(root,"study-runs/train",0,AS_OF,campaign_run="campaign",development_diagnostic=path)
+            self.assertTrue(result["validation"]["secondary_development_diagnostics"])
+            self.assertFalse(result["validation"]["paired_analysis"])
+            self.assertFalse(result["validation"]["complete_checkpoint"])
+            self.assertEqual(result["status"],"DRAFT / PARTIAL CHECKPOINT")
+            text = report.plain_text(result)
+            self.assertIn("Secondary post-training DEVELOPMENT probability diagnostics", text)
+            self.assertIn("same 20 development questions were inspected before training", text)
+            self.assertNotIn(str(root),text)
+            usage = next(s for s in result["sections"] if s["title"].startswith("6."))["rows"]
+            extra = [r for r in usage if r[0].startswith("Secondary DEVELOPMENT")]
+            self.assertEqual([(r[0],r[1],r[2]) for r in extra],[("Secondary DEVELOPMENT encoder once","20","2,190"),
+                ("Secondary DEVELOPMENT untuned CPU head","20","0"),("Secondary DEVELOPMENT trained CPU head","20","0")])
+            auditor.analyze.assert_called_once_with(root/"campaign/plan.json",root/"campaign")
+
+    def test_secondary_missing_receipt_suppresses_only_secondary_with_reason(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary); fixture(root,True); before=collect(root,0)
+            result=report.collect_report(root,"study-runs/train",0,AS_OF,campaign_run="campaign",development_diagnostic="missing.json")
+            self.assertIsNone(result["secondary_development"])
+            for key in ("untouched_gate","trained_head_proof","unchanged_control_proof","paired_analysis","complete_checkpoint"):
+                self.assertEqual(result["validation"][key],before["validation"][key])
+            self.assertEqual(result["validation_errors"][-1]["stage"],"secondary development diagnostics")
+            self.assertIn("explicit DEVELOPMENT diagnostic receipt is missing",result["validation_errors"][-1]["detail"])
+            self.assertNotIn("Secondary post-training DEVELOPMENT probability diagnostics",report.plain_text(result))
+
+    def test_secondary_phase_denominator_time_and_current_roles_cannot_be_relabelled(self):
+        for change in ("phase","n","bool-n","cap","duplicate","time","checkpoint","owner","qualification-list","receipt-list"):
+            with self.subTest(change=change),tempfile.TemporaryDirectory() as temporary:
+                root=Path(temporary); path,receipt,paths,owner=development_receipt_fixture(root)
+                if change=="phase": receipt["phase"]="confirmation"
+                elif change=="n": receipt["planned_n"]=19
+                elif change=="bool-n": receipt["planned_n"]=True
+                elif change=="cap": receipt["max_drafts"]=10
+                elif change=="duplicate": receipt["task_ids"][-1]=receipt["task_ids"][0]
+                elif change=="time": receipt["audited_at_utc"]="2026-10-18T20:01:00-05:00"
+                elif change=="checkpoint": receipt["artifact_roles"]["trained_checkpoint_directory"]=str(paths["untuned"])
+                elif change in ("owner","qualification-list"):
+                    q=Path(receipt["artifact_roles"]["matched_training_control_CAL_qualification"])
+                    write(q,["malformed"] if change=="qualification-list" else {"actual_training_campaign_plan_sha256":"wrong-owner","actual_training_campaign_sha256":report.digest(owner/"campaign.json")})
+                else: receipt=["malformed"]
+                write(path,receipt)
+                with patch.object(report,"development_auditor") as audit:
+                    with self.assertRaises(ValueError): report.development_diagnostics(report.Evidence(root),path,paths,owner,AS_OF)
+                    audit.assert_not_called()
+
+    def test_secondary_changed_bound_file_or_metrics_fail_closed(self):
+        for change in ("input","metrics","raw-audit-reject"):
+            with self.subTest(change=change),tempfile.TemporaryDirectory() as temporary:
+                root=Path(temporary); path,receipt,paths,owner=development_receipt_fixture(root)
+                actual=copy.deepcopy(receipt)
+                if change=="input": (owner/"plan.json").write_text('{}')
+                elif change=="metrics": receipt["per_policy"]["trained"]["first_draft_diagnostics"]["auroc"]=1.
+                write(path,receipt); auditor=Mock(); auditor.analyze.return_value=actual
+                if change=="raw-audit-reject": auditor.analyze.side_effect=ValueError("raw stage/feature/label join refused")
+                with patch.object(report,"development_auditor",return_value=auditor):
+                    with self.assertRaises(ValueError): report.development_diagnostics(report.Evidence(root),path,paths,owner,AS_OF)
+
+    def test_secondary_nulls_and_missing_pairs_are_displayed_without_imputation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            _,receipt,_,_=development_receipt_fixture(Path(temporary))
+            receipt["paired_deltas"].update(paired_scored_n=0,missing_probability_pairs=20)
+            for arm in receipt["per_policy"].values():
+                arm["first_draft_diagnostics"].update(scored_first_drafts=0,auroc=None,brier=None,nll=None,
+                    first_draft_approval_precision=None,approval_coverage_of_planned=0)
+            for key in ("nll","brier","accuracy"): receipt["paired_deltas"][key+"_trained_minus_untuned"]=None
+            for key in ("auroc","approval_precision"):
+                receipt["paired_deltas"][key+"_paired_bootstrap"]={"valid_draws":0,"undefined_draws":5000,"bootstrap95":None}
+            sections=report.development_sections(receipt); text=report.plain_text({"title":"test","status":"synthetic","as_of":AS_OF,"sections":sections,"input_files":[]})
+            self.assertIn("undefined",text); self.assertIn("0/20 observed pairs; 20 absent pairs are not imputed",text)
+            self.assertIn("0 / 5000",text)
+            self.assertIn("not drawn",text)
+
+    def test_secondary_auditor_requires_both_exact_reviewed_programs(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            helper=root/"operator_dev20_diagnostics.py"
+            helper.write_text("raise RuntimeError('must never execute')")
+            with self.assertRaisesRegex(ValueError,"missing or changed"): report.development_auditor(report.Evidence(root))
+            with patch.object(report,"DEVELOPMENT_AUDITOR_SHA",report.digest(helper)):
+                with self.assertRaisesRegex(ValueError,"missing or changed"): report.development_auditor(report.Evidence(root))
+            sibling=root/"operatorqualification.py"; sibling.write_text("# changed sibling")
+            with patch.object(report,"DEVELOPMENT_AUDITOR_SHA",report.digest(helper)):
+                with self.assertRaisesRegex(ValueError,"missing or changed"): report.development_auditor(report.Evidence(root))
+
+    def test_secondary_import_is_read_only_and_restores_bytecode_setting(self):
+        import sys
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary); helper=root/"operator_dev20_diagnostics.py"; sibling=root/"operatorqualification.py"
+            helper.write_text("import sys\nassert sys.dont_write_bytecode\nvalue = 'synthetic stdlib boundary'\n")
+            sibling.write_text("# synthetic pinned evidence boundary\n")
+            previous=sys.dont_write_bytecode
+            with patch.object(report,"DEVELOPMENT_AUDITOR_SHA",report.digest(helper)),patch.object(report,"DEVELOPMENT_EVIDENCE_SHA",report.digest(sibling)):
+                module=report.development_auditor(report.Evidence(root))
+            self.assertEqual(module.value,"synthetic stdlib boundary")
+            self.assertEqual(sys.dont_write_bytecode,previous)
+            self.assertFalse((root/"__pycache__").exists())
+
     def test_separate_training_owner_supplies_real_roles_without_imported_stages(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); owner, fresh = split_campaign_fixture(root)
