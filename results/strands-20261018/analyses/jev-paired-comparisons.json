@@ -1,0 +1,164 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/paired-comparisons.json",
+  "original_sha256": "5f4320f09d5dbf25caa88df695e9eb5a994d43051f12cc0d9b5608869123bfc4",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "jev-1.13-single-correctness_minus_fixed-1-prefix": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    },
+    "jev-1.13-single-correctness_minus_fixed-2-prefix": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    },
+    "jev-1.13-single-correctness_minus_fixed-3-prefix": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    },
+    "jev-1.13-single-correctness_minus_fixed-5-prefix": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    },
+    "jev-1.13-single-correctness_minus_fixed-10-prefix": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    },
+    "jev-1.13-single-correctness_minus_jev-1.13-single-correctness-cap3": {
+      "exact_match": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      },
+      "token_f1": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "planned_n": 20,
+        "complete_pair_n": 20,
+        "draws": 5000,
+        "seed": 42,
+        "rng": "python.random.Random"
+      }
+    }
+  }
+}

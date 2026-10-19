@@ -1,0 +1,202 @@
+{
+  "reports/professor-review.pdf": {
+    "source": "project/testing/output/pdf/strands-final-fresh20-2130-v2-20261018-204613/professor-review.pdf",
+    "original_sha256": "38caa18fde31af39a180fae66bab306889aafeec493f47fe7325366d2ad0a8da",
+    "transformation": "byte-exact copy"
+  },
+  "reports/optional-jev-companion.pdf": {
+    "source": "project/testing/output/pdf/strands-optional-jev-fresh20-20261018-205117/optional-jev-companion.pdf",
+    "original_sha256": "89cc4dbd4bf2875c806914dfc60d0362891146524fe5f93e8de8f9dc1667d158",
+    "transformation": "byte-exact copy"
+  },
+  "data/fresh20-evaluator-only.jsonl": {
+    "source": "runtime/candidate-panels/fresh20/tasks.jsonl",
+    "original_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+    "transformation": "byte-exact copy"
+  },
+  "data/train90-evaluator-only.jsonl": {
+    "source": "research/candidate-train-original90-v7/tasks.jsonl",
+    "original_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+    "transformation": "byte-exact copy"
+  },
+  "data/CITATION.bib": {
+    "source": "project/testing/strands-work/data/hotpotqa/CITATION.bib",
+    "original_sha256": "a48b25c96cf3b88971f219256e1e8dcaceb9532693509a37ca21d82a498f887f",
+    "transformation": "byte-exact copy"
+  },
+  "exports/untuned-common-schema-results.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-untuned/common-schema-results.jsonl",
+    "original_sha256": "f69158f56d5fb74c33261a8ba5f50c093c7664caa4034328f31307842571ad6c",
+    "transformation": "byte-exact copy"
+  },
+  "exports/untuned-first-draft-logits.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-untuned/first-draft-logits.jsonl",
+    "original_sha256": "646e565e949e2f859b0cfd89f62bf22b5421e0aecc51c6ecbd630585b051606c",
+    "transformation": "byte-exact copy"
+  },
+  "exports/trained-common-schema-results.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-trained/common-schema-results.jsonl",
+    "original_sha256": "6d7c9f6f90b1f9c9e90e91d707f6309a1a6c82bda513e607965b3bf131be1613",
+    "transformation": "byte-exact copy"
+  },
+  "exports/trained-first-draft-logits.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-trained/first-draft-logits.jsonl",
+    "original_sha256": "37103db6650d0d2cd791c6be25c681cf9aa9eece4ca998218a73f47a2af91886",
+    "transformation": "byte-exact copy"
+  },
+  "exports/jev-common-schema-results.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/common-schema-results.jsonl",
+    "original_sha256": "cdd48603ddece8e0baad28584cd24a86493fefd16f5d7944638d518f75499d4d",
+    "transformation": "byte-exact copy"
+  },
+  "exports/jev-first-draft-logits.jsonl": {
+    "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/first-draft-logits.jsonl",
+    "original_sha256": "fa161781ecce8e9af50b19c705bfdfc21ac22d98e3f6e6857538f835aba3ac9e",
+    "transformation": "byte-exact copy"
+  },
+  "analyses/primary-paired-analysis.json": {
+    "source": "runtime/study-runs/fresh20-2130-v1-paired-analysis/paired-analysis.json",
+    "original_sha256": "9a4e5114435c678402889aa56a60ee54c541ced084f892782b35c030aa187a53",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "analyses/jev-summary.json": {
+    "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/summary.json",
+    "original_sha256": "bcf1d597c384fca39371dc780c6320d11836502b949b843e69376039ac6b6979",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "analyses/jev-paired-comparisons.json": {
+    "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/paired-comparisons.json",
+    "original_sha256": "5f4320f09d5dbf25caa88df695e9eb5a994d43051f12cc0d9b5608869123bfc4",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "analyses/jev-jev-budget-receipt.json": {
+    "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/jev-budget-receipt.json",
+    "original_sha256": "ae2628604c531c10c490c6c16d92bed3f52f92d6d52bee5a8b0567983cc68411",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "audits/primary-independent-results.txt": {
+    "source": "research/FRESH20-INDEPENDENT-RESULTS-20261018.txt",
+    "original_sha256": "847b9bf12187e7def90a7a00e6ca4f1bd700c7ee144a1225d5c8993403965df9",
+    "transformation": "byte-exact copy"
+  },
+  "audits/optional-jev-independent-results.txt": {
+    "source": "research/OPTIONAL-JEV-FRESH20-INDEPENDENT-RESULTS-20261018.txt",
+    "original_sha256": "5c99bf48e5950e67dd7107cbabfb2d55698415be2a30aa528e3372ddff2d309a",
+    "transformation": "byte-exact copy"
+  },
+  "audits/primary-independent-audit.json": {
+    "source": "research/FRESH20-INDEPENDENT-TERMINAL-AUDIT-20261018.json",
+    "original_sha256": "c7c590e0629c999a099c42290b9113635b2fedb1351084760a606b6384109960",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "audits/optional-jev-independent-audit.json": {
+    "source": "research/OPTIONAL-JEV-FRESH20-INDEPENDENT-TERMINAL-AUDIT-20261018.json",
+    "original_sha256": "809c1f6c54b7f461015034f0dc4c913282e66d6a2947a3c0849182f9881980f7",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/training-plan-data-only.json": {
+    "source": "runtime/reviewed-campaign-plan-v8-training-only-train90.json",
+    "original_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/fresh-plan-data-only.json": {
+    "source": "runtime/reviewed-campaign-plan-fresh20-after-v8-2130-v1.json",
+    "original_sha256": "d6b2b3c88f365048b32b003d3b58c3c0ae5217215c3e39a7530a633ae3a9fc03",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/fresh-N-freeze-data-only.json": {
+    "source": "runtime/fresh-N-freeze.json",
+    "original_sha256": "99f933742e984b15dc25bdca5de54d902a0a90d949e02790263f333bb2a21dea",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/pretraining-selection-history-data-only.json": {
+    "source": "runtime/fresh-freeze-history/fresh-N-freeze-v5-before-v8-training.json",
+    "original_sha256": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/installed-packages-data-only.json": {
+    "source": "runtime/installed-packages.json",
+    "original_sha256": "23b5ce1e9017494bb6dda65b684d18b0780507568f66feba4205d9dffced1619",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "protocol/train90-selection-data-only.json": {
+    "source": "research/candidate-train-original90-v7/manifest.json",
+    "original_sha256": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/head-trained-training-proof.json": {
+    "source": "runtime/checkpoints/train90-original-v7/head-trained/training-proof.json",
+    "original_sha256": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/head-trained-calibration-proof.json": {
+    "source": "runtime/checkpoints/train90-original-v7/head-trained/calibration-proof.json",
+    "original_sha256": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/head-trained-strands_decider_config.json": {
+    "source": "runtime/checkpoints/train90-original-v7/head-trained/strands_decider_config.json",
+    "original_sha256": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/released-calibrated-training-proof.json": {
+    "source": "runtime/checkpoints/train90-original-v7/released-calibrated/training-proof.json",
+    "original_sha256": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/released-calibrated-calibration-proof.json": {
+    "source": "runtime/checkpoints/train90-original-v7/released-calibrated/calibration-proof.json",
+    "original_sha256": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/released-calibrated-strands_decider_config.json": {
+    "source": "runtime/checkpoints/train90-original-v7/released-calibrated/strands_decider_config.json",
+    "original_sha256": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/training-terminal-state-data-only.json": {
+    "source": "runtime/campaign-training-only-train90-v8-20261018/campaign.json",
+    "original_sha256": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/fresh-terminal-state-data-only.json": {
+    "source": "runtime/campaign-fresh20-after-v8-2130-v1-20261018/campaign.json",
+    "original_sha256": "399b87fcc07152d93e4ef0c8accfd4dce3830fe3aff1c25f27bb0a7d01ce98e7",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "proofs/untouched-pretraining-receipt-data-only.json": {
+    "source": "runtime/study-runs/untuned-dev20-decisions/untuned-pretraining-receipt.json",
+    "original_sha256": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+    "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed."
+  },
+  "data/fresh20-writer-trajectories.json": {
+    "source": "runtime/study-runs/fresh20-2130-v1-fixed10/trajectories.json",
+    "original_sha256": "c426abe1be2d183eca88c8b61d4823992965eef4346dfa8dcc4cdb975a220ac9",
+    "transformation": "Removed local Ollama call.response bodies only; retained every task, round, draft, evaluator EM/F1 and reported call usage. Data-only review snapshot; not accepted as the original raw trajectory by strict native replay hash gates."
+  },
+  "checkpoints/selected-head/head.safetensors": {
+    "source": "runtime/checkpoints/train90-original-v7/head-trained/head.safetensors",
+    "original_sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+    "transformation": "byte-exact copy"
+  },
+  "checkpoints/selected-head/strands_decider_config.json": {
+    "source": "runtime/checkpoints/train90-original-v7/head-trained/strands_decider_config.json",
+    "original_sha256": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+    "transformation": "byte-exact copy"
+  },
+  "checkpoints/selected-head/LICENSE-Strands.md": {
+    "source": "runtime/models/decider/LICENSE.md",
+    "original_sha256": "c0d777a0fed01cceb107d91f1aef96d51737be04f2ed75b1b933286a170d7411",
+    "transformation": "byte-exact copy"
+  },
+  "checkpoints/selected-head/LICENSE-Qwen": {
+    "source": "runtime/models/base/LICENSE",
+    "original_sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+    "transformation": "byte-exact copy"
+  },
+  "checkpoints/selected-head/UPSTREAM-THIRD-PARTY-NOTICES.md": {
+    "source": "runtime/source/THIRD_PARTY_NOTICES.md",
+    "original_sha256": "292736564f9170f668fb3e42a28810800f53cbed5fcaba7386e3c18c0752967f",
+    "transformation": "byte-exact copy"
+  }
+}

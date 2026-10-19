@@ -1,0 +1,1578 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/study-runs/fresh20-2130-v1-paired-analysis/paired-analysis.json",
+  "original_sha256": "9a4e5114435c678402889aa56a60ee54c541ced084f892782b35c030aa187a53",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "status": "independently_joined_terminal_paired_replays",
+    "created_at_utc": "2026-10-19T01:36:34.102257+00:00",
+    "planned_n": 20,
+    "planned_question_ids": [
+      "hotpotqa:5abee75f5542993fe9a41d8e",
+      "hotpotqa:5ab96bf15542996be20204d8",
+      "hotpotqa:5a8796345542994846c1cda3",
+      "hotpotqa:5add8f055542990dbb2f7e6d",
+      "hotpotqa:5a8de02b554299068b959e13",
+      "hotpotqa:5abfd5c45542994516f4550e",
+      "hotpotqa:5adfc97255429906c02daa41",
+      "hotpotqa:5a78d38455429970f5fffd94",
+      "hotpotqa:5a7755c65542993569682d54",
+      "hotpotqa:5abd1daa55429933744ab72e",
+      "hotpotqa:5a8d4fbf5542994ba4e3dc68",
+      "hotpotqa:5a8081975542992097ad2fef",
+      "hotpotqa:5ab8eabb5542991b5579f03d",
+      "hotpotqa:5a86681c5542991e77181644",
+      "hotpotqa:5ac2f79e5542996773102661",
+      "hotpotqa:5ae389fc5542992f92d8230f",
+      "hotpotqa:5ab576dc5542997d4ad1f13d",
+      "hotpotqa:5adc46665542994650320cc8",
+      "hotpotqa:5a7fa0d55542995d8a8dded3",
+      "hotpotqa:5ae400ab5542995dadf242be"
+    ],
+    "shared_protocol": {
+      "mode": "head-replay",
+      "dataset_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+      "max_drafts": 10,
+      "seed": 42,
+      "feedback": "Recheck your answer against all the evidence and constraints; correct any errors. Keep it if correct.",
+      "phase": "confirmation",
+      "resource_profile": {
+        "threads": 4,
+        "ram_gib": 7,
+        "vram_gib": 3,
+        "rest_ratio": 1,
+        "minimum_idle": 5
+      },
+      "trajectory_sha256": "c426abe1be2d183eca88c8b61d4823992965eef4346dfa8dcc4cdb975a220ac9",
+      "feature_cache_sha256": "576ad6de6dad617df213b2bb0ffdc8cddd6c9d27a3f06821fa431ea3043d3cc5",
+      "feature_manifest_sha256": "f0998437e52d09b81ba502a5f0e17d0713b4ffd4a825a151e6dbaf63e3c985e3",
+      "backend_source_sha256": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+      "threshold": 0.8
+    },
+    "source_sha256": "0cb1c9b8b97186adb86954ebecd6cdcc1ef920520ff5438f4d3906a36fc861d3",
+    "input_sha256": {
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\manifest.json": "47cc1013840fbbde60bff7250815560dceb729fe5e2d89b6ca5775e7d405756e",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\episodes.json": "cdc5cedc62daa093f7974e5c36510c44a10fc35e5a42c6014a2a568f344ba08f",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\requests.jsonl": "0127da08b4809e32aacf8d8486ce2d5c4bb6c4283307a1d60518a55d7156aec2",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\tasks-evaluator-only.json": "ad151baaadbdc0b7d88fe0e34befed126572dbf0c38691cce31048254c93af68",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\manifest.json": "a7236e98f93dc91cbf339426807753fceb0ab28f4d6ff3863a0f57413e3f4e99",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\episodes.json": "f081f28eda40c0708bd59520a27166a5a4e6f5e6cf8b9aa3d1fe452fc30be4e9",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\requests.jsonl": "0c32022ae74627150d0a6ac68e783b6ac453d961facc8512da711ddf67ad9fb0",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\tasks-evaluator-only.json": "ad151baaadbdc0b7d88fe0e34befed126572dbf0c38691cce31048254c93af68",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\manifest.json": "8f829d8d2a896381032b906784c4334991dc4485d31ff6224510d86a04cb1c8a",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\trajectories.json": "c426abe1be2d183eca88c8b61d4823992965eef4346dfa8dcc4cdb975a220ac9",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\tasks-evaluator-only.json": "ad151baaadbdc0b7d88fe0e34befed126572dbf0c38691cce31048254c93af68",
+      "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl": "576ad6de6dad617df213b2bb0ffdc8cddd6c9d27a3f06821fa431ea3043d3cc5",
+      "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl.manifest.json": "f0998437e52d09b81ba502a5f0e17d0713b4ffd4a825a151e6dbaf63e3c985e3",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\source_snapshot\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\source_snapshot\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\source_snapshot\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\source_snapshot\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\source_snapshot\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\source_snapshot\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\source_snapshot\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\source_snapshot\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+      "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl.events.jsonl": "3a29a3b8cad69fa436993e7eccb48f04092da83caa2b82a957039ff91aa708fc",
+      "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\compare.py": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666",
+      "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+      "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\retention.py": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100"
+    },
+    "model_fingerprints": {
+      "strands-untuned": "40bf2f8392c456b556853a11e20a37a79fa2714493432315693eeef57cfd10b1",
+      "strands-trained": "04aece6159b1de37235df17fcca1b06c5f547fdc8e83b827ebb55ffb0d30b0a1"
+    },
+    "deduplicated_identical_fixed_controls": [
+      "fixed-1-prefix",
+      "fixed-10-prefix",
+      "fixed-2-prefix",
+      "fixed-3-prefix",
+      "fixed-5-prefix"
+    ],
+    "secondary_retain_best_policies": [
+      "strands-untuned-retainbest",
+      "strands-untuned-cap3-retainbest",
+      "strands-trained-retainbest",
+      "strands-trained-cap3-retainbest"
+    ],
+    "policies": {
+      "fixed-1-prefix": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 1.0,
+        "mean_counterfactual_prefix_model_seconds": 0.5749454800024978,
+        "mean_raw_reported_tokens": 1917.1,
+        "known_raw_tokens_lower_bound": 38342.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 20,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "approval_coverage_of_scored": null,
+          "approval_coverage_of_planned": 0.0,
+          "first_draft_approval_precision": null,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "fixed-2-prefix": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_counterfactual_prefix_model_seconds": 0.7447375750052743,
+        "mean_raw_reported_tokens": 3869.4,
+        "known_raw_tokens_lower_bound": 77388.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 20,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "approval_coverage_of_scored": null,
+          "approval_coverage_of_planned": 0.0,
+          "first_draft_approval_precision": null,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "fixed-3-prefix": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 3.0,
+        "mean_counterfactual_prefix_model_seconds": 0.899045365008351,
+        "mean_raw_reported_tokens": 5821.7,
+        "known_raw_tokens_lower_bound": 116434.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 20,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "approval_coverage_of_scored": null,
+          "approval_coverage_of_planned": 0.0,
+          "first_draft_approval_precision": null,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "fixed-5-prefix": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 5.0,
+        "mean_counterfactual_prefix_model_seconds": 1.2268284450110514,
+        "mean_raw_reported_tokens": 9726.3,
+        "known_raw_tokens_lower_bound": 194526.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 20,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "approval_coverage_of_scored": null,
+          "approval_coverage_of_planned": 0.0,
+          "first_draft_approval_precision": null,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "fixed-10-prefix": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 10.0,
+        "mean_counterfactual_prefix_model_seconds": 2.05987086500827,
+        "mean_raw_reported_tokens": 19487.8,
+        "known_raw_tokens_lower_bound": 389756.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 20
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "approval_coverage_of_scored": null,
+          "approval_coverage_of_planned": 0.0,
+          "first_draft_approval_precision": null,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-untuned": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_counterfactual_prefix_model_seconds": 2.6268313450156713,
+        "mean_raw_reported_tokens": 19994.95,
+        "known_raw_tokens_lower_bound": 399899.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-untuned-cap3": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_counterfactual_prefix_model_seconds": 1.2360870000033173,
+        "mean_raw_reported_tokens": 7351.05,
+        "known_raw_tokens_lower_bound": 147021.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-trained": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_counterfactual_prefix_model_seconds": 2.6267361700200125,
+        "mean_raw_reported_tokens": 19994.95,
+        "known_raw_tokens_lower_bound": 399899.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-trained-cap3": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_counterfactual_prefix_model_seconds": 1.2360428750078427,
+        "mean_raw_reported_tokens": 7351.05,
+        "known_raw_tokens_lower_bound": 147021.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-untuned-retainbest": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_counterfactual_prefix_model_seconds": 2.6268313450156713,
+        "mean_raw_reported_tokens": 19994.95,
+        "known_raw_tokens_lower_bound": 399899.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-untuned-cap3-retainbest": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_counterfactual_prefix_model_seconds": 1.2360870000033173,
+        "mean_raw_reported_tokens": 7351.05,
+        "known_raw_tokens_lower_bound": 147021.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-trained-retainbest": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_counterfactual_prefix_model_seconds": 2.6267361700200125,
+        "mean_raw_reported_tokens": 19994.95,
+        "known_raw_tokens_lower_bound": 399899.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      },
+      "strands-trained-cap3-retainbest": {
+        "planned_n": 20,
+        "recorded_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "em_completed_only": 0.5,
+        "token_f1_completed_only": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_counterfactual_prefix_model_seconds": 1.2360428750078427,
+        "mean_raw_reported_tokens": 7351.05,
+        "known_raw_tokens_lower_bound": 147021.0,
+        "episodes_with_unknown_usage": 0,
+        "missing_episode_rows": 0,
+        "operational_usage_complete": true,
+        "counterfactual_hosted_cost_usd": 0.0,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "planned_n": 20,
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "nll_clipped_probability_only_rows": 0,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "approval_coverage_of_scored": 0.5,
+          "approval_coverage_of_planned": 0.5,
+          "first_draft_approval_precision": 0.5,
+          "scope": "Probability metrics use observed first decisions only; absent/overflow decisions are coverage failures, not imputed probabilities."
+        },
+        "measurement_mode": "counterfactual_trajectory_prefix_not_live_latency",
+        "usage_caveat": "Known prefix costs are lower bounds when a policy episode/usage record is missing; quality failures remain zero.",
+        "categories": {
+          "bridge": {
+            "planned_n": 16,
+            "completed": 16,
+            "em": 0.375,
+            "token_f1": 0.425
+          },
+          "comparison": {
+            "planned_n": 4,
+            "completed": 4,
+            "em": 1.0,
+            "token_f1": 1.0
+          }
+        }
+      }
+    },
+    "paired_comparisons": {
+      "strands-trained_minus_strands-untuned": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3_minus_strands-untuned-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-1-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-10-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-2-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-3-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-5-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-1-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-10-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-2-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-3-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-5-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-retainbest_minus_strands-untuned-retainbest": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3-retainbest_minus_strands-untuned-cap3-retainbest": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned-retainbest_minus_strands-untuned": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned-cap3-retainbest_minus_strands-untuned-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-retainbest_minus_strands-trained": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3-retainbest_minus_strands-trained-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      }
+    },
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 42,
+      "unit": "original question",
+      "rng": "python.random.Random",
+      "method": "paired percentile bootstrap; failed/missing quality=0 against frozen planned N"
+    },
+    "physical_evaluation_usage": {
+      "writer_generation_once": {
+        "completed_requests_including_invalid_outputs": 200,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 387901,
+        "reported_output_tokens": 1855,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 41.198210200003814,
+        "hosted_cost_usd": 0.0,
+        "note": "Physical evaluation expenses; distinct from policy-prefix counterfactual usage. Local hardware/electricity unpriced."
+      },
+      "analysis_planned_questions": 20,
+      "source_generation_questions": 20,
+      "source_feature_selected_questions": 20,
+      "real_encoder_features_once": {
+        "completed_encoder_forwards": 200,
+        "input_tokens": 364275,
+        "encoding_seconds": 47.38657220051391,
+        "unreconciled_inferences": 0,
+        "note": "One real frozen forward per stored option order. Later head replay adds zero physical encoder tokens."
+      },
+      "untuned_head_scoring": {
+        "completed_requests_including_invalid_outputs": 110,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 0,
+        "reported_output_tokens": 0,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 0.11492260004160926,
+        "hosted_cost_usd": 0,
+        "note": "Physical evaluation expenses; distinct from policy-prefix counterfactual usage. Local hardware/electricity unpriced."
+      },
+      "tuned_head_scoring": {
+        "completed_requests_including_invalid_outputs": 110,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 0,
+        "reported_output_tokens": 0,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 0.11326159999589436,
+        "hosted_cost_usd": 0,
+        "note": "Physical evaluation expenses; distinct from policy-prefix counterfactual usage. Local hardware/electricity unpriced."
+      },
+      "note": "Shared writer/features counted once. Head-scoring phases add zero physical encoder tokens; prefix estimates are not extra physical calls."
+    },
+    "temperatures": {
+      "untuned_override": null,
+      "tuned_override": null,
+      "released_encoder_metadata": 1.0704394404346953,
+      "published_released_noul": 1.0704394404346953,
+      "published_released_global": 1.0545210242263665,
+      "published_config_revision": "216d1ccb46a9e9b036eb9187b248db98480f77d4",
+      "local_fit_predeclared_bounds": [
+        0.25,
+        6.0
+      ],
+      "note": "Actual used first-decision temperatures appear per policy; metadata is not a new calibration fit."
+    },
+    "limitations": [
+      "Frozen generic trajectories estimate stopping decisions; no live end-to-end latency or operational cost saving is measured.",
+      "Local hardware/electricity dollar cost is unpriced; raw model tokenizers need not measure equal compute.",
+      "Probability diagnostics cover observed first decisions only; report failures/coverage alongside them.",
+      "Question-paired intervals are descriptive; training proof and better train reward do not establish held-out improvement."
+    ]
+  }
+}

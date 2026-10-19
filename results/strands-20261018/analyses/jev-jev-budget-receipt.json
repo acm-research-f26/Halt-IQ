@@ -1,0 +1,35 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/study-runs/fresh20-2130-v1-optional-jev113/jev-budget-receipt.json",
+  "original_sha256": "ae2628604c531c10c490c6c16d92bed3f52f92d6d52bee5a8b0567983cc68411",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "before": {
+      "path": "<PROJECT>\\testing\\preflight-2026-10-18\\jev-budget.sqlite",
+      "limit_usd": 4.5,
+      "rate_per_million": 0.042,
+      "spent_usd": 0.047882184,
+      "reserved_usd": 0.0,
+      "used_usd": 0.047882184,
+      "remaining_usd": 4.452117816,
+      "attempts": 531,
+      "successful_requests": 531,
+      "unsettled_requests": 0,
+      "input_tokens": 1140052
+    },
+    "after": {
+      "path": "<PROJECT>\\testing\\preflight-2026-10-18\\jev-budget.sqlite",
+      "limit_usd": 4.5,
+      "rate_per_million": 0.042,
+      "spent_usd": 0.054730032,
+      "reserved_usd": 0.0,
+      "used_usd": 0.054730032,
+      "remaining_usd": 4.445269968,
+      "attempts": 606,
+      "successful_requests": 606,
+      "unsettled_requests": 0,
+      "input_tokens": 1303096
+    },
+    "note": "Same cumulative SQLite ledger; never reset. Settled charges plus retained uncertain reservations bound paid work. Shared writer prefixes are separate."
+  }
+}

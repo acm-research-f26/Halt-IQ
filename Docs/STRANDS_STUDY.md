@@ -1,5 +1,19 @@
 # Strands Decider study on the Windows PC
 
+**Completed October 18, 2026:** [team delivery, final 18-page professor report,
+four-page Jev companion and portable verification bundle](../results/strands-20261018/README.md).
+Actual untouched-model evaluation preceded genuine head updates on a new 90-question
+TRAIN source (60 fit / 15 tune / 15 calibration). Separately calibrated released and
+trained heads completed the same fresh20 / ten-draft comparison. All 13 primary
+policies scored 50% EM / 0.54 token F1; no observed answer gain. Optional Jev completed
+on the same trajectories and achieved the same answer quality. The final bundle
+records original hashes and actual terminal owners without exposing machine paths.
+
+The preparation narrative below is retained as protocol history. Its proposed120
+option and original 8:30 deadline were superseded by the actual90 training owner and
+the human-authorized 9:30 testing extension. Preserved PROPOSED labels are historical
+data-selection metadata, not evidence that the completed model stages were unrun.
+
 The study compares the released Strands decision head with actual head-weight
 fine-tuning on HotpotQA. It uses the same official answer EM/token-F1 contract
 and a compatible result export as the partner framework. The new writer prompt,

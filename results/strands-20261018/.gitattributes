@@ -1,0 +1,4 @@
+# Evidence hashes bind exact bytes across Windows and Unix checkouts.
+* -text whitespace=cr-at-eol
+*.pdf binary
+*.safetensors binary

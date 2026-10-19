@@ -1,0 +1,1061 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "research/candidate-train-original90-v7/manifest.json",
+  "original_sha256": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "status": "PROPOSED_NOT_ADOPTED",
+    "prepared_local": "2026-10-18T18:00:06.756883-05:00",
+    "scope": "Data only, no drafts/inference/training/adoption. Selection never reads answer/outcome/length/window/availability fields.",
+    "parent120": {
+      "dataset": "<RESEARCH>\\candidate-train-original120-v3\\tasks.jsonl",
+      "sha256": "de0c667ce30fda2d80672c0782556ae3f7c40b0be77b2bc33afce8cee0e1a65d",
+      "manifest": "<RESEARCH>\\candidate-train-original120-v3\\manifest.json",
+      "manifest_sha256": "214094164fed2ed59d877fdd6abc22856c9fbe13a5809790b1d8b54ccb6bf402"
+    },
+    "original600": {
+      "dataset_path": "<RESEARCH>\\official-train600-candidate\\all600-raw.jsonl",
+      "dataset_sha256": "0d54ee2be37b6d2c70802c940e6d9f68251ac24cd22a7da3b523ec0757c94e9f",
+      "manifest_path": "<RESEARCH>\\official-train600-candidate\\manifest.json",
+      "manifest_sha256": "76f1c0ff4402671a07cc61d8247996694dd288ade58a539efa62b627ade4a7a5",
+      "count": 600,
+      "original_partition_counts": {
+        "fit": 400,
+        "tune": 100,
+        "calibration": 100
+      },
+      "original_partition_type_counts": {
+        "fit": {
+          "bridge": 326,
+          "comparison": 74
+        },
+        "tune": {
+          "bridge": 82,
+          "comparison": 18
+        },
+        "calibration": {
+          "bridge": 81,
+          "comparison": 19
+        }
+      },
+      "original_source_sampling": "random.Random(42).sample(range(904),6); six nonoverlapping complete100-row blocks; partial final47rows excluded before block draw; not IID row sampling",
+      "source_split": "train",
+      "source_revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+      "source_num_rows": 90447,
+      "source_pages": [
+        {
+          "block": 654,
+          "offset": 65400,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=65400&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "ad9e3e8eec5f4aa5022500b8bcc8de2d7b1ddfbd6202c2790d573694c23ab82f",
+          "bytes": 625931,
+          "attempts": 1,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-65400-length-100.json"
+        },
+        {
+          "block": 114,
+          "offset": 11400,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=11400&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "484c69329e26224e0735696e96afb3522956d6b0fa1b6e7c3306c68275c821be",
+          "bytes": 620752,
+          "attempts": 1,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-11400-length-100.json"
+        },
+        {
+          "block": 25,
+          "offset": 2500,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=2500&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "aa8cff09ab7e89425fba740c1425cd59f7c054384710e573335eabf225c14724",
+          "bytes": 634966,
+          "attempts": 1,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-02500-length-100.json"
+        },
+        {
+          "block": 759,
+          "offset": 75900,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=75900&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "c2184d24b54e1fb87b8439977d608a88a8fc33956fa19b7bd0f2fec3ace2d111",
+          "bytes": 627098,
+          "attempts": 2,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-75900-length-100.json"
+        },
+        {
+          "block": 281,
+          "offset": 28100,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=28100&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "175836edd2943279c5d97e0ca46ca86528a3dfa16cb0159ef3e694ffa8c63d08",
+          "bytes": 613323,
+          "attempts": 1,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-28100-length-100.json"
+        },
+        {
+          "block": 250,
+          "offset": 25000,
+          "length": 100,
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=train&offset=25000&length=100",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "sha256": "dfaa403773e9fe31654756c8028a451ca432b4c9c23b4c28494dfabc18d0ca4e",
+          "bytes": 642960,
+          "attempts": 1,
+          "raw_page": "testing\\research-2026-10-18-strands\\official-train600-candidate\\raw-pages\\offset-25000-length-100.json"
+        }
+      ]
+    },
+    "selection": {
+      "algorithm": "Within each original partition/publictype, sort SHA256 UTF8(canonical_question_id + literal |seed42| + original_partition), tie canonicalID; take exact quotas; export unchanged original parent120/source600 order.",
+      "canonical_question_id": "hotpotqa:source_row.id",
+      "rank_literal_example": "hotpotqa:<id>|seed42|fit",
+      "quotas": {
+        "fit": {
+          "bridge": 49,
+          "comparison": 11
+        },
+        "tune": {
+          "bridge": 12,
+          "comparison": 3
+        },
+        "calibration": {
+          "bridge": 12,
+          "comparison": 3
+        }
+      },
+      "uses_only": [
+        "canonical_question_id",
+        "local_partition",
+        "source_row.type"
+      ],
+      "excluded": [
+        "answer/references/supportingfacts",
+        "draftavailability",
+        "outcome/probability",
+        "context/tokenlength",
+        "strict4096success/failure"
+      ],
+      "no_repartitioning": true,
+      "no_replacement_after_failure": true
+    },
+    "count": 90,
+    "partition_counts": {
+      "fit": 60,
+      "tune": 15,
+      "calibration": 15
+    },
+    "partition_type_counts": {
+      "fit": {
+        "bridge": 49,
+        "comparison": 11
+      },
+      "tune": {
+        "bridge": 12,
+        "comparison": 3
+      },
+      "calibration": {
+        "bridge": 12,
+        "comparison": 3
+      }
+    },
+    "ordered_task_ids": [
+      "hotpotqa:5ac28cce5542992f1f2b38fa",
+      "hotpotqa:5aba0b405542994dbf01989c",
+      "hotpotqa:5a8472755542993344746132",
+      "hotpotqa:5ae43f0c5542995dadf242fc",
+      "hotpotqa:5ae7d7bf5542993210983f85",
+      "hotpotqa:5abaa8625542994dbf019992",
+      "hotpotqa:5adc3cc2554299438c868d88",
+      "hotpotqa:5ae74f345542997b22f6a6ae",
+      "hotpotqa:5a7e08dd5542995f4f4023b2",
+      "hotpotqa:5a8797705542996e4f308868",
+      "hotpotqa:5a74183c55429974ef308bb1",
+      "hotpotqa:5ae1abbc5542997f29b3c0f8",
+      "hotpotqa:5adc7bef5542994650320d1f",
+      "hotpotqa:5ac25b0a5542992f1f2b3871",
+      "hotpotqa:5ab29b2b554299194fa93443",
+      "hotpotqa:5abe3a4d55429976d4830a8f",
+      "hotpotqa:5ae15cd8554299422ee9966e",
+      "hotpotqa:5a77ca915542997042120b38",
+      "hotpotqa:5a74a12755429979e28829d1",
+      "hotpotqa:5ae21e4f5542994d89d5b35b",
+      "hotpotqa:5ae3630b5542992f92d822b4",
+      "hotpotqa:5ae06106554299603e41840d",
+      "hotpotqa:5ae754a55542997b22f6a6e3",
+      "hotpotqa:5a805cef554299485f5985cf",
+      "hotpotqa:5a820c795542990a1d231f26",
+      "hotpotqa:5a776c495542993569682da0",
+      "hotpotqa:5ab76e005542993667793fdc",
+      "hotpotqa:5aba5b5a55429955dce3edee",
+      "hotpotqa:5a7f70455542992e7d278cfd",
+      "hotpotqa:5a7cca84554299452d57ba66",
+      "hotpotqa:5a78fed7554299029c4b5ee1",
+      "hotpotqa:5ab2d9a8554299545a2cfac8",
+      "hotpotqa:5ae7fa2c5542994a481bbe5a",
+      "hotpotqa:5abfe5115542997d64295926",
+      "hotpotqa:5ae388af5542991a06ce99df",
+      "hotpotqa:5ab6296b55429953192ad285",
+      "hotpotqa:5ae5117e55429960a22e025d",
+      "hotpotqa:5a70f8a95542994082a3e465",
+      "hotpotqa:5a7f743855429969796c1a5d",
+      "hotpotqa:5ae4bd9455429960a22e0191",
+      "hotpotqa:5ae5f43f554299546bf82fe0",
+      "hotpotqa:5a80c05855429938b61421b9",
+      "hotpotqa:5a8babd15542996e8ac8899d",
+      "hotpotqa:5a8c4f45554299653c1aa036",
+      "hotpotqa:5ab8587355429919ba4e22b5",
+      "hotpotqa:5a87235a5542991e771816e3",
+      "hotpotqa:5a7fa04d55429969796c1af6",
+      "hotpotqa:5a88ef74554299206df2b3c1",
+      "hotpotqa:5abffcab5542990832d3a1e4",
+      "hotpotqa:5a73513b5542994cef4bc537",
+      "hotpotqa:5a89d3fc5542993b751ca9a4",
+      "hotpotqa:5ae730c4554299572ea54778",
+      "hotpotqa:5ae405065542995dadf242db",
+      "hotpotqa:5a7ff5f55542992e7d278dcd",
+      "hotpotqa:5abd61c355429933744ab7a5",
+      "hotpotqa:5a78e585554299029c4b5ecf",
+      "hotpotqa:5ae688135542996d980e7bed",
+      "hotpotqa:5a78de3f55429974737f78e4",
+      "hotpotqa:5a7f994355429969796c1adb",
+      "hotpotqa:5add29d55542992c1e3a2549",
+      "hotpotqa:5a792dd7554299148911fa1f",
+      "hotpotqa:5ab2dad1554299194fa93545",
+      "hotpotqa:5a7d07e455429909bec76906",
+      "hotpotqa:5ae1cbfb554299234fd04300",
+      "hotpotqa:5ade956d5542997c77adee69",
+      "hotpotqa:5ae31e1c55429928c4239615",
+      "hotpotqa:5ac121555542992a796dee00",
+      "hotpotqa:5a846f075542992ef85e23f7",
+      "hotpotqa:5ae1ec7a5542994d89d5b2cf",
+      "hotpotqa:5a86e0a95542996432c57202",
+      "hotpotqa:5ae66d695542996d980e7b66",
+      "hotpotqa:5abb9ca4554299642a094ac5",
+      "hotpotqa:5a7fa7b75542995d8a8ddee4",
+      "hotpotqa:5abfab5b5542997ec76fd42b",
+      "hotpotqa:5a7730fe55429972597f148d",
+      "hotpotqa:5ab614545542992aa134a41b",
+      "hotpotqa:5a810f7f55429926c1cdace0",
+      "hotpotqa:5a760ac2554299109176e62b",
+      "hotpotqa:5a84bca05542991dd0999dc4",
+      "hotpotqa:5ab9d6255542994dbf019859",
+      "hotpotqa:5adde7755542997dc790709f",
+      "hotpotqa:5ae7fda4554299321098400d",
+      "hotpotqa:5ab53f6b554299488d4d9921",
+      "hotpotqa:5ae2c2c6554299492dc91c62",
+      "hotpotqa:5a8673db554299211dda2b3d",
+      "hotpotqa:5ac393b855429939154137e7",
+      "hotpotqa:5abb12ca5542992ccd8e7efd",
+      "hotpotqa:5a7c08f45542996dd594b884",
+      "hotpotqa:5ae761685542995703ce8bff",
+      "hotpotqa:5ae77ed055429952e35ea949"
+    ],
+    "ordered_task_ids_by_partition": {
+      "fit": [
+        "hotpotqa:5ac28cce5542992f1f2b38fa",
+        "hotpotqa:5aba0b405542994dbf01989c",
+        "hotpotqa:5a8472755542993344746132",
+        "hotpotqa:5ae43f0c5542995dadf242fc",
+        "hotpotqa:5ae7d7bf5542993210983f85",
+        "hotpotqa:5abaa8625542994dbf019992",
+        "hotpotqa:5adc3cc2554299438c868d88",
+        "hotpotqa:5ae74f345542997b22f6a6ae",
+        "hotpotqa:5a7e08dd5542995f4f4023b2",
+        "hotpotqa:5a8797705542996e4f308868",
+        "hotpotqa:5a74183c55429974ef308bb1",
+        "hotpotqa:5ae1abbc5542997f29b3c0f8",
+        "hotpotqa:5adc7bef5542994650320d1f",
+        "hotpotqa:5ac25b0a5542992f1f2b3871",
+        "hotpotqa:5ab29b2b554299194fa93443",
+        "hotpotqa:5abe3a4d55429976d4830a8f",
+        "hotpotqa:5ae15cd8554299422ee9966e",
+        "hotpotqa:5a77ca915542997042120b38",
+        "hotpotqa:5a74a12755429979e28829d1",
+        "hotpotqa:5ae21e4f5542994d89d5b35b",
+        "hotpotqa:5ae3630b5542992f92d822b4",
+        "hotpotqa:5ae06106554299603e41840d",
+        "hotpotqa:5ae754a55542997b22f6a6e3",
+        "hotpotqa:5a805cef554299485f5985cf",
+        "hotpotqa:5a820c795542990a1d231f26",
+        "hotpotqa:5a776c495542993569682da0",
+        "hotpotqa:5ab76e005542993667793fdc",
+        "hotpotqa:5aba5b5a55429955dce3edee",
+        "hotpotqa:5a7f70455542992e7d278cfd",
+        "hotpotqa:5a7cca84554299452d57ba66",
+        "hotpotqa:5a78fed7554299029c4b5ee1",
+        "hotpotqa:5ab2d9a8554299545a2cfac8",
+        "hotpotqa:5ae7fa2c5542994a481bbe5a",
+        "hotpotqa:5abfe5115542997d64295926",
+        "hotpotqa:5ae388af5542991a06ce99df",
+        "hotpotqa:5ab6296b55429953192ad285",
+        "hotpotqa:5ae5117e55429960a22e025d",
+        "hotpotqa:5a70f8a95542994082a3e465",
+        "hotpotqa:5a7f743855429969796c1a5d",
+        "hotpotqa:5ae4bd9455429960a22e0191",
+        "hotpotqa:5ae5f43f554299546bf82fe0",
+        "hotpotqa:5a80c05855429938b61421b9",
+        "hotpotqa:5a8babd15542996e8ac8899d",
+        "hotpotqa:5a8c4f45554299653c1aa036",
+        "hotpotqa:5ab8587355429919ba4e22b5",
+        "hotpotqa:5a87235a5542991e771816e3",
+        "hotpotqa:5a7fa04d55429969796c1af6",
+        "hotpotqa:5a88ef74554299206df2b3c1",
+        "hotpotqa:5abffcab5542990832d3a1e4",
+        "hotpotqa:5a73513b5542994cef4bc537",
+        "hotpotqa:5a89d3fc5542993b751ca9a4",
+        "hotpotqa:5ae730c4554299572ea54778",
+        "hotpotqa:5ae405065542995dadf242db",
+        "hotpotqa:5a7ff5f55542992e7d278dcd",
+        "hotpotqa:5abd61c355429933744ab7a5",
+        "hotpotqa:5a78e585554299029c4b5ecf",
+        "hotpotqa:5ae688135542996d980e7bed",
+        "hotpotqa:5a78de3f55429974737f78e4",
+        "hotpotqa:5a7f994355429969796c1adb",
+        "hotpotqa:5add29d55542992c1e3a2549"
+      ],
+      "tune": [
+        "hotpotqa:5a792dd7554299148911fa1f",
+        "hotpotqa:5ab2dad1554299194fa93545",
+        "hotpotqa:5a7d07e455429909bec76906",
+        "hotpotqa:5ae1cbfb554299234fd04300",
+        "hotpotqa:5ade956d5542997c77adee69",
+        "hotpotqa:5ae31e1c55429928c4239615",
+        "hotpotqa:5ac121555542992a796dee00",
+        "hotpotqa:5a846f075542992ef85e23f7",
+        "hotpotqa:5ae1ec7a5542994d89d5b2cf",
+        "hotpotqa:5a86e0a95542996432c57202",
+        "hotpotqa:5ae66d695542996d980e7b66",
+        "hotpotqa:5abb9ca4554299642a094ac5",
+        "hotpotqa:5a7fa7b75542995d8a8ddee4",
+        "hotpotqa:5abfab5b5542997ec76fd42b",
+        "hotpotqa:5a7730fe55429972597f148d"
+      ],
+      "calibration": [
+        "hotpotqa:5ab614545542992aa134a41b",
+        "hotpotqa:5a810f7f55429926c1cdace0",
+        "hotpotqa:5a760ac2554299109176e62b",
+        "hotpotqa:5a84bca05542991dd0999dc4",
+        "hotpotqa:5ab9d6255542994dbf019859",
+        "hotpotqa:5adde7755542997dc790709f",
+        "hotpotqa:5ae7fda4554299321098400d",
+        "hotpotqa:5ab53f6b554299488d4d9921",
+        "hotpotqa:5ae2c2c6554299492dc91c62",
+        "hotpotqa:5a8673db554299211dda2b3d",
+        "hotpotqa:5ac393b855429939154137e7",
+        "hotpotqa:5abb12ca5542992ccd8e7efd",
+        "hotpotqa:5a7c08f45542996dd594b884",
+        "hotpotqa:5ae761685542995703ce8bff",
+        "hotpotqa:5ae77ed055429952e35ea949"
+      ]
+    },
+    "selection_audit": [
+      {
+        "task_id": "hotpotqa:5ac28cce5542992f1f2b38fa",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 0,
+        "rank_sha256": "9b0c6b192b29d5b153a053b67c0898855f6bffd563f04be45097b364ad79938c"
+      },
+      {
+        "task_id": "hotpotqa:5aba0b405542994dbf01989c",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 1,
+        "rank_sha256": "0a7fb0e95be3433ce2e99a8758c13166676437582f694a6e053ee06a1a7ca50a"
+      },
+      {
+        "task_id": "hotpotqa:5a8472755542993344746132",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 3,
+        "rank_sha256": "b1ba3d7140f9497215aa835963a85e95992ea4467abc84bccfeb9810305f703b"
+      },
+      {
+        "task_id": "hotpotqa:5ae43f0c5542995dadf242fc",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 5,
+        "rank_sha256": "076169934008ec826a14cc77646a04b65a719fbce5f61671ffb06df2eeb7bba1"
+      },
+      {
+        "task_id": "hotpotqa:5ae7d7bf5542993210983f85",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 7,
+        "rank_sha256": "82a56a81535f3ede4b620c6271d7e46fc665721b6428642475a8a3c66a8f425d"
+      },
+      {
+        "task_id": "hotpotqa:5abaa8625542994dbf019992",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 8,
+        "rank_sha256": "79125e226c479f880e600586b2878e21b4c80f6ddfd330f6702b4b9d913f2731"
+      },
+      {
+        "task_id": "hotpotqa:5adc3cc2554299438c868d88",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 9,
+        "rank_sha256": "4314f560a9189ba71a93059112d22d25fb81cae19d695edaedc8adc092fe3c6e"
+      },
+      {
+        "task_id": "hotpotqa:5ae74f345542997b22f6a6ae",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 10,
+        "rank_sha256": "51124bf2d36364f5ec20744dd9fe8d4051bec92d8a873f7a6abbc9caf2a8869d"
+      },
+      {
+        "task_id": "hotpotqa:5a7e08dd5542995f4f4023b2",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 11,
+        "rank_sha256": "8cfcdb5c61cd4bdb90d5155cb8b5dd8a8778df05b11aa8d11a6305dc999378e9"
+      },
+      {
+        "task_id": "hotpotqa:5a8797705542996e4f308868",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 12,
+        "rank_sha256": "2ce7c840fcdd473b928da0fa2f2b9ce5568fe19312538c0c59a715adddc7848f"
+      },
+      {
+        "task_id": "hotpotqa:5a74183c55429974ef308bb1",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 13,
+        "rank_sha256": "9b3d04f2dc7180d1141ce23565a9e42766f39b52d10d611c34ffc145c589a29d"
+      },
+      {
+        "task_id": "hotpotqa:5ae1abbc5542997f29b3c0f8",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 14,
+        "rank_sha256": "23eabfb53208f4b90189e1dc096094d59258c3e4f46363ae7b3563cd3cfbcacf"
+      },
+      {
+        "task_id": "hotpotqa:5adc7bef5542994650320d1f",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 15,
+        "rank_sha256": "11acbb24b7675f55ac7609c1b3959ff510d0ab63fc0a31c4cd760a1f56b2903a"
+      },
+      {
+        "task_id": "hotpotqa:5ac25b0a5542992f1f2b3871",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 16,
+        "rank_sha256": "5b1c10852b725561fd191194fc0de967110abeeaa5c724c205092e2b4927d5c6"
+      },
+      {
+        "task_id": "hotpotqa:5ab29b2b554299194fa93443",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 18,
+        "rank_sha256": "36ff2a93b9944268ea5397987d806a330f12774b558154445bc11c23b43d37f2"
+      },
+      {
+        "task_id": "hotpotqa:5abe3a4d55429976d4830a8f",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 19,
+        "rank_sha256": "b2774cb5cced4a1a425c75f47d2df6219d7a53ce5a1edc513ad074405d29af56"
+      },
+      {
+        "task_id": "hotpotqa:5ae15cd8554299422ee9966e",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 20,
+        "rank_sha256": "8afbd9f01ce33003b54123f9b5332c75be5c4a051ef0d81e298d2e519d6bf126"
+      },
+      {
+        "task_id": "hotpotqa:5a77ca915542997042120b38",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 21,
+        "rank_sha256": "8d82bb9ff7a6b44d99507c62e7f0228e981fbc60cbb8cb26007aa497070c2076"
+      },
+      {
+        "task_id": "hotpotqa:5a74a12755429979e28829d1",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 23,
+        "rank_sha256": "63623b6da650c69fc9eeac7bb95b84cc35934c14e31fbe36cff05163d905ce33"
+      },
+      {
+        "task_id": "hotpotqa:5ae21e4f5542994d89d5b35b",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 24,
+        "rank_sha256": "c2db73f11e1f445aa2a2ed7d5ec55e5e51f301c381ee9f6e0e7bc88302c10888"
+      },
+      {
+        "task_id": "hotpotqa:5ae3630b5542992f92d822b4",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 25,
+        "rank_sha256": "9b956e1f993a559305299682ceb2cb211ac4e3118b5e696705cdc629cf1cee05"
+      },
+      {
+        "task_id": "hotpotqa:5ae06106554299603e41840d",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 27,
+        "rank_sha256": "33262aa86461f3c5b2d87f57acc75bed7f8e27d1d13e573356f435c79a1be1c1"
+      },
+      {
+        "task_id": "hotpotqa:5ae754a55542997b22f6a6e3",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 28,
+        "rank_sha256": "59358112a3618da84d5b4109127984de73ab429e622141479ca4ac0d4b35c113"
+      },
+      {
+        "task_id": "hotpotqa:5a805cef554299485f5985cf",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 29,
+        "rank_sha256": "58c45a01702f2aa866e382cdfac67801c47441a2e12d879f5ce5a9aa4ac0b8b0"
+      },
+      {
+        "task_id": "hotpotqa:5a820c795542990a1d231f26",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 31,
+        "rank_sha256": "022308ade98867860fbef726cc2643c4d82d63bc8dd2d66a4b4f9314c7204d34"
+      },
+      {
+        "task_id": "hotpotqa:5a776c495542993569682da0",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 32,
+        "rank_sha256": "7ed9bce56d1c3e5bd3bb30c2eaaa2c23820a0a576d3731a722e7315416c4b5a9"
+      },
+      {
+        "task_id": "hotpotqa:5ab76e005542993667793fdc",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 33,
+        "rank_sha256": "3b1be4f0f99228ad061cb0fdf8356582ec0ed5e4077bb0795ebe85cbe00675d5"
+      },
+      {
+        "task_id": "hotpotqa:5aba5b5a55429955dce3edee",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 34,
+        "rank_sha256": "7c299a8efabb9aacf6a3bd678416928ae1a39386096d5f5a149f6aa57a7c3593"
+      },
+      {
+        "task_id": "hotpotqa:5a7f70455542992e7d278cfd",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 35,
+        "rank_sha256": "6511ed5acbfce4dbd501e0631a999cc0cc6ef05847ed2c844433e7d3f53c59fd"
+      },
+      {
+        "task_id": "hotpotqa:5a7cca84554299452d57ba66",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 36,
+        "rank_sha256": "3120c3886431d067e913767b1e1e421b2a2e3cd7bedc946adb43d361fa88adbc"
+      },
+      {
+        "task_id": "hotpotqa:5a78fed7554299029c4b5ee1",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 38,
+        "rank_sha256": "3f9081e2addeda814759da51121a7a1756853045c256047f7ede39ca082fdd10"
+      },
+      {
+        "task_id": "hotpotqa:5ab2d9a8554299545a2cfac8",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 39,
+        "rank_sha256": "16db78fe994b1d08bbdc3d4d114a84ce5e21b4dbeb054e7d653c9f859cbcc06b"
+      },
+      {
+        "task_id": "hotpotqa:5ae7fa2c5542994a481bbe5a",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 40,
+        "rank_sha256": "1cc53173250814cfcdcd462e06aa441b6176ee3a2107b44f4c43665088a129b8"
+      },
+      {
+        "task_id": "hotpotqa:5abfe5115542997d64295926",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 42,
+        "rank_sha256": "379b74300b80d0fcbddc065b3655b31a0d990f48e500e6710cf677ee8629375b"
+      },
+      {
+        "task_id": "hotpotqa:5ae388af5542991a06ce99df",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 43,
+        "rank_sha256": "b72825059ce51225a016aa9f3845e1f2bd0b636bdc03b5eb69d635aa053448ba"
+      },
+      {
+        "task_id": "hotpotqa:5ab6296b55429953192ad285",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 44,
+        "rank_sha256": "a0e6afd597fdab1579563e5677c59bbc78b39afceba56c58fcff88df2f7a6189"
+      },
+      {
+        "task_id": "hotpotqa:5ae5117e55429960a22e025d",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 45,
+        "rank_sha256": "5d9db6a6a3fac8258447fa9acf9554d170dcb27fe2d93b0b2db7ad7bf58533b7"
+      },
+      {
+        "task_id": "hotpotqa:5a70f8a95542994082a3e465",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 46,
+        "rank_sha256": "170963acd7ed64f3943781e8bd12a4223676aad552bb9702f1dbc8b9f25a7460"
+      },
+      {
+        "task_id": "hotpotqa:5a7f743855429969796c1a5d",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 49,
+        "rank_sha256": "24196d9e92f18ce066bc8bad14bf7ad9145ceaeb2707ddb1d2ee4bd49b023030"
+      },
+      {
+        "task_id": "hotpotqa:5ae4bd9455429960a22e0191",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 50,
+        "rank_sha256": "307357a72960a5e13431b088da13a64f6747ce3ad480d383ef66c9f5dbef0268"
+      },
+      {
+        "task_id": "hotpotqa:5ae5f43f554299546bf82fe0",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 52,
+        "rank_sha256": "ad65c17b1ee57d513df3f0bb845c5fbd706530feaac41d54a37f5f1c03e2f1ad"
+      },
+      {
+        "task_id": "hotpotqa:5a80c05855429938b61421b9",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 55,
+        "rank_sha256": "116ee62102773c5742ab9b70a9e9c49200f1dc2f3bf80d36eeaa37541d275725"
+      },
+      {
+        "task_id": "hotpotqa:5a8babd15542996e8ac8899d",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 56,
+        "rank_sha256": "413ddf8c756e7f5b5bd7602e471a0f1fcbb9bbc2d0dd074ab3cdcfff8b3c1bfc"
+      },
+      {
+        "task_id": "hotpotqa:5a8c4f45554299653c1aa036",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 58,
+        "rank_sha256": "2c34d26ea34b1a21fb4daa04f17c92f2271bef2cbe6505f04d1614fccc0d9d8b"
+      },
+      {
+        "task_id": "hotpotqa:5ab8587355429919ba4e22b5",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 59,
+        "rank_sha256": "516b58e4f21d519ecf31ab1320ca9fab0bbff7e410a37edd46d348568dc9d6dd"
+      },
+      {
+        "task_id": "hotpotqa:5a87235a5542991e771816e3",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 60,
+        "rank_sha256": "a29d9faf716c61decff862675f6b3c2cde4aa75fbf4502f460209b1b6b1d5982"
+      },
+      {
+        "task_id": "hotpotqa:5a7fa04d55429969796c1af6",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 61,
+        "rank_sha256": "50f5d2543148ad355af7b99d7b4c1bb63b7970309efe3e11b266a380fa83d8a3"
+      },
+      {
+        "task_id": "hotpotqa:5a88ef74554299206df2b3c1",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 62,
+        "rank_sha256": "af3b0cadd261e23f3650e277dcfd67c7401fb58d46205c25aabe4df7bbb3e5d4"
+      },
+      {
+        "task_id": "hotpotqa:5abffcab5542990832d3a1e4",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 63,
+        "rank_sha256": "86d1bf55ac8b45fe5bae2c58cad12dbfe2137af2c5451910aed0fb6e8b4f3926"
+      },
+      {
+        "task_id": "hotpotqa:5a73513b5542994cef4bc537",
+        "partition": "fit",
+        "public_type": "comparison",
+        "parent120_index": 65,
+        "rank_sha256": "c625786895f1e0ad1106b8aa9822fcba7655547501c7cd32524bff4c2088c7a9"
+      },
+      {
+        "task_id": "hotpotqa:5a89d3fc5542993b751ca9a4",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 67,
+        "rank_sha256": "59d7807d48dc18de41e3ac3ca89e4ba571460b8c2618b40770d9a9a9729e00f4"
+      },
+      {
+        "task_id": "hotpotqa:5ae730c4554299572ea54778",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 68,
+        "rank_sha256": "a0a6b1eafa483d454d87f5802df7dab871e523f970ba26c89ebd545e4f286987"
+      },
+      {
+        "task_id": "hotpotqa:5ae405065542995dadf242db",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 69,
+        "rank_sha256": "81d96307b13099dd16a16e5d35467b4dca0c9cc786a41e48aff43ebd6145f72e"
+      },
+      {
+        "task_id": "hotpotqa:5a7ff5f55542992e7d278dcd",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 70,
+        "rank_sha256": "a029d93e33ca14d259efd8febb789c42ae835d15d84cd166957be00bb7f1dc40"
+      },
+      {
+        "task_id": "hotpotqa:5abd61c355429933744ab7a5",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 71,
+        "rank_sha256": "089fe62411eefdb6149897d9a5a071dfd283e8ad81fb8e976e795ca0c5c2b119"
+      },
+      {
+        "task_id": "hotpotqa:5a78e585554299029c4b5ecf",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 72,
+        "rank_sha256": "cbd83d180b8f7b33e7bb3afd66d05d054a7c4a352e5d3017019c0a372d324675"
+      },
+      {
+        "task_id": "hotpotqa:5ae688135542996d980e7bed",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 73,
+        "rank_sha256": "3b5a04bd029efdef69da24b2e2ccb0d7a79295e90e3c3cda50ddc9fb45a952de"
+      },
+      {
+        "task_id": "hotpotqa:5a78de3f55429974737f78e4",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 74,
+        "rank_sha256": "bb2e01e4dcd902397b7756d987b8e28ad9978576a00f683d033010572cd97a64"
+      },
+      {
+        "task_id": "hotpotqa:5a7f994355429969796c1adb",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 75,
+        "rank_sha256": "4431fc990528246051ea63b363f7a77e0f7dcbc4174245bd2fabc7ae7d57b201"
+      },
+      {
+        "task_id": "hotpotqa:5add29d55542992c1e3a2549",
+        "partition": "fit",
+        "public_type": "bridge",
+        "parent120_index": 77,
+        "rank_sha256": "c5673bb490c9aea07e82a4cde52eb3ecb5a4a90c895c6c6da94160e41f4d1062"
+      },
+      {
+        "task_id": "hotpotqa:5a792dd7554299148911fa1f",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 80,
+        "rank_sha256": "0f7a78701c00a2e21c279e5ff79b00574e4888276a0013043526967193010ebf"
+      },
+      {
+        "task_id": "hotpotqa:5ab2dad1554299194fa93545",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 81,
+        "rank_sha256": "61a7f1174c641f6329553c532c0bc71171acb5491b6c442767505737262ffadb"
+      },
+      {
+        "task_id": "hotpotqa:5a7d07e455429909bec76906",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 82,
+        "rank_sha256": "2714bbb3236b06d0f2f318c7bd6c41cce500b243f75a45d98d6a25a48d637bb8"
+      },
+      {
+        "task_id": "hotpotqa:5ae1cbfb554299234fd04300",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 84,
+        "rank_sha256": "0874f02f94a8e2d025f16d85e3b5ae9e0503d390b0f4588732e900b3c65a0402"
+      },
+      {
+        "task_id": "hotpotqa:5ade956d5542997c77adee69",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 85,
+        "rank_sha256": "0dd19ef0f82ee14afda9106fb294692aae400a12bc5cd022add4dbf356af4966"
+      },
+      {
+        "task_id": "hotpotqa:5ae31e1c55429928c4239615",
+        "partition": "tune",
+        "public_type": "comparison",
+        "parent120_index": 87,
+        "rank_sha256": "c1b5d8a9c90f2b40e39477cb9d35de2b791a47c80f6e6074abad3ef5c85c5f77"
+      },
+      {
+        "task_id": "hotpotqa:5ac121555542992a796dee00",
+        "partition": "tune",
+        "public_type": "comparison",
+        "parent120_index": 88,
+        "rank_sha256": "0d098c8c571d477f4ed0ce604e7c62932437dc5cf89bc19f378857406e478164"
+      },
+      {
+        "task_id": "hotpotqa:5a846f075542992ef85e23f7",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 89,
+        "rank_sha256": "3bfbd272e401e37b4ff938fb74656f30a7c98be626855e1189da41796f70e0cd"
+      },
+      {
+        "task_id": "hotpotqa:5ae1ec7a5542994d89d5b2cf",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 90,
+        "rank_sha256": "58d941fac26892ca098df6156d67d90677c544b6acf4e505e77d84f82818a03a"
+      },
+      {
+        "task_id": "hotpotqa:5a86e0a95542996432c57202",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 92,
+        "rank_sha256": "078837c35d55d97a7a33bb78d7381959ab39f0f3c5d866c8e6e3b9e557967821"
+      },
+      {
+        "task_id": "hotpotqa:5ae66d695542996d980e7b66",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 93,
+        "rank_sha256": "8baee8f5f4dfd391704e2ff5e1fd557d5daabd4b574bb5bff0f729bd1f14760e"
+      },
+      {
+        "task_id": "hotpotqa:5abb9ca4554299642a094ac5",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 95,
+        "rank_sha256": "489dfc3ba4c4aac051e3ff82aa8d0d02f3ed3031e3370c9ac8d76811a4e352dc"
+      },
+      {
+        "task_id": "hotpotqa:5a7fa7b75542995d8a8ddee4",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 96,
+        "rank_sha256": "18714aabb9affc8b16220c00b6314b3fc9c22ac006518b1f3e4223314d4257ac"
+      },
+      {
+        "task_id": "hotpotqa:5abfab5b5542997ec76fd42b",
+        "partition": "tune",
+        "public_type": "comparison",
+        "parent120_index": 97,
+        "rank_sha256": "6dd15356043433e2af81d2a45f18355b8e707587838e49477b1e220172e4b29b"
+      },
+      {
+        "task_id": "hotpotqa:5a7730fe55429972597f148d",
+        "partition": "tune",
+        "public_type": "bridge",
+        "parent120_index": 99,
+        "rank_sha256": "23d031ef07fed9b312ad9c90a75014b99ab7f61afb33758f2ba1b368fe6ac9ad"
+      },
+      {
+        "task_id": "hotpotqa:5ab614545542992aa134a41b",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 100,
+        "rank_sha256": "a419059d93043ba78201594ef275f6d02974f2d1c0f37dae73786aa6dc816f2b"
+      },
+      {
+        "task_id": "hotpotqa:5a810f7f55429926c1cdace0",
+        "partition": "calibration",
+        "public_type": "comparison",
+        "parent120_index": 101,
+        "rank_sha256": "947d09cb8ea1f0968102de1bbc25b23fb76adeea1f10e3c25891bf19c31a95f6"
+      },
+      {
+        "task_id": "hotpotqa:5a760ac2554299109176e62b",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 102,
+        "rank_sha256": "a0ce6b0cf7025ae1bbdc8aacd52a183576f510031ef2a864a4118ed4f1f73a8e"
+      },
+      {
+        "task_id": "hotpotqa:5a84bca05542991dd0999dc4",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 103,
+        "rank_sha256": "3cc849cd7d84e439cdde4b479b1b9cc6f53b46bf093ce22482d7e17702519a39"
+      },
+      {
+        "task_id": "hotpotqa:5ab9d6255542994dbf019859",
+        "partition": "calibration",
+        "public_type": "comparison",
+        "parent120_index": 104,
+        "rank_sha256": "acd82a4d3680f9ebb80bc8c7cbfb236f1de946b5a51fe1637f8dcab43418e3b4"
+      },
+      {
+        "task_id": "hotpotqa:5adde7755542997dc790709f",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 106,
+        "rank_sha256": "67a345f37097e210208dad36b7347b50026f636b5de93b381736e3323a705b4c"
+      },
+      {
+        "task_id": "hotpotqa:5ae7fda4554299321098400d",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 107,
+        "rank_sha256": "1495a478bd3205b3c5d00d4e4497cf043eeb2c00235f1b19841bb1ac62cacff4"
+      },
+      {
+        "task_id": "hotpotqa:5ab53f6b554299488d4d9921",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 108,
+        "rank_sha256": "ac676cd8a0a9437853c205b4a58a72a9d145c6ea05f54a64470a3f3041d5ca1e"
+      },
+      {
+        "task_id": "hotpotqa:5ae2c2c6554299492dc91c62",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 110,
+        "rank_sha256": "315680a3e7d6a9fb9f902f7ece60d34aa0173c98b595feb18bc3107e88a6b8b1"
+      },
+      {
+        "task_id": "hotpotqa:5a8673db554299211dda2b3d",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 112,
+        "rank_sha256": "434eb8d25f26c461375ec00346f040e00f3af4fff4da2707f28ad2f608df98c5"
+      },
+      {
+        "task_id": "hotpotqa:5ac393b855429939154137e7",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 114,
+        "rank_sha256": "47fd71a0235a07df3a3c0e64d8a7324b012b6da8b0075b07f3dc99d8a2138675"
+      },
+      {
+        "task_id": "hotpotqa:5abb12ca5542992ccd8e7efd",
+        "partition": "calibration",
+        "public_type": "comparison",
+        "parent120_index": 116,
+        "rank_sha256": "b3b434c47e6577e2794a9d64432669cf03f04b6e73bdecd8f5b0421440a62702"
+      },
+      {
+        "task_id": "hotpotqa:5a7c08f45542996dd594b884",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 117,
+        "rank_sha256": "19ffe2bde37b2c8afa1d267534158a2ffab00ebbc267556e68463c535c114d2a"
+      },
+      {
+        "task_id": "hotpotqa:5ae761685542995703ce8bff",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 118,
+        "rank_sha256": "8ec30e654bc6612d97b11a86078285feaa852a752400fffee28a6fed4435624c"
+      },
+      {
+        "task_id": "hotpotqa:5ae77ed055429952e35ea949",
+        "partition": "calibration",
+        "public_type": "bridge",
+        "parent120_index": 119,
+        "rank_sha256": "a067d97882dbca38d7edc8de358de0d3c0151b86a44a0a524d1ad703611bbb2c"
+      }
+    ],
+    "field_preservation": {
+      "all_original_row_values_equal_parent120_and600": true,
+      "selected_raw_line_bytes_identical": true,
+      "source_order_preserved": true,
+      "full_context_sentence_order_and_metadata_unchanged": true,
+      "references_unchanged_evaluator_only": true,
+      "context_paragraph_count_distribution": {
+        "10": 89,
+        "4": 1
+      }
+    },
+    "validation_exclusion": {
+      "path": "<PROJECT>\\testing\\preflight-2026-10-18\\hotpot_dev_distractor_v1.hf-rows-verified.json",
+      "sha256": "674e6c8b4e8c7e020ddd59b9b9b801966c663ae170d4e177a214b8c8c6439e7e",
+      "n": 7405,
+      "zero_overlap_rechecked": {
+        "id": 0,
+        "unicode": 0,
+        "ascii": 0
+      },
+      "unicode_normalizer": "NFKC + casefold + re.sub(r\"[^\\w\\s]\", \" \", text) + collapse whitespace",
+      "ascii_normalizer": "NFKC + casefold + re.sub(r\"[^a-z0-9\\s]\", \" \", text) + collapse whitespace"
+    },
+    "partition_pair_overlap": [
+      {
+        "a": "fit",
+        "b": "tune",
+        "id": 0,
+        "unicode": 0,
+        "ascii": 0
+      },
+      {
+        "a": "fit",
+        "b": "calibration",
+        "id": 0,
+        "unicode": 0,
+        "ascii": 0
+      },
+      {
+        "a": "tune",
+        "b": "calibration",
+        "id": 0,
+        "unicode": 0,
+        "ascii": 0
+      }
+    ],
+    "scientific_minima": {
+      "valid_unique_canonical": [
+        40,
+        10,
+        10
+      ],
+      "both_labels_each_partition": true,
+      "failures_no_replacement": true,
+      "pilot_precision_limited": true,
+      "minimums_not_a_power_guarantee": true
+    },
+    "output": {
+      "file": "tasks.jsonl",
+      "sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+      "bytes": 582651,
+      "serialization": "Exact selected raw UTF8/LF parent lines, source order"
+    },
+    "no_adoption": {
+      "protocol_adopted": false,
+      "writer_or_model_called": false,
+      "weights_updated": false,
+      "active_plan_or_source_changed": false,
+      "actual_NEW90_writer_required": true,
+      "prior590_not_imported": true
+    }
+  }
+}

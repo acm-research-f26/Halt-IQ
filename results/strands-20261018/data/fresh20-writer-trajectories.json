@@ -1,0 +1,3148 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/study-runs/fresh20-2130-v1-fixed10/trajectories.json",
+  "original_sha256": "c426abe1be2d183eca88c8b61d4823992965eef4346dfa8dcc4cdb975a220ac9",
+  "transformation": "Removed local Ollama call.response bodies only; retained every task, round, draft, evaluator EM/F1 and reported call usage. Data-only review snapshot; not accepted as the original raw trajectory by strict native replay hash gates.",
+  "data": [
+    {
+      "task_id": "hotpotqa:5abee75f5542993fe9a41d8e",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 3.826268099976005,
+            "cost_usd": 0.0,
+            "input_tokens": 1711,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.24314980002236553,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17587190002086572,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17560459999367595,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.18406540001160465,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17175660000066273,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16894049997790717,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.19410260001313873,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1771596999897156,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "HBO World Championship Boxing",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.19378810000489466,
+            "cost_usd": 0.0,
+            "input_tokens": 1748,
+            "output_tokens": 11
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ab96bf15542996be20204d8",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.43587320001097396,
+            "cost_usd": 0.0,
+            "input_tokens": 2188,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14756889999262057,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1305945000203792,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13829989999067038,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1540114999806974,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1354513000114821,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13307609999901615,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15288069998496212,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15750329999718815,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Germanicus",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13362229999620467,
+            "cost_usd": 0.0,
+            "input_tokens": 2222,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a8796345542994846c1cda3",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3404436999990139,
+            "cost_usd": 0.0,
+            "input_tokens": 1681,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16193170001497492,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13197190000209957,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1516913000086788,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13154760000179522,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13221550002344884,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13204600001336075,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13269769999897107,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15819630000623874,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "the shore",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13187849998939782,
+            "cost_usd": 0.0,
+            "input_tokens": 1715,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5add8f055542990dbb2f7e6d",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.4234007000050042,
+            "cost_usd": 0.0,
+            "input_tokens": 1936,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17282229999545962,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14512630001991056,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14600680000148714,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15132199999061413,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15963259999989532,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15563510000356473,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13936030000331812,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15050210000481457,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Kurt Gerstein",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1548400000028778,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a8de02b554299068b959e13",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.5055902000167407,
+            "cost_usd": 0.0,
+            "input_tokens": 2443,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1381546999909915,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.12452409998513758,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14716420002514496,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14165810000849888,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.12381339998682961,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.12610929997754283,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3406605999916792,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.12063790002139285,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "ATK",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14076499998918734,
+            "cost_usd": 0.0,
+            "input_tokens": 2477,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5abfd5c45542994516f4550e",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.4513241999957245,
+            "cost_usd": 0.0,
+            "input_tokens": 2209,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16898249997757375,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17190290000871755,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15485809999518096,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15337200000067241,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15378759999293834,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17182029999094084,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1597135000047274,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13869429999613203,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Yeardley Smith",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14459260000148788,
+            "cost_usd": 0.0,
+            "input_tokens": 2245,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5adfc97255429906c02daa41",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.42720200002077036,
+            "cost_usd": 0.0,
+            "input_tokens": 1938,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1477815000107512,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.132416500011459,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13299390001338907,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13293019999400713,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3343102000071667,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1321415000129491,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1322035000193864,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13279529998544604,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "League Two",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1342362999857869,
+            "cost_usd": 0.0,
+            "input_tokens": 1972,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a78d38455429970f5fffd94",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Amal Clooney",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.39192709999042563,
+            "cost_usd": 0.0,
+            "input_tokens": 1890,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Edward Fitzgerald",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15240530000301078,
+            "cost_usd": 0.0,
+            "input_tokens": 1926,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Amal Clooney",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.20023420001962222,
+            "cost_usd": 0.0,
+            "input_tokens": 1924,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Edward Fitzgerald",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14661580001120456,
+            "cost_usd": 0.0,
+            "input_tokens": 1926,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Amal Clooney",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17591779999202117,
+            "cost_usd": 0.0,
+            "input_tokens": 1924,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Edward Fitzgerald",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1690173999813851,
+            "cost_usd": 0.0,
+            "input_tokens": 1926,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Amal Clooney",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17782209999859333,
+            "cost_usd": 0.0,
+            "input_tokens": 1924,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Edward Fitzgerald",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14798510001855902,
+            "cost_usd": 0.0,
+            "input_tokens": 1926,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Amal Clooney",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17671440000412986,
+            "cost_usd": 0.0,
+            "input_tokens": 1924,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Edward Fitzgerald",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15392479998990893,
+            "cost_usd": 0.0,
+            "input_tokens": 1926,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a7755c65542993569682d54",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.5979619999998249,
+            "cost_usd": 0.0,
+            "input_tokens": 2911,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.27220930001931265,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.2284495999920182,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.23925640000379644,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.24772980000125244,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.20913689999724738,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.24116760000470094,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.2200033999979496,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.18614780000643805,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Illankai Tamil Arasu Kachchi",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.2400084999972023,
+            "cost_usd": 0.0,
+            "input_tokens": 2952,
+            "output_tokens": 15
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5abd1daa55429933744ab72e",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.2979263000015635,
+            "cost_usd": 0.0,
+            "input_tokens": 1408,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1519102999882307,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11523379999562167,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11564070000895299,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11637410000548698,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1827198000100907,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13847700000042096,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14032820001011714,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.18637899999157526,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "yes",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11545939999632537,
+            "cost_usd": 0.0,
+            "input_tokens": 1441,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a8d4fbf5542994ba4e3dc68",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.41328039998188615,
+            "cost_usd": 0.0,
+            "input_tokens": 2057,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1676189000136219,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1723792999982834,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14854389999527484,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15194839998730458,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14765440000337549,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1680538000073284,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1708589000045322,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1710767000040505,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Nye County",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1655375999980606,
+            "cost_usd": 0.0,
+            "input_tokens": 2092,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a8081975542992097ad2fef",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.2994338999851607,
+            "cost_usd": 0.0,
+            "input_tokens": 1146,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.19150439999066293,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1570828999974765,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15689399998518638,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16557020001346245,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15106530001503415,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16204349999316037,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14462040000944398,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14754929998889565,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Leslie Goodwins",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14862280001398176,
+            "cost_usd": 0.0,
+            "input_tokens": 1182,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ab8eabb5542991b5579f03d",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.31536880001658574,
+            "cost_usd": 0.0,
+            "input_tokens": 1397,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1742701000184752,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1498983999772463,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1500827000127174,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1939278000209015,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1711387000104878,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1933718000072986,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17142020000028424,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.170594399998663,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "NRStor Inc.",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16124229997512884,
+            "cost_usd": 0.0,
+            "input_tokens": 1433,
+            "output_tokens": 11
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a86681c5542991e77181644",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3715249000233598,
+            "cost_usd": 0.0,
+            "input_tokens": 1803,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1405765999807045,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15119189998949878,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13293399999383837,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.20211510002263822,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1558636999980081,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13249650000943802,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3573441000189632,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13208119999035262,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "professional boxer",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.3444080000044778,
+            "cost_usd": 0.0,
+            "input_tokens": 1837,
+            "output_tokens": 8
+          },
+          "exact_match": false,
+          "token_f1": 0.8
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ac2f79e5542996773102661",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.338244400016265,
+            "cost_usd": 0.0,
+            "input_tokens": 1430,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15936890000011772,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14388339998549782,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.19607179999002255,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.164986299991142,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14281669998308644,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16824300002190284,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14469739998457953,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1439216999860946,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "illnesses",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14407069998560473,
+            "cost_usd": 0.0,
+            "input_tokens": 1465,
+            "output_tokens": 9
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ae389fc5542992f92d8230f",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Lost Our Lisa",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.42393690001335926,
+            "cost_usd": 0.0,
+            "input_tokens": 2012,
+            "output_tokens": 9
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Realty Bites",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16311520000454038,
+            "cost_usd": 0.0,
+            "input_tokens": 2047,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Lost Our Lisa",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1844660000060685,
+            "cost_usd": 0.0,
+            "input_tokens": 2048,
+            "output_tokens": 9
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Realty Bites",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17885199998272583,
+            "cost_usd": 0.0,
+            "input_tokens": 2047,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Lost Our Lisa",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.18164229998365045,
+            "cost_usd": 0.0,
+            "input_tokens": 2048,
+            "output_tokens": 9
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Realty Bites",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17882279999321327,
+            "cost_usd": 0.0,
+            "input_tokens": 2047,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Lost Our Lisa",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16199009999400005,
+            "cost_usd": 0.0,
+            "input_tokens": 2048,
+            "output_tokens": 9
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Realty Bites",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1741221999982372,
+            "cost_usd": 0.0,
+            "input_tokens": 2047,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Lost Our Lisa",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15361470001516864,
+            "cost_usd": 0.0,
+            "input_tokens": 2048,
+            "output_tokens": 9
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Realty Bites",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17570790002355352,
+            "cost_usd": 0.0,
+            "input_tokens": 2047,
+            "output_tokens": 10
+          },
+          "exact_match": false,
+          "token_f1": 0.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ab576dc5542997d4ad1f13d",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.4354629000008572,
+            "cost_usd": 0.0,
+            "input_tokens": 1942,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1769182000134606,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17015670001273975,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14872749999631196,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15129730000626296,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1677254000096582,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1505262999853585,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1402446999854874,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14835730000049807,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "Carnatic music",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15144990000408143,
+            "cost_usd": 0.0,
+            "input_tokens": 1978,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5adc46665542994650320cc8",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.4480947000265587,
+            "cost_usd": 0.0,
+            "input_tokens": 2199,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1694240000215359,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15389350001350977,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17540639999788254,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15431949999765493,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1740830999915488,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.17269109998596832,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1600550999864936,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15043929999228567,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "1943",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.155763399990974,
+            "cost_usd": 0.0,
+            "input_tokens": 2235,
+            "output_tokens": 10
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5a7fa0d55542995d8a8dded3",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.34696209998219274,
+            "cost_usd": 0.0,
+            "input_tokens": 1745,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1496212999918498,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13560470001539215,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1562578000011854,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.33444520001648925,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15843840001616627,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.32667299997410737,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16041829998721369,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.15503190000890754,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "musician",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.323595199995907,
+            "cost_usd": 0.0,
+            "input_tokens": 1779,
+            "output_tokens": 8
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "task_id": "hotpotqa:5ae400ab5542995dadf242be",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.4086830999876838,
+            "cost_usd": 0.0,
+            "input_tokens": 2110,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 2,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.14650800000526942,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 3,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11127329998998903,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 4,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11191790000884794,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 5,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.16266130001167767,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 6,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.13255260000005364,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 7,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.10818239999935031,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 8,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11039410001831129,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 9,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.11182649998227134,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        },
+        {
+          "round": 10,
+          "status": "completed",
+          "draft": "YES",
+          "call": {
+            "provider": "ollama",
+            "model": "qwen3:8b",
+            "elapsed_seconds": 0.1104916000040248,
+            "cost_usd": 0.0,
+            "input_tokens": 2143,
+            "output_tokens": 7
+          },
+          "exact_match": true,
+          "token_f1": 1.0
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "verified_at": "2026-10-18T21:58:16.965854-05:00",
+  "method": "stdlib header and hash inspection only; no Torch/model load",
+  "sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+  "bytes": 12605896,
+  "header_bytes": 448,
+  "parameter_count": 3151360,
+  "tensors": {
+    "k.bias": {
+      "dtype": "F32",
+      "shape": [
+        768
+      ],
+      "data_offsets": [
+        0,
+        3072
+      ]
+    },
+    "k.weight": {
+      "dtype": "F32",
+      "shape": [
+        768,
+        2048
+      ],
+      "data_offsets": [
+        3072,
+        6294528
+      ]
+    },
+    "norm.bias": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        6294528,
+        6302720
+      ]
+    },
+    "norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        6302720,
+        6310912
+      ]
+    },
+    "q.bias": {
+      "dtype": "F32",
+      "shape": [
+        768
+      ],
+      "data_offsets": [
+        6310912,
+        6313984
+      ]
+    },
+    "q.weight": {
+      "dtype": "F32",
+      "shape": [
+        768,
+        2048
+      ],
+      "data_offsets": [
+        6313984,
+        12605440
+      ]
+    }
+  },
+  "selected_checkpoint_optimizer_steps": 2,
+  "all_candidate_optimizer_steps": 12,
+  "selected_temperature": 1.4266376751158028,
+  "config_sha256": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1"
+}

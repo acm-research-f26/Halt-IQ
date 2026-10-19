@@ -1,0 +1,47 @@
+HaltIQ — OPTIONAL JEV 1.13 MATCHED FRESH20 COMPANION
+Independent terminal audit, October 18, 2026, Central time. All20 planned questions retained; no failures or missing episodes. Primary Strands results are unchanged.
+
+Answer quality: Jev, its cap3 variant, both calibrated Strands heads, their cap3 variants and Fixed1/2/3/5/10 all achieve10/20 exact matches(50%) and tokenF1=0.540000. No policy repairs or regresses a first-draft EM label. Jev-versus-Fixed1 and either Strands head, including matched cap3 comparisons, have EM/F1 deltas0 with question-paired95% intervals[0,0](5000draws,seed42). Identical observed outcomes do not establish population equivalence.
+
+Policy | EM | F1 | Mean drafts | Raw reported tokens/question | Counterfactual prefix model seconds/question
+fixed-1-prefix | 10/20 | 0.540000 | 1.00 | 1917.10 | 0.574945
+fixed-2-prefix | 10/20 | 0.540000 | 2.00 | 3869.40 | 0.744738
+fixed-3-prefix | 10/20 | 0.540000 | 3.00 | 5821.70 | 0.899045
+fixed-5-prefix | 10/20 | 0.540000 | 5.00 | 9726.30 | 1.226828
+fixed-10-prefix | 10/20 | 0.540000 | 10.00 | 19487.80 | 2.059871
+strands-untuned | 10/20 | 0.540000 | 5.50 | 19994.95 | 2.626831
+strands-trained | 10/20 | 0.540000 | 5.50 | 19994.95 | 2.626736
+strands-untuned-cap3 | 10/20 | 0.540000 | 2.00 | 7351.05 | 1.236087
+strands-trained-cap3 | 10/20 | 0.540000 | 2.00 | 7351.05 | 1.236043
+jev-1.13-single-correctness | 10/20 | 0.540000 | 3.75 | 16126.40 | 1.661653
+jev-1.13-single-correctness-cap3 | 10/20 | 0.540000 | 1.65 | 6842.00 | 0.945554
+
+Approval denominators differ from answer accuracy. Jev eventually approves14/20, with10 correct and4 wrong: precision10/14=71.43%,coverage70%. On the FIRST decision only, Jev approves13/20,10 correct and3 wrong: precision10/13=76.92%,coverage65%. Both Strands heads approve10/20 first drafts,5 correct: precision50%,coverage50%. These conditional rates cannot be called all-question exact-match accuracy.
+
+First-decision probability diagnostics,20/20 observed: Jev AUROC=0.915000; Brier=0.141200; NLL=0.469714523397. Both Strands heads AUROC=0.380000. Released calibrated Brier=0.336259689542,NLL=0.910647148059; trained calibrated Brier=0.336321780103,NLL=0.910821612395.
+Jev supplies Noul probabilities only. Logits and temperature remain null. Probability-only NLL uses clipping to[1e-15,1-1e-15];0/20 first probabilities hit endpoints, so clipping changes none of these observed scores. Strands NLL uses its actual raw logits and saved temperature. No hosted calibration or fabricated logits are claimed.
+
+Secondary descriptive question-paired Jev-minus-Strands probability differences(5000draws,seed42,no multiplicity correction):
+Jev_minus_strands-untuned,first-decision auroc: +0.535000000 [+0.275000000,+0.770880682]
+Jev_minus_strands-untuned,first-decision brier: -0.195059690 [-0.329511088,-0.064654567]
+Jev_minus_strands-untuned,first-decision nll: -0.440932625 [-0.802569086,-0.075204902]
+Jev_minus_strands-untuned,first-decision approval_precision: +0.269230769 [-0.047619048,+0.583333333]
+Jev_minus_strands-untuned,first-decision approval_coverage: +0.150000000 [-0.200000000,+0.450000000]
+Jev_minus_strands-trained,first-decision auroc: +0.535000000 [+0.275000000,+0.770880682]
+Jev_minus_strands-trained,first-decision brier: -0.195121780 [-0.329619862,-0.064704148]
+Jev_minus_strands-trained,first-decision nll: -0.441107089 [-0.802757611,-0.075289727]
+Jev_minus_strands-trained,first-decision approval_precision: +0.269230769 [-0.047619048,+0.583333333]
+Jev_minus_strands-trained,first-decision approval_coverage: +0.150000000 [-0.200000000,+0.450000000]
+
+Jev uses3.75 drafts/question versus5.50 for either Strands head; paired draft difference−1.75[−4.85,+1.35]. At cap3:1.65 versus2.00; difference−0.35[−1.00,+0.30]. It uses more work than Fixed1 without improving observed EM/F1. Prefix token/time estimates are replay counterfactuals; they do not measure live end-to-end savings or equivalent GPU compute.
+
+Actual incremental hosted expense:75 unique successful API calls,163044 input tokens,1500 output tokens,$0.006847848. All cap3 rows reuse the same75 calls; fixed controls reuse already generated writer trajectories. Optional phase generated0 new writer requests and0 new local encoder forwards. The primary study already paid the physical writer/encoding expense; it must not be counted again as new optional work.
+Cumulative existing ledger:531 settled calls/$0.047882184 before;606 settled calls/$0.054730032 after. Delta75/$0.006847848,0 reservations,0 unsettled. Every new ordered ledger attempt matches its raw journal input-token count and nanodollar charge; no errors,pending requests,unknown usage,duplicate dispatches or retries.
+Optional replay phase wall=392.261830s; intentional idle=375.016000s; journal request time=13.184470s; provider roundtrip=12.217330s. Request time,roundtrip and idle overlap the wall scope; do not add them. Hardware/electricity remains unpriced.
+
+Concrete unchanged error: “In the epic of Gilgamesh, where did the wise female divinity associated with fermentation live?” Reference:“the Waters of Death”; first and tenth writer answers:“the shore”. Jev gives first probability0.88 and approves round1; released/trained Strands give approximately0.599066/0.599091 and reject through round10. All outputs remain EM-wrong. Better rejection by itself cannot produce a correct candidate.
+
+Provenance and limits: optional modeljev-1.13.0; same frozen20 questions/order/full contexts/references,10-draft writer trajectories,single correctness Noul and threshold0.8 as the primary comparison. Provider64K total context differs from localStrands4096; complete inputs are retained without truncation. Seed42 governs writer/cohort/bootstrap,while hosted API offers no seed/deterministic guarantee. The journal retains validated adapter probabilities and usage,not original HTTP response bodies. All15 runtime sources plus adapter/provider/budget source pins and current source/control/trained head files match; canonical primary comparison is unchanged.
+
+Evidence: OPTIONAL-JEV-FRESH20-INDEPENDENT-TERMINAL-AUDIT-20261018.json; raw optional manifest,requests,episodes and finalized budget receipt. The private audit binds exact file hashes; this readable text contains no credentials or machine paths.
+No model/API calls,source/config changes,retraining,calibration,PDF/site changes or cohort selection were performed by this audit.

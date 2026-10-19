@@ -1,0 +1,1822 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "research/FRESH20-INDEPENDENT-TERMINAL-AUDIT-20261018.json",
+  "original_sha256": "c7c590e0629c999a099c42290b9113635b2fedb1351084760a606b6384109960",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "status": "PASS_INDEPENDENT_TERMINAL_PRIMARY_RAW_QUALITY_COST_PROVENANCE_AUDIT",
+    "audited_local": "2026-10-18T20:40:53.365585-05:00",
+    "checks": {
+      "all5_terminal_exit0_and_captured_outputs": true,
+      "writer200_public_prompts_raw_responses_metrics": true,
+      "native200_canonical_features_vectors_state_labels_journal": true,
+      "all280_stored_episodes_exact_independent_reconstruction_fixed_dedup": true,
+      "retention_visited_only_full_prefix_cost_no_oracle": true,
+      "all13_policy_statistics_and_stable_probability_metrics": true,
+      "all_actual_physical_shared_work_once": true,
+      "all18_quality_contrasts_36_CIs_exact_independent5000seed42": true,
+      "canonical_immutable_9a4e_verified": true,
+      "final_plan_canonical_copied_freeze_prelearning_history_actualV8_and_all15_sources": true,
+      "current_checkpoint_tensor_copy_adapter_calibration_baseline_disjointness_proofs": true,
+      "canonical_pure_join_substantive_fields_reproduced_and_all_bound_inputs_current": true,
+      "separate_startup_phase_idle_and_nonoverlap_stage_timings": true,
+      "honest_no_repair_regression_examples_persistent_error_from_source_order": true
+    },
+    "raw_reconstruction_receipt_sha256": "40604a55c7dff95d49377043d8fed755ff76dd4cba87c6fb67f0557e5f82b35a",
+    "canonical_analysis_sha256": "9a4e5114435c678402889aa56a60ee54c541ced084f892782b35c030aa187a53",
+    "canonical_unchanged": true,
+    "planned_n": 20,
+    "all_policy_denominator20": true,
+    "policies": {
+      "fixed-1-prefix": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 1.0,
+        "mean_raw_reported_tokens": 1917.1,
+        "mean_counterfactual_prefix_model_seconds": 0.5749454800024978,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 20,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "first_draft_approval_precision": null,
+          "approval_coverage_of_planned": 0.0
+        }
+      },
+      "fixed-2-prefix": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_raw_reported_tokens": 3869.4,
+        "mean_counterfactual_prefix_model_seconds": 0.7447375750052743,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 20,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "first_draft_approval_precision": null,
+          "approval_coverage_of_planned": 0.0
+        }
+      },
+      "fixed-3-prefix": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 3.0,
+        "mean_raw_reported_tokens": 5821.7,
+        "mean_counterfactual_prefix_model_seconds": 0.899045365008351,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 20,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "first_draft_approval_precision": null,
+          "approval_coverage_of_planned": 0.0
+        }
+      },
+      "fixed-5-prefix": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 5.0,
+        "mean_raw_reported_tokens": 9726.3,
+        "mean_counterfactual_prefix_model_seconds": 1.2268284450110514,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 20,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "first_draft_approval_precision": null,
+          "approval_coverage_of_planned": 0.0
+        }
+      },
+      "fixed-10-prefix": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 10.0,
+        "mean_raw_reported_tokens": 19487.8,
+        "mean_counterfactual_prefix_model_seconds": 2.05987086500827,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 0,
+        "em_wrong_approvals": 0,
+        "approval_precision": null,
+        "approval_coverage": 0.0,
+        "rejections_of_EM_correct_drafts": 0,
+        "stop_depths": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 20
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 0,
+          "missing_first_decisions": 20,
+          "probability_coverage_of_planned": 0.0,
+          "auroc": null,
+          "brier": null,
+          "nll": null,
+          "observed_temperatures": [],
+          "approved_first_drafts": 0,
+          "first_draft_approval_precision": null,
+          "approval_coverage_of_planned": 0.0
+        }
+      },
+      "strands-untuned": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_raw_reported_tokens": 19994.95,
+        "mean_counterfactual_prefix_model_seconds": 2.6268313450156713,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-untuned-cap3": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_raw_reported_tokens": 7351.05,
+        "mean_counterfactual_prefix_model_seconds": 1.2360870000033173,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-trained": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_raw_reported_tokens": 19994.95,
+        "mean_counterfactual_prefix_model_seconds": 2.6267361700200125,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-trained-cap3": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_raw_reported_tokens": 7351.05,
+        "mean_counterfactual_prefix_model_seconds": 1.2360428750078427,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-untuned-retainbest": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_raw_reported_tokens": 19994.95,
+        "mean_counterfactual_prefix_model_seconds": 2.6268313450156713,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-trained-retainbest": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 5.5,
+        "mean_raw_reported_tokens": 19994.95,
+        "mean_counterfactual_prefix_model_seconds": 2.6267361700200125,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 50,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 10
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-untuned-cap3-retainbest": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_raw_reported_tokens": 7351.05,
+        "mean_counterfactual_prefix_model_seconds": 1.2360870000033173,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.3362596895416724,
+          "nll": 0.9106471480591203,
+          "observed_temperatures": [
+            1.4383301054880968
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      },
+      "strands-trained-cap3-retainbest": {
+        "planned_n": 20,
+        "completed": 20,
+        "failed_or_missing": 0,
+        "correct": 10,
+        "em": 0.5,
+        "token_f1": 0.54,
+        "mean_actual_drafts": 2.0,
+        "mean_raw_reported_tokens": 7351.05,
+        "mean_counterfactual_prefix_model_seconds": 1.2360428750078427,
+        "repairs_completed": 0,
+        "regressions_completed": 0,
+        "correct_first_draft_lost_including_failures": 0,
+        "approvals": 10,
+        "em_wrong_approvals": 5,
+        "approval_precision": 0.5,
+        "approval_coverage": 0.5,
+        "rejections_of_EM_correct_drafts": 15,
+        "stop_depths": {
+          "1": 10,
+          "2": 0,
+          "3": 10,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0
+        },
+        "first_draft_probabilities": {
+          "scored_first_drafts": 20,
+          "missing_first_decisions": 0,
+          "probability_coverage_of_planned": 1.0,
+          "auroc": 0.38,
+          "brier": 0.33632178010319286,
+          "nll": 0.9108216123945739,
+          "observed_temperatures": [
+            1.4266376751158028
+          ],
+          "approved_first_drafts": 10,
+          "first_draft_approval_precision": 0.5,
+          "approval_coverage_of_planned": 0.5
+        }
+      }
+    },
+    "paired_comparisons": {
+      "strands-trained_minus_strands-untuned": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3_minus_strands-untuned-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-1-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-10-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-2-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-3-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned_minus_fixed-5-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-1-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-10-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-2-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-3-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained_minus_fixed-5-prefix": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-retainbest_minus_strands-untuned-retainbest": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3-retainbest_minus_strands-untuned-cap3-retainbest": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned-retainbest_minus_strands-untuned": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-untuned-cap3-retainbest_minus_strands-untuned-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-retainbest_minus_strands-trained": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      },
+      "strands-trained-cap3-retainbest_minus_strands-trained-cap3": {
+        "exact_match": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        },
+        "token_f1": {
+          "candidate_minus_baseline": 0.0,
+          "bootstrap95": [
+            0.0,
+            0.0
+          ],
+          "planned_n": 20,
+          "complete_pair_n": 20,
+          "draws": 5000,
+          "seed": 42,
+          "rng": "python.random.Random"
+        }
+      }
+    },
+    "secondary_probability_paired_intervals": {
+      "nll": {
+        "candidate_minus_baseline": 0.00017446433545365014,
+        "bootstrap95": [
+          6.544187419487147e-05,
+          0.00028554499361135854
+        ],
+        "valid_draws": 5000,
+        "undefined_draws": 0,
+        "planned_n": 20,
+        "observed_pair_n": 20,
+        "seed": 42,
+        "scope": "descriptive secondary observed-first-decision paired interval; no multiplicity-adjusted superiority claim"
+      },
+      "brier": {
+        "candidate_minus_baseline": 6.209056152045589e-05,
+        "bootstrap95": [
+          2.3861121321541725e-05,
+          0.0001009524170151793
+        ],
+        "valid_draws": 5000,
+        "undefined_draws": 0,
+        "planned_n": 20,
+        "observed_pair_n": 20,
+        "seed": 42,
+        "scope": "descriptive secondary observed-first-decision paired interval; no multiplicity-adjusted superiority claim"
+      },
+      "auroc": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "valid_draws": 5000,
+        "undefined_draws": 0,
+        "planned_n": 20,
+        "observed_pair_n": 20,
+        "seed": 42,
+        "scope": "descriptive secondary observed-first-decision paired interval; no multiplicity-adjusted superiority claim"
+      },
+      "approval_precision": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "valid_draws": 5000,
+        "undefined_draws": 0,
+        "planned_n": 20,
+        "observed_pair_n": 20,
+        "seed": 42,
+        "scope": "descriptive secondary observed-first-decision paired interval; no multiplicity-adjusted superiority claim"
+      },
+      "approval_coverage": {
+        "candidate_minus_baseline": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "valid_draws": 5000,
+        "undefined_draws": 0,
+        "planned_n": 20,
+        "observed_pair_n": 20,
+        "seed": 42,
+        "scope": "descriptive secondary observed-first-decision paired interval; no multiplicity-adjusted superiority claim"
+      }
+    },
+    "physical_usage": {
+      "writer_generation_once": {
+        "completed_requests_including_invalid_outputs": 200,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 387901,
+        "reported_output_tokens": 1855,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 41.198210200003814,
+        "hosted_cost_usd": 0.0
+      },
+      "untuned_head_scoring": {
+        "completed_requests_including_invalid_outputs": 110,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 0,
+        "reported_output_tokens": 0,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 0.11492260004160926,
+        "hosted_cost_usd": 0
+      },
+      "tuned_head_scoring": {
+        "completed_requests_including_invalid_outputs": 110,
+        "unreconciled_requests": 0,
+        "reported_physical_input_tokens": 0,
+        "reported_output_tokens": 0,
+        "requests_with_unknown_usage": 0,
+        "reported_request_seconds": 0.11326159999589436,
+        "hosted_cost_usd": 0
+      },
+      "real_encoder_features_once": {
+        "completed_encoder_forwards": 200,
+        "input_tokens": 364275,
+        "encoding_seconds": 47.38657220051391
+      }
+    },
+    "head_temperatures": {
+      "untuned": {
+        "temperature": 1.4383301054880968,
+        "question_ids": [
+          "hotpotqa:5a760ac2554299109176e62b",
+          "hotpotqa:5a7c08f45542996dd594b884",
+          "hotpotqa:5a810f7f55429926c1cdace0",
+          "hotpotqa:5a84bca05542991dd0999dc4",
+          "hotpotqa:5a8673db554299211dda2b3d",
+          "hotpotqa:5ab53f6b554299488d4d9921",
+          "hotpotqa:5ab614545542992aa134a41b",
+          "hotpotqa:5ab9d6255542994dbf019859",
+          "hotpotqa:5abb12ca5542992ccd8e7efd",
+          "hotpotqa:5ac393b855429939154137e7",
+          "hotpotqa:5adde7755542997dc790709f",
+          "hotpotqa:5ae2c2c6554299492dc91c62",
+          "hotpotqa:5ae761685542995703ce8bff",
+          "hotpotqa:5ae77ed055429952e35ea949",
+          "hotpotqa:5ae7fda4554299321098400d"
+        ],
+        "head_sha256": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799"
+      },
+      "trained": {
+        "temperature": 1.4266376751158028,
+        "question_ids": [
+          "hotpotqa:5a760ac2554299109176e62b",
+          "hotpotqa:5a7c08f45542996dd594b884",
+          "hotpotqa:5a810f7f55429926c1cdace0",
+          "hotpotqa:5a84bca05542991dd0999dc4",
+          "hotpotqa:5a8673db554299211dda2b3d",
+          "hotpotqa:5ab53f6b554299488d4d9921",
+          "hotpotqa:5ab614545542992aa134a41b",
+          "hotpotqa:5ab9d6255542994dbf019859",
+          "hotpotqa:5abb12ca5542992ccd8e7efd",
+          "hotpotqa:5ac393b855429939154137e7",
+          "hotpotqa:5adde7755542997dc790709f",
+          "hotpotqa:5ae2c2c6554299492dc91c62",
+          "hotpotqa:5ae761685542995703ce8bff",
+          "hotpotqa:5ae77ed055429952e35ea949",
+          "hotpotqa:5ae7fda4554299321098400d"
+        ],
+        "head_sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5"
+      }
+    },
+    "checkpoint_fingerprints": {
+      "untuned": "40bf2f8392c456b556853a11e20a37a79fa2714493432315693eeef57cfd10b1",
+      "trained": "04aece6159b1de37235df17fcca1b06c5f547fdc8e83b827ebb55ffb0d30b0a1"
+    },
+    "separate_phase_timings": [
+      {
+        "phase": "writer",
+        "phase_wall_seconds": 1051.6085960000055,
+        "phase_idle_seconds": 1000.109999999986,
+        "startup_wall_seconds": null,
+        "startup_idle_seconds": null,
+        "startup_plus_phase_wall_seconds": null
+      },
+      {
+        "phase": "encoder",
+        "phase_wall_seconds": 96.23523949997616,
+        "phase_idle_seconds": 45.938999999983935,
+        "startup_wall_seconds": 14.442181699996581,
+        "startup_idle_seconds": 7.203000000008615,
+        "startup_plus_phase_wall_seconds": 110.67742119997274
+      },
+      {
+        "phase": "untuned_head",
+        "phase_wall_seconds": 556.0713321999938,
+        "phase_idle_seconds": 550.0299999999988,
+        "startup_wall_seconds": 8.841933600022458,
+        "startup_idle_seconds": 5.0,
+        "startup_plus_phase_wall_seconds": 564.9132658000162
+      },
+      {
+        "phase": "trained_head",
+        "phase_wall_seconds": 555.9887670000026,
+        "phase_idle_seconds": 550.0779999999213,
+        "startup_wall_seconds": 8.763385199999902,
+        "startup_idle_seconds": 5.0,
+        "startup_plus_phase_wall_seconds": 564.7521522000025
+      }
+    ],
+    "nonoverlapping_owning_stage_timings": [
+      {
+        "stage": "fresh20_writer10",
+        "started_at": "2026-10-19T00:58:09.254757+00:00",
+        "finished_at": "2026-10-19T01:15:48.727773+00:00",
+        "owning_stage_wall_seconds": 1059.473016
+      },
+      {
+        "stage": "fresh20_encode_allrounds",
+        "started_at": "2026-10-19T01:15:48.733299+00:00",
+        "finished_at": "2026-10-19T01:17:40.820202+00:00",
+        "owning_stage_wall_seconds": 112.086903
+      },
+      {
+        "stage": "fresh20_head_untuned",
+        "started_at": "2026-10-19T01:17:40.827004+00:00",
+        "finished_at": "2026-10-19T01:27:07.096447+00:00",
+        "owning_stage_wall_seconds": 566.269443
+      },
+      {
+        "stage": "fresh20_head_trained",
+        "started_at": "2026-10-19T01:27:07.102687+00:00",
+        "finished_at": "2026-10-19T01:36:33.385745+00:00",
+        "owning_stage_wall_seconds": 566.283058
+      },
+      {
+        "stage": "fresh20_compare",
+        "started_at": "2026-10-19T01:36:33.394074+00:00",
+        "finished_at": "2026-10-19T01:36:34.417560+00:00",
+        "owning_stage_wall_seconds": 1.023486
+      }
+    ],
+    "sum_owning_stage_wall_seconds": 2305.135906,
+    "first_stage_start_to_final_stage_finish_seconds": 2305.162803,
+    "cohort_group_counts": {
+      "fit": 60,
+      "tune": 15,
+      "calibration": 15,
+      "original_dev_baseline": 20,
+      "fresh": 20
+    },
+    "failures": {
+      "writer": 0,
+      "native_overflow": 0,
+      "native_source_failure": 0,
+      "untuned_primary": 0,
+      "trained_primary": 0,
+      "unreconciled": 0
+    },
+    "answer_invariance": {
+      "all10_raw_identical_questions": 18,
+      "all10_normalized_identical_questions": 18,
+      "raw_variant_questions": 2,
+      "consecutive_EM_repairs": 0,
+      "consecutive_EM_regressions": 0,
+      "incorrect_first_with_any_later_correct_candidate": 0
+    },
+    "requested_examples": {
+      "repair_example": null,
+      "regression_example": null,
+      "reason": "No correct/incorrect EM transition exists anywhere in20x10frozenwritertrajectories. Historicalcasesmustnotberepresentedasfreshproof.",
+      "persistent_error": {
+        "task_id": "hotpotqa:5a8796345542994846c1cda3",
+        "question": "In the epic of Gilgamesh, where did the wise female divinity associated with fermentation live?",
+        "references": [
+          "the Waters of Death"
+        ],
+        "first_draft": "the shore",
+        "tenth_draft": "the shore",
+        "first_EM": false,
+        "tenth_EM": false,
+        "all10_drafts": [
+          {
+            "round": 1,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 2,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 3,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 4,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 5,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 6,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 7,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 8,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 9,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          },
+          {
+            "round": 10,
+            "answer": "the shore",
+            "EM": false,
+            "F1": 0.0
+          }
+        ],
+        "policies": {
+          "strands-untuned": {
+            "first_probability": 0.5990662851790978,
+            "actual_stop_depth": 10,
+            "stop_reason": "round_cap",
+            "selected_draft_round": 10,
+            "final_answer": "the shore",
+            "EM": false,
+            "visited_probabilities": [
+              {
+                "round": 1,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 2,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 3,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 4,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 5,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 6,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 7,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 8,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 9,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 10,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              }
+            ],
+            "full_prefix_cost_preserved": true
+          },
+          "strands-trained": {
+            "first_probability": 0.5990906673514943,
+            "actual_stop_depth": 10,
+            "stop_reason": "round_cap",
+            "selected_draft_round": 10,
+            "final_answer": "the shore",
+            "EM": false,
+            "visited_probabilities": [
+              {
+                "round": 1,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 2,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 3,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 4,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 5,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 6,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 7,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 8,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 9,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 10,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              }
+            ],
+            "full_prefix_cost_preserved": true
+          },
+          "strands-untuned-retainbest": {
+            "first_probability": 0.5990662851790978,
+            "actual_stop_depth": 10,
+            "stop_reason": "round_cap",
+            "selected_draft_round": 1,
+            "final_answer": "the shore",
+            "EM": false,
+            "visited_probabilities": [
+              {
+                "round": 1,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 2,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 3,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 4,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 5,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 6,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 7,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 8,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 9,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              },
+              {
+                "round": 10,
+                "p_true": 0.5990662851790978,
+                "approved": false
+              }
+            ],
+            "full_prefix_cost_preserved": true
+          },
+          "strands-trained-retainbest": {
+            "first_probability": 0.5990906673514943,
+            "actual_stop_depth": 10,
+            "stop_reason": "round_cap",
+            "selected_draft_round": 1,
+            "final_answer": "the shore",
+            "EM": false,
+            "visited_probabilities": [
+              {
+                "round": 1,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 2,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 3,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 4,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 5,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 6,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 7,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 8,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 9,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              },
+              {
+                "round": 10,
+                "p_true": 0.5990906673514943,
+                "approved": false
+              }
+            ],
+            "full_prefix_cost_preserved": true
+          }
+        }
+      },
+      "two_wording_variants": [
+        {
+          "task_id": "hotpotqa:5a78d38455429970f5fffd94",
+          "question": "Who is one other client that is represented by the same person that also represents a barrister at Doughty Street Chambers?",
+          "references": [
+            "Angelina Jolie"
+          ],
+          "all10_drafts": [
+            {
+              "round": 1,
+              "answer": "Amal Clooney",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 2,
+              "answer": "Edward Fitzgerald",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 3,
+              "answer": "Amal Clooney",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 4,
+              "answer": "Edward Fitzgerald",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 5,
+              "answer": "Amal Clooney",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 6,
+              "answer": "Edward Fitzgerald",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 7,
+              "answer": "Amal Clooney",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 8,
+              "answer": "Edward Fitzgerald",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 9,
+              "answer": "Amal Clooney",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 10,
+              "answer": "Edward Fitzgerald",
+              "EM": false,
+              "F1": 0.0
+            }
+          ]
+        },
+        {
+          "task_id": "hotpotqa:5ae389fc5542992f92d8230f",
+          "question": "Which episode of season nine of The Simpsons was the last speaking role for Lionel Hutz?",
+          "references": [
+            "ninth"
+          ],
+          "all10_drafts": [
+            {
+              "round": 1,
+              "answer": "Lost Our Lisa",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 2,
+              "answer": "Realty Bites",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 3,
+              "answer": "Lost Our Lisa",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 4,
+              "answer": "Realty Bites",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 5,
+              "answer": "Lost Our Lisa",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 6,
+              "answer": "Realty Bites",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 7,
+              "answer": "Lost Our Lisa",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 8,
+              "answer": "Realty Bites",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 9,
+              "answer": "Lost Our Lisa",
+              "EM": false,
+              "F1": 0.0
+            },
+            {
+              "round": 10,
+              "answer": "Realty Bites",
+              "EM": false,
+              "F1": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "conclusions": [
+      "No measured answer-quality improvement from pointerhead training, additional generic revisions, stopping orretention onthissmallfreshpanel. All13policies10/20EMandF1.54; mainpairedEM/F1delta0withbootstrap[0,0] becausematchedper-questionanswerscoresunchanged. Thisdoesnotproveequivalence/generalization.",
+      "Trainedheadactuallyupdatedandcalibratedseparately; firstAUROC.38both, Brier/NLLslightlyworsepointestimates. Bothapprove10/20firstdrafts,only5EMcorrect,precision.5. Coveragecomplete20/20.",
+      "Atvisitedmax10bothcontrollersmean5.5drafts; cap3mean2.0. NoEMrepair/regressionobservedinanyof200writerrounds;18questionsidenticalrawanswersand2wrong-answerwordingvariants. Genericfeedbackproducednoadditionalcorrectcandidateforwrongfirstdrafts.",
+      "Replayedlogicaltokensandprefixsecondsarecounterfactualusage. Physical200writercalls/200nativeencodes/110CPUheadcallsperarmcountonce; derivedfixed/cap3/retentionaddnophysicalcall. No live end-to-endlatency/operationalcostsavingclaim.",
+      "ActualoptionalJevrunandmutableledgerareoutsidethisprimaryaudit/costscope; priorTRAIN90/historical591/baseline/CAL/secondarydevphysicalexpensesremainseparateandmustappearinthefinalreport."
+    ],
+    "limitations": [
+      "20preselectedpublicvalidationquestions; repeatedroundsarenotindependentN.",
+      "5000seed42questionbootstrapisdescriptive; identicaldifferencesgivezero-widthdeltaCIswithoutprovingequivalence.",
+      "EM isproxyansweragreement;noindependentsupport/completenesslabels,noannotationsrewritten.",
+      "Actualheadtensor/reloadandpre-CALcopyprovenancearehashverifiedrecordedevidence;noTorchtensorreload/modelinferenceinthisaudit.",
+      "Separatecurrentruntimecleanupverifiedbyruntimeagent/root;thisauditmakesnoGPUprobe/modelcall."
+    ],
+    "source_input_sha256": {
+      "<RESEARCH>\\FRESH20-INDEPENDENT-RAW-RECONSTRUCTION-20261018.json": "40604a55c7dff95d49377043d8fed755ff76dd4cba87c6fb67f0557e5f82b35a",
+      "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\plan.json": "d6b2b3c88f365048b32b003d3b58c3c0ae5217215c3e39a7530a633ae3a9fc03",
+      "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\campaign.json": "399b87fcc07152d93e4ef0c8accfd4dce3830fe3aff1c25f27bb0a7d01ce98e7",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-paired-analysis\\paired-analysis.json": "9a4e5114435c678402889aa56a60ee54c541ced084f892782b35c030aa187a53",
+      "<RUNTIME>\\fresh-N-freeze.json": "99f933742e984b15dc25bdca5de54d902a0a90d949e02790263f333bb2a21dea",
+      "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\campaign.json": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+      "<RUNTIME>\\fresh20-after-v8-training-control-calibration-qualification.json": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48",
+      "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+      "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+      "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+      "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\manifest.json": "8f829d8d2a896381032b906784c4334991dc4485d31ff6224510d86a04cb1c8a",
+      "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl.manifest.json": "f0998437e52d09b81ba502a5f0e17d0713b4ffd4a825a151e6dbaf63e3c985e3",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\manifest.json": "47cc1013840fbbde60bff7250815560dceb729fe5e2d89b6ca5775e7d405756e",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\manifest.json": "a7236e98f93dc91cbf339426807753fceb0ab28f4d6ff3863a0f57413e3f4e99",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\tasks-evaluator-only.json": "ad151baaadbdc0b7d88fe0e34befed126572dbf0c38691cce31048254c93af68",
+      "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\trajectories.json": "c426abe1be2d183eca88c8b61d4823992965eef4346dfa8dcc4cdb975a220ac9"
+    },
+    "no_model_API_calls": true,
+    "no_source_runtime_or_canonical_changes": true
+  }
+}

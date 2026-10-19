@@ -1,0 +1,59 @@
+{
+  "finished_study_date": "2026-10-18",
+  "export_as_of": "2026-10-18T21:53:41-05:00",
+  "primary_independent_questions": 20,
+  "writer_drafts_per_question": 10,
+  "primary_policies": 13,
+  "shared_fixed_controls_are_duplicated_across_three_exports": true,
+  "row_count_is_not_independent_sample_size": true,
+  "selected_training": {
+    "fit": 60,
+    "tune": 15,
+    "calibration": 15,
+    "candidate_optimizer_steps": 12,
+    "selected_checkpoint_optimizer_steps": 2
+  },
+  "historical_original_train600": {
+    "planned": 600,
+    "saved_trajectories": 590,
+    "completed_physical_calls": 591,
+    "completed_unsaved_calls": 1,
+    "never_dispatched": 9,
+    "original_fit_saved": 400,
+    "original_tune_saved": 100,
+    "original_calibration_saved": 90,
+    "input_tokens": 1052407,
+    "output_tokens": 5827,
+    "request_seconds": 383.055,
+    "count_physical_work_once": true,
+    "not_pooled_into_current_train90": true
+  },
+  "optional_jev": {
+    "physical_calls": 75,
+    "input_tokens": 163044,
+    "output_tokens": 1500,
+    "incremental_cost_usd": 0.006847848,
+    "cumulative_ledger_calls": 606,
+    "cumulative_ledger_usd": 0.054730032,
+    "reserved_or_unsettled": 0,
+    "new_writer_calls": 0,
+    "new_local_encoder_forwards": 0
+  },
+  "excluded_artifacts": [
+    "credentials",
+    "provider HTTP response bodies",
+    "raw paid request journals",
+    "SQLite budget ledger",
+    "large upstream base/adapter weights",
+    "feature vectors",
+    "machine-specific launch operators",
+    "private report provenance"
+  ],
+  "reproduction_limit": "This review bundle permits offline answer-score, row, cohort and hash verification. Full native rerun needs downloaded pinned models and newly reviewed local paths, deadlines, resource admission and runtime receipts. Original private evidence hashes remain distinct from sanitized export hashes.",
+  "included_selected_head": {
+    "relative_path": "checkpoints/selected-head/head.safetensors",
+    "sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+    "license": "Apache-2.0",
+    "trained_parameters": 3151360
+  }
+}

@@ -1,0 +1,1835 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/reviewed-campaign-plan-fresh20-after-v8-2130-v1.json",
+  "original_sha256": "d6b2b3c88f365048b32b003d3b58c3c0ae5217215c3e39a7530a633ae3a9fc03",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "status": "ADOPTED_FRESH20_ONLY_AFTER_ACTUAL_V8_AND_MEASURED_FORECAST",
+    "prepared_local": "2026-10-18T19:51:58.561324-05:00",
+    "working_directory": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source",
+    "proposed_run_dir": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018",
+    "evaluation_deadline": "2026-10-18T21:30:00-05:00",
+    "hard_deadline": "2026-10-18T21:40:00-05:00",
+    "report_deadline": "FINALIZE_AFTER_TESTING_PER_DIRECT_HUMAN_REPLY_NO_NEW_FIXED_DELIVERY_CLOCK",
+    "global_python": "<LOCAL_PATH>",
+    "torch_python": "<RUNTIME>\\.venv\\Scripts\\python.exe",
+    "gpu_lock": "<RUNTIME>\\gpu-owner.lock",
+    "prerequisites": {
+      "reviewed_pc_source": [
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\calibrate.py",
+          "sha256": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\campaign.py",
+          "sha256": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\compare.py",
+          "sha256": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\control.py",
+          "sha256": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\data.py",
+          "sha256": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\decider.py",
+          "sha256": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\evaluate.py",
+          "sha256": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\jev_replay.py",
+          "sha256": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\metrics.py",
+          "sha256": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\retention.py",
+          "sha256": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\runtime_setup.py",
+          "sha256": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\train_head.py",
+          "sha256": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\windows_job.py",
+          "sha256": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\writer_service.py",
+          "sha256": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands\\__init__.py",
+          "sha256": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20"
+        }
+      ],
+      "actual_v3_baseline_hashes_finalized": [
+        {
+          "path": "<RUNTIME>\\campaign-main-v3-baseline-20261018\\plan.json",
+          "sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-main-v3-baseline-20261018\\campaign.json",
+          "json_equals": {
+            "status": "completed",
+            "plan_sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb"
+          },
+          "sha256": "3f9509579b75aaecfc9bed159401a1658bc2e1638487aee3ace9d66b437f4d9c"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json",
+          "json_equals": {
+            "phase": "untuned_pretraining",
+            "attempted": 20,
+            "pending_requests": 0,
+            "uncertain_requests": 0,
+            "checkpoint_head_sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+            "planned_task_ids": [
+              "hotpotqa:5ab833ad5542990e739ec86f",
+              "hotpotqa:5abfc8675542993fe9a41e52",
+              "hotpotqa:5a74b4e555429929fddd84c2",
+              "hotpotqa:5ae6860e5542991bbc976112",
+              "hotpotqa:5adeb95d5542992fa25da827",
+              "hotpotqa:5abbcfaf5542993f40c73ba9",
+              "hotpotqa:5adf98215542993344016d19",
+              "hotpotqa:5ac240ef55429951e9e684ef",
+              "hotpotqa:5ac2db67554299657fa290a6",
+              "hotpotqa:5ae13b085542997b2ef7d146",
+              "hotpotqa:5a7b6e1d5542997c3ec9716e",
+              "hotpotqa:5a8f08c2554299458435d531",
+              "hotpotqa:5a84b7db5542991dd0999db0",
+              "hotpotqa:5ac4d2cd5542995c82c4ad73",
+              "hotpotqa:5a7b8d4955429927d897bfeb",
+              "hotpotqa:5a7d043755429909bec768f7",
+              "hotpotqa:5ab70f79554299110f219aa9",
+              "hotpotqa:5a8f0986554299458435d535",
+              "hotpotqa:5a825bb455429940e5e1a874",
+              "hotpotqa:5ae1388e5542997b2ef7d13a"
+            ],
+            "model.max_length": 4096
+          },
+          "json_in": {
+            "valid_decision_forwards": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "sha256": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\manifest.json",
+          "sha256": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+          "json_equals": {
+            "frozen.config.max_drafts": 1,
+            "frozen.config.phase": "untuned_pretraining",
+            "actual_evaluation_usage.unreconciled_requests": 0
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_errors"
+            ]
+          }
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\episodes.json",
+          "sha256": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c"
+        }
+      ],
+      "models_install_and_cuda_verified": [
+        {
+          "path": "<RUNTIME>\\download-status.json",
+          "json_equals": {
+            "state": "completed"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\install-status.json",
+          "json_equals": {
+            "state": "completed",
+            "source_commit": "930e6d5de16309be32579f5631a7369a3322140c"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\health.json",
+          "json_equals": {
+            "torch": "2.7.1+cu128",
+            "cuda_available": true,
+            "cuda_kernel_checks": "passed: float32 arithmetic and bf16 matmul; no model loaded",
+            "gpu_lease.held_during_probe": true,
+            "gpu_lease.released": true
+          }
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\LICENSE",
+          "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\config.json",
+          "sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\merges.txt",
+          "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\model.safetensors-00001-of-00001.safetensors",
+          "sha256": "928acbf11878c32185bbd863514d191769285065ab9ea14fbfe431303f5fdf2d"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\model.safetensors.index.json",
+          "sha256": "74d2ddfe79f10f35b27b498632f02b97b60dd9ec39b35d7c5a890c399284e319"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\preprocessor_config.json",
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\tokenizer.json",
+          "sha256": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\tokenizer_config.json",
+          "sha256": "e611fbccc7c29ef3b1cafb1cb7ea548d189968632901d678fd62be68c47885de"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\video_preprocessor_config.json",
+          "sha256": "d039cd7d88b3502a99edd455496b75b44ecf7dd3b3669748bafac37e6cecc085"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\vocab.json",
+          "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\LICENSE.md",
+          "sha256": "c0d777a0fed01cceb107d91f1aef96d51737be04f2ed75b1b933286a170d7411"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\chat_template.jinja",
+          "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\head.safetensors",
+          "sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\lora\\adapter_config.json",
+          "sha256": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\lora\\adapter_model.safetensors",
+          "sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\provenance.json",
+          "sha256": "8713fedb4e67fb6c60f41dc73c937635377506671e09978f92a2d447ac5264bd"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\strands_decider_config.json",
+          "sha256": "1d9625055e88c254d50089116992d08b0567286c9d6fcefb3c025922058ee65a"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\tokenizer.json",
+          "sha256": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\tokenizer_config.json",
+          "sha256": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\train_config.json",
+          "sha256": "85e5dbda4fb646a5182dc5c9895b653837592cf1e685d0c67fa2747c9d6cd649"
+        }
+      ],
+      "actual_v8_training_terminal_and_outputs": [
+        {
+          "path": "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json",
+          "sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\plan.json",
+          "sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\campaign.json",
+          "sha256": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+          "json_equals": {
+            "status": "completed",
+            "plan_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+            "stages.train90_writer1.status": "completed",
+            "stages.encode_fit.status": "completed",
+            "stages.encode_tune.status": "completed",
+            "stages.encode_calibration.status": "completed",
+            "stages.head_train.status": "completed",
+            "stages.copy_released_for_calibration.status": "completed",
+            "stages.calibration_logits_untuned.status": "completed",
+            "stages.fit_temperature_untuned.status": "completed",
+            "stages.calibration_logits_trained.status": "completed",
+            "stages.fit_temperature_trained.status": "completed"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\manifest.json",
+          "json_equals": {
+            "planned_questions": 90,
+            "completed_questions": 90,
+            "writer_unload_verified": true,
+            "actual_evaluation_usage.unreconciled_requests": 0,
+            "frozen.config.dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+            "frozen.config.max_drafts": 1,
+            "frozen.config.resource_profile.ram_gib": 7,
+            "frozen.config.resource_profile.vram_gib": 3,
+            "frozen.config.writer.digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+            "frozen.config.writer.serving_profile.OLLAMA_KV_CACHE_TYPE": "q8_0",
+            "frozen.config.writer.serving_profile.OLLAMA_FLASH_ATTENTION": "true",
+            "frozen.config.writer.serving_profile.LLAMA_ARG_CACHE_RAM": "0"
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_errors"
+            ]
+          },
+          "sha256": "49c5f38f8d4d3e35d9f78f9375393d572be621197ff921ca4448d45f3eacdf07"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\trajectories.json",
+          "sha256": "6c3ac227dceb460874ab5c95aa0d9a7dcb97caddf3c583971961c8f13b885058"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\requests.jsonl",
+          "sha256": "9762b5e4622b5502d6438975188985e72b14d5173b37258664afff76c573bca3"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\tasks-evaluator-only.json",
+          "sha256": "e62a9b75e5a09126a06265de5da38ba3c53a2eb1176031d598c6aa198bf70830"
+        },
+        {
+          "path": "<RUNTIME>\\writer-supervision\\train90-original-v7-fixed1-ram7-q8-flash\\supervisor.json",
+          "json_equals": {
+            "state": "completed",
+            "worker_exit_code": 0
+          },
+          "sha256": "807873f9c30ddd682a68163bf86faa5dab301188dcdfe895ce0256cc23c594f7"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl",
+          "sha256": "5114e7a544f5b529c7003335642aac42ab448924e2acdf10b54972e6eea316d7"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.manifest.json",
+          "json_equals": {
+            "unreconciled_inferences": 0,
+            "selected_questions": 60,
+            "frozen.partition": "fit",
+            "frozen.both_orders": false,
+            "frozen.all_rounds": false,
+            "frozen.max_length": 4096
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_overflows",
+              "completed_with_source_failures"
+            ]
+          },
+          "sha256": "cf16587e72e089ed8dc14cf0c6a68a45faacb7dbba2b9c030c7041caeb5e9960"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.events.jsonl",
+          "sha256": "ea9b8971f5304d7d9620b444675fc40d5081d907555ed949f45fd071e8c4912d"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl",
+          "sha256": "2de5a14988e6868ea471e7ebaefbcb35f2b220e62cda0358c30c0e478cd0fbcc"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.manifest.json",
+          "json_equals": {
+            "unreconciled_inferences": 0,
+            "selected_questions": 15,
+            "frozen.partition": "tune",
+            "frozen.both_orders": false,
+            "frozen.all_rounds": false,
+            "frozen.max_length": 4096
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_overflows",
+              "completed_with_source_failures"
+            ]
+          },
+          "sha256": "97e2a5150594deb759b9c5c6be017ee4405f9e6c57974b4a4a997becaf8fb6df"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.events.jsonl",
+          "sha256": "670609c24d7f3dd463599131ed4079dc0c16189f6a0e14200c20fcbafa66e7d7"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl",
+          "sha256": "426a66fb547ad5810901b8c89456467135158b5e3c99cf696446e683c7ac60cd"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.manifest.json",
+          "json_equals": {
+            "unreconciled_inferences": 0,
+            "selected_questions": 15,
+            "frozen.partition": "calibration",
+            "frozen.both_orders": false,
+            "frozen.all_rounds": false,
+            "frozen.max_length": 4096
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_overflows",
+              "completed_with_source_failures"
+            ]
+          },
+          "sha256": "ef18a9d82e75ef08bb681d5afb8673cd7d7d4ab8b5cfc42ed44d76e8c7df20fa"
+        },
+        {
+          "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.events.jsonl",
+          "sha256": "6375498919f30d546bca1f1068367041d64b96c796c15aad1475029f37cb70d2"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors",
+          "sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json",
+          "json_equals": {
+            "reload_verified": true,
+            "source_head_unchanged": true,
+            "source_adapter_unchanged": true,
+            "calibration_used": false,
+            "fresh100_used": false
+          },
+          "json_in": {
+            "status": [
+              "trained",
+              "trained_bounded_early_stop"
+            ]
+          },
+          "sha256": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors",
+          "sha256": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json",
+          "json_equals": {
+            "status": "untuned_control_copy",
+            "weights_updated": false
+          },
+          "sha256": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\manifest.json",
+          "json_equals": {
+            "actual_evaluation_usage.unreconciled_requests": 0,
+            "frozen.config.max_drafts": 1,
+            "frozen.config.phase": "development",
+            "frozen.task_ids": [
+              "hotpotqa:5ab614545542992aa134a41b",
+              "hotpotqa:5a810f7f55429926c1cdace0",
+              "hotpotqa:5a760ac2554299109176e62b",
+              "hotpotqa:5a84bca05542991dd0999dc4",
+              "hotpotqa:5ab9d6255542994dbf019859",
+              "hotpotqa:5adde7755542997dc790709f",
+              "hotpotqa:5ae7fda4554299321098400d",
+              "hotpotqa:5ab53f6b554299488d4d9921",
+              "hotpotqa:5ae2c2c6554299492dc91c62",
+              "hotpotqa:5a8673db554299211dda2b3d",
+              "hotpotqa:5ac393b855429939154137e7",
+              "hotpotqa:5abb12ca5542992ccd8e7efd",
+              "hotpotqa:5a7c08f45542996dd594b884",
+              "hotpotqa:5ae761685542995703ce8bff",
+              "hotpotqa:5ae77ed055429952e35ea949"
+            ]
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_errors"
+            ]
+          },
+          "sha256": "f080e9df3c7d777f2dec7b2021845bffbded120c09caffbb5d02e9f9a6e85b86"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\episodes.json",
+          "sha256": "96f791692f7d8d009776d54f2ced443a4038dd09830765bd4f71740b9bc127ae"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\summary.json",
+          "sha256": "c5dbde01d5a2a3070601aa1248872bd1a102b69c532573b2b7be57796d5e2c89"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl",
+          "sha256": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\tasks-evaluator-only.json",
+          "sha256": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\paired-comparisons.json",
+          "sha256": "0301ad4bfb03c7b300790ee79db3bf1153a481d40ba4650f56ece4c1a9e63b5e"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\common-schema-provenance.json",
+          "sha256": "10c71c4115116c4327dc6fab727a7ae35a026eb4e1ac3ecb58ecd57c0f17e907"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\first-draft-logits.jsonl",
+          "sha256": "1d1d177a061b517b31afaeee406310391ae9c0ddf4cd44efed34f9211bf4d9e4"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json",
+          "json_equals": {
+            "status": "fitted_on_calibration_only_not_test"
+          },
+          "sha256": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json",
+          "sha256": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json",
+          "sha256": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\manifest.json",
+          "json_equals": {
+            "actual_evaluation_usage.unreconciled_requests": 0,
+            "frozen.config.max_drafts": 1,
+            "frozen.config.phase": "development",
+            "frozen.task_ids": [
+              "hotpotqa:5ab614545542992aa134a41b",
+              "hotpotqa:5a810f7f55429926c1cdace0",
+              "hotpotqa:5a760ac2554299109176e62b",
+              "hotpotqa:5a84bca05542991dd0999dc4",
+              "hotpotqa:5ab9d6255542994dbf019859",
+              "hotpotqa:5adde7755542997dc790709f",
+              "hotpotqa:5ae7fda4554299321098400d",
+              "hotpotqa:5ab53f6b554299488d4d9921",
+              "hotpotqa:5ae2c2c6554299492dc91c62",
+              "hotpotqa:5a8673db554299211dda2b3d",
+              "hotpotqa:5ac393b855429939154137e7",
+              "hotpotqa:5abb12ca5542992ccd8e7efd",
+              "hotpotqa:5a7c08f45542996dd594b884",
+              "hotpotqa:5ae761685542995703ce8bff",
+              "hotpotqa:5ae77ed055429952e35ea949"
+            ]
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_errors"
+            ]
+          },
+          "sha256": "9f979775f0721c7b7b0797c79376b5170d10d5f8dc3ed37fea2be6e935449fe4"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\episodes.json",
+          "sha256": "ea325fc6da027ca7995d433ead144407bbbe974ac21b507ac89e4710080d112b"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\summary.json",
+          "sha256": "fc114fef6c3a170cd96b5d891a91ea8a3a1ea70aedb14b877a9ee07e0819ce8b"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl",
+          "sha256": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\tasks-evaluator-only.json",
+          "sha256": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\paired-comparisons.json",
+          "sha256": "be42b6f96316a600979c5cbb03b6791bf7dd6378f22eb91a8619ad84c5cc8632"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\common-schema-provenance.json",
+          "sha256": "1417658db790b556ca2a98169e453928b74af3f4b07b76a665e6f139bf689992"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\first-draft-logits.jsonl",
+          "sha256": "b67dc917e6cb968f9d3ac98d0e2a12cfc5efba815a36edb3f393ffba56c28609"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json",
+          "json_equals": {
+            "status": "fitted_on_calibration_only_not_test"
+          },
+          "sha256": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json",
+          "sha256": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json",
+          "sha256": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1"
+        },
+        {
+          "path": "<RUNTIME>\\training-only-train90-v8-cache-qualification.json",
+          "json_equals": {
+            "status": "qualified_original_train90_pilot",
+            "candidate_dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+            "planned_fit": 60,
+            "planned_tune": 15,
+            "planned_calibration": 15,
+            "minimum_valid_fit": 40,
+            "minimum_valid_tune": 10,
+            "minimum_valid_calibration": 10,
+            "minimum_counts_passed": true,
+            "both_label_classes_each_partition": true,
+            "all_selected_source_ids_reconciled": true,
+            "cache_file_event_failure_hashes_verified": true,
+            "question_group_disjoint_verified": true,
+            "no_outcome_based_replacement": true,
+            "unreconciled_inferences": 0
+          },
+          "sha256": "8415887e4b2cb3032abde5415185c687d309941bf7eb3f884305c29d501a6bf9"
+        }
+      ],
+      "actual_v8_control_and_calibration_qualified": {
+        "path": "<RUNTIME>\\fresh20-after-v8-training-control-calibration-qualification.json",
+        "json_equals": {
+          "status": "verified_untuned_tensor_control_and_matched_calibration",
+          "source_head_file_sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+          "source_adapter_file_sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+          "control_tensor_matches_training_initial": true,
+          "control_adapter_matches_released": true,
+          "trained_adapter_matches_released": true,
+          "source_head_and_adapter_unchanged": true,
+          "control_and_trained_calibration_question_ids_identical": true,
+          "calibration_question_ids_disjoint_fit_tune_baseline_fresh": true,
+          "calibration_unique_canonical_rows_and_labels_reconciled": true,
+          "calibration_logits_and_feature_headers_reconciled": true,
+          "calibration_input_and_output_hashes_verified": true,
+          "both_temperature_proofs_equal_saved_results": true,
+          "both_temperature_configs_match_proofs": true,
+          "same_temperature_objective_and_bounds": true,
+          "temperature_bounds": [
+            0.25,
+            6.0
+          ],
+          "calibration_head_file_bytes_unchanged": true,
+          "unreconciled_requests": 0,
+          "forecast_profile_matches_unchanged_runtime_per_request_head_rest": true,
+          "selected_fresh_n": 20,
+          "planned_calibration_questions": 15,
+          "calibration_CPU_head_score_requests_ceiling": 30,
+          "actual_training_campaign_plan_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+          "actual_v8_terminal_campaign_and_captured_stage_outputs_verified": true,
+          "actual_v8_plan_and_training_phase_inputs_bound": true,
+          "fresh_n_matches_original_pretraining_operator_decision": true,
+          "future_fresh_generation_or_scoring_started": false
+        },
+        "sha256": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12"
+      },
+      "fresh_only_operator_adopted_after_measured_forecast": {
+        "path": "<RUNTIME>\\fresh20-after-v8-2130-v1-operator-freeze.json",
+        "sha256": "41dbfe4b59ba87cca66681ca7ce9aa310ef7140321f59c26225a261d5ff95b75",
+        "json_equals": {
+          "status": "fresh20_only_after_v8_adopted_after_actual_training_and_calibration",
+          "scope": "fresh_only_no_training_or_calibration_work",
+          "actual_training_campaign_plan_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+          "actual_v8_terminal_completion_verified": true,
+          "training_control_calibration_qualification_verified": true,
+          "baseline_real_forward_and_final_hashes_verified": true,
+          "selection_basis": "measured_native_throughput_and_resources",
+          "fresh_scoring_started": false,
+          "selected_fresh_n": 20,
+          "fresh_n_selected_before_training_updates": true,
+          "max_drafts": 10,
+          "threshold": 0.8,
+          "model_work_cutoff": "2026-10-18T21:30:00-05:00",
+          "minimum_safety_margin_seconds": 900,
+          "conservative_fresh_only_critical_path_fits_before_cutoff_with_margin": true,
+          "forecast_protocol": "unchanged_cpu_head_per_request_rest_v1",
+          "cpu_head_min_rest_seconds": 5,
+          "fresh_CPU_head_score_requests_ceiling": 400,
+          "forecast_includes_all_fresh_CPU_head_compute_and_rest": true,
+          "forecast_includes_ALL_future_prelaunch_startup_cold_load_IO_audit_and_safety": true,
+          "current_resources_stable30s_RAM8_5GiB_VRAM9GiB": true,
+          "direct_human_2130_extension_verified": true,
+          "actual_secondary_development_terminal_weights_unchanged_verified": true,
+          "finalize_results_after_testing": true
+        }
+      },
+      "fresh_only_pre_dispatch_identity_verified": {
+        "path": "<RUNTIME>\\fresh20-after-v8-2130-v1-pre-dispatch-audit.json",
+        "json_equals": {
+          "status": "verified_fresh_only_final_plan_freeze_and_external_v8_identity",
+          "selected_fresh_n": 20,
+          "pretraining_selected_fresh_n": 20,
+          "max_drafts": 10,
+          "actual_final_fresh_plan_and_canonical_freeze_hashes_verified": true,
+          "actual_v8_training_plan_campaign_qualification_and_checkpoint_hashes_verified": true,
+          "actual_15_source_hashes_equal_training_and_fresh_snapshots": true,
+          "all_calibration_fit_tune_baseline_fresh_question_groups_disjoint": true,
+          "current_GPU_lease_private_port_and_owned_V8_processes_clear": true,
+          "no_fresh_generation_or_scoring_started": true,
+          "actual_remaining_forecast_still_fits_with900s_safety": true,
+          "direct_human_2130_extension_verified": true,
+          "actual_completed_secondary_development_clearance_verified": true,
+          "no_prior_fresh_dispatch_in_new_or_ancestor_output_paths": true
+        }
+      },
+      "direct_human_2130_testing_extension_approved": {
+        "path": "<RUNTIME>\\human-fresh-testing-extension-2130-20261018.json",
+        "sha256": "2ea197fcfad359be89ebda1835b02e8e24e623c37bde46f6b0a33e432539813c",
+        "json_equals": {
+          "status": "DIRECT_HUMAN_TESTING_DEADLINE_EXTENSION",
+          "testing_deadline": "2026-10-18T21:30:00-05:00",
+          "finalize_results_after_testing": true,
+          "earlier_testing_2000_and_final_delivery_2030_are_superseded_for_this_continuation": true
+        }
+      },
+      "actual_secondary_development_terminal_unchanged_weights": {
+        "path": "<RUNTIME>\\dev20-posttraining-v1-independent-terminal-audit.json",
+        "sha256": "2541e9d4a12d518c61353ec93eec2c1776f5a0d120b5e4f7987b538b5dbae583",
+        "json_equals": {
+          "status": "PASS_TERMINAL_DEVELOPMENT20_MATCHED_CALIBRATED_HEAD_DIAGNOSTICS_RUNTIME_CLEAR",
+          "all3_stages_completed_exit0": true,
+          "all15_source_files_unchanged": true,
+          "qualified_current_weights_configs_and_all_inputs_unchanged": true,
+          "no_retry_plan_source_weight_temperature_change": true
+        }
+      },
+      "actual_current_calibrated_checkpoint_bytes": [
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors",
+          "sha256": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json",
+          "sha256": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json",
+          "sha256": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json",
+          "sha256": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\lora\\adapter_model.safetensors",
+          "sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors",
+          "sha256": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json",
+          "sha256": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json",
+          "sha256": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json",
+          "sha256": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1"
+        },
+        {
+          "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\lora\\adapter_model.safetensors",
+          "sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+        }
+      ]
+    },
+    "steps": [],
+    "fresh_options": [
+      {
+        "n": 20,
+        "dataset": "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+        "status": "PROPOSED_NOT_ADOPTED_N20_fixed_prelearning_full10_after_actual_V8",
+        "steps": [
+          {
+            "id": "fresh20_writer10",
+            "argv": [
+              "<LOCAL_PATH>",
+              "-X",
+              "utf8",
+              "-B",
+              "-m",
+              "pc_strands.writer_service",
+              "--ollama",
+              "<PROJECT>\\runtime\\ollama-v0.32.15\\ollama.exe",
+              "--models",
+              "<PROJECT>\\runtime\\models",
+              "--repo",
+              "{source}",
+              "--supervision",
+              "<RUNTIME>\\writer-supervision\\campaign-fresh20-2130-v1-fixed10-ram7-q8-flash",
+              "--gpu-lock",
+              "<RUNTIME>\\gpu-owner.lock",
+              "--port",
+              "11435",
+              "--deadline",
+              "2026-10-18T21:30:00-05:00",
+              "--kv-cache-type",
+              "q8_0",
+              "--flash-attention",
+              "--",
+              "<LOCAL_PATH>",
+              "-m",
+              "pc_strands.evaluate",
+              "generate",
+              "--dataset",
+              "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+              "--output",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10",
+              "--max-drafts",
+              "10",
+              "--ollama-url",
+              "http://127.0.0.1:11435",
+              "--deadline",
+              "2026-10-18T21:30:00-05:00",
+              "--gpu-lock",
+              "<RUNTIME>\\gpu-owner.lock"
+            ],
+            "calls": true,
+            "requires": [
+              "direct_human_2130_testing_extension_approved",
+              "actual_secondary_development_terminal_unchanged_weights",
+              "actual_current_calibrated_checkpoint_bytes",
+              "reviewed_pc_source",
+              "actual_v3_baseline_hashes_finalized",
+              "models_install_and_cuda_verified",
+              "actual_v8_training_terminal_and_outputs",
+              "actual_v8_control_and_calibration_qualified",
+              "fresh_only_operator_adopted_after_measured_forecast",
+              "fresh_only_pre_dispatch_identity_verified"
+            ],
+            "outputs": [
+              {
+                "path": "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+                "sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\manifest.json",
+                "json_equals": {
+                  "planned_questions": 20,
+                  "completed_questions": 20,
+                  "writer_unload_verified": true,
+                  "actual_evaluation_usage.unreconciled_requests": 0
+                },
+                "json_in": {
+                  "status": [
+                    "completed",
+                    "completed_with_errors"
+                  ]
+                }
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\trajectories.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\requests.jsonl"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10\\tasks-evaluator-only.json"
+              },
+              {
+                "path": "<RUNTIME>\\writer-supervision\\campaign-fresh20-2130-v1-fixed10-ram7-q8-flash\\supervisor.json",
+                "json_equals": {
+                  "state": "completed",
+                  "worker_exit_code": 0
+                }
+              }
+            ]
+          },
+          {
+            "id": "fresh20_encode_allrounds",
+            "argv": [
+              "<RUNTIME>\\.venv\\Scripts\\python.exe",
+              "-m",
+              "pc_strands.decider",
+              "cache",
+              "--checkpoint",
+              "<RUNTIME>\\models\\decider",
+              "--base",
+              "<RUNTIME>\\models\\base",
+              "--trajectory-dir",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10",
+              "--output",
+              "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl",
+              "--canonical-order-only",
+              "--all-rounds",
+              "--deadline",
+              "2026-10-18T21:30:00-05:00",
+              "--gpu-lock",
+              "<RUNTIME>\\gpu-owner.lock",
+              "--device",
+              "cuda"
+            ],
+            "calls": true,
+            "requires": [
+              "fresh20_writer10"
+            ],
+            "outputs": [
+              {
+                "path": "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl"
+              },
+              {
+                "path": "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl.manifest.json",
+                "json_equals": {
+                  "unreconciled_inferences": 0,
+                  "selected_questions": 20,
+                  "frozen.all_rounds": true,
+                  "frozen.both_orders": false,
+                  "frozen.max_length": 4096
+                },
+                "json_in": {
+                  "status": [
+                    "completed",
+                    "completed_with_overflows",
+                    "completed_with_source_failures"
+                  ]
+                }
+              },
+              {
+                "path": "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl.events.jsonl"
+              }
+            ]
+          },
+          {
+            "id": "fresh20_head_untuned",
+            "argv": [
+              "<RUNTIME>\\.venv\\Scripts\\python.exe",
+              "-m",
+              "pc_strands.evaluate",
+              "head-replay",
+              "--dataset",
+              "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+              "--trajectory-dir",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10",
+              "--feature-cache",
+              "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl",
+              "--checkpoint-dir",
+              "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated",
+              "--output",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned",
+              "--max-drafts",
+              "10",
+              "--policy-name",
+              "strands-untuned",
+              "--phase",
+              "confirmation",
+              "--deadline",
+              "2026-10-18T21:30:00-05:00",
+              "--gpu-lock",
+              "<RUNTIME>\\gpu-owner.lock",
+              "--threshold",
+              "0.8"
+            ],
+            "calls": true,
+            "requires": [
+              "fresh20_encode_allrounds"
+            ],
+            "outputs": [
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\manifest.json",
+                "json_equals": {
+                  "actual_evaluation_usage.unreconciled_requests": 0
+                },
+                "json_in": {
+                  "status": [
+                    "completed",
+                    "completed_with_errors"
+                  ]
+                }
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\episodes.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\summary.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\requests.jsonl"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\tasks-evaluator-only.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\paired-comparisons.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\common-schema-provenance.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned\\first-draft-logits.jsonl"
+              }
+            ]
+          },
+          {
+            "id": "fresh20_head_trained",
+            "argv": [
+              "<RUNTIME>\\.venv\\Scripts\\python.exe",
+              "-m",
+              "pc_strands.evaluate",
+              "head-replay",
+              "--dataset",
+              "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+              "--trajectory-dir",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10",
+              "--feature-cache",
+              "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl",
+              "--checkpoint-dir",
+              "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained",
+              "--output",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained",
+              "--max-drafts",
+              "10",
+              "--policy-name",
+              "strands-trained",
+              "--phase",
+              "confirmation",
+              "--deadline",
+              "2026-10-18T21:30:00-05:00",
+              "--gpu-lock",
+              "<RUNTIME>\\gpu-owner.lock",
+              "--threshold",
+              "0.8"
+            ],
+            "calls": true,
+            "requires": [
+              "fresh20_head_untuned"
+            ],
+            "outputs": [
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\manifest.json",
+                "json_equals": {
+                  "actual_evaluation_usage.unreconciled_requests": 0
+                },
+                "json_in": {
+                  "status": [
+                    "completed",
+                    "completed_with_errors"
+                  ]
+                }
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\episodes.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\summary.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\requests.jsonl"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\tasks-evaluator-only.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\paired-comparisons.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\common-schema-provenance.json"
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained\\first-draft-logits.jsonl"
+              }
+            ]
+          },
+          {
+            "id": "fresh20_compare",
+            "calls": false,
+            "requires": [
+              "fresh20_head_trained"
+            ],
+            "argv": [
+              "<LOCAL_PATH>",
+              "-X",
+              "utf8",
+              "-B",
+              "-m",
+              "pc_strands.compare",
+              "--untuned",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-untuned",
+              "--tuned",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-trained",
+              "--trajectory-dir",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-fixed10",
+              "--feature-cache",
+              "<RUNTIME>\\feature-caches\\fresh20-2130-v1-allrounds.jsonl",
+              "--output",
+              "<RUNTIME>\\study-runs\\fresh20-2130-v1-paired-analysis",
+              "--retain-best"
+            ],
+            "outputs": [
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-paired-analysis\\paired-analysis.json",
+                "json_equals": {
+                  "status": "independently_joined_terminal_paired_replays",
+                  "planned_n": 20
+                }
+              },
+              {
+                "path": "<RUNTIME>\\study-runs\\fresh20-2130-v1-paired-analysis\\PAIRED-RESULTS.txt"
+              }
+            ]
+          }
+        ],
+        "dataset_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad"
+      }
+    ],
+    "operator_fresh_freeze_path": "<RUNTIME>\\fresh-N-freeze.json",
+    "reviewed_source_sha256": {
+      "calibrate.py": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8",
+      "campaign.py": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d",
+      "compare.py": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666",
+      "control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+      "data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+      "decider.py": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+      "evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+      "jev_replay.py": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6",
+      "metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+      "retention.py": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100",
+      "runtime_setup.py": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9",
+      "train_head.py": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7",
+      "windows_job.py": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651",
+      "writer_service.py": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd",
+      "__init__.py": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20"
+    },
+    "model_pins": {
+      "base_revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+      "decider_revision": "216d1ccb46a9e9b036eb9187b248db98480f77d4",
+      "upstream_source": "930e6d5de16309be32579f5631a7369a3322140c",
+      "required_model_file_count": 20,
+      "required_model_file_bytes": 4805702044,
+      "source_download_queue_sha256": "31fed1b9b6a93f7e141d84fd3bb55f4d46edaefe39be72ab20d20eeee8c49aec"
+    },
+    "resource_profile": {
+      "writer": "background-v2-ram7-q8_0",
+      "available_ram_gib": 7,
+      "free_vram_gib": 3,
+      "cpu_threads": 4,
+      "context_tokens": 16384,
+      "output_tokens": 512,
+      "kv_cache_type": "q8_0",
+      "flash_attention": true,
+      "host_prompt_cache_mib": 0,
+      "temperature": 0,
+      "seed": 42,
+      "think": false,
+      "duty_cycle": 0.5,
+      "minimum_idle_seconds": 5,
+      "strands_full_context_limit": 4096,
+      "overflow_policy": "No truncation; known failures retained in all-planned primary denominator"
+    },
+    "baseline_reuse": {
+      "run": "<RUNTIME>\\study-runs\\untuned-dev20-decisions",
+      "kind": "actual_original20_cap1_untuned_pretraining",
+      "actual_v3_plan_sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb",
+      "hashes": {
+        "baseline_receipt": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+        "baseline_manifest": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+        "baseline_episodes": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c",
+        "baseline_requests": "49e520400ef6bc5109024ebec8228d0072aef6d4a86e169b4a4850a0188dd7c9",
+        "baseline_independent_audit": "6d00a258167dbfc0e9a5088237337a07037594e47631dbcb1b93a46cdce8db6c"
+      },
+      "baseline_is_not_long_loop_repair_performance": true
+    },
+    "training_campaign_reference": {
+      "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018",
+      "final_plan_path": "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json",
+      "final_plan_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+      "terminal_campaign_sha256": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+      "role": "external_actual_training_owner_not_imported_stages",
+      "source_stage_ids": [
+        "train90_writer1",
+        "encode_fit",
+        "encode_tune",
+        "encode_calibration",
+        "head_train",
+        "copy_released_for_calibration",
+        "calibration_logits_untuned",
+        "fit_temperature_untuned",
+        "calibration_logits_trained",
+        "fit_temperature_trained"
+      ],
+      "training_output_paths_exact_V8": true,
+      "training_and_calibration_complete_now": true,
+      "completion_claim": "Actual terminal V8 and all10 captured stages independently qualified before this fresh-only decision."
+    },
+    "control_calibration_qualification": {
+      "status": "ACTUAL_TERMINAL_TRAINING_CONTROL_CALIBRATION_QUALIFIED_BEFORE_FRESH",
+      "must_exist_before": [
+        "fresh20_writer10"
+      ],
+      "how_verified": "Independent operator recomputes actual values and identities before writing the prerequisite. JSON booleans alone cannot perform cross-file equality, numeric minima or schema verification; no dummy receipt may release fresh work.",
+      "exact_tensor_equality": "released-calibrated/training-proof.json.head_tensor_sha256 == head-trained/training-proof.json.initial_head_tensor_sha256. Both hashes use the existing float32 tensor_value_hash implementation; actual nonempty values must match.",
+      "file_byte_policy": "The new control is reserialized, so its head.safetensors file SHA may differ from the released source. Record the actual copied file SHA; require each head file SHA unchanged by its temperature fit. Do not assert copied-file SHA == released-file SHA.",
+      "adapter_equality": "Hash both copied lora/adapter_model.safetensors files and released source; all three must equal ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7.",
+      "calibration_header_and_label_checks": "Both head-replay manifests must bind the same actual calibration feature data/manifest, trajectory and task snapshots, original calibration partition, max_drafts1, threshold0.8, same backend/source hashes. Each emitted logit row must be canonical, unique by question, labeled with the same strict-EM proxy and linked to its actual completed head score. Compare exact question ID/order/label sets; no score-based replacement or row cherry-picking.",
+      "calibration_proof_checks": "Each temperature-fit.json must equal its checkpoint calibration-proof.json; status fitted_on_calibration_only_not_test, calibration-question NLL objective and bounds[0.25,6.0]. The current head-file SHA must equal that fit checkpoint_head_sha256 and the pre-fit recorded head SHA. Config temperature and temperature_by_kind.noul must equal its own fitted temperature. Temperature values may differ between heads. Obtain pre-fit head hashes from the actual campaign copy_released_for_calibration/head_train output_sha256 receipts captured before calibration; a post-fit-only reading is not independent pre-fit evidence. All pre-fit byte captures come from actual V8 campaign rows, never fresh campaign imported/fake rows.",
+      "disjointness": "Both valid calibration ID/order/label sets must match within ALL15 original CALIBRATION planned IDs and be disjoint from FIT60/TUNE15/baseline20/fresh20. All planned failures stay recorded; minimum10 valid and both classes required, no replacement.",
+      "receipt_required_payload": [
+        "source_head_file_sha256",
+        "source_adapter_file_sha256",
+        "actual_control_head_file_sha256",
+        "actual_trained_head_file_sha256",
+        "control_head_tensor_sha256",
+        "training_initial_head_tensor_sha256",
+        "control_adapter_file_sha256",
+        "trained_adapter_file_sha256",
+        "actual_training_proof_sha256",
+        "actual_control_copy_proof_sha256",
+        "calibration_question_ids",
+        "calibration_valid_label_counts",
+        "calibration_feature_data_manifest_events_failures_sha256",
+        "untuned_and_trained_replay_manifest_episodes_journal_logits_sha256",
+        "untuned_and_trained_fit_proof_config_sha256",
+        "pre_fit_and_post_fit_head_file_sha256",
+        "audited_local_timestamp",
+        "selected_fresh_n",
+        "pretraining_operator_decision_sha256",
+        "actual_v8_training_plan_sha256",
+        "actual_v8_terminal_campaign_sha256",
+        "actual_v8_captured_output_sha256"
+      ],
+      "scope": "This gate adds no model call. It qualifies the actual untouched-weight comparator and matched calibration before held-out execution; it does not establish accuracy gain.",
+      "same_n_binding": "Recompute N20 in V8 pretraining decision, final fresh option, measured fresh-only adoption, canonical freeze and pre-dispatch audit; all identical. No N/depth/cohort revision based on training/fresh quality.",
+      "hash_cycle_policy": "Training/control/CAL qualification is completed first and binds immutable V8 plan/campaign/captured outputs/checkpoints, but not the future fresh plan/freeze. Final fresh plan pins that qualification and the separate measured-adoption receipt. Only then write canonical fresh-N-freeze binding the actual final fresh plan. An independently reviewed pre-dispatch audit binds plan+freeze+qualified V8 artifacts; it is not itself pinned inside the plan it hashes. Record its actual SHA in launch/audit/report receipts. No circular plan->receipt->same-plan hash requirement.",
+      "actual_receipt": {
+        "path": "<RUNTIME>\\fresh20-after-v8-training-control-calibration-qualification.json",
+        "sha256": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12",
+        "qualified_ancestor_scientific_contract_sha256": "f55472c8aaada37d2498ec7b1c65c04a8cec1a243e0ace320642ffc39358db07",
+        "scientific_reuse": "Actual immutableV8 source/head/adapter/tensor/CAL evidence remains unchanged; new child changes prospective run/outputpaths/deadline/operatorbindings, not model/input/metric/N/depth contract. Root must independently compare normalized five-stage scientific semantics before adoption."
+      },
+      "actual_qualification_sha256": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12"
+    },
+    "prelearning_n_selection": {
+      "selected_n": 20,
+      "selected_max_drafts": 10,
+      "v8_operator_path": "<RUNTIME>\\training-only-train90-v8-operator-freeze.json",
+      "v8_operator_sha256": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+      "fresh_dataset_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+      "scope": "Preserve original N20 cohort/full10 fixed before weight updates; later decision is whether execution fits, never a new quality-driven N choice."
+    },
+    "scientific_protocol": {
+      "planned_n": 20,
+      "all_planned_failures_and_missing_quality_zero": true,
+      "context_tokens_max": 4096,
+      "no_truncation_or_outcome_replacement": true,
+      "public_model_inputs": [
+        "question",
+        "evidence",
+        "draft"
+      ],
+      "overall_EM_correctness_question_only": true,
+      "threshold": 0.8,
+      "max_drafts": 10,
+      "fixed_prefix_controls": [
+        1,
+        2,
+        3,
+        5,
+        10
+      ],
+      "secondary_cap3": true,
+      "secondary_retain_best": true,
+      "shared_writer_and_encoder_features_once": true,
+      "calibrated_untuned_and_tuned_heads_same_calibration_protocol": true,
+      "question_paired_bootstrap_draws": 5000,
+      "bootstrap_seed": 42,
+      "physical_work_vs_counterfactual_prefix_separate": true,
+      "generic_trajectory_replay_not_live_feedback_repair": true
+    },
+    "fresh_only_forecast": {
+      "status": "MEASURED_TIMING_FORECAST_REVIEW_REQUIRED_NO_ADOPTION",
+      "actual_observed_timestamp": "2026-10-18T19:55:52.509459-05:00",
+      "selected_fresh_n": 20,
+      "max_drafts": 10,
+      "writer_states_ceiling": 200,
+      "native_encoder_states_ceiling": 200,
+      "fresh_CPU_head_score_requests_ceiling": 400,
+      "cpu_head_min_rest_seconds": 5,
+      "full_cap_CPU_head_rest_seconds": 2000,
+      "minimum_safety_margin_seconds": 900,
+      "W_seconds": 6.0,
+      "C_seconds": 0.06,
+      "component_seconds": {
+        "writer_200_requests_including_rest_at_W6": 1200.0,
+        "CPU_head_400_minimum5second_rests": 2000.0,
+        "writer_load_unload_and_cold_extra": 25.0,
+        "one_native_backend_startup_and_guard_rest": 50.0,
+        "one_native_cold_forward_extra_and_equal_duty_rest": 35.0,
+        "native_process_exit_overhead": 10.0,
+        "two_CPU_head_process_startups_and_feature_parse": 25.0,
+        "future_prelaunch_approval_binding_source_snapshot_resource_admission_crossaudit_dispatch": 160.0,
+        "terminal_comparison_hash_IO_independent_audit": 60.0,
+        "serialization_IO_residual": 20.0,
+        "nonfit_scheduling_contingency": 15.0,
+        "unchanged_safety_margin": 900.0,
+        "native_200_full4096_quadratic_stress_E1_16_duty2_4": 556.8,
+        "CPU_head_400_compute_C0_06": 24.0
+      },
+      "ALL_future_nonfit_seconds": 400.0,
+      "total_seconds": 5080.8,
+      "total_minutes": 84.68,
+      "remaining_prelaunch_dispatch_allowance_seconds": 160.0,
+      "testing_deadline": "2026-10-18T21:30:00-05:00",
+      "latest_conditional_adoption_time": "2026-10-18T20:05:19.200000-05:00",
+      "remaining_seconds_at_preparation": 5647.490541,
+      "arithmetic_route_fits_at_preparation": true,
+      "actual_resource_admission_and_current_dispatch_fit_not_asserted": true,
+      "basis": {
+        "historical_measured_forecast_path": "<RESEARCH>\\MEASURED-FRESH20-AFTER-V8-TIMING-FORECAST-20261018.json",
+        "historical_measured_forecast_sha256": "ee40d297ac09793471801d02d80efef4c827276763361f274355be44d1fdefa1",
+        "source": "Terminal TRAIN90 writer, three native caches and30CAL head timings; later20known-dev timings corroborate but do not set a fresh quality-dependent bound.",
+        "W_uncertainty": "6s includes5s rest and1.5xwarm89 p95 plusIO. First-draft timings do not guarantee future revision latency or foreground responsiveness.",
+        "E_uncertainty": "1.16s=ceil_to_.01(.51*(4096/2726)^2), where .51=ceil_to_.01(1.25*observed native warmmax.4016432). Explicit quadratic full4096 length projection; not a measured4096 benchmark, hard upper bound or guaranteed conservative bound. Native2.4duty/rest multiplier and900safety retained separately. New known-dev20 observedwarmmax.334443/max2522tokens does not reduce the stress projection.",
+        "C_uncertainty": ".06s=ceil_to_.01(10*actual CAL30+known-dev40 CPUrequest maximum .00506049999967). Fixedhead matrix dimensions remain constant; future scheduling can vary. All400possible scores each separately retain>=5srest.",
+        "nonfit": "400s=original270s itemization plus130s additional prospectiveprelaunch, so remaining_prelaunch_dispatch_allowance_seconds160 covers actualadoption-to-firstdispatch binding/sourcecopy/resourceadmission/crossaudit/dispatch withoutreset. Other originalstartup/cold/load/IO/audit components unchanged. Any uncounted delay/larger bound must be charged, never backdated or reset.",
+        "no_approval_inference": "Actual direct human21:30 receipt now exists and is pinned; this DATA proposal is still NOT adopted and is not a launch receipt."
+      },
+      "sensitivity": [
+        {
+          "E_seconds": 0.77,
+          "C_seconds": 0.06,
+          "basis": "Prior linear4096 projection, retained for transparent sensitivity only; NOT the chosen stress estimate.",
+          "total_seconds": 4893.6,
+          "latest_adoption_time": "2026-10-18T20:08:26.400000-05:00"
+        },
+        {
+          "E_seconds": 1.81,
+          "C_seconds": 0.06,
+          "basis": "Earlier higher provisional nativeestimate, not a new measurement; CPU updated consistently to.06.",
+          "total_seconds": 5392.8,
+          "latest_adoption_time": "2026-10-18T20:00:07.200000-05:00"
+        }
+      ],
+      "go_no_go": "Require independent current forecast/source/owner/qualified checkpoints audit and NEWstable30sRAM>=8.5GiB/freeVRAM>=9GiB, actualfreeOSGPUlease/private11435/ownedprocessclearance and all fresh output paths absent. Recompute time after all uncounted work; no backdating, retry, elapsed reset,N/depth/threshold/rest/reserve/safety changes. Larger actual bounds replace projections prospectively; no forced fit.",
+      "E_seconds_full4096_quadratic_projection": 1.16,
+      "actual_timing_receipts_sha256": {
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-untuned-calibrated\\requests.jsonl": "48ea7a385764ecfbe6a0fba975fe438213b9dfc07b995cc534e943ecfe4e3783",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-trained-calibrated\\requests.jsonl": "4a395937792ee709396dd090c6cb210d04aa93a349ef7480ec044e02490d92e4"
+      },
+      "observed_CPU_request_count": 70,
+      "observed_CPU_request_max_seconds": 0.0050604999996721745,
+      "actual_inputs_sha256": {
+        "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\campaign.json": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+        "<RESEARCH>\\CANDIDATE-FRESH20-ONLY-AFTER-V8-20261018.json": "f55472c8aaada37d2498ec7b1c65c04a8cec1a243e0ace320642ffc39358db07",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\plan.json": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\calibrate.py": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\campaign.py": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\compare.py": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\decider.py": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\jev_replay.py": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\retention.py": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\runtime_setup.py": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\train_head.py": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\windows_job.py": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\writer_service.py": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\__init__.py": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\manifest.json": "49c5f38f8d4d3e35d9f78f9375393d572be621197ff921ca4448d45f3eacdf07",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\trajectories.json": "6c3ac227dceb460874ab5c95aa0d9a7dcb97caddf3c583971961c8f13b885058",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\requests.jsonl": "9762b5e4622b5502d6438975188985e72b14d5173b37258664afff76c573bca3",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\tasks-evaluator-only.json": "e62a9b75e5a09126a06265de5da38ba3c53a2eb1176031d598c6aa198bf70830",
+        "<RUNTIME>\\writer-supervision\\train90-original-v7-fixed1-ram7-q8-flash\\supervisor.json": "807873f9c30ddd682a68163bf86faa5dab301188dcdfe895ce0256cc23c594f7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl": "5114e7a544f5b529c7003335642aac42ab448924e2acdf10b54972e6eea316d7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.manifest.json": "cf16587e72e089ed8dc14cf0c6a68a45faacb7dbba2b9c030c7041caeb5e9960",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.events.jsonl": "ea9b8971f5304d7d9620b444675fc40d5081d907555ed949f45fd071e8c4912d",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl": "2de5a14988e6868ea471e7ebaefbcb35f2b220e62cda0358c30c0e478cd0fbcc",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.manifest.json": "97e2a5150594deb759b9c5c6be017ee4405f9e6c57974b4a4a997becaf8fb6df",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.events.jsonl": "670609c24d7f3dd463599131ed4079dc0c16189f6a0e14200c20fcbafa66e7d7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl": "426a66fb547ad5810901b8c89456467135158b5e3c99cf696446e683c7ac60cd",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.manifest.json": "ef18a9d82e75ef08bb681d5afb8673cd7d7d4ab8b5cfc42ed44d76e8c7df20fa",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.events.jsonl": "6375498919f30d546bca1f1068367041d64b96c796c15aad1475029f37cb70d2",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\manifest.json": "f080e9df3c7d777f2dec7b2021845bffbded120c09caffbb5d02e9f9a6e85b86",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\episodes.json": "96f791692f7d8d009776d54f2ced443a4038dd09830765bd4f71740b9bc127ae",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\summary.json": "c5dbde01d5a2a3070601aa1248872bd1a102b69c532573b2b7be57796d5e2c89",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\tasks-evaluator-only.json": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\paired-comparisons.json": "0301ad4bfb03c7b300790ee79db3bf1153a481d40ba4650f56ece4c1a9e63b5e",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\common-schema-provenance.json": "10c71c4115116c4327dc6fab727a7ae35a026eb4e1ac3ecb58ecd57c0f17e907",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\first-draft-logits.jsonl": "1d1d177a061b517b31afaeee406310391ae9c0ddf4cd44efed34f9211bf4d9e4",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\manifest.json": "9f979775f0721c7b7b0797c79376b5170d10d5f8dc3ed37fea2be6e935449fe4",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\episodes.json": "ea325fc6da027ca7995d433ead144407bbbe974ac21b507ac89e4710080d112b",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\summary.json": "fc114fef6c3a170cd96b5d891a91ea8a3a1ea70aedb14b877a9ee07e0819ce8b",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\tasks-evaluator-only.json": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\paired-comparisons.json": "be42b6f96316a600979c5cbb03b6791bf7dd6378f22eb91a8619ad84c5cc8632",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\common-schema-provenance.json": "1417658db790b556ca2a98169e453928b74af3f4b07b76a665e6f139bf689992",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\first-draft-logits.jsonl": "b67dc917e6cb968f9d3ac98d0e2a12cfc5efba815a36edb3f393ffba56c28609",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+        "<RUNTIME>\\training-only-train90-v8-cache-qualification.json": "8415887e4b2cb3032abde5415185c687d309941bf7eb3f884305c29d501a6bf9",
+        "<RUNTIME>\\training-only-train90-v8-operator-freeze.json": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+        "<RUNTIME>\\fresh-freeze-history\\fresh-N-freeze-v5-before-v8-training.json": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a",
+        "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+        "<RESEARCH>\\candidate-train-original90-v7\\manifest.json": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+        "<RESEARCH>\\candidate-train-original90-v7\\CANDIDATE-VERIFICATION.json": "d56b079c0fd3a0c660d210de135ed724a021bdd186f4c568a880aa3b1f2e9a6f",
+        "<LOCAL_PATH>": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+        "<PROJECT>\\runtime\\ollama-v0.32.15\\ollama.exe": "0a9d42eabc59fdafde8d2d3e7964f6050b31a17b3e3795bfacb367c12df790f4",
+        "<RUNTIME>\\campaign-main-v3-baseline-20261018\\plan.json": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb",
+        "<RUNTIME>\\campaign-main-v3-baseline-20261018\\campaign.json": "3f9509579b75aaecfc9bed159401a1658bc2e1638487aee3ace9d66b437f4d9c",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\manifest.json": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\episodes.json": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\tasks-evaluator-only.json": "645c54385ea1ebcd7409565d7201b25f183e7bfb7669d075c8d7207f569f1bde",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\requests.jsonl": "49e520400ef6bc5109024ebec8228d0072aef6d4a86e169b4a4850a0188dd7c9",
+        "<PROJECT>\\testing\\preflight-2026-10-18\\hotpot_dev_distractor_v1.hf-rows-verified.json": "674e6c8b4e8c7e020ddd59b9b9b801966c663ae170d4e177a214b8c8c6439e7e",
+        "<RUNTIME>\\models\\decider\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\models\\decider\\head.safetensors": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\models\\decider\\strands_decider_config.json": "1d9625055e88c254d50089116992d08b0567286c9d6fcefb3c025922058ee65a",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\lora\\adapter_config.json": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\tokenizer.json": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\tokenizer_config.json": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\lora\\adapter_config.json": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\tokenizer.json": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\tokenizer_config.json": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+        "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+        "<RESEARCH>\\CANDIDATE-FRESH20-FULL10-AFTER-V8-2130-V2-20261018.json": "b57ea01f4f1efc4be1d5602f05f28766f473c7703ad43b98559b10dfd94bdb61",
+        "<RUNTIME>\\fresh20-after-v8-training-control-calibration-qualification.json": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12",
+        "<RUNTIME>\\human-fresh-testing-extension-2130-20261018.json": "2ea197fcfad359be89ebda1835b02e8e24e623c37bde46f6b0a33e432539813c",
+        "<RUNTIME>\\independent-fresh20-2130-v2-static-review-20261018.json": "aeb21a3cd0dd009cdd74a262b004be55351a239dea6f927ba475a0df8c106131",
+        "<RESEARCH>\\INDEPENDENT-FRESH20-2130-MEASURED-FEASIBILITY-20261018.json": "3cd3d97979089e9a71f4681039a191c1b2fab7df47bf9ed2aa0a0c3951d3e8da",
+        "<RUNTIME>\\operator-adopt-fresh-after-v8-2130-v1.py": "5579f05799cf2f9e4c50ef7cade75356036d6db94266951ff6f872c49f6918e0",
+        "<RUNTIME>\\operator-launch-fresh-after-v8-2130-v1.py": "9bdd70696a7d33a6f40254202176c4da71acf3a6d8672fc1a26ef533348885de",
+        "<RUNTIME>\\dev20-posttraining-v1-independent-terminal-audit.json": "2541e9d4a12d518c61353ec93eec2c1776f5a0d120b5e4f7987b538b5dbae583",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-untuned-calibrated\\requests.jsonl": "48ea7a385764ecfbe6a0fba975fe438213b9dfc07b995cc534e943ecfe4e3783",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-trained-calibrated\\requests.jsonl": "4a395937792ee709396dd090c6cb210d04aa93a349ef7480ec044e02490d92e4",
+        "<RUNTIME>\\operator-fresh-2130-guard-author-QA-v2.json": "4ef84bb8c7c2209599ef54a36a9d2c25b4d7e0a9cb51f66cfe66b460888d5979",
+        "<RUNTIME>\\independent-fresh20-2130-actual-forecast-review-20261018.json": "b94d39dcb2576621adab0632356915dcd9229cd266986d4accd461fca54f6025"
+      },
+      "model_work_cutoff": "2026-10-18T21:30:00-05:00",
+      "scope": "Prospective timing-only continuation; preserves prelearning20/full10/model/science. No fresh answers/probabilities/outcomes read; no model call, adoption or freeze by this data receipt.",
+      "canonical_alias_expected_to_change_at_actual_adoption": {
+        "historical_input_map_entries_omitted": {},
+        "historical_selection_bytes_preserved_at": "<RUNTIME>\\fresh-freeze-history\\fresh-N-freeze-v5-before-v8-training.json",
+        "reason": "Canonical alias will truthfully bind the NEW actual plan at adoption; original27f6 history and qualification receipt remain immutable."
+      },
+      "previous_unadopted_forecast": {
+        "path": "<RESEARCH>\\MEASURED-FRESH20-2130-V2-ACTUAL-FORECAST-20261018.json",
+        "sha256": "5006d5412e637a38b33e37eaf53ece1a331686c45b58b08d0cf51c0700e14d27",
+        "reason": "Prospective adoption helper had pre-copy source predicate corrected before any real adoption; final5579 helper +8 passing mocked guards now pinned. Recomputed time scalar at actual observation. No science, chosen runtime bounds or safety change."
+      },
+      "additional_same_record_sensitivity": {
+        "E_seconds": 1.26,
+        "total_seconds": 5128.8,
+        "latest_adoption_time": "2026-10-18T20:04:31.200000-05:00",
+        "basis": "Same slowest warm record has2610tokens rather than globalmaximum2726. .51*(4096/2610)^2 roundedup to.01 gives1.26. Transparent sensitivity, not a measured4096 benchmark. Chosen1.16 usesglobalmaximumcontext/maximumwarmtime; neither is a guarantee;900safety andold1.81sensitivity preserved."
+      }
+    },
+    "launch_contract": {
+      "status": "ADOPTED_ACTUAL_DATA_BOUND_FINAL_INDEPENDENT_PRE_DISPATCH_AUDIT_REQUIRED",
+      "argv": [
+        "<LOCAL_PATH>",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "pc_strands.campaign",
+        "--plan",
+        "<RUNTIME>\\reviewed-campaign-plan-fresh20-after-v8-2130-v1.json",
+        "--run-dir",
+        "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018",
+        "--fresh-freeze",
+        "<RUNTIME>\\fresh-N-freeze.json"
+      ],
+      "empty_base_steps": "The unchanged driver immediately waits at _fresh_gate, then queues only the five unchanged V7 fresh stage commands. Actual V8 stages remain external prerequisites, never imported into fresh campaign state.",
+      "freeze_contract": "At actual adoption preserve canonical old27f6d64c history bytes; create new actual canonical fresh-N-freeze binding final new plan. Carry N20/dataset selected before training; do not select again after development outcomes. Independent predispatch audit binds actualplan/source/operator/forecast/human/qualifiedV8/canonicalfreeze. No hashcycle or fake stage records.",
+      "approval_boundary": "Direct human21:30 testing extension and finalization-after-testing receipt pinned. Root independently reviews and adopts actualplan/operator/freeze/source before separate firstdispatch; DATA proposal performs none."
+    },
+    "report_interface_proposal": {
+      "status": "MAINTAINED_REPORT_TWO_OWNER_INTERFACE_IMPLEMENTED_REQUIRES_REAL_TERMINAL_FRESH_EVIDENCE",
+      "existing_fresh_argument": "--campaign-run <RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018",
+      "new_training_argument": "--training-campaign-run <RUNTIME>\\campaign-training-only-train90-v8-20261018",
+      "roles": "Derive TRAIN/head/FIT/TUNE/CAL/control-copy owner from V8 actual frozen plan and completed captured stages; derive fresh source/features/heads/comparison/freeze from actual fresh frozen plan. Require cross-plan checkpoint/source/model/dataset identities. No imported stage records, artifact aliases, missing-role defaults or copied proof files.",
+      "retain_proofs": "Keep exact pre-fit control-copy captured file hashes from the TRAIN owning campaign; actual tensor equality, sourcehead/adapter identity, original baseline, cache/event/failure provenance, calibration rows/config/weights, canonical quality reconstruction and all failure denominators remain mandatory.",
+      "physical_expense": "Preserve TRAIN90, historical591,originaldevwriter20,baseline20,CAL15+15,secondarydevnative20+CPU20+20 and futurefresh writer/encoder/head physical work once each; keep replayprefix usage separate. Refresh earlier partialPDF/site only with terminal audited outcomes. No previous report/site altered by this proposal."
+    },
+    "provenance": {
+      "v8_final_plan_path": "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json",
+      "v8_final_plan_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+      "v7_fresh_template_path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN90-FRESH20-V7-20261018.json",
+      "v7_fresh_template_sha256": "6c1272033617d6a130cff879ca6bf1895e22c23f498f2bfcc6cb4cd0665e99b6",
+      "five_fresh_commands_and_outputs_exactly_V7": false,
+      "only_first_step_dependencies_replaced_with_external_V8_gates": true,
+      "no_training_or_fresh_outcomes_read_for_selection": true,
+      "no_models_calls_jobs_source_or_active_plan_changes": true,
+      "parent_fresh_only_candidate_path": "<RESEARCH>\\CANDIDATE-FRESH20-ONLY-AFTER-V8-20261018.json",
+      "parent_fresh_only_candidate_sha256": "f55472c8aaada37d2498ec7b1c65c04a8cec1a243e0ace320642ffc39358db07",
+      "human_deadline_extension_path": "<RUNTIME>\\human-fresh-testing-extension-2130-20261018.json",
+      "human_deadline_extension_sha256": "2ea197fcfad359be89ebda1835b02e8e24e623c37bde46f6b0a33e432539813c",
+      "five_fresh_scientific_command_contracts_normalize_exact_parent": true,
+      "new_paths_deadlines_and_first_step_external_prerequisites_only": true,
+      "preparation_read_known_development_results_for_audit_not_fresh_selection": true,
+      "prospective_timing_parent_path": "<RESEARCH>\\CANDIDATE-FRESH20-FULL10-AFTER-V8-2130-V1-20261018.json",
+      "prospective_timing_parent_sha256": "1883b3cfd689e2c8482b94433a137ae996ff4d3acd8109c5166deb96e958277e",
+      "timing_revision_reason": "Actual70CPUmaximum requires same10xroundedC.06; explicitquadraticlengthprojectionE1.16 replaces earlierlinear.77. Future400s budgetnowitemizedold270+130prelaunch160; noquality/source/model/input/metric/N/depth change."
+    },
+    "prospective_operator_contract": {
+      "status": "DATA_ONLY_HANDOFF_NOT_IMPLEMENTED_OR_EXECUTED",
+      "future_plan_path": "<RUNTIME>\\reviewed-campaign-plan-fresh20-after-v8-2130-v1.json",
+      "future_run_path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018",
+      "future_source_path": "<RUNTIME>\\campaign-fresh20-after-v8-2130-v1-20261018\\source\\pc_strands",
+      "source_input_exact_actualV8_snapshot": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source",
+      "future_binding_receipt": "<RUNTIME>\\fresh20-after-v8-2130-v1-root-freeze-verification.json",
+      "future_named_freeze_copy": "<RUNTIME>\\fresh-N-freeze-after-v8-2130-v1.json",
+      "canonical_freeze_path": "<RUNTIME>\\fresh-N-freeze.json",
+      "canonical_old_sha256_must_preserve": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a",
+      "legacy_operators": "DO NOT RUN operator-adopt-fresh-after-v8.py or operator-launch-fresh-after-v8.py; both hardcode f554/oldpaths/cutoff and lack this new human/source/onceclaim contract. Parent must implement/review new version, source outside15, with separate explicit DATAadopt/firstlaunch modes.",
+      "required_checks": [
+        "Actual pinned humanreceipt direct reply; no new permission question needed.",
+        "All actualV8owner/baseline/qualifiedhead/CAL/data/source pins; compare fresh scientificsemantics exactly; old+newfreshoutputs/sidecars/supervision absent.",
+        "Current stable30s admission receipt pinned and fresh<=60s plus immediate resource snapshot; actual OS byte0 GPU/currentowned supervisor locks, privateport11435, ownedmodelprocess inventory clear; no userapp closure.",
+        "Fresh-N20 identity/history carried beforetraining; no newN/depth selection fromknown dev20 outcomes.",
+        "At actualDATAadoption materialize truthfuloperator, finalplan, zero-stageinitialize/source15 and newcanonicalfreeze preservingoldhistory. No stage records imported fromV8.",
+        "New independently reviewed actual predispatch audit binds plan/operator/forecast/source15/human/qualifiedV8/canonicalfreeze; no selfhash cycle.",
+        "Firstlaunch usesexclusive onceclaim/logs/receipt, hiddenBelowNormal supervisor with reviewedjob containment, noautomaticretry/uncertainresubmit; checkcurrentcompletebudget after measuredoperatorwork; preserveelapsed epoch,neverreset400.",
+        "21:30 newcalls cutoff;21:40ownedcleanup hardstop only. Finalize results aftertesting, peractualhumanreply; no invented newfinaldeliveryclock."
+      ],
+      "remaining_prelaunch_dispatch_allowance_seconds": 160.0,
+      "future_adopt_helper_path": "<RUNTIME>\\operator-adopt-fresh-after-v8-2130-v1.py",
+      "future_launch_helper_path": "<RUNTIME>\\operator-launch-fresh-after-v8-2130-v1.py",
+      "future_launch_receipt": "<RUNTIME>\\fresh20-after-v8-2130-v1-launch.json"
+    },
+    "adopted_at": "2026-10-18T19:56:54.129213-05:00",
+    "measured_forecast": {
+      "status": "MEASURED_TIMING_FORECAST_REVIEW_REQUIRED_NO_ADOPTION",
+      "actual_observed_timestamp": "2026-10-18T19:55:52.509459-05:00",
+      "selected_fresh_n": 20,
+      "max_drafts": 10,
+      "writer_states_ceiling": 200,
+      "native_encoder_states_ceiling": 200,
+      "fresh_CPU_head_score_requests_ceiling": 400,
+      "cpu_head_min_rest_seconds": 5,
+      "full_cap_CPU_head_rest_seconds": 2000,
+      "minimum_safety_margin_seconds": 900,
+      "W_seconds": 6.0,
+      "C_seconds": 0.06,
+      "component_seconds": {
+        "writer_200_requests_including_rest_at_W6": 1200.0,
+        "CPU_head_400_minimum5second_rests": 2000.0,
+        "writer_load_unload_and_cold_extra": 25.0,
+        "one_native_backend_startup_and_guard_rest": 50.0,
+        "one_native_cold_forward_extra_and_equal_duty_rest": 35.0,
+        "native_process_exit_overhead": 10.0,
+        "two_CPU_head_process_startups_and_feature_parse": 25.0,
+        "future_prelaunch_approval_binding_source_snapshot_resource_admission_crossaudit_dispatch": 160.0,
+        "terminal_comparison_hash_IO_independent_audit": 60.0,
+        "serialization_IO_residual": 20.0,
+        "nonfit_scheduling_contingency": 15.0,
+        "unchanged_safety_margin": 900.0,
+        "native_200_full4096_quadratic_stress_E1_16_duty2_4": 556.8,
+        "CPU_head_400_compute_C0_06": 24.0
+      },
+      "ALL_future_nonfit_seconds": 400.0,
+      "total_seconds": 5080.8,
+      "total_minutes": 84.68,
+      "remaining_prelaunch_dispatch_allowance_seconds": 160.0,
+      "testing_deadline": "2026-10-18T21:30:00-05:00",
+      "latest_conditional_adoption_time": "2026-10-18T20:05:19.200000-05:00",
+      "remaining_seconds_at_preparation": 5647.490541,
+      "arithmetic_route_fits_at_preparation": true,
+      "actual_resource_admission_and_current_dispatch_fit_not_asserted": true,
+      "basis": {
+        "historical_measured_forecast_path": "<RESEARCH>\\MEASURED-FRESH20-AFTER-V8-TIMING-FORECAST-20261018.json",
+        "historical_measured_forecast_sha256": "ee40d297ac09793471801d02d80efef4c827276763361f274355be44d1fdefa1",
+        "source": "Terminal TRAIN90 writer, three native caches and30CAL head timings; later20known-dev timings corroborate but do not set a fresh quality-dependent bound.",
+        "W_uncertainty": "6s includes5s rest and1.5xwarm89 p95 plusIO. First-draft timings do not guarantee future revision latency or foreground responsiveness.",
+        "E_uncertainty": "1.16s=ceil_to_.01(.51*(4096/2726)^2), where .51=ceil_to_.01(1.25*observed native warmmax.4016432). Explicit quadratic full4096 length projection; not a measured4096 benchmark, hard upper bound or guaranteed conservative bound. Native2.4duty/rest multiplier and900safety retained separately. New known-dev20 observedwarmmax.334443/max2522tokens does not reduce the stress projection.",
+        "C_uncertainty": ".06s=ceil_to_.01(10*actual CAL30+known-dev40 CPUrequest maximum .00506049999967). Fixedhead matrix dimensions remain constant; future scheduling can vary. All400possible scores each separately retain>=5srest.",
+        "nonfit": "400s=original270s itemization plus130s additional prospectiveprelaunch, so remaining_prelaunch_dispatch_allowance_seconds160 covers actualadoption-to-firstdispatch binding/sourcecopy/resourceadmission/crossaudit/dispatch withoutreset. Other originalstartup/cold/load/IO/audit components unchanged. Any uncounted delay/larger bound must be charged, never backdated or reset.",
+        "no_approval_inference": "Actual direct human21:30 receipt now exists and is pinned; this DATA proposal is still NOT adopted and is not a launch receipt."
+      },
+      "sensitivity": [
+        {
+          "E_seconds": 0.77,
+          "C_seconds": 0.06,
+          "basis": "Prior linear4096 projection, retained for transparent sensitivity only; NOT the chosen stress estimate.",
+          "total_seconds": 4893.6,
+          "latest_adoption_time": "2026-10-18T20:08:26.400000-05:00"
+        },
+        {
+          "E_seconds": 1.81,
+          "C_seconds": 0.06,
+          "basis": "Earlier higher provisional nativeestimate, not a new measurement; CPU updated consistently to.06.",
+          "total_seconds": 5392.8,
+          "latest_adoption_time": "2026-10-18T20:00:07.200000-05:00"
+        }
+      ],
+      "go_no_go": "Require independent current forecast/source/owner/qualified checkpoints audit and NEWstable30sRAM>=8.5GiB/freeVRAM>=9GiB, actualfreeOSGPUlease/private11435/ownedprocessclearance and all fresh output paths absent. Recompute time after all uncounted work; no backdating, retry, elapsed reset,N/depth/threshold/rest/reserve/safety changes. Larger actual bounds replace projections prospectively; no forced fit.",
+      "E_seconds_full4096_quadratic_projection": 1.16,
+      "actual_timing_receipts_sha256": {
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-untuned-calibrated\\requests.jsonl": "48ea7a385764ecfbe6a0fba975fe438213b9dfc07b995cc534e943ecfe4e3783",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-trained-calibrated\\requests.jsonl": "4a395937792ee709396dd090c6cb210d04aa93a349ef7480ec044e02490d92e4"
+      },
+      "observed_CPU_request_count": 70,
+      "observed_CPU_request_max_seconds": 0.0050604999996721745,
+      "actual_inputs_sha256": {
+        "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\campaign.json": "c4f4bba88cf866d368dc799b0ab4599190ae368c4a0068d42d038e984d6ade92",
+        "<RESEARCH>\\CANDIDATE-FRESH20-ONLY-AFTER-V8-20261018.json": "f55472c8aaada37d2498ec7b1c65c04a8cec1a243e0ace320642ffc39358db07",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\plan.json": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\calibrate.py": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\campaign.py": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\compare.py": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\decider.py": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\jev_replay.py": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\retention.py": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\runtime_setup.py": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\train_head.py": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\windows_job.py": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\writer_service.py": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\__init__.py": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\manifest.json": "49c5f38f8d4d3e35d9f78f9375393d572be621197ff921ca4448d45f3eacdf07",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\trajectories.json": "6c3ac227dceb460874ab5c95aa0d9a7dcb97caddf3c583971961c8f13b885058",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\requests.jsonl": "9762b5e4622b5502d6438975188985e72b14d5173b37258664afff76c573bca3",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\tasks-evaluator-only.json": "e62a9b75e5a09126a06265de5da38ba3c53a2eb1176031d598c6aa198bf70830",
+        "<RUNTIME>\\writer-supervision\\train90-original-v7-fixed1-ram7-q8-flash\\supervisor.json": "807873f9c30ddd682a68163bf86faa5dab301188dcdfe895ce0256cc23c594f7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl": "5114e7a544f5b529c7003335642aac42ab448924e2acdf10b54972e6eea316d7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.manifest.json": "cf16587e72e089ed8dc14cf0c6a68a45faacb7dbba2b9c030c7041caeb5e9960",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.events.jsonl": "ea9b8971f5304d7d9620b444675fc40d5081d907555ed949f45fd071e8c4912d",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl": "2de5a14988e6868ea471e7ebaefbcb35f2b220e62cda0358c30c0e478cd0fbcc",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.manifest.json": "97e2a5150594deb759b9c5c6be017ee4405f9e6c57974b4a4a997becaf8fb6df",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.events.jsonl": "670609c24d7f3dd463599131ed4079dc0c16189f6a0e14200c20fcbafa66e7d7",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl": "426a66fb547ad5810901b8c89456467135158b5e3c99cf696446e683c7ac60cd",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.manifest.json": "ef18a9d82e75ef08bb681d5afb8673cd7d7d4ab8b5cfc42ed44d76e8c7df20fa",
+        "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.events.jsonl": "6375498919f30d546bca1f1068367041d64b96c796c15aad1475029f37cb70d2",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json": "75c3cbd60aaa8c483538dc39a01ddda30769ef5bf92483a380fa157d19f3ca06",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json": "7c5b95e829e3d1831fc1583df3cf7c068d04f5ee45bb3d463d7b196556850d48",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\manifest.json": "f080e9df3c7d777f2dec7b2021845bffbded120c09caffbb5d02e9f9a6e85b86",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\episodes.json": "96f791692f7d8d009776d54f2ced443a4038dd09830765bd4f71740b9bc127ae",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\summary.json": "c5dbde01d5a2a3070601aa1248872bd1a102b69c532573b2b7be57796d5e2c89",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\tasks-evaluator-only.json": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\paired-comparisons.json": "0301ad4bfb03c7b300790ee79db3bf1153a481d40ba4650f56ece4c1a9e63b5e",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\common-schema-provenance.json": "10c71c4115116c4327dc6fab727a7ae35a026eb4e1ac3ecb58ecd57c0f17e907",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\first-draft-logits.jsonl": "1d1d177a061b517b31afaeee406310391ae9c0ddf4cd44efed34f9211bf4d9e4",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json": "6f96c63df175e9729032964738e4cc012b40c3aa225542c4483ad3e466325680",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\manifest.json": "9f979775f0721c7b7b0797c79376b5170d10d5f8dc3ed37fea2be6e935449fe4",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\episodes.json": "ea325fc6da027ca7995d433ead144407bbbe974ac21b507ac89e4710080d112b",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\summary.json": "fc114fef6c3a170cd96b5d891a91ea8a3a1ea70aedb14b877a9ee07e0819ce8b",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\tasks-evaluator-only.json": "d5b5f7a3092da4c6fe87d30c870ddb415f7e66288e5a5058aa02d6d4e92afac0",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\paired-comparisons.json": "be42b6f96316a600979c5cbb03b6791bf7dd6378f22eb91a8619ad84c5cc8632",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\common-schema-provenance.json": "1417658db790b556ca2a98169e453928b74af3f4b07b76a665e6f139bf689992",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\first-draft-logits.jsonl": "b67dc917e6cb968f9d3ac98d0e2a12cfc5efba815a36edb3f393ffba56c28609",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json": "4c183ff943831ab6c28d3e121cb37b2f1b37bda87e09f6cdf9a15b5b002cd07b",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+        "<RUNTIME>\\training-only-train90-v8-cache-qualification.json": "8415887e4b2cb3032abde5415185c687d309941bf7eb3f884305c29d501a6bf9",
+        "<RUNTIME>\\training-only-train90-v8-operator-freeze.json": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+        "<RUNTIME>\\fresh-freeze-history\\fresh-N-freeze-v5-before-v8-training.json": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a",
+        "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+        "<RESEARCH>\\candidate-train-original90-v7\\manifest.json": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+        "<RESEARCH>\\candidate-train-original90-v7\\CANDIDATE-VERIFICATION.json": "d56b079c0fd3a0c660d210de135ed724a021bdd186f4c568a880aa3b1f2e9a6f",
+        "<LOCAL_PATH>": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a",
+        "<PROJECT>\\runtime\\ollama-v0.32.15\\ollama.exe": "0a9d42eabc59fdafde8d2d3e7964f6050b31a17b3e3795bfacb367c12df790f4",
+        "<RUNTIME>\\campaign-main-v3-baseline-20261018\\plan.json": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb",
+        "<RUNTIME>\\campaign-main-v3-baseline-20261018\\campaign.json": "3f9509579b75aaecfc9bed159401a1658bc2e1638487aee3ace9d66b437f4d9c",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\manifest.json": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\episodes.json": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+        "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\source_snapshot\\metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\tasks-evaluator-only.json": "645c54385ea1ebcd7409565d7201b25f183e7bfb7669d075c8d7207f569f1bde",
+        "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\requests.jsonl": "49e520400ef6bc5109024ebec8228d0072aef6d4a86e169b4a4850a0188dd7c9",
+        "<PROJECT>\\testing\\preflight-2026-10-18\\hotpot_dev_distractor_v1.hf-rows-verified.json": "674e6c8b4e8c7e020ddd59b9b9b801966c663ae170d4e177a214b8c8c6439e7e",
+        "<RUNTIME>\\models\\decider\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\models\\decider\\head.safetensors": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\lora\\adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+        "<RUNTIME>\\models\\decider\\strands_decider_config.json": "1d9625055e88c254d50089116992d08b0567286c9d6fcefb3c025922058ee65a",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\lora\\adapter_config.json": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\tokenizer.json": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\tokenizer_config.json": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\lora\\adapter_config.json": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\tokenizer.json": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86",
+        "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\tokenizer_config.json": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45",
+        "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+        "<RESEARCH>\\CANDIDATE-FRESH20-FULL10-AFTER-V8-2130-V2-20261018.json": "b57ea01f4f1efc4be1d5602f05f28766f473c7703ad43b98559b10dfd94bdb61",
+        "<RUNTIME>\\fresh20-after-v8-training-control-calibration-qualification.json": "5ecc66f42f146e21a7e6945719cf40bd51cac589df1794d6c9d138fa3387cf12",
+        "<RUNTIME>\\human-fresh-testing-extension-2130-20261018.json": "2ea197fcfad359be89ebda1835b02e8e24e623c37bde46f6b0a33e432539813c",
+        "<RUNTIME>\\independent-fresh20-2130-v2-static-review-20261018.json": "aeb21a3cd0dd009cdd74a262b004be55351a239dea6f927ba475a0df8c106131",
+        "<RESEARCH>\\INDEPENDENT-FRESH20-2130-MEASURED-FEASIBILITY-20261018.json": "3cd3d97979089e9a71f4681039a191c1b2fab7df47bf9ed2aa0a0c3951d3e8da",
+        "<RUNTIME>\\operator-adopt-fresh-after-v8-2130-v1.py": "5579f05799cf2f9e4c50ef7cade75356036d6db94266951ff6f872c49f6918e0",
+        "<RUNTIME>\\operator-launch-fresh-after-v8-2130-v1.py": "9bdd70696a7d33a6f40254202176c4da71acf3a6d8672fc1a26ef533348885de",
+        "<RUNTIME>\\dev20-posttraining-v1-independent-terminal-audit.json": "2541e9d4a12d518c61353ec93eec2c1776f5a0d120b5e4f7987b538b5dbae583",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-untuned-calibrated\\requests.jsonl": "48ea7a385764ecfbe6a0fba975fe438213b9dfc07b995cc534e943ecfe4e3783",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-trained-calibrated\\requests.jsonl": "4a395937792ee709396dd090c6cb210d04aa93a349ef7480ec044e02490d92e4",
+        "<RUNTIME>\\operator-fresh-2130-guard-author-QA-v2.json": "4ef84bb8c7c2209599ef54a36a9d2c25b4d7e0a9cb51f66cfe66b460888d5979",
+        "<RUNTIME>\\independent-fresh20-2130-actual-forecast-review-20261018.json": "b94d39dcb2576621adab0632356915dcd9229cd266986d4accd461fca54f6025"
+      },
+      "model_work_cutoff": "2026-10-18T21:30:00-05:00",
+      "scope": "Prospective timing-only continuation; preserves prelearning20/full10/model/science. No fresh answers/probabilities/outcomes read; no model call, adoption or freeze by this data receipt.",
+      "canonical_alias_expected_to_change_at_actual_adoption": {
+        "historical_input_map_entries_omitted": {},
+        "historical_selection_bytes_preserved_at": "<RUNTIME>\\fresh-freeze-history\\fresh-N-freeze-v5-before-v8-training.json",
+        "reason": "Canonical alias will truthfully bind the NEW actual plan at adoption; original27f6 history and qualification receipt remain immutable."
+      },
+      "previous_unadopted_forecast": {
+        "path": "<RESEARCH>\\MEASURED-FRESH20-2130-V2-ACTUAL-FORECAST-20261018.json",
+        "sha256": "5006d5412e637a38b33e37eaf53ece1a331686c45b58b08d0cf51c0700e14d27",
+        "reason": "Prospective adoption helper had pre-copy source predicate corrected before any real adoption; final5579 helper +8 passing mocked guards now pinned. Recomputed time scalar at actual observation. No science, chosen runtime bounds or safety change."
+      },
+      "additional_same_record_sensitivity": {
+        "E_seconds": 1.26,
+        "total_seconds": 5128.8,
+        "latest_adoption_time": "2026-10-18T20:04:31.200000-05:00",
+        "basis": "Same slowest warm record has2610tokens rather than globalmaximum2726. .51*(4096/2610)^2 roundedup to.01 gives1.26. Transparent sensitivity, not a measured4096 benchmark. Chosen1.16 usesglobalmaximumcontext/maximumwarmtime; neither is a guarantee;900safety andold1.81sensitivity preserved."
+      }
+    },
+    "actual_operator_sha256": "41dbfe4b59ba87cca66681ca7ce9aa310ef7140321f59c26225a261d5ff95b75",
+    "fresh_only_forecast_history": {
+      "status": "PROPOSED_PROSPECTIVE_MEASURED_BASIS_REQUIRES_NEW_ACTUAL_REVIEW_NO_ADOPTION",
+      "actual_observed_timestamp": "2026-10-18T19:51:58.557316-05:00",
+      "selected_fresh_n": 20,
+      "max_drafts": 10,
+      "writer_states_ceiling": 200,
+      "native_encoder_states_ceiling": 200,
+      "fresh_CPU_head_score_requests_ceiling": 400,
+      "cpu_head_min_rest_seconds": 5,
+      "full_cap_CPU_head_rest_seconds": 2000,
+      "minimum_safety_margin_seconds": 900,
+      "W_seconds": 6.0,
+      "C_seconds": 0.06,
+      "component_seconds": {
+        "writer_200_requests_including_rest_at_W6": 1200.0,
+        "CPU_head_400_minimum5second_rests": 2000.0,
+        "writer_load_unload_and_cold_extra": 25.0,
+        "one_native_backend_startup_and_guard_rest": 50.0,
+        "one_native_cold_forward_extra_and_equal_duty_rest": 35.0,
+        "native_process_exit_overhead": 10.0,
+        "two_CPU_head_process_startups_and_feature_parse": 25.0,
+        "future_prelaunch_approval_binding_source_snapshot_resource_admission_crossaudit_dispatch": 160.0,
+        "terminal_comparison_hash_IO_independent_audit": 60.0,
+        "serialization_IO_residual": 20.0,
+        "nonfit_scheduling_contingency": 15.0,
+        "unchanged_safety_margin": 900.0,
+        "native_200_full4096_quadratic_stress_E1_16_duty2_4": 556.8,
+        "CPU_head_400_compute_C0_06": 24.0
+      },
+      "ALL_future_nonfit_seconds": 400.0,
+      "total_seconds": 5080.8,
+      "total_minutes": 84.68,
+      "remaining_prelaunch_dispatch_allowance_seconds": 160.0,
+      "testing_deadline": "2026-10-18T21:30:00-05:00",
+      "latest_conditional_adoption_time": "2026-10-18T20:05:19.200000-05:00",
+      "remaining_seconds_at_preparation": 5881.442684,
+      "arithmetic_route_fits_at_preparation": true,
+      "actual_resource_admission_and_current_dispatch_fit_not_asserted": true,
+      "basis": {
+        "historical_measured_forecast_path": "<RESEARCH>\\MEASURED-FRESH20-AFTER-V8-TIMING-FORECAST-20261018.json",
+        "historical_measured_forecast_sha256": "ee40d297ac09793471801d02d80efef4c827276763361f274355be44d1fdefa1",
+        "source": "Terminal TRAIN90 writer, three native caches and30CAL head timings; later20known-dev timings corroborate but do not set a fresh quality-dependent bound.",
+        "W_uncertainty": "6s includes5s rest and1.5xwarm89 p95 plusIO. First-draft timings do not guarantee future revision latency or foreground responsiveness.",
+        "E_uncertainty": "1.16s=ceil_to_.01(.51*(4096/2726)^2), where .51=ceil_to_.01(1.25*observed native warmmax.4016432). Explicit quadratic full4096 length projection; not a measured4096 benchmark, hard upper bound or guaranteed conservative bound. Native2.4duty/rest multiplier and900safety retained separately. New known-dev20 observedwarmmax.334443/max2522tokens does not reduce the stress projection.",
+        "C_uncertainty": ".06s=ceil_to_.01(10*actual CAL30+known-dev40 CPUrequest maximum .00506049999967). Fixedhead matrix dimensions remain constant; future scheduling can vary. All400possible scores each separately retain>=5srest.",
+        "nonfit": "400s=original270s itemization plus130s additional prospectiveprelaunch, so remaining_prelaunch_dispatch_allowance_seconds160 covers actualadoption-to-firstdispatch binding/sourcecopy/resourceadmission/crossaudit/dispatch withoutreset. Other originalstartup/cold/load/IO/audit components unchanged. Any uncounted delay/larger bound must be charged, never backdated or reset.",
+        "no_approval_inference": "Actual direct human21:30 receipt now exists and is pinned; this DATA proposal is still NOT adopted and is not a launch receipt."
+      },
+      "sensitivity": [
+        {
+          "E_seconds": 0.77,
+          "C_seconds": 0.06,
+          "basis": "Prior linear4096 projection, retained for transparent sensitivity only; NOT the chosen stress estimate.",
+          "total_seconds": 4893.6,
+          "latest_adoption_time": "2026-10-18T20:08:26.400000-05:00"
+        },
+        {
+          "E_seconds": 1.81,
+          "C_seconds": 0.06,
+          "basis": "Earlier higher provisional nativeestimate, not a new measurement; CPU updated consistently to.06.",
+          "total_seconds": 5392.8,
+          "latest_adoption_time": "2026-10-18T20:00:07.200000-05:00"
+        }
+      ],
+      "go_no_go": "Require independent current forecast/source/owner/qualified checkpoints audit and NEWstable30sRAM>=8.5GiB/freeVRAM>=9GiB, actualfreeOSGPUlease/private11435/ownedprocessclearance and all fresh output paths absent. Recompute time after all uncounted work; no backdating, retry, elapsed reset,N/depth/threshold/rest/reserve/safety changes. Larger actual bounds replace projections prospectively; no forced fit.",
+      "E_seconds_full4096_quadratic_projection": 1.16,
+      "actual_timing_receipts_sha256": {
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl": "84067dc90727514d0960d2f48b9ee5bece2f90b436df228e06ca775449b41898",
+        "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl": "ee6c747c0bf2ce045e52380a164ee6d241648f3ff0dcf0e0ba968b82c5f081bf",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-untuned-calibrated\\requests.jsonl": "48ea7a385764ecfbe6a0fba975fe438213b9dfc07b995cc534e943ecfe4e3783",
+        "<RUNTIME>\\study-runs\\dev20-posttraining-v1-trained-calibrated\\requests.jsonl": "4a395937792ee709396dd090c6cb210d04aa93a349ef7480ec044e02490d92e4"
+      },
+      "observed_CPU_request_count": 70,
+      "observed_CPU_request_max_seconds": 0.0050604999996721745
+    }
+  }
+}

@@ -1,4 +1,15 @@
-# HaltIQ: Jev as a critic
+# HaltIQ: Strands and Jev stopping-controller study
+
+**October 18 completed study:** [team handoff, approved reports, portable evidence and offline verification](results/strands-20261018/README.md).
+The untouched Strands baseline, genuine head fine-tuning, separate calibration and
+fresh20 × ten-draft comparison are complete. All 13 primary policies scored 50%
+answer EM / 0.54 token F1; optional Jev achieved the same answer scores with better
+first-decision ranking on this small panel. No answer-quality gain was observed.
+The implementation/protocol guide is [Docs/STRANDS_STUDY.md](Docs/STRANDS_STUDY.md).
+
+The remainder of this README preserves the **September 28 Jev prototype** and its
+historical setup/results. Its three-draft default, no-training scope and unrun-Jev
+statements apply to that earlier prototype, not the completed October 18 study.
 
 A working Python prototype for Yash and Vedanshi's Monday discussion: **can a typed Jev critic stop a writer's revision loop earlier without accepting more wrong answers?**
 

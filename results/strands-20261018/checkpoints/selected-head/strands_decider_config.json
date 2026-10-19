@@ -1,0 +1,36 @@
+{
+  "base_model": "Qwen/Qwen3.5-2B-Base",
+  "num_slots": 24,
+  "head_hidden": 0,
+  "head_dropout": 0.05,
+  "max_length": 4096,
+  "torch_dtype": "bfloat16",
+  "head_init": "random",
+  "kl_frozen_weight": 0.3,
+  "head_type": "pointer",
+  "pointer_dim": 768,
+  "temperature": 1.4266376751158028,
+  "temperature_by_kind": {
+    "noul": 1.4266376751158028
+  },
+  "ordinal_smoothing": 0.1,
+  "use_lora": true,
+  "lora_r": 48,
+  "lora_alpha": 96,
+  "lora_dropout": 0.05,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj",
+    "in_proj_qkv",
+    "in_proj_z",
+    "in_proj_a",
+    "in_proj_b",
+    "out_proj"
+  ],
+  "base_revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c"
+}

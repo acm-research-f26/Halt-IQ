@@ -1,0 +1,1433 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/reviewed-campaign-plan-v8-training-only-train90.json",
+  "original_sha256": "41cc0f836c76d65e554ad2b3ae6139e9c984a1cec946339586df43d29c841e65",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "status": "ADOPTED_TRAINING_ONLY_ORIGINAL_TRAIN90_AFTER_REAL_BASELINE",
+    "prepared_local": "2026-10-18T18:07:11.206272-05:00",
+    "working_directory": "<SOURCE>",
+    "proposed_run_dir": "<RUNTIME>\\campaign-training-only-train90-v8-20261018",
+    "evaluation_deadline": "2026-10-18T20:00:00-05:00",
+    "hard_deadline": "2026-10-18T20:10:00-05:00",
+    "report_deadline": "2026-10-18T20:30:00-05:00",
+    "global_python": "<LOCAL_PATH>",
+    "torch_python": "<RUNTIME>\\.venv\\Scripts\\python.exe",
+    "gpu_lock": "<RUNTIME>\\gpu-owner.lock",
+    "prerequisites": {
+      "reviewed_pc_source": [
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\__init__.py",
+          "sha256": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\calibrate.py",
+          "sha256": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\campaign.py",
+          "sha256": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\compare.py",
+          "sha256": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\control.py",
+          "sha256": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\data.py",
+          "sha256": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\decider.py",
+          "sha256": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\evaluate.py",
+          "sha256": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\jev_replay.py",
+          "sha256": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\metrics.py",
+          "sha256": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\retention.py",
+          "sha256": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\runtime_setup.py",
+          "sha256": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\train_head.py",
+          "sha256": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\windows_job.py",
+          "sha256": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-training-only-train90-v8-20261018\\source\\pc_strands\\writer_service.py",
+          "sha256": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd"
+        }
+      ],
+      "candidate_train90_verified": [
+        {
+          "path": "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl",
+          "sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff"
+        },
+        {
+          "path": "<RESEARCH>\\candidate-train-original90-v7\\manifest.json",
+          "sha256": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6"
+        },
+        {
+          "path": "<RESEARCH>\\candidate-train-original90-v7\\CANDIDATE-VERIFICATION.json",
+          "sha256": "d56b079c0fd3a0c660d210de135ed724a021bdd186f4c568a880aa3b1f2e9a6f",
+          "json_equals": {
+            "status": "CANDIDATE_DATA_VERIFIED_NOT_ADOPTED",
+            "all_rows_equal_original_parent_values": true,
+            "no_writer_or_model_call": true
+          }
+        },
+        {
+          "path": "<LOCAL_PATH>",
+          "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a"
+        },
+        {
+          "path": "<PROJECT>\\runtime\\ollama-v0.32.15\\ollama.exe",
+          "sha256": "0a9d42eabc59fdafde8d2d3e7964f6050b31a17b3e3795bfacb367c12df790f4"
+        }
+      ],
+      "actual_v3_baseline_hashes_finalized": [
+        {
+          "path": "<RUNTIME>\\campaign-main-v3-baseline-20261018\\plan.json",
+          "sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb"
+        },
+        {
+          "path": "<RUNTIME>\\campaign-main-v3-baseline-20261018\\campaign.json",
+          "json_equals": {
+            "status": "completed",
+            "plan_sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json",
+          "json_equals": {
+            "phase": "untuned_pretraining",
+            "attempted": 20,
+            "pending_requests": 0,
+            "uncertain_requests": 0,
+            "checkpoint_head_sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+            "planned_task_ids": [
+              "hotpotqa:5ab833ad5542990e739ec86f",
+              "hotpotqa:5abfc8675542993fe9a41e52",
+              "hotpotqa:5a74b4e555429929fddd84c2",
+              "hotpotqa:5ae6860e5542991bbc976112",
+              "hotpotqa:5adeb95d5542992fa25da827",
+              "hotpotqa:5abbcfaf5542993f40c73ba9",
+              "hotpotqa:5adf98215542993344016d19",
+              "hotpotqa:5ac240ef55429951e9e684ef",
+              "hotpotqa:5ac2db67554299657fa290a6",
+              "hotpotqa:5ae13b085542997b2ef7d146",
+              "hotpotqa:5a7b6e1d5542997c3ec9716e",
+              "hotpotqa:5a8f08c2554299458435d531",
+              "hotpotqa:5a84b7db5542991dd0999db0",
+              "hotpotqa:5ac4d2cd5542995c82c4ad73",
+              "hotpotqa:5a7b8d4955429927d897bfeb",
+              "hotpotqa:5a7d043755429909bec768f7",
+              "hotpotqa:5ab70f79554299110f219aa9",
+              "hotpotqa:5a8f0986554299458435d535",
+              "hotpotqa:5a825bb455429940e5e1a874",
+              "hotpotqa:5ae1388e5542997b2ef7d13a"
+            ],
+            "model.max_length": 4096
+          },
+          "json_in": {
+            "valid_decision_forwards": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "sha256": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8"
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\manifest.json",
+          "sha256": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+          "json_equals": {
+            "frozen.config.max_drafts": 1,
+            "frozen.config.phase": "untuned_pretraining",
+            "actual_evaluation_usage.unreconciled_requests": 0
+          },
+          "json_in": {
+            "status": [
+              "completed",
+              "completed_with_errors"
+            ]
+          }
+        },
+        {
+          "path": "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\episodes.json",
+          "sha256": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c"
+        }
+      ],
+      "models_install_and_cuda_verified": [
+        {
+          "path": "<RUNTIME>\\download-status.json",
+          "json_equals": {
+            "state": "completed"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\install-status.json",
+          "json_equals": {
+            "state": "completed",
+            "source_commit": "930e6d5de16309be32579f5631a7369a3322140c"
+          }
+        },
+        {
+          "path": "<RUNTIME>\\health.json",
+          "json_equals": {
+            "torch": "2.7.1+cu128",
+            "cuda_available": true,
+            "cuda_kernel_checks": "passed: float32 arithmetic and bf16 matmul; no model loaded",
+            "gpu_lease.held_during_probe": true,
+            "gpu_lease.released": true
+          }
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\LICENSE",
+          "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\config.json",
+          "sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\merges.txt",
+          "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\model.safetensors-00001-of-00001.safetensors",
+          "sha256": "928acbf11878c32185bbd863514d191769285065ab9ea14fbfe431303f5fdf2d"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\model.safetensors.index.json",
+          "sha256": "74d2ddfe79f10f35b27b498632f02b97b60dd9ec39b35d7c5a890c399284e319"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\preprocessor_config.json",
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\tokenizer.json",
+          "sha256": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\tokenizer_config.json",
+          "sha256": "e611fbccc7c29ef3b1cafb1cb7ea548d189968632901d678fd62be68c47885de"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\video_preprocessor_config.json",
+          "sha256": "d039cd7d88b3502a99edd455496b75b44ecf7dd3b3669748bafac37e6cecc085"
+        },
+        {
+          "path": "<RUNTIME>\\models\\base\\vocab.json",
+          "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\LICENSE.md",
+          "sha256": "c0d777a0fed01cceb107d91f1aef96d51737be04f2ed75b1b933286a170d7411"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\chat_template.jinja",
+          "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\head.safetensors",
+          "sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\lora\\adapter_config.json",
+          "sha256": "0ced130cefbad13b092425de87680347ce01d09c833cf8e3870e8156db18ffcc"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\lora\\adapter_model.safetensors",
+          "sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\provenance.json",
+          "sha256": "8713fedb4e67fb6c60f41dc73c937635377506671e09978f92a2d447ac5264bd"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\strands_decider_config.json",
+          "sha256": "1d9625055e88c254d50089116992d08b0567286c9d6fcefb3c025922058ee65a"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\tokenizer.json",
+          "sha256": "a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\tokenizer_config.json",
+          "sha256": "8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45"
+        },
+        {
+          "path": "<RUNTIME>\\models\\decider\\train_config.json",
+          "sha256": "85e5dbda4fb646a5182dc5c9895b653837592cf1e685d0c67fa2747c9d6cd649"
+        }
+      ],
+      "scientific_cache_qualification": {
+        "path": "<RUNTIME>\\training-only-train90-v8-cache-qualification.json",
+        "json_equals": {
+          "status": "qualified_original_train90_pilot",
+          "candidate_dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+          "planned_fit": 60,
+          "planned_tune": 15,
+          "planned_calibration": 15,
+          "minimum_valid_fit": 40,
+          "minimum_valid_tune": 10,
+          "minimum_valid_calibration": 10,
+          "minimum_counts_passed": true,
+          "both_label_classes_each_partition": true,
+          "all_selected_source_ids_reconciled": true,
+          "cache_file_event_failure_hashes_verified": true,
+          "question_group_disjoint_verified": true,
+          "no_outcome_based_replacement": true,
+          "unreconciled_inferences": 0
+        }
+      },
+      "training_only_protocol_adopted_after_measured_forecast": {
+        "path": "<RUNTIME>\\training-only-train90-v8-operator-freeze.json",
+        "sha256": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+        "json_equals": {
+          "status": "training_only_original_train90_adopted_after_real_baseline",
+          "candidate_dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+          "candidate_data_manifest_sha256": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+          "baseline_real_forward_and_final_hashes_verified": true,
+          "baseline_owned_runtime_released": true,
+          "selection_basis": "measured_native_throughput_and_resources",
+          "training_updates_started_before_decision": false,
+          "fresh_scoring_started": false,
+          "minimum_safety_margin_seconds": 900,
+          "model_work_cutoff": "2026-10-18T20:00:00-05:00",
+          "fresh_n_selected_before_training_updates": true,
+          "forecast_protocol": "training_only_cpu_head_per_request_rest_v1",
+          "cpu_head_min_rest_seconds": 5,
+          "calibration_CPU_head_score_requests_ceiling": 30,
+          "selected_fresh_n": 20,
+          "conservative_training_only_critical_path_fits_before_cutoff_with_margin": true,
+          "forecast_includes_all_training_calibration_CPU_head_rest": true,
+          "forecast_includes_training_CPU_head_compute_startup_calfit_IO_and_safety": true,
+          "scope": "training_only_no_fresh_generation_or_scoring",
+          "future_fresh_n_fixed_before_training_updates": true,
+          "future_fresh_n": 20,
+          "historical_full_route_N20_N50_N100_forecasts_recorded_not_current_fits": true,
+          "no_current_full_fresh_fit_claim": true
+        }
+      }
+    },
+    "steps": [
+      {
+        "id": "train90_writer1",
+        "requires": [
+          "reviewed_pc_source",
+          "candidate_train90_verified",
+          "actual_v3_baseline_hashes_finalized",
+          "training_only_protocol_adopted_after_measured_forecast",
+          "models_install_and_cuda_verified"
+        ],
+        "argv": [
+          "<LOCAL_PATH>",
+          "-X",
+          "utf8",
+          "-B",
+          "-m",
+          "pc_strands.writer_service",
+          "--ollama",
+          "<PROJECT>\\runtime\\ollama-v0.32.15\\ollama.exe",
+          "--models",
+          "<PROJECT>\\runtime\\models",
+          "--repo",
+          "{source}",
+          "--supervision",
+          "<RUNTIME>\\writer-supervision\\train90-original-v7-fixed1-ram7-q8-flash",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--port",
+          "11435",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--kv-cache-type",
+          "q8_0",
+          "--flash-attention",
+          "--",
+          "<LOCAL_PATH>",
+          "-m",
+          "pc_strands.evaluate",
+          "generate",
+          "--dataset",
+          "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl",
+          "--output",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--max-drafts",
+          "1",
+          "--ollama-url",
+          "http://127.0.0.1:11435",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\manifest.json",
+            "json_equals": {
+              "planned_questions": 90,
+              "completed_questions": 90,
+              "writer_unload_verified": true,
+              "actual_evaluation_usage.unreconciled_requests": 0,
+              "frozen.config.dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+              "frozen.config.max_drafts": 1,
+              "frozen.config.resource_profile.ram_gib": 7,
+              "frozen.config.resource_profile.vram_gib": 3,
+              "frozen.config.writer.digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+              "frozen.config.writer.serving_profile.OLLAMA_KV_CACHE_TYPE": "q8_0",
+              "frozen.config.writer.serving_profile.OLLAMA_FLASH_ATTENTION": "true",
+              "frozen.config.writer.serving_profile.LLAMA_ARG_CACHE_RAM": "0"
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_errors"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\trajectories.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\requests.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-fixed1\\tasks-evaluator-only.json"
+          },
+          {
+            "path": "<RUNTIME>\\writer-supervision\\train90-original-v7-fixed1-ram7-q8-flash\\supervisor.json",
+            "json_equals": {
+              "state": "completed",
+              "worker_exit_code": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "encode_fit",
+        "requires": [
+          "actual_v3_baseline_hashes_finalized",
+          "train90_writer1"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.decider",
+          "cache",
+          "--checkpoint",
+          "<RUNTIME>\\models\\decider",
+          "--base",
+          "<RUNTIME>\\models\\base",
+          "--trajectory-dir",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--output",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl",
+          "--canonical-order-only",
+          "--partition",
+          "fit",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--device",
+          "cuda"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.manifest.json",
+            "json_equals": {
+              "unreconciled_inferences": 0,
+              "selected_questions": 60,
+              "frozen.partition": "fit",
+              "frozen.both_orders": false,
+              "frozen.all_rounds": false,
+              "frozen.max_length": 4096
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_overflows",
+                "completed_with_source_failures"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl.events.jsonl"
+          }
+        ]
+      },
+      {
+        "id": "encode_tune",
+        "requires": [
+          "actual_v3_baseline_hashes_finalized",
+          "train90_writer1"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.decider",
+          "cache",
+          "--checkpoint",
+          "<RUNTIME>\\models\\decider",
+          "--base",
+          "<RUNTIME>\\models\\base",
+          "--trajectory-dir",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--output",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl",
+          "--canonical-order-only",
+          "--partition",
+          "tune",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--device",
+          "cuda"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.manifest.json",
+            "json_equals": {
+              "unreconciled_inferences": 0,
+              "selected_questions": 15,
+              "frozen.partition": "tune",
+              "frozen.both_orders": false,
+              "frozen.all_rounds": false,
+              "frozen.max_length": 4096
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_overflows",
+                "completed_with_source_failures"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl.events.jsonl"
+          }
+        ]
+      },
+      {
+        "id": "encode_calibration",
+        "requires": [
+          "actual_v3_baseline_hashes_finalized",
+          "train90_writer1"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.decider",
+          "cache",
+          "--checkpoint",
+          "<RUNTIME>\\models\\decider",
+          "--base",
+          "<RUNTIME>\\models\\base",
+          "--trajectory-dir",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--output",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl",
+          "--canonical-order-only",
+          "--partition",
+          "calibration",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--device",
+          "cuda"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.manifest.json",
+            "json_equals": {
+              "unreconciled_inferences": 0,
+              "selected_questions": 15,
+              "frozen.partition": "calibration",
+              "frozen.both_orders": false,
+              "frozen.all_rounds": false,
+              "frozen.max_length": 4096
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_overflows",
+                "completed_with_source_failures"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl.events.jsonl"
+          }
+        ]
+      },
+      {
+        "id": "head_train",
+        "requires": [
+          "actual_v3_baseline_hashes_finalized",
+          "encode_fit",
+          "encode_tune",
+          "encode_calibration",
+          "scientific_cache_qualification"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.train_head",
+          "--checkpoint",
+          "<RUNTIME>\\models\\decider",
+          "--fit-cache",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\fit.jsonl",
+          "--tune-cache",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\tune.jsonl",
+          "--output",
+          "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained",
+          "--baseline-receipt",
+          "<RUNTIME>\\study-runs\\untuned-dev20-decisions\\untuned-pretraining-receipt.json",
+          "--epochs",
+          "5",
+          "--max-seconds",
+          "120",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\training-proof.json",
+            "json_equals": {
+              "reload_verified": true,
+              "source_head_unchanged": true,
+              "source_adapter_unchanged": true,
+              "calibration_used": false,
+              "fresh100_used": false
+            },
+            "json_in": {
+              "status": [
+                "trained",
+                "trained_bounded_early_stop"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "copy_released_for_calibration",
+        "requires": [
+          "actual_v3_baseline_hashes_finalized"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-c",
+          "from pathlib import Path; import json; from pc_strands.train_head import copy_control_checkpoint; rows=[json.loads(x) for x in Path('<RESEARCH>\\\\candidate-train-original90-v7\\\\tasks.jsonl').read_text(encoding=\"utf-8\").splitlines()]; forbidden=[\"hotpotqa:\"+r[\"source_row\"][\"id\"] for r in rows if r[\"local_partition\"]!=\"calibration\"]; copy_control_checkpoint('<RUNTIME>\\\\models\\\\decider','<RUNTIME>\\\\checkpoints\\\\train90-original-v7\\\\released-calibrated',forbidden_question_ids=forbidden)"
+        ],
+        "calls": false,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\training-proof.json",
+            "json_equals": {
+              "status": "untuned_control_copy",
+              "weights_updated": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "calibration_logits_untuned",
+        "requires": [
+          "encode_calibration",
+          "copy_released_for_calibration"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.evaluate",
+          "head-replay",
+          "--dataset",
+          "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl",
+          "--trajectory-dir",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--feature-cache",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl",
+          "--checkpoint-dir",
+          "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated",
+          "--output",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned",
+          "--max-drafts",
+          "1",
+          "--policy-name",
+          "strands-untuned-calibration",
+          "--phase",
+          "development",
+          "--partition",
+          "calibration",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--threshold",
+          "0.8"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\manifest.json",
+            "json_equals": {
+              "actual_evaluation_usage.unreconciled_requests": 0,
+              "frozen.config.max_drafts": 1,
+              "frozen.config.phase": "development",
+              "frozen.task_ids": [
+                "hotpotqa:5ab614545542992aa134a41b",
+                "hotpotqa:5a810f7f55429926c1cdace0",
+                "hotpotqa:5a760ac2554299109176e62b",
+                "hotpotqa:5a84bca05542991dd0999dc4",
+                "hotpotqa:5ab9d6255542994dbf019859",
+                "hotpotqa:5adde7755542997dc790709f",
+                "hotpotqa:5ae7fda4554299321098400d",
+                "hotpotqa:5ab53f6b554299488d4d9921",
+                "hotpotqa:5ae2c2c6554299492dc91c62",
+                "hotpotqa:5a8673db554299211dda2b3d",
+                "hotpotqa:5ac393b855429939154137e7",
+                "hotpotqa:5abb12ca5542992ccd8e7efd",
+                "hotpotqa:5a7c08f45542996dd594b884",
+                "hotpotqa:5ae761685542995703ce8bff",
+                "hotpotqa:5ae77ed055429952e35ea949"
+              ]
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_errors"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\episodes.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\summary.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\requests.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\tasks-evaluator-only.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\paired-comparisons.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\common-schema-provenance.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\first-draft-logits.jsonl"
+          }
+        ]
+      },
+      {
+        "id": "fit_temperature_untuned",
+        "requires": [
+          "calibration_logits_untuned"
+        ],
+        "argv": [
+          "<LOCAL_PATH>",
+          "-m",
+          "pc_strands.calibrate",
+          "--rows",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\first-draft-logits.jsonl",
+          "--checkpoint",
+          "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated",
+          "--output",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json"
+        ],
+        "calls": false,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-untuned\\temperature-fit.json",
+            "json_equals": {
+              "status": "fitted_on_calibration_only_not_test"
+            }
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\calibration-proof.json"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\strands_decider_config.json"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\released-calibrated\\head.safetensors"
+          }
+        ]
+      },
+      {
+        "id": "calibration_logits_trained",
+        "requires": [
+          "encode_calibration",
+          "head_train"
+        ],
+        "argv": [
+          "<RUNTIME>\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pc_strands.evaluate",
+          "head-replay",
+          "--dataset",
+          "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl",
+          "--trajectory-dir",
+          "<RUNTIME>\\study-runs\\train90-original-v7-fixed1",
+          "--feature-cache",
+          "<RUNTIME>\\feature-caches\\train90-original-v7\\calibration.jsonl",
+          "--checkpoint-dir",
+          "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained",
+          "--output",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained",
+          "--max-drafts",
+          "1",
+          "--policy-name",
+          "strands-trained-calibration",
+          "--phase",
+          "development",
+          "--partition",
+          "calibration",
+          "--deadline",
+          "2026-10-18T20:00:00-05:00",
+          "--gpu-lock",
+          "<RUNTIME>\\gpu-owner.lock",
+          "--threshold",
+          "0.8"
+        ],
+        "calls": true,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\manifest.json",
+            "json_equals": {
+              "actual_evaluation_usage.unreconciled_requests": 0,
+              "frozen.config.max_drafts": 1,
+              "frozen.config.phase": "development",
+              "frozen.task_ids": [
+                "hotpotqa:5ab614545542992aa134a41b",
+                "hotpotqa:5a810f7f55429926c1cdace0",
+                "hotpotqa:5a760ac2554299109176e62b",
+                "hotpotqa:5a84bca05542991dd0999dc4",
+                "hotpotqa:5ab9d6255542994dbf019859",
+                "hotpotqa:5adde7755542997dc790709f",
+                "hotpotqa:5ae7fda4554299321098400d",
+                "hotpotqa:5ab53f6b554299488d4d9921",
+                "hotpotqa:5ae2c2c6554299492dc91c62",
+                "hotpotqa:5a8673db554299211dda2b3d",
+                "hotpotqa:5ac393b855429939154137e7",
+                "hotpotqa:5abb12ca5542992ccd8e7efd",
+                "hotpotqa:5a7c08f45542996dd594b884",
+                "hotpotqa:5ae761685542995703ce8bff",
+                "hotpotqa:5ae77ed055429952e35ea949"
+              ]
+            },
+            "json_in": {
+              "status": [
+                "completed",
+                "completed_with_errors"
+              ]
+            }
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\episodes.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\summary.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\requests.jsonl"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\tasks-evaluator-only.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\paired-comparisons.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\common-schema-provenance.json"
+          },
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\first-draft-logits.jsonl"
+          }
+        ]
+      },
+      {
+        "id": "fit_temperature_trained",
+        "requires": [
+          "calibration_logits_trained"
+        ],
+        "argv": [
+          "<LOCAL_PATH>",
+          "-m",
+          "pc_strands.calibrate",
+          "--rows",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\first-draft-logits.jsonl",
+          "--checkpoint",
+          "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained",
+          "--output",
+          "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json"
+        ],
+        "calls": false,
+        "outputs": [
+          {
+            "path": "<RUNTIME>\\study-runs\\train90-original-v7-calibration-trained\\temperature-fit.json",
+            "json_equals": {
+              "status": "fitted_on_calibration_only_not_test"
+            }
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\calibration-proof.json"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\strands_decider_config.json"
+          },
+          {
+            "path": "<RUNTIME>\\checkpoints\\train90-original-v7\\head-trained\\head.safetensors"
+          }
+        ]
+      }
+    ],
+    "fresh_options": [],
+    "operator_fresh_freeze_path": "<RUNTIME>\\fresh-N-freeze.json",
+    "reviewed_source_sha256": {
+      "calibrate.py": "12869bbc3da47b100f8966c88cec5ee9b56b6ac7d0c8bc848f62db49702c64c8",
+      "campaign.py": "fa928ae6467918793f9041953fb8c03fab7afb43d41a96d06c3f34cf8973025d",
+      "compare.py": "d18ad91edbfcead4bf01e644b0c0ce376c0b68a3a1ad07f56aff085f2a20f666",
+      "control.py": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+      "data.py": "32d8988a3644c180375c03d7d52b1a23f78f9cca8d153a0d08d11c2015444517",
+      "decider.py": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+      "evaluate.py": "f125da37e2322b1aeab0a91afed31ed3d799fef1c68d0877b5c3c01029672ee7",
+      "jev_replay.py": "2df3e7f4821b3147dc5b56ccc0f5e12bc4f11cfb3fd26568a2f9a5bd976aa8c6",
+      "metrics.py": "1e8d50644e99aa81eb056e416bf833f3baadee141d279d60edf4baee2c5699b1",
+      "retention.py": "c50371fc9309c9cbb3ffb5de7ed901d8a4788e64906ca2b006557a9b693c8100",
+      "runtime_setup.py": "4bccf6d50977438c97a257cc191492f336c23a866ee81a82474449f4356939a9",
+      "train_head.py": "fe1119de024da20f65d6f07d128a1e6462f6f09e7e590c3626aa3f07050288f7",
+      "windows_job.py": "526fceeaa2649ec3f213dd8d5ae428de1687f6ed957cb61c95eec8d659e44651",
+      "writer_service.py": "9e7f1155bb13bdb84e30fee5c06546e72d3d4def00a18579357e9e80f58316bd",
+      "__init__.py": "87f1356fdf9d9c1c2a561bb4db1c88ce8222cd4ff7bf5f5e489fb5fa4c107d20"
+    },
+    "model_pins": {
+      "base_revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+      "decider_revision": "216d1ccb46a9e9b036eb9187b248db98480f77d4",
+      "upstream_source": "930e6d5de16309be32579f5631a7369a3322140c",
+      "required_model_file_count": 20,
+      "required_model_file_bytes": 4805702044,
+      "source_download_queue_sha256": "31fed1b9b6a93f7e141d84fd3bb55f4d46edaefe39be72ab20d20eeee8c49aec"
+    },
+    "resource_profile": {
+      "writer": "background-v2-ram7-q8_0",
+      "available_ram_gib": 7,
+      "free_vram_gib": 3,
+      "cpu_threads": 4,
+      "context_tokens": 16384,
+      "output_tokens": 512,
+      "kv_cache_type": "q8_0",
+      "flash_attention": true,
+      "host_prompt_cache_mib": 0,
+      "temperature": 0,
+      "seed": 42,
+      "think": false,
+      "duty_cycle": 0.5,
+      "minimum_idle_seconds": 5,
+      "strands_full_context_limit": 4096,
+      "overflow_policy": "No truncation; known failures retained in all-planned primary denominator"
+    },
+    "training_source": {
+      "status": "PROPOSED_NOT_ADOPTED_training_only_blind90_NEW_actual_writer_required",
+      "dataset": "<RESEARCH>\\candidate-train-original90-v7\\tasks.jsonl",
+      "dataset_sha256": "1a789919c3d563999337109a4d5e97d5cb89dcadd042e1c825b66fcba59df1ff",
+      "manifest_sha256": "a7c7b064701640312fb27542d9e0a6326f3d8d8205820f50650a21d60dae09b6",
+      "planned_n": 90,
+      "fit": 60,
+      "tune": 15,
+      "calibration": 15,
+      "original_partitions_preserved": true,
+      "new_actual_writer_required": true,
+      "partial_original590_not_relabelled_or_imported": true
+    },
+    "baseline_reuse": {
+      "run": "<RUNTIME>\\study-runs\\untuned-dev20-decisions",
+      "kind": "actual_original20_cap1_untuned_pretraining",
+      "actual_v3_plan_sha256": "7bd5da1ac7a17faefa0987cfa97c77d20b39a8723cf0c5d816dfa14b3acc91bb",
+      "hashes": {
+        "baseline_receipt": "dbe44ea106b5c24790575a8994293a47ff96e739a6467373a16371a86b8aa6e8",
+        "baseline_manifest": "e7d09f8ce0adb4c9e2bc058062e62a7361ef487ebc0b573974ec4308a9b93f87",
+        "baseline_episodes": "f3a9c35f30c113e43301bbf7f30ac12b9149e361c1d6d0ffd645b84a6ea26a6c",
+        "baseline_requests": "49e520400ef6bc5109024ebec8228d0072aef6d4a86e169b4a4850a0188dd7c9",
+        "baseline_independent_audit": "6d00a258167dbfc0e9a5088237337a07037594e47631dbcb1b93a46cdce8db6c"
+      },
+      "baseline_is_not_long_loop_repair_performance": true
+    },
+    "source_pin_scope": "Same 15 immutable runtime source hashes and exact V7 base10 argv/output contracts. A new V8 campaign source snapshot requires separate adoption. Existing model/source/V5/V7 artifacts and original590 are preserved.",
+    "scientific_minima": {
+      "status": "PREDECLARED_PROPOSED_PILOT_LIMITED_PRECISION_NOT_POWER_GUARANTEE",
+      "planned": [
+        60,
+        15,
+        15
+      ],
+      "valid_unique_canonical_minimums": [
+        40,
+        10,
+        10
+      ],
+      "both_classes_each_partition": true,
+      "all_planned_failures_retained": true,
+      "replacement_after_failure": false,
+      "qualification": "Root must independently verify actual cache+event+failure source hashes/counts/class coverage and write truthful external qualification receipt; source JSON predicate alone cannot compute minima. No training starts without that receipt.",
+      "one_class_or_insufficient": "No-go/incomplete pilot; preserve evidence, do not borrow dev/fresh questions or filter outcomes."
+    },
+    "fresh_protocol": {
+      "status": "FUTURE_COMPARISON_ONLY_NOT_EXECUTABLE_IN_V8",
+      "selected_n_before_training_updates": 20,
+      "max_drafts": 10,
+      "threshold": 0.8,
+      "existing_prelearning_selection_provenance": {
+        "v4_operator_path": "<RUNTIME>\\downstream-train120-v4-operator-freeze.json",
+        "v4_operator_sha256": "8e84fe5d7348c5451a19e483d382e8d83f7f25b7a4c62535d785ac916d1527bb",
+        "v5_operator_path": "<RUNTIME>\\downstream-train120-v5-operator-freeze.json",
+        "v5_operator_sha256": "2b29f87a0517f70cffacd204533ecfaf55ae1ee768586f45f4e754c67d4e94fc",
+        "existing_unexecuted_fresh_freeze_sha256": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a"
+      },
+      "selection_basis": "N20 was fixed before any weight update in the original baseline/resource decision. Preserve that cohort and full10 depth. Earlier full-route fit forecasts are historical; they do not establish current feasibility.",
+      "future_dataset": "<RUNTIME>\\candidate-panels\\fresh20\\tasks.jsonl",
+      "future_dataset_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+      "future_required": "A separate reviewed fresh-only campaign requires a new actual remaining-time/resource forecast after genuine training and calibration. It may remain unrun. Its freeze binds the new final plan, actual sources/checkpoints and independently verified control/calibration equivalence before any held-out call.",
+      "quality_denominator": "All20includingfailures/missingquality0 if futurepairedstudyactuallyexecutes.",
+      "fixed_controls": [
+        1,
+        2,
+        3,
+        5,
+        10
+      ],
+      "cap3_parity": true,
+      "retain_best_predeclared": true,
+      "no_current_fresh_accuracy_or_gain_claim": true
+    },
+    "measurement": "This campaign creates actual TRAIN90 first drafts, real frozen feature caches, real CPU pointer-head weight updates and matched separate calibration. It performs zero held-out writer/encoder/head calls. Report weight-change/reload proof and physical expense as a partial milestone. Held-out accuracy, superiority, latency savings and full study completion remain unestablished.",
+    "calibration": {
+      "target": "One strict answer-EM correctness proxy; no three-rubric fabricated targets",
+      "bounds": [
+        0.25,
+        6.0
+      ],
+      "identical_untuned_and_tuned_protocol": true,
+      "released_noul_temperature": 1.0704394404346953,
+      "released_global_temperature": 1.0545210242263665,
+      "untuned_control_copy": "Tensor values must match released head; copied safetensors bytes may differ by serialization, so do not pin newly serialized copy to original file hash. Verify control proof/tensor hash against training original tensor hash and preserve actual copied file hash.",
+      "head_weights_unchanged_by_temperature_fit": true,
+      "planned_questions": 15
+    },
+    "historical_original600": {
+      "status": "interrupted_not_terminal_full600_input",
+      "actual_saved_questions": 590,
+      "physical_completed_requests": 591,
+      "unknown_usage_requests": 0,
+      "unreconciled_requests": 0,
+      "source_use": "Historical physical expense only; current CLI cannot read incomplete600 as a valid cache source."
+    },
+    "reviewfix_parent": {
+      "path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN120-FRESH20-V4-20261018.json",
+      "sha256": "71ed584566c255bbce4addea99013c93bc87e1a5f23aa13e052fa0af54d51343",
+      "status": "Original proposal preserved unchanged; no adoption, baseline hash replacement, source freeze or execution."
+    },
+    "control_calibration_qualification": {
+      "status": "FUTURE_SEPARATE_COMPARISON_OPERATOR_GATE_NOT_ACTIVE_IN_V8",
+      "actual_matched_calibration_proof_still_required": true,
+      "future_required_spec": {
+        "path": "<RUNTIME>\\downstream-train90-v7-control-calibration-qualification.json",
+        "json_equals": {
+          "status": "verified_untuned_tensor_control_and_matched_calibration",
+          "source_head_file_sha256": "ace56742545b505e6fae34ada85c8edbeedb23ba8974d8680aebe0380d6083a1",
+          "source_adapter_file_sha256": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+          "control_tensor_matches_training_initial": true,
+          "control_adapter_matches_released": true,
+          "trained_adapter_matches_released": true,
+          "source_head_and_adapter_unchanged": true,
+          "control_and_trained_calibration_question_ids_identical": true,
+          "calibration_question_ids_disjoint_fit_tune_baseline_fresh": true,
+          "calibration_unique_canonical_rows_and_labels_reconciled": true,
+          "calibration_logits_and_feature_headers_reconciled": true,
+          "calibration_input_and_output_hashes_verified": true,
+          "both_temperature_proofs_equal_saved_results": true,
+          "both_temperature_configs_match_proofs": true,
+          "same_temperature_objective_and_bounds": true,
+          "temperature_bounds": [
+            0.25,
+            6.0
+          ],
+          "calibration_head_file_bytes_unchanged": true,
+          "actual_final_plan_and_phase_inputs_bound": true,
+          "unreconciled_requests": 0,
+          "fresh_n_matches_pretraining_operator_decision_and_canonical_freeze": true,
+          "forecast_profile_matches_unchanged_runtime_per_request_head_rest": true,
+          "selected_fresh_n": 20,
+          "planned_calibration_questions": 15,
+          "calibration_CPU_head_score_requests_ceiling": 30
+        }
+      },
+      "future_verification_protocol": {
+        "status": "PROPOSED_OPERATOR_AUDIT_GATE_NOT_WRITTEN_NOT_ADOPTED",
+        "must_exist_before": [
+          "fresh20_writer10"
+        ],
+        "how_verified": "Independent operator recomputes actual values and identities before writing the prerequisite. JSON booleans alone cannot perform cross-file equality, numeric minima or schema verification; no dummy receipt may release fresh work.",
+        "exact_tensor_equality": "released-calibrated/training-proof.json.head_tensor_sha256 == head-trained/training-proof.json.initial_head_tensor_sha256. Both hashes use the existing float32 tensor_value_hash implementation; actual nonempty values must match.",
+        "file_byte_policy": "The new control is reserialized, so its head.safetensors file SHA may differ from the released source. Record the actual copied file SHA; require each head file SHA unchanged by its temperature fit. Do not assert copied-file SHA == released-file SHA.",
+        "adapter_equality": "Hash both copied lora/adapter_model.safetensors files and released source; all three must equal ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7.",
+        "calibration_header_and_label_checks": "Both head-replay manifests must bind the same actual calibration feature data/manifest, trajectory and task snapshots, original calibration partition, max_drafts1, threshold0.8, same backend/source hashes. Each emitted logit row must be canonical, unique by question, labeled with the same strict-EM proxy and linked to its actual completed head score. Compare exact question ID/order/label sets; no score-based replacement or row cherry-picking.",
+        "calibration_proof_checks": "Each temperature-fit.json must equal its checkpoint calibration-proof.json; status fitted_on_calibration_only_not_test, calibration-question NLL objective and bounds[0.25,6.0]. The current head-file SHA must equal that fit checkpoint_head_sha256 and the pre-fit recorded head SHA. Config temperature and temperature_by_kind.noul must equal its own fitted temperature. Temperature values may differ between heads. Obtain pre-fit head hashes from the actual campaign copy_released_for_calibration/head_train output_sha256 receipts captured before calibration; a post-fit-only reading is not independent pre-fit evidence.",
+        "disjointness": "Both valid calibration ID/order/label sets must match within ALL15 original CALIBRATION planned IDs and be disjoint from FIT60/TUNE15/baseline20/fresh20. All planned failures stay recorded; minimum10 valid and both classes required, no replacement.",
+        "receipt_required_payload": [
+          "actual_final_plan_sha256",
+          "source_head_file_sha256",
+          "source_adapter_file_sha256",
+          "actual_control_head_file_sha256",
+          "actual_trained_head_file_sha256",
+          "control_head_tensor_sha256",
+          "training_initial_head_tensor_sha256",
+          "control_adapter_file_sha256",
+          "trained_adapter_file_sha256",
+          "actual_training_proof_sha256",
+          "actual_control_copy_proof_sha256",
+          "calibration_question_ids",
+          "calibration_valid_label_counts",
+          "calibration_feature_data_manifest_events_failures_sha256",
+          "untuned_and_trained_replay_manifest_episodes_journal_logits_sha256",
+          "untuned_and_trained_fit_proof_config_sha256",
+          "pre_fit_and_post_fit_head_file_sha256",
+          "audited_local_timestamp",
+          "selected_fresh_n",
+          "pretraining_operator_decision_sha256",
+          "canonical_fresh_freeze_sha256"
+        ],
+        "scope": "This gate adds no model call. It qualifies the actual untouched-weight comparator and matched calibration before held-out execution; it does not establish accuracy gain.",
+        "same_n_binding": "Rehash the actual pre-training operator decision receipt and actual canonical fresh-N-freeze.json; both selectedN values must match the selected final-plan option. No post-training N revision based on quality."
+      },
+      "scope": "V8temperaturefitting alone does not release heldoutwork. Future operator verifies actual tensors/head/adapter bytes, calibration identities/labels/logitjournals/disjointness/proofs/configs against future finalplan and originalN20decision before a separate fresh-only campaign."
+    },
+    "launch_contract": {
+      "status": "ADOPTED_REQUIRES_INDEPENDENT_FINAL_AUDIT_AND_CURRENT_DISPATCH_RESOURCE_CHECK",
+      "argv": [
+        "<LOCAL_PATH>",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "pc_strands.campaign",
+        "--plan",
+        "<RUNTIME>\\reviewed-campaign-plan-v8-training-only-train90.json",
+        "--run-dir",
+        "<RUNTIME>\\campaign-training-only-train90-v8-20261018"
+      ],
+      "semantics": "The explicit empty fresh_options list makes the unchanged driver execute exactly the ten base stages. It never queues its fresh gate. It does not read or change the existing canonical fresh freeze.",
+      "must_precede_launch": [
+        "ActualcurrentRAM8.5GiBandfreeVRAM9GiBstable30seconds; unchanged runtime7GiB/3GiBfloors.",
+        "Newtruthfultraining-onlyoperatorJSONandhashboundfinalplan; everyactualpredicateverifiedusingunchangedcampaign.condition.",
+        "Currentremaining2580.46secondsorupdatedtruthfultraining-onlyroutebudgetfits20:00whilepreserving900safety.",
+        "Newsourcefreezeall15hashesverified; priorV4/V5waitersnotrunning; realGPUlease/11435clear."
+      ],
+      "never_precreate_pause_in_empty_new_run": "Initialize rejects any non-campaign.lock entry; use unchangeddata-onlyinitializeandfrozenhashverificationorstartnormally, no inferredmodelsuccessfrominitialization."
+    },
+    "report_mapping_notes": {
+      "status": "REQUIRED_BEFORE_FINAL_REPORT_QUALITY_NOT_A_MODEL_SOURCE_CHANGE",
+      "existing_builder": "tools/build_strands_report.py currently expects canonical role paths and rejects/omits incomplete proof; do not weaken its gates.",
+      "paths": [
+        {
+          "role": "trained_checkpoint",
+          "current_builder_relative_path": "checkpoints/head-trained",
+          "proposed_v4_relative_path": "checkpoints/train90-original-v7/head-trained"
+        },
+        {
+          "role": "released_calibrated_checkpoint",
+          "current_builder_relative_path": "checkpoints/released-calibrated",
+          "proposed_v4_relative_path": "checkpoints/train90-original-v7/released-calibrated"
+        },
+        {
+          "role": "TRAIN_feature_caches",
+          "current_builder_relative_path": "feature-caches/{fit,tune,calibration}.jsonl",
+          "proposed_v4_relative_path": "feature-caches/train90-original-v7/{fit,tune,calibration}.jsonl"
+        },
+        {
+          "role": "calibration_replay_and_fit",
+          "current_builder_relative_path": "study-runs/calibration-{untuned,trained}",
+          "proposed_v4_relative_path": "study-runs/train90-original-v7-calibration-{untuned,trained}"
+        },
+        {
+          "role": "fresh_writer",
+          "current_builder_relative_path": "study-runs/fresh{N}-fixed10",
+          "proposed_v4_relative_path": "study-runs/fresh{N}-v4-fixed10"
+        },
+        {
+          "role": "fresh_untuned_head",
+          "current_builder_relative_path": "study-runs/fresh{N}-untuned",
+          "proposed_v4_relative_path": "study-runs/fresh{N}-v4-untuned"
+        },
+        {
+          "role": "fresh_trained_head",
+          "current_builder_relative_path": "study-runs/fresh{N}-trained",
+          "proposed_v4_relative_path": "study-runs/fresh{N}-v4-trained"
+        },
+        {
+          "role": "fresh_paired_analysis",
+          "current_builder_relative_path": "study-runs/fresh{N}-paired-analysis",
+          "proposed_v4_relative_path": "study-runs/fresh{N}-v4-paired-analysis"
+        },
+        {
+          "role": "fresh_encoder_features",
+          "current_builder_relative_path": "feature-caches/fresh{N}-allrounds.jsonl",
+          "proposed_v4_relative_path": "feature-caches/fresh{N}-v4-allrounds.jsonl"
+        },
+        {
+          "role": "operator_fresh_freeze",
+          "current_builder_relative_path": "fresh-N-freeze.json",
+          "proposed_v4_relative_path": "fresh-N-freeze.json"
+        }
+      ],
+      "resolution_options": [
+        "Before final plan freeze, use canonical unused paths only after verifying they are absent/empty, with explicit reviewed path changes.",
+        "Otherwise extend the REPORT BUILDER outside the15 frozen model/runtime source files to accept an explicit final-plan-bound role map, retain actual input rehash/current-head/calibration/pure-comparison gates, and test nested real paths."
+      ],
+      "prohibited_shortcut": "Do not copy/rename or fabricate phase artifacts, change their manifests/hashes, relabel interrupted600 complete, or duplicate inputs into canonical paths just to pass a report gate.",
+      "physical_preparation_accounting": "Charge originalTRAIN600historical591completedphysicalcallsonce, originaldev20writer20+untuned20once, and actualnewTRAIN90/cache/fit/calibrationseparately. No silent600completion or freshcomparison.",
+      "boundary": "Execution can use valid nested paths once independently adopted, but the current builder will not promote those results automatically. Resolve role mapping before final professor quality claims. Derive the role map from the actual adopted N option; never hardcode20 or combine cohorts.",
+      "scope": "Training-only actualpartial results; no qualitypromotion. Preserve honest0freshcoverage. Existingnestedtraining/checkpoint/cachepaths remainexactV7; report-onlyrolemapgatesmustremainstrict."
+    },
+    "feasibility_reference": {
+      "path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN120-FRESH20-V4-FEASIBILITY-20261018.txt",
+      "sha256": "7a275e6162b7f153139d655288752e5d473be94003bdce0c804d2194df26a14f",
+      "effect_of_review_fix": "Original20-only/parent all-options formulas omit mandatory per-pointer-request CPU head rests and must not drive adoption. Use this separately corrected general formula with explicit ceilings/rest floors and actual/provisional compute/startup/fit/IO accounting. No source/profile change is proposed."
+    },
+    "all_prepared_options_parent": {
+      "path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN120-FRESH20-V4-REVIEWFIX-20261018.json",
+      "sha256": "0d9b5dec9bae8361fad392287a7446dfdd95fff4f77d5d4f782fd8a2f158f2bf",
+      "scope": "Separate unadopted proposal. Original20-only proposal and review-fix remain unchanged. No active run, freeze, source or result edited."
+    },
+    "forecast_correction_parent": {
+      "path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN120-FRESH-OPTIONS-V4-REVIEWFIX-20261018.json",
+      "sha256": "8e34a0f9c5174709ff933716f482eb265bf2c142a6e247242f524c82d0b64e5c",
+      "scope": "Separate data-only correction. Original proposals/review-fix/all-options candidate, all15 runtime source files and activeV3 remain unchanged. No N choice or adoption."
+    },
+    "proposal_preparation_history": [
+      "No actual baseline observed by this proposal",
+      "No throughput-based source decision adopted",
+      "No source/model/download/install/API operation",
+      "No NEW120 writer/cache/training/calibration/fresh call",
+      "No active V3 plan or historical600 receipt changed",
+      "No control/calibration qualification receipt or fresh freeze written by this review fix.",
+      "No report/model source or original candidate/V3 mutation.",
+      "No prepared N is selected/adopted by this all-options proposal; no new questions or scores generated.",
+      "No CPU-block governor or source change; existing15-file per-request-rest protocol is preserved.",
+      "No candidateN chosen by the corrected forecast; actual full20 native baseline/terminalresources/finalreview still required."
+    ],
+    "proposal_requirements_history": [
+      "actualV3 baseline terminal receipt/manifest/episodes SHA256",
+      "actual physical native encoding timing/token counts, cold startup, resources and selected valid sample count; no quality filtering",
+      "conservative full remaining forecast including writer/native(120+10N)states,4encoder startups,2writerloads,CPUfit/calibration/heads/audit and900s safety",
+      "separate original120 adoption decision receipt SHA256",
+      "independent review of final executable plan with all placeholders replaced; no source freeze/run until then",
+      "Final launch explicitly passes canonical --fresh-freeze runtime/fresh-N-freeze.json.",
+      "Independent control tensor/adapter and matched calibration evidence qualification before fresh20_writer10.",
+      "Resolve exact report role mappings with reviewed empty canonical paths or separately tested report-builder role-map support before final report quality.",
+      "Record all20/50/100 route forecasts and select the largest feasible ONE N before training; preserve that N in the later canonical fresh freeze.",
+      "Correct actual remaining forecast for each preparedN includes fresh2*N*10 and calibration40 CPUscore requests,5-second rests per request, actual compute/startup/calfit/IO and >=900s safety. The old600s allowance did not include this head rest floor."
+    ],
+    "not_executed": "Adopted and source-frozen only; actual stages remain unrun until independently audited launch.",
+    "finalization": {
+      "parent_candidate_path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN90-FRESH20-V7-20261018.json",
+      "parent_candidate_sha256": "6c1272033617d6a130cff879ca6bf1895e22c23f498f2bfcc6cb4cd0665e99b6",
+      "operator_decision_path": "<RUNTIME>\\training-only-train90-v8-operator-freeze.json",
+      "operator_decision_sha256": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+      "scope": "training_only_no_fresh_generation_or_scoring",
+      "base10_argv_and_outputs_exactly_V7": true,
+      "source_model_profile_unchanged": true,
+      "future_fresh_n_fixed_before_updates": 20,
+      "independent_final_audit_path": "<RUNTIME>\\final-independent-audit-v8-training-only-train90.json",
+      "current_operator_admission_final_plan_sourcefreeze_missing": false,
+      "resource_admission_path": "<RUNTIME>\\v8-preload-20261018T182039.json",
+      "resource_admission_sha256": "0c8a851a472ae09dbef9c5ca5d60d1047ecaabd302b9c532089ada57cb76b9ec"
+    },
+    "fresh_full_route_forecast_history": {
+      "status": "HISTORY_ONLY_NOT_CURRENT_ADOPTION_OR_EXECUTABLE_FITS",
+      "source_candidate_path": "<RESEARCH>\\CANDIDATE-DOWNSTREAM-TRAIN90-FRESH20-V7-20261018.json",
+      "source_candidate_sha256": "6c1272033617d6a130cff879ca6bf1895e22c23f498f2bfcc6cb4cd0665e99b6",
+      "forecasts": [
+        {
+          "n": 20,
+          "Q": 290,
+          "H": 430,
+          "full_cap_CPU_rest_seconds": 2150,
+          "components_seconds": {
+            "writer_wall_with_rest": 1972.0,
+            "native_encoding_duty_and_margin": 1259.76,
+            "cpu_head_compute_and_rest": 2257.5,
+            "bounded_head_fit": 120,
+            "ALL_future_nonfit_prelaunch_startup_cold_IO_audit": 400,
+            "additional_safety": 900
+          },
+          "total_seconds": 6909.26,
+          "total_minutes": 115.15433333333334,
+          "feasible_at_actual_adoption": null
+        },
+        {
+          "n": 50,
+          "Q": 590,
+          "H": 1030,
+          "full_cap_CPU_rest_seconds": 5150,
+          "components_seconds": {
+            "writer_wall_with_rest": 4012.0,
+            "native_encoding_duty_and_margin": 2562.96,
+            "cpu_head_compute_and_rest": 5407.5,
+            "bounded_head_fit": 120,
+            "ALL_future_nonfit_prelaunch_startup_cold_IO_audit": 400,
+            "additional_safety": 900
+          },
+          "total_seconds": 13402.46,
+          "total_minutes": 223.3743333333333,
+          "feasible_at_actual_adoption": null
+        },
+        {
+          "n": 100,
+          "Q": 1090,
+          "H": 2030,
+          "full_cap_CPU_rest_seconds": 10150,
+          "components_seconds": {
+            "writer_wall_with_rest": 7412.0,
+            "native_encoding_duty_and_margin": 4734.96,
+            "cpu_head_compute_and_rest": 10657.5,
+            "bounded_head_fit": 120,
+            "ALL_future_nonfit_prelaunch_startup_cold_IO_audit": 400,
+            "additional_safety": 900
+          },
+          "total_seconds": 24224.46,
+          "total_minutes": 403.741,
+          "feasible_at_actual_adoption": null
+        }
+      ],
+      "warning": "6909.26/13402.46/24224.46secondsdescribeformerfullTRAIN90+freshNroutewith120fit/400nonfit/900safety, not current feasibility or promises. No futureNselectionbyquality; N20alreadyfixed."
+    },
+    "training_only_forecast": {
+      "status": "ADOPTED_CURRENT_TRAINING_ONLY_FORECAST_NO_FULL_FRESH_FIT_CLAIM",
+      "formula": "90*6.8 +2.4*90*1.81 +30*(0.25+5) +120fit +400ALLfuture_nonfit +900safety",
+      "Q_writer_and_native_states": 90,
+      "H_calibration_CPU_head_calls": 30,
+      "components_seconds": {
+        "TRAIN90_writer_wall_with_rest": 612.0,
+        "TRAIN90_native_encoding_duty_margin": 390.96,
+        "CAL15_both_CPU_heads_compute_and_rest": 157.5,
+        "bounded_head_fit": 120,
+        "ALL_future_prelaunch_startup_cold_load_calfit_IO_audit": 400,
+        "additional_safety": 900
+      },
+      "total_seconds": 2580.46,
+      "total_minutes": 43.007666666666665,
+      "latest_conditional_adoption_time": "2026-10-18T19:16:59.540000-05:00",
+      "decision_epoch": "Use the actual adoption timestamp. Charge all later review, admission and prelaunch time within the400-second nonfit allowance; do not reset that allowance repeatedly.",
+      "future_nonfit_evidence": {
+        "baseline_four_native_startup_plus_cold_scenario": 201.66725520007776,
+        "three_training_native_startups_plus_cold_scenario": 151.25044140005832,
+        "scope": "FIT/TUNE/CAL use three native cache invocations. The400-second allowance includes all further prelaunch, writer load/unload, constructors/cold execution, CPU head startup, scalar fits, hashing/IO and operator audit. The cold scenario is a planning extrapolation, not a measured guarantee.",
+        "all_future_nonfit_seconds": 400
+      },
+      "resource_admission": {
+        "available_RAM_GiB": 8.5,
+        "free_VRAM_GiB": 9,
+        "stable_seconds": 30,
+        "runtime_available_RAM_GiB": 7,
+        "runtime_free_VRAM_GiB": 3
+      },
+      "head_training": {
+        "max_seconds": 120,
+        "epochs": 5,
+        "learning_rates": [
+          1e-05,
+          5e-05
+        ],
+        "batch_size": 32,
+        "fit_rows_at_most": 60,
+        "optimizer_steps_at_most": 20,
+        "actual_completed_epochs_updates_changed_weight_and_reload_proof_required": true
+      },
+      "scientific_minima": {
+        "fit": 40,
+        "tune": 10,
+        "calibration": 10,
+        "both_classes_each": true,
+        "no_replacement": true
+      },
+      "future_fresh_cost": "Future held-out work is excluded from this training-only budget. After training, recompute the remaining fresh-only cost from actual encoding/head/writer throughput, startup and resources. Preserve N20/full10 and include all400 possible fresh pointer calls and their rests. A separate review and freeze are required.",
+      "no_full_fresh_comparison_fit_assertion": true,
+      "actual_adoption_epoch": "2026-10-18T18:23:40.216061-05:00"
+    },
+    "partial_milestone_decision": {
+      "status": "PROPOSED_PARTIAL_SCOPE_NO_CURRENT_ADOPTION",
+      "reason": "The user prioritizes actual Strands fine-tuning. Completing genuine weight updates and calibration provides useful partial progress when the resource hold prevents the former complete paired route. Held-out evaluation may remain unrun.",
+      "scientific_constraints": "The real untouched20 baseline completed before updates. Preserve the original 60/15/15 blind partition selection, full contexts, minima, model/source pins and resource guards. Claim no held-out accuracy or improvement without a separate terminal paired comparison.",
+      "does_not_satisfy_full_user_goal_by_itself": true,
+      "futureN20prelearningchoice_preserved": true,
+      "no_existing_source_result_operator_freeze_changed": true
+    },
+    "adopted_at": "2026-10-18T18:23:40.216061-05:00"
+  }
+}

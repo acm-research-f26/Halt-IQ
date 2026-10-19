@@ -1,0 +1,23 @@
+{
+  "export_kind": "PORTABLE_DATA_ONLY_NOT_A_LAUNCH_PLAN",
+  "source": "runtime/fresh-N-freeze.json",
+  "original_sha256": "99f933742e984b15dc25bdca5de54d902a0a90d949e02790263f333bb2a21dea",
+  "transformation": "JSON parsed and reserialized; local path strings/keys replaced by symbolic labels; no scientific values changed.",
+  "data": {
+    "n": 20,
+    "plan_sha256": "d6b2b3c88f365048b32b003d3b58c3c0ae5217215c3e39a7530a633ae3a9fc03",
+    "dataset_sha256": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+    "answer_blind": true,
+    "basis": "measured_throughput_and_resources",
+    "fresh_scoring_started": false,
+    "frozen_at": "2026-10-18T19:56:57.380360-05:00",
+    "selection_before_training_updates": true,
+    "selection_kind": "carried_forward_pretraining_N20_no_new_size_selection",
+    "immutable_pretraining_selection_history": "<RUNTIME>\\fresh-freeze-history\\fresh-N-freeze-v5-before-v8-training.json",
+    "immutable_pretraining_selection_sha256": "27f6d64c89ffb4e2796f9c3639e76d22da44134cf9d0e19440300dcd0807f84a",
+    "actual_training_only_prelearning_operator_sha256": "8f0007ca6c02ca9ba0a3c7f9d2ee50162dd164e6b1c2aa1f5fbaa3d8772959a3",
+    "actual_fresh_only_operator_sha256": "41dbfe4b59ba87cca66681ca7ce9aa310ef7140321f59c26225a261d5ff95b75",
+    "max_drafts": 10,
+    "plan_binding_occurs_after_training_size_choice_was_before_training": true
+  }
+}
