@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8483b45542992a431d1a40",
+  "question": "What star of Two and a Half Men won two young artist and TV-land awards for his character?",
+  "ground_truth": "Angus Turner Jones",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3221,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 5,
+          "total_tokens": 1611,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.3829342919998453,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.3393816250027157,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 5,
+          "total_tokens": 1619,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.16948224999941885,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09401733299455373,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 5,
+          "total_tokens": 1619,
+          "prompt_tokens_details": {
+            "cached_tokens": 1613
+          }
+        },
+        "seconds": 0.10760400000435766,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09675737499492243,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 5,
+          "total_tokens": 1619,
+          "prompt_tokens_details": {
+            "cached_tokens": 1613
+          }
+        },
+        "seconds": 0.11079641599644674,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.0925808340034564,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 5,
+          "total_tokens": 1619,
+          "prompt_tokens_details": {
+            "cached_tokens": 1613
+          }
+        },
+        "seconds": 0.1095874999955413,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09235574999911478,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Calum Worthy",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Calum Worthy",
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 5,
+          "total_tokens": 1619,
+          "prompt_tokens_details": {
+            "cached_tokens": 1613
+          }
+        },
+        "seconds": 0.11087637500168057,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 4,
+          "total_tokens": 1610,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.10479041700455127,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

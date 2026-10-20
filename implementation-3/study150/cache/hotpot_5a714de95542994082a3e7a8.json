@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a714de95542994082a3e7a8",
+  "question": "Alexander Young, also known as George Alexander, is the uncle to which Scottish musician who replaced Malcolm Young in the band AC/DC in 2014?",
+  "ground_truth": "Stephen Crawford Young",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3431,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 5,
+          "total_tokens": 1716,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.5745764159946702,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.5223980419978034,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3439,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 5,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "cached_tokens": 1699
+          }
+        },
+        "seconds": 0.16784945799736306,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 1710
+          }
+        },
+        "seconds": 0.09584850000101142,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3439,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 5,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "cached_tokens": 1718
+          }
+        },
+        "seconds": 0.10886791699886089,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 1710
+          }
+        },
+        "seconds": 0.09275370900286362,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3439,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 5,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "cached_tokens": 1718
+          }
+        },
+        "seconds": 0.10622270799649414,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 1710
+          }
+        },
+        "seconds": 0.09247224999853643,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3439,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 5,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "cached_tokens": 1718
+          }
+        },
+        "seconds": 0.1091530830017291,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 1710
+          }
+        },
+        "seconds": 0.09454091699444689,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Stevie Young",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3439,
+      "writer": {
+        "text": "Stevie Young",
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 5,
+          "total_tokens": 1724,
+          "prompt_tokens_details": {
+            "cached_tokens": 1718
+          }
+        },
+        "seconds": 0.12468304199865088,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1711,
+          "completion_tokens": 4,
+          "total_tokens": 1715,
+          "prompt_tokens_details": {
+            "cached_tokens": 1710
+          }
+        },
+        "seconds": 0.09026545900269412,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

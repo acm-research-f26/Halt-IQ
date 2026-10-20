@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8341c255429954d2e2ec6e",
+  "question": "Thehickey  team that won the 1997 Calder Cup playoffs is based in what city?",
+  "ground_truth": "Hershey, Pennsylvania",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3583,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 6,
+          "total_tokens": 1792,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.525637791994086,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.457031540994649,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3592,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1795,
+          "completion_tokens": 6,
+          "total_tokens": 1801,
+          "prompt_tokens_details": {
+            "cached_tokens": 1774
+          }
+        },
+        "seconds": 0.21400987500237534,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 1786
+          }
+        },
+        "seconds": 0.0979724589997204,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3592,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1795,
+          "completion_tokens": 6,
+          "total_tokens": 1801,
+          "prompt_tokens_details": {
+            "cached_tokens": 1794
+          }
+        },
+        "seconds": 0.13301233400125057,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 1786
+          }
+        },
+        "seconds": 0.10089695900387596,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3592,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1795,
+          "completion_tokens": 6,
+          "total_tokens": 1801,
+          "prompt_tokens_details": {
+            "cached_tokens": 1794
+          }
+        },
+        "seconds": 0.12849799999821698,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 1786
+          }
+        },
+        "seconds": 0.0961105829992448,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3592,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1795,
+          "completion_tokens": 6,
+          "total_tokens": 1801,
+          "prompt_tokens_details": {
+            "cached_tokens": 1794
+          }
+        },
+        "seconds": 0.12774337500013644,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 1786
+          }
+        },
+        "seconds": 0.10219537500233855,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hershey, Pennsylvania",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3592,
+      "writer": {
+        "text": "Hershey, Pennsylvania",
+        "usage": {
+          "prompt_tokens": 1795,
+          "completion_tokens": 6,
+          "total_tokens": 1801,
+          "prompt_tokens_details": {
+            "cached_tokens": 1794
+          }
+        },
+        "seconds": 0.12935724999988452,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 4,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 1786
+          }
+        },
+        "seconds": 0.09677533299691277,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

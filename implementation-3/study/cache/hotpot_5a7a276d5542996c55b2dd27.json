@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7a276d5542996c55b2dd27",
+  "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+  "ground_truth": "Colonel Charles Hastings Judd",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 5,
+          "total_tokens": 1422,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.0499071659942274,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.173973290999129,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1405
+          }
+        },
+        "seconds": 0.16608049999922514,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.12076083300053142,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.1074604579989682,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.08747620799840661,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10489133300143294,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.0903355000045849,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10478420800063759,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.08955266600241885,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Hastings Judd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Charles Hastings Judd",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10340924999763956,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.09068174999993062,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

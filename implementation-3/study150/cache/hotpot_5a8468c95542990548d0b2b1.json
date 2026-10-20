@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8468c95542990548d0b2b1",
+  "question": "What British publisher published a dystopian novel in 1949 written by an English author?",
+  "ground_truth": "Fredric John Warburg",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3217,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.3702690420032013,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.9385691249990487,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3223,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.15038733400433557,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 1603
+          }
+        },
+        "seconds": 0.09262979099730728,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3223,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 1611
+          }
+        },
+        "seconds": 0.08038120799756143,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 1603
+          }
+        },
+        "seconds": 0.09686095799406758,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3223,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 1611
+          }
+        },
+        "seconds": 0.07894008400035091,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 1603
+          }
+        },
+        "seconds": 0.09284466599638108,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3223,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 1611
+          }
+        },
+        "seconds": 0.07748833300138358,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 1603
+          }
+        },
+        "seconds": 0.09092233300179942,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "George Orwell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3223,
+      "writer": {
+        "text": "George Orwell",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 1611
+          }
+        },
+        "seconds": 0.0767562499968335,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1604,
+          "completion_tokens": 4,
+          "total_tokens": 1608,
+          "prompt_tokens_details": {
+            "cached_tokens": 1603
+          }
+        },
+        "seconds": 0.09401383299700683,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

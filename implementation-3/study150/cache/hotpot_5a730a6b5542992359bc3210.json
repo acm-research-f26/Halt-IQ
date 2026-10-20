@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a730a6b5542992359bc3210",
+  "question": "Who is older Craig Nicholls or Norman Blake ?",
+  "ground_truth": "Norman Blake",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2251,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 10,
+          "total_tokens": 1126,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.1935953329957556,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.9929752499956521,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2263,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1128,
+          "completion_tokens": 10,
+          "total_tokens": 1138,
+          "prompt_tokens_details": {
+            "cached_tokens": 1104
+          }
+        },
+        "seconds": 0.24818995800160337,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 1120
+          }
+        },
+        "seconds": 0.09305520800262457,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2263,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1128,
+          "completion_tokens": 10,
+          "total_tokens": 1138,
+          "prompt_tokens_details": {
+            "cached_tokens": 1127
+          }
+        },
+        "seconds": 0.1868221659970004,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 1120
+          }
+        },
+        "seconds": 0.09046849999867845,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2263,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1128,
+          "completion_tokens": 10,
+          "total_tokens": 1138,
+          "prompt_tokens_details": {
+            "cached_tokens": 1127
+          }
+        },
+        "seconds": 0.18018095799925504,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 1120
+          }
+        },
+        "seconds": 0.09176620800280944,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2263,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1128,
+          "completion_tokens": 10,
+          "total_tokens": 1138,
+          "prompt_tokens_details": {
+            "cached_tokens": 1127
+          }
+        },
+        "seconds": 0.18134570799884386,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 1120
+          }
+        },
+        "seconds": 0.08954179099964676,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Craig Nicholls is older than Norman Blake.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2263,
+      "writer": {
+        "text": "Craig Nicholls is older than Norman Blake.",
+        "usage": {
+          "prompt_tokens": 1128,
+          "completion_tokens": 10,
+          "total_tokens": 1138,
+          "prompt_tokens_details": {
+            "cached_tokens": 1127
+          }
+        },
+        "seconds": 0.1923218329975498,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1121,
+          "completion_tokens": 4,
+          "total_tokens": 1125,
+          "prompt_tokens_details": {
+            "cached_tokens": 1120
+          }
+        },
+        "seconds": 0.09521058400423499,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

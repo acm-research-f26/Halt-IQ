@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7302b75542991f9a20c5fd",
+  "question": "What supernatural horror film did Miles Doleac have a role in?",
+  "ground_truth": "Sleepy Hollow",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3127,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 5,
+          "total_tokens": 1564,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 5.3672989170008805,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 6.273933792006574,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.40375695799593814,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.225823249995301,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.3547770419972949,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.4136408330014092,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 1.2634520420033368,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.2661063749983441,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.16556183300417615,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.16901883300306508,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mother of Tears",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "The Mother of Tears",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.17283250000036787,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.1742143750016112,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

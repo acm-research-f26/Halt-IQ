@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a844fd35542990548d0b274",
+  "question": "What occupation did Nicholas Christopher and Roger Ebert share?",
+  "ground_truth": "author",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Nicholas Christopher and Roger Ebert shared the occupation of film critic.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2591,
+      "writer": {
+        "text": "Nicholas Christopher and Roger Ebert shared the occupation of film critic.",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 15,
+          "total_tokens": 1296,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.408500792000268,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1291,
+          "completion_tokens": 4,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.9109452910051914,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "film critic",
+      "critique": "APPROVED",
+      "distance": 0.8,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2584,
+      "writer": {
+        "text": "film critic",
+        "usage": {
+          "prompt_tokens": 1298,
+          "completion_tokens": 3,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1269
+          }
+        },
+        "seconds": 0.20665775000088615,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 4,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 1271
+          }
+        },
+        "seconds": 0.23825654100073734,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "film critic",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2573,
+      "writer": {
+        "text": "film critic",
+        "usage": {
+          "prompt_tokens": 1287,
+          "completion_tokens": 3,
+          "total_tokens": 1290,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.2144244590017479,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 4,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.1183631659951061,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "film critic",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2573,
+      "writer": {
+        "text": "film critic",
+        "usage": {
+          "prompt_tokens": 1287,
+          "completion_tokens": 3,
+          "total_tokens": 1290,
+          "prompt_tokens_details": {
+            "cached_tokens": 1286
+          }
+        },
+        "seconds": 0.09725341699959245,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 4,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.11668137499509612,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "film critic",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2573,
+      "writer": {
+        "text": "film critic",
+        "usage": {
+          "prompt_tokens": 1287,
+          "completion_tokens": 3,
+          "total_tokens": 1290,
+          "prompt_tokens_details": {
+            "cached_tokens": 1286
+          }
+        },
+        "seconds": 0.09886158400331624,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 4,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.12482104200171307,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "film critic",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2573,
+      "writer": {
+        "text": "film critic",
+        "usage": {
+          "prompt_tokens": 1287,
+          "completion_tokens": 3,
+          "total_tokens": 1290,
+          "prompt_tokens_details": {
+            "cached_tokens": 1286
+          }
+        },
+        "seconds": 0.10419554200052517,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 4,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.12401804199907929,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

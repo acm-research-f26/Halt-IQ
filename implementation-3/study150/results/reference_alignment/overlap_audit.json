@@ -1,0 +1,32 @@
+{
+  "train": {
+    "n": 50,
+    "team_holdout_id_overlap": [
+      "5adc0f8d55429947ff1738ef",
+      "5ae268f35542994d89d5b416"
+    ],
+    "team_holdout_text_overlap": [
+      "between parsifal and saul og david which opera has more acts?",
+      "what job do both alfred santell and david fincher have in common?"
+    ],
+    "benchmark_id_overlap": [
+      "5a8078d85542995d8a8ddf78"
+    ]
+  },
+  "dev": {
+    "n": 20,
+    "team_holdout_id_overlap": [],
+    "team_holdout_text_overlap": [],
+    "benchmark_id_overlap": [
+      "5ae4c8f35542990ba0bbb130"
+    ]
+  },
+  "test": {
+    "n": 80,
+    "team_holdout_id_overlap": [],
+    "team_holdout_text_overlap": [],
+    "benchmark_id_overlap": [
+      "5addcb215542997dc7907033"
+    ]
+  }
+}

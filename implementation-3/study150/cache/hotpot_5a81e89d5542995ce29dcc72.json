@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a81e89d5542995ce29dcc72",
+  "question": "Kalle M\u00e4kinen is nicknamed after a Spanish football that captains what two teams?",
+  "ground_truth": "Real Madrid and the Spain national team",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Sergio",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Sergio",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.060259666002821,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1664,
+          "completion_tokens": 4,
+          "total_tokens": 1668,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.0949957089978852,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Segunda Divisi\\u00f3n",
+      "critique": "APPROVED",
+      "distance": 1.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3359,
+      "writer": {
+        "text": "Segunda Divisi\\u00f3n",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 11,
+          "total_tokens": 1683,
+          "prompt_tokens_details": {
+            "cached_tokens": 1653
+          }
+        },
+        "seconds": 0.2803493340034038,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 4,
+          "total_tokens": 1676,
+          "prompt_tokens_details": {
+            "cached_tokens": 1655
+          }
+        },
+        "seconds": 0.16597141700185603,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Segunda Divisi\\u00f3n",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3367,
+      "writer": {
+        "text": "Segunda Divisi\\u00f3n",
+        "usage": {
+          "prompt_tokens": 1680,
+          "completion_tokens": 11,
+          "total_tokens": 1691,
+          "prompt_tokens_details": {
+            "cached_tokens": 1654
+          }
+        },
+        "seconds": 0.278333834001387,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 4,
+          "total_tokens": 1676,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.10169041699555237,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Segunda Divisi\\u00f3n",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3367,
+      "writer": {
+        "text": "Segunda Divisi\\u00f3n",
+        "usage": {
+          "prompt_tokens": 1680,
+          "completion_tokens": 11,
+          "total_tokens": 1691,
+          "prompt_tokens_details": {
+            "cached_tokens": 1679
+          }
+        },
+        "seconds": 0.20421158399403794,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 4,
+          "total_tokens": 1676,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.098882833000971,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Segunda Divisi\\u00f3n",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3367,
+      "writer": {
+        "text": "Segunda Divisi\\u00f3n",
+        "usage": {
+          "prompt_tokens": 1680,
+          "completion_tokens": 11,
+          "total_tokens": 1691,
+          "prompt_tokens_details": {
+            "cached_tokens": 1679
+          }
+        },
+        "seconds": 0.21354141700430773,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 4,
+          "total_tokens": 1676,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.09814824999921257,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Segunda Divisi\\u00f3n",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3367,
+      "writer": {
+        "text": "Segunda Divisi\\u00f3n",
+        "usage": {
+          "prompt_tokens": 1680,
+          "completion_tokens": 11,
+          "total_tokens": 1691,
+          "prompt_tokens_details": {
+            "cached_tokens": 1679
+          }
+        },
+        "seconds": 0.2044991660004598,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 4,
+          "total_tokens": 1676,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.09796229199855588,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

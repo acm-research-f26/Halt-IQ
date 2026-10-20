@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab6d09255429954757d337d",
+  "split": "test",
+  "question": "The football manager who recruited David Beckham managed Manchester United during what timeframe?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1995-96",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1051,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1995-96",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1062,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1995-96",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1062,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1995-96",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1062,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1995-96",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1062,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1995-96",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1062,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

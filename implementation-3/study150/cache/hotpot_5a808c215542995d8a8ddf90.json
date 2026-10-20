@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a808c215542995d8a8ddf90",
+  "question": "Who's fifth album and debut single are Startin' Fires and Austin respectively?",
+  "ground_truth": "Blake Tollison Shelton",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3061,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1527,
+          "completion_tokens": 4,
+          "total_tokens": 1531,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 5.14624566600105,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 4.874036542001704,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1515
+          }
+        },
+        "seconds": 0.2355225419960334,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1525
+          }
+        },
+        "seconds": 0.12482762500440003,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.12428199999703793,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1525
+          }
+        },
+        "seconds": 0.11896212499414105,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.11991116699937265,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1525
+          }
+        },
+        "seconds": 0.12657350000517908,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.12402666699927067,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1525
+          }
+        },
+        "seconds": 0.1250152499997057,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blake Shelton",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "Blake Shelton",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.12171112500072923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1526,
+          "completion_tokens": 4,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1525
+          }
+        },
+        "seconds": 0.1299806669994723,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

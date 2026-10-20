@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac2610f55429951e9e68593",
+  "question": "which  Indian businessman and politician owns Mabula Game Reserve ",
+  "ground_truth": "Vijay Vittal Mallya",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3587,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1787,
+          "completion_tokens": 7,
+          "total_tokens": 1794,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.4135853750049137,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.2460219589993358,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3597,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1797,
+          "completion_tokens": 7,
+          "total_tokens": 1804,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.20637879099376732,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 1788
+          }
+        },
+        "seconds": 0.09559504199569346,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3597,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1797,
+          "completion_tokens": 7,
+          "total_tokens": 1804,
+          "prompt_tokens_details": {
+            "cached_tokens": 1796
+          }
+        },
+        "seconds": 0.14603695899859304,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 1788
+          }
+        },
+        "seconds": 0.10006637500191573,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3597,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1797,
+          "completion_tokens": 7,
+          "total_tokens": 1804,
+          "prompt_tokens_details": {
+            "cached_tokens": 1796
+          }
+        },
+        "seconds": 0.1492682500029332,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 1788
+          }
+        },
+        "seconds": 0.10136662500008242,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3597,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1797,
+          "completion_tokens": 7,
+          "total_tokens": 1804,
+          "prompt_tokens_details": {
+            "cached_tokens": 1796
+          }
+        },
+        "seconds": 0.15241737500036834,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 1788
+          }
+        },
+        "seconds": 0.09888566700101364,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Vijay Mallya",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 3597,
+      "writer": {
+        "text": "Vijay Mallya",
+        "usage": {
+          "prompt_tokens": 1797,
+          "completion_tokens": 7,
+          "total_tokens": 1804,
+          "prompt_tokens_details": {
+            "cached_tokens": 1796
+          }
+        },
+        "seconds": 0.14594537499942817,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1789,
+          "completion_tokens": 4,
+          "total_tokens": 1793,
+          "prompt_tokens_details": {
+            "cached_tokens": 1788
+          }
+        },
+        "seconds": 0.09715062499890337,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

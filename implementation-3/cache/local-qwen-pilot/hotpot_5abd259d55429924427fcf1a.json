@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5abd259d55429924427fcf1a",
+  "split": "test",
+  "question": "Are both Dictyosperma, and Huernia described as a genus?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 913,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 933,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 933,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 933,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 933,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Dictyosperma and Huernia are described as genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 933,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

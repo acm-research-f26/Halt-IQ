@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8a3e745542996c9b8d5e70",
+  "split": "test",
+  "question": "What is the name for the adventure in \"Tunnels and Trolls\", a game designed by Ken St. Andre?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Arena of Khazan",
+      "distance": null,
+      "critic_approved": false,
+      "tokens": 1203,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Arena of Khazan",
+      "distance": 0.0,
+      "critic_approved": false,
+      "tokens": 1230,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Arena of Khazan",
+      "distance": 0.0,
+      "critic_approved": false,
+      "tokens": 1230,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Arena of Khazan",
+      "distance": 0.0,
+      "critic_approved": false,
+      "tokens": 1230,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Arena of Khazan",
+      "distance": 0.0,
+      "critic_approved": false,
+      "tokens": 1230,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Arena of Khazan",
+      "distance": 0.0,
+      "critic_approved": false,
+      "tokens": 1230,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

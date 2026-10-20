@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae0e0125542993d6555ec79",
+  "question": "Ross Pople worked with this French dominant figure of the post-war classical music world.",
+  "ground_truth": "Pierre Louis Joseph Boulez",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3301,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 5,
+          "total_tokens": 1651,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.0588607079989742,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.131614500001888,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3309,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1654,
+          "completion_tokens": 5,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.18670333299814956,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 1645
+          }
+        },
+        "seconds": 0.09708675000001676,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3309,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1654,
+          "completion_tokens": 5,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1653
+          }
+        },
+        "seconds": 0.11329904100421118,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 1645
+          }
+        },
+        "seconds": 0.09603875000175321,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3309,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1654,
+          "completion_tokens": 5,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1653
+          }
+        },
+        "seconds": 0.11062687499361346,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 1645
+          }
+        },
+        "seconds": 0.09983891699812375,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3309,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1654,
+          "completion_tokens": 5,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1653
+          }
+        },
+        "seconds": 0.11429333300475264,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 1645
+          }
+        },
+        "seconds": 0.09714912500203354,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pierre Boulez",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3309,
+      "writer": {
+        "text": "Pierre Boulez",
+        "usage": {
+          "prompt_tokens": 1654,
+          "completion_tokens": 5,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1653
+          }
+        },
+        "seconds": 0.11301345799438423,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1646,
+          "completion_tokens": 4,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 1645
+          }
+        },
+        "seconds": 0.09571904199401615,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

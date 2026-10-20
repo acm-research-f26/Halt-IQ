@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a76d15e55429966f1a36bfa",
+  "question": "What actress from \"The House of Mirth\" played an FBI agent involved in the cover up of extraterrestrials?",
+  "ground_truth": "Gillian Anderson",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2647,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1320,
+          "completion_tokens": 4,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.2813681670013466,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.3282304579988704,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2654,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1327,
+          "completion_tokens": 4,
+          "total_tokens": 1331,
+          "prompt_tokens_details": {
+            "cached_tokens": 1308
+          }
+        },
+        "seconds": 0.16090791700116824,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.09700724999856902,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2654,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1327,
+          "completion_tokens": 4,
+          "total_tokens": 1331,
+          "prompt_tokens_details": {
+            "cached_tokens": 1326
+          }
+        },
+        "seconds": 0.09664708399941446,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.09549129199876916,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2654,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1327,
+          "completion_tokens": 4,
+          "total_tokens": 1331,
+          "prompt_tokens_details": {
+            "cached_tokens": 1326
+          }
+        },
+        "seconds": 0.09777300000132527,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.0922437089975574,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2654,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1327,
+          "completion_tokens": 4,
+          "total_tokens": 1331,
+          "prompt_tokens_details": {
+            "cached_tokens": 1326
+          }
+        },
+        "seconds": 0.09447395800088998,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.09427249999862397,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Gillian Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2654,
+      "writer": {
+        "text": "Gillian Anderson",
+        "usage": {
+          "prompt_tokens": 1327,
+          "completion_tokens": 4,
+          "total_tokens": 1331,
+          "prompt_tokens_details": {
+            "cached_tokens": 1326
+          }
+        },
+        "seconds": 0.09240812500502216,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 4,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.09078316699742572,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

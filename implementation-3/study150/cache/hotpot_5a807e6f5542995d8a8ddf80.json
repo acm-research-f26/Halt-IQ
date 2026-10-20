@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a807e6f5542995d8a8ddf80",
+  "question": "Who were the guns stolen from the HMS ship \"Marlin\" originally produced for?",
+  "ground_truth": "British Army",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4287,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2128,
+          "completion_tokens": 16,
+          "total_tokens": 2144,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 6.454820292005024,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 5.184278332999384,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4305,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2146,
+          "completion_tokens": 16,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 2116
+          }
+        },
+        "seconds": 0.4381277909997152,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 2138
+          }
+        },
+        "seconds": 0.11464787500153761,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4305,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2146,
+          "completion_tokens": 16,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 2145
+          }
+        },
+        "seconds": 0.3323524169973098,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 2138
+          }
+        },
+        "seconds": 0.11526154100283748,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4305,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2146,
+          "completion_tokens": 16,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 2145
+          }
+        },
+        "seconds": 0.33757683300063945,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 2138
+          }
+        },
+        "seconds": 0.11616062500252156,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4305,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2146,
+          "completion_tokens": 16,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 2145
+          }
+        },
+        "seconds": 0.3371144999982789,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 2138
+          }
+        },
+        "seconds": 0.11848754099628422,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4305,
+      "writer": {
+        "text": "The Vickers machine guns were originally produced for the Royal African Rifles.",
+        "usage": {
+          "prompt_tokens": 2146,
+          "completion_tokens": 16,
+          "total_tokens": 2162,
+          "prompt_tokens_details": {
+            "cached_tokens": 2145
+          }
+        },
+        "seconds": 0.34599229200102855,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 4,
+          "total_tokens": 2143,
+          "prompt_tokens_details": {
+            "cached_tokens": 2138
+          }
+        },
+        "seconds": 0.12017779199959477,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

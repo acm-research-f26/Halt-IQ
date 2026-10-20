@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae52cb955429908b6326540",
+  "question": "What is type of philosophies is The Structure of Liberty about?",
+  "ground_truth": "political",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3495,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 5,
+          "total_tokens": 1748,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.044861166003102,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 42
+          }
+        },
+        "seconds": 2.9747621250062366,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3503,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1751,
+          "completion_tokens": 5,
+          "total_tokens": 1756,
+          "prompt_tokens_details": {
+            "cached_tokens": 1731
+          }
+        },
+        "seconds": 0.18210166700009722,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 1742
+          }
+        },
+        "seconds": 0.09448616699955892,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3503,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1751,
+          "completion_tokens": 5,
+          "total_tokens": 1756,
+          "prompt_tokens_details": {
+            "cached_tokens": 1750
+          }
+        },
+        "seconds": 0.11267537499952596,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 1742
+          }
+        },
+        "seconds": 0.09710987500147894,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3503,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1751,
+          "completion_tokens": 5,
+          "total_tokens": 1756,
+          "prompt_tokens_details": {
+            "cached_tokens": 1750
+          }
+        },
+        "seconds": 0.1248197499953676,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 1742
+          }
+        },
+        "seconds": 0.10326483300013933,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3503,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1751,
+          "completion_tokens": 5,
+          "total_tokens": 1756,
+          "prompt_tokens_details": {
+            "cached_tokens": 1750
+          }
+        },
+        "seconds": 0.11468362499726936,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 1742
+          }
+        },
+        "seconds": 0.09816595799929928,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "libertarianism",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3503,
+      "writer": {
+        "text": "libertarianism",
+        "usage": {
+          "prompt_tokens": 1751,
+          "completion_tokens": 5,
+          "total_tokens": 1756,
+          "prompt_tokens_details": {
+            "cached_tokens": 1750
+          }
+        },
+        "seconds": 0.11453733399685007,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1743,
+          "completion_tokens": 4,
+          "total_tokens": 1747,
+          "prompt_tokens_details": {
+            "cached_tokens": 1742
+          }
+        },
+        "seconds": 0.09780999999929918,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

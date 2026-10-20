@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae322b75542994393b9e622",
+  "question": "G\u00e9rard Dubois opened the first La Rose Noire in which complex of office towers and hotels in Hong Kong?",
+  "ground_truth": "Pacific Place",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2413,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 5,
+          "total_tokens": 1207,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.7853285000019241,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6984094590006862,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2421,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 5,
+          "total_tokens": 1215,
+          "prompt_tokens_details": {
+            "cached_tokens": 1190
+          }
+        },
+        "seconds": 0.17126370900223264,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.08986104199721012,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2421,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 5,
+          "total_tokens": 1215,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.10321004100114806,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.08700779200444231,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2421,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 5,
+          "total_tokens": 1215,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.11619683299795724,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09090991700213635,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2421,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 5,
+          "total_tokens": 1215,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.10689716700289864,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09240795799996704,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Taikoo Place",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2421,
+      "writer": {
+        "text": "Taikoo Place",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 5,
+          "total_tokens": 1215,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.10493908300122712,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09038037499703933,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5add61d65542995b365fab21",
+  "split": "test",
+  "question": "What type of forum did a former Soviet statesman initiate?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 2549,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2575,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2575,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2575,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2575,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The World Summit of Nobel Peace Laureates was initiated by Mikhail Gorbachev in the 90s.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2575,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

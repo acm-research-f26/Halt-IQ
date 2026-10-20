@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae4c8f35542990ba0bbb130",
+  "question": "Ralf Popken had a role in a musical that is a satire on corruption in the administration of criminal justice, bringing what concept to light?",
+  "ground_truth": "the \"celebrity criminal\"",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Ralf Popken's role in the musical \"Chicago\" brought the concept of corruption in the administration of criminal justice to light.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.10526315789473684,
+      "answer_em": 0.0,
+      "tokens": 3181,
+      "writer": {
+        "text": "Ralf Popken's role in the musical \"Chicago\" brought the concept of corruption in the administration of criminal justice to light.",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 27,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.54291733300488,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1586,
+          "completion_tokens": 4,
+          "total_tokens": 1590,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.850500374996045,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "To Serve and Protect",
+      "critique": "APPROVED",
+      "distance": 0.9444444444444444,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3166,
+      "writer": {
+        "text": "To Serve and Protect",
+        "usage": {
+          "prompt_tokens": 1593,
+          "completion_tokens": 5,
+          "total_tokens": 1598,
+          "prompt_tokens_details": {
+            "cached_tokens": 1552
+          }
+        },
+        "seconds": 0.31567654199898243,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 4,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1554
+          }
+        },
+        "seconds": 0.23282504199596588,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "To Serve and Protect",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3145,
+      "writer": {
+        "text": "To Serve and Protect",
+        "usage": {
+          "prompt_tokens": 1572,
+          "completion_tokens": 5,
+          "total_tokens": 1577,
+          "prompt_tokens_details": {
+            "cached_tokens": 1553
+          }
+        },
+        "seconds": 0.2526607910040184,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 4,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.12750500000402099,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "To Serve and Protect",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3145,
+      "writer": {
+        "text": "To Serve and Protect",
+        "usage": {
+          "prompt_tokens": 1572,
+          "completion_tokens": 5,
+          "total_tokens": 1577,
+          "prompt_tokens_details": {
+            "cached_tokens": 1571
+          }
+        },
+        "seconds": 0.1419159170036437,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 4,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.1200721249988419,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "To Serve and Protect",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3145,
+      "writer": {
+        "text": "To Serve and Protect",
+        "usage": {
+          "prompt_tokens": 1572,
+          "completion_tokens": 5,
+          "total_tokens": 1577,
+          "prompt_tokens_details": {
+            "cached_tokens": 1571
+          }
+        },
+        "seconds": 0.15277125000284286,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 4,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.12632804200256942,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "To Serve and Protect",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3145,
+      "writer": {
+        "text": "To Serve and Protect",
+        "usage": {
+          "prompt_tokens": 1572,
+          "completion_tokens": 5,
+          "total_tokens": 1577,
+          "prompt_tokens_details": {
+            "cached_tokens": 1571
+          }
+        },
+        "seconds": 0.14692870800354285,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 4,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.12978629099961836,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

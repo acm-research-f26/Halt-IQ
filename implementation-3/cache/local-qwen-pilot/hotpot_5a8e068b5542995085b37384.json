@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8e068b5542995085b37384",
+  "split": "test",
+  "question": "Are Ferocactus and Silene both types of plant?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1175,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Ferocactus and Silene are not both types of plant.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

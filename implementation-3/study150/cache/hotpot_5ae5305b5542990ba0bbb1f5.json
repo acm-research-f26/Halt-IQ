@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae5305b5542990ba0bbb1f5",
+  "question": "When would be the professional wrestling video game release in which Mark Henry will appear as \"legend\"?",
+  "ground_truth": "October 17, 2017",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3703,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1841,
+          "completion_tokens": 11,
+          "total_tokens": 1852,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.4136269579976215,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 16.11117645900231,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3717,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1855,
+          "completion_tokens": 11,
+          "total_tokens": 1866,
+          "prompt_tokens_details": {
+            "cached_tokens": 1829
+          }
+        },
+        "seconds": 0.9067782920028549,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.15232216699951096,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3717,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1855,
+          "completion_tokens": 11,
+          "total_tokens": 1866,
+          "prompt_tokens_details": {
+            "cached_tokens": 1854
+          }
+        },
+        "seconds": 0.25198529200133635,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.11975337500189198,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3717,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1855,
+          "completion_tokens": 11,
+          "total_tokens": 1866,
+          "prompt_tokens_details": {
+            "cached_tokens": 1854
+          }
+        },
+        "seconds": 0.23564570799499052,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.10875149999628775,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3717,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1855,
+          "completion_tokens": 11,
+          "total_tokens": 1866,
+          "prompt_tokens_details": {
+            "cached_tokens": 1854
+          }
+        },
+        "seconds": 0.2350200830042013,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.12057383300270885,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 17, 2017",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3717,
+      "writer": {
+        "text": "October 17, 2017",
+        "usage": {
+          "prompt_tokens": 1855,
+          "completion_tokens": 11,
+          "total_tokens": 1866,
+          "prompt_tokens_details": {
+            "cached_tokens": 1854
+          }
+        },
+        "seconds": 0.24546166700019967,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1847,
+          "completion_tokens": 4,
+          "total_tokens": 1851,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.11548466700332938,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

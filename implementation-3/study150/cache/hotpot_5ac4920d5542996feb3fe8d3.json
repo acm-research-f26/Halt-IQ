@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac4920d5542996feb3fe8d3",
+  "question": "When was the designer of the Disneyland attraction with variants in California, France, Hong Kong, Tokyo, and the Tomorrowland Speedway born?",
+  "ground_truth": "born October 25, 1931",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": null,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2658,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1313,
+          "completion_tokens": 11,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.3961031660001026,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.5345879160013283,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2683,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 11,
+          "total_tokens": 1349,
+          "prompt_tokens_details": {
+            "cached_tokens": 1301
+          }
+        },
+        "seconds": 0.3273460409982363,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.2575712499965448,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2683,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 11,
+          "total_tokens": 1349,
+          "prompt_tokens_details": {
+            "cached_tokens": 1337
+          }
+        },
+        "seconds": 0.2057076249984675,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.26581841699953657,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2683,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 11,
+          "total_tokens": 1349,
+          "prompt_tokens_details": {
+            "cached_tokens": 1337
+          }
+        },
+        "seconds": 0.20169245899887756,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.31442141700244974,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2683,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 11,
+          "total_tokens": 1349,
+          "prompt_tokens_details": {
+            "cached_tokens": 1337
+          }
+        },
+        "seconds": 0.2053262499975972,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.2600263749991427,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "October 25, 1931",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.8571428571428571,
+      "answer_em": 0.0,
+      "tokens": 2683,
+      "writer": {
+        "text": "October 25, 1931",
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 11,
+          "total_tokens": 1349,
+          "prompt_tokens_details": {
+            "cached_tokens": 1337
+          }
+        },
+        "seconds": 0.20239637500344543,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 1319,
+          "completion_tokens": 15,
+          "total_tokens": 1334,
+          "prompt_tokens_details": {
+            "cached_tokens": 1318
+          }
+        },
+        "seconds": 0.25707133400283055,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

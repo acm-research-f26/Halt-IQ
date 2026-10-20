@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a87bada5542994846c1cddc",
+  "question": "In which city are the headquarters of the American research and scientific development company where Ravi Sethi worked as computer scientist located?",
+  "ground_truth": "Murray Hill",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2453,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1223,
+          "completion_tokens": 4,
+          "total_tokens": 1227,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6849421249935403,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.7216819169989321,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2460,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1230,
+          "completion_tokens": 4,
+          "total_tokens": 1234,
+          "prompt_tokens_details": {
+            "cached_tokens": 1211
+          }
+        },
+        "seconds": 0.14903433300059987,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 1221
+          }
+        },
+        "seconds": 0.09044433400413254,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2460,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1230,
+          "completion_tokens": 4,
+          "total_tokens": 1234,
+          "prompt_tokens_details": {
+            "cached_tokens": 1229
+          }
+        },
+        "seconds": 0.08998695799527923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 1221
+          }
+        },
+        "seconds": 0.0906340410001576,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2460,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1230,
+          "completion_tokens": 4,
+          "total_tokens": 1234,
+          "prompt_tokens_details": {
+            "cached_tokens": 1229
+          }
+        },
+        "seconds": 0.09057216600194806,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 1221
+          }
+        },
+        "seconds": 0.09096012499503559,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2460,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1230,
+          "completion_tokens": 4,
+          "total_tokens": 1234,
+          "prompt_tokens_details": {
+            "cached_tokens": 1229
+          }
+        },
+        "seconds": 0.08884450000186916,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 1221
+          }
+        },
+        "seconds": 0.08823308299906785,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Toronto, Canada",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2460,
+      "writer": {
+        "text": "Toronto, Canada",
+        "usage": {
+          "prompt_tokens": 1230,
+          "completion_tokens": 4,
+          "total_tokens": 1234,
+          "prompt_tokens_details": {
+            "cached_tokens": 1229
+          }
+        },
+        "seconds": 0.09101462499529589,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 4,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 1221
+          }
+        },
+        "seconds": 0.1139041670030565,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

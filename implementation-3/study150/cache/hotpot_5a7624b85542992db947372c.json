@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7624b85542992db947372c",
+  "question": "When was the plaintiff in the 1892 Barbed Wire Patent Case born?",
+  "ground_truth": "January 18, 1813",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2307,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1144,
+          "completion_tokens": 10,
+          "total_tokens": 1154,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.7155179170003976,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6211935409955913,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2320,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 10,
+          "total_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 1132
+          }
+        },
+        "seconds": 0.25118845800170675,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 1148
+          }
+        },
+        "seconds": 0.09286737499496667,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2320,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 10,
+          "total_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.18083533299795818,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 1148
+          }
+        },
+        "seconds": 0.08960424999531824,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2320,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 10,
+          "total_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.18150833300023805,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 1148
+          }
+        },
+        "seconds": 0.08888858399586752,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2320,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 10,
+          "total_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.17351054200116778,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 1148
+          }
+        },
+        "seconds": 0.08645654199790442,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "March 9, 1826",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2320,
+      "writer": {
+        "text": "March 9, 1826",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 10,
+          "total_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.1769802089984296,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1149,
+          "completion_tokens": 4,
+          "total_tokens": 1153,
+          "prompt_tokens_details": {
+            "cached_tokens": 1148
+          }
+        },
+        "seconds": 0.0868549590013572,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5abd94525542992ac4f382d2",
+  "split": "test",
+  "question": "2014 S/S is the debut album of a South Korean boy group that was formed by who?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "LOEN Entertainment",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 887,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "LOEN Entertainment",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 894,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "LOEN Entertainment",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 894,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "LOEN Entertainment",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 894,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "LOEN Entertainment",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 894,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "LOEN Entertainment",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 894,
+      "quality": 0.5,
+      "answer_em": 0.0
+    }
+  ]
+}

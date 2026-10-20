@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae20c245542997283cd2367",
+  "question": "Hina is derived from a dye prepared in what areas?",
+  "ground_truth": "South Asia and the Middle East",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2551,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1269,
+          "completion_tokens": 7,
+          "total_tokens": 1276,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.3803895410019322,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.222606666997308,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2561,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 7,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 1257
+          }
+        },
+        "seconds": 0.2191486670053564,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.09526533399912296,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2561,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 7,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.16374037499917904,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.0901739170003566,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2561,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 7,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.13422383300348883,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.09052683299523778,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2561,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 7,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.14126487499743234,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.08896324999659555,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lawsonia inermis",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2561,
+      "writer": {
+        "text": "Lawsonia inermis",
+        "usage": {
+          "prompt_tokens": 1279,
+          "completion_tokens": 7,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 1278
+          }
+        },
+        "seconds": 0.13358562499342952,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1271,
+          "completion_tokens": 4,
+          "total_tokens": 1275,
+          "prompt_tokens_details": {
+            "cached_tokens": 1270
+          }
+        },
+        "seconds": 0.08975320799800102,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

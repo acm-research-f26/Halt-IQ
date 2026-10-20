@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a77cb335542997042120b3a",
+  "split": "test",
+  "question": "What American professional Hawaiian surfer born 18 October 1992 won the Rip Curl Pro Portugal?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "John John Florence",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 943,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "John John Florence",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 950,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "John John Florence",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 950,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "John John Florence",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 950,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "John John Florence",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 950,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "John John Florence",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 950,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

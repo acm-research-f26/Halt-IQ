@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7c43c65542990527d5547e",
+  "question": "Is Mary Pierce or Gustavo Kuerten the older tennis player?",
+  "ground_truth": "Mary Pierce",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2351,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1165,
+          "completion_tokens": 11,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.4307679580015247,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.4750768749945564,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2364,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 11,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1153
+          }
+        },
+        "seconds": 0.27600437499495456,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 1170
+          }
+        },
+        "seconds": 0.09471362499607494,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2364,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 11,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.20117908300017007,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 1170
+          }
+        },
+        "seconds": 0.09155000000464497,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2364,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 11,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.20073841699922923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 1170
+          }
+        },
+        "seconds": 0.09299095800088253,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2364,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 11,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.20902820799528854,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 1170
+          }
+        },
+        "seconds": 0.10570354200172005,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mary Pierce is older than Gustavo Kuerten.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 2364,
+      "writer": {
+        "text": "Mary Pierce is older than Gustavo Kuerten.",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 11,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.1952608749998035,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1171,
+          "completion_tokens": 4,
+          "total_tokens": 1175,
+          "prompt_tokens_details": {
+            "cached_tokens": 1170
+          }
+        },
+        "seconds": 0.09493475000635954,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

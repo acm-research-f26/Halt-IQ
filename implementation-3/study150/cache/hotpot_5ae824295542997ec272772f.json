@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae824295542997ec272772f",
+  "question": "Dan Scalco is best known as a contributing author for a magazine owned by who?",
+  "ground_truth": "Peter Shea",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3379,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1687,
+          "completion_tokens": 3,
+          "total_tokens": 1690,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.9352911669993773,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.710241249995306,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1693,
+          "completion_tokens": 3,
+          "total_tokens": 1696,
+          "prompt_tokens_details": {
+            "cached_tokens": 1675
+          }
+        },
+        "seconds": 0.15803179200156592,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 1684
+          }
+        },
+        "seconds": 0.09841054100252222,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1693,
+          "completion_tokens": 3,
+          "total_tokens": 1696,
+          "prompt_tokens_details": {
+            "cached_tokens": 1692
+          }
+        },
+        "seconds": 0.0863320409989683,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 1684
+          }
+        },
+        "seconds": 0.10408391699456843,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1693,
+          "completion_tokens": 3,
+          "total_tokens": 1696,
+          "prompt_tokens_details": {
+            "cached_tokens": 1692
+          }
+        },
+        "seconds": 0.08503399999608519,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 1684
+          }
+        },
+        "seconds": 0.09591662499587983,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1693,
+          "completion_tokens": 3,
+          "total_tokens": 1696,
+          "prompt_tokens_details": {
+            "cached_tokens": 1692
+          }
+        },
+        "seconds": 0.09258837499510264,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 1684
+          }
+        },
+        "seconds": 0.09978829199826578,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Blurt",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Blurt",
+        "usage": {
+          "prompt_tokens": 1693,
+          "completion_tokens": 3,
+          "total_tokens": 1696,
+          "prompt_tokens_details": {
+            "cached_tokens": 1692
+          }
+        },
+        "seconds": 0.08261729100195225,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1685,
+          "completion_tokens": 4,
+          "total_tokens": 1689,
+          "prompt_tokens_details": {
+            "cached_tokens": 1684
+          }
+        },
+        "seconds": 0.09888574999786215,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

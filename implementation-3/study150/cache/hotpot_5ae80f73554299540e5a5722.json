@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae80f73554299540e5a5722",
+  "question": "The title of this Swedish-French crime television series in English refers to a natural phenomenon where the sun remains visible for what?",
+  "ground_truth": "the full 24 hours",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2413,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1203,
+          "completion_tokens": 4,
+          "total_tokens": 1207,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.1974988329966436,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.4608452089960338,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2420,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 4,
+          "total_tokens": 1214,
+          "prompt_tokens_details": {
+            "cached_tokens": 1191
+          }
+        },
+        "seconds": 0.16883966699970188,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09214483399409801,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2420,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 4,
+          "total_tokens": 1214,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.09327354199922411,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09215258400217863,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2420,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 4,
+          "total_tokens": 1214,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.09996345800027484,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.0949865000002319,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2420,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 4,
+          "total_tokens": 1214,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.09228887500648852,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09227720800117822,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "24 hours",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 2420,
+      "writer": {
+        "text": "24 hours",
+        "usage": {
+          "prompt_tokens": 1210,
+          "completion_tokens": 4,
+          "total_tokens": 1214,
+          "prompt_tokens_details": {
+            "cached_tokens": 1209
+          }
+        },
+        "seconds": 0.09164233400224475,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09421570799895562,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

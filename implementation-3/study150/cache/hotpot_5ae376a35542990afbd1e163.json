@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae376a35542990afbd1e163",
+  "question": "Are Peter Balakian and James Der Derian both teachers?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3645,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1820,
+          "completion_tokens": 3,
+          "total_tokens": 1823,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.6876429170006304,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.5263764999981504,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3650,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1825,
+          "completion_tokens": 3,
+          "total_tokens": 1828,
+          "prompt_tokens_details": {
+            "cached_tokens": 1808
+          }
+        },
+        "seconds": 0.16548270900239004,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 1817
+          }
+        },
+        "seconds": 0.09801883299951442,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3650,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1825,
+          "completion_tokens": 3,
+          "total_tokens": 1828,
+          "prompt_tokens_details": {
+            "cached_tokens": 1824
+          }
+        },
+        "seconds": 0.08320837499923073,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 1817
+          }
+        },
+        "seconds": 0.0961967499970342,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3650,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1825,
+          "completion_tokens": 3,
+          "total_tokens": 1828,
+          "prompt_tokens_details": {
+            "cached_tokens": 1824
+          }
+        },
+        "seconds": 0.08237862499663606,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 1817
+          }
+        },
+        "seconds": 0.0984888749953825,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3650,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1825,
+          "completion_tokens": 3,
+          "total_tokens": 1828,
+          "prompt_tokens_details": {
+            "cached_tokens": 1824
+          }
+        },
+        "seconds": 0.08491233300446765,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 1817
+          }
+        },
+        "seconds": 0.1015409159954288,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3650,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1825,
+          "completion_tokens": 3,
+          "total_tokens": 1828,
+          "prompt_tokens_details": {
+            "cached_tokens": 1824
+          }
+        },
+        "seconds": 0.08254666600259952,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1818,
+          "completion_tokens": 4,
+          "total_tokens": 1822,
+          "prompt_tokens_details": {
+            "cached_tokens": 1817
+          }
+        },
+        "seconds": 0.09875554100290174,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

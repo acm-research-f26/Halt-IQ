@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac00de75542996f0d89cb13",
+  "question": "Who designed the casino that The Venetian Macao is modeled on?",
+  "ground_truth": "KlingStubbins",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2603,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 19,
+          "total_tokens": 1302,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.079891666995536,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.9573884579949663,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2624,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 19,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1271
+          }
+        },
+        "seconds": 0.39813575000152923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1296
+          }
+        },
+        "seconds": 0.10571729199727997,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2624,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 19,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1303
+          }
+        },
+        "seconds": 0.3481916669989005,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1296
+          }
+        },
+        "seconds": 0.19386637499701465,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2624,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 19,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1303
+          }
+        },
+        "seconds": 0.322306916998059,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1296
+          }
+        },
+        "seconds": 0.09512291699502384,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2624,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 19,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1303
+          }
+        },
+        "seconds": 0.3162811660004081,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1296
+          }
+        },
+        "seconds": 0.08612933399854228,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2624,
+      "writer": {
+        "text": "Sheldon Adelson designed the casino that The Venetian Macao is modeled on.",
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 19,
+          "total_tokens": 1323,
+          "prompt_tokens_details": {
+            "cached_tokens": 1303
+          }
+        },
+        "seconds": 0.3286164160017506,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1297,
+          "completion_tokens": 4,
+          "total_tokens": 1301,
+          "prompt_tokens_details": {
+            "cached_tokens": 1296
+          }
+        },
+        "seconds": 0.09007004199520452,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

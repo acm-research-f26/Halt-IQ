@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae0006755429925eb1afbd3",
+  "question": "Where is the Bubblegum Alley, that is similar to Gum Wall, located in California?",
+  "ground_truth": "San Luis Obispo, California",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2795,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1368,
+          "completion_tokens": 30,
+          "total_tokens": 1398,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.6696071250044042,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.4315461669975775,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 30,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1356
+          }
+        },
+        "seconds": 0.6189164999959758,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09469129100034479,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 30,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.4869325840045349,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09233816600317368,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 30,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.4998332500035758,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.10557133300608257,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 30,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.489087792004284,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09636045799561543,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 30,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.4956640839955071,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09409712499473244,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

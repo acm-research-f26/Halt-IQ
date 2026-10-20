@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7f341655429930675136a0",
+  "question": "Alison Castle is the editor of what publication with a connection to the Beatles?",
+  "ground_truth": "\"Linda McCartney's Life in Photography\"",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4351,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2173,
+          "completion_tokens": 3,
+          "total_tokens": 2176,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.49236650000239,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.339128833998984,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4357,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2179,
+          "completion_tokens": 3,
+          "total_tokens": 2182,
+          "prompt_tokens_details": {
+            "cached_tokens": 2161
+          }
+        },
+        "seconds": 0.17058887500024866,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 2170
+          }
+        },
+        "seconds": 0.10195450000173878,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4357,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2179,
+          "completion_tokens": 3,
+          "total_tokens": 2182,
+          "prompt_tokens_details": {
+            "cached_tokens": 2178
+          }
+        },
+        "seconds": 0.09124841599987121,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 2170
+          }
+        },
+        "seconds": 0.09998329100199044,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4357,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2179,
+          "completion_tokens": 3,
+          "total_tokens": 2182,
+          "prompt_tokens_details": {
+            "cached_tokens": 2178
+          }
+        },
+        "seconds": 0.08856679100426845,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 2170
+          }
+        },
+        "seconds": 0.10310575000039535,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4357,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2179,
+          "completion_tokens": 3,
+          "total_tokens": 2182,
+          "prompt_tokens_details": {
+            "cached_tokens": 2178
+          }
+        },
+        "seconds": 0.08437066699843854,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 2170
+          }
+        },
+        "seconds": 0.09986379100155318,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bookforum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4357,
+      "writer": {
+        "text": "Bookforum",
+        "usage": {
+          "prompt_tokens": 2179,
+          "completion_tokens": 3,
+          "total_tokens": 2182,
+          "prompt_tokens_details": {
+            "cached_tokens": 2178
+          }
+        },
+        "seconds": 0.08481524999660905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 4,
+          "total_tokens": 2175,
+          "prompt_tokens_details": {
+            "cached_tokens": 2170
+          }
+        },
+        "seconds": 0.09807479200389935,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

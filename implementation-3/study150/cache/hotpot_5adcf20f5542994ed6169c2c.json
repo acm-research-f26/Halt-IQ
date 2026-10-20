@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adcf20f5542994ed6169c2c",
+  "question": "Who directed the Hindi remake of the Korean film that starred Uhm Jung-hwa, Kim Sang-kyung, and Song Young-Chang?",
+  "ground_truth": "Ribhu Dasgupta.",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2425,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1207,
+          "completion_tokens": 6,
+          "total_tokens": 1213,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.7634835000062594,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6923678749953979,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 6,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1195
+          }
+        },
+        "seconds": 0.1879538749999483,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.09136662499804515,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 6,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.13114429100096459,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.09119083399855299,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 6,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.11928274999809219,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08945645800122293,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 6,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.11975866699503968,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08816504199785413,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kwon Chil-in",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Kwon Chil-in",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 6,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.11860045800131047,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.09006837500055553,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

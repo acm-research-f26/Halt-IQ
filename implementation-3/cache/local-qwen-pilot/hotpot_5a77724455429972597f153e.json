@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a77724455429972597f153e",
+  "split": "dev",
+  "question": "What race track in the midwest hosts a 500 mile race eavery May?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Darlington Raceway",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1383,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Darlington Raceway",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1391,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Darlington Raceway",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1391,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Darlington Raceway",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1391,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Darlington Raceway",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1391,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Darlington Raceway",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1391,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a711ef85542994082a3e5ac",
+  "question": "Which hospital, the Psychiatric Institute of Washington or Howard University Hospital, is known for serving the African American community including former slaves?",
+  "ground_truth": "Howard University Hospital",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3523,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1758,
+          "completion_tokens": 4,
+          "total_tokens": 1762,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.6105268749961397,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.586597792003886,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3530,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1765,
+          "completion_tokens": 4,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1746
+          }
+        },
+        "seconds": 0.14862716600327985,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1756
+          }
+        },
+        "seconds": 0.08864037499733968,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3530,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1765,
+          "completion_tokens": 4,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1764
+          }
+        },
+        "seconds": 0.09261383400007617,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1756
+          }
+        },
+        "seconds": 0.08930337500351015,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3530,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1765,
+          "completion_tokens": 4,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1764
+          }
+        },
+        "seconds": 0.09419191699998919,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1756
+          }
+        },
+        "seconds": 0.08902908399613807,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3530,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1765,
+          "completion_tokens": 4,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1764
+          }
+        },
+        "seconds": 0.09900058300263481,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1756
+          }
+        },
+        "seconds": 0.0904796249960782,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Howard University Hospital",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3530,
+      "writer": {
+        "text": "Howard University Hospital",
+        "usage": {
+          "prompt_tokens": 1765,
+          "completion_tokens": 4,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1764
+          }
+        },
+        "seconds": 0.08851437499833992,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1757,
+          "completion_tokens": 4,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1756
+          }
+        },
+        "seconds": 0.09161404100450454,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

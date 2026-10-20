@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab859a955429934fafe6d7b",
+  "split": "test",
+  "question": "Who is the writer of this song that was inspired by words on a tombstone and was the first track on the box set Back to Mono?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1555,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1589,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1589,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1589,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1589,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Peter & Gordon and Bobby Vinton later had hits with the song, with its title and lyrics changed to \"To Know You Is to Love You.\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1589,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

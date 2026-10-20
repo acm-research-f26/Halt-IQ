@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abaee4f5542996cc5e49f15",
+  "question": "Were Cinderella and The Emperor's New Groove released by the same picture company?",
+  "ground_truth": "no",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2571,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1265,
+          "completion_tokens": 21,
+          "total_tokens": 1286,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.324604333000025,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.7564227920011035,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2594,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 21,
+          "total_tokens": 1309,
+          "prompt_tokens_details": {
+            "cached_tokens": 1253
+          }
+        },
+        "seconds": 0.5018297499991604,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          }
+        },
+        "seconds": 0.0970655839992105,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2594,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 21,
+          "total_tokens": 1309,
+          "prompt_tokens_details": {
+            "cached_tokens": 1287
+          }
+        },
+        "seconds": 0.38232520800374914,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          }
+        },
+        "seconds": 0.10040833300445229,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2594,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 21,
+          "total_tokens": 1309,
+          "prompt_tokens_details": {
+            "cached_tokens": 1287
+          }
+        },
+        "seconds": 0.3607186669978546,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          }
+        },
+        "seconds": 0.09701124999992317,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2594,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 21,
+          "total_tokens": 1309,
+          "prompt_tokens_details": {
+            "cached_tokens": 1287
+          }
+        },
+        "seconds": 0.3604592919946299,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          }
+        },
+        "seconds": 0.10864483399927849,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2594,
+      "writer": {
+        "text": "No, Cinderella and The Emperor's New Groove were not released by the same picture company.",
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 21,
+          "total_tokens": 1309,
+          "prompt_tokens_details": {
+            "cached_tokens": 1287
+          }
+        },
+        "seconds": 0.36146641700179316,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1281,
+          "completion_tokens": 4,
+          "total_tokens": 1285,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280
+          }
+        },
+        "seconds": 0.10559441700024763,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

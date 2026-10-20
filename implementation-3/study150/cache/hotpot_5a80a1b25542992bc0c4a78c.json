@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a80a1b25542992bc0c4a78c",
+  "question": "Are either Edward H. Griffith or Edward Burns from Germany?",
+  "ground_truth": "no",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2139,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1055,
+          "completion_tokens": 15,
+          "total_tokens": 1070,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.0936059579980792,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.8287384159993962,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2156,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1072,
+          "completion_tokens": 15,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1043
+          }
+        },
+        "seconds": 0.32533624999632593,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 1064
+          }
+        },
+        "seconds": 0.08819891700113658,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2156,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1072,
+          "completion_tokens": 15,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1071
+          }
+        },
+        "seconds": 0.25597129199741175,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 1064
+          }
+        },
+        "seconds": 0.08893008399900282,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2156,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1072,
+          "completion_tokens": 15,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1071
+          }
+        },
+        "seconds": 0.2566471250029281,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 1064
+          }
+        },
+        "seconds": 0.0915106249958626,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2156,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1072,
+          "completion_tokens": 15,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1071
+          }
+        },
+        "seconds": 0.24863662500138162,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 1064
+          }
+        },
+        "seconds": 0.08787804199528182,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2156,
+      "writer": {
+        "text": "No, neither Edward H. Griffith nor Edward Burns is from Germany.",
+        "usage": {
+          "prompt_tokens": 1072,
+          "completion_tokens": 15,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1071
+          }
+        },
+        "seconds": 0.2536299580024206,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1065,
+          "completion_tokens": 4,
+          "total_tokens": 1069,
+          "prompt_tokens_details": {
+            "cached_tokens": 1064
+          }
+        },
+        "seconds": 0.0903647919985815,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5add7ce55542992ae4cec585",
+  "question": "When was the Swiss author and dramatist died who's novel is \"A Dangerous Game\"?",
+  "ground_truth": "14 December 1990",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2931,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1457,
+          "completion_tokens": 9,
+          "total_tokens": 1466,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.1546735829979298,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.0741435829986585,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2943,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 9,
+          "total_tokens": 1478,
+          "prompt_tokens_details": {
+            "cached_tokens": 1445
+          }
+        },
+        "seconds": 0.23402633400110062,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 1460
+          }
+        },
+        "seconds": 0.09166733299935004,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2943,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 9,
+          "total_tokens": 1478,
+          "prompt_tokens_details": {
+            "cached_tokens": 1468
+          }
+        },
+        "seconds": 0.17067875000066124,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 1460
+          }
+        },
+        "seconds": 0.09554579100222327,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2943,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 9,
+          "total_tokens": 1478,
+          "prompt_tokens_details": {
+            "cached_tokens": 1468
+          }
+        },
+        "seconds": 0.1624097910025739,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 1460
+          }
+        },
+        "seconds": 0.08949512499384582,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2943,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 9,
+          "total_tokens": 1478,
+          "prompt_tokens_details": {
+            "cached_tokens": 1468
+          }
+        },
+        "seconds": 0.16803304200584535,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 1460
+          }
+        },
+        "seconds": 0.08898875000159023,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "31 January 2011",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2943,
+      "writer": {
+        "text": "31 January 2011",
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 9,
+          "total_tokens": 1478,
+          "prompt_tokens_details": {
+            "cached_tokens": 1468
+          }
+        },
+        "seconds": 0.1620790829983889,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 4,
+          "total_tokens": 1465,
+          "prompt_tokens_details": {
+            "cached_tokens": 1460
+          }
+        },
+        "seconds": 0.09087020799779566,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

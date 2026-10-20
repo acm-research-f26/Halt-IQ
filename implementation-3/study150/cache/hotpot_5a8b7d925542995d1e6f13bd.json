@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8b7d925542995d1e6f13bd",
+  "question": "\"Horrible Bosses\" is written by a writer in which career?",
+  "ground_truth": "comedy",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1402,
+          "completion_tokens": 3,
+          "total_tokens": 1405,
+          "prompt_tokens_details": {
+            "cached_tokens": 37
+          }
+        },
+        "seconds": 3.9297339159966214,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 3.6063263340038247,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2815,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1408,
+          "completion_tokens": 3,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 1390
+          }
+        },
+        "seconds": 0.19162975000654114,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.11245408299873816,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2815,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1408,
+          "completion_tokens": 3,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 1407
+          }
+        },
+        "seconds": 0.09373858300386928,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.111129124998115,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2815,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1408,
+          "completion_tokens": 3,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 1407
+          }
+        },
+        "seconds": 0.0925374170037685,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.11062237499572802,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2815,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1408,
+          "completion_tokens": 3,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 1407
+          }
+        },
+        "seconds": 0.09111341700190678,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.11408791699795984,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Morris",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2815,
+      "writer": {
+        "text": "John Morris",
+        "usage": {
+          "prompt_tokens": 1408,
+          "completion_tokens": 3,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 1407
+          }
+        },
+        "seconds": 0.0939748749951832,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1400,
+          "completion_tokens": 4,
+          "total_tokens": 1404,
+          "prompt_tokens_details": {
+            "cached_tokens": 1399
+          }
+        },
+        "seconds": 0.11489304100541631,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

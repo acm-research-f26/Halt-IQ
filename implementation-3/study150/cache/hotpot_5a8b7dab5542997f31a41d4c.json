@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8b7dab5542997f31a41d4c",
+  "question": "In the 1973 NFL season, the Pro Bowl took place at what football stadium that is part of the Truman Sports Complex, along with what other stadium?",
+  "ground_truth": "Kauffman Stadium",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3275,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1632,
+          "completion_tokens": 6,
+          "total_tokens": 1638,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.2749085830000695,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.2454729589953786,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3284,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1641,
+          "completion_tokens": 6,
+          "total_tokens": 1647,
+          "prompt_tokens_details": {
+            "cached_tokens": 1620
+          }
+        },
+        "seconds": 0.2229145419987617,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 1632
+          }
+        },
+        "seconds": 0.09902466600033222,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3284,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1641,
+          "completion_tokens": 6,
+          "total_tokens": 1647,
+          "prompt_tokens_details": {
+            "cached_tokens": 1640
+          }
+        },
+        "seconds": 0.1333108329999959,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 1632
+          }
+        },
+        "seconds": 0.10141279199888231,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3284,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1641,
+          "completion_tokens": 6,
+          "total_tokens": 1647,
+          "prompt_tokens_details": {
+            "cached_tokens": 1640
+          }
+        },
+        "seconds": 0.13931133299774956,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 1632
+          }
+        },
+        "seconds": 0.1029196250019595,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3284,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1641,
+          "completion_tokens": 6,
+          "total_tokens": 1647,
+          "prompt_tokens_details": {
+            "cached_tokens": 1640
+          }
+        },
+        "seconds": 0.13136812500306405,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 1632
+          }
+        },
+        "seconds": 0.10140775000036228,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Memorial Coliseum",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3284,
+      "writer": {
+        "text": "Los Angeles Memorial Coliseum",
+        "usage": {
+          "prompt_tokens": 1641,
+          "completion_tokens": 6,
+          "total_tokens": 1647,
+          "prompt_tokens_details": {
+            "cached_tokens": 1640
+          }
+        },
+        "seconds": 0.13467750000563683,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1633,
+          "completion_tokens": 4,
+          "total_tokens": 1637,
+          "prompt_tokens_details": {
+            "cached_tokens": 1632
+          }
+        },
+        "seconds": 0.10091462499985937,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

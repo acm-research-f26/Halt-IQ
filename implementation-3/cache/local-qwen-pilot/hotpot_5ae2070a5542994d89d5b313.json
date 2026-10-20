@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae2070a5542994d89d5b313",
+  "split": "train",
+  "question": "Which performance act has a higher instrument to person ratio, Badly Drawn Boy or Wolf Alice?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Badly Drawn Boy",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Wolf Alice",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 806,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Badly Drawn Boy",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 809,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Wolf Alice",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 806,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Badly Drawn Boy",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 809,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Wolf Alice",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 806,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

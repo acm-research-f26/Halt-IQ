@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a83c2e25542996488c2e4bc",
+  "question": "The 2014 Baylor Bears football games were played at the stadium whose name was changed during what month?",
+  "ground_truth": "December 2013",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3027,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1512,
+          "completion_tokens": 2,
+          "total_tokens": 1514,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 5.23175016699679,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 4.266332541999873,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3032,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1517,
+          "completion_tokens": 2,
+          "total_tokens": 1519,
+          "prompt_tokens_details": {
+            "cached_tokens": 1500
+          }
+        },
+        "seconds": 0.1769017080005142,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 1508
+          }
+        },
+        "seconds": 0.11603391700191423,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3032,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1517,
+          "completion_tokens": 2,
+          "total_tokens": 1519,
+          "prompt_tokens_details": {
+            "cached_tokens": 1516
+          }
+        },
+        "seconds": 0.0789223329993547,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 1508
+          }
+        },
+        "seconds": 0.12171266700170236,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3032,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1517,
+          "completion_tokens": 2,
+          "total_tokens": 1519,
+          "prompt_tokens_details": {
+            "cached_tokens": 1516
+          }
+        },
+        "seconds": 0.08140945799823385,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 1508
+          }
+        },
+        "seconds": 0.11484883299999638,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3032,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1517,
+          "completion_tokens": 2,
+          "total_tokens": 1519,
+          "prompt_tokens_details": {
+            "cached_tokens": 1516
+          }
+        },
+        "seconds": 0.07786175000364892,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 1508
+          }
+        },
+        "seconds": 0.11960220900073182,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3032,
+      "writer": {
+        "text": "November",
+        "usage": {
+          "prompt_tokens": 1517,
+          "completion_tokens": 2,
+          "total_tokens": 1519,
+          "prompt_tokens_details": {
+            "cached_tokens": 1516
+          }
+        },
+        "seconds": 0.07999691599979997,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1509,
+          "completion_tokens": 4,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 1508
+          }
+        },
+        "seconds": 0.11339675000635907,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

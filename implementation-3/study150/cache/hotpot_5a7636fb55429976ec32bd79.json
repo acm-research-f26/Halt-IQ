@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7636fb55429976ec32bd79",
+  "question": "Who was the wife of the president when William Bainbridge started his career?",
+  "ground_truth": "Abigail",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2711,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 5,
+          "total_tokens": 1356,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.243764500002726,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.1888578340003733,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2719,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1359,
+          "completion_tokens": 5,
+          "total_tokens": 1364,
+          "prompt_tokens_details": {
+            "cached_tokens": 1339
+          }
+        },
+        "seconds": 0.1827637090027565,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.09948133400030201,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2719,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1359,
+          "completion_tokens": 5,
+          "total_tokens": 1364,
+          "prompt_tokens_details": {
+            "cached_tokens": 1358
+          }
+        },
+        "seconds": 0.10891058299603174,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.09141079099936178,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2719,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1359,
+          "completion_tokens": 5,
+          "total_tokens": 1364,
+          "prompt_tokens_details": {
+            "cached_tokens": 1358
+          }
+        },
+        "seconds": 0.10861479099548887,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.09349833300075261,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2719,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1359,
+          "completion_tokens": 5,
+          "total_tokens": 1364,
+          "prompt_tokens_details": {
+            "cached_tokens": 1358
+          }
+        },
+        "seconds": 0.12533629200333962,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.09418720900430344,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Abigail Bainbridge",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2719,
+      "writer": {
+        "text": "Abigail Bainbridge",
+        "usage": {
+          "prompt_tokens": 1359,
+          "completion_tokens": 5,
+          "total_tokens": 1364,
+          "prompt_tokens_details": {
+            "cached_tokens": 1358
+          }
+        },
+        "seconds": 0.10475708400190342,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1351,
+          "completion_tokens": 4,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.08868316699954448,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

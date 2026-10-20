@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a84eecd5542994c784dda8e",
+  "question": "What type of group does Pablo Carballo and Argentine Air Force have in common?",
+  "ground_truth": "military",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3315,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1638,
+          "completion_tokens": 20,
+          "total_tokens": 1658,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.9292604999936884,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.7965668340038974,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 20,
+          "total_tokens": 1680,
+          "prompt_tokens_details": {
+            "cached_tokens": 1626
+          }
+        },
+        "seconds": 0.47687800000130665,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.10895437500585103,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 20,
+          "total_tokens": 1680,
+          "prompt_tokens_details": {
+            "cached_tokens": 1659
+          }
+        },
+        "seconds": 0.34588820800126996,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.09908754199568648,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 20,
+          "total_tokens": 1680,
+          "prompt_tokens_details": {
+            "cached_tokens": 1659
+          }
+        },
+        "seconds": 0.3431626250021509,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.09976354100217577,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 20,
+          "total_tokens": 1680,
+          "prompt_tokens_details": {
+            "cached_tokens": 1659
+          }
+        },
+        "seconds": 0.33328400000027614,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.09592470799543662,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3337,
+      "writer": {
+        "text": "Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.",
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 20,
+          "total_tokens": 1680,
+          "prompt_tokens_details": {
+            "cached_tokens": 1659
+          }
+        },
+        "seconds": 0.3492690830025822,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 4,
+          "total_tokens": 1657,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.0948079170048004,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

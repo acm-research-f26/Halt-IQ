@@ -1,0 +1,9 @@
+{
+  "source": "synthetic",
+  "model": null,
+  "endpoint": null,
+  "max_rounds": 6,
+  "distance_kind": "synthetic",
+  "reward_metric": "synthetic_quality",
+  "dataset_sha256": "a7b2936eef4331737b748111d701822316eeedb4bef64eb8e0fecd987ad91264"
+}

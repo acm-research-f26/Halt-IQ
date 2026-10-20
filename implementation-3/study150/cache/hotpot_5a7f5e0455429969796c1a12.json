@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7f5e0455429969796c1a12",
+  "question": "Spill.com gave their final review for a movie directed by who?",
+  "ground_truth": "John Lee Hancock",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3557,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 3,
+          "total_tokens": 1779,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.442459459001839,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 5.071653457998764,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3563,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 3,
+          "total_tokens": 1785,
+          "prompt_tokens_details": {
+            "cached_tokens": 1764
+          }
+        },
+        "seconds": 0.1947104999999283,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.11838349999743514,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3563,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 3,
+          "total_tokens": 1785,
+          "prompt_tokens_details": {
+            "cached_tokens": 1781
+          }
+        },
+        "seconds": 0.09910849999869242,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.11440383399894927,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3563,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 3,
+          "total_tokens": 1785,
+          "prompt_tokens_details": {
+            "cached_tokens": 1781
+          }
+        },
+        "seconds": 0.09564016600052128,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.11752737499773502,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3563,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 3,
+          "total_tokens": 1785,
+          "prompt_tokens_details": {
+            "cached_tokens": 1781
+          }
+        },
+        "seconds": 0.10047250000206986,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.1188057499966817,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tony Guerrero",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3563,
+      "writer": {
+        "text": "Tony Guerrero",
+        "usage": {
+          "prompt_tokens": 1782,
+          "completion_tokens": 3,
+          "total_tokens": 1785,
+          "prompt_tokens_details": {
+            "cached_tokens": 1781
+          }
+        },
+        "seconds": 0.09737591700104531,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1774,
+          "completion_tokens": 4,
+          "total_tokens": 1778,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.11556250000285218,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

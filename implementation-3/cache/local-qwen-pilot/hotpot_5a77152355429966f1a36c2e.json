@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a77152355429966f1a36c2e",
+  "split": "test",
+  "question": "What was the Roud Folk Song Index of the nursery rhyme inspiring What Are Little Girls Made Of?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 836,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 844,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 844,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 844,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 844,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Three Little Kittens\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 844,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

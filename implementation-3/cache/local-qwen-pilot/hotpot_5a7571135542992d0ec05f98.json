@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7571135542992d0ec05f98",
+  "split": "test",
+  "question": "Ralph Hefferline was a psychology professor at a university that is located in what city?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "New York City",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 945,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 952,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 952,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 952,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 952,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 952,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

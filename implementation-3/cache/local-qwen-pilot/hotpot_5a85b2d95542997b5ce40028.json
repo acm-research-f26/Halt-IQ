@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a85b2d95542997b5ce40028",
+  "split": "test",
+  "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Eenasul Fateh",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1083,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Eenasul Fateh",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1092,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Eenasul Fateh",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1092,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Eenasul Fateh",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1092,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Eenasul Fateh",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1092,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Eenasul Fateh",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1092,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

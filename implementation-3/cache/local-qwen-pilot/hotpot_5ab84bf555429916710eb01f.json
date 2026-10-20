@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab84bf555429916710eb01f",
+  "split": "test",
+  "question": "In 1991 Euromarch\u00e9 was bought by a chain that operated how any hypermarkets at the end of 2016?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Carrefour",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1257,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Carrefour",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1264,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Carrefour",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1264,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Carrefour",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1264,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Carrefour",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1264,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Carrefour",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1264,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

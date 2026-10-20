@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7625e8554299109176e66a",
+  "split": "test",
+  "question": "In which year was the King who made the 1925 Birthday Honours born?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1925",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 835,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1925",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 843,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1925",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 843,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1925",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 843,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1925",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 843,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1925",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 843,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

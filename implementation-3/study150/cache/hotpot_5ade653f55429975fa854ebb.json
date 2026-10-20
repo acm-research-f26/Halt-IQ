@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ade653f55429975fa854ebb",
+  "question": "What concert tour headlined by Coal Chamber in 1999 was named after the popular hit song by the Puerto Rican singer Ricky Martin, spanish for \"the crazy life\"?",
+  "ground_truth": "Livin' la Vida Loca",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2565,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1274,
+          "completion_tokens": 9,
+          "total_tokens": 1283,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.868770624998433,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.791191708005499,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2577,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 9,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 1262
+          }
+        },
+        "seconds": 0.23327270799927646,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 1277
+          }
+        },
+        "seconds": 0.09383120900020003,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2577,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 9,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 1285
+          }
+        },
+        "seconds": 0.16190179099794477,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 1277
+          }
+        },
+        "seconds": 0.08684162500139792,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2577,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 9,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 1285
+          }
+        },
+        "seconds": 0.15909841699613025,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 1277
+          }
+        },
+        "seconds": 0.09031400000094436,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2577,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 9,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 1285
+          }
+        },
+        "seconds": 0.16553695799666457,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 1277
+          }
+        },
+        "seconds": 0.09199724999780301,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Livin' la Vida Loco",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.75,
+      "answer_em": 0.0,
+      "tokens": 2577,
+      "writer": {
+        "text": "Livin' la Vida Loco",
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 9,
+          "total_tokens": 1295,
+          "prompt_tokens_details": {
+            "cached_tokens": 1285
+          }
+        },
+        "seconds": 0.16417250000085915,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1278,
+          "completion_tokens": 4,
+          "total_tokens": 1282,
+          "prompt_tokens_details": {
+            "cached_tokens": 1277
+          }
+        },
+        "seconds": 0.09195395799906692,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

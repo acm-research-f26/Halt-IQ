@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae377c45542990afbd1e16b",
+  "question": "The last film that Kim Hyun-seok wrote was in 2015, what day was it released?",
+  "ground_truth": "February 5, 2015",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3055,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1518,
+          "completion_tokens": 10,
+          "total_tokens": 1528,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.023242208000738,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.805016375001287,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 10,
+          "total_tokens": 1541,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.33429891600098927,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.11266045800584834,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 10,
+          "total_tokens": 1541,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.22503362499992363,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.11167904199828627,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 10,
+          "total_tokens": 1541,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.21803245900082402,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.11202083399984986,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 10,
+          "total_tokens": 1541,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.21969470899784938,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.11191216600127518,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "February 5, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3068,
+      "writer": {
+        "text": "February 5, 2015",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 10,
+          "total_tokens": 1541,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.22857295800349675,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.10816133299522335,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

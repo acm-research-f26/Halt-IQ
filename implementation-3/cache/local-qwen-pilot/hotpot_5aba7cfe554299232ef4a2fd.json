@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5aba7cfe554299232ef4a2fd",
+  "split": "test",
+  "question": "The 2017\u201318 Wigan Athletic F.C. season will be a year in which the team competes in the league cup known as what for sponsorship reasons?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Carabao Cup",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1033,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Carabao Cup",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Carabao Cup",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Carabao Cup",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Carabao Cup",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Carabao Cup",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

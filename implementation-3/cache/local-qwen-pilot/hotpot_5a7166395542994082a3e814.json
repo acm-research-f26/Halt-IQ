@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7166395542994082a3e814",
+  "split": "test",
+  "question": "What is the name of the fight song of the university whose main campus is in Lawrence, Kansas and whose branch campuses are in the Kansas City metropolitan area?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Kansas Song",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1463,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Kansas Song",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1469,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Kansas Song",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1469,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Kansas Song",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1469,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Kansas Song",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1469,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Kansas Song",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1469,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

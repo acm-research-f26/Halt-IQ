@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8c7595554299585d9e36b6",
+  "split": "test",
+  "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "United States ambassador",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1141,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "United States ambassador",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1148,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "United States ambassador",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1148,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "United States ambassador",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1148,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "United States ambassador",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1148,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "United States ambassador",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1148,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a745a6055429974ef308be4",
+  "question": "Which of the following works was completed first, Something Wicked This Way Comes or The Wind in the Willows?",
+  "ground_truth": "The Wind in the Willows",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3121,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1554,
+          "completion_tokens": 7,
+          "total_tokens": 1561,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.388585583001259,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.308601249998901,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3131,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 7,
+          "total_tokens": 1571,
+          "prompt_tokens_details": {
+            "cached_tokens": 1542
+          }
+        },
+        "seconds": 0.1989829579979414,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555
+          }
+        },
+        "seconds": 0.09500033299991628,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3131,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 7,
+          "total_tokens": 1571,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.1396919170001638,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555
+          }
+        },
+        "seconds": 0.0926967080013128,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3131,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 7,
+          "total_tokens": 1571,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.1425774579984136,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555
+          }
+        },
+        "seconds": 0.09574791700288188,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3131,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 7,
+          "total_tokens": 1571,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.13687112500338117,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555
+          }
+        },
+        "seconds": 0.10097095800301759,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Something Wicked This Way Comes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3131,
+      "writer": {
+        "text": "Something Wicked This Way Comes",
+        "usage": {
+          "prompt_tokens": 1564,
+          "completion_tokens": 7,
+          "total_tokens": 1571,
+          "prompt_tokens_details": {
+            "cached_tokens": 1563
+          }
+        },
+        "seconds": 0.1402425830019638,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1556,
+          "completion_tokens": 4,
+          "total_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555
+          }
+        },
+        "seconds": 0.09040108299814165,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

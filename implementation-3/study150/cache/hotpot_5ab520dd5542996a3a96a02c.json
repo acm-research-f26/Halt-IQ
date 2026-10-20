@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab520dd5542996a3a96a02c",
+  "question": "Which US State, hIstorically dominated by the Republican party from 1860 to 1932 is represented by State Senator George D. Maziarz?",
+  "ground_truth": "New York",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4827,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2410,
+          "completion_tokens": 4,
+          "total_tokens": 2414,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.6260911249992205,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.513423791002424,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4834,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2417,
+          "completion_tokens": 4,
+          "total_tokens": 2421,
+          "prompt_tokens_details": {
+            "cached_tokens": 2398
+          }
+        },
+        "seconds": 0.17682779100141488,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 2408
+          }
+        },
+        "seconds": 0.10245379200205207,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4834,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2417,
+          "completion_tokens": 4,
+          "total_tokens": 2421,
+          "prompt_tokens_details": {
+            "cached_tokens": 2416
+          }
+        },
+        "seconds": 0.10230554200097686,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 2408
+          }
+        },
+        "seconds": 0.1039154999962193,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4834,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2417,
+          "completion_tokens": 4,
+          "total_tokens": 2421,
+          "prompt_tokens_details": {
+            "cached_tokens": 2416
+          }
+        },
+        "seconds": 0.10124970800097799,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 2408
+          }
+        },
+        "seconds": 0.10335658300027717,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4834,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2417,
+          "completion_tokens": 4,
+          "total_tokens": 2421,
+          "prompt_tokens_details": {
+            "cached_tokens": 2416
+          }
+        },
+        "seconds": 0.10125495799729833,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 2408
+          }
+        },
+        "seconds": 0.1027393749973271,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York State",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4834,
+      "writer": {
+        "text": "New York State",
+        "usage": {
+          "prompt_tokens": 2417,
+          "completion_tokens": 4,
+          "total_tokens": 2421,
+          "prompt_tokens_details": {
+            "cached_tokens": 2416
+          }
+        },
+        "seconds": 0.1096724169983645,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2409,
+          "completion_tokens": 4,
+          "total_tokens": 2413,
+          "prompt_tokens_details": {
+            "cached_tokens": 2408
+          }
+        },
+        "seconds": 0.10265849999996135,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

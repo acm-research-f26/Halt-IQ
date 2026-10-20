@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7363ec5542991f29ee2dd7",
+  "question": "The USS Tortuga was named after the Dry Tortugas, a group of desert coral islets 60 miles west of which city with the motto \"One Human Family\"?",
+  "ground_truth": "Key West",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2867,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1431,
+          "completion_tokens": 3,
+          "total_tokens": 1434,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.5627683750062715,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.631575792001968,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2873,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1437,
+          "completion_tokens": 3,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 1419
+          }
+        },
+        "seconds": 0.18762116699508624,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428
+          }
+        },
+        "seconds": 0.1093305419999524,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2873,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1437,
+          "completion_tokens": 3,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 1436
+          }
+        },
+        "seconds": 0.08905541599960998,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428
+          }
+        },
+        "seconds": 0.10612220800248906,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2873,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1437,
+          "completion_tokens": 3,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 1436
+          }
+        },
+        "seconds": 0.08687745899806032,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428
+          }
+        },
+        "seconds": 0.10672295800031861,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2873,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1437,
+          "completion_tokens": 3,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 1436
+          }
+        },
+        "seconds": 0.08619249999901513,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428
+          }
+        },
+        "seconds": 0.10775537500012433,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Key West",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2873,
+      "writer": {
+        "text": "Key West",
+        "usage": {
+          "prompt_tokens": 1437,
+          "completion_tokens": 3,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 1436
+          }
+        },
+        "seconds": 0.0901634159963578,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 4,
+          "total_tokens": 1433,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428
+          }
+        },
+        "seconds": 0.1029530409941799,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8008b95542992097ad2fcf",
+  "question": "The Light Princess was inspired by \"what\" literary tale published by Charles Perrault in 1697?",
+  "ground_truth": "Sleeping Beauty",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3937,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1965,
+          "completion_tokens": 4,
+          "total_tokens": 1969,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.813382875006937,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.4647999160006293,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3944,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1972,
+          "completion_tokens": 4,
+          "total_tokens": 1976,
+          "prompt_tokens_details": {
+            "cached_tokens": 1953
+          }
+        },
+        "seconds": 0.1683434159931494,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 1963
+          }
+        },
+        "seconds": 0.09397737499966752,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3944,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1972,
+          "completion_tokens": 4,
+          "total_tokens": 1976,
+          "prompt_tokens_details": {
+            "cached_tokens": 1971
+          }
+        },
+        "seconds": 0.0978804999977001,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 1963
+          }
+        },
+        "seconds": 0.09668420899834018,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3944,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1972,
+          "completion_tokens": 4,
+          "total_tokens": 1976,
+          "prompt_tokens_details": {
+            "cached_tokens": 1971
+          }
+        },
+        "seconds": 0.10757195900077932,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 1963
+          }
+        },
+        "seconds": 0.1023342499975115,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3944,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1972,
+          "completion_tokens": 4,
+          "total_tokens": 1976,
+          "prompt_tokens_details": {
+            "cached_tokens": 1971
+          }
+        },
+        "seconds": 0.09442362499976298,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 1963
+          }
+        },
+        "seconds": 0.10191133400076069,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Perrault",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3944,
+      "writer": {
+        "text": "Charles Perrault",
+        "usage": {
+          "prompt_tokens": 1972,
+          "completion_tokens": 4,
+          "total_tokens": 1976,
+          "prompt_tokens_details": {
+            "cached_tokens": 1971
+          }
+        },
+        "seconds": 0.10022483400098281,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1964,
+          "completion_tokens": 4,
+          "total_tokens": 1968,
+          "prompt_tokens_details": {
+            "cached_tokens": 1963
+          }
+        },
+        "seconds": 0.09585604099993361,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

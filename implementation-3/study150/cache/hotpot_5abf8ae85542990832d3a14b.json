@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abf8ae85542990832d3a14b",
+  "question": "What empire was Aleksei Gen born into?",
+  "ground_truth": "Russian Empire",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5091,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2543,
+          "completion_tokens": 3,
+          "total_tokens": 2546,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 4.904863167001167,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 4.896451291999256,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5097,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2549,
+          "completion_tokens": 3,
+          "total_tokens": 2552,
+          "prompt_tokens_details": {
+            "cached_tokens": 2531
+          }
+        },
+        "seconds": 0.1799795830011135,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 2540
+          }
+        },
+        "seconds": 0.11212912499468075,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5097,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2549,
+          "completion_tokens": 3,
+          "total_tokens": 2552,
+          "prompt_tokens_details": {
+            "cached_tokens": 2548
+          }
+        },
+        "seconds": 0.09005266699386993,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 2540
+          }
+        },
+        "seconds": 0.1146582080036751,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5097,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2549,
+          "completion_tokens": 3,
+          "total_tokens": 2552,
+          "prompt_tokens_details": {
+            "cached_tokens": 2548
+          }
+        },
+        "seconds": 0.09571270800370257,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 2540
+          }
+        },
+        "seconds": 0.10490762499830453,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5097,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2549,
+          "completion_tokens": 3,
+          "total_tokens": 2552,
+          "prompt_tokens_details": {
+            "cached_tokens": 2548
+          }
+        },
+        "seconds": 0.09401274999981979,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 2540
+          }
+        },
+        "seconds": 0.10917662500287406,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Russian Empire",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5097,
+      "writer": {
+        "text": "Russian Empire",
+        "usage": {
+          "prompt_tokens": 2549,
+          "completion_tokens": 3,
+          "total_tokens": 2552,
+          "prompt_tokens_details": {
+            "cached_tokens": 2548
+          }
+        },
+        "seconds": 0.0914947499986738,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 4,
+          "total_tokens": 2545,
+          "prompt_tokens_details": {
+            "cached_tokens": 2540
+          }
+        },
+        "seconds": 0.1072953340044478,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

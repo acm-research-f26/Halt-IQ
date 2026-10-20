@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8019db5542992097ad2fd5",
+  "question": "How far is Sadie Macdonald's home town from Sydney?",
+  "ground_truth": "300 km north west",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3077,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 5,
+          "total_tokens": 1539,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.969702457994572,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.757850750000216,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3085,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1542,
+          "completion_tokens": 5,
+          "total_tokens": 1547,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.19438895900384523,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.09776312499889173,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3085,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1542,
+          "completion_tokens": 5,
+          "total_tokens": 1547,
+          "prompt_tokens_details": {
+            "cached_tokens": 1541
+          }
+        },
+        "seconds": 0.10698387499724049,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.096287416999985,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3085,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1542,
+          "completion_tokens": 5,
+          "total_tokens": 1547,
+          "prompt_tokens_details": {
+            "cached_tokens": 1541
+          }
+        },
+        "seconds": 0.11045504100184189,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.09020820800651563,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3085,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1542,
+          "completion_tokens": 5,
+          "total_tokens": 1547,
+          "prompt_tokens_details": {
+            "cached_tokens": 1541
+          }
+        },
+        "seconds": 0.10768225000356324,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.09577229100250406,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "300 km",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3085,
+      "writer": {
+        "text": "300 km",
+        "usage": {
+          "prompt_tokens": 1542,
+          "completion_tokens": 5,
+          "total_tokens": 1547,
+          "prompt_tokens_details": {
+            "cached_tokens": 1541
+          }
+        },
+        "seconds": 0.10987037500308361,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1534,
+          "completion_tokens": 4,
+          "total_tokens": 1538,
+          "prompt_tokens_details": {
+            "cached_tokens": 1533
+          }
+        },
+        "seconds": 0.09662933299841825,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

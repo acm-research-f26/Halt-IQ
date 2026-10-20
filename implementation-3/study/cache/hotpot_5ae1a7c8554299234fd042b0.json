@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae1a7c8554299234fd042b0",
+  "question": "Which American anthology horror series created and produced by Ryan Murphy and Brad Falchuk did  Denis O'Hare filmography performance in the first season of ",
+  "ground_truth": "American Horror Story",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2861,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1427,
+          "completion_tokens": 4,
+          "total_tokens": 1431,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.0156838330003666,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.137306707998505,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2868,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 4,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.1507137920052628,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1425
+          }
+        },
+        "seconds": 0.09866175000206567,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2868,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 4,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 1433
+          }
+        },
+        "seconds": 0.09124704200075939,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1425
+          }
+        },
+        "seconds": 0.0904210000007879,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2868,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 4,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 1433
+          }
+        },
+        "seconds": 0.09024254199903226,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1425
+          }
+        },
+        "seconds": 0.09047091700631427,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2868,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 4,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 1433
+          }
+        },
+        "seconds": 0.092300875003275,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1425
+          }
+        },
+        "seconds": 0.092802708997624,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "American Horror Story",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2868,
+      "writer": {
+        "text": "American Horror Story",
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 4,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 1433
+          }
+        },
+        "seconds": 0.09130920799361775,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1426,
+          "completion_tokens": 4,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1425
+          }
+        },
+        "seconds": 0.09351533299923176,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

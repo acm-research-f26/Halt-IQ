@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae4bbf05542995ad6573e32",
+  "question": "Which criminal case filed in Santa Clara County Superior Court did judge Aaron Persky rendered the verdict in",
+  "ground_truth": "People v. Turner",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2795,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 5,
+          "total_tokens": 1398,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.031727540997963,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.9376584169949638,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 5,
+          "total_tokens": 1406,
+          "prompt_tokens_details": {
+            "cached_tokens": 1381
+          }
+        },
+        "seconds": 0.16988154200225836,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.08923391700227512,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 5,
+          "total_tokens": 1406,
+          "prompt_tokens_details": {
+            "cached_tokens": 1400
+          }
+        },
+        "seconds": 0.10669562499970198,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.10049916699790629,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 5,
+          "total_tokens": 1406,
+          "prompt_tokens_details": {
+            "cached_tokens": 1400
+          }
+        },
+        "seconds": 0.11414849999709986,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09372841699951096,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 5,
+          "total_tokens": 1406,
+          "prompt_tokens_details": {
+            "cached_tokens": 1400
+          }
+        },
+        "seconds": 0.1084007500030566,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09310983300383668,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "People v. Turner",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "People v. Turner",
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 5,
+          "total_tokens": 1406,
+          "prompt_tokens_details": {
+            "cached_tokens": 1400
+          }
+        },
+        "seconds": 0.10580104199470952,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 4,
+          "total_tokens": 1397,
+          "prompt_tokens_details": {
+            "cached_tokens": 1392
+          }
+        },
+        "seconds": 0.09344120799505617,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adc368155429944faac2468",
+  "question": "What cartel drug lord with the reputation as \"The King of Cocaine\" partnered with Jack Carlton Reed to provide drugs to the United States in the 20th century?",
+  "ground_truth": "Pablo Escobar",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3501,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1744,
+          "completion_tokens": 7,
+          "total_tokens": 1751,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.066327957996691,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.247564291996241,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1754,
+          "completion_tokens": 7,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1732
+          }
+        },
+        "seconds": 0.2497529160027625,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.10909874999924796,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1754,
+          "completion_tokens": 7,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1753
+          }
+        },
+        "seconds": 0.1550028330020723,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.10430716699920595,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1754,
+          "completion_tokens": 7,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1753
+          }
+        },
+        "seconds": 0.16125720900163287,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.10801220799476141,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1754,
+          "completion_tokens": 7,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1753
+          }
+        },
+        "seconds": 0.1659698329967796,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.11169095800141804,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Carlos Enrique Lehder Rivas",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "Carlos Enrique Lehder Rivas",
+        "usage": {
+          "prompt_tokens": 1754,
+          "completion_tokens": 7,
+          "total_tokens": 1761,
+          "prompt_tokens_details": {
+            "cached_tokens": 1753
+          }
+        },
+        "seconds": 0.16748037499928614,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 4,
+          "total_tokens": 1750,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.11744433299463708,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

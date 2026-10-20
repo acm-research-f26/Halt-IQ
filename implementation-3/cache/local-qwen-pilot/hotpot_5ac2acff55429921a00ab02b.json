@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ac2acff55429921a00ab02b",
+  "split": "train",
+  "question": "who is the younger brother of The episode guest stars of The Hard Easy",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1111,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1119,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1119,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1119,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1119,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Brian Doyle-Murray",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1119,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

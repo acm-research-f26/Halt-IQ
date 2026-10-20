@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae73acb5542991e8301cc07",
+  "split": "train",
+  "question": "D1NZ is a series based on what oversteering technique?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1561,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1609,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1609,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1609,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1609,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "D1NZ is a series based on the drifting technique of oversteering, where the driver intentionally oversteers the car to cause a loss of traction in the rear wheels or all tires, maintaining control through the corner.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1609,
+      "quality": 0.06666666666666667,
+      "answer_em": 0.0
+    }
+  ]
+}

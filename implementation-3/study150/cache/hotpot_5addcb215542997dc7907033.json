@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5addcb215542997dc7907033",
+  "question": "Which late 1980s and 1990s English super model was featured in the song nasty girl by The Notorious B.I.G.?",
+  "ground_truth": "Naomi Elaine Campbell",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4821,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2407,
+          "completion_tokens": 4,
+          "total_tokens": 2411,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.8306500839971704,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.711201832993538,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4828,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 4,
+          "total_tokens": 2418,
+          "prompt_tokens_details": {
+            "cached_tokens": 2395
+          }
+        },
+        "seconds": 0.17004291599732824,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 2405
+          }
+        },
+        "seconds": 0.09762145799322752,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4828,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 4,
+          "total_tokens": 2418,
+          "prompt_tokens_details": {
+            "cached_tokens": 2413
+          }
+        },
+        "seconds": 0.099043125002936,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 2405
+          }
+        },
+        "seconds": 0.0994045420011389,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4828,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 4,
+          "total_tokens": 2418,
+          "prompt_tokens_details": {
+            "cached_tokens": 2413
+          }
+        },
+        "seconds": 0.1026970840030117,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 2405
+          }
+        },
+        "seconds": 0.10266808299638797,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4828,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 4,
+          "total_tokens": 2418,
+          "prompt_tokens_details": {
+            "cached_tokens": 2413
+          }
+        },
+        "seconds": 0.0968617920007091,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 2405
+          }
+        },
+        "seconds": 0.09991712500050198,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naomi Campbell",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.8,
+      "answer_em": 0.0,
+      "tokens": 4828,
+      "writer": {
+        "text": "Naomi Campbell",
+        "usage": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 4,
+          "total_tokens": 2418,
+          "prompt_tokens_details": {
+            "cached_tokens": 2413
+          }
+        },
+        "seconds": 0.09917683299863711,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2406,
+          "completion_tokens": 4,
+          "total_tokens": 2410,
+          "prompt_tokens_details": {
+            "cached_tokens": 2405
+          }
+        },
+        "seconds": 0.0963904160016682,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

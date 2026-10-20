@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7f62405542992e7d278cf0",
+  "question": "What was the name of the publisher who published \"Finnegans Wake\" in 1939 by James Joyce",
+  "ground_truth": "Teriade",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 3,
+          "total_tokens": 1419,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.9964144159966963,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.03995758399833,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1422,
+          "completion_tokens": 3,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 1404
+          }
+        },
+        "seconds": 0.1391198749988689,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 1413
+          }
+        },
+        "seconds": 0.09079583299899241,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1422,
+          "completion_tokens": 3,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 1421
+          }
+        },
+        "seconds": 0.0760032499965746,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 1413
+          }
+        },
+        "seconds": 0.09040329100389499,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1422,
+          "completion_tokens": 3,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 1421
+          }
+        },
+        "seconds": 0.07663654199859593,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 1413
+          }
+        },
+        "seconds": 0.0913121669946122,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1422,
+          "completion_tokens": 3,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 1421
+          }
+        },
+        "seconds": 0.09219891599786934,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 1413
+          }
+        },
+        "seconds": 0.08752737499889918,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Verve",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Verve",
+        "usage": {
+          "prompt_tokens": 1422,
+          "completion_tokens": 3,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 1421
+          }
+        },
+        "seconds": 0.07466454099630937,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1414,
+          "completion_tokens": 4,
+          "total_tokens": 1418,
+          "prompt_tokens_details": {
+            "cached_tokens": 1413
+          }
+        },
+        "seconds": 0.08929262500168988,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

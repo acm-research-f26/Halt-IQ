@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a90937955429933b8a20568",
+  "question": "The father of Manning Marius Kimmel retired from the Navy in what year?",
+  "ground_truth": "1942",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3435,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 5,
+          "total_tokens": 1718,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.513021041995671,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.493899290995614,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3443,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1721,
+          "completion_tokens": 5,
+          "total_tokens": 1726,
+          "prompt_tokens_details": {
+            "cached_tokens": 1701
+          }
+        },
+        "seconds": 0.16747983299865155,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 1712
+          }
+        },
+        "seconds": 0.0933348329999717,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3443,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1721,
+          "completion_tokens": 5,
+          "total_tokens": 1726,
+          "prompt_tokens_details": {
+            "cached_tokens": 1720
+          }
+        },
+        "seconds": 0.11169808299746364,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 1712
+          }
+        },
+        "seconds": 0.09291687500081025,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3443,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1721,
+          "completion_tokens": 5,
+          "total_tokens": 1726,
+          "prompt_tokens_details": {
+            "cached_tokens": 1720
+          }
+        },
+        "seconds": 0.10545366600126727,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 1712
+          }
+        },
+        "seconds": 0.0924947079984122,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3443,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1721,
+          "completion_tokens": 5,
+          "total_tokens": 1726,
+          "prompt_tokens_details": {
+            "cached_tokens": 1720
+          }
+        },
+        "seconds": 0.10673254200082738,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 1712
+          }
+        },
+        "seconds": 0.0913308750023134,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1916",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3443,
+      "writer": {
+        "text": "1916",
+        "usage": {
+          "prompt_tokens": 1721,
+          "completion_tokens": 5,
+          "total_tokens": 1726,
+          "prompt_tokens_details": {
+            "cached_tokens": 1720
+          }
+        },
+        "seconds": 0.10538070800248533,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1713,
+          "completion_tokens": 4,
+          "total_tokens": 1717,
+          "prompt_tokens_details": {
+            "cached_tokens": 1712
+          }
+        },
+        "seconds": 0.09147674999985611,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

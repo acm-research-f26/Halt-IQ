@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae0361155429925eb1afc2c",
+  "split": "test",
+  "question": "Which  French ace pilot and adventurer fly L'Oiseau Blanc",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1491,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1504,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1504,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1504,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1504,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergent Paul Joannes Sauvage",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1504,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

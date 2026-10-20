@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abffc0d5542990832d3a1e2",
+  "question": "What instrument of war was only used by the President of the United States who was born in Lamar, Missouri?",
+  "ground_truth": "nuclear weapons",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3375,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1684,
+          "completion_tokens": 4,
+          "total_tokens": 1688,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.025786125006562,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.917722917001811,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3382,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 4,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 1672
+          }
+        },
+        "seconds": 0.2518315419947612,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.1299472499958938,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3382,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 4,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.1288396250020014,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.13297208299627528,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3382,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 4,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.13653679100389127,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.13282579199585598,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3382,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 4,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.13190579199726926,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.17063216699898476,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "bubble sextant",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3382,
+      "writer": {
+        "text": "bubble sextant",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 4,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.13116124999942258,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.12974658299935982,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

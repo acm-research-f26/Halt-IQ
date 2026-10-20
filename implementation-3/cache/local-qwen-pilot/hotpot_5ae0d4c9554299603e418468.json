@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae0d4c9554299603e418468",
+  "split": "test",
+  "question": "Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the administration of a president that served during what years?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1969-1974",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1533,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1969-1974",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1546,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1969-1974",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1546,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1969-1974",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1546,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1969-1974",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1546,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1969-1974",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1546,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

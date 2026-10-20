@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a85fe2f5542996432c57165",
+  "question": "What 2014 Academy Award winner guest starred in \"Emanuelle Goes to Dinosaur Land?",
+  "ground_truth": "Julianne Moore",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3565,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1780,
+          "completion_tokens": 3,
+          "total_tokens": 1783,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.786239167005988,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.6396807499986608,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3571,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 3,
+          "total_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1768
+          }
+        },
+        "seconds": 0.13425129100505728,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 1777
+          }
+        },
+        "seconds": 0.09174587500456255,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3571,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 3,
+          "total_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.07673358399915742,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 1777
+          }
+        },
+        "seconds": 0.09004683300008764,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3571,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 3,
+          "total_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.07486108299781336,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 1777
+          }
+        },
+        "seconds": 0.09160749999864493,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3571,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 3,
+          "total_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.07487316599872429,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 1777
+          }
+        },
+        "seconds": 0.08889187500608386,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "John Anderson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3571,
+      "writer": {
+        "text": "John Anderson",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 3,
+          "total_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.07484533300157636,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 4,
+          "total_tokens": 1782,
+          "prompt_tokens_details": {
+            "cached_tokens": 1777
+          }
+        },
+        "seconds": 0.08935916700283997,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

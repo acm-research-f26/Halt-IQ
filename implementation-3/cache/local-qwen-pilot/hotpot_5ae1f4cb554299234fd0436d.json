@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae1f4cb554299234fd0436d",
+  "split": "train",
+  "question": "What is the inhabitant of the city where  122nd SS-Standarte was formed in2014",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The inhabitant of the city where the 122nd SS-Standarte was formed in 2014 is Strasbourg.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1417,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Strasbourg",
+      "distance": 0.9166666666666666,
+      "critic_approved": true,
+      "tokens": 1395,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Strasbourg",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1369,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Strasbourg",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1369,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Strasbourg",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1369,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Strasbourg",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1369,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

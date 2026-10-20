@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a728dc65542992359bc30ef",
+  "question": "What fellow Turkish footballer did Darko Kova\u010devi\u0107 form an offensive partnership with during his tenure at Real Sociedad?",
+  "ground_truth": "Nihat Kahveci",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2735,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1362,
+          "completion_tokens": 6,
+          "total_tokens": 1368,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.184001541994803,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.37441645799845,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2744,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1371,
+          "completion_tokens": 6,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "cached_tokens": 1350
+          }
+        },
+        "seconds": 0.20024008300242713,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 1362
+          }
+        },
+        "seconds": 0.09302512500289595,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2744,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1371,
+          "completion_tokens": 6,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "cached_tokens": 1370
+          }
+        },
+        "seconds": 0.12110566699993797,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 1362
+          }
+        },
+        "seconds": 0.09001037500274833,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2744,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1371,
+          "completion_tokens": 6,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "cached_tokens": 1370
+          }
+        },
+        "seconds": 0.12403283300227486,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 1362
+          }
+        },
+        "seconds": 0.09264724999957252,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2744,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1371,
+          "completion_tokens": 6,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "cached_tokens": 1370
+          }
+        },
+        "seconds": 0.12925408300361596,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 1362
+          }
+        },
+        "seconds": 0.09134058400377398,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Adnan Januzaj",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2744,
+      "writer": {
+        "text": "Adnan Januzaj",
+        "usage": {
+          "prompt_tokens": 1371,
+          "completion_tokens": 6,
+          "total_tokens": 1377,
+          "prompt_tokens_details": {
+            "cached_tokens": 1370
+          }
+        },
+        "seconds": 0.12091633399541024,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 4,
+          "total_tokens": 1367,
+          "prompt_tokens_details": {
+            "cached_tokens": 1362
+          }
+        },
+        "seconds": 0.09430970800167415,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

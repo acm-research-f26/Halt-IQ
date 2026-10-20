@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a80840f554299485f59863b",
+  "split": "train",
+  "question": "What WB supernatrual drama series was Jawbreaker star Rose Mcgowan best known for being in?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Charmed",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 955,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Charmed",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 961,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Charmed",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 961,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Charmed",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 961,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Charmed",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 961,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Charmed",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 961,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

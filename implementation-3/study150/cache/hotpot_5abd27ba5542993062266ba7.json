@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abd27ba5542993062266ba7",
+  "question": "What intrusment did Jem Finer play in the band The Pogues?",
+  "ground_truth": "banjo player",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2175,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1067,
+          "completion_tokens": 21,
+          "total_tokens": 1088,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.783080749999499,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.5158435000048485,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2198,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 21,
+          "total_tokens": 1111,
+          "prompt_tokens_details": {
+            "cached_tokens": 1055
+          }
+        },
+        "seconds": 0.45181954099825816,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1082
+          }
+        },
+        "seconds": 0.08842729100433644,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2198,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 21,
+          "total_tokens": 1111,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.3394797919972916,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1082
+          }
+        },
+        "seconds": 0.08747987500100862,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2198,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 21,
+          "total_tokens": 1111,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.34503187499649357,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1082
+          }
+        },
+        "seconds": 0.08744308400491718,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2198,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 21,
+          "total_tokens": 1111,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.33601708299829625,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1082
+          }
+        },
+        "seconds": 0.0886903339996934,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2198,
+      "writer": {
+        "text": "Jem Finer played a significant role in The Pogues, particularly as a founding member.",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 21,
+          "total_tokens": 1111,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.33838433300115867,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1083,
+          "completion_tokens": 4,
+          "total_tokens": 1087,
+          "prompt_tokens_details": {
+            "cached_tokens": 1082
+          }
+        },
+        "seconds": 0.08694858299713815,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

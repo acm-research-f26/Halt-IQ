@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5abbf698554299114383a0b5",
+  "split": "test",
+  "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The English Electric Canberra is the British first-generation jet-powered medium bomber used in the South West Pacific theatre of World War II.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1627,
+      "quality": 0.2727272727272727,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The English Electric Canberra",
+      "distance": 0.8421052631578947,
+      "critic_approved": true,
+      "tokens": 1613,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The English Electric Canberra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1593,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The English Electric Canberra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1593,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The English Electric Canberra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1593,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The English Electric Canberra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1593,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

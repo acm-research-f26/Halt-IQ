@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae37c765542992f92d822d4",
+  "split": "test",
+  "question": "What was the name of the 1996 loose adaptation of William Shakespeare's \"Romeo & Juliet\" written by James Gunn?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1189,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1198,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1198,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1198,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1198,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Tromeo and Juliet",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1198,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

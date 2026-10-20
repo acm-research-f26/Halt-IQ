@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab29c24554299449642c932",
+  "split": "dev",
+  "question": "Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1059,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1080,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1080,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1080,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1080,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, Giuseppe Verdi and Charles Louis Ambroise Thomas are both opera composers.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1080,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

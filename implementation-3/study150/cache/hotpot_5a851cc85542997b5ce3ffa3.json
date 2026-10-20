@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a851cc85542997b5ce3ffa3",
+  "question": "Are both French Spaniel and Beagle universally recognized breeds?",
+  "ground_truth": "no",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3023,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1496,
+          "completion_tokens": 16,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.1154170830050134,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.869107582999277,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3041,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 16,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.372920082998462,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.10268950000318,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3041,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 16,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1513
+          }
+        },
+        "seconds": 0.28724774999864167,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.09469158400315791,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3041,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 16,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1513
+          }
+        },
+        "seconds": 0.2889090419994318,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.1001772500021616,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3041,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 16,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1513
+          }
+        },
+        "seconds": 0.30214325000270037,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.09812512499775039,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3041,
+      "writer": {
+        "text": "No, not both French Spaniel and Beagle are universally recognized breeds.",
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 16,
+          "total_tokens": 1530,
+          "prompt_tokens_details": {
+            "cached_tokens": 1513
+          }
+        },
+        "seconds": 0.28981854199810186,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 4,
+          "total_tokens": 1511,
+          "prompt_tokens_details": {
+            "cached_tokens": 1506
+          }
+        },
+        "seconds": 0.09884845800115727,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

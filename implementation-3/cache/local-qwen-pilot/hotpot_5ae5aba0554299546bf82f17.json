@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae5aba0554299546bf82f17",
+  "split": "test",
+  "question": "Which of Tara Strong major voice role in animated series is an American animated television series based on the DC Comics fictional superhero team, the \"Teen Titans\"?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tara Strong",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1003,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Tara Strong",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1010,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Tara Strong",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1010,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Tara Strong",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1010,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Tara Strong",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1010,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Tara Strong",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1010,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

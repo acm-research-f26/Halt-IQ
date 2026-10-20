@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abbd3b4554299642a094b4f",
+  "question": "What sort of dog did the same man who cared for the living gift that Martin Bormann gave Hitler have?",
+  "ground_truth": "dachshund",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2859,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1427,
+          "completion_tokens": 3,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.6045169579956564,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.6780526250004186,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2865,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 3,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.1521411249996163,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.09584041599737247,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2865,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 3,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1432
+          }
+        },
+        "seconds": 0.08282591700117337,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.09523316699778661,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2865,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 3,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1432
+          }
+        },
+        "seconds": 0.07654520800133469,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.09537737500068033,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2865,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 3,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1432
+          }
+        },
+        "seconds": 0.08013308299996424,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.09468604099674849,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "German Shepherd",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2865,
+      "writer": {
+        "text": "German Shepherd",
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 3,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1432
+          }
+        },
+        "seconds": 0.0779340829976718,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 4,
+          "total_tokens": 1429,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.09254887499992037,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

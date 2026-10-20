@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a90b7f355429916514e752d",
+  "question": "In which city did he painter and printmaker associated with \"Les Nabis\" found Salon d'Automne?",
+  "ground_truth": "Paris",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3375,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1681,
+          "completion_tokens": 7,
+          "total_tokens": 1688,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.430804375006119,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.4385764159960672,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 7,
+          "total_tokens": 1698,
+          "prompt_tokens_details": {
+            "cached_tokens": 1669
+          }
+        },
+        "seconds": 0.20468362500105286,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.09545404100208543,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 7,
+          "total_tokens": 1698,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.14271999999618856,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.09387349999451544,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 7,
+          "total_tokens": 1698,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.13985500000126194,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.094831875001546,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 7,
+          "total_tokens": 1698,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.1534932079957798,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.09120024999720044,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Salon d'Automne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3385,
+      "writer": {
+        "text": "Salon d'Automne",
+        "usage": {
+          "prompt_tokens": 1691,
+          "completion_tokens": 7,
+          "total_tokens": 1698,
+          "prompt_tokens_details": {
+            "cached_tokens": 1690
+          }
+        },
+        "seconds": 0.1369412080020993,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1683,
+          "completion_tokens": 4,
+          "total_tokens": 1687,
+          "prompt_tokens_details": {
+            "cached_tokens": 1682
+          }
+        },
+        "seconds": 0.09126445800211513,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

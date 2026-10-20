@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a80b8845542992bc0c4a7de",
+  "question": "In regards to the 2015 animation film based on The True Meaning of Smekday, who produced a song that was sung by a Barbadian?",
+  "ground_truth": "Stargate",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3229,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1612,
+          "completion_tokens": 3,
+          "total_tokens": 1615,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.319353290993604,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.3225457910011755,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3235,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1618,
+          "completion_tokens": 3,
+          "total_tokens": 1621,
+          "prompt_tokens_details": {
+            "cached_tokens": 1600
+          }
+        },
+        "seconds": 0.1478647500043735,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 1609
+          }
+        },
+        "seconds": 0.09253895800065948,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3235,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1618,
+          "completion_tokens": 3,
+          "total_tokens": 1621,
+          "prompt_tokens_details": {
+            "cached_tokens": 1617
+          }
+        },
+        "seconds": 0.07669366600021021,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 1609
+          }
+        },
+        "seconds": 0.09344425000017509,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3235,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1618,
+          "completion_tokens": 3,
+          "total_tokens": 1621,
+          "prompt_tokens_details": {
+            "cached_tokens": 1617
+          }
+        },
+        "seconds": 0.07732137499988312,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 1609
+          }
+        },
+        "seconds": 0.09000516699597938,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3235,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1618,
+          "completion_tokens": 3,
+          "total_tokens": 1621,
+          "prompt_tokens_details": {
+            "cached_tokens": 1617
+          }
+        },
+        "seconds": 0.07510500000353204,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 1609
+          }
+        },
+        "seconds": 0.0897207919988432,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Rihanna",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3235,
+      "writer": {
+        "text": "Rihanna",
+        "usage": {
+          "prompt_tokens": 1618,
+          "completion_tokens": 3,
+          "total_tokens": 1621,
+          "prompt_tokens_details": {
+            "cached_tokens": 1617
+          }
+        },
+        "seconds": 0.07785741699626669,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 4,
+          "total_tokens": 1614,
+          "prompt_tokens_details": {
+            "cached_tokens": 1609
+          }
+        },
+        "seconds": 0.11351862499577692,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

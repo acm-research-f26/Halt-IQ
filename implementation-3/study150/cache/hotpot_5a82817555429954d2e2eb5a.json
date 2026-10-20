@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a82817555429954d2e2eb5a",
+  "question": "Which film does \"Naked Weapon\" follow in the \"Naked\" series?",
+  "ground_truth": "\"Naked Killer\"",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2977,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.1609549580025487,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.1036633330004406,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2984,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 1473
+          }
+        },
+        "seconds": 0.15409925000130897,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.0917489579951507,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2984,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 1491
+          }
+        },
+        "seconds": 0.08953333400131669,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.09022650000406429,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2984,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 1491
+          }
+        },
+        "seconds": 0.09163387499575038,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.09193900000536814,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2984,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 1491
+          }
+        },
+        "seconds": 0.09502966600120999,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.09164099999907194,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Naked Soldier",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2984,
+      "writer": {
+        "text": "Naked Soldier",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 1491
+          }
+        },
+        "seconds": 0.0901176250044955,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 4,
+          "total_tokens": 1488,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.09060512500582263,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

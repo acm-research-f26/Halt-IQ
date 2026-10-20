@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae406f055429970de88d874",
+  "question": "What Cason, CA soccer team features the son of Roy Lassiter?",
+  "ground_truth": "LA Galaxy",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1399,
+          "completion_tokens": 3,
+          "total_tokens": 1402,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.9543380830000388,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.8930188340018503,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1405,
+          "completion_tokens": 3,
+          "total_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1387
+          }
+        },
+        "seconds": 0.15638954099995317,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.09629237499757437,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1405,
+          "completion_tokens": 3,
+          "total_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1404
+          }
+        },
+        "seconds": 0.07934479200048372,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.09685108299890999,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1405,
+          "completion_tokens": 3,
+          "total_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1404
+          }
+        },
+        "seconds": 0.07914249999885214,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.09625745900120819,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1405,
+          "completion_tokens": 3,
+          "total_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1404
+          }
+        },
+        "seconds": 0.07862091599963605,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.0962586250025197,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chicago Slovak",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2809,
+      "writer": {
+        "text": "Chicago Slovak",
+        "usage": {
+          "prompt_tokens": 1405,
+          "completion_tokens": 3,
+          "total_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1404
+          }
+        },
+        "seconds": 0.07924195799569134,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.09789787499903468,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

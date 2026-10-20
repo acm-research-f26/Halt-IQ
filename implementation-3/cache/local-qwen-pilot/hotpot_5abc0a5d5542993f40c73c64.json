@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5abc0a5d5542993f40c73c64",
+  "split": "train",
+  "question": "Are Freakonomics and In the Realm of the Hackers both American documentaries?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1357,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "No",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1362,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "No",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1362,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "No",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1362,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "No",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1362,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "No",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1362,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

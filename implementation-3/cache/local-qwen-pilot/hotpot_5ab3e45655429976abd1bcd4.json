@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab3e45655429976abd1bcd4",
+  "split": "test",
+  "question": "The Vermont Catamounts men's soccer team currently competes in a conference that was formerly known as what from 1988 to 1996?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "North Atlantic Conference",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1059,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "North Atlantic Conference",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1066,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "North Atlantic Conference",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1066,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "North Atlantic Conference",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1066,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "North Atlantic Conference",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1066,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "North Atlantic Conference",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1066,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

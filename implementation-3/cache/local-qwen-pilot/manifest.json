@@ -1,0 +1,9 @@
+{
+  "source": "live",
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+  "max_rounds": 6,
+  "distance_kind": "lexical_jaccard_proxy",
+  "reward_metric": "answer_f1",
+  "dataset_sha256": "a7b2936eef4331737b748111d701822316eeedb4bef64eb8e0fecd987ad91264"
+}

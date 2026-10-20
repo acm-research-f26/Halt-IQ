@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab51dae5542991779162d82",
+  "split": "train",
+  "question": "Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1327,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1364,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1364,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1364,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1364,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Elko Regional Airport and Gerald R. Ford International Airport are not located in Michigan. Bishop International Airport in Flint, Michigan, is the one located in Michigan.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1364,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

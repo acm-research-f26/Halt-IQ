@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae1b1aa5542997283cd223f",
+  "question": "What was the other Los Angeles team that the 1999 Clippers top draft pick played for and won two championships with?",
+  "ground_truth": "Los Angeles Lakers",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.23076923076923078,
+      "answer_em": 0.0,
+      "tokens": 4943,
+      "writer": {
+        "text": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",
+        "usage": {
+          "prompt_tokens": 2437,
+          "completion_tokens": 35,
+          "total_tokens": 2472,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 5.131728291999025,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2467,
+          "completion_tokens": 4,
+          "total_tokens": 2471,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 4.744792624995171,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Lakers",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4918,
+      "writer": {
+        "text": "Los Angeles Lakers",
+        "usage": {
+          "prompt_tokens": 2474,
+          "completion_tokens": 4,
+          "total_tokens": 2478,
+          "prompt_tokens_details": {
+            "cached_tokens": 2425
+          }
+        },
+        "seconds": 0.2541774589990382,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2436,
+          "completion_tokens": 4,
+          "total_tokens": 2440,
+          "prompt_tokens_details": {
+            "cached_tokens": 2427
+          }
+        },
+        "seconds": 0.1869169999990845,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with is the Los Angeles Lakers.",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 0.23076923076923078,
+      "answer_em": 0.0,
+      "tokens": 4950,
+      "writer": {
+        "text": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with is the Los Angeles Lakers.",
+        "usage": {
+          "prompt_tokens": 2444,
+          "completion_tokens": 35,
+          "total_tokens": 2479,
+          "prompt_tokens_details": {
+            "cached_tokens": 2426
+          }
+        },
+        "seconds": 0.6943865419962094,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2467,
+          "completion_tokens": 4,
+          "total_tokens": 2471,
+          "prompt_tokens_details": {
+            "cached_tokens": 2455
+          }
+        },
+        "seconds": 0.1766658330016071,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Lakers",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4918,
+      "writer": {
+        "text": "Los Angeles Lakers",
+        "usage": {
+          "prompt_tokens": 2474,
+          "completion_tokens": 4,
+          "total_tokens": 2478,
+          "prompt_tokens_details": {
+            "cached_tokens": 2454
+          }
+        },
+        "seconds": 0.17573008400358958,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2436,
+          "completion_tokens": 4,
+          "total_tokens": 2440,
+          "prompt_tokens_details": {
+            "cached_tokens": 2435
+          }
+        },
+        "seconds": 0.10583637499803444,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with is the Los Angeles Lakers.",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 0.23076923076923078,
+      "answer_em": 0.0,
+      "tokens": 4950,
+      "writer": {
+        "text": "The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with is the Los Angeles Lakers.",
+        "usage": {
+          "prompt_tokens": 2444,
+          "completion_tokens": 35,
+          "total_tokens": 2479,
+          "prompt_tokens_details": {
+            "cached_tokens": 2443
+          }
+        },
+        "seconds": 0.6321494580042781,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2467,
+          "completion_tokens": 4,
+          "total_tokens": 2471,
+          "prompt_tokens_details": {
+            "cached_tokens": 2466
+          }
+        },
+        "seconds": 0.10969862499769079,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Los Angeles Lakers",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4918,
+      "writer": {
+        "text": "Los Angeles Lakers",
+        "usage": {
+          "prompt_tokens": 2474,
+          "completion_tokens": 4,
+          "total_tokens": 2478,
+          "prompt_tokens_details": {
+            "cached_tokens": 2473
+          }
+        },
+        "seconds": 0.10568029199930606,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2436,
+          "completion_tokens": 4,
+          "total_tokens": 2440,
+          "prompt_tokens_details": {
+            "cached_tokens": 2435
+          }
+        },
+        "seconds": 0.10227991700230632,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

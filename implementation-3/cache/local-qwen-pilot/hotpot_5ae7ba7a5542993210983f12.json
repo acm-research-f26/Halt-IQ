@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae7ba7a5542993210983f12",
+  "split": "test",
+  "question": "What is the name of the singer who's song was released as the lead single from the album \"Confessions\", and that had popular song stuck behind for eight consecutive weeks?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1900,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "\"Feel Good Inc\"",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

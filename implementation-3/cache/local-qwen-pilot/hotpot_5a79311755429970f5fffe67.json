@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a79311755429970f5fffe67",
+  "split": "test",
+  "question": "A Japanese manga series based on a 16 year old high school student Ichitaka Seto, is written and illustrated by someone born in what year?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1962",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1475,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1962",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1483,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1962",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1483,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1962",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1483,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1962",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1483,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1962",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1483,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

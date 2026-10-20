@@ -1,0 +1,40 @@
+{
+  "questions": 150,
+  "rounds": 900,
+  "successful_logged_calls": 1800,
+  "failed_logged_calls": 0,
+  "all_successful_collection_tokens": 2758855,
+  "all_successful_request_seconds": 1129.580565397926,
+  "finish_reasons": {
+    "stop": 1800
+  },
+  "test_type_counts": {
+    "bridge": 61,
+    "comparison": 19
+  },
+  "test_first_round_approved": 78,
+  "test_any_later_improvement": 4,
+  "test_final_vs_first": {
+    "same": 76,
+    "better": 4
+  },
+  "learned_stop_histograms": {
+    "0": {
+      "1": 80
+    },
+    "1": {
+      "1": 80
+    },
+    "2": {
+      "1": 80
+    },
+    "3": {
+      "1": 80
+    },
+    "4": {
+      "1": 80
+    }
+  },
+  "score_parity": "All 900 rounds match official HotpotQA answer scorer",
+  "note": "Collection totals include full six-round generation for all splits, not policy savings; replay timing remains a prefix proxy."
+}

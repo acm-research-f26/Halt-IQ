@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8d841955429941ae14dfe6",
+  "question": "Who plays in both The True Adventures of Wolfboy and \"The Knick\"?",
+  "ground_truth": "Eve Hewson",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2073,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 5,
+          "total_tokens": 1037,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.720000749999599,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.737795000000915,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2081,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1040,
+          "completion_tokens": 5,
+          "total_tokens": 1045,
+          "prompt_tokens_details": {
+            "cached_tokens": 1020
+          }
+        },
+        "seconds": 0.17720491599902743,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.08901791600510478,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2081,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1040,
+          "completion_tokens": 5,
+          "total_tokens": 1045,
+          "prompt_tokens_details": {
+            "cached_tokens": 1039
+          }
+        },
+        "seconds": 0.10300320899841608,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09146345799672417,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2081,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1040,
+          "completion_tokens": 5,
+          "total_tokens": 1045,
+          "prompt_tokens_details": {
+            "cached_tokens": 1039
+          }
+        },
+        "seconds": 0.10411362499871757,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09205174999806331,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2081,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1040,
+          "completion_tokens": 5,
+          "total_tokens": 1045,
+          "prompt_tokens_details": {
+            "cached_tokens": 1039
+          }
+        },
+        "seconds": 0.10746237500279676,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09022208299575141,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Eve Hewson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2081,
+      "writer": {
+        "text": "Eve Hewson",
+        "usage": {
+          "prompt_tokens": 1040,
+          "completion_tokens": 5,
+          "total_tokens": 1045,
+          "prompt_tokens_details": {
+            "cached_tokens": 1039
+          }
+        },
+        "seconds": 0.10605679199943552,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09107224999752361,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adc93a4554299438c868e01",
+  "question": "After whom was the area, where  The Phillips Collection is located, named ?",
+  "ground_truth": "Samuel Francis Du Pont.",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2461,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.020995999999286,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.191241708002053,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2468,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 4,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.16637433299911208,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.0914755419944413,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2468,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 4,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.09243491700181039,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.09165379199839663,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2468,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 4,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.09227275000012014,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.09318295800039778,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2468,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 4,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.08644362500490388,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.08710558300663251,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Dupont Circle",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2468,
+      "writer": {
+        "text": "Dupont Circle",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 4,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.09280929100350477,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.09042612500343239,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

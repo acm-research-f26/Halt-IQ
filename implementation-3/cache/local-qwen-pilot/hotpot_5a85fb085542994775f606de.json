@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a85fb085542994775f606de",
+  "split": "test",
+  "question": "What is the name of the executive producer of the film that has a score composed by Jerry Goldsmith?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Gordon Carroll",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1421,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gordon Carroll",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1428,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gordon Carroll",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1428,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gordon Carroll",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1428,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gordon Carroll",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1428,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gordon Carroll",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1428,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a80274e5542992e7d278dfb",
+  "question": "Follow the Yellow Brick Road Tour is taking place to commemorate the album that was recorded where?",
+  "ground_truth": "Ch\u00e2teau d'H\u00e9rouville",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2967,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1482,
+          "completion_tokens": 2,
+          "total_tokens": 1484,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.2206600830031675,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.10529683400091,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2972,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1487,
+          "completion_tokens": 2,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1470
+          }
+        },
+        "seconds": 0.12164191699412186,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 1478
+          }
+        },
+        "seconds": 0.08966058299847646,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2972,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1487,
+          "completion_tokens": 2,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1486
+          }
+        },
+        "seconds": 0.061604250004165806,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 1478
+          }
+        },
+        "seconds": 0.09484462500404334,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2972,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1487,
+          "completion_tokens": 2,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1486
+          }
+        },
+        "seconds": 0.07019866600603564,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 1478
+          }
+        },
+        "seconds": 0.11148191699612653,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2972,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1487,
+          "completion_tokens": 2,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1486
+          }
+        },
+        "seconds": 0.06117512500350131,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 1478
+          }
+        },
+        "seconds": 0.09520620800321922,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "France",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2972,
+      "writer": {
+        "text": "France",
+        "usage": {
+          "prompt_tokens": 1487,
+          "completion_tokens": 2,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1486
+          }
+        },
+        "seconds": 0.06286741700023413,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1479,
+          "completion_tokens": 4,
+          "total_tokens": 1483,
+          "prompt_tokens_details": {
+            "cached_tokens": 1478
+          }
+        },
+        "seconds": 0.09276649999810616,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

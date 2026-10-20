@@ -1,0 +1,3 @@
+# CPU verification only; not the full GPU training environment.
+numpy==2.4.3
+torch==2.14.0

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a87ab905542996e4f3088c1",
+  "split": "test",
+  "question": "The arena where the Lewiston Maineiacs played their home games can seat how many people?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "4,000",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1173,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1182,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1182,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1182,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1182,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1182,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a86ab7755429960ec39b6bf",
+  "question": "What genre is the novel from which the fast-food restaurant specializing in seafood derives its name?",
+  "ground_truth": "an adventure novel",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2363,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1156,
+          "completion_tokens": 26,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.222944291999738,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.988682458002586,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2391,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1184,
+          "completion_tokens": 26,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 1144
+          }
+        },
+        "seconds": 0.5516027919948101,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 1176
+          }
+        },
+        "seconds": 0.09199995800008764,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2391,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1184,
+          "completion_tokens": 26,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 1183
+          }
+        },
+        "seconds": 0.42224358300154563,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 1176
+          }
+        },
+        "seconds": 0.09141749999980675,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2391,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1184,
+          "completion_tokens": 26,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 1183
+          }
+        },
+        "seconds": 0.41624508300446905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 1176
+          }
+        },
+        "seconds": 0.08858258299733279,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2391,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1184,
+          "completion_tokens": 26,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 1183
+          }
+        },
+        "seconds": 0.41694470799848204,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 1176
+          }
+        },
+        "seconds": 0.08857020799769089,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.09999999999999999,
+      "answer_em": 0.0,
+      "tokens": 2391,
+      "writer": {
+        "text": "The novel from which the fast-food restaurant specializing in seafood derives its name is \"Treasure Island\" by Robert Louis Stevenson.",
+        "usage": {
+          "prompt_tokens": 1184,
+          "completion_tokens": 26,
+          "total_tokens": 1210,
+          "prompt_tokens_details": {
+            "cached_tokens": 1183
+          }
+        },
+        "seconds": 0.4253117500047665,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 4,
+          "total_tokens": 1181,
+          "prompt_tokens_details": {
+            "cached_tokens": 1176
+          }
+        },
+        "seconds": 0.08993058299529366,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

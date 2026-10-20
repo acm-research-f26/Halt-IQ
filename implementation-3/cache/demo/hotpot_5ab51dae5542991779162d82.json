@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab51dae5542991779162d82",
+  "split": "train",
+  "question": "Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?",
+  "source": "synthetic",
+  "rounds": [
+    {
+      "answer": "SYNTHETIC draft 1",
+      "distance": null,
+      "critic_approved": false,
+      "tokens": 280,
+      "quality": 0.55,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "SYNTHETIC draft 2",
+      "distance": 0.3,
+      "critic_approved": false,
+      "tokens": 295,
+      "quality": 0.65,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "SYNTHETIC draft 3",
+      "distance": 0.135,
+      "critic_approved": false,
+      "tokens": 310,
+      "quality": 0.75,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "SYNTHETIC draft 4",
+      "distance": 0.06075,
+      "critic_approved": true,
+      "tokens": 325,
+      "quality": 0.8500000000000001,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "SYNTHETIC draft 5",
+      "distance": 0.027337500000000004,
+      "critic_approved": true,
+      "tokens": 340,
+      "quality": 0.8300000000000001,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "SYNTHETIC draft 6",
+      "distance": 0.012301875,
+      "critic_approved": true,
+      "tokens": 355,
+      "quality": 0.81,
+      "answer_em": 0.0
+    }
+  ]
+}

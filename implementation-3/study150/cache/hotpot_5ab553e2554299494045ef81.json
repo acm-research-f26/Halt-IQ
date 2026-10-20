@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab553e2554299494045ef81",
+  "question": "Which show was Andrew \"Andy\" Spade's brother in n the 1990s?",
+  "ground_truth": "\"Saturday Night Live\"",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The show Andrew \"Andy\" Spade's brother in the 1990s was \"Saturday Night Live\".",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.42857142857142855,
+      "answer_em": 0.0,
+      "tokens": 5184,
+      "writer": {
+        "text": "The show Andrew \"Andy\" Spade's brother in the 1990s was \"Saturday Night Live\".",
+        "usage": {
+          "prompt_tokens": 2567,
+          "completion_tokens": 25,
+          "total_tokens": 2592,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 7.871286207999219,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2588,
+          "completion_tokens": 4,
+          "total_tokens": 2592,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 7.065750040994317,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saturday Night Live",
+      "critique": "APPROVED",
+      "distance": 0.7272727272727273,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5169,
+      "writer": {
+        "text": "Saturday Night Live",
+        "usage": {
+          "prompt_tokens": 2595,
+          "completion_tokens": 4,
+          "total_tokens": 2599,
+          "prompt_tokens_details": {
+            "cached_tokens": 2555
+          }
+        },
+        "seconds": 0.337433125001553,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 4,
+          "total_tokens": 2570,
+          "prompt_tokens_details": {
+            "cached_tokens": 2557
+          }
+        },
+        "seconds": 0.25272233299619984,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saturday Night Live",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5148,
+      "writer": {
+        "text": "Saturday Night Live",
+        "usage": {
+          "prompt_tokens": 2574,
+          "completion_tokens": 4,
+          "total_tokens": 2578,
+          "prompt_tokens_details": {
+            "cached_tokens": 2556
+          }
+        },
+        "seconds": 0.24986362499475945,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 4,
+          "total_tokens": 2570,
+          "prompt_tokens_details": {
+            "cached_tokens": 2565
+          }
+        },
+        "seconds": 0.14553287500166334,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saturday Night Live",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5148,
+      "writer": {
+        "text": "Saturday Night Live",
+        "usage": {
+          "prompt_tokens": 2574,
+          "completion_tokens": 4,
+          "total_tokens": 2578,
+          "prompt_tokens_details": {
+            "cached_tokens": 2573
+          }
+        },
+        "seconds": 0.12588541700097267,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 4,
+          "total_tokens": 2570,
+          "prompt_tokens_details": {
+            "cached_tokens": 2565
+          }
+        },
+        "seconds": 0.12626929199905135,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saturday Night Live",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5148,
+      "writer": {
+        "text": "Saturday Night Live",
+        "usage": {
+          "prompt_tokens": 2574,
+          "completion_tokens": 4,
+          "total_tokens": 2578,
+          "prompt_tokens_details": {
+            "cached_tokens": 2573
+          }
+        },
+        "seconds": 0.12932658399950014,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 4,
+          "total_tokens": 2570,
+          "prompt_tokens_details": {
+            "cached_tokens": 2565
+          }
+        },
+        "seconds": 0.15601979100028984,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saturday Night Live",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5148,
+      "writer": {
+        "text": "Saturday Night Live",
+        "usage": {
+          "prompt_tokens": 2574,
+          "completion_tokens": 4,
+          "total_tokens": 2578,
+          "prompt_tokens_details": {
+            "cached_tokens": 2573
+          }
+        },
+        "seconds": 0.12887475000025006,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2566,
+          "completion_tokens": 4,
+          "total_tokens": 2570,
+          "prompt_tokens_details": {
+            "cached_tokens": 2565
+          }
+        },
+        "seconds": 0.13293125000200234,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

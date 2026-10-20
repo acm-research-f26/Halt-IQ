@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7a0e1e5542990783324e1a",
+  "split": "test",
+  "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1579,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "The Manchester Terrier's ancestors include Gordon and Irish Setters.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae25e835542992decbdccd1",
+  "question": "A British sports, health and leisure business hosted the World Games on what dates?",
+  "ground_truth": "July 25 to August 4",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2211,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1099,
+          "completion_tokens": 7,
+          "total_tokens": 1106,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6307468329978292,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.5866184999977122,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2221,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 7,
+          "total_tokens": 1116,
+          "prompt_tokens_details": {
+            "cached_tokens": 1087
+          }
+        },
+        "seconds": 0.19303224999748636,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 1100
+          }
+        },
+        "seconds": 0.09578049999981886,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2221,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 7,
+          "total_tokens": 1116,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.13581970800441923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 1100
+          }
+        },
+        "seconds": 0.08789258299657376,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2221,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 7,
+          "total_tokens": 1116,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.13583995799854165,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 1100
+          }
+        },
+        "seconds": 0.0915984169987496,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2221,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 7,
+          "total_tokens": 1116,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.134718833003717,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 1100
+          }
+        },
+        "seconds": 0.09057775000110269,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "2017 World Games",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2221,
+      "writer": {
+        "text": "2017 World Games",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 7,
+          "total_tokens": 1116,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.13489612500416115,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1101,
+          "completion_tokens": 4,
+          "total_tokens": 1105,
+          "prompt_tokens_details": {
+            "cached_tokens": 1100
+          }
+        },
+        "seconds": 0.08830941699852701,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

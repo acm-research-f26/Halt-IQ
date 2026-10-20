@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7a3a2a5542996c55b2dd41",
+  "question": "The author of Some Other Rainbow was born on what day and year?",
+  "ground_truth": "27 November 1956",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4021,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2000,
+          "completion_tokens": 11,
+          "total_tokens": 2011,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.0785157499994966,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.054962083006103,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4035,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2014,
+          "completion_tokens": 11,
+          "total_tokens": 2025,
+          "prompt_tokens_details": {
+            "cached_tokens": 1988
+          }
+        },
+        "seconds": 0.276327957995818,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 2005
+          }
+        },
+        "seconds": 0.10013645800063387,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4035,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2014,
+          "completion_tokens": 11,
+          "total_tokens": 2025,
+          "prompt_tokens_details": {
+            "cached_tokens": 2013
+          }
+        },
+        "seconds": 0.19479670899454504,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 2005
+          }
+        },
+        "seconds": 0.09327837500313763,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4035,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2014,
+          "completion_tokens": 11,
+          "total_tokens": 2025,
+          "prompt_tokens_details": {
+            "cached_tokens": 2013
+          }
+        },
+        "seconds": 0.19864420800149674,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 2005
+          }
+        },
+        "seconds": 0.09320987499813782,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4035,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2014,
+          "completion_tokens": 11,
+          "total_tokens": 2025,
+          "prompt_tokens_details": {
+            "cached_tokens": 2013
+          }
+        },
+        "seconds": 0.19907387500279583,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 2005
+          }
+        },
+        "seconds": 0.09304945800249698,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "November 27, 1956",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 0.0,
+      "tokens": 4035,
+      "writer": {
+        "text": "November 27, 1956",
+        "usage": {
+          "prompt_tokens": 2014,
+          "completion_tokens": 11,
+          "total_tokens": 2025,
+          "prompt_tokens_details": {
+            "cached_tokens": 2013
+          }
+        },
+        "seconds": 0.21982820799894398,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2006,
+          "completion_tokens": 4,
+          "total_tokens": 2010,
+          "prompt_tokens_details": {
+            "cached_tokens": 2005
+          }
+        },
+        "seconds": 0.10167812500003492,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

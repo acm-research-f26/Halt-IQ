@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7be2595542997c3ec972ac",
+  "split": "test",
+  "question": "Who was born earlier, Emma Bull or Virginia Woolf?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1001,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1014,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1014,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1014,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1014,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Virginia Woolf was born earlier than Emma Bull.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1014,
+      "quality": 0.36363636363636365,
+      "answer_em": 0.0
+    }
+  ]
+}

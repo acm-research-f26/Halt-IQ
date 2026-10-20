@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8361b65542992ef85e22a0",
+  "split": "test",
+  "question": "Vince Phillips held a junior welterweight title by an organization recognized by what larger Hall of Fame?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1259,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1269,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1269,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1269,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1269,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "The International Boxing Hall of Fame",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1269,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

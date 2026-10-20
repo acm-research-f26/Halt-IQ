@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7b820c5542997c3ec971d8",
+  "question": "The William Ulmer Brewery is located in a neighborhood that is policed by who?",
+  "ground_truth": "NYPD's 83rd Precinct",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The William Ulmer Brewery is located in a neighborhood that is policed by the New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.1904761904761905,
+      "answer_em": 0.0,
+      "tokens": 2993,
+      "writer": {
+        "text": "The William Ulmer Brewery is located in a neighborhood that is policed by the New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1467,
+          "completion_tokens": 30,
+          "total_tokens": 1497,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.5123102079960518,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1492,
+          "completion_tokens": 4,
+          "total_tokens": 1496,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.135435750002216,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": 0.5882352941176471,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2995,
+      "writer": {
+        "text": "The New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1499,
+          "completion_tokens": 15,
+          "total_tokens": 1514,
+          "prompt_tokens_details": {
+            "cached_tokens": 1455
+          }
+        },
+        "seconds": 0.37674758300272515,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1477,
+          "completion_tokens": 4,
+          "total_tokens": 1481,
+          "prompt_tokens_details": {
+            "cached_tokens": 1458
+          }
+        },
+        "seconds": 0.15114391700626584,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2980,
+      "writer": {
+        "text": "The New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 15,
+          "total_tokens": 1499,
+          "prompt_tokens_details": {
+            "cached_tokens": 1457
+          }
+        },
+        "seconds": 0.3211347500036936,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1477,
+          "completion_tokens": 4,
+          "total_tokens": 1481,
+          "prompt_tokens_details": {
+            "cached_tokens": 1476
+          }
+        },
+        "seconds": 0.0908051250007702,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2980,
+      "writer": {
+        "text": "The New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 15,
+          "total_tokens": 1499,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.2513021669947193,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1477,
+          "completion_tokens": 4,
+          "total_tokens": 1481,
+          "prompt_tokens_details": {
+            "cached_tokens": 1476
+          }
+        },
+        "seconds": 0.0915462920020218,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2980,
+      "writer": {
+        "text": "The New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 15,
+          "total_tokens": 1499,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.2554440829990199,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1477,
+          "completion_tokens": 4,
+          "total_tokens": 1481,
+          "prompt_tokens_details": {
+            "cached_tokens": 1476
+          }
+        },
+        "seconds": 0.09299399999872549,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The New York City Police Department's 83rd Precinct.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2980,
+      "writer": {
+        "text": "The New York City Police Department's 83rd Precinct.",
+        "usage": {
+          "prompt_tokens": 1484,
+          "completion_tokens": 15,
+          "total_tokens": 1499,
+          "prompt_tokens_details": {
+            "cached_tokens": 1483
+          }
+        },
+        "seconds": 0.2568524580055964,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1477,
+          "completion_tokens": 4,
+          "total_tokens": 1481,
+          "prompt_tokens_details": {
+            "cached_tokens": 1476
+          }
+        },
+        "seconds": 0.09265537500323262,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

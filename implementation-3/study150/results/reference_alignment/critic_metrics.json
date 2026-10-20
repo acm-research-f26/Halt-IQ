@@ -1,0 +1,25 @@
+{
+  "scope": "Local 80 Qwen2.5-1.5B test first drafts; NOT shared 220 Qwen3:8B drafts",
+  "label": "strict normalized answer EM",
+  "score": "binary APPROVED=1, otherwise0; not calibrated confidence",
+  "bootstrap": "1000 draft resamples, seed0; single-class resamples excluded",
+  "metrics": {
+    "n": 80,
+    "positives": 17,
+    "negatives": 63,
+    "auroc": 0.5158730158730159,
+    "auroc_ci95": [
+      0.5,
+      0.5396825396825397
+    ],
+    "bootstrap_valid": 1000,
+    "approve_threshold": 0.8,
+    "approved": 78,
+    "approve_rate": 0.975,
+    "precision": 0.21794871794871795,
+    "wrong_approvals": 61,
+    "wrong_approval_rate_among_negatives": 0.9682539682539683,
+    "correct_rejections": 0,
+    "mean_critic_seconds": 2.724512106312068
+  }
+}

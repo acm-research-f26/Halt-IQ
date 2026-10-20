@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a9070dd5542995b442420b5",
+  "question": "How was Tiger Pataudi related to Iftikhar Ali Khan Pataudi?",
+  "ground_truth": "His son",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2827,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1394,
+          "completion_tokens": 20,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.9265332919967477,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.021297167004377,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2849,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 20,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1382
+          }
+        },
+        "seconds": 0.5197162500044215,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          }
+        },
+        "seconds": 0.10068608300207416,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2849,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 20,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.36376937499881024,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          }
+        },
+        "seconds": 0.10433666600147262,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2849,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 20,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.3661076249991311,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          }
+        },
+        "seconds": 0.09771537499909755,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2849,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 20,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.36765633300092304,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          }
+        },
+        "seconds": 0.09757499999977881,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.1818181818181818,
+      "answer_em": 0.0,
+      "tokens": 2849,
+      "writer": {
+        "text": "Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.",
+        "usage": {
+          "prompt_tokens": 1416,
+          "completion_tokens": 20,
+          "total_tokens": 1436,
+          "prompt_tokens_details": {
+            "cached_tokens": 1415
+          }
+        },
+        "seconds": 0.362634999997681,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1409,
+          "completion_tokens": 4,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          }
+        },
+        "seconds": 0.09720691700204043,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

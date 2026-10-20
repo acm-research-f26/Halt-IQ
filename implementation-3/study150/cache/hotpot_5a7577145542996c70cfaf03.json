@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7577145542996c70cfaf03",
+  "question": "Which park is larger, Timanfaya National Park or Sierra Nevada National Park?",
+  "ground_truth": "Sierra Nevada National Park",
+  "type": "comparison",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3267,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1627,
+          "completion_tokens": 7,
+          "total_tokens": 1634,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.4798979999977746,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.3463812089976273,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3277,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 7,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "cached_tokens": 1615
+          }
+        },
+        "seconds": 0.2073551249995944,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.09739770799933467,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3277,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 7,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "cached_tokens": 1636
+          }
+        },
+        "seconds": 0.14168087500002002,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.09700291700573871,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3277,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 7,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "cached_tokens": 1636
+          }
+        },
+        "seconds": 0.13719858299737098,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.09172241700434824,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3277,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 7,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "cached_tokens": 1636
+          }
+        },
+        "seconds": 0.13742774999991525,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.09323149999545421,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Timanfaya National Park",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3277,
+      "writer": {
+        "text": "Timanfaya National Park",
+        "usage": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 7,
+          "total_tokens": 1644,
+          "prompt_tokens_details": {
+            "cached_tokens": 1636
+          }
+        },
+        "seconds": 0.1396056250014226,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1629,
+          "completion_tokens": 4,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.09216287500021281,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

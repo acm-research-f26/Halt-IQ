@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+  "split": "test",
+  "question": "Which Australian city founded in 1838 contains a boarding school opened by a Prime Minister of Australia and named after a school in London of the same name.",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Marion",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1531,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Marion",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1537,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Marion",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1537,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Marion",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1537,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Marion",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1537,
+      "quality": 0.5,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Marion",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1537,
+      "quality": 0.5,
+      "answer_em": 0.0
+    }
+  ]
+}

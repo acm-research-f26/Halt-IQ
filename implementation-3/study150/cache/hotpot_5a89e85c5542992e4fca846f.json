@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a89e85c5542992e4fca846f",
+  "question": " WDAL is a country music radio station licensed to a city in what Georgia county?",
+  "ground_truth": "Whitfield County",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4519,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 5,
+          "total_tokens": 2260,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.2059141249992535,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.131646082998486,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4527,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2263,
+          "completion_tokens": 5,
+          "total_tokens": 2268,
+          "prompt_tokens_details": {
+            "cached_tokens": 2243
+          }
+        },
+        "seconds": 0.2070153750028112,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 2254
+          }
+        },
+        "seconds": 0.10427587499725632,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4527,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2263,
+          "completion_tokens": 5,
+          "total_tokens": 2268,
+          "prompt_tokens_details": {
+            "cached_tokens": 2262
+          }
+        },
+        "seconds": 0.11736495800141711,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 2254
+          }
+        },
+        "seconds": 0.10129579099884722,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4527,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2263,
+          "completion_tokens": 5,
+          "total_tokens": 2268,
+          "prompt_tokens_details": {
+            "cached_tokens": 2262
+          }
+        },
+        "seconds": 0.11664837499847636,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 2254
+          }
+        },
+        "seconds": 0.10052474999974947,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4527,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2263,
+          "completion_tokens": 5,
+          "total_tokens": 2268,
+          "prompt_tokens_details": {
+            "cached_tokens": 2262
+          }
+        },
+        "seconds": 0.12089825000293786,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 2254
+          }
+        },
+        "seconds": 0.10506891700060805,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Whitfield County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4527,
+      "writer": {
+        "text": "Whitfield County",
+        "usage": {
+          "prompt_tokens": 2263,
+          "completion_tokens": 5,
+          "total_tokens": 2268,
+          "prompt_tokens_details": {
+            "cached_tokens": 2262
+          }
+        },
+        "seconds": 0.12218466700142017,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2255,
+          "completion_tokens": 4,
+          "total_tokens": 2259,
+          "prompt_tokens_details": {
+            "cached_tokens": 2254
+          }
+        },
+        "seconds": 0.10573012499662582,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

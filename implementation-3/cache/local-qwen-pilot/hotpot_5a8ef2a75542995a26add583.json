@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8ef2a75542995a26add583",
+  "split": "test",
+  "question": "Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "2000",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1155,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1163,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1163,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1163,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1163,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1163,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

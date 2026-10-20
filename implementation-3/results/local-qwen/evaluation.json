@@ -1,0 +1,2600 @@
+{
+  "source": "live",
+  "metric": "answer_f1",
+  "rows": [
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1463
+    },
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4401
+    },
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 8808
+    },
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1463
+    },
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4401
+    },
+    {
+      "id": "hotpot_5a7166395542994082a3e814",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1463
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.8,
+      "tokens": 795
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.8,
+      "tokens": 2401
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.8,
+      "tokens": 4810
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.8,
+      "tokens": 795
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.8,
+      "tokens": 2401
+    },
+    {
+      "id": "hotpot_5a722b8655429971e9dc9329",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.8,
+      "tokens": 795
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1313
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.4444444444444445,
+      "tokens": 3969
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.4444444444444445,
+      "tokens": 7953
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1313
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.4444444444444445,
+      "tokens": 3969
+    },
+    {
+      "id": "hotpot_5a7320565542991f9a20c61d",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1313
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 775
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.6666666666666666,
+      "tokens": 2338
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.6666666666666666,
+      "tokens": 4681
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 775
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "distance",
+      "rounds": 4,
+      "quality": 0.6666666666666666,
+      "tokens": 3119
+    },
+    {
+      "id": "hotpot_5a74106b55429979e288289e",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 775
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 945
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2849
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 5705
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 945
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2849
+    },
+    {
+      "id": "hotpot_5a7571135542992d0ec05f98",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 945
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1543
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4647
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 9303
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1543
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4647
+    },
+    {
+      "id": "hotpot_5a75e05c55429976ec32bc5f",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1543
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 835
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2521
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 5050
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 835
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2521
+    },
+    {
+      "id": "hotpot_5a7625e8554299109176e66a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 835
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 836
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2524
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 5056
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 836
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2524
+    },
+    {
+      "id": "hotpot_5a77152355429966f1a36c2e",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 836
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2843
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 5693
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2843
+    },
+    {
+      "id": "hotpot_5a77cb335542997042120b3a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 771
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2323
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 4651
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 771
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 2323
+    },
+    {
+      "id": "hotpot_5a78bd9b554299078472774a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 771
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1475
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4441
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 8890
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1475
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4441
+    },
+    {
+      "id": "hotpot_5a79311755429970f5fffe67",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1475
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1579
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4769
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 9554
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1579
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4769
+    },
+    {
+      "id": "hotpot_5a7a0e1e5542990783324e1a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1579
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1395
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.4444444444444445,
+      "tokens": 4209
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.4444444444444445,
+      "tokens": 8430
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1395
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.4444444444444445,
+      "tokens": 4209
+    },
+    {
+      "id": "hotpot_5a7bbb64554299042af8f7cc",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.4444444444444445,
+      "tokens": 1395
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.36363636363636365,
+      "tokens": 1001
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.36363636363636365,
+      "tokens": 3029
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.36363636363636365,
+      "tokens": 6071
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.36363636363636365,
+      "tokens": 1001
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.36363636363636365,
+      "tokens": 3029
+    },
+    {
+      "id": "hotpot_5a7be2595542997c3ec972ac",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.36363636363636365,
+      "tokens": 1001
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1165
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3509
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7025
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1165
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3509
+    },
+    {
+      "id": "hotpot_5a7d54165542995f4f402256",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1165
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1217
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3667
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7342
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1217
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3667
+    },
+    {
+      "id": "hotpot_5a828c8355429966c78a6a50",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1217
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1259
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3797
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7604
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1259
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3797
+    },
+    {
+      "id": "hotpot_5a8361b65542992ef85e22a0",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1259
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1083
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3267
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6543
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1083
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3267
+    },
+    {
+      "id": "hotpot_5a85b2d95542997b5ce40028",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1083
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1705
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 5129
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 10265
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1705
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 5129
+    },
+    {
+      "id": "hotpot_5a85ea095542994775f606a8",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1705
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1421
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4277
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 8561
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1421
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4277
+    },
+    {
+      "id": "hotpot_5a85fb085542994775f606de",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1421
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1173
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3537
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 7083
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1173
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3537
+    },
+    {
+      "id": "hotpot_5a87ab905542996e4f3088c1",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1173
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1353
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4071
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 8148
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1353
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4071
+    },
+    {
+      "id": "hotpot_5a87c13f5542996e4f30890c",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1353
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1097
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3305
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 6617
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1097
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3305
+    },
+    {
+      "id": "hotpot_5a8979f4554299669944a52e",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1097
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1203
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3663
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7353
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "critic",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7353
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3663
+    },
+    {
+      "id": "hotpot_5a8a3e745542996c9b8d5e70",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1203
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 1531
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.5,
+      "tokens": 4605
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.5,
+      "tokens": 9216
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 1531
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.5,
+      "tokens": 4605
+    },
+    {
+      "id": "hotpot_5a8a43eb5542996c9b8d5e82",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 1531
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1141
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3437
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 6881
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1141
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3437
+    },
+    {
+      "id": "hotpot_5a8c7595554299585d9e36b6",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1141
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 919
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2825
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 5684
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 919
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2825
+    },
+    {
+      "id": "hotpot_5a8db19d5542994ba4e3dd00",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 919
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1175
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3561
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 7140
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1175
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3561
+    },
+    {
+      "id": "hotpot_5a8e068b5542995085b37384",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1175
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 971
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.4,
+      "tokens": 2929
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.4,
+      "tokens": 5866
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 971
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.4,
+      "tokens": 2929
+    },
+    {
+      "id": "hotpot_5a8e1027554299653c1aa15f",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 971
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.7499999999999999,
+      "tokens": 907
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.7499999999999999,
+      "tokens": 2735
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.7499999999999999,
+      "tokens": 5477
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.7499999999999999,
+      "tokens": 907
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.7499999999999999,
+      "tokens": 2735
+    },
+    {
+      "id": "hotpot_5a8e3ea95542995a26add48d",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.7499999999999999,
+      "tokens": 907
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1155
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3481
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6970
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1155
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3481
+    },
+    {
+      "id": "hotpot_5a8ef2a75542995a26add583",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1155
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 991
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.4,
+      "tokens": 2985
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.4,
+      "tokens": 5976
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 991
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.4,
+      "tokens": 2985
+    },
+    {
+      "id": "hotpot_5a8f4c8d554299458435d5a3",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.4,
+      "tokens": 991
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1369
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4125
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 8259
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1369
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4125
+    },
+    {
+      "id": "hotpot_5ab2d3df554299194fa9352c",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1369
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1227
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3697
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7402
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1227
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3697
+    },
+    {
+      "id": "hotpot_5ab3b0bf5542992ade7c6e39",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1227
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1059
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3191
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6389
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1059
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3191
+    },
+    {
+      "id": "hotpot_5ab3e45655429976abd1bcd4",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1059
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2839
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 5683
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "distance",
+      "rounds": 4,
+      "quality": 0.0,
+      "tokens": 3787
+    },
+    {
+      "id": "hotpot_5ab56e32554299637185c594",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 943
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1051
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3175
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 6361
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1051
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3175
+    },
+    {
+      "id": "hotpot_5ab6d09255429954757d337d",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1051
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1257
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3785
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 7577
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1257
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3785
+    },
+    {
+      "id": "hotpot_5ab84bf555429916710eb01f",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1257
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1555
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4733
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 9500
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1555
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4733
+    },
+    {
+      "id": "hotpot_5ab859a955429934fafe6d7b",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1555
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1093
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3293
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 6593
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1093
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3293
+    },
+    {
+      "id": "hotpot_5ab96ab755429970cfb8eacd",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1093
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1033
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3115
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6238
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1033
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3115
+    },
+    {
+      "id": "hotpot_5aba7cfe554299232ef4a2fd",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1033
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.2727272727272727,
+      "tokens": 1627
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4833
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 9612
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.2727272727272727,
+      "tokens": 1627
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "distance",
+      "rounds": 4,
+      "quality": 1.0,
+      "tokens": 6426
+    },
+    {
+      "id": "hotpot_5abbf698554299114383a0b5",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.2727272727272727,
+      "tokens": 1627
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 913
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2779
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 5578
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 913
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 2779
+    },
+    {
+      "id": "hotpot_5abd259d55429924427fcf1a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 913
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 887
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.5,
+      "tokens": 2675
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.5,
+      "tokens": 5357
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 887
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.5,
+      "tokens": 2675
+    },
+    {
+      "id": "hotpot_5abd94525542992ac4f382d2",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.5,
+      "tokens": 887
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.6666666666666666,
+      "tokens": 2629
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.6666666666666666,
+      "tokens": 7903
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.6666666666666666,
+      "tokens": 15814
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.6666666666666666,
+      "tokens": 2629
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.6666666666666666,
+      "tokens": 7903
+    },
+    {
+      "id": "hotpot_5abf63f15542997ec76fd3ea",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.6666666666666666,
+      "tokens": 2629
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.18181818181818182,
+      "tokens": 1476
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 4399
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 8764
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.18181818181818182,
+      "tokens": 1476
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "distance",
+      "rounds": 4,
+      "quality": 1.0,
+      "tokens": 5854
+    },
+    {
+      "id": "hotpot_5ac23ff0554299636651994d",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.18181818181818182,
+      "tokens": 1476
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1355
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4111
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 8245
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1355
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4111
+    },
+    {
+      "id": "hotpot_5adbf0a255429947ff17385a",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1355
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 2549
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 7699
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 15424
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 2549
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 7699
+    },
+    {
+      "id": "hotpot_5add61d65542995b365fab21",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 2549
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1535
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4617
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 9240
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1535
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4617
+    },
+    {
+      "id": "hotpot_5adddccd5542997dc7907069",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1535
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1491
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4499
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 9011
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1491
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4499
+    },
+    {
+      "id": "hotpot_5ae0361155429925eb1afc2c",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1491
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1533
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4625
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 9263
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1533
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4625
+    },
+    {
+      "id": "hotpot_5ae0d4c9554299603e418468",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1533
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.4615384615384615,
+      "tokens": 923
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.4615384615384615,
+      "tokens": 2817
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.4615384615384615,
+      "tokens": 5658
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.4615384615384615,
+      "tokens": 923
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.4615384615384615,
+      "tokens": 2817
+    },
+    {
+      "id": "hotpot_5ae22b8d554299234fd0440f",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.4615384615384615,
+      "tokens": 923
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1423
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4287
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 8583
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1423
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 4287
+    },
+    {
+      "id": "hotpot_5ae32e125542991a06ce9946",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1423
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1089
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3281
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6569
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1089
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3281
+    },
+    {
+      "id": "hotpot_5ae33c4d5542992f92d82262",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1089
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1189
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3585
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 7179
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1189
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3585
+    },
+    {
+      "id": "hotpot_5ae37c765542992f92d822d4",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1189
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.5714285714285715,
+      "tokens": 979
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.5714285714285715,
+      "tokens": 2969
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.5714285714285715,
+      "tokens": 5954
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.5714285714285715,
+      "tokens": 979
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.5714285714285715,
+      "tokens": 2969
+    },
+    {
+      "id": "hotpot_5ae4a3265542995ad6573de5",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.5714285714285715,
+      "tokens": 979
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1003
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3023
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 6053
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1003
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3023
+    },
+    {
+      "id": "hotpot_5ae5aba0554299546bf82f17",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1003
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1187
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3573
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 7152
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1187
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 3573
+    },
+    {
+      "id": "hotpot_5ae6050f55429929b0807a5e",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1187
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1900
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 5714
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 0.0,
+      "tokens": 11435
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1900
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 0.0,
+      "tokens": 5714
+    },
+    {
+      "id": "hotpot_5ae7ba7a5542993210983f12",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 0.0,
+      "tokens": 1900
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "fixed_1",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1103
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "fixed_3",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3319
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "fixed_6",
+      "rounds": 6,
+      "quality": 1.0,
+      "tokens": 6643
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "critic",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1103
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "distance",
+      "rounds": 3,
+      "quality": 1.0,
+      "tokens": 3319
+    },
+    {
+      "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+      "policy": "learned",
+      "rounds": 1,
+      "quality": 1.0,
+      "tokens": 1103
+    }
+  ],
+  "summary": [
+    {
+      "policy": "fixed_1",
+      "questions": 60,
+      "mean_rounds": 1.0,
+      "mean_quality": 0.4626117401117401,
+      "mean_tokens": 1241.8833333333334,
+      "paired_quality_difference_ci95": [
+        -0.07373737373737373,
+        0.026767676767676767
+      ],
+      "tokens_saved_percent": 83.43942108093933
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 60,
+      "mean_rounds": 3.0,
+      "mean_quality": 0.48281376031376033,
+      "mean_tokens": 3745.0833333333335,
+      "paired_quality_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "tokens_saved_percent": 50.05911873085864
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 60,
+      "mean_rounds": 6.0,
+      "mean_quality": 0.48281376031376033,
+      "mean_tokens": 7499.033333333334,
+      "paired_quality_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "tokens_saved_percent": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 60,
+      "mean_rounds": 1.0833333333333333,
+      "mean_quality": 0.4626117401117401,
+      "mean_tokens": 1344.3833333333334,
+      "paired_quality_difference_ci95": [
+        -0.07373737373737373,
+        0.026767676767676767
+      ],
+      "tokens_saved_percent": 82.07257824341804
+    },
+    {
+      "policy": "distance",
+      "questions": 60,
+      "mean_rounds": 3.066666666666667,
+      "mean_quality": 0.48281376031376033,
+      "mean_tokens": 3824.7,
+      "paired_quality_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "tokens_saved_percent": 48.997426334949836
+    },
+    {
+      "policy": "learned",
+      "questions": 60,
+      "mean_rounds": 1.0,
+      "mean_quality": 0.4626117401117401,
+      "mean_tokens": 1241.8833333333334,
+      "paired_quality_difference_ci95": [
+        -0.07373737373737373,
+        0.026767676767676767
+      ],
+      "tokens_saved_percent": 83.43942108093933
+    }
+  ]
+}

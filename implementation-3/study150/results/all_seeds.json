@@ -1,0 +1,1202 @@
+{
+  "0": [
+    {
+      "policy": "fixed_1",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 80,
+      "mean_answer_f1": 0.38243830107800697,
+      "mean_answer_em": 0.225,
+      "mean_rounds": 3.0,
+      "mean_total_tokens": 9107.7125,
+      "mean_llm_calls": 6.0,
+      "mean_prompt_tokens": 9064.175,
+      "mean_completion_tokens": 43.5375,
+      "mean_writer_tokens": 4567.8875,
+      "mean_critic_tokens": 4539.825,
+      "mean_request_seconds": 6.242123264561724,
+      "f1_ci95": [
+        0.29315788378288377,
+        0.471090367965368
+      ],
+      "em_ci95": [
+        0.1375,
+        0.3125
+      ],
+      "f1_difference_vs_fixed_1": 0.02365355233002292,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.05714285714285714
+      ],
+      "token_savings_percent_vs_fixed_1": -200.81166887542986,
+      "f1_difference_vs_fixed_6": -0.009615384615384614,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.028846153846153844,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 50.03274609807096
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 6.0,
+      "mean_total_tokens": 18227.3625,
+      "mean_llm_calls": 12.0,
+      "mean_prompt_tokens": 18140.9125,
+      "mean_completion_tokens": 86.45,
+      "mean_writer_tokens": 9148.3375,
+      "mean_critic_tokens": 9079.025,
+      "mean_request_seconds": 7.122485854711795,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -502.01761230632036,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.125,
+      "mean_total_tokens": 3320.4625,
+      "mean_llm_calls": 2.25,
+      "mean_prompt_tokens": 3302.725,
+      "mean_completion_tokens": 17.7375,
+      "mean_writer_tokens": 1661.4,
+      "mean_critic_tokens": 1659.0625,
+      "mean_request_seconds": 5.610764047399516,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": -9.66901579988193,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 81.78308847481362
+    },
+    {
+      "policy": "distance",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 3.1375,
+      "mean_total_tokens": 9544.275,
+      "mean_llm_calls": 6.275,
+      "mean_prompt_tokens": 9498.5125,
+      "mean_completion_tokens": 45.7625,
+      "mean_writer_tokens": 4787.3125,
+      "mean_critic_tokens": 4756.9625,
+      "mean_request_seconds": 6.289484422411897,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -215.23055772303348,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 47.6376519093204
+    },
+    {
+      "policy": "learned",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "oracle_f1",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 1.0625,
+      "mean_total_tokens": 3203.175,
+      "mean_llm_calls": 2.125,
+      "mean_prompt_tokens": 3187.5875,
+      "mean_completion_tokens": 15.5875,
+      "mean_writer_tokens": 1602.35,
+      "mean_critic_tokens": 1600.825,
+      "mean_request_seconds": 5.581719645811882,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -5.795216685864335,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 82.42655787418504
+    }
+  ],
+  "1": [
+    {
+      "policy": "fixed_1",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 80,
+      "mean_answer_f1": 0.38243830107800697,
+      "mean_answer_em": 0.225,
+      "mean_rounds": 3.0,
+      "mean_total_tokens": 9107.7125,
+      "mean_llm_calls": 6.0,
+      "mean_prompt_tokens": 9064.175,
+      "mean_completion_tokens": 43.5375,
+      "mean_writer_tokens": 4567.8875,
+      "mean_critic_tokens": 4539.825,
+      "mean_request_seconds": 6.242123264561724,
+      "f1_ci95": [
+        0.29315788378288377,
+        0.471090367965368
+      ],
+      "em_ci95": [
+        0.1375,
+        0.3125
+      ],
+      "f1_difference_vs_fixed_1": 0.02365355233002292,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.05714285714285714
+      ],
+      "token_savings_percent_vs_fixed_1": -200.81166887542986,
+      "f1_difference_vs_fixed_6": -0.009615384615384614,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.028846153846153844,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 50.03274609807096
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 6.0,
+      "mean_total_tokens": 18227.3625,
+      "mean_llm_calls": 12.0,
+      "mean_prompt_tokens": 18140.9125,
+      "mean_completion_tokens": 86.45,
+      "mean_writer_tokens": 9148.3375,
+      "mean_critic_tokens": 9079.025,
+      "mean_request_seconds": 7.122485854711795,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -502.01761230632036,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.125,
+      "mean_total_tokens": 3320.4625,
+      "mean_llm_calls": 2.25,
+      "mean_prompt_tokens": 3302.725,
+      "mean_completion_tokens": 17.7375,
+      "mean_writer_tokens": 1661.4,
+      "mean_critic_tokens": 1659.0625,
+      "mean_request_seconds": 5.610764047399516,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": -9.66901579988193,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 81.78308847481362
+    },
+    {
+      "policy": "distance",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 3.1375,
+      "mean_total_tokens": 9544.275,
+      "mean_llm_calls": 6.275,
+      "mean_prompt_tokens": 9498.5125,
+      "mean_completion_tokens": 45.7625,
+      "mean_writer_tokens": 4787.3125,
+      "mean_critic_tokens": 4756.9625,
+      "mean_request_seconds": 6.289484422411897,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -215.23055772303348,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 47.6376519093204
+    },
+    {
+      "policy": "learned",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "oracle_f1",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 1.0625,
+      "mean_total_tokens": 3203.175,
+      "mean_llm_calls": 2.125,
+      "mean_prompt_tokens": 3187.5875,
+      "mean_completion_tokens": 15.5875,
+      "mean_writer_tokens": 1602.35,
+      "mean_critic_tokens": 1600.825,
+      "mean_request_seconds": 5.581719645811882,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -5.795216685864335,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 82.42655787418504
+    }
+  ],
+  "2": [
+    {
+      "policy": "fixed_1",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 80,
+      "mean_answer_f1": 0.38243830107800697,
+      "mean_answer_em": 0.225,
+      "mean_rounds": 3.0,
+      "mean_total_tokens": 9107.7125,
+      "mean_llm_calls": 6.0,
+      "mean_prompt_tokens": 9064.175,
+      "mean_completion_tokens": 43.5375,
+      "mean_writer_tokens": 4567.8875,
+      "mean_critic_tokens": 4539.825,
+      "mean_request_seconds": 6.242123264561724,
+      "f1_ci95": [
+        0.29315788378288377,
+        0.471090367965368
+      ],
+      "em_ci95": [
+        0.1375,
+        0.3125
+      ],
+      "f1_difference_vs_fixed_1": 0.02365355233002292,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.05714285714285714
+      ],
+      "token_savings_percent_vs_fixed_1": -200.81166887542986,
+      "f1_difference_vs_fixed_6": -0.009615384615384614,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.028846153846153844,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 50.03274609807096
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 6.0,
+      "mean_total_tokens": 18227.3625,
+      "mean_llm_calls": 12.0,
+      "mean_prompt_tokens": 18140.9125,
+      "mean_completion_tokens": 86.45,
+      "mean_writer_tokens": 9148.3375,
+      "mean_critic_tokens": 9079.025,
+      "mean_request_seconds": 7.122485854711795,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -502.01761230632036,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.125,
+      "mean_total_tokens": 3320.4625,
+      "mean_llm_calls": 2.25,
+      "mean_prompt_tokens": 3302.725,
+      "mean_completion_tokens": 17.7375,
+      "mean_writer_tokens": 1661.4,
+      "mean_critic_tokens": 1659.0625,
+      "mean_request_seconds": 5.610764047399516,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": -9.66901579988193,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 81.78308847481362
+    },
+    {
+      "policy": "distance",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 3.1375,
+      "mean_total_tokens": 9544.275,
+      "mean_llm_calls": 6.275,
+      "mean_prompt_tokens": 9498.5125,
+      "mean_completion_tokens": 45.7625,
+      "mean_writer_tokens": 4787.3125,
+      "mean_critic_tokens": 4756.9625,
+      "mean_request_seconds": 6.289484422411897,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -215.23055772303348,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 47.6376519093204
+    },
+    {
+      "policy": "learned",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "oracle_f1",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 1.0625,
+      "mean_total_tokens": 3203.175,
+      "mean_llm_calls": 2.125,
+      "mean_prompt_tokens": 3187.5875,
+      "mean_completion_tokens": 15.5875,
+      "mean_writer_tokens": 1602.35,
+      "mean_critic_tokens": 1600.825,
+      "mean_request_seconds": 5.581719645811882,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -5.795216685864335,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 82.42655787418504
+    }
+  ],
+  "3": [
+    {
+      "policy": "fixed_1",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 80,
+      "mean_answer_f1": 0.38243830107800697,
+      "mean_answer_em": 0.225,
+      "mean_rounds": 3.0,
+      "mean_total_tokens": 9107.7125,
+      "mean_llm_calls": 6.0,
+      "mean_prompt_tokens": 9064.175,
+      "mean_completion_tokens": 43.5375,
+      "mean_writer_tokens": 4567.8875,
+      "mean_critic_tokens": 4539.825,
+      "mean_request_seconds": 6.242123264561724,
+      "f1_ci95": [
+        0.29315788378288377,
+        0.471090367965368
+      ],
+      "em_ci95": [
+        0.1375,
+        0.3125
+      ],
+      "f1_difference_vs_fixed_1": 0.02365355233002292,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.05714285714285714
+      ],
+      "token_savings_percent_vs_fixed_1": -200.81166887542986,
+      "f1_difference_vs_fixed_6": -0.009615384615384614,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.028846153846153844,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 50.03274609807096
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 6.0,
+      "mean_total_tokens": 18227.3625,
+      "mean_llm_calls": 12.0,
+      "mean_prompt_tokens": 18140.9125,
+      "mean_completion_tokens": 86.45,
+      "mean_writer_tokens": 9148.3375,
+      "mean_critic_tokens": 9079.025,
+      "mean_request_seconds": 7.122485854711795,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -502.01761230632036,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.125,
+      "mean_total_tokens": 3320.4625,
+      "mean_llm_calls": 2.25,
+      "mean_prompt_tokens": 3302.725,
+      "mean_completion_tokens": 17.7375,
+      "mean_writer_tokens": 1661.4,
+      "mean_critic_tokens": 1659.0625,
+      "mean_request_seconds": 5.610764047399516,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": -9.66901579988193,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 81.78308847481362
+    },
+    {
+      "policy": "distance",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 3.1375,
+      "mean_total_tokens": 9544.275,
+      "mean_llm_calls": 6.275,
+      "mean_prompt_tokens": 9498.5125,
+      "mean_completion_tokens": 45.7625,
+      "mean_writer_tokens": 4787.3125,
+      "mean_critic_tokens": 4756.9625,
+      "mean_request_seconds": 6.289484422411897,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -215.23055772303348,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 47.6376519093204
+    },
+    {
+      "policy": "learned",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "oracle_f1",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 1.0625,
+      "mean_total_tokens": 3203.175,
+      "mean_llm_calls": 2.125,
+      "mean_prompt_tokens": 3187.5875,
+      "mean_completion_tokens": 15.5875,
+      "mean_writer_tokens": 1602.35,
+      "mean_critic_tokens": 1600.825,
+      "mean_request_seconds": 5.581719645811882,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -5.795216685864335,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 82.42655787418504
+    }
+  ],
+  "4": [
+    {
+      "policy": "fixed_1",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "fixed_3",
+      "questions": 80,
+      "mean_answer_f1": 0.38243830107800697,
+      "mean_answer_em": 0.225,
+      "mean_rounds": 3.0,
+      "mean_total_tokens": 9107.7125,
+      "mean_llm_calls": 6.0,
+      "mean_prompt_tokens": 9064.175,
+      "mean_completion_tokens": 43.5375,
+      "mean_writer_tokens": 4567.8875,
+      "mean_critic_tokens": 4539.825,
+      "mean_request_seconds": 6.242123264561724,
+      "f1_ci95": [
+        0.29315788378288377,
+        0.471090367965368
+      ],
+      "em_ci95": [
+        0.1375,
+        0.3125
+      ],
+      "f1_difference_vs_fixed_1": 0.02365355233002292,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.05714285714285714
+      ],
+      "token_savings_percent_vs_fixed_1": -200.81166887542986,
+      "f1_difference_vs_fixed_6": -0.009615384615384614,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.028846153846153844,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 50.03274609807096
+    },
+    {
+      "policy": "fixed_6",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 6.0,
+      "mean_total_tokens": 18227.3625,
+      "mean_llm_calls": 12.0,
+      "mean_prompt_tokens": 18140.9125,
+      "mean_completion_tokens": 86.45,
+      "mean_writer_tokens": 9148.3375,
+      "mean_critic_tokens": 9079.025,
+      "mean_request_seconds": 7.122485854711795,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -502.01761230632036,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 0.0
+    },
+    {
+      "policy": "critic",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.125,
+      "mean_total_tokens": 3320.4625,
+      "mean_llm_calls": 2.25,
+      "mean_prompt_tokens": 3302.725,
+      "mean_completion_tokens": 17.7375,
+      "mean_writer_tokens": 1661.4,
+      "mean_critic_tokens": 1659.0625,
+      "mean_request_seconds": 5.610764047399516,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": -9.66901579988193,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 81.78308847481362
+    },
+    {
+      "policy": "distance",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 3.1375,
+      "mean_total_tokens": 9544.275,
+      "mean_llm_calls": 6.275,
+      "mean_prompt_tokens": 9498.5125,
+      "mean_completion_tokens": 45.7625,
+      "mean_writer_tokens": 4787.3125,
+      "mean_critic_tokens": 4756.9625,
+      "mean_request_seconds": 6.289484422411897,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -215.23055772303348,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 47.6376519093204
+    },
+    {
+      "policy": "learned",
+      "questions": 80,
+      "mean_answer_f1": 0.35878474874798405,
+      "mean_answer_em": 0.2125,
+      "mean_rounds": 1.0,
+      "mean_total_tokens": 3027.7125,
+      "mean_llm_calls": 2.0,
+      "mean_prompt_tokens": 3012.975,
+      "mean_completion_tokens": 14.7375,
+      "mean_writer_tokens": 1514.2125,
+      "mean_critic_tokens": 1513.5,
+      "mean_request_seconds": 5.554490697387064,
+      "f1_ci95": [
+        0.2709655377302436,
+        0.4502506684491979
+      ],
+      "em_ci95": [
+        0.125,
+        0.3
+      ],
+      "f1_difference_vs_fixed_1": 0.0,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_1": 0.0,
+      "f1_difference_vs_fixed_6": -0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_6": [
+        -0.07076893694540753,
+        -0.004010695187165775
+      ],
+      "token_savings_percent_vs_fixed_6": 83.38919029014758
+    },
+    {
+      "policy": "oracle_f1",
+      "questions": 80,
+      "mean_answer_f1": 0.39205368569339155,
+      "mean_answer_em": 0.2375,
+      "mean_rounds": 1.0625,
+      "mean_total_tokens": 3203.175,
+      "mean_llm_calls": 2.125,
+      "mean_prompt_tokens": 3187.5875,
+      "mean_completion_tokens": 15.5875,
+      "mean_writer_tokens": 1602.35,
+      "mean_critic_tokens": 1600.825,
+      "mean_request_seconds": 5.581719645811882,
+      "f1_ci95": [
+        0.30156618708089294,
+        0.48222827825769005
+      ],
+      "em_ci95": [
+        0.15,
+        0.325
+      ],
+      "f1_difference_vs_fixed_1": 0.033268936945407536,
+      "f1_difference_ci95_vs_fixed_1": [
+        0.004010695187165775,
+        0.07076893694540753
+      ],
+      "token_savings_percent_vs_fixed_1": -5.795216685864335,
+      "f1_difference_vs_fixed_6": 0.0,
+      "f1_difference_ci95_vs_fixed_6": [
+        0.0,
+        0.0
+      ],
+      "token_savings_percent_vs_fixed_6": 82.42655787418504
+    }
+  ]
+}

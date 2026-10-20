@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a802e135542992bc0c4a6c7",
+  "question": "Blue Dwarf is what type of online text-based role-playing game?",
+  "ground_truth": "play-by-post role-playing game",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1955,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 971,
+          "completion_tokens": 7,
+          "total_tokens": 978,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.9154312919999938,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.9181152499950258,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1965,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 981,
+          "completion_tokens": 7,
+          "total_tokens": 988,
+          "prompt_tokens_details": {
+            "cached_tokens": 959
+          }
+        },
+        "seconds": 0.23160666699550347,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 972
+          }
+        },
+        "seconds": 0.09628408300341107,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1965,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 981,
+          "completion_tokens": 7,
+          "total_tokens": 988,
+          "prompt_tokens_details": {
+            "cached_tokens": 980
+          }
+        },
+        "seconds": 0.14043858399963938,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 972
+          }
+        },
+        "seconds": 0.09150670799863292,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1965,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 981,
+          "completion_tokens": 7,
+          "total_tokens": 988,
+          "prompt_tokens_details": {
+            "cached_tokens": 980
+          }
+        },
+        "seconds": 0.13689354099915363,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 972
+          }
+        },
+        "seconds": 0.09092824999970617,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1965,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 981,
+          "completion_tokens": 7,
+          "total_tokens": 988,
+          "prompt_tokens_details": {
+            "cached_tokens": 980
+          }
+        },
+        "seconds": 0.13998549999814713,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 972
+          }
+        },
+        "seconds": 0.09231037499557715,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Play-by-post role-playing game",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1965,
+      "writer": {
+        "text": "Play-by-post role-playing game",
+        "usage": {
+          "prompt_tokens": 981,
+          "completion_tokens": 7,
+          "total_tokens": 988,
+          "prompt_tokens_details": {
+            "cached_tokens": 980
+          }
+        },
+        "seconds": 0.14023708300373983,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 973,
+          "completion_tokens": 4,
+          "total_tokens": 977,
+          "prompt_tokens_details": {
+            "cached_tokens": 972
+          }
+        },
+        "seconds": 0.09299933299917029,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

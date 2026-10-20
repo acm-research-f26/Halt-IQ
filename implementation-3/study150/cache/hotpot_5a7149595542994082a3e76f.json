@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7149595542994082a3e76f",
+  "question": "Who starred in Love and other drugs and The Simpsons?",
+  "ground_truth": "Henry Albert \"Hank\" Azaria",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3299,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1640,
+          "completion_tokens": 10,
+          "total_tokens": 1650,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 5.173918416003289,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 3.998155665998638,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3312,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 10,
+          "total_tokens": 1663,
+          "prompt_tokens_details": {
+            "cached_tokens": 1628
+          }
+        },
+        "seconds": 0.30570595800236333,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 1644
+          }
+        },
+        "seconds": 0.11211224999715341,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3312,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 10,
+          "total_tokens": 1663,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.22782004100008635,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 1644
+          }
+        },
+        "seconds": 0.11175062500115018,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3312,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 10,
+          "total_tokens": 1663,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.22698958299588412,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 1644
+          }
+        },
+        "seconds": 0.12475004099542275,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3312,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 10,
+          "total_tokens": 1663,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.2540037080034381,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 1644
+          }
+        },
+        "seconds": 0.11220966700057033,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Jake Gyllenhaal and Anne Hathaway",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3312,
+      "writer": {
+        "text": "Jake Gyllenhaal and Anne Hathaway",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 10,
+          "total_tokens": 1663,
+          "prompt_tokens_details": {
+            "cached_tokens": 1652
+          }
+        },
+        "seconds": 0.22627495900087524,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 4,
+          "total_tokens": 1649,
+          "prompt_tokens_details": {
+            "cached_tokens": 1644
+          }
+        },
+        "seconds": 0.11857016700378153,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

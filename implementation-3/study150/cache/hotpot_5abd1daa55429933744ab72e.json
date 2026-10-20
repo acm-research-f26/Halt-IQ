@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abd1daa55429933744ab72e",
+  "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2463,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1216,
+          "completion_tokens": 16,
+          "total_tokens": 1232,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.458665167003346,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.4605472080002073,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2481,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 16,
+          "total_tokens": 1250,
+          "prompt_tokens_details": {
+            "cached_tokens": 1204
+          }
+        },
+        "seconds": 0.38547087500046473,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 1226
+          }
+        },
+        "seconds": 0.10160916700260714,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2481,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 16,
+          "total_tokens": 1250,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.2846797910024179,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 1226
+          }
+        },
+        "seconds": 0.09806558299897006,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2481,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 16,
+          "total_tokens": 1250,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.2899025000006077,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 1226
+          }
+        },
+        "seconds": 0.09410237499832874,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2481,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 16,
+          "total_tokens": 1250,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.28117937500064727,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 1226
+          }
+        },
+        "seconds": 0.09350254100718303,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2481,
+      "writer": {
+        "text": "No, Singapore Sling and Fish House Punch do not both contain alcohol.",
+        "usage": {
+          "prompt_tokens": 1234,
+          "completion_tokens": 16,
+          "total_tokens": 1250,
+          "prompt_tokens_details": {
+            "cached_tokens": 1233
+          }
+        },
+        "seconds": 0.30042274999868823,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 4,
+          "total_tokens": 1231,
+          "prompt_tokens_details": {
+            "cached_tokens": 1226
+          }
+        },
+        "seconds": 0.09512029199686367,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

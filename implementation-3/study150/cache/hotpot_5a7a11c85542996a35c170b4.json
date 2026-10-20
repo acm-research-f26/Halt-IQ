@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7a11c85542996a35c170b4",
+  "question": "What is the English translation of the name of the novel series which the Four III is the final installment of?",
+  "ground_truth": "\"The Four Great Constables\"",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3485,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1720,
+          "completion_tokens": 23,
+          "total_tokens": 1743,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.266066208998382,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.916976166998211,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 23,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1708
+          }
+        },
+        "seconds": 0.5495027500001015,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 1737
+          }
+        },
+        "seconds": 0.10645454099721974,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 23,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.4410602500065579,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 1737
+          }
+        },
+        "seconds": 0.11681341600342421,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 23,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.4660002919990802,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 1737
+          }
+        },
+        "seconds": 0.12162991700461134,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 23,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.5270802909944905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 1737
+          }
+        },
+        "seconds": 0.13000895799632417,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 3511,
+      "writer": {
+        "text": "The English translation of the name of the novel series \"The Four\" is \"The Four Great Constables.\"",
+        "usage": {
+          "prompt_tokens": 1746,
+          "completion_tokens": 23,
+          "total_tokens": 1769,
+          "prompt_tokens_details": {
+            "cached_tokens": 1745
+          }
+        },
+        "seconds": 0.6009235000019544,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1738,
+          "completion_tokens": 4,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 1737
+          }
+        },
+        "seconds": 0.16310920800606254,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

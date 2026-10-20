@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5adbf0a255429947ff17385a",
+  "split": "test",
+  "question": "Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1355,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, the Laleli Mosque and Esma Sultan Mansion are not located in the same neighborhood.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab8848d55429916710eb07b",
+  "question": "What country of origin does Stan Williams and Adelaide Oval have in common?",
+  "ground_truth": "Australian",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1979,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 988,
+          "completion_tokens": 2,
+          "total_tokens": 990,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.4720250829996075,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.5046612090009148,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1984,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 2,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 976
+          }
+        },
+        "seconds": 0.12487170900567435,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 984
+          }
+        },
+        "seconds": 0.08773179200215964,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1984,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 2,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 992
+          }
+        },
+        "seconds": 0.07320866700320039,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 984
+          }
+        },
+        "seconds": 0.08569533300033072,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1984,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 2,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 992
+          }
+        },
+        "seconds": 0.05740583300212165,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 984
+          }
+        },
+        "seconds": 0.0863374170003226,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1984,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 2,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 992
+          }
+        },
+        "seconds": 0.05687058300100034,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 984
+          }
+        },
+        "seconds": 0.08636745800322387,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Australia",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1984,
+      "writer": {
+        "text": "Australia",
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 2,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 992
+          }
+        },
+        "seconds": 0.05814375000045402,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 985,
+          "completion_tokens": 4,
+          "total_tokens": 989,
+          "prompt_tokens_details": {
+            "cached_tokens": 984
+          }
+        },
+        "seconds": 0.08879608300048858,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

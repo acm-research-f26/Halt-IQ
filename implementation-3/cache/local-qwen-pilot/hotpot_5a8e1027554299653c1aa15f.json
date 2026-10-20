@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8e1027554299653c1aa15f",
+  "split": "test",
+  "question": "Which year and which conference was the 14th season for this conference as part of the NCAA Division that the Colorado Buffaloes played in with a record of 2-6 in conference play?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "2009",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 971,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2009",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2009",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2009",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2009",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2009",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.4,
+      "answer_em": 0.0
+    }
+  ]
+}

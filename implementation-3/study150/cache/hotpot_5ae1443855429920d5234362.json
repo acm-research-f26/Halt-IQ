@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae1443855429920d5234362",
+  "question": "Alexander Petrovich Nikolayev received the title Hero of the Soviet Union and the Order of Lenin for his actions during the   the final major offensive of the European theatre of what war?",
+  "ground_truth": "World War II",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5621,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2807,
+          "completion_tokens": 4,
+          "total_tokens": 2811,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.694388291005453,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 5.632612624998728,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5628,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2814,
+          "completion_tokens": 4,
+          "total_tokens": 2818,
+          "prompt_tokens_details": {
+            "cached_tokens": 2795
+          }
+        },
+        "seconds": 0.20858050000242656,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 2805
+          }
+        },
+        "seconds": 0.11330062500201166,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5628,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2814,
+          "completion_tokens": 4,
+          "total_tokens": 2818,
+          "prompt_tokens_details": {
+            "cached_tokens": 2813
+          }
+        },
+        "seconds": 0.11228870799823198,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 2805
+          }
+        },
+        "seconds": 0.10998637499869801,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5628,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2814,
+          "completion_tokens": 4,
+          "total_tokens": 2818,
+          "prompt_tokens_details": {
+            "cached_tokens": 2813
+          }
+        },
+        "seconds": 0.1283721660001902,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 2805
+          }
+        },
+        "seconds": 0.11197870899923146,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5628,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2814,
+          "completion_tokens": 4,
+          "total_tokens": 2818,
+          "prompt_tokens_details": {
+            "cached_tokens": 2813
+          }
+        },
+        "seconds": 0.11011704100383213,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 2805
+          }
+        },
+        "seconds": 0.1094201659943792,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "World War II",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 5628,
+      "writer": {
+        "text": "World War II",
+        "usage": {
+          "prompt_tokens": 2814,
+          "completion_tokens": 4,
+          "total_tokens": 2818,
+          "prompt_tokens_details": {
+            "cached_tokens": 2813
+          }
+        },
+        "seconds": 0.1131859169981908,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2806,
+          "completion_tokens": 4,
+          "total_tokens": 2810,
+          "prompt_tokens_details": {
+            "cached_tokens": 2805
+          }
+        },
+        "seconds": 0.112113875002251,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

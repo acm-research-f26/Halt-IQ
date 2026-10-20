@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8f4c8d554299458435d5a3",
+  "split": "test",
+  "question": "Scott Parkin has been a vocal critic of Exxonmobil and another corporation that has operations in how many countries ?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "70",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 991,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "70",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 997,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "70",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 997,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "70",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 997,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "70",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 997,
+      "quality": 0.4,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "70",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 997,
+      "quality": 0.4,
+      "answer_em": 0.0
+    }
+  ]
+}

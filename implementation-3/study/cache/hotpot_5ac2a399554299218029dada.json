@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac2a399554299218029dada",
+  "question": "Who programmed a cartridge-based development system made by a company noted for authoring Atari's BASIC?",
+  "ground_truth": "Kathleen O'Brien",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2629,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 6,
+          "total_tokens": 1315,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.965134375001071,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.9288985830062302,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2638,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 6,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 1297
+          }
+        },
+        "seconds": 0.18345412499911617,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 1309
+          }
+        },
+        "seconds": 0.09148199999617646,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2638,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 6,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 1317
+          }
+        },
+        "seconds": 0.11773287500545848,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 1309
+          }
+        },
+        "seconds": 0.08853266699588858,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2638,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 6,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 1317
+          }
+        },
+        "seconds": 0.11806904200057033,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 1309
+          }
+        },
+        "seconds": 0.08847466700535733,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2638,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 6,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 1317
+          }
+        },
+        "seconds": 0.11511383300239686,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 1309
+          }
+        },
+        "seconds": 0.0860762500014971,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kathleen O'Brien",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2638,
+      "writer": {
+        "text": "Kathleen O'Brien",
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 6,
+          "total_tokens": 1324,
+          "prompt_tokens_details": {
+            "cached_tokens": 1317
+          }
+        },
+        "seconds": 0.1164656670007389,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 4,
+          "total_tokens": 1314,
+          "prompt_tokens_details": {
+            "cached_tokens": 1309
+          }
+        },
+        "seconds": 0.08932400000048801,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

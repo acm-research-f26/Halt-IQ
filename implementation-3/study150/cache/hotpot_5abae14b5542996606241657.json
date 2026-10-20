@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abae14b5542996606241657",
+  "question": "The 2016 San Jose State Spartans football team were members of a NCAA conference that officially began operations in what year?",
+  "ground_truth": "1999",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2829,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 5,
+          "total_tokens": 1415,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.174340084005962,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.093923291002284,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1418,
+          "completion_tokens": 5,
+          "total_tokens": 1423,
+          "prompt_tokens_details": {
+            "cached_tokens": 1398
+          }
+        },
+        "seconds": 0.16860204099793918,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 1409
+          }
+        },
+        "seconds": 0.09325770800205646,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1418,
+          "completion_tokens": 5,
+          "total_tokens": 1423,
+          "prompt_tokens_details": {
+            "cached_tokens": 1417
+          }
+        },
+        "seconds": 0.10491850000107661,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 1409
+          }
+        },
+        "seconds": 0.08771879200503463,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1418,
+          "completion_tokens": 5,
+          "total_tokens": 1423,
+          "prompt_tokens_details": {
+            "cached_tokens": 1417
+          }
+        },
+        "seconds": 0.10194516600313364,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 1409
+          }
+        },
+        "seconds": 0.08928266700240783,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1418,
+          "completion_tokens": 5,
+          "total_tokens": 1423,
+          "prompt_tokens_details": {
+            "cached_tokens": 1417
+          }
+        },
+        "seconds": 0.10521116600284586,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 1409
+          }
+        },
+        "seconds": 0.09093708299769787,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1999",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2837,
+      "writer": {
+        "text": "1999",
+        "usage": {
+          "prompt_tokens": 1418,
+          "completion_tokens": 5,
+          "total_tokens": 1423,
+          "prompt_tokens_details": {
+            "cached_tokens": 1417
+          }
+        },
+        "seconds": 0.1025894580016029,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 4,
+          "total_tokens": 1414,
+          "prompt_tokens_details": {
+            "cached_tokens": 1409
+          }
+        },
+        "seconds": 0.09089258399762912,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

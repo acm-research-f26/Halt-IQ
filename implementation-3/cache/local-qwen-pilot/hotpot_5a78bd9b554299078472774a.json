@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a78bd9b554299078472774a",
+  "split": "test",
+  "question": "What nationality were social anthropologists Alfred Gell and Edmund Leach?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "British",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 771,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "British",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 776,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "British",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 776,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "British",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 776,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "British",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 776,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "British",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 776,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

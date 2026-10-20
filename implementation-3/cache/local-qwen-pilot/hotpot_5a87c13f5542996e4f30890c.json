@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a87c13f5542996e4f30890c",
+  "split": "test",
+  "question": "In what city did the \"Prince of tenors\" star in a film based on an opera by Giacomo Puccini?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Rome",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1353,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Rome",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1359,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Rome",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1359,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Rome",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1359,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Rome",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1359,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Rome",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1359,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

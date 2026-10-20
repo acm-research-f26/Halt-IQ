@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abe535055429976d4830aea",
+  "question": "Where is the transportation company that owns Talbot based in?",
+  "ground_truth": "Montreal",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": null,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1980,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 978,
+          "completion_tokens": 7,
+          "total_tokens": 985,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6416183750043274,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.8396238749992335,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2001,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 7,
+          "total_tokens": 1006,
+          "prompt_tokens_details": {
+            "cached_tokens": 966
+          }
+        },
+        "seconds": 0.2080733330003568,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.25439816600555787,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2001,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 7,
+          "total_tokens": 1006,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.13731733299937332,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.25524508300441084,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2001,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 7,
+          "total_tokens": 1006,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.13197737500013318,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.2521943339961581,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2001,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 7,
+          "total_tokens": 1006,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.13414249999914318,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.2477846249967115,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paducah, Kentucky",
+      "critique": "The answer is supported by the supplied passages and fully answers the question.",
+      "distance": 0.0,
+      "critic_approved": false,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2001,
+      "writer": {
+        "text": "Paducah, Kentucky",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 7,
+          "total_tokens": 1006,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.1350711670020246,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question.",
+        "usage": {
+          "prompt_tokens": 980,
+          "completion_tokens": 15,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.24828654199518496,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

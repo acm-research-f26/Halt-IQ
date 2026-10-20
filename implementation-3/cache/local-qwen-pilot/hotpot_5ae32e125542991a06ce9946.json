@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae32e125542991a06ce9946",
+  "split": "test",
+  "question": "According to the 2001 census, what was the population of the city in which Kirton End is located?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "4,505",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1423,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,505",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1432,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,505",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1432,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,505",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1432,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,505",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1432,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "4,505",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1432,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "extra_drafts_exact_text_matches": 200,
+  "original_and_extended_csv_shared_columns_match": true,
+  "files": {
+    "critic-bench/extra/drafts.jsonl": "6c73543d2f9ba5d8f5fb0d6d6f55d8eb6c380a223d679ba47f91cf654239f8f5",
+    "critic-bench/extra/tasks.jsonl": "bb702cf1bff92303bc947899603f064c5c25243983f256e051260d6694935be8",
+    "strands-reranker/results/haltiq_strands_experiments2.csv": "5cfad9b8b3e31e21138aa0fd6867491f3abdc25b5e42cfa847eaa569f789fbe8"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7eacd855429930675135c3",
+  "question": "What is the nationality of the actor who was a leading man of Mich\u00e8le Mercier and born on November 3, 1921?",
+  "ground_truth": "American",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2891,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1442,
+          "completion_tokens": 4,
+          "total_tokens": 1446,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "seconds": 2.377500082999177,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 3
+          }
+        },
+        "seconds": 2.156222749996232,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2898,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1449,
+          "completion_tokens": 4,
+          "total_tokens": 1453,
+          "prompt_tokens_details": {
+            "cached_tokens": 1430
+          }
+        },
+        "seconds": 0.15175866700155893,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 1440
+          }
+        },
+        "seconds": 0.09588079200329958,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2898,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1449,
+          "completion_tokens": 4,
+          "total_tokens": 1453,
+          "prompt_tokens_details": {
+            "cached_tokens": 1448
+          }
+        },
+        "seconds": 0.09900645800371422,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 1440
+          }
+        },
+        "seconds": 0.09841537500324193,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2898,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1449,
+          "completion_tokens": 4,
+          "total_tokens": 1453,
+          "prompt_tokens_details": {
+            "cached_tokens": 1448
+          }
+        },
+        "seconds": 0.10055112499685492,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 1440
+          }
+        },
+        "seconds": 0.09497533299872885,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2898,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1449,
+          "completion_tokens": 4,
+          "total_tokens": 1453,
+          "prompt_tokens_details": {
+            "cached_tokens": 1448
+          }
+        },
+        "seconds": 0.08987637500104029,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 1440
+          }
+        },
+        "seconds": 0.0877689159970032,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Charles Bronson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2898,
+      "writer": {
+        "text": "Charles Bronson",
+        "usage": {
+          "prompt_tokens": 1449,
+          "completion_tokens": 4,
+          "total_tokens": 1453,
+          "prompt_tokens_details": {
+            "cached_tokens": 1448
+          }
+        },
+        "seconds": 0.08653266699548112,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1441,
+          "completion_tokens": 4,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 1440
+          }
+        },
+        "seconds": 0.08686554100131616,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

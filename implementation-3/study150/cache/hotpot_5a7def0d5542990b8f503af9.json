@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7def0d5542990b8f503af9",
+  "question": "Who graduated from The SC Bastia Reserves and Academy  and was born 9 September 1987?",
+  "ground_truth": "Alexandre Dimitri Song Billong",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2521,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1257,
+          "completion_tokens": 4,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.8045245829998748,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.746435000000929,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2528,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1264,
+          "completion_tokens": 4,
+          "total_tokens": 1268,
+          "prompt_tokens_details": {
+            "cached_tokens": 1245
+          }
+        },
+        "seconds": 0.158080291999795,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 1255
+          }
+        },
+        "seconds": 0.09067262499593198,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2528,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1264,
+          "completion_tokens": 4,
+          "total_tokens": 1268,
+          "prompt_tokens_details": {
+            "cached_tokens": 1263
+          }
+        },
+        "seconds": 0.08972141700360226,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 1255
+          }
+        },
+        "seconds": 0.08984262499870965,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2528,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1264,
+          "completion_tokens": 4,
+          "total_tokens": 1268,
+          "prompt_tokens_details": {
+            "cached_tokens": 1263
+          }
+        },
+        "seconds": 0.09160533399699489,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 1255
+          }
+        },
+        "seconds": 0.09164729199983412,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2528,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1264,
+          "completion_tokens": 4,
+          "total_tokens": 1268,
+          "prompt_tokens_details": {
+            "cached_tokens": 1263
+          }
+        },
+        "seconds": 0.089943332997791,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 1255
+          }
+        },
+        "seconds": 0.09261970799707342,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Patrick Valery",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2528,
+      "writer": {
+        "text": "Patrick Valery",
+        "usage": {
+          "prompt_tokens": 1264,
+          "completion_tokens": 4,
+          "total_tokens": 1268,
+          "prompt_tokens_details": {
+            "cached_tokens": 1263
+          }
+        },
+        "seconds": 0.08992599999328377,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 4,
+          "total_tokens": 1260,
+          "prompt_tokens_details": {
+            "cached_tokens": 1255
+          }
+        },
+        "seconds": 0.09002841699839337,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

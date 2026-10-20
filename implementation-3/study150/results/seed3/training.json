@@ -1,0 +1,107 @@
+{
+  "source": "live",
+  "history": [
+    {
+      "epoch": 1,
+      "dev_reward": 0.1519314979629652,
+      "groups_with_signal": 50
+    },
+    {
+      "epoch": 2,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 50
+    },
+    {
+      "epoch": 3,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 39
+    },
+    {
+      "epoch": 4,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 28
+    },
+    {
+      "epoch": 5,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 15
+    },
+    {
+      "epoch": 6,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 12
+    },
+    {
+      "epoch": 7,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 12
+    },
+    {
+      "epoch": 8,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 8
+    },
+    {
+      "epoch": 9,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 5
+    },
+    {
+      "epoch": 10,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 9
+    },
+    {
+      "epoch": 11,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 5
+    },
+    {
+      "epoch": 12,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 13,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 3
+    },
+    {
+      "epoch": 14,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 6
+    },
+    {
+      "epoch": 15,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 5
+    },
+    {
+      "epoch": 16,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 17,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 3
+    },
+    {
+      "epoch": 18,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 19,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 1
+    },
+    {
+      "epoch": 20,
+      "dev_reward": 0.16340155176546828,
+      "groups_with_signal": 6
+    }
+  ],
+  "seed": 3,
+  "architecture": "CPU linear stop head, 6 parameters; no LLM fine-tuning"
+}

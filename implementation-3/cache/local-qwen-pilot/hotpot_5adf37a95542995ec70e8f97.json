@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5adf37a95542995ec70e8f97",
+  "split": "train",
+  "question": "The 2011\u201312 VCU Rams men's basketball team, led by third year head coach Shaka Smart, represented Virginia Commonwealth University which was founded in what year?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1838",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1595,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1838",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1603,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1838",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1603,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1838",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1603,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1838",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1603,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "1838",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1603,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

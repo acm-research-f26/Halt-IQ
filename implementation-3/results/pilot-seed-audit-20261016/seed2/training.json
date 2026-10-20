@@ -1,0 +1,107 @@
+{
+  "source": "live",
+  "history": [
+    {
+      "epoch": 1,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 15
+    },
+    {
+      "epoch": 2,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 13
+    },
+    {
+      "epoch": 3,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 14
+    },
+    {
+      "epoch": 4,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 9
+    },
+    {
+      "epoch": 5,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 10
+    },
+    {
+      "epoch": 6,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 11
+    },
+    {
+      "epoch": 7,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 10
+    },
+    {
+      "epoch": 8,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 8
+    },
+    {
+      "epoch": 9,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 4
+    },
+    {
+      "epoch": 10,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 9
+    },
+    {
+      "epoch": 11,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 6
+    },
+    {
+      "epoch": 12,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 4
+    },
+    {
+      "epoch": 13,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 1
+    },
+    {
+      "epoch": 14,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 6
+    },
+    {
+      "epoch": 15,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 16,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 17,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 18,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 2
+    },
+    {
+      "epoch": 19,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 4
+    },
+    {
+      "epoch": 20,
+      "dev_reward": 0.316789967206095,
+      "groups_with_signal": 0
+    }
+  ],
+  "seed": 2,
+  "architecture": "CPU linear stop head, 6 parameters; no LLM fine-tuning"
+}

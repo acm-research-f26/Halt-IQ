@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adffc8d55429925eb1afbc6",
+  "question": "What where Mark Chamberlain and Alex Oxlade-Chamberlain being?",
+  "ground_truth": "an English professional footballer",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2383,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1158,
+          "completion_tokens": 34,
+          "total_tokens": 1192,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.0212822499961476,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.642741957999533,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2419,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1194,
+          "completion_tokens": 34,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1146
+          }
+        },
+        "seconds": 0.6271367920053308,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.08808937499998137,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2419,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1194,
+          "completion_tokens": 34,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1193
+          }
+        },
+        "seconds": 0.5300140830004239,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.08941991699975915,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2419,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1194,
+          "completion_tokens": 34,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1193
+          }
+        },
+        "seconds": 0.5245391659991583,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.08834441699582385,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2419,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1194,
+          "completion_tokens": 34,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1193
+          }
+        },
+        "seconds": 0.5188786660000915,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.08851804200094193,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2419,
+      "writer": {
+        "text": "Alex Oxlade-Chamberlain and Mark Oxlade-Chamberlain are the younger brother and the father of Alex Oxlade-Chamberlain, respectively.",
+        "usage": {
+          "prompt_tokens": 1194,
+          "completion_tokens": 34,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1193
+          }
+        },
+        "seconds": 0.534939042001497,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1187,
+          "completion_tokens": 4,
+          "total_tokens": 1191,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.09253962500224588,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

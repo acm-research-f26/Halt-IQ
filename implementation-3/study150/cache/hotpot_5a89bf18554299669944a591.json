@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a89bf18554299669944a591",
+  "question": "Do writers John O'Hara and Bobbie Ann Mason share the same nationality?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2073,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1000,
+          "completion_tokens": 37,
+          "total_tokens": 1037,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.9537367910015746,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.4961571250023553,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2112,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 37,
+          "total_tokens": 1076,
+          "prompt_tokens_details": {
+            "cached_tokens": 988
+          }
+        },
+        "seconds": 0.6702937919981196,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.08893591700325487,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2112,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 37,
+          "total_tokens": 1076,
+          "prompt_tokens_details": {
+            "cached_tokens": 1038
+          }
+        },
+        "seconds": 0.5834882909985026,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09609787500085076,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2112,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 37,
+          "total_tokens": 1076,
+          "prompt_tokens_details": {
+            "cached_tokens": 1038
+          }
+        },
+        "seconds": 0.6347467090017744,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09849100000428734,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2112,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 37,
+          "total_tokens": 1076,
+          "prompt_tokens_details": {
+            "cached_tokens": 1038
+          }
+        },
+        "seconds": 0.5830842089999351,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09712558300088858,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2112,
+      "writer": {
+        "text": "No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",
+        "usage": {
+          "prompt_tokens": 1039,
+          "completion_tokens": 37,
+          "total_tokens": 1076,
+          "prompt_tokens_details": {
+            "cached_tokens": 1038
+          }
+        },
+        "seconds": 0.5955864999996265,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1032,
+          "completion_tokens": 4,
+          "total_tokens": 1036,
+          "prompt_tokens_details": {
+            "cached_tokens": 1031
+          }
+        },
+        "seconds": 0.09154125000350177,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

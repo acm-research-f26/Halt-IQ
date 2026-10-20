@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac1b1345542994ab5c67dd0",
+  "question": "Sinch when has the rank held by Sir Charles Comyn Egertong been the highest in the British Army?  ",
+  "ground_truth": "1736",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3279,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 5,
+          "total_tokens": 1640,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.992565624997951,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.582695040997351,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3287,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1643,
+          "completion_tokens": 5,
+          "total_tokens": 1648,
+          "prompt_tokens_details": {
+            "cached_tokens": 1623
+          }
+        },
+        "seconds": 0.23380141699453816,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.11423170800117077,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3287,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1643,
+          "completion_tokens": 5,
+          "total_tokens": 1648,
+          "prompt_tokens_details": {
+            "cached_tokens": 1642
+          }
+        },
+        "seconds": 0.12945500000205357,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.10710341700178105,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3287,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1643,
+          "completion_tokens": 5,
+          "total_tokens": 1648,
+          "prompt_tokens_details": {
+            "cached_tokens": 1642
+          }
+        },
+        "seconds": 0.1407595000055153,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.11298512500070501,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3287,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1643,
+          "completion_tokens": 5,
+          "total_tokens": 1648,
+          "prompt_tokens_details": {
+            "cached_tokens": 1642
+          }
+        },
+        "seconds": 0.13382445900060702,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.11285262500314275,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1921",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3287,
+      "writer": {
+        "text": "1921",
+        "usage": {
+          "prompt_tokens": 1643,
+          "completion_tokens": 5,
+          "total_tokens": 1648,
+          "prompt_tokens_details": {
+            "cached_tokens": 1642
+          }
+        },
+        "seconds": 0.13667108400113648,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1635,
+          "completion_tokens": 4,
+          "total_tokens": 1639,
+          "prompt_tokens_details": {
+            "cached_tokens": 1634
+          }
+        },
+        "seconds": 0.11514154199539917,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

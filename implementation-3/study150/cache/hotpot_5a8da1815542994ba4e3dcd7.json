@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8da1815542994ba4e3dcd7",
+  "question": "Naseer & Shahab is a Pakistani band playing a genre that dominated radio in what decade?",
+  "ground_truth": "1970s",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3581,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1785,
+          "completion_tokens": 6,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.229779166998924,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.437090540995996,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3590,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1794,
+          "completion_tokens": 6,
+          "total_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1773
+          }
+        },
+        "seconds": 0.25562341699696844,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.11575091600388987,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3590,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1794,
+          "completion_tokens": 6,
+          "total_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1793
+          }
+        },
+        "seconds": 0.15018537500145612,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.1122442920022877,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3590,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1794,
+          "completion_tokens": 6,
+          "total_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1793
+          }
+        },
+        "seconds": 0.14920454200182576,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.11288733300170861,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3590,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1794,
+          "completion_tokens": 6,
+          "total_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1793
+          }
+        },
+        "seconds": 0.14900108300207648,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.11215933300263714,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "1970s",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3590,
+      "writer": {
+        "text": "1970s",
+        "usage": {
+          "prompt_tokens": 1794,
+          "completion_tokens": 6,
+          "total_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1793
+          }
+        },
+        "seconds": 0.15007687500474276,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1786,
+          "completion_tokens": 4,
+          "total_tokens": 1790,
+          "prompt_tokens_details": {
+            "cached_tokens": 1785
+          }
+        },
+        "seconds": 0.11404216600203654,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

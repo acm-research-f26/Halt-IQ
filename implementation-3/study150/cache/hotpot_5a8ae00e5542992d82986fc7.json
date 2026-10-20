@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8ae00e5542992d82986fc7",
+  "question": "Who founded the Canadian manufacturer of winter clothing which is a major sponsor of Polar Bears International?",
+  "ground_truth": "Sam Tick",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3305,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1650,
+          "completion_tokens": 3,
+          "total_tokens": 1653,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.309124833001988,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.438160792000417,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3311,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 3,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1638
+          }
+        },
+        "seconds": 0.1719598749987199,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 1647
+          }
+        },
+        "seconds": 0.10539945799973793,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3311,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 3,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1655
+          }
+        },
+        "seconds": 0.09022333400207572,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 1647
+          }
+        },
+        "seconds": 0.10611025000252994,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3311,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 3,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1655
+          }
+        },
+        "seconds": 0.08849524999823188,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 1647
+          }
+        },
+        "seconds": 0.10185566599830054,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3311,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 3,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1655
+          }
+        },
+        "seconds": 0.0843263329952606,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 1647
+          }
+        },
+        "seconds": 0.0996562919972348,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Canada Goose",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3311,
+      "writer": {
+        "text": "Canada Goose",
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 3,
+          "total_tokens": 1659,
+          "prompt_tokens_details": {
+            "cached_tokens": 1655
+          }
+        },
+        "seconds": 0.0862647499961895,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1648,
+          "completion_tokens": 4,
+          "total_tokens": 1652,
+          "prompt_tokens_details": {
+            "cached_tokens": 1647
+          }
+        },
+        "seconds": 0.10218812499806518,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

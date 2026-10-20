@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7d2aa05542995f4f40221f",
+  "question": "What mixed martial arts even took place at a closed hotel and casino on the Boardwalk in Atlantic City, owned by Trump Entertainment Resorts?",
+  "ground_truth": "The War of '04",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2559,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1274,
+          "completion_tokens": 6,
+          "total_tokens": 1280,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.8237038330044015,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.799587417001021,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2568,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 6,
+          "total_tokens": 1289,
+          "prompt_tokens_details": {
+            "cached_tokens": 1262
+          }
+        },
+        "seconds": 0.18615645799582126,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 1274
+          }
+        },
+        "seconds": 0.0899221250001574,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2568,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 6,
+          "total_tokens": 1289,
+          "prompt_tokens_details": {
+            "cached_tokens": 1282
+          }
+        },
+        "seconds": 0.12156325000250945,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 1274
+          }
+        },
+        "seconds": 0.08959199999662815,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2568,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 6,
+          "total_tokens": 1289,
+          "prompt_tokens_details": {
+            "cached_tokens": 1282
+          }
+        },
+        "seconds": 0.11695437500020489,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 1274
+          }
+        },
+        "seconds": 0.08317862499825424,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2568,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 6,
+          "total_tokens": 1289,
+          "prompt_tokens_details": {
+            "cached_tokens": 1282
+          }
+        },
+        "seconds": 0.11745504099963,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 1274
+          }
+        },
+        "seconds": 0.09044758299569366,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "UFC 50",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2568,
+      "writer": {
+        "text": "UFC 50",
+        "usage": {
+          "prompt_tokens": 1283,
+          "completion_tokens": 6,
+          "total_tokens": 1289,
+          "prompt_tokens_details": {
+            "cached_tokens": 1282
+          }
+        },
+        "seconds": 0.1212418750001234,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1275,
+          "completion_tokens": 4,
+          "total_tokens": 1279,
+          "prompt_tokens_details": {
+            "cached_tokens": 1274
+          }
+        },
+        "seconds": 0.09148254200408701,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

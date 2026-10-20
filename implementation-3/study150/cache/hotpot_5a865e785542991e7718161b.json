@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a865e785542991e7718161b",
+  "question": "Which building is located a higher numbered street, Americas Tower or One Penn Plaza?",
+  "ground_truth": "Americas Tower",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2485,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1227,
+          "completion_tokens": 16,
+          "total_tokens": 1243,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.4606541659959476,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.3406252499989932,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2503,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1245,
+          "completion_tokens": 16,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1215
+          }
+        },
+        "seconds": 0.3724545000004582,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1237
+          }
+        },
+        "seconds": 0.09368041699781315,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2503,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1245,
+          "completion_tokens": 16,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1244
+          }
+        },
+        "seconds": 0.2779662089960766,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1237
+          }
+        },
+        "seconds": 0.09241162500256905,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2503,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1245,
+          "completion_tokens": 16,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1244
+          }
+        },
+        "seconds": 0.2765717090005637,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1237
+          }
+        },
+        "seconds": 0.09537070800433867,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2503,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1245,
+          "completion_tokens": 16,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1244
+          }
+        },
+        "seconds": 0.2697405420040013,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1237
+          }
+        },
+        "seconds": 0.08895362499606563,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2857142857142857,
+      "answer_em": 0.0,
+      "tokens": 2503,
+      "writer": {
+        "text": "Americas Tower is located on a higher numbered street than One Penn Plaza.",
+        "usage": {
+          "prompt_tokens": 1245,
+          "completion_tokens": 16,
+          "total_tokens": 1261,
+          "prompt_tokens_details": {
+            "cached_tokens": 1244
+          }
+        },
+        "seconds": 0.27867004199652,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1238,
+          "completion_tokens": 4,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1237
+          }
+        },
+        "seconds": 0.0976321670023026,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

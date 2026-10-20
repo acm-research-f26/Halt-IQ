@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae5caff554299546bf82f69",
+  "question": "The Russian route M9 forms a part of what European route that has a length of about 5320 km?",
+  "ground_truth": "European route E 22",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4059,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2000,
+          "completion_tokens": 30,
+          "total_tokens": 2030,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 3.4038924999986193,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 3.0464257089988678,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4091,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2032,
+          "completion_tokens": 30,
+          "total_tokens": 2062,
+          "prompt_tokens_details": {
+            "cached_tokens": 1988
+          }
+        },
+        "seconds": 0.599513332999777,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 2024
+          }
+        },
+        "seconds": 0.09834024999872781,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4091,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2032,
+          "completion_tokens": 30,
+          "total_tokens": 2062,
+          "prompt_tokens_details": {
+            "cached_tokens": 2031
+          }
+        },
+        "seconds": 0.5024276660042233,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 2024
+          }
+        },
+        "seconds": 0.0958266250017914,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4091,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2032,
+          "completion_tokens": 30,
+          "total_tokens": 2062,
+          "prompt_tokens_details": {
+            "cached_tokens": 2031
+          }
+        },
+        "seconds": 0.497556792004616,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 2024
+          }
+        },
+        "seconds": 0.099460707999242,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4091,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2032,
+          "completion_tokens": 30,
+          "total_tokens": 2062,
+          "prompt_tokens_details": {
+            "cached_tokens": 2031
+          }
+        },
+        "seconds": 0.5048284590011463,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 2024
+          }
+        },
+        "seconds": 0.09729516699735541,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.2,
+      "answer_em": 0.0,
+      "tokens": 4091,
+      "writer": {
+        "text": "The Russian route M9 forms a part of the European route E22, which has a length of about 5320 km.",
+        "usage": {
+          "prompt_tokens": 2032,
+          "completion_tokens": 30,
+          "total_tokens": 2062,
+          "prompt_tokens_details": {
+            "cached_tokens": 2031
+          }
+        },
+        "seconds": 0.4959514579968527,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 4,
+          "total_tokens": 2029,
+          "prompt_tokens_details": {
+            "cached_tokens": 2024
+          }
+        },
+        "seconds": 0.0937002089995076,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

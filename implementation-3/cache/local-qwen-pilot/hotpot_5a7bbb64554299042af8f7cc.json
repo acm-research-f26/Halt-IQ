@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7bbb64554299042af8f7cc",
+  "split": "test",
+  "question": "Who is older, Annie Morton or Terry Richardson?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1395,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1407,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1407,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1407,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1407,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Annie Morton is older than Terry Richardson.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1407,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    }
+  ]
+}

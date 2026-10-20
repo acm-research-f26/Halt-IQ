@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae7a8175542993210983ed8",
+  "split": "train",
+  "question": "Which other Mexican Formula One race car driver has held the podium besides the Force India driver born in 1990?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Sergio P\u00e9rez",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 886,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergio P\\u00e9rez",
+      "distance": 0.6666666666666667,
+      "critic_approved": true,
+      "tokens": 906,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergio P\\u00e9rez",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergio P\\u00e9rez",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergio P\\u00e9rez",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Sergio P\\u00e9rez",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 907,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

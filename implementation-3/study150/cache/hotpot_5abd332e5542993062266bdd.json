@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abd332e5542993062266bdd",
+  "question": "what season of shark tank did Roominate get invsetments",
+  "ground_truth": "during the sixth season of \"Shark Tank\".",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The season of Shark Tank where Roominate received investments was the sixth season.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5882352941176471,
+      "answer_em": 0.0,
+      "tokens": 2435,
+      "writer": {
+        "text": "The season of Shark Tank where Roominate received investments was the sixth season.",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 16,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.6849378749975585,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1213,
+          "completion_tokens": 4,
+          "total_tokens": 1217,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.4763357080009882,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The sixth season of Shark Tank.",
+      "critique": "APPROVED",
+      "distance": 0.5,
+      "critic_approved": true,
+      "quality": 0.9090909090909091,
+      "answer_em": 0.0,
+      "tokens": 2437,
+      "writer": {
+        "text": "The sixth season of Shark Tank.",
+        "usage": {
+          "prompt_tokens": 1220,
+          "completion_tokens": 8,
+          "total_tokens": 1228,
+          "prompt_tokens_details": {
+            "cached_tokens": 1190
+          }
+        },
+        "seconds": 0.24265158300113399,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1205,
+          "completion_tokens": 4,
+          "total_tokens": 1209,
+          "prompt_tokens_details": {
+            "cached_tokens": 1193
+          }
+        },
+        "seconds": 0.17039549999753945,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The sixth season of Shark Tank.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.9090909090909091,
+      "answer_em": 0.0,
+      "tokens": 2429,
+      "writer": {
+        "text": "The sixth season of Shark Tank.",
+        "usage": {
+          "prompt_tokens": 1212,
+          "completion_tokens": 8,
+          "total_tokens": 1220,
+          "prompt_tokens_details": {
+            "cached_tokens": 1192
+          }
+        },
+        "seconds": 0.24724450000212528,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1205,
+          "completion_tokens": 4,
+          "total_tokens": 1209,
+          "prompt_tokens_details": {
+            "cached_tokens": 1204
+          }
+        },
+        "seconds": 0.10424995799985481,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The sixth season of Shark Tank.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.9090909090909091,
+      "answer_em": 0.0,
+      "tokens": 2429,
+      "writer": {
+        "text": "The sixth season of Shark Tank.",
+        "usage": {
+          "prompt_tokens": 1212,
+          "completion_tokens": 8,
+          "total_tokens": 1220,
+          "prompt_tokens_details": {
+            "cached_tokens": 1211
+          }
+        },
+        "seconds": 0.1713937079985044,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1205,
+          "completion_tokens": 4,
+          "total_tokens": 1209,
+          "prompt_tokens_details": {
+            "cached_tokens": 1204
+          }
+        },
+        "seconds": 0.10011487500014482,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The sixth season of Shark Tank.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.9090909090909091,
+      "answer_em": 0.0,
+      "tokens": 2429,
+      "writer": {
+        "text": "The sixth season of Shark Tank.",
+        "usage": {
+          "prompt_tokens": 1212,
+          "completion_tokens": 8,
+          "total_tokens": 1220,
+          "prompt_tokens_details": {
+            "cached_tokens": 1211
+          }
+        },
+        "seconds": 0.15472666599816876,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1205,
+          "completion_tokens": 4,
+          "total_tokens": 1209,
+          "prompt_tokens_details": {
+            "cached_tokens": 1204
+          }
+        },
+        "seconds": 0.09771633300260874,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The sixth season of Shark Tank.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.9090909090909091,
+      "answer_em": 0.0,
+      "tokens": 2429,
+      "writer": {
+        "text": "The sixth season of Shark Tank.",
+        "usage": {
+          "prompt_tokens": 1212,
+          "completion_tokens": 8,
+          "total_tokens": 1220,
+          "prompt_tokens_details": {
+            "cached_tokens": 1211
+          }
+        },
+        "seconds": 0.15979066599538783,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1205,
+          "completion_tokens": 4,
+          "total_tokens": 1209,
+          "prompt_tokens_details": {
+            "cached_tokens": 1204
+          }
+        },
+        "seconds": 0.09524479200626956,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

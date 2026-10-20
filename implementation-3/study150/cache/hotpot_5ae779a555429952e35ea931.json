@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae779a555429952e35ea931",
+  "question": "Orson Welles made Filming the Trial, a making-of film of the production of The Trial, which was originally filmed where?",
+  "ground_truth": "Europe",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2801,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1398,
+          "completion_tokens": 3,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.913952833005169,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.9710033330047736,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2807,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 3,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 1386
+          }
+        },
+        "seconds": 0.1548757080017822,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 1395
+          }
+        },
+        "seconds": 0.09625729200342903,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2807,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 3,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.07857979200343834,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 1395
+          }
+        },
+        "seconds": 0.09581149999576155,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2807,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 3,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.07935962500050664,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 1395
+          }
+        },
+        "seconds": 0.09838629199657589,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2807,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 3,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.07929270900058327,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 1395
+          }
+        },
+        "seconds": 0.09336341699963668,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "in Europe",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 2807,
+      "writer": {
+        "text": "in Europe",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 3,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.07916850000037812,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1396,
+          "completion_tokens": 4,
+          "total_tokens": 1400,
+          "prompt_tokens_details": {
+            "cached_tokens": 1395
+          }
+        },
+        "seconds": 0.09551020799699472,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

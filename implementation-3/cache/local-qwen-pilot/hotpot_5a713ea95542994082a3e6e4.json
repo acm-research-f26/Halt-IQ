@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a713ea95542994082a3e6e4",
+  "split": "train",
+  "question": "Alvaro Mexia had a diplomatic mission with which tribe of indigenous people?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1423,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1442,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1442,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1442,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1442,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Alvaro Mexia had a diplomatic mission with the Ais native population.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1442,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

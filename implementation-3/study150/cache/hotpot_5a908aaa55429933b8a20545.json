@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a908aaa55429933b8a20545",
+  "question": "Were Ilya Ehrenburg and Harold Robbins both translators?",
+  "ground_truth": "no",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2341,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1168,
+          "completion_tokens": 3,
+          "total_tokens": 1171,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.4700870829983614,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.241400375001831,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2346,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1173,
+          "completion_tokens": 3,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.16065187500498723,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.09665704100189032,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2346,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1173,
+          "completion_tokens": 3,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 1172
+          }
+        },
+        "seconds": 0.07848758399632061,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.10451004200149328,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2346,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1173,
+          "completion_tokens": 3,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 1172
+          }
+        },
+        "seconds": 0.07856941700447351,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.0925697080019745,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2346,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1173,
+          "completion_tokens": 3,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 1172
+          }
+        },
+        "seconds": 0.0796700420032721,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.08971366700279759,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2346,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1173,
+          "completion_tokens": 3,
+          "total_tokens": 1176,
+          "prompt_tokens_details": {
+            "cached_tokens": 1172
+          }
+        },
+        "seconds": 0.07603504099824931,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1166,
+          "completion_tokens": 4,
+          "total_tokens": 1170,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.09110887499991804,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae33c4d5542992f92d82262",
+  "split": "test",
+  "question": "Robert Suettinger was the national intelligence officer under which former Governor of Arkansas?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1089,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1096,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1096,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1096,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1096,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "William Jefferson Clinton",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1096,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

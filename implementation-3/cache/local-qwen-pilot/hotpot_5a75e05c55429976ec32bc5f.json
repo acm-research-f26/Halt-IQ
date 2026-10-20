@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a75e05c55429976ec32bc5f",
+  "split": "test",
+  "question": "Brown State Fishing Lake is in a country that has a population of how many inhabitants ?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "9,984",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1543,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "9,984",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1552,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "9,984",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1552,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "9,984",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1552,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "9,984",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1552,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "9,984",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1552,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

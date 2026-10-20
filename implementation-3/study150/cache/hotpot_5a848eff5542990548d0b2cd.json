@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a848eff5542990548d0b2cd",
+  "question": "What river has five waterfalls depicted on a state seal?",
+  "ground_truth": "Missouri River",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1991,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 5,
+          "total_tokens": 996,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.9617338340030983,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.9225236249985755,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 5,
+          "total_tokens": 1004,
+          "prompt_tokens_details": {
+            "cached_tokens": 979
+          }
+        },
+        "seconds": 0.17958770800032653,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 990
+          }
+        },
+        "seconds": 0.09286354199866764,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 5,
+          "total_tokens": 1004,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.11324962499929825,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 990
+          }
+        },
+        "seconds": 0.09101979200204369,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 5,
+          "total_tokens": 1004,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.10712425000383519,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 990
+          }
+        },
+        "seconds": 0.0898437079958967,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 5,
+          "total_tokens": 1004,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.11065662499458995,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 990
+          }
+        },
+        "seconds": 0.09497291699517518,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Uttarakhand",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Uttarakhand",
+        "usage": {
+          "prompt_tokens": 999,
+          "completion_tokens": 5,
+          "total_tokens": 1004,
+          "prompt_tokens_details": {
+            "cached_tokens": 998
+          }
+        },
+        "seconds": 0.10900175000278978,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 991,
+          "completion_tokens": 4,
+          "total_tokens": 995,
+          "prompt_tokens_details": {
+            "cached_tokens": 990
+          }
+        },
+        "seconds": 0.09000716699665645,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

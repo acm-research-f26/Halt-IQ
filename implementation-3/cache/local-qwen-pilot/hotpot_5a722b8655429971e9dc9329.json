@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a722b8655429971e9dc9329",
+  "split": "test",
+  "question": "Who was the writer of These Boots Are Made for Walkin' and who died in 2007?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Lee Hazlewood",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 795,
+      "quality": 0.8,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Lee Hazlewood",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 0.8,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Lee Hazlewood",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 0.8,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Lee Hazlewood",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 0.8,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Lee Hazlewood",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 0.8,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Lee Hazlewood",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 803,
+      "quality": 0.8,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab96ab755429970cfb8eacd",
+  "split": "test",
+  "question": "Ellie Goulding worked with what other writers on her third studio album, Delirium?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Calvin Harris",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1093,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Calvin Harris",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1100,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Calvin Harris",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1100,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Calvin Harris",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1100,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Calvin Harris",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1100,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Calvin Harris",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1100,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

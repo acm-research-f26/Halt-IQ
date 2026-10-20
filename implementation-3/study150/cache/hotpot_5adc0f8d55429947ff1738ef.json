@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adc0f8d55429947ff1738ef",
+  "question": "Between Parsifal and Saul og David which opera has more acts?",
+  "ground_truth": "Saul og David",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Saul og David has more acts.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "Saul og David has more acts.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 9,
+          "total_tokens": 1568,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.5455890840021311,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1563,
+          "completion_tokens": 4,
+          "total_tokens": 1567,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.385310916004528,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saul og David",
+      "critique": "APPROVED",
+      "distance": 0.5,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3138,
+      "writer": {
+        "text": "Saul og David",
+        "usage": {
+          "prompt_tokens": 1570,
+          "completion_tokens": 5,
+          "total_tokens": 1575,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.16872191699803807,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1553
+          }
+        },
+        "seconds": 0.14646370900300099,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saul og David",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "Saul og David",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1552
+          }
+        },
+        "seconds": 0.1701121250007418,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.1065179170036572,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saul og David",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "Saul og David",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.12805154099623905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.10744979100127239,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saul og David",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "Saul og David",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.12441991599916946,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.10257579199969769,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Saul og David",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3135,
+      "writer": {
+        "text": "Saul og David",
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 5,
+          "total_tokens": 1572,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.11651904199970886,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 4,
+          "total_tokens": 1563,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.0948091669997666,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

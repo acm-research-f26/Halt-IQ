@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8549c65542997b5ce3ffe6",
+  "question": "Are both Barry Unsworth and P. G. Wodehouse from the same country?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2101,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1014,
+          "completion_tokens": 37,
+          "total_tokens": 1051,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.2260048339958303,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.768538709002314,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2140,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1053,
+          "completion_tokens": 37,
+          "total_tokens": 1090,
+          "prompt_tokens_details": {
+            "cached_tokens": 1002
+          }
+        },
+        "seconds": 0.9217405839954154,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 1045
+          }
+        },
+        "seconds": 0.11089324999920791,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2140,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1053,
+          "completion_tokens": 37,
+          "total_tokens": 1090,
+          "prompt_tokens_details": {
+            "cached_tokens": 1052
+          }
+        },
+        "seconds": 0.7242298330020276,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 1045
+          }
+        },
+        "seconds": 0.10879933399701258,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2140,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1053,
+          "completion_tokens": 37,
+          "total_tokens": 1090,
+          "prompt_tokens_details": {
+            "cached_tokens": 1052
+          }
+        },
+        "seconds": 0.753776542005653,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 1045
+          }
+        },
+        "seconds": 0.12021224999625701,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2140,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1053,
+          "completion_tokens": 37,
+          "total_tokens": 1090,
+          "prompt_tokens_details": {
+            "cached_tokens": 1052
+          }
+        },
+        "seconds": 0.7943226249990403,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 1045
+          }
+        },
+        "seconds": 0.1259144169962383,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2140,
+      "writer": {
+        "text": "No, Barry Unsworth and P. G. Wodehouse are not from the same country. Wodehouse is English, while Unsworth is from County Durham, England.",
+        "usage": {
+          "prompt_tokens": 1053,
+          "completion_tokens": 37,
+          "total_tokens": 1090,
+          "prompt_tokens_details": {
+            "cached_tokens": 1052
+          }
+        },
+        "seconds": 0.8976363330002641,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1046,
+          "completion_tokens": 4,
+          "total_tokens": 1050,
+          "prompt_tokens_details": {
+            "cached_tokens": 1045
+          }
+        },
+        "seconds": 0.13987141699908534,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

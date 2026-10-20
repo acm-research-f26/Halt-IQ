@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7b74485542997c3ec97190",
+  "question": "100 indviduals with the surname 'Preradovic' died at which concentration camp that straddled the southern border of the Hasburg Monarchy?",
+  "ground_truth": "the Jasenovac concentration camp",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3784,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1882,
+          "completion_tokens": 10,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.9201302500005113,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.7170915410024463,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3798,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1896,
+          "completion_tokens": 10,
+          "total_tokens": 1906,
+          "prompt_tokens_details": {
+            "cached_tokens": 1870
+          }
+        },
+        "seconds": 0.2583102909993613,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 1887
+          }
+        },
+        "seconds": 0.09723454200138804,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3798,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1896,
+          "completion_tokens": 10,
+          "total_tokens": 1906,
+          "prompt_tokens_details": {
+            "cached_tokens": 1895
+          }
+        },
+        "seconds": 0.18743670800176915,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 1887
+          }
+        },
+        "seconds": 0.09469700000045123,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3798,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1896,
+          "completion_tokens": 10,
+          "total_tokens": 1906,
+          "prompt_tokens_details": {
+            "cached_tokens": 1895
+          }
+        },
+        "seconds": 0.19372974999714643,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 1887
+          }
+        },
+        "seconds": 0.09640379100164864,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3798,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1896,
+          "completion_tokens": 10,
+          "total_tokens": 1906,
+          "prompt_tokens_details": {
+            "cached_tokens": 1895
+          }
+        },
+        "seconds": 0.1851852499967208,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 1887
+          }
+        },
+        "seconds": 0.09722637500090059,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Preradovi\\u0107",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3798,
+      "writer": {
+        "text": "Preradovi\\u0107",
+        "usage": {
+          "prompt_tokens": 1896,
+          "completion_tokens": 10,
+          "total_tokens": 1906,
+          "prompt_tokens_details": {
+            "cached_tokens": 1895
+          }
+        },
+        "seconds": 0.18705020799825434,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1888,
+          "completion_tokens": 4,
+          "total_tokens": 1892,
+          "prompt_tokens_details": {
+            "cached_tokens": 1887
+          }
+        },
+        "seconds": 0.0938647079965449,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

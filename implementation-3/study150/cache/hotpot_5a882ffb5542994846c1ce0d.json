@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a882ffb5542994846c1ce0d",
+  "question": "On what river is the city where Stade 24 Novembre is located situated on?",
+  "ground_truth": "the Congo River",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2895,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1444,
+          "completion_tokens": 4,
+          "total_tokens": 1448,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.099677124999289,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.094851624999137,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2902,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1451,
+          "completion_tokens": 4,
+          "total_tokens": 1455,
+          "prompt_tokens_details": {
+            "cached_tokens": 1432
+          }
+        },
+        "seconds": 0.15177212499838788,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 1442
+          }
+        },
+        "seconds": 0.094774041994242,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2902,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1451,
+          "completion_tokens": 4,
+          "total_tokens": 1455,
+          "prompt_tokens_details": {
+            "cached_tokens": 1450
+          }
+        },
+        "seconds": 0.0892466669974965,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 1442
+          }
+        },
+        "seconds": 0.10238795799523359,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2902,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1451,
+          "completion_tokens": 4,
+          "total_tokens": 1455,
+          "prompt_tokens_details": {
+            "cached_tokens": 1450
+          }
+        },
+        "seconds": 0.08869741600210546,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 1442
+          }
+        },
+        "seconds": 0.0892020829996909,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2902,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1451,
+          "completion_tokens": 4,
+          "total_tokens": 1455,
+          "prompt_tokens_details": {
+            "cached_tokens": 1450
+          }
+        },
+        "seconds": 0.09077774999605026,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 1442
+          }
+        },
+        "seconds": 0.09362683299696073,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "River Danube",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2902,
+      "writer": {
+        "text": "River Danube",
+        "usage": {
+          "prompt_tokens": 1451,
+          "completion_tokens": 4,
+          "total_tokens": 1455,
+          "prompt_tokens_details": {
+            "cached_tokens": 1450
+          }
+        },
+        "seconds": 0.09302987499540905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1443,
+          "completion_tokens": 4,
+          "total_tokens": 1447,
+          "prompt_tokens_details": {
+            "cached_tokens": 1442
+          }
+        },
+        "seconds": 0.0933969999969122,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

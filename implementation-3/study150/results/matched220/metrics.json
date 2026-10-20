@@ -1,0 +1,71 @@
+{
+  "metrics": [
+    {
+      "critic": "local_qwen1.5b",
+      "n": 220,
+      "auroc": 0.5027017899358325,
+      "ci95": [
+        0.4861071840908555,
+        0.5229458073858676
+      ],
+      "approved": 216,
+      "precision": 0.5740740740740741,
+      "wrong_approvals": 92,
+      "n_wrong": 94
+    },
+    {
+      "critic": "strands",
+      "n": 220,
+      "auroc": 0.4341438703140831,
+      "ci95": [
+        0.36016995186586453,
+        0.5084218855116154
+      ],
+      "approved": 16,
+      "precision": 0.5625,
+      "wrong_approvals": 7,
+      "n_wrong": 94
+    },
+    {
+      "critic": "strands_top3",
+      "n": 220,
+      "auroc": 0.62322695035461,
+      "ci95": [
+        0.5497508427276747,
+        0.7002418368161267
+      ],
+      "approved": 74,
+      "precision": 0.7162162162162162,
+      "wrong_approvals": 21,
+      "n_wrong": 94
+    },
+    {
+      "critic": "bge_top2",
+      "n": 220,
+      "auroc": 0.7249240121580547,
+      "ci95": [
+        0.6546237517125133,
+        0.7922856775704932
+      ],
+      "approved": 128,
+      "precision": 0.71875,
+      "wrong_approvals": 36,
+      "n_wrong": 94
+    },
+    {
+      "critic": "jev",
+      "n": 220,
+      "auroc": 0.725726106045255,
+      "ci95": [
+        0.6520888871967813,
+        0.7966224172837452
+      ],
+      "approved": 146,
+      "precision": 0.7123287671232876,
+      "wrong_approvals": 42,
+      "n_wrong": 94
+    }
+  ],
+  "local_mean_critic_seconds": 2.5634263337087098,
+  "local_total_tokens": 377278
+}

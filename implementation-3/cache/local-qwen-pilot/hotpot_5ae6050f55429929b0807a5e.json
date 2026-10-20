@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae6050f55429929b0807a5e",
+  "split": "test",
+  "question": "This singer of A Rather Blustery Day also voiced what hedgehog?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Jim Cummings",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1187,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jim Cummings",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jim Cummings",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jim Cummings",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jim Cummings",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jim Cummings",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1193,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

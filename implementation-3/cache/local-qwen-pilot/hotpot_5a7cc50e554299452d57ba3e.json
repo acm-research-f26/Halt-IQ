@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7cc50e554299452d57ba3e",
+  "split": "train",
+  "question": "Which band, Letters to Cleo or Screaming Trees, had more members?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Letters to Cleo had more members.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 963,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Screaming Trees had more members.",
+      "distance": 0.625,
+      "critic_approved": true,
+      "tokens": 974,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Letters to Cleo had more members.",
+      "distance": 0.625,
+      "critic_approved": true,
+      "tokens": 974,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Screaming Trees had more members.",
+      "distance": 0.625,
+      "critic_approved": true,
+      "tokens": 974,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Letters to Cleo had more members.",
+      "distance": 0.625,
+      "critic_approved": true,
+      "tokens": 974,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Screaming Trees had more members.",
+      "distance": 0.625,
+      "critic_approved": true,
+      "tokens": 974,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

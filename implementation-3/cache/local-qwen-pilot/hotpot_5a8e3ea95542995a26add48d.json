@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8e3ea95542995a26add48d",
+  "split": "test",
+  "question": "The director of the romantic comedy \"Big Stone Gap\" is based in what New York city?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "New York City",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 907,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 914,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 914,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 914,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 914,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "New York City",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 914,
+      "quality": 0.7499999999999999,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae74351554299572ea5479f",
+  "question": "What friend of a performance artist and professional wrestler has performed in the role of Tony Clifton?",
+  "ground_truth": "Bob Zmuda",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2979,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 5,
+          "total_tokens": 1490,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.0995294579988695,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.184302583002136,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2987,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 5,
+          "total_tokens": 1498,
+          "prompt_tokens_details": {
+            "cached_tokens": 1473
+          }
+        },
+        "seconds": 0.1849772089990438,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.10112795899476623,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2987,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 5,
+          "total_tokens": 1498,
+          "prompt_tokens_details": {
+            "cached_tokens": 1492
+          }
+        },
+        "seconds": 0.11587879199942108,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.0949216249937308,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2987,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 5,
+          "total_tokens": 1498,
+          "prompt_tokens_details": {
+            "cached_tokens": 1492
+          }
+        },
+        "seconds": 0.10966958299832186,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.09655487499549054,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2987,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 5,
+          "total_tokens": 1498,
+          "prompt_tokens_details": {
+            "cached_tokens": 1492
+          }
+        },
+        "seconds": 0.11433550000219839,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.09620091599936131,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Zmuda",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2987,
+      "writer": {
+        "text": "Bob Zmuda",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 5,
+          "total_tokens": 1498,
+          "prompt_tokens_details": {
+            "cached_tokens": 1492
+          }
+        },
+        "seconds": 0.10927358399931109,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1485,
+          "completion_tokens": 4,
+          "total_tokens": 1489,
+          "prompt_tokens_details": {
+            "cached_tokens": 1484
+          }
+        },
+        "seconds": 0.0961048329991172,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae4a3265542995ad6573de5",
+  "split": "test",
+  "question": "Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 979,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 995,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 995,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 995,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 995,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Buck-Tick hails from Fujioka, Gunma.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 995,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0
+    }
+  ]
+}

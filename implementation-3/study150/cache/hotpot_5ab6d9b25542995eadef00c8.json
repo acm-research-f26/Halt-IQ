@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab6d9b25542995eadef00c8",
+  "question": "Which opera has more acts, Don Quichotte or Tosca?",
+  "ground_truth": "Don Quichotte",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3171,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1573,
+          "completion_tokens": 13,
+          "total_tokens": 1586,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.1800490000023274,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.736162290995708,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3186,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 13,
+          "total_tokens": 1601,
+          "prompt_tokens_details": {
+            "cached_tokens": 1561
+          }
+        },
+        "seconds": 0.4595858750035404,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.13458320900099352,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3186,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 13,
+          "total_tokens": 1601,
+          "prompt_tokens_details": {
+            "cached_tokens": 1587
+          }
+        },
+        "seconds": 0.3370737500008545,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.14045474999875296,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3186,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 13,
+          "total_tokens": 1601,
+          "prompt_tokens_details": {
+            "cached_tokens": 1587
+          }
+        },
+        "seconds": 0.35171741700469283,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.14200433299993165,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3186,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 13,
+          "total_tokens": 1601,
+          "prompt_tokens_details": {
+            "cached_tokens": 1587
+          }
+        },
+        "seconds": 0.3545572919974802,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.15072112499910872,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Tosca has more acts than Don Quichotte.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0,
+      "tokens": 3186,
+      "writer": {
+        "text": "Tosca has more acts than Don Quichotte.",
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 13,
+          "total_tokens": 1601,
+          "prompt_tokens_details": {
+            "cached_tokens": 1587
+          }
+        },
+        "seconds": 0.36384158299915725,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 4,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.15653783400193788,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

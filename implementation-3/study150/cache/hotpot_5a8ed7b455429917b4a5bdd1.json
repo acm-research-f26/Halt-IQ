@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8ed7b455429917b4a5bdd1",
+  "question": "Rob is an American sitcom that starred what American actress who was best known for portraying Yolanda Saldivar in the film Selena?",
+  "ground_truth": "Guadalupe \"Lupe\" Ontiveros",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3055,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1524,
+          "completion_tokens": 4,
+          "total_tokens": 1528,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.0460446659999434,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.885004875002778,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3062,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 4,
+          "total_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1512
+          }
+        },
+        "seconds": 0.1689896250027232,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.09498349999921629,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3062,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 4,
+          "total_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.09629629200208001,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.0971532500043395,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3062,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 4,
+          "total_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.0976485830033198,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.09000308400572976,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3062,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 4,
+          "total_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.09199458300281549,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.09174749999510823,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Chene Lawson",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3062,
+      "writer": {
+        "text": "Chene Lawson",
+        "usage": {
+          "prompt_tokens": 1531,
+          "completion_tokens": 4,
+          "total_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1530
+          }
+        },
+        "seconds": 0.09547329199995147,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1523,
+          "completion_tokens": 4,
+          "total_tokens": 1527,
+          "prompt_tokens_details": {
+            "cached_tokens": 1522
+          }
+        },
+        "seconds": 0.09635941699525574,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

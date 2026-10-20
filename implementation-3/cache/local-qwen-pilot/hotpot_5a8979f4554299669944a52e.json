@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8979f4554299669944a52e",
+  "split": "test",
+  "question": "What is the middle name of the actress who plays Bobbi Bacha in Suburban Madness?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Hussein",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1097,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Hussein",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1104,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Hussein",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1104,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Hussein",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1104,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Hussein",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1104,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Hussein",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1104,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

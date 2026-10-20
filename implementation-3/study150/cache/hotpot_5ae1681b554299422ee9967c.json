@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae1681b554299422ee9967c",
+  "question": "What production company is owned by the director of \"She Hate Me\"?",
+  "ground_truth": "40 Acres and a Mule Filmworks",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2843,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 5,
+          "total_tokens": 1422,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.1075372919949587,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.027900082997803,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1405
+          }
+        },
+        "seconds": 0.1623230830009561,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.09977529200114077,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10828587500145659,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.08793645900004776,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10917366600187961,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.09152566600096179,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.10946424999565352,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.09297283400519518,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Desilu Productions",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2851,
+      "writer": {
+        "text": "Desilu Productions",
+        "usage": {
+          "prompt_tokens": 1425,
+          "completion_tokens": 5,
+          "total_tokens": 1430,
+          "prompt_tokens_details": {
+            "cached_tokens": 1424
+          }
+        },
+        "seconds": 0.11053912499482976,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1417,
+          "completion_tokens": 4,
+          "total_tokens": 1421,
+          "prompt_tokens_details": {
+            "cached_tokens": 1416
+          }
+        },
+        "seconds": 0.09363795900571859,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

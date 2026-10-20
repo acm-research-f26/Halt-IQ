@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adfe37c554299025d62a377",
+  "question": "Kasper Peter Schmeichel is the son of a professional footballer who was voted what in 1992 and 1993?",
+  "ground_truth": "IFFHS World's Best Goalkeeper",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1999,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 5,
+          "total_tokens": 1000,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.4646084170017275,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.8595535420026863,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2007,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 5,
+          "total_tokens": 1008,
+          "prompt_tokens_details": {
+            "cached_tokens": 983
+          }
+        },
+        "seconds": 0.2647774159995606,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 994
+          }
+        },
+        "seconds": 0.12253354099811986,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2007,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 5,
+          "total_tokens": 1008,
+          "prompt_tokens_details": {
+            "cached_tokens": 1002
+          }
+        },
+        "seconds": 0.13742004099913174,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 994
+          }
+        },
+        "seconds": 0.1144176250018063,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2007,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 5,
+          "total_tokens": 1008,
+          "prompt_tokens_details": {
+            "cached_tokens": 1002
+          }
+        },
+        "seconds": 0.12813995799660916,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 994
+          }
+        },
+        "seconds": 0.10958033299539238,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2007,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 5,
+          "total_tokens": 1008,
+          "prompt_tokens_details": {
+            "cached_tokens": 1002
+          }
+        },
+        "seconds": 0.13428112499968847,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 994
+          }
+        },
+        "seconds": 0.11589133300003596,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Peter Schmeichel",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2007,
+      "writer": {
+        "text": "Peter Schmeichel",
+        "usage": {
+          "prompt_tokens": 1003,
+          "completion_tokens": 5,
+          "total_tokens": 1008,
+          "prompt_tokens_details": {
+            "cached_tokens": 1002
+          }
+        },
+        "seconds": 0.13133250000100816,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 4,
+          "total_tokens": 999,
+          "prompt_tokens_details": {
+            "cached_tokens": 994
+          }
+        },
+        "seconds": 0.11241804100427544,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

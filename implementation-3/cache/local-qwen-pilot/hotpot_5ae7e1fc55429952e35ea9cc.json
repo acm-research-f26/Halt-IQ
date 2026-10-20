@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae7e1fc55429952e35ea9cc",
+  "split": "test",
+  "question": "What color clothing do people of the Netherlands wear during Oranjegekte or to celebrate the national holiday Koningsdag?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Orange",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1103,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Orange",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1108,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Orange",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1108,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Orange",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1108,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Orange",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1108,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Orange",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1108,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

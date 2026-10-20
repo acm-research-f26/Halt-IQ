@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adbf34955429947ff173862",
+  "question": "Is Karjiang a mountain and Sherpi Kangri a mountain peak?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2937,
+      "writer": {
+        "text": "No.",
+        "usage": {
+          "prompt_tokens": 1466,
+          "completion_tokens": 3,
+          "total_tokens": 1469,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.2615071249965695,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.3755362079973565,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Yes.",
+      "critique": "APPROVED",
+      "distance": 1.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2942,
+      "writer": {
+        "text": "Yes.",
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 3,
+          "total_tokens": 1474,
+          "prompt_tokens_details": {
+            "cached_tokens": 1454
+          }
+        },
+        "seconds": 0.14350295799522428,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 1456
+          }
+        },
+        "seconds": 0.1571382500042091,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Yes.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2942,
+      "writer": {
+        "text": "Yes.",
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 3,
+          "total_tokens": 1474,
+          "prompt_tokens_details": {
+            "cached_tokens": 1455
+          }
+        },
+        "seconds": 0.13517337500525173,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 1463
+          }
+        },
+        "seconds": 0.0911751249950612,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Yes.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2942,
+      "writer": {
+        "text": "Yes.",
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 3,
+          "total_tokens": 1474,
+          "prompt_tokens_details": {
+            "cached_tokens": 1470
+          }
+        },
+        "seconds": 0.08543195899983402,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 1463
+          }
+        },
+        "seconds": 0.10012387500319164,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Yes.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2942,
+      "writer": {
+        "text": "Yes.",
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 3,
+          "total_tokens": 1474,
+          "prompt_tokens_details": {
+            "cached_tokens": 1470
+          }
+        },
+        "seconds": 0.07590320800227346,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 1463
+          }
+        },
+        "seconds": 0.09158512500289362,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Yes.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2942,
+      "writer": {
+        "text": "Yes.",
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 3,
+          "total_tokens": 1474,
+          "prompt_tokens_details": {
+            "cached_tokens": 1470
+          }
+        },
+        "seconds": 0.07412299999850802,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1464,
+          "completion_tokens": 4,
+          "total_tokens": 1468,
+          "prompt_tokens_details": {
+            "cached_tokens": 1463
+          }
+        },
+        "seconds": 0.08888516700244509,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7320565542991f9a20c61d",
+  "split": "test",
+  "question": "who is younger Keith Bostic or Jerry Glanville ?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1313,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1328,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1328,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1328,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1328,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Jerry Glanville is younger than Keith Bostic.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1328,
+      "quality": 0.4444444444444445,
+      "answer_em": 0.0
+    }
+  ]
+}

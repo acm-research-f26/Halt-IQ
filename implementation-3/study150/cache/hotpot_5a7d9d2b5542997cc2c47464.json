@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7d9d2b5542997cc2c47464",
+  "question": "Roy Shepherd was considered a faculty member of what combination of colleges/universities?",
+  "ground_truth": "Victorian College of the Arts and Melbourne Conservatorium of Music",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3561,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1777,
+          "completion_tokens": 4,
+          "total_tokens": 1781,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.6005095829968923,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.6371474169936846,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3568,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1784,
+          "completion_tokens": 4,
+          "total_tokens": 1788,
+          "prompt_tokens_details": {
+            "cached_tokens": 1765
+          }
+        },
+        "seconds": 0.1621051250040182,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.09414012500201352,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3568,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1784,
+          "completion_tokens": 4,
+          "total_tokens": 1788,
+          "prompt_tokens_details": {
+            "cached_tokens": 1783
+          }
+        },
+        "seconds": 0.09493712500261609,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.09733479200076545,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3568,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1784,
+          "completion_tokens": 4,
+          "total_tokens": 1788,
+          "prompt_tokens_details": {
+            "cached_tokens": 1783
+          }
+        },
+        "seconds": 0.09656404099951033,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.09370874999876833,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3568,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1784,
+          "completion_tokens": 4,
+          "total_tokens": 1788,
+          "prompt_tokens_details": {
+            "cached_tokens": 1783
+          }
+        },
+        "seconds": 0.0958963750017574,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.09455570899444865,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Melbourne",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.3333333333333333,
+      "answer_em": 0.0,
+      "tokens": 3568,
+      "writer": {
+        "text": "University of Melbourne",
+        "usage": {
+          "prompt_tokens": 1784,
+          "completion_tokens": 4,
+          "total_tokens": 1788,
+          "prompt_tokens_details": {
+            "cached_tokens": 1783
+          }
+        },
+        "seconds": 0.09612462500081165,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 4,
+          "total_tokens": 1780,
+          "prompt_tokens_details": {
+            "cached_tokens": 1775
+          }
+        },
+        "seconds": 0.09693516699917382,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

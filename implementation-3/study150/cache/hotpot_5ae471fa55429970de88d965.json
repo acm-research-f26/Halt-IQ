@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae471fa55429970de88d965",
+  "question": "Where did this dish emerge in the late 1950s that is a long-standing tradition in New Jersey? ",
+  "ground_truth": "Centre-du-Qu\u00e9bec",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4137,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 5,
+          "total_tokens": 2069,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.7994880829937756,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.5942453340030625,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4145,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2072,
+          "completion_tokens": 5,
+          "total_tokens": 2077,
+          "prompt_tokens_details": {
+            "cached_tokens": 2052
+          }
+        },
+        "seconds": 0.18617979200644186,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 2063
+          }
+        },
+        "seconds": 0.10345933299686294,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4145,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2072,
+          "completion_tokens": 5,
+          "total_tokens": 2077,
+          "prompt_tokens_details": {
+            "cached_tokens": 2071
+          }
+        },
+        "seconds": 0.11552670799574116,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 2063
+          }
+        },
+        "seconds": 0.09824462499818765,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4145,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2072,
+          "completion_tokens": 5,
+          "total_tokens": 2077,
+          "prompt_tokens_details": {
+            "cached_tokens": 2071
+          }
+        },
+        "seconds": 0.11288533399783773,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 2063
+          }
+        },
+        "seconds": 0.10155745800147997,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4145,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2072,
+          "completion_tokens": 5,
+          "total_tokens": 2077,
+          "prompt_tokens_details": {
+            "cached_tokens": 2071
+          }
+        },
+        "seconds": 0.12097979100508383,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 2063
+          }
+        },
+        "seconds": 0.10067295900080353,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Hillside Terrace",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4145,
+      "writer": {
+        "text": "Hillside Terrace",
+        "usage": {
+          "prompt_tokens": 2072,
+          "completion_tokens": 5,
+          "total_tokens": 2077,
+          "prompt_tokens_details": {
+            "cached_tokens": 2071
+          }
+        },
+        "seconds": 0.11615775000245776,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2064,
+          "completion_tokens": 4,
+          "total_tokens": 2068,
+          "prompt_tokens_details": {
+            "cached_tokens": 2063
+          }
+        },
+        "seconds": 0.1003120419991319,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

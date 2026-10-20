@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7a5ccf55429941d65f25d7",
+  "question": "Who is older Charles R. Black Jr. or Paul Manafort?",
+  "ground_truth": "Charles R. Black Jr.",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3109,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1543,
+          "completion_tokens": 12,
+          "total_tokens": 1555,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.4137372089971905,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.037533291004365,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3123,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1557,
+          "completion_tokens": 12,
+          "total_tokens": 1569,
+          "prompt_tokens_details": {
+            "cached_tokens": 1531
+          }
+        },
+        "seconds": 0.36472445799881825,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1549
+          }
+        },
+        "seconds": 0.11068737500318093,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3123,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1557,
+          "completion_tokens": 12,
+          "total_tokens": 1569,
+          "prompt_tokens_details": {
+            "cached_tokens": 1556
+          }
+        },
+        "seconds": 0.26197174999833805,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1549
+          }
+        },
+        "seconds": 0.1147034169989638,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3123,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1557,
+          "completion_tokens": 12,
+          "total_tokens": 1569,
+          "prompt_tokens_details": {
+            "cached_tokens": 1556
+          }
+        },
+        "seconds": 0.2664632919986616,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1549
+          }
+        },
+        "seconds": 0.1272546659965883,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3123,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1557,
+          "completion_tokens": 12,
+          "total_tokens": 1569,
+          "prompt_tokens_details": {
+            "cached_tokens": 1556
+          }
+        },
+        "seconds": 0.26787529200373683,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1549
+          }
+        },
+        "seconds": 0.11768024999764748,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Paul Manafort is older than Charles R. Black Jr.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6153846153846153,
+      "answer_em": 0.0,
+      "tokens": 3123,
+      "writer": {
+        "text": "Paul Manafort is older than Charles R. Black Jr.",
+        "usage": {
+          "prompt_tokens": 1557,
+          "completion_tokens": 12,
+          "total_tokens": 1569,
+          "prompt_tokens_details": {
+            "cached_tokens": 1556
+          }
+        },
+        "seconds": 0.2759536669982481,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1550,
+          "completion_tokens": 4,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1549
+          }
+        },
+        "seconds": 0.11964483300107531,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

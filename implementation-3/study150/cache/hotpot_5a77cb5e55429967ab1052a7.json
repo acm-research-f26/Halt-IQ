@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a77cb5e55429967ab1052a7",
+  "question": "The voice of Homer Simpson also voices what alien character in the television series \"The Simpsons\"?",
+  "ground_truth": "Kodos",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series \"The Simpsons\".",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3458,
+      "writer": {
+        "text": "The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series \"The Simpsons\".",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 23,
+          "total_tokens": 1729,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.8488798749967827,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1725,
+          "completion_tokens": 4,
+          "total_tokens": 1729,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.483828500000527,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trans-Dimensional Control",
+      "critique": "APPROVED",
+      "distance": 0.8571428571428572,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3447,
+      "writer": {
+        "text": "Trans-Dimensional Control",
+        "usage": {
+          "prompt_tokens": 1732,
+          "completion_tokens": 5,
+          "total_tokens": 1737,
+          "prompt_tokens_details": {
+            "cached_tokens": 1694
+          }
+        },
+        "seconds": 0.22850175000348827,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 4,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 1696
+          }
+        },
+        "seconds": 0.1561790830019163,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trans-Dimensional Control",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3429,
+      "writer": {
+        "text": "Trans-Dimensional Control",
+        "usage": {
+          "prompt_tokens": 1714,
+          "completion_tokens": 5,
+          "total_tokens": 1719,
+          "prompt_tokens_details": {
+            "cached_tokens": 1695
+          }
+        },
+        "seconds": 0.177373708000232,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 4,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 1705
+          }
+        },
+        "seconds": 0.09844750000047497,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trans-Dimensional Control",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3429,
+      "writer": {
+        "text": "Trans-Dimensional Control",
+        "usage": {
+          "prompt_tokens": 1714,
+          "completion_tokens": 5,
+          "total_tokens": 1719,
+          "prompt_tokens_details": {
+            "cached_tokens": 1713
+          }
+        },
+        "seconds": 0.1120657499996014,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 4,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 1705
+          }
+        },
+        "seconds": 0.1069465000036871,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trans-Dimensional Control",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3429,
+      "writer": {
+        "text": "Trans-Dimensional Control",
+        "usage": {
+          "prompt_tokens": 1714,
+          "completion_tokens": 5,
+          "total_tokens": 1719,
+          "prompt_tokens_details": {
+            "cached_tokens": 1713
+          }
+        },
+        "seconds": 0.11790429200482322,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 4,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 1705
+          }
+        },
+        "seconds": 0.09558450000622543,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trans-Dimensional Control",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3429,
+      "writer": {
+        "text": "Trans-Dimensional Control",
+        "usage": {
+          "prompt_tokens": 1714,
+          "completion_tokens": 5,
+          "total_tokens": 1719,
+          "prompt_tokens_details": {
+            "cached_tokens": 1713
+          }
+        },
+        "seconds": 0.10840412499965169,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1706,
+          "completion_tokens": 4,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 1705
+          }
+        },
+        "seconds": 0.09317958400060888,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

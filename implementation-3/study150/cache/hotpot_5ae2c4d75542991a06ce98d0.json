@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae2c4d75542991a06ce98d0",
+  "question": "Who has a wider scope of profession, Pete Dexter or Elie Wiesel?",
+  "ground_truth": "Eliezer \"Elie\" Wiesel KBE",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3333,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1651,
+          "completion_tokens": 16,
+          "total_tokens": 1667,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.6247010419974686,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.5092509589958354,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3351,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 16,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "cached_tokens": 1639
+          }
+        },
+        "seconds": 0.3815208329979214,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 1661
+          }
+        },
+        "seconds": 0.10871012500138022,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3351,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 16,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "cached_tokens": 1668
+          }
+        },
+        "seconds": 0.303267124996637,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 1661
+          }
+        },
+        "seconds": 0.11136433399951784,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3351,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 16,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "cached_tokens": 1668
+          }
+        },
+        "seconds": 0.3035630829981528,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 1661
+          }
+        },
+        "seconds": 0.11512999999831663,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3351,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 16,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "cached_tokens": 1668
+          }
+        },
+        "seconds": 0.28677083399816183,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 1661
+          }
+        },
+        "seconds": 0.09588545899896417,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.28571428571428575,
+      "answer_em": 0.0,
+      "tokens": 3351,
+      "writer": {
+        "text": "Pete Dexter has a wider scope of profession than Elie Wiesel.",
+        "usage": {
+          "prompt_tokens": 1669,
+          "completion_tokens": 16,
+          "total_tokens": 1685,
+          "prompt_tokens_details": {
+            "cached_tokens": 1668
+          }
+        },
+        "seconds": 0.28599304200179176,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1662,
+          "completion_tokens": 4,
+          "total_tokens": 1666,
+          "prompt_tokens_details": {
+            "cached_tokens": 1661
+          }
+        },
+        "seconds": 0.09612516599736409,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

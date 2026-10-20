@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab472a35542991779162c98",
+  "question": "Who is the cofounder of Big Gates Records that collaborated with DJ Khaled on his second album \u201cWe the Best\u201d?",
+  "ground_truth": "Plies",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3205,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1600,
+          "completion_tokens": 3,
+          "total_tokens": 1603,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.945174666005187,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.249193167001067,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3211,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 1588
+          }
+        },
+        "seconds": 0.18661037500714883,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1597
+          }
+        },
+        "seconds": 0.11344566699699499,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3211,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09378429099888308,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1597
+          }
+        },
+        "seconds": 0.10997666700131958,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3211,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09056124999915482,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1597
+          }
+        },
+        "seconds": 0.10881920799874933,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3211,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09777000000030966,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1597
+          }
+        },
+        "seconds": 0.11800041700189468,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Plies",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3211,
+      "writer": {
+        "text": "Plies",
+        "usage": {
+          "prompt_tokens": 1606,
+          "completion_tokens": 3,
+          "total_tokens": 1609,
+          "prompt_tokens_details": {
+            "cached_tokens": 1605
+          }
+        },
+        "seconds": 0.09227912499773083,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1598,
+          "completion_tokens": 4,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1597
+          }
+        },
+        "seconds": 0.11035375000210479,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

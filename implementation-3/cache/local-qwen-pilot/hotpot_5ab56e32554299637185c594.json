@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab56e32554299637185c594",
+  "split": "test",
+  "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 943,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yes",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 948,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 948,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 948,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 948,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 948,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ac4f8705542995c82c4ad8d",
+  "question": "In which Austrian concentration camp was German musician Wilhelm Heckmann (1897-1995) imprisoned?",
+  "ground_truth": "Mauthausen\u2013Gusen concentration camp",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4001,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 1991,
+          "completion_tokens": 10,
+          "total_tokens": 2001,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.013441165996483,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.8636667920000036,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4014,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 2004,
+          "completion_tokens": 10,
+          "total_tokens": 2014,
+          "prompt_tokens_details": {
+            "cached_tokens": 1979
+          }
+        },
+        "seconds": 0.2684458329968038,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 1995
+          }
+        },
+        "seconds": 0.10465050000493648,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4014,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 2004,
+          "completion_tokens": 10,
+          "total_tokens": 2014,
+          "prompt_tokens_details": {
+            "cached_tokens": 2003
+          }
+        },
+        "seconds": 0.19890595899778418,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 1995
+          }
+        },
+        "seconds": 0.0995999170045252,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4014,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 2004,
+          "completion_tokens": 10,
+          "total_tokens": 2014,
+          "prompt_tokens_details": {
+            "cached_tokens": 2003
+          }
+        },
+        "seconds": 0.19833729200036032,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 1995
+          }
+        },
+        "seconds": 0.10227874999691267,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4014,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 2004,
+          "completion_tokens": 10,
+          "total_tokens": 2014,
+          "prompt_tokens_details": {
+            "cached_tokens": 2003
+          }
+        },
+        "seconds": 0.1925707920017885,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 1995
+          }
+        },
+        "seconds": 0.0989366669964511,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Mauthausen-Gusen concentration camp",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0,
+      "tokens": 4014,
+      "writer": {
+        "text": "Mauthausen-Gusen concentration camp",
+        "usage": {
+          "prompt_tokens": 2004,
+          "completion_tokens": 10,
+          "total_tokens": 2014,
+          "prompt_tokens_details": {
+            "cached_tokens": 2003
+          }
+        },
+        "seconds": 0.2177153329976136,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1996,
+          "completion_tokens": 4,
+          "total_tokens": 2000,
+          "prompt_tokens_details": {
+            "cached_tokens": 1995
+          }
+        },
+        "seconds": 0.09821849999570986,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

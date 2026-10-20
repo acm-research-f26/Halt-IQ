@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ade17d255429939a52fe80e",
+  "question": "Are both the Wire Fox Terrier and West Siberian Laika dog breeds?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3163,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 2,
+          "total_tokens": 1582,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.9367016250034794,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.7785972920028144,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3168,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 2,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1568
+          }
+        },
+        "seconds": 0.13329179200081853,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 1576
+          }
+        },
+        "seconds": 0.10336287500103936,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3168,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 2,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1584
+          }
+        },
+        "seconds": 0.06602037499396829,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 1576
+          }
+        },
+        "seconds": 0.09709145800297847,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3168,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 2,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1584
+          }
+        },
+        "seconds": 0.06362866699782899,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 1576
+          }
+        },
+        "seconds": 0.09177104200352915,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3168,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 2,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1584
+          }
+        },
+        "seconds": 0.061677749996306375,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 1576
+          }
+        },
+        "seconds": 0.09683691700047348,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3168,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 2,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1584
+          }
+        },
+        "seconds": 0.06368512499466306,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1577,
+          "completion_tokens": 4,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 1576
+          }
+        },
+        "seconds": 0.09577975000138395,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5aba71be5542994dbf01990c",
+  "question": "Panic! at the Disco released their 5th studio album on what date?",
+  "ground_truth": "January 15, 2016",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4069,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2024,
+          "completion_tokens": 11,
+          "total_tokens": 2035,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 5.783392500001355,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 5.447985708000488,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4083,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 11,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 2012
+          }
+        },
+        "seconds": 0.36026408299949253,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 2029
+          }
+        },
+        "seconds": 0.11924862500018207,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4083,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 11,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 2037
+          }
+        },
+        "seconds": 0.26054300000396324,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 2029
+          }
+        },
+        "seconds": 0.12233891699725064,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4083,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 11,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 2037
+          }
+        },
+        "seconds": 0.2615425000039977,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 2029
+          }
+        },
+        "seconds": 0.11853325000265613,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4083,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 11,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 2037
+          }
+        },
+        "seconds": 0.26024258400138933,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 2029
+          }
+        },
+        "seconds": 0.1265092920002644,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "September 29, 2015",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4083,
+      "writer": {
+        "text": "September 29, 2015",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 11,
+          "total_tokens": 2049,
+          "prompt_tokens_details": {
+            "cached_tokens": 2037
+          }
+        },
+        "seconds": 0.2655334170049173,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2030,
+          "completion_tokens": 4,
+          "total_tokens": 2034,
+          "prompt_tokens_details": {
+            "cached_tokens": 2029
+          }
+        },
+        "seconds": 0.12873233299615094,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

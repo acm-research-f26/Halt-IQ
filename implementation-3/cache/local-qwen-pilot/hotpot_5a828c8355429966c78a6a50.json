@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a828c8355429966c78a6a50",
+  "split": "test",
+  "question": "Kaiser Ventures corporation was founded by an American industrialist who became known as the father of modern American shipbuilding?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1217,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1225,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1225,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1225,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1225,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Henry J. Kaiser",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1225,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

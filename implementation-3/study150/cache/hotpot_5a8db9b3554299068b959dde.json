@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8db9b3554299068b959dde",
+  "question": "What animal does Mahratta Greyhound and Tibetan Spaniel have in common?",
+  "ground_truth": "dog",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2323,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1140,
+          "completion_tokens": 22,
+          "total_tokens": 1162,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.2436874580016593,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.073488833993906,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": 0.15384615384615385,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2347,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1164,
+          "completion_tokens": 22,
+          "total_tokens": 1186,
+          "prompt_tokens_details": {
+            "cached_tokens": 1128
+          }
+        },
+        "seconds": 0.5085400410025613,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 1141
+          }
+        },
+        "seconds": 0.16231158400478307,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2347,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1164,
+          "completion_tokens": 22,
+          "total_tokens": 1186,
+          "prompt_tokens_details": {
+            "cached_tokens": 1140
+          }
+        },
+        "seconds": 0.44030812499840977,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.09479024999745889,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2347,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1164,
+          "completion_tokens": 22,
+          "total_tokens": 1186,
+          "prompt_tokens_details": {
+            "cached_tokens": 1163
+          }
+        },
+        "seconds": 0.3720701249985723,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.09254766700178152,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2347,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1164,
+          "completion_tokens": 22,
+          "total_tokens": 1186,
+          "prompt_tokens_details": {
+            "cached_tokens": 1163
+          }
+        },
+        "seconds": 0.37470624999696156,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.09259162499802187,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2347,
+      "writer": {
+        "text": "The Mahratta Greyhound and the Tibetan Spaniel have the same origin, both originating in India.",
+        "usage": {
+          "prompt_tokens": 1164,
+          "completion_tokens": 22,
+          "total_tokens": 1186,
+          "prompt_tokens_details": {
+            "cached_tokens": 1163
+          }
+        },
+        "seconds": 0.3812047920000623,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1157,
+          "completion_tokens": 4,
+          "total_tokens": 1161,
+          "prompt_tokens_details": {
+            "cached_tokens": 1156
+          }
+        },
+        "seconds": 0.09746095800073817,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

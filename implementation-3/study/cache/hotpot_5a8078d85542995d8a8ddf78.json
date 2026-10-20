@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8078d85542995d8a8ddf78",
+  "question": "Which of the following rock bands is from Chicago: Kill Hannah or Louis XIV?",
+  "ground_truth": "Kill Hannah",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3169,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1578,
+          "completion_tokens": 7,
+          "total_tokens": 1585,
+          "prompt_tokens_details": {
+            "cached_tokens": 42
+          }
+        },
+        "seconds": 2.347433542003273,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 44
+          }
+        },
+        "seconds": 2.3279181249963585,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3178,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 7,
+          "total_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1566
+          }
+        },
+        "seconds": 0.20671624999522464,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 1579
+          }
+        },
+        "seconds": 0.09506054200028302,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3178,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 7,
+          "total_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.13686541700008092,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 1579
+          }
+        },
+        "seconds": 0.09221633400011342,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3178,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 7,
+          "total_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.13973616599832894,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 1579
+          }
+        },
+        "seconds": 0.09525387499888893,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3178,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 7,
+          "total_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.1378124580005533,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 1579
+          }
+        },
+        "seconds": 0.09272166700247908,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Kill Hannah is from Chicago.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 3178,
+      "writer": {
+        "text": "Kill Hannah is from Chicago.",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 7,
+          "total_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.13604520799708553,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1580,
+          "completion_tokens": 4,
+          "total_tokens": 1584,
+          "prompt_tokens_details": {
+            "cached_tokens": 1579
+          }
+        },
+        "seconds": 0.08951179099676665,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

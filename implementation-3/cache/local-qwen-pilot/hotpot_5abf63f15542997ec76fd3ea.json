@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5abf63f15542997ec76fd3ea",
+  "split": "test",
+  "question": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of a civil war that ended when ?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "1922",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 2629,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1922",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2637,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1922",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2637,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1922",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2637,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1922",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2637,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "1922",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 2637,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    }
+  ]
+}

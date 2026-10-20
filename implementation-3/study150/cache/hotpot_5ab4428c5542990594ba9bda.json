@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab4428c5542990594ba9bda",
+  "question": "Do Lush and P.O.D. both consist of four band members?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3113,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1538,
+          "completion_tokens": 19,
+          "total_tokens": 1557,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.9188186249957653,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.74258904200542,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3134,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 19,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1526
+          }
+        },
+        "seconds": 0.42595991599955596,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.09737562500231434,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3134,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 19,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.330384665998281,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.09350566699868068,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3134,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 19,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.3267570000025444,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.11304883300181245,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3134,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 19,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.338996833001147,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.09972158299933653,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Lush and P.O.D. do not both consist of four band members.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3134,
+      "writer": {
+        "text": "No, Lush and P.O.D. do not both consist of four band members.",
+        "usage": {
+          "prompt_tokens": 1559,
+          "completion_tokens": 19,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1558
+          }
+        },
+        "seconds": 0.32470987499982584,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1552,
+          "completion_tokens": 4,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.0946163750049891,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

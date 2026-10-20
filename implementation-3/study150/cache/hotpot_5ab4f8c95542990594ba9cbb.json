@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab4f8c95542990594ba9cbb",
+  "question": "The Trappist Abbey of Achel produces and sells what as an \"Authentic Trappist Product\"?",
+  "ground_truth": "Trappist beer",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2227,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 5,
+          "total_tokens": 1114,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.8395985000024666,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.8562901670011343,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2235,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 5,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 1097
+          }
+        },
+        "seconds": 0.18298824999510543,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.09079854100127704,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2235,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 5,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 1116
+          }
+        },
+        "seconds": 0.10645783300424227,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.09037104099843418,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2235,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 5,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 1116
+          }
+        },
+        "seconds": 0.10478241700184299,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.09066770799836377,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2235,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 5,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 1116
+          }
+        },
+        "seconds": 0.10416508299385896,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.08796979199541965,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Trappist beer",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2235,
+      "writer": {
+        "text": "Trappist beer",
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 5,
+          "total_tokens": 1122,
+          "prompt_tokens_details": {
+            "cached_tokens": 1116
+          }
+        },
+        "seconds": 0.10270033300184878,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1109,
+          "completion_tokens": 4,
+          "total_tokens": 1113,
+          "prompt_tokens_details": {
+            "cached_tokens": 1108
+          }
+        },
+        "seconds": 0.08901216700178338,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ab2d3df554299194fa9352c",
+  "split": "test",
+  "question": "The battle in which Giuseppe Arimondi lost his life secured what for Ethiopia?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1369,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gold Medal of Military Valor",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1378,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8b57f25542995d1e6f1371",
+  "split": "train",
+  "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1041,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1073,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1073,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1073,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1073,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Scott Derrickson and Ed Wood were not of the same nationality. Scott Derrickson is American, while Ed Wood was American as well.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1073,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a88981c554299206df2b307",
+  "question": "What type of conflict does Nathaniel Starbuck and Bernard Cornwell have in common?",
+  "ground_truth": "War",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2971,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1462,
+          "completion_tokens": 24,
+          "total_tokens": 1486,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 3.432129291999445,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 43
+          }
+        },
+        "seconds": 3.0938424589985516,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2997,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1488,
+          "completion_tokens": 24,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 1450
+          }
+        },
+        "seconds": 0.5541034580019186,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480
+          }
+        },
+        "seconds": 0.10158370900171576,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2997,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1488,
+          "completion_tokens": 24,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 1487
+          }
+        },
+        "seconds": 0.40828433300339384,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480
+          }
+        },
+        "seconds": 0.09808879200136289,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2997,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1488,
+          "completion_tokens": 24,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 1487
+          }
+        },
+        "seconds": 0.4044837089968496,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480
+          }
+        },
+        "seconds": 0.10442887499812059,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2997,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1488,
+          "completion_tokens": 24,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 1487
+          }
+        },
+        "seconds": 0.4014853749977192,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480
+          }
+        },
+        "seconds": 0.09706479099986609,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.11764705882352941,
+      "answer_em": 0.0,
+      "tokens": 2997,
+      "writer": {
+        "text": "Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.",
+        "usage": {
+          "prompt_tokens": 1488,
+          "completion_tokens": 24,
+          "total_tokens": 1512,
+          "prompt_tokens_details": {
+            "cached_tokens": 1487
+          }
+        },
+        "seconds": 0.40544329199474305,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 4,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480
+          }
+        },
+        "seconds": 0.09881237499939743,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

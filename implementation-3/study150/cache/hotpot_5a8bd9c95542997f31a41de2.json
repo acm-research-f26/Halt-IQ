@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8bd9c95542997f31a41de2",
+  "question": "At which university does the biographer of John Clare teach English Literature?",
+  "ground_truth": "University of Oxford",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4401,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2197,
+          "completion_tokens": 4,
+          "total_tokens": 2201,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.073067083001661,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.941755457999534,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4408,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2204,
+          "completion_tokens": 4,
+          "total_tokens": 2208,
+          "prompt_tokens_details": {
+            "cached_tokens": 2185
+          }
+        },
+        "seconds": 0.18015704200661276,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 2195
+          }
+        },
+        "seconds": 0.10145283400197513,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4408,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2204,
+          "completion_tokens": 4,
+          "total_tokens": 2208,
+          "prompt_tokens_details": {
+            "cached_tokens": 2203
+          }
+        },
+        "seconds": 0.10105666700110305,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 2195
+          }
+        },
+        "seconds": 0.09980004100361839,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4408,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2204,
+          "completion_tokens": 4,
+          "total_tokens": 2208,
+          "prompt_tokens_details": {
+            "cached_tokens": 2203
+          }
+        },
+        "seconds": 0.11122045799857005,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 2195
+          }
+        },
+        "seconds": 0.0956597909971606,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4408,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2204,
+          "completion_tokens": 4,
+          "total_tokens": 2208,
+          "prompt_tokens_details": {
+            "cached_tokens": 2203
+          }
+        },
+        "seconds": 0.09882737499719951,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 2195
+          }
+        },
+        "seconds": 0.10027945800538873,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "University of Oxford",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4408,
+      "writer": {
+        "text": "University of Oxford",
+        "usage": {
+          "prompt_tokens": 2204,
+          "completion_tokens": 4,
+          "total_tokens": 2208,
+          "prompt_tokens_details": {
+            "cached_tokens": 2203
+          }
+        },
+        "seconds": 0.09958891699352534,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2196,
+          "completion_tokens": 4,
+          "total_tokens": 2200,
+          "prompt_tokens_details": {
+            "cached_tokens": 2195
+          }
+        },
+        "seconds": 0.09880354199412977,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

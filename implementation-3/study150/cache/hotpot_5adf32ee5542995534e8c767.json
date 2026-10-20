@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adf32ee5542995534e8c767",
+  "question": "What is the name of the national level academy for performing arts that Bhupen Hazarika won his award in 2008? ",
+  "ground_truth": "Sangeet Natak Akademi",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4093,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2038,
+          "completion_tokens": 9,
+          "total_tokens": 2047,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 3.1824056250043213,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 3.132452583995473,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4105,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 9,
+          "total_tokens": 2059,
+          "prompt_tokens_details": {
+            "cached_tokens": 2026
+          }
+        },
+        "seconds": 0.240152999998827,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 2041
+          }
+        },
+        "seconds": 0.12169962500047404,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4105,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 9,
+          "total_tokens": 2059,
+          "prompt_tokens_details": {
+            "cached_tokens": 2049
+          }
+        },
+        "seconds": 0.17280804199981503,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 2041
+          }
+        },
+        "seconds": 0.10428633300034562,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4105,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 9,
+          "total_tokens": 2059,
+          "prompt_tokens_details": {
+            "cached_tokens": 2049
+          }
+        },
+        "seconds": 0.1917172500034212,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 2041
+          }
+        },
+        "seconds": 0.10450774999480927,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4105,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 9,
+          "total_tokens": 2059,
+          "prompt_tokens_details": {
+            "cached_tokens": 2049
+          }
+        },
+        "seconds": 0.17103220799617702,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 2041
+          }
+        },
+        "seconds": 0.0973973330037552,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Sangeet Natak Akademi",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4105,
+      "writer": {
+        "text": "Sangeet Natak Akademi",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 9,
+          "total_tokens": 2059,
+          "prompt_tokens_details": {
+            "cached_tokens": 2049
+          }
+        },
+        "seconds": 0.18446525000035763,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2042,
+          "completion_tokens": 4,
+          "total_tokens": 2046,
+          "prompt_tokens_details": {
+            "cached_tokens": 2041
+          }
+        },
+        "seconds": 0.09794104200409492,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

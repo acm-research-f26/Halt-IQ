@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a79b495554299148911fa3b",
+  "question": "Which serial killer was known to start killing first, Wayne Boden or Ted Bundy?",
+  "ground_truth": "Wayne Clifford Boden",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2413,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1198,
+          "completion_tokens": 9,
+          "total_tokens": 1207,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.8056997500025318,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.6916286669948022,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2424,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1209,
+          "completion_tokens": 9,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1186
+          }
+        },
+        "seconds": 0.2269777499968768,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09341166700323811,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2424,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1209,
+          "completion_tokens": 9,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1208
+          }
+        },
+        "seconds": 0.16733433400077047,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.08994058400276117,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2424,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1209,
+          "completion_tokens": 9,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1208
+          }
+        },
+        "seconds": 0.16689895799936494,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09127920800528955,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2424,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1209,
+          "completion_tokens": 9,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1208
+          }
+        },
+        "seconds": 0.1636419999995269,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.09089329200651264,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Wayne Boden started killing first.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.5,
+      "answer_em": 0.0,
+      "tokens": 2424,
+      "writer": {
+        "text": "Wayne Boden started killing first.",
+        "usage": {
+          "prompt_tokens": 1209,
+          "completion_tokens": 9,
+          "total_tokens": 1218,
+          "prompt_tokens_details": {
+            "cached_tokens": 1208
+          }
+        },
+        "seconds": 0.16356408299907343,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1202,
+          "completion_tokens": 4,
+          "total_tokens": 1206,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.08972524999990128,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

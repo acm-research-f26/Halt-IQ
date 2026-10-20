@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abdf12255429976d4830a2f",
+  "question": "The Album Against the Wind was the 11th Album of a Rock singer Robert C Seger born may 6 1945. What was the Rock singers stage name ?",
+  "ground_truth": "Bob Seger",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3157,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1563,
+          "completion_tokens": 16,
+          "total_tokens": 1579,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.974539333998109,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 5.192698332997679,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3175,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 16,
+          "total_tokens": 1597,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551
+          }
+        },
+        "seconds": 0.5003456249978626,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.12864970899681794,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3175,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 16,
+          "total_tokens": 1597,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.3958156250009779,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.1426126660007867,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3175,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 16,
+          "total_tokens": 1597,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.5058937079957104,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.15464333399722818,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3175,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 16,
+          "total_tokens": 1597,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.5674888330031536,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.19625487500161398,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.33333333333333337,
+      "answer_em": 0.0,
+      "tokens": 3175,
+      "writer": {
+        "text": "Bob Seger's stage name was Bob Seger and the Last Heard.",
+        "usage": {
+          "prompt_tokens": 1581,
+          "completion_tokens": 16,
+          "total_tokens": 1597,
+          "prompt_tokens_details": {
+            "cached_tokens": 1580
+          }
+        },
+        "seconds": 0.4898250000042026,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1574,
+          "completion_tokens": 4,
+          "total_tokens": 1578,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.17895912500534905,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

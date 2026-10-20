@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ae22b8d554299234fd0440f",
+  "split": "test",
+  "question": "What was the father of Kasper Schmeichel voted to be by the IFFHS in 1992?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 923,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 947,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 947,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 947,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 947,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "IFFHS in 1992 voted Peter Schmeichel as the World's Best Goalkeeper.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 947,
+      "quality": 0.4615384615384615,
+      "answer_em": 0.0
+    }
+  ]
+}

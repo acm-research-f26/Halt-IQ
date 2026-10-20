@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab2c6d955429916697740c3",
+  "question": "Are Maki Nomiya and Conrad Lant both considered musicians?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2357,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1177,
+          "completion_tokens": 2,
+          "total_tokens": 1179,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6294648330003838,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6455237909976859,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2362,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2,
+          "total_tokens": 1184,
+          "prompt_tokens_details": {
+            "cached_tokens": 1165
+          }
+        },
+        "seconds": 0.12508262500341516,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 1173
+          }
+        },
+        "seconds": 0.08914520899998024,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2362,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2,
+          "total_tokens": 1184,
+          "prompt_tokens_details": {
+            "cached_tokens": 1181
+          }
+        },
+        "seconds": 0.059602792003715876,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 1173
+          }
+        },
+        "seconds": 0.08852374999696622,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2362,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2,
+          "total_tokens": 1184,
+          "prompt_tokens_details": {
+            "cached_tokens": 1181
+          }
+        },
+        "seconds": 0.06063487499341136,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 1173
+          }
+        },
+        "seconds": 0.08859541700076079,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2362,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2,
+          "total_tokens": 1184,
+          "prompt_tokens_details": {
+            "cached_tokens": 1181
+          }
+        },
+        "seconds": 0.06115141700138338,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 1173
+          }
+        },
+        "seconds": 0.09394704200531123,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2362,
+      "writer": {
+        "text": "No",
+        "usage": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 2,
+          "total_tokens": 1184,
+          "prompt_tokens_details": {
+            "cached_tokens": 1181
+          }
+        },
+        "seconds": 0.05985616699763341,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1174,
+          "completion_tokens": 4,
+          "total_tokens": 1178,
+          "prompt_tokens_details": {
+            "cached_tokens": 1173
+          }
+        },
+        "seconds": 0.08888454199768603,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab42a2b5542996a3a969f5a",
+  "question": "What is the name of the historic figure whom participated in surveying the borders of the District of Columbia and had a premier African American recreation center named after him?",
+  "ground_truth": "Benjamin Banneker",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3089,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1539,
+          "completion_tokens": 6,
+          "total_tokens": 1545,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.729586334004125,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.6992837079960736,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3098,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1548,
+          "completion_tokens": 6,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1527
+          }
+        },
+        "seconds": 0.20165950000227895,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 1539
+          }
+        },
+        "seconds": 0.10223837500234367,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3098,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1548,
+          "completion_tokens": 6,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.1255223330008448,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 1539
+          }
+        },
+        "seconds": 0.09491549999802373,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3098,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1548,
+          "completion_tokens": 6,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.1251233750008396,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 1539
+          }
+        },
+        "seconds": 0.0940127920039231,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3098,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1548,
+          "completion_tokens": 6,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.1238360420029494,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 1539
+          }
+        },
+        "seconds": 0.12693741700059036,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Benjamin Banneker",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3098,
+      "writer": {
+        "text": "Benjamin Banneker",
+        "usage": {
+          "prompt_tokens": 1548,
+          "completion_tokens": 6,
+          "total_tokens": 1554,
+          "prompt_tokens_details": {
+            "cached_tokens": 1547
+          }
+        },
+        "seconds": 0.12227425000310177,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1540,
+          "completion_tokens": 4,
+          "total_tokens": 1544,
+          "prompt_tokens_details": {
+            "cached_tokens": 1539
+          }
+        },
+        "seconds": 0.09692625000025146,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

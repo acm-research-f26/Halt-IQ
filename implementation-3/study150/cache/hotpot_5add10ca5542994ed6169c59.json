@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5add10ca5542994ed6169c59",
+  "question": "Were Illinois Institute of Technology and Boise State University both bounded before 1950?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3339,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1622,
+          "completion_tokens": 48,
+          "total_tokens": 1670,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.6460291249968577,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.156222750003508,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3389,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 48,
+          "total_tokens": 1720,
+          "prompt_tokens_details": {
+            "cached_tokens": 1610
+          }
+        },
+        "seconds": 0.9297874169933493,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          }
+        },
+        "seconds": 0.10014375000173459,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3389,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 48,
+          "total_tokens": 1720,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.804333999993105,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          }
+        },
+        "seconds": 0.10021808300371049,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3389,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 48,
+          "total_tokens": 1720,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.8545539999977336,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          }
+        },
+        "seconds": 0.10531075000471901,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3389,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 48,
+          "total_tokens": 1720,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.8180332499978249,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          }
+        },
+        "seconds": 0.09959404200344579,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3389,
+      "writer": {
+        "text": "No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",
+        "usage": {
+          "prompt_tokens": 1672,
+          "completion_tokens": 48,
+          "total_tokens": 1720,
+          "prompt_tokens_details": {
+            "cached_tokens": 1671
+          }
+        },
+        "seconds": 0.8191355840026517,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1665,
+          "completion_tokens": 4,
+          "total_tokens": 1669,
+          "prompt_tokens_details": {
+            "cached_tokens": 1664
+          }
+        },
+        "seconds": 0.09975666700483998,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

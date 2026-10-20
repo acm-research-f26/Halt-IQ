@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8b4a5f55429949d91db531",
+  "question": "The 2011 La Manga Cup was won by Viking, who beat which Norwegian football club from the town of Kristiansand, currently playing in Tippeligaen having been promoted from Adeccoligaen in 2012?",
+  "ground_truth": "IK Start",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2266,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1125,
+          "completion_tokens": 6,
+          "total_tokens": 1131,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6954873750000843,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.5939125829972909,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2280,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 6,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 1113
+          }
+        },
+        "seconds": 0.18515495800238568,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 1130
+          }
+        },
+        "seconds": 0.09005804199841805,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2280,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 6,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 1138
+          }
+        },
+        "seconds": 0.1177871249965392,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 1130
+          }
+        },
+        "seconds": 0.09133625000686152,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2280,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 6,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 1138
+          }
+        },
+        "seconds": 0.11857004199555377,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 1130
+          }
+        },
+        "seconds": 0.0902916670020204,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2280,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 6,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 1138
+          }
+        },
+        "seconds": 0.11809758299932582,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 1130
+          }
+        },
+        "seconds": 0.10428508400218561,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "FC Nordsj\u00e6lland",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2280,
+      "writer": {
+        "text": "FC Nordsj\u00e6lland",
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 6,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 1138
+          }
+        },
+        "seconds": 0.11982874999375781,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1131,
+          "completion_tokens": 4,
+          "total_tokens": 1135,
+          "prompt_tokens_details": {
+            "cached_tokens": 1130
+          }
+        },
+        "seconds": 0.0871529579962953,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

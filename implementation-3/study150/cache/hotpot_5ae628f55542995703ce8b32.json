@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae628f55542995703ce8b32",
+  "question": "In what city was the Italian Baroque composer who composed a set of sonatas, titled Op. 5, born?",
+  "ground_truth": "Venice",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2283,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 5,
+          "total_tokens": 1142,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.5894043329972192,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.5796939589999965,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2291,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1145,
+          "completion_tokens": 5,
+          "total_tokens": 1150,
+          "prompt_tokens_details": {
+            "cached_tokens": 1125
+          }
+        },
+        "seconds": 0.16342279200034682,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 1136
+          }
+        },
+        "seconds": 0.0868250839994289,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2291,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1145,
+          "completion_tokens": 5,
+          "total_tokens": 1150,
+          "prompt_tokens_details": {
+            "cached_tokens": 1144
+          }
+        },
+        "seconds": 0.10094158299762057,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 1136
+          }
+        },
+        "seconds": 0.08745766599895433,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2291,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1145,
+          "completion_tokens": 5,
+          "total_tokens": 1150,
+          "prompt_tokens_details": {
+            "cached_tokens": 1144
+          }
+        },
+        "seconds": 0.1067760840014671,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 1136
+          }
+        },
+        "seconds": 0.09198862499761162,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2291,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1145,
+          "completion_tokens": 5,
+          "total_tokens": 1150,
+          "prompt_tokens_details": {
+            "cached_tokens": 1144
+          }
+        },
+        "seconds": 0.1065366249968065,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 1136
+          }
+        },
+        "seconds": 0.08722987500368617,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Torremaggiore",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2291,
+      "writer": {
+        "text": "Torremaggiore",
+        "usage": {
+          "prompt_tokens": 1145,
+          "completion_tokens": 5,
+          "total_tokens": 1150,
+          "prompt_tokens_details": {
+            "cached_tokens": 1144
+          }
+        },
+        "seconds": 0.10160791599628283,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1137,
+          "completion_tokens": 4,
+          "total_tokens": 1141,
+          "prompt_tokens_details": {
+            "cached_tokens": 1136
+          }
+        },
+        "seconds": 0.0892501669950434,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

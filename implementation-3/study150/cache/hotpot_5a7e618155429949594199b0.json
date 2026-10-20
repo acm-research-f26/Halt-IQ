@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7e618155429949594199b0",
+  "question": "New York State Route 9R rejoins its parent in a hamlet located  in what New York County?",
+  "ground_truth": "Albany",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4247,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2120,
+          "completion_tokens": 4,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.430668417000561,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.45988312499685,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4254,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2127,
+          "completion_tokens": 4,
+          "total_tokens": 2131,
+          "prompt_tokens_details": {
+            "cached_tokens": 2108
+          }
+        },
+        "seconds": 0.16740166700037662,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 2118
+          }
+        },
+        "seconds": 0.09510741600388428,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4254,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2127,
+          "completion_tokens": 4,
+          "total_tokens": 2131,
+          "prompt_tokens_details": {
+            "cached_tokens": 2126
+          }
+        },
+        "seconds": 0.09688687499874504,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 2118
+          }
+        },
+        "seconds": 0.09474575000058394,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4254,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2127,
+          "completion_tokens": 4,
+          "total_tokens": 2131,
+          "prompt_tokens_details": {
+            "cached_tokens": 2126
+          }
+        },
+        "seconds": 0.10130612500506686,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 2118
+          }
+        },
+        "seconds": 0.10334529200190445,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4254,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2127,
+          "completion_tokens": 4,
+          "total_tokens": 2131,
+          "prompt_tokens_details": {
+            "cached_tokens": 2126
+          }
+        },
+        "seconds": 0.13473387499834644,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 2118
+          }
+        },
+        "seconds": 0.09901091599749634,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4254,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 2127,
+          "completion_tokens": 4,
+          "total_tokens": 2131,
+          "prompt_tokens_details": {
+            "cached_tokens": 2126
+          }
+        },
+        "seconds": 0.09860429199761711,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2119,
+          "completion_tokens": 4,
+          "total_tokens": 2123,
+          "prompt_tokens_details": {
+            "cached_tokens": 2118
+          }
+        },
+        "seconds": 0.09696070800418966,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

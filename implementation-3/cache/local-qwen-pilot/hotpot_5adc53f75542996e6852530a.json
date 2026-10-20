@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5adc53f75542996e6852530a",
+  "split": "train",
+  "question": "Are both Cypress and Ajuga genera?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1037,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1050,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1050,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1050,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1050,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Yes, both Cypress and Ajuga are genera.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1050,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

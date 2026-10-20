@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5adddccd5542997dc7907069",
+  "split": "test",
+  "question": "Aside from the Apple Remote, what other device can control the program Apple Remote was originally designed to interact with?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Front Row",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1535,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Front Row",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1541,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Front Row",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1541,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Front Row",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1541,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Front Row",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1541,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Front Row",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1541,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

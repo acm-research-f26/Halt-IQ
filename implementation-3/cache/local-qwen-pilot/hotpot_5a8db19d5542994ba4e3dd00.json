@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a8db19d5542994ba4e3dd00",
+  "split": "test",
+  "question": "Are Local H and For Against both from the United States?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 919,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 953,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 953,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 953,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 953,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "No, Local H and For Against are not from the United States. Local H is from Zion, Illinois, and For Against is from Lincoln, Nebraska.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 953,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5adc6ded55429947ff17395d",
+  "question": "Which of the two airlines that operate flights into Enrique Malek International Airport is the larger air carrier in Panama?",
+  "ground_truth": "Copa Airlines",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3519,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1756,
+          "completion_tokens": 4,
+          "total_tokens": 1760,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.5216363329964224,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.3230953750025947,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3526,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 4,
+          "total_tokens": 1767,
+          "prompt_tokens_details": {
+            "cached_tokens": 1744
+          }
+        },
+        "seconds": 0.1682486659992719,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 1754
+          }
+        },
+        "seconds": 0.10047370800020872,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3526,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 4,
+          "total_tokens": 1767,
+          "prompt_tokens_details": {
+            "cached_tokens": 1762
+          }
+        },
+        "seconds": 0.09793533299671253,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 1754
+          }
+        },
+        "seconds": 0.09807216600165702,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3526,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 4,
+          "total_tokens": 1767,
+          "prompt_tokens_details": {
+            "cached_tokens": 1762
+          }
+        },
+        "seconds": 0.0953812090010615,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 1754
+          }
+        },
+        "seconds": 0.09606508399883751,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3526,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 4,
+          "total_tokens": 1767,
+          "prompt_tokens_details": {
+            "cached_tokens": 1762
+          }
+        },
+        "seconds": 0.09849783300160198,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 1754
+          }
+        },
+        "seconds": 0.09524454199708998,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Copa Airlines",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3526,
+      "writer": {
+        "text": "Copa Airlines",
+        "usage": {
+          "prompt_tokens": 1763,
+          "completion_tokens": 4,
+          "total_tokens": 1767,
+          "prompt_tokens_details": {
+            "cached_tokens": 1762
+          }
+        },
+        "seconds": 0.1072030419963994,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1755,
+          "completion_tokens": 4,
+          "total_tokens": 1759,
+          "prompt_tokens_details": {
+            "cached_tokens": 1754
+          }
+        },
+        "seconds": 0.10283966700080782,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

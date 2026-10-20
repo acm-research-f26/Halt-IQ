@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a8bb7f95542996e8ac889ff",
+  "question": "Where was the movie filmed starring Choi Yoon-young in 2012?",
+  "ground_truth": "Korea",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2365,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1180,
+          "completion_tokens": 3,
+          "total_tokens": 1183,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6516958749998594,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6307545419986127,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2371,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1186,
+          "completion_tokens": 3,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1168
+          }
+        },
+        "seconds": 0.13894366600288777,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.08777983400068479,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2371,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1186,
+          "completion_tokens": 3,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1185
+          }
+        },
+        "seconds": 0.0740653749962803,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.08569395800441271,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2371,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1186,
+          "completion_tokens": 3,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1185
+          }
+        },
+        "seconds": 0.080540667004243,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.09024158299871488,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2371,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1186,
+          "completion_tokens": 3,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1185
+          }
+        },
+        "seconds": 0.07509733400365803,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.09738875000039116,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "As One",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 2371,
+      "writer": {
+        "text": "As One",
+        "usage": {
+          "prompt_tokens": 1186,
+          "completion_tokens": 3,
+          "total_tokens": 1189,
+          "prompt_tokens_details": {
+            "cached_tokens": 1185
+          }
+        },
+        "seconds": 0.08248345799802337,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1178,
+          "completion_tokens": 4,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 1177
+          }
+        },
+        "seconds": 0.09188575000007404,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

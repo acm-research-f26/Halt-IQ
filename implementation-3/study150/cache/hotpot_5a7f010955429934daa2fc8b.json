@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7f010955429934daa2fc8b",
+  "question": "Were Basil Dean and Francis Ford Coppola both alive at some point in time?",
+  "ground_truth": "yes",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2189,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1093,
+          "completion_tokens": 2,
+          "total_tokens": 1095,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.7926853339959052,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.900055332996999,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2194,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1098,
+          "completion_tokens": 2,
+          "total_tokens": 1100,
+          "prompt_tokens_details": {
+            "cached_tokens": 1081
+          }
+        },
+        "seconds": 0.1397800830018241,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.08994541600259254,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2194,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1098,
+          "completion_tokens": 2,
+          "total_tokens": 1100,
+          "prompt_tokens_details": {
+            "cached_tokens": 1097
+          }
+        },
+        "seconds": 0.060165833994688,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.08983608299604384,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2194,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1098,
+          "completion_tokens": 2,
+          "total_tokens": 1100,
+          "prompt_tokens_details": {
+            "cached_tokens": 1097
+          }
+        },
+        "seconds": 0.06105395800113911,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.09402770800079452,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2194,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1098,
+          "completion_tokens": 2,
+          "total_tokens": 1100,
+          "prompt_tokens_details": {
+            "cached_tokens": 1097
+          }
+        },
+        "seconds": 0.059790458995848894,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.09076212500076508,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "yes",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 2194,
+      "writer": {
+        "text": "yes",
+        "usage": {
+          "prompt_tokens": 1098,
+          "completion_tokens": 2,
+          "total_tokens": 1100,
+          "prompt_tokens_details": {
+            "cached_tokens": 1097
+          }
+        },
+        "seconds": 0.05837337500270223,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1090,
+          "completion_tokens": 4,
+          "total_tokens": 1094,
+          "prompt_tokens_details": {
+            "cached_tokens": 1089
+          }
+        },
+        "seconds": 0.0923648329990101,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

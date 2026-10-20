@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae552bb55429908b63265d9",
+  "question": "An American football quarterback for the Chicago Bears was a star of a game released when?",
+  "ground_truth": "July 14, 2009",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3183,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1585,
+          "completion_tokens": 7,
+          "total_tokens": 1592,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.388949833002698,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.37134583399893,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3193,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1595,
+          "completion_tokens": 7,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1573
+          }
+        },
+        "seconds": 0.19488329099840485,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.0971018339987495,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3193,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1595,
+          "completion_tokens": 7,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.14063945799716748,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.11209820800286252,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3193,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1595,
+          "completion_tokens": 7,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.1478865000026417,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.09281287500198232,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3193,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1595,
+          "completion_tokens": 7,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.14110174999950686,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.10002362499653827,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "December 1995",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 3193,
+      "writer": {
+        "text": "December 1995",
+        "usage": {
+          "prompt_tokens": 1595,
+          "completion_tokens": 7,
+          "total_tokens": 1602,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594
+          }
+        },
+        "seconds": 0.1401514169992879,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1587,
+          "completion_tokens": 4,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 1586
+          }
+        },
+        "seconds": 0.09349866700358689,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

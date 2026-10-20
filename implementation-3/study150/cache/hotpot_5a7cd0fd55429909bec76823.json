@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a7cd0fd55429909bec76823",
+  "question": "Which band, Matthew Good Band or Switchfoot is still together?",
+  "ground_truth": "Switchfoot",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2425,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1206,
+          "completion_tokens": 7,
+          "total_tokens": 1213,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 1.713838959003624,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.6747231250046752,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1215,
+          "completion_tokens": 7,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1194
+          }
+        },
+        "seconds": 0.1904285409982549,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08601583300333004,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1215,
+          "completion_tokens": 7,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1214
+          }
+        },
+        "seconds": 0.1283774170005927,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08368212499772198,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1215,
+          "completion_tokens": 7,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1214
+          }
+        },
+        "seconds": 0.13044087500020396,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08832487500330899,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1215,
+          "completion_tokens": 7,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1214
+          }
+        },
+        "seconds": 0.1288740840027458,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08607245799794327,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Switchfoot is still together.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2434,
+      "writer": {
+        "text": "Switchfoot is still together.",
+        "usage": {
+          "prompt_tokens": 1215,
+          "completion_tokens": 7,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1214
+          }
+        },
+        "seconds": 0.12860470799932955,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 4,
+          "total_tokens": 1212,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.08618987500085495,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

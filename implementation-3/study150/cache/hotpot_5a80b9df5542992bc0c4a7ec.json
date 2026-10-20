@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a80b9df5542992bc0c4a7ec",
+  "question": "What was the nickname of Judy Lewis's father?",
+  "ground_truth": "\"The King of Hollywood\"",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2451,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1213,
+          "completion_tokens": 13,
+          "total_tokens": 1226,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.424948832995142,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.271960999998555,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2467,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1229,
+          "completion_tokens": 13,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1201
+          }
+        },
+        "seconds": 0.3333528750008554,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 1220
+          }
+        },
+        "seconds": 0.09565441699669464,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2467,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1229,
+          "completion_tokens": 13,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1228
+          }
+        },
+        "seconds": 0.23507608300133143,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 1220
+          }
+        },
+        "seconds": 0.096915624999383,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2467,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1229,
+          "completion_tokens": 13,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1228
+          }
+        },
+        "seconds": 0.23424237500148593,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 1220
+          }
+        },
+        "seconds": 0.09213562500372063,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2467,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1229,
+          "completion_tokens": 13,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1228
+          }
+        },
+        "seconds": 0.236408290998952,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 1220
+          }
+        },
+        "seconds": 0.09282587499910733,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The nickname of Judy Lewis's father was \"The King.\"",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2467,
+      "writer": {
+        "text": "The nickname of Judy Lewis's father was \"The King.\"",
+        "usage": {
+          "prompt_tokens": 1229,
+          "completion_tokens": 13,
+          "total_tokens": 1242,
+          "prompt_tokens_details": {
+            "cached_tokens": 1228
+          }
+        },
+        "seconds": 0.24158908300159965,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1221,
+          "completion_tokens": 4,
+          "total_tokens": 1225,
+          "prompt_tokens_details": {
+            "cached_tokens": 1220
+          }
+        },
+        "seconds": 0.09826908399554668,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

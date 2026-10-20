@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5ac23ff0554299636651994d",
+  "split": "test",
+  "question": "When was Poison's album \"Shut Up, Make Love\" released?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "\"Shut Up, Make Love\" by Poison was released in 2000.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1476,
+      "quality": 0.18181818181818182,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.9,
+      "critic_approved": true,
+      "tokens": 1468,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1455,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1455,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1455,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "2000",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1455,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

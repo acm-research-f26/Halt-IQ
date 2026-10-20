@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a877e5d5542993e715abf7d",
+  "split": "dev",
+  "question": "What screenwriter with credits for \"Evolution\" co-wrote a film starring Nicolas Cage and T\u00e9a Leoni?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "David Weissman",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1243,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "David Weissman",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1250,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "David Weissman",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1250,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "David Weissman",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1250,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "David Weissman",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1250,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "David Weissman",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1250,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

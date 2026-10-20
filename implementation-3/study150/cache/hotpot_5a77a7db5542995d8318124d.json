@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a77a7db5542995d8318124d",
+  "question": "Which author was born first, Josephine Tey or Julia Peterkin?",
+  "ground_truth": "Julia Peterkin",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Josephine Tey was born first.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1855,
+      "writer": {
+        "text": "Josephine Tey was born first.",
+        "usage": {
+          "prompt_tokens": 919,
+          "completion_tokens": 9,
+          "total_tokens": 928,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.6138293330004672,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 923,
+          "completion_tokens": 4,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.6136053340014769,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Josephine Tey",
+      "critique": "APPROVED",
+      "distance": 0.6,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1858,
+      "writer": {
+        "text": "Josephine Tey",
+        "usage": {
+          "prompt_tokens": 930,
+          "completion_tokens": 5,
+          "total_tokens": 935,
+          "prompt_tokens_details": {
+            "cached_tokens": 907
+          }
+        },
+        "seconds": 0.19027958299557213,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 919,
+          "completion_tokens": 4,
+          "total_tokens": 923,
+          "prompt_tokens_details": {
+            "cached_tokens": 913
+          }
+        },
+        "seconds": 0.1406524999983958,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Julia Peterkin was born first.",
+      "critique": "The answer is supported by the supplied passages and fully answers the question. Therefore, the response is APPROVED.",
+      "distance": 1.0,
+      "critic_approved": false,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 1882,
+      "writer": {
+        "text": "Julia Peterkin was born first.",
+        "usage": {
+          "prompt_tokens": 927,
+          "completion_tokens": 9,
+          "total_tokens": 936,
+          "prompt_tokens_details": {
+            "cached_tokens": 912
+          }
+        },
+        "seconds": 0.2366343749963562,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question. Therefore, the response is APPROVED.",
+        "usage": {
+          "prompt_tokens": 923,
+          "completion_tokens": 23,
+          "total_tokens": 946,
+          "prompt_tokens_details": {
+            "cached_tokens": 909
+          }
+        },
+        "seconds": 0.45596666599885793,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Josephine Tey was born first.",
+      "critique": "APPROVED",
+      "distance": 0.5714285714285714,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1885,
+      "writer": {
+        "text": "Josephine Tey was born first.",
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 9,
+          "total_tokens": 958,
+          "prompt_tokens_details": {
+            "cached_tokens": 908
+          }
+        },
+        "seconds": 0.299983582997811,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 923,
+          "completion_tokens": 4,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 922
+          }
+        },
+        "seconds": 0.088489000001573,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Josephine Tey",
+      "critique": "APPROVED",
+      "distance": 0.6,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 1858,
+      "writer": {
+        "text": "Josephine Tey",
+        "usage": {
+          "prompt_tokens": 930,
+          "completion_tokens": 5,
+          "total_tokens": 935,
+          "prompt_tokens_details": {
+            "cached_tokens": 929
+          }
+        },
+        "seconds": 0.10288187500555068,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 919,
+          "completion_tokens": 4,
+          "total_tokens": 923,
+          "prompt_tokens_details": {
+            "cached_tokens": 918
+          }
+        },
+        "seconds": 0.08919108400004916,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Julia Peterkin was born first.",
+      "critique": "The answer is supported by the supplied passages and fully answers the question. Therefore, the response is APPROVED.",
+      "distance": 1.0,
+      "critic_approved": false,
+      "quality": 0.5714285714285715,
+      "answer_em": 0.0,
+      "tokens": 1882,
+      "writer": {
+        "text": "Julia Peterkin was born first.",
+        "usage": {
+          "prompt_tokens": 927,
+          "completion_tokens": 9,
+          "total_tokens": 936,
+          "prompt_tokens_details": {
+            "cached_tokens": 926
+          }
+        },
+        "seconds": 0.1655790419972618,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "The answer is supported by the supplied passages and fully answers the question. Therefore, the response is APPROVED.",
+        "usage": {
+          "prompt_tokens": 923,
+          "completion_tokens": 23,
+          "total_tokens": 946,
+          "prompt_tokens_details": {
+            "cached_tokens": 922
+          }
+        },
+        "seconds": 0.3676044170060777,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

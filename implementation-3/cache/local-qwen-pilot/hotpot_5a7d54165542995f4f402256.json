@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a7d54165542995f4f402256",
+  "split": "test",
+  "question": "A medieval fortress in Dirleton, East Lothian, Scotland borders on the south side of what coastal area?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Yellowcraig",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1165,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yellowcraig",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1172,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yellowcraig",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1172,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yellowcraig",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1172,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yellowcraig",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1172,
+      "quality": 1.0,
+      "answer_em": 1.0
+    },
+    {
+      "answer": "Yellowcraig",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1172,
+      "quality": 1.0,
+      "answer_em": 1.0
+    }
+  ]
+}

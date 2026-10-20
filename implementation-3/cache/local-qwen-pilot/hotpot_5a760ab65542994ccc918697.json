@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a760ab65542994ccc918697",
+  "split": "train",
+  "question": "Alfred Balk served as the secretary of the Committee on the Employment of Minority Groups in the News Media under which United States Vice President?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 1653,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1663,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1663,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1663,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1663,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Gerald Rudolph Ford Jr.",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 1663,
+      "quality": 0.0,
+      "answer_em": 0.0
+    }
+  ]
+}

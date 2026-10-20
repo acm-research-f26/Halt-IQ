@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a875fee5542996e4f3087ab",
+  "question": "Which has more species, Lysiloma or Hydrocotyle umbellata?",
+  "ground_truth": "Lysiloma",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2803,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1393,
+          "completion_tokens": 9,
+          "total_tokens": 1402,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 2.5958671670014155,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.659779374997015,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2814,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 9,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1381
+          }
+        },
+        "seconds": 0.26187541599938413,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.1021087080007419,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2814,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 9,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.17891862499527633,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.10384483399684541,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2814,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 9,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.18159300000115763,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.09750491700106068,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2814,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 9,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.2982777079960215,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.1150956249985029,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Lysiloma has more species.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2814,
+      "writer": {
+        "text": "Lysiloma has more species.",
+        "usage": {
+          "prompt_tokens": 1404,
+          "completion_tokens": 9,
+          "total_tokens": 1413,
+          "prompt_tokens_details": {
+            "cached_tokens": 1403
+          }
+        },
+        "seconds": 0.20675287499761907,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1397,
+          "completion_tokens": 4,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 1396
+          }
+        },
+        "seconds": 0.11358408399973996,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

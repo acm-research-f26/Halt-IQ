@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae3a8985542992f92d82329",
+  "question": "Politician Lyman Sherwood was born in what New York county?",
+  "ground_truth": "Rensselaer County",
+  "type": "bridge",
+  "split": "dev",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2445,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1219,
+          "completion_tokens": 4,
+          "total_tokens": 1223,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 1.9488972920007654,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 1.7246983329969225,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2452,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1207
+          }
+        },
+        "seconds": 0.15622104200156173,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1217
+          }
+        },
+        "seconds": 0.09316899999976158,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2452,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.09646645899920259,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1217
+          }
+        },
+        "seconds": 0.09636416600551456,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2452,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.085942833997251,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1217
+          }
+        },
+        "seconds": 0.08779874999891035,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2452,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.09109933299623663,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1217
+          }
+        },
+        "seconds": 0.09322670800611377,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "New York County",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.4,
+      "answer_em": 0.0,
+      "tokens": 2452,
+      "writer": {
+        "text": "New York County",
+        "usage": {
+          "prompt_tokens": 1226,
+          "completion_tokens": 4,
+          "total_tokens": 1230,
+          "prompt_tokens_details": {
+            "cached_tokens": 1225
+          }
+        },
+        "seconds": 0.08919274999789195,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 4,
+          "total_tokens": 1222,
+          "prompt_tokens_details": {
+            "cached_tokens": 1217
+          }
+        },
+        "seconds": 0.08868433300085599,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

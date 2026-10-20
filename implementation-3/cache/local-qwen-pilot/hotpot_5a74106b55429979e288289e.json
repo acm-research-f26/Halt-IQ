@@ -1,0 +1,56 @@
+{
+  "id": "hotpot_5a74106b55429979e288289e",
+  "split": "test",
+  "question": "Where is the company that Sachin Warrier worked for as a software engineer headquartered?",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Tata Consultancy Services",
+      "distance": null,
+      "critic_approved": true,
+      "tokens": 775,
+      "quality": 0.0,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Mumbai, Maharashtra",
+      "distance": 1.0,
+      "critic_approved": true,
+      "tokens": 782,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Mumbai, Maharashtra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 781,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Mumbai, Maharashtra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 781,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Mumbai, Maharashtra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 781,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    },
+    {
+      "answer": "Mumbai, Maharashtra",
+      "distance": 0.0,
+      "critic_approved": true,
+      "tokens": 781,
+      "quality": 0.6666666666666666,
+      "answer_em": 0.0
+    }
+  ]
+}

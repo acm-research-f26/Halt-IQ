@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abba3255542996cc5e4a031",
+  "question": "Are John O'Hara and Rabindranath Tagore the same nationality?",
+  "ground_truth": "no",
+  "type": "comparison",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4171,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2050,
+          "completion_tokens": 36,
+          "total_tokens": 2086,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.6251392499980284,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 3.0841880000007222,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4209,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2088,
+          "completion_tokens": 36,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 2038
+          }
+        },
+        "seconds": 0.7095347499998752,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080
+          }
+        },
+        "seconds": 0.1018541669982369,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4209,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2088,
+          "completion_tokens": 36,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 2087
+          }
+        },
+        "seconds": 0.615273374998651,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080
+          }
+        },
+        "seconds": 0.1020999589964049,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4209,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2088,
+          "completion_tokens": 36,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 2087
+          }
+        },
+        "seconds": 0.5977358330055722,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080
+          }
+        },
+        "seconds": 0.09726833299646387,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4209,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2088,
+          "completion_tokens": 36,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 2087
+          }
+        },
+        "seconds": 0.5942242079981952,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080
+          }
+        },
+        "seconds": 0.0991310000026715,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.0,
+      "answer_em": 0.0,
+      "tokens": 4209,
+      "writer": {
+        "text": "No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",
+        "usage": {
+          "prompt_tokens": 2088,
+          "completion_tokens": 36,
+          "total_tokens": 2124,
+          "prompt_tokens_details": {
+            "cached_tokens": 2087
+          }
+        },
+        "seconds": 0.6251519159995951,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2081,
+          "completion_tokens": 4,
+          "total_tokens": 2085,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080
+          }
+        },
+        "seconds": 0.10234945800038986,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

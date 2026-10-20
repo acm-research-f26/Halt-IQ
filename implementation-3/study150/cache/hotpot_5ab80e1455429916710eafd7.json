@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ab80e1455429916710eafd7",
+  "question": "What part of the great power concerts such as the EU trio, the Nato Quint, the G7, and the G20, is Italy associated with?",
+  "ground_truth": "G20",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2715,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1336,
+          "completion_tokens": 22,
+          "total_tokens": 1358,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.24117904099694,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.8821897909947438,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2739,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 22,
+          "total_tokens": 1382,
+          "prompt_tokens_details": {
+            "cached_tokens": 1324
+          }
+        },
+        "seconds": 0.47750516700034495,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 1352
+          }
+        },
+        "seconds": 0.12105591599538457,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2739,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 22,
+          "total_tokens": 1382,
+          "prompt_tokens_details": {
+            "cached_tokens": 1359
+          }
+        },
+        "seconds": 0.3587295000033919,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 1352
+          }
+        },
+        "seconds": 0.09494504200119991,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2739,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 22,
+          "total_tokens": 1382,
+          "prompt_tokens_details": {
+            "cached_tokens": 1359
+          }
+        },
+        "seconds": 0.3609162499997183,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 1352
+          }
+        },
+        "seconds": 0.09387199999764562,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2739,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 22,
+          "total_tokens": 1382,
+          "prompt_tokens_details": {
+            "cached_tokens": 1359
+          }
+        },
+        "seconds": 0.3591378330020234,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 1352
+          }
+        },
+        "seconds": 0.09463629200035939,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.16666666666666669,
+      "answer_em": 0.0,
+      "tokens": 2739,
+      "writer": {
+        "text": "Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 22,
+          "total_tokens": 1382,
+          "prompt_tokens_details": {
+            "cached_tokens": 1359
+          }
+        },
+        "seconds": 0.36100370900385315,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1353,
+          "completion_tokens": 4,
+          "total_tokens": 1357,
+          "prompt_tokens_details": {
+            "cached_tokens": 1352
+          }
+        },
+        "seconds": 0.09412020900344942,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

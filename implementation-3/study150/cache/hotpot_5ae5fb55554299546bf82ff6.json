@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae5fb55554299546bf82ff6",
+  "question": "Turner Field was originally built as what 85,000 seat main stadium of the 1996 Summer Olympic Games and the 1996 Summer Paralympic Games in Atlanta?",
+  "ground_truth": "Centennial Olympic Stadium",
+  "type": "bridge",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.2727272727272727,
+      "answer_em": 0.0,
+      "tokens": 3781,
+      "writer": {
+        "text": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+        "usage": {
+          "prompt_tokens": 1858,
+          "completion_tokens": 33,
+          "total_tokens": 1891,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 3.225819125000271,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1886,
+          "completion_tokens": 4,
+          "total_tokens": 1890,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 2.7970352090051165,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Centennial Olympic Stadium",
+      "critique": "APPROVED",
+      "distance": 0.8235294117647058,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3760,
+      "writer": {
+        "text": "Centennial Olympic Stadium",
+        "usage": {
+          "prompt_tokens": 1893,
+          "completion_tokens": 5,
+          "total_tokens": 1898,
+          "prompt_tokens_details": {
+            "cached_tokens": 1846
+          }
+        },
+        "seconds": 0.21499662499991246,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1858,
+          "completion_tokens": 4,
+          "total_tokens": 1862,
+          "prompt_tokens_details": {
+            "cached_tokens": 1848
+          }
+        },
+        "seconds": 0.1623914590018103,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+      "critique": "APPROVED",
+      "distance": 0.8235294117647058,
+      "critic_approved": true,
+      "quality": 0.2727272727272727,
+      "answer_em": 0.0,
+      "tokens": 3789,
+      "writer": {
+        "text": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+        "usage": {
+          "prompt_tokens": 1866,
+          "completion_tokens": 33,
+          "total_tokens": 1899,
+          "prompt_tokens_details": {
+            "cached_tokens": 1847
+          }
+        },
+        "seconds": 0.6110150829990744,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1886,
+          "completion_tokens": 4,
+          "total_tokens": 1890,
+          "prompt_tokens_details": {
+            "cached_tokens": 1885
+          }
+        },
+        "seconds": 0.09466908300237264,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Centennial Olympic Stadium",
+      "critique": "APPROVED",
+      "distance": 0.8235294117647058,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3760,
+      "writer": {
+        "text": "Centennial Olympic Stadium",
+        "usage": {
+          "prompt_tokens": 1893,
+          "completion_tokens": 5,
+          "total_tokens": 1898,
+          "prompt_tokens_details": {
+            "cached_tokens": 1892
+          }
+        },
+        "seconds": 0.10892291700292844,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1858,
+          "completion_tokens": 4,
+          "total_tokens": 1862,
+          "prompt_tokens_details": {
+            "cached_tokens": 1857
+          }
+        },
+        "seconds": 0.09507258299709065,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+      "critique": "APPROVED",
+      "distance": 0.8235294117647058,
+      "critic_approved": true,
+      "quality": 0.2727272727272727,
+      "answer_em": 0.0,
+      "tokens": 3789,
+      "writer": {
+        "text": "Turner Field was originally built as Centennial Olympic Stadium in 1996 to serve as the centerpiece of the 1996 Summer Olympics.",
+        "usage": {
+          "prompt_tokens": 1866,
+          "completion_tokens": 33,
+          "total_tokens": 1899,
+          "prompt_tokens_details": {
+            "cached_tokens": 1865
+          }
+        },
+        "seconds": 0.5421520829986548,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1886,
+          "completion_tokens": 4,
+          "total_tokens": 1890,
+          "prompt_tokens_details": {
+            "cached_tokens": 1885
+          }
+        },
+        "seconds": 0.0949315000034403,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Centennial Olympic Stadium",
+      "critique": "APPROVED",
+      "distance": 0.8235294117647058,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 3760,
+      "writer": {
+        "text": "Centennial Olympic Stadium",
+        "usage": {
+          "prompt_tokens": 1893,
+          "completion_tokens": 5,
+          "total_tokens": 1898,
+          "prompt_tokens_details": {
+            "cached_tokens": 1892
+          }
+        },
+        "seconds": 0.1162202499981504,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1858,
+          "completion_tokens": 4,
+          "total_tokens": 1862,
+          "prompt_tokens_details": {
+            "cached_tokens": 1857
+          }
+        },
+        "seconds": 0.09635041699948488,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

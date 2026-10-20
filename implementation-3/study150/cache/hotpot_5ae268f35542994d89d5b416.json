@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5ae268f35542994d89d5b416",
+  "question": "What job do both Alfred Santell and David Fincher have in common?",
+  "ground_truth": "director",
+  "type": "comparison",
+  "split": "train",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Alfred Santell and David Fincher both have the job of director.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.18181818181818182,
+      "answer_em": 0.0,
+      "tokens": 1871,
+      "writer": {
+        "text": "Alfred Santell and David Fincher both have the job of director.",
+        "usage": {
+          "prompt_tokens": 920,
+          "completion_tokens": 16,
+          "total_tokens": 936,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 4.458586332999403,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 931,
+          "completion_tokens": 4,
+          "total_tokens": 935,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 1.9582429579968448,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "director",
+      "critique": "APPROVED",
+      "distance": 0.9,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1861,
+      "writer": {
+        "text": "director",
+        "usage": {
+          "prompt_tokens": 938,
+          "completion_tokens": 2,
+          "total_tokens": 940,
+          "prompt_tokens_details": {
+            "cached_tokens": 908
+          }
+        },
+        "seconds": 0.17677945800096495,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 4,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 910
+          }
+        },
+        "seconds": 0.257608457999595,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "director",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1848,
+      "writer": {
+        "text": "director",
+        "usage": {
+          "prompt_tokens": 925,
+          "completion_tokens": 2,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 909
+          }
+        },
+        "seconds": 0.1725135410015355,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 4,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 916
+          }
+        },
+        "seconds": 0.11363450000499142,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "director",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1848,
+      "writer": {
+        "text": "director",
+        "usage": {
+          "prompt_tokens": 925,
+          "completion_tokens": 2,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 924
+          }
+        },
+        "seconds": 0.07379262500035111,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 4,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 916
+          }
+        },
+        "seconds": 0.11376500000187661,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "director",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1848,
+      "writer": {
+        "text": "director",
+        "usage": {
+          "prompt_tokens": 925,
+          "completion_tokens": 2,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 924
+          }
+        },
+        "seconds": 0.07756945800065296,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 4,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 916
+          }
+        },
+        "seconds": 0.11638924999715528,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "director",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 1848,
+      "writer": {
+        "text": "director",
+        "usage": {
+          "prompt_tokens": 925,
+          "completion_tokens": 2,
+          "total_tokens": 927,
+          "prompt_tokens_details": {
+            "cached_tokens": 924
+          }
+        },
+        "seconds": 0.07823474999895552,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 4,
+          "total_tokens": 921,
+          "prompt_tokens_details": {
+            "cached_tokens": 916
+          }
+        },
+        "seconds": 0.1157104169978993,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

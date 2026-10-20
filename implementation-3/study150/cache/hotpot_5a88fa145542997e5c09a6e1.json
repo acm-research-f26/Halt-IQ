@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5a88fa145542997e5c09a6e1",
+  "question": "What was the benefit of reintroducing piston power and replacing the most popular turboprop engine in history?",
+  "ground_truth": "much better fuel economy",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2241,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1075,
+          "completion_tokens": 46,
+          "total_tokens": 1121,
+          "prompt_tokens_details": {
+            "cached_tokens": 39
+          }
+        },
+        "seconds": 2.6717571670014877,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 41
+          }
+        },
+        "seconds": 2.1563302089998615,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2289,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1123,
+          "completion_tokens": 46,
+          "total_tokens": 1169,
+          "prompt_tokens_details": {
+            "cached_tokens": 1063
+          }
+        },
+        "seconds": 0.8844368339996436,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 1115
+          }
+        },
+        "seconds": 0.09394074999727309,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2289,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1123,
+          "completion_tokens": 46,
+          "total_tokens": 1169,
+          "prompt_tokens_details": {
+            "cached_tokens": 1122
+          }
+        },
+        "seconds": 0.8491265419943375,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 1115
+          }
+        },
+        "seconds": 0.0979021660023136,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2289,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1123,
+          "completion_tokens": 46,
+          "total_tokens": 1169,
+          "prompt_tokens_details": {
+            "cached_tokens": 1122
+          }
+        },
+        "seconds": 0.7464270419950481,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 1115
+          }
+        },
+        "seconds": 0.09810958399611991,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2289,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1123,
+          "completion_tokens": 46,
+          "total_tokens": 1169,
+          "prompt_tokens_details": {
+            "cached_tokens": 1122
+          }
+        },
+        "seconds": 0.817689874995267,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 1115
+          }
+        },
+        "seconds": 0.09867179099819623,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 0.10256410256410256,
+      "answer_em": 0.0,
+      "tokens": 2289,
+      "writer": {
+        "text": "The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",
+        "usage": {
+          "prompt_tokens": 1123,
+          "completion_tokens": 46,
+          "total_tokens": 1169,
+          "prompt_tokens_details": {
+            "cached_tokens": 1122
+          }
+        },
+        "seconds": 0.8547608340013539,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 1116,
+          "completion_tokens": 4,
+          "total_tokens": 1120,
+          "prompt_tokens_details": {
+            "cached_tokens": 1115
+          }
+        },
+        "seconds": 0.10764829200343229,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "n": 220,
+  "writer": "qwen3:8b (saved team drafts)",
+  "critic": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "temperature": 0,
+  "max_tokens": 256,
+  "threshold": 0.8,
+  "score": "binary exact APPROVED, not probability",
+  "evidence_lengths": {
+    "2": 2,
+    "9": 1,
+    "10": 217
+  },
+  "team_commit": "d0688aed897c18d45fea8aacf040896ab06c86ee",
+  "yash_commit": "43b0a61c47845292eee747a01af4a5c87dbd60ab"
+}

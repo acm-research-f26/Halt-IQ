@@ -1,0 +1,220 @@
+{
+  "id": "hotpot_5abeebe25542993fe9a41d9c",
+  "question": " Season of Migration to the North  is a counter narrative to a novella by what Polish-British novelist?",
+  "ground_truth": "Joseph Conrad",
+  "type": "bridge",
+  "split": "test",
+  "source": "live",
+  "rounds": [
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": null,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4577,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2286,
+          "completion_tokens": 3,
+          "total_tokens": 2289,
+          "prompt_tokens_details": {
+            "cached_tokens": 38
+          }
+        },
+        "seconds": 4.103617500004475,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 40
+          }
+        },
+        "seconds": 4.092199874998187,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4583,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2292,
+          "completion_tokens": 3,
+          "total_tokens": 2295,
+          "prompt_tokens_details": {
+            "cached_tokens": 2274
+          }
+        },
+        "seconds": 0.17143970799952513,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 2283
+          }
+        },
+        "seconds": 0.0993504580037552,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4583,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2292,
+          "completion_tokens": 3,
+          "total_tokens": 2295,
+          "prompt_tokens_details": {
+            "cached_tokens": 2291
+          }
+        },
+        "seconds": 0.08447879199957242,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 2283
+          }
+        },
+        "seconds": 0.10024474999954691,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4583,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2292,
+          "completion_tokens": 3,
+          "total_tokens": 2295,
+          "prompt_tokens_details": {
+            "cached_tokens": 2291
+          }
+        },
+        "seconds": 0.08592270799999824,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 2283
+          }
+        },
+        "seconds": 0.10054591699736193,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4583,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2292,
+          "completion_tokens": 3,
+          "total_tokens": 2295,
+          "prompt_tokens_details": {
+            "cached_tokens": 2291
+          }
+        },
+        "seconds": 0.08513320799829671,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 2283
+          }
+        },
+        "seconds": 0.09940754200215451,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "answer": "Joseph Conrad",
+      "critique": "APPROVED",
+      "distance": 0.0,
+      "critic_approved": true,
+      "quality": 1.0,
+      "answer_em": 1.0,
+      "tokens": 4583,
+      "writer": {
+        "text": "Joseph Conrad",
+        "usage": {
+          "prompt_tokens": 2292,
+          "completion_tokens": 3,
+          "total_tokens": 2295,
+          "prompt_tokens_details": {
+            "cached_tokens": 2291
+          }
+        },
+        "seconds": 0.08507154200196965,
+        "finish_reason": "stop"
+      },
+      "critic": {
+        "text": "APPROVED",
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 4,
+          "total_tokens": 2288,
+          "prompt_tokens_details": {
+            "cached_tokens": 2283
+          }
+        },
+        "seconds": 0.0997457920020679,
+        "finish_reason": "stop"
+      }
+    }
+  ]
+}
