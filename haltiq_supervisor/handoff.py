@@ -138,7 +138,9 @@ def emit_handoff(run_dir: Path, *, event_id: str, kind: str, stage: str | None,
     argv = validate_callback(codex_argv)
     source_root = Path(__file__).resolve().parents[1]
     callback_cwd = source_root
-    if codex_cwd is not None:
+    # A local-only event needs no callback checkout. Frozen source exports are
+    # valid event producers; retain checkout validation before real callbacks.
+    if argv is not None and codex_cwd is not None:
         declared = Path(codex_cwd)
         if (not declared.is_absolute() or not declared.is_dir()
                 or not (declared / ".git").exists()):

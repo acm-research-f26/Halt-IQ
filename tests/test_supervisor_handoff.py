@@ -77,6 +77,36 @@ class HandoffTests(unittest.TestCase):
         self.assertGreaterEqual(synced.call_count, 1)
         popen.assert_not_called()
 
+    def test_local_only_export_cwd_saves_and_deduplicates_without_git_or_dispatch(self):
+        import os
+        export = self.root / "frozen-source-export"
+        export.mkdir()
+        self.assertFalse((export / ".git").exists())
+        with patch("haltiq_supervisor.handoff.os.fsync", wraps=os.fsync) as synced, \
+             patch("haltiq_supervisor.handoff.subprocess.Popen") as popen:
+            result = emit_handoff(self.root, **self.kwargs, codex_cwd=export)
+            before = (self.root / "outbox/phase-0001.json").read_bytes()
+            again = emit_handoff(self.root, **self.kwargs, codex_cwd=export)
+        self.assertEqual(result["status"], "prepared_local_only")
+        self.assertEqual(result["dispatch_intents"], 0)
+        self.assertFalse(result["dispatch_attempted"])
+        self.assertFalse(result["live_delivery_verified"])
+        self.assertTrue(again["deduplicated"])
+        self.assertEqual(before, (self.root / "outbox/phase-0001.json").read_bytes())
+        self.assertEqual(synced.call_count, 1)
+        self.assertFalse((self.root / "outbox/commands").exists())
+        self.assertNotIn("SENSITIVE-CANARY", before.decode("utf-8"))
+        popen.assert_not_called()
+
+    def test_configured_callback_export_cwd_fails_before_outbox_creation(self):
+        export = self.root / "frozen-source-export"
+        export.mkdir()
+        with patch("haltiq_supervisor.handoff.subprocess.Popen") as popen:
+            with self.assertRaisesRegex(ValueError, "absolute Git checkout"):
+                emit_handoff(self.root, **self.kwargs, codex_argv=self.argv, codex_cwd=export)
+        self.assertFalse((self.root / "outbox").exists())
+        popen.assert_not_called()
+
     def test_prior_local_event_does_not_dispatch_when_callback_is_later_enabled(self):
         emit_handoff(self.root, **self.kwargs)
         before = (self.root / "outbox/phase-0001.json").read_bytes()
