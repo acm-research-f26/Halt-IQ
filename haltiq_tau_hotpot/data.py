@@ -117,3 +117,82 @@ def prepare(testing_root, output):
         "files": files}
     durable_write(output / "data-freeze.json", protocol)
     return protocol
+
+
+def prepare_main(testing_root, qualification_freeze, output):
+    """Extend prepared research cohorts without reading pilot model outcomes."""
+    from copy import deepcopy
+    from .protocol import MAIN_SETTINGS
+    root, output = Path(testing_root).resolve(), Path(output).resolve()
+    if output.exists():
+        raise ValueError("Use a new main-study preparation directory")
+    original_freeze = json.loads(Path(qualification_freeze).read_text(encoding="utf-8"))
+    if original_freeze["schema"] != "tau2-hotpot-qualification-v1":
+        raise ValueError("Start from the independently reviewed qualification data freeze")
+    dataset = root / "preflight-2026-10-18/hotpot_dev_distractor_v1.hf-rows-verified.json"
+    if original_freeze["dataset_sha256"] != DATASET_SHA256 or digest(dataset) != DATASET_SHA256:
+        raise ValueError("Original corpus changed")
+    excluded_ids, excluded_keys = set(), set()
+    def exclude(raw):
+        row = raw.get("source_row", raw.get("public", raw))
+        identifier = row.get("_id", row.get("id", row.get("task_id")))
+        if isinstance(identifier, str):
+            excluded_ids.add(identifier.removeprefix("hotpotqa:"))
+        if isinstance(row.get("question"), str):
+            excluded_keys.add(question_key(row["question"]))
+    for spec in original_freeze["exposure_sources"]:
+        if digest(spec["path"]) != spec["sha256"]:
+            raise ValueError("Historical exposure source changed")
+        for row in records(spec["path"]):
+            exclude(row)
+    partner = root / "partner-pilot-runtime/sources/haltiq_strands_experiments2.csv"
+    if digest(partner) != PARTNER_CSV_SHA256:
+        raise ValueError("Partner exposure inventory changed")
+    with partner.open(encoding="utf-8-sig", newline="") as stream:
+        for row in csv.DictReader(stream):
+            exclude(row)
+    cohorts = {}
+    for name, spec in original_freeze["files"].items():
+        if digest(spec["path"]) != spec["sha256"]:
+            raise ValueError("Prepared question file changed")
+        rows = records(spec["path"])
+        for row in rows:
+            exclude(row)
+        if name in {"main_fit", "main_tune", "main_calibration", "main_fresh60"}:
+            cohorts[name] = deepcopy(rows)
+    # Exclude the complete earlier20 panel, including its16 unused cases.
+    original20 = root / "partner-pilot-runtime/new20-writer-prepared-v1/tasks.jsonl"
+    if digest(original20) != original_freeze["original20_sha256"]:
+        raise ValueError("Complete earlier20 exposure inventory changed")
+    for row in records(original20):
+        exclude(row)
+    pool = [row for row in records(dataset) if row["_id"] not in excluded_ids
+            and question_key(row["question"]) not in excluded_keys]
+    selected = balanced(pool, 20, "42:tau2-hotpot-main-development-v1:")
+    cohorts["main_development"] = [case_from_row(row, "development") for row in selected]
+    fresh60 = cohorts.pop("main_fresh60")
+    for n in (20, 40, 60):
+        selected_ids = {case["public"]["id"] for kind in ("bridge", "comparison")
+                        for case in [c for c in fresh60 if c["public"]["type"] == kind][:n // 2]}
+        cohorts["main_fresh" + str(n)] = [{**case, "partition": "fresh"} for case in fresh60
+                                          if case["public"]["id"] in selected_ids]
+    output.mkdir(parents=True)
+    files = {}
+    for name, cases in cohorts.items():
+        path = output / (name + ".json")
+        durable_write(path, cases)
+        files[name] = {"path": str(path), "sha256": digest(path), "count": len(cases),
+            "type_counts": {kind: sum(c["public"]["type"] == kind for c in cases) for kind in ("bridge", "comparison")}}
+    protocol = {"schema": "tau2-hotpot-main-v1", "status": "prepared_not_started",
+        "qualification_data_freeze": {"path": str(Path(qualification_freeze).resolve()), "sha256": digest(qualification_freeze)},
+        "dataset_sha256": DATASET_SHA256, "selection": {"answer_blind": True,
+            "quality_filtering": False, "length_filtering": False, "replacement_allowed": False, "seed": 42},
+        "main": {**MAIN_SETTINGS, "trained_criteria": ["answer"], "baseline_before_weight_updates": True,
+            "shared_initial_drafts": True, "native_feature_cache": True,
+            "initial_retrieval": "question-only MiniLM top3", "critic_retrieval": "question+draft MiniLM top3",
+            "evidence_label_scope": "official supporting-fact set EM; distinct from semantic entailment",
+            "model_budget_seconds": 46800, "finalization_reserve_seconds": 3600,
+            "fresh_choices": [20, 40, 60], "selected_fresh_n": None, "start_time": None},
+        "files": files}
+    durable_write(output / "data-freeze.json", protocol)
+    return protocol

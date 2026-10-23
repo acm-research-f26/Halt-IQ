@@ -63,6 +63,10 @@ def main():
     machine.add_argument("--testing-root", required=True, type=Path)
     machine.add_argument("--data-freeze", required=True, type=Path)
     machine.add_argument("--output", required=True, type=Path)
+    main_data = sub.add_parser("prepare-main-data")
+    main_data.add_argument("--testing-root", required=True, type=Path)
+    main_data.add_argument("--qualification-freeze", required=True, type=Path)
+    main_data.add_argument("--output", required=True, type=Path)
     plan = sub.add_parser("prepare-pilot")
     for name in ("config", "source", "python", "readiness", "output"):
         plan.add_argument("--" + name, required=True, type=Path)
@@ -77,6 +81,10 @@ def main():
         from .setup import machine_config
         result = machine_config(args.testing_root, args.data_freeze, args.output)
         print(json.dumps({"status": "cached_assets_verified", "pinned_inputs": len(result["model_inputs"]), "model_calls": 0}))
+    elif args.action == "prepare-main-data":
+        from .data import prepare_main
+        result = prepare_main(args.testing_root, args.qualification_freeze, args.output)
+        print(json.dumps({"status": result["status"], "main": result["main"], "model_calls": 0}))
     else:
         readiness = json.loads(args.readiness.read_text(encoding="utf-8"))
         result = build_pilot_plan(args.config, args.source, args.python, readiness, args.deadline, args.hard_deadline)
