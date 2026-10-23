@@ -411,6 +411,41 @@ class ParentProcessTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'ancestry'):
             self.audit_children()
 
+    def test_self_consistent_wait_proof_cannot_escape_child_clock_or_idle(self):
+        from haltiq_tau_hotpot.qualification import QualificationError
+        self.build()
+        self.config_path.write_text(json.dumps({'question_admission_wait_seconds': 120}))
+        terminal_path = self.args.output / 'runtime-terminal.json'
+        terminal = json.loads(terminal_path.read_text())
+        def bind(index, *, early=0, late=0, extra_idle=0):
+            directory = self.args.output / 'questions' / f'{index:03d}'
+            receipt_path, admission_path = directory / 'receipt.json', directory / 'admission.json'
+            receipt = json.loads(receipt_path.read_text())
+            admitted = json.loads(admission_path.read_text())
+            begin, end = [datetime.fromisoformat(receipt[key]) for key in ('started_at', 'finished_at')]
+            start = begin - timedelta(seconds=early)
+            finish = end + timedelta(seconds=late) if late else begin + timedelta(seconds=33)
+            history = [{'index': n, 'at': sample['at'],
+                        'elapsed_seconds': (datetime.fromisoformat(sample['at']) - start).total_seconds(),
+                        'kind': 'good_sample', 'sample': sample} for n, sample in enumerate(admitted['samples'])]
+            history_path = directory / 'admission.observations.jsonl'
+            history_path.write_text('\n'.join(json.dumps(row) for row in history) + '\n')
+            admitted['wait'] = {'schema': 'haltiq-question-admission-wait-v1', 'timeout_seconds': 120,
+                'started_at': start.isoformat(), 'finished_at': finish.isoformat(),
+                'elapsed_seconds': (finish-start).total_seconds(), 'idle_seconds': 30. + extra_idle,
+                'history_file': history_path.name, 'history_sha256': file_hash(history_path), 'observations': 4}
+            admission_path.write_text(json.dumps(admitted))
+            receipt.update(admission_sha256=file_hash(admission_path), config_sha256=file_hash(self.config_path))
+            receipt_path.write_text(json.dumps(receipt))
+            terminal['question_receipts'][index]['sha256'] = file_hash(receipt_path)
+            terminal_path.write_text(json.dumps(terminal))
+        bind(0); bind(1)
+        self.assertTrue(self.audit_children()['verified'])
+        for changes in ({'early': 1}, {'late': 1}, {'extra_idle': 2}):
+            bind(0, **changes)
+            with self.subTest(changes=changes), self.assertRaisesRegex(QualificationError, 'child clock or idle'):
+                self.audit_children()
+
 
 if __name__ == '__main__':
     unittest.main()

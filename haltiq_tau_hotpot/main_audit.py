@@ -352,6 +352,14 @@ def verify_question_owners(run, state, cases, records):
         require(sha(directory / "admission.json") == receipt["admission_sha256"]
                 and sha(directory / "runtime-terminal.json") == receipt["runtime_terminal_sha256"], "Question resource/runtime evidence changed")
         admitted, runtime = read(directory / "admission.json"), read(directory / "runtime-terminal.json")
+        from .admission_wait import verify_wait_history
+        verify_wait_history(read(plan["main_protocol"]["path"]), admitted, directory)
+        if admitted.get("wait"):
+            from .admission_wait import CLOCK_TOLERANCE_SECONDS
+            wait = admitted["wait"]
+            require(begin <= datetime.fromisoformat(wait["started_at"]) <= datetime.fromisoformat(wait["finished_at"]) <= end
+                    and wait["idle_seconds"] <= receipt["intentional_idle_seconds"] + CLOCK_TOLERANCE_SECONDS,
+                    "Admission wait escapes its owned child clock or idle accounting")
         require(admitted.get("schema") == "haltiq-main-question-admission-v1" and admitted.get("status") == "PASS_ADMISSION"
                 and admitted.get("gpu_lease_released") is True and admitted.get("private_port_closed") is True
                 and admitted.get("ram_gib") == 11 and admitted.get("vram_gib") == 9

@@ -193,10 +193,14 @@ class QuestionRuntime(LocalRuntime):
             raise RuntimeError("Question exceeded its frozen placement envelope")
 
 
-def admission(config, control, output, *, sampler=resource_snapshot, sleep=None, clock=None, lease_factory=GpuLease):
+def admission(config, control, output, *, sampler=resource_snapshot, sleep=None, clock=None, lease_factory=GpuLease, monotonic=None):
     """One attempt, no retry:11GiB RAM/9GiB VRAM for four samples over30s."""
     clock = clock or (lambda: datetime.now(timezone.utc))
     sleep = sleep or control._sleep
+    from .admission_wait import wait_limit, wait_for_admission
+    if wait_limit(config):
+        return wait_for_admission(config, control, output, sampler=sampler, sleep=sleep, clock=clock,
+            lease_factory=lease_factory, port_probe=port_open, monotonic=monotonic)
     result = {"schema": "haltiq-main-question-admission-v1", "status": "BLOCKED_ADMISSION",
         "samples": [], "ram_gib": 11, "vram_gib": 9, "gpu_lease_released": False,
         "private_port_closed": False, "model_calls": 0, "automatic_retry": False}

@@ -95,6 +95,8 @@ def load_main(config):
     """Verify the full pre-outcome protocol, disjoint cohorts and fresh selection."""
     if config.get("purpose") != "main_study":
         raise ValueError("The main worker cannot execute a qualification or unspecified configuration")
+    from .admission_wait import wait_limit
+    wait_limit(config)  # Scheduling opt-in is frozen with this config; old plans remain fail-fast.
     if (config.get("native_feature_cache") is not True or config.get("response_cache") is not True
             or config.get("compare_process_layout") != "per_question"
             or config.get("generation_profile") != MAIN_PROFILE
