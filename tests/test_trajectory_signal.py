@@ -13,7 +13,7 @@ from pc_strands.data import Task
 from pc_strands.evaluate import (GENERIC_FEEDBACK, OllamaWriter,
                                   generate_trajectories, replay_trajectories)
 from pc_strands.metrics import evaluate
-from scripts.audit_trajectory_signal import REPO, analyze_trajectories, audit_bundle
+from scripts.audit_trajectory_signal import REPO, analyze_trajectories, audit_bundle, critic_classification
 
 
 def saved(task, drafts):
@@ -108,6 +108,21 @@ class TrajectorySignalTests(unittest.TestCase):
         self.assertEqual(result["head_change"]["first_approval_disagreements"], 0)
         self.assertAlmostEqual(result["first_decision_metrics"]["untuned"]["auroc"], .38)
         self.assertAlmostEqual(result["first_decision_metrics"]["jev"]["auroc"], .915)
+        self.assertEqual(result["first_decision_metrics"]["untuned"]["classification"]["accuracy"], .5)
+        self.assertEqual(result["first_decision_metrics"]["jev"]["classification"]["accuracy"], .85)
+
+    def test_critic_classification_keeps_confusion_counts_and_undefined_f1(self):
+        score = critic_classification([1, 1, 0, 0], [.8, .2, .9, .1])
+        self.assertEqual([score[key] for key in ("true_positive", "false_positive", "false_negative", "true_negative")], [1, 1, 1, 1])
+        self.assertEqual(score["accuracy"], .5)
+        self.assertEqual(score["positive_class_f1"], .5)
+        self.assertIsNone(critic_classification([0, 0], [.1, .2])["positive_class_f1"])
+        self.assertEqual(critic_classification([1, 0], [.1, .2])["positive_class_f1"], 0)
+
+    def test_critic_classification_rejects_missing_or_invalid_observations(self):
+        for labels, probabilities in (([], []), ([1], []), ([2], [.5]), ([1], [float("nan")]), ([1], [True])):
+            with self.subTest(labels=labels, probabilities=probabilities), self.assertRaises(ValueError):
+                critic_classification(labels, probabilities)
 
     def test_hosted_probability_and_cohort_are_recomputed_not_copied(self):
         source = REPO / "results/strands-20261018"

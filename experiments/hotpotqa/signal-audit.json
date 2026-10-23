@@ -149,7 +149,17 @@
       "approved_first_drafts": 10,
       "first_draft_approval_precision": 0.5,
       "approval_coverage_of_planned": 0.5,
-      "wrong_first_approvals": 5
+      "wrong_first_approvals": 5,
+      "classification": {
+        "threshold": 0.8,
+        "true_positive": 5,
+        "false_positive": 5,
+        "false_negative": 5,
+        "true_negative": 5,
+        "accuracy": 0.5,
+        "positive_class_f1": 0.5,
+        "scope": "critic predicts strict first-draft correctness, not final-answer quality"
+      }
     },
     "trained": {
       "scored_first_drafts": 20,
@@ -159,7 +169,17 @@
       "approved_first_drafts": 10,
       "first_draft_approval_precision": 0.5,
       "approval_coverage_of_planned": 0.5,
-      "wrong_first_approvals": 5
+      "wrong_first_approvals": 5,
+      "classification": {
+        "threshold": 0.8,
+        "true_positive": 5,
+        "false_positive": 5,
+        "false_negative": 5,
+        "true_negative": 5,
+        "accuracy": 0.5,
+        "positive_class_f1": 0.5,
+        "scope": "critic predicts strict first-draft correctness, not final-answer quality"
+      }
     },
     "jev": {
       "scored_first_drafts": 20,
@@ -169,7 +189,17 @@
       "approved_first_drafts": 13,
       "first_draft_approval_precision": 0.7692307692307693,
       "approval_coverage_of_planned": 0.65,
-      "wrong_first_approvals": 3
+      "wrong_first_approvals": 3,
+      "classification": {
+        "threshold": 0.8,
+        "true_positive": 10,
+        "false_positive": 3,
+        "false_negative": 0,
+        "true_negative": 7,
+        "accuracy": 0.85,
+        "positive_class_f1": 0.8695652173913043,
+        "scope": "critic predicts strict first-draft correctness, not final-answer quality"
+      }
     }
   },
   "head_change": {

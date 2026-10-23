@@ -50,6 +50,28 @@ def close(actual, expected, message):
                 and math.isclose(actual, expected, rel_tol=0, abs_tol=1e-12), message)
 
 
+def critic_classification(labels, probabilities, *, threshold=.8):
+    """Classify answer correctness; this is distinct from the writer's answer EM."""
+    require(bool(labels) and len(labels) == len(probabilities), "classification cohort mismatch")
+    require(type(threshold) in (int, float) and math.isfinite(threshold) and 0 < threshold < 1,
+            "invalid classification threshold")
+    require(all(type(label) in (bool, int) and label in (0, 1) for label in labels),
+            "classification labels must be binary")
+    require(all(type(p) in (int, float) and math.isfinite(p) and 0 <= p <= 1 for p in probabilities),
+            "classification probabilities must be finite")
+    decisions = [p >= threshold for p in probabilities]
+    tp = sum(pred and label for pred, label in zip(decisions, labels))
+    fp = sum(pred and not label for pred, label in zip(decisions, labels))
+    fn = sum(not pred and label for pred, label in zip(decisions, labels))
+    tn = len(labels) - tp - fp - fn
+    denominator = 2 * tp + fp + fn
+    return {"threshold": threshold, "true_positive": tp, "false_positive": fp,
+            "false_negative": fn, "true_negative": tn,
+            "accuracy": (tp + tn) / len(labels),
+            "positive_class_f1": 2 * tp / denominator if denominator else None,
+            "scope": "critic predicts strict first-draft correctness, not final-answer quality"}
+
+
 def analyze_trajectories(tasks, trajectories, *, expected_drafts):
     """Rescore every saved candidate; no favorable-candidate filtering."""
     ids = [task.id for task in tasks]
@@ -198,6 +220,8 @@ def audit_bundle(bundle):
             "approved_first_drafts", "first_draft_approval_precision", "approval_coverage_of_planned")}
         first_results[arm]["wrong_first_approvals"] = sum(p >= .8 and not decision_rows[qid]["decisions"][0]["draft_exact_match"]
                                                                  for qid, p in zip(ids, probs))
+        first_results[arm]["classification"] = critic_classification(
+            [int(trajectories[qid]["rounds"][0]["exact_match"]) for qid in ids], probs)
         logits_by_arm[arm], probabilities[arm] = rows, probs
     for name, result in primary["policies"].items():
         require(result["planned_n"] == len(ids) and result["failed_or_missing"] == 0,

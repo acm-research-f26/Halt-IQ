@@ -28,11 +28,15 @@ same answer score through all ten drafts, so choosing a different draft could
 not improve F1. That tests stopping choices, not whether feedback repairs an
 answer. The critic judgments themselves were different:
 
-| Critic | First-draft correctness ranking (AUROC) | Final answer F1 |
-| --- | ---: | ---: |
-| Original Strands | 0.380 | 0.54 |
-| Fine-tuned Strands | 0.380 | 0.54 |
-| Jev | 0.915 | 0.54 |
+| Critic | Critic accuracy at 0.8 | Critic binary F1 | Correctness ranking (AUROC) |
+| --- | ---: | ---: | ---: |
+| Original Strands | 50% | 0.500 | 0.380 |
+| Fine-tuned Strands | 50% | 0.500 | 0.380 |
+| Jev | 85% | 0.870 | 0.915 |
+
+Here, critic accuracy measures whether the checker recognizes a correct first draft.
+The writer's answers separately scored 50% EM and 0.54 answer F1. Critic binary
+F1 and answer token-overlap F1 measure different things.
 
 These are 20 questions, not a broad model ranking. Vedanshi's reranker study
 also measures critic ranking; it does not demonstrate improved revised answers.
