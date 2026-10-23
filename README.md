@@ -14,6 +14,7 @@ this repository.
 | Directory | Purpose |
 | --- | --- |
 | `haltiq_tau/` | Proposed-action checking and bounded reviewer feedback for τ-bench agents. |
+| `haltiq_hotpot/` | Paired partner-method checks with source-rebuilt evidence and the compatible Hobson checkpoint. |
 | `pc_strands/` | Native Strands inference, head training, calibration and saved-draft evaluation. |
 | `haltiq/` | Writer/provider adapters, answer metrics and persistent hosted-call budgeting. |
 | `configs/` | Explicit model, resource and experiment settings. |
@@ -48,6 +49,33 @@ Recompute the saved-answer audit without model calls:
 python -B scripts/audit_trajectory_signal.py
 python -B -m unittest tests.test_trajectory_signal -v
 ```
+
+## HotpotQA method check
+
+The small paired pilot selects ten bridge and ten comparison questions from
+Vedanshi's saved first drafts using question IDs, without selecting by correctness.
+It rebuilds ordinary evidence from the original dataset, then compares her
+3,000-character baseline with MiniLM cross-encoder top-three evidence. The cached
+CSV's context column is excluded because a later experiment replaced it with
+gold-only evidence.
+
+The pilot uses the compatible Hobson checkpoint, its served temperature, and the
+same question format. It reports critic accuracy, binary F1, AUROC and calibration
+separately from the unchanged writer's answer scores. Results are paired by
+question, with question-type breakdowns and explicit failed-case coverage.
+Historical notebook dependencies were unpinned, so this reproduces the declared
+method rather than promising identical historical probabilities.
+
+```bash
+python -m haltiq_hotpot --help
+python -m unittest tests.test_hotpot_partner_pilot -v
+```
+
+`prepare` requires the pinned partner CSV and original dataset; `run` requires
+local verified model directories, a frozen cohort hash, a new external output
+directory and the shared GPU lease. It defaults to a dry run. Actual inference
+requires `--allow-model-calls`, respects resource reserves and a bounded deadline,
+and records every physical request without automatic retry.
 
 ## τ-bench setup
 

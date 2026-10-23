@@ -49,6 +49,27 @@ def offline_environment():
     os.environ["MKL_NUM_THREADS"] = "4"
 
 
+def release_cuda_allocations(torch):
+    """Clear process-local workspaces after the caller drops owned model refs.
+
+    PyTorch 2.7.1 retains cuBLAS workspaces separately from model tensors:
+    https://github.com/pytorch/pytorch/blob/v2.7.1/docs/source/notes/cuda.rst#cublas-workspaces
+    A remaining allocation still fails closed; the diagnostic preserves its size.
+    """
+    torch.cuda.synchronize()
+    gc.collect()
+    before = int(torch.cuda.memory_allocated())
+    clear = getattr(getattr(torch, "_C", None), "_cuda_clearCublasWorkspaces", None)
+    if clear is not None:
+        clear()
+    torch.cuda.empty_cache()
+    torch.cuda.synchronize()
+    return {"allocated_before_workspace_clear_bytes": before,
+        "cublas_workspace_clear_available": clear is not None,
+        "allocated_after_cleanup_bytes": int(torch.cuda.memory_allocated()),
+        "reserved_after_cleanup_bytes": int(torch.cuda.memory_reserved())}
+
+
 class MiniLMRanker:
     def __init__(self, path):
         offline_environment()
@@ -162,8 +183,8 @@ class OfficialDecider:
         self.torch.cuda.synchronize()
         self.engine = None
         self.model = None
-        gc.collect()
-        self.torch.cuda.empty_cache()
-        self.torch.cuda.synchronize()
-        if self.torch.cuda.memory_allocated() != 0:
-            raise RuntimeError("Owned native tensors remain allocated after model release")
+        self.last_cleanup = release_cuda_allocations(self.torch)
+        if self.last_cleanup["allocated_after_cleanup_bytes"] != 0:
+            raise RuntimeError("CUDA allocations remain after model and workspace cleanup: "
+                + str(self.last_cleanup["allocated_after_cleanup_bytes"]) + " bytes")
+        return self.last_cleanup

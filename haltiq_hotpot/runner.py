@@ -79,6 +79,16 @@ def journal(path, event):
         os.fsync(stream.fileno())
 
 
+def release_decider(decider, model, result):
+    started = time.perf_counter()
+    try:
+        decider.close()
+    finally:
+        result.setdefault("cleanup_attempts", []).append({"model": model,
+            "seconds": time.perf_counter() - started,
+            "diagnostics": getattr(decider, "last_cleanup", None)})
+
+
 def run(args, *, ranker_factory=MiniLMRanker, decider_factory=OfficialDecider,
         control_class=RunControl, freeze=frozen_files):
     if digest(args.cohort) != args.cohort_sha256:
@@ -123,6 +133,7 @@ def run(args, *, ranker_factory=MiniLMRanker, decider_factory=OfficialDecider,
         "native_pending_or_uncertain": False, "retrieval_pending_or_uncertain": False,
         "new_writer_calls": 0, "weight_updates": 0, "records": records, "retrieval": [],
         "startup": [], "admissions": [], "gpu_lease_released": False, "owned_models_released": False,
+        "cleanup_timing_scope": "cleanup_attempts records each successful or failed close; release_seconds overlaps successful attempts and must not be added again",
         "packages": {name: importlib.metadata.version(name) for name in
                      ("torch", "transformers", "peft", "safetensors", "tokenizers")}}
     atomic_json(receipt, result)
@@ -212,14 +223,14 @@ def run(args, *, ranker_factory=MiniLMRanker, decider_factory=OfficialDecider,
                             atomic_json(receipt, result)
                             guard.rest_after_block(measured["seconds"])
                     started = time.perf_counter()
-                    decider.close()
+                    release_decider(decider, model, result)
                     decider = None
                     result.setdefault("release_seconds", []).append(time.perf_counter() - started)
                 result["status"] = "completed" if all(r["status"] == "completed" for r in records) else "completed_with_failures"
             finally:
                 # Cleanup remains inside the OS lease, even after an uncertain request.
                 if decider is not None:
-                    decider.close()
+                    release_decider(decider, model, result)
                 if ranker is not None:
                     ranker.close()
                 result["owned_models_released"] = True
