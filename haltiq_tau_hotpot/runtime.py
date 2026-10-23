@@ -79,7 +79,7 @@ class LocalRuntime:
             from haltiq_hotpot.native import MiniLMRanker, offline_environment
             offline_environment()
             self.ranker = MiniLMRanker(self.config["reranker"])
-            args = Namespace(port=11435, models=self.config["ollama_models"],
+            args = Namespace(port=11435, models=Path(self.config["ollama_models"]),
                              kv_cache_type="q8_0", flash_attention=True)
             environment = server_environment(args)
             self.log = (self.directory / "owned-ollama.log").open("ab", buffering=0)

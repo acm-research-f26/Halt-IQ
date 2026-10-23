@@ -91,7 +91,6 @@ class RuntimeTests(unittest.TestCase):
         self.runtime._http = lambda path, **kwargs: {"models": []} if path == "/api/ps" else {"version": "fixture"}
         with patch("haltiq_tau_hotpot.runtime.GpuLease", Lease), \
              patch("haltiq_tau_hotpot.runtime.port_open", return_value=False), \
-             patch("haltiq_tau_hotpot.runtime.server_environment", return_value={}), \
              patch("haltiq_hotpot.native.MiniLMRanker", Ranker), \
              patch("haltiq_tau_hotpot.runtime.subprocess.Popen", return_value=server) as spawn:
             with self.runtime:
@@ -99,6 +98,10 @@ class RuntimeTests(unittest.TestCase):
             self.assertEqual(spawn.call_count, 1)
             self.assertEqual(spawn.call_args.args[0], ["NEVER-RUN.exe", "serve"])
             self.assertEqual(spawn.call_args.kwargs["stdin"], subprocess.DEVNULL)
+            environment = spawn.call_args.kwargs["env"]
+            self.assertEqual(environment["OLLAMA_MODELS"], str(Path(self.config["ollama_models"]).resolve()))
+            self.assertEqual(environment["OLLAMA_HOST"], "127.0.0.1:11435")
+            self.assertEqual(environment["OLLAMA_KV_CACHE_TYPE"], "q8_0")
         self.assertEqual(events[:2], ["lease_acquired", "ranker_constructed"])
         self.assertFalse(held["value"])
         self.assertTrue(self.runtime.cleanup["verified"])
