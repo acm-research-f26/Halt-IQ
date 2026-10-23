@@ -66,9 +66,22 @@ question, with question-type breakdowns and explicit failed-case coverage.
 Historical notebook dependencies were unpinned, so this reproduces the declared
 method rather than promising identical historical probabilities.
 
+The [shared 20-question observations](experiments/hotpotqa/partner-method-20.json)
+reproduced all 20 of the partner's top-three approval decisions. Local critic
+accuracy was 60% with baseline evidence and 55% with reranking; AUROC was 0.479
+and 0.552 respectively. Paired uncertainty includes no difference, so these
+development observations establish no quality gain. All 40 scores were saved;
+an in-process cleanup check failed, and separate process-exit checks verified
+resource release. The original failure remains in the evidence.
+These labels use strict normalized answer EM: a shorter name such as "Bing
+Crosby" can fail against a full-name reference despite identifying the same
+person. The labels remain unchanged for partner-method comparability; they are
+not independent human judgments of semantic correctness.
+
 ```bash
 python -m haltiq_hotpot --help
 python -m unittest tests.test_hotpot_partner_pilot -v
+python scripts/verify_partner_method.py verify experiments/hotpotqa/partner-method-20.json
 ```
 
 `prepare` requires the pinned partner CSV and original dataset; `run` requires
