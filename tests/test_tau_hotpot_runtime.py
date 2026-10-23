@@ -14,6 +14,7 @@ from unittest.mock import Mock, patch
 
 from haltiq_tau_hotpot.journal import UncertainCall, fingerprint
 from haltiq_tau_hotpot.runtime import LocalRuntime
+from haltiq_tau_hotpot.generation import MAIN_PROFILE
 
 
 class Control:
@@ -328,6 +329,25 @@ class RuntimeTests(unittest.TestCase):
         self.runtime.config["writer_digest"] = "changed-model"
         self.runtime.generate(state, review=True)
         self.assertEqual(self.runtime._http.call_count, 4)
+
+    def test_main_role_budget_and_instruction_are_physical_payload_and_cache_identity(self):
+        from copy import deepcopy
+        self.runtime.config.update(purpose="runtime_probe", generation_profile=deepcopy(MAIN_PROFILE), response_cache=True)
+        self.runtime._writer_ready = Mock()
+        self.runtime._http = Mock(return_value={"done": True, "done_reason": "stop", "message": {"content": "Retain."}})
+        self.runtime.generate({"question": "Synthetic?"}, review=True, profile="legacy")
+        first = self.runtime._http.call_args.args[1]
+        self.runtime.generate({"question": "Synthetic?"}, review=True, profile="main")
+        second = self.runtime._http.call_args.args[1]
+        self.assertEqual(first["options"]["num_predict"], 384)
+        self.assertEqual(second["options"]["num_predict"], 768)
+        self.assertTrue(second["messages"][0]["content"].endswith(MAIN_PROFILE["reviewer_instruction"]))
+        self.runtime.generate({"question": "Synthetic?"}, review=True, profile="main")
+        self.assertEqual(self.runtime._http.call_count, 2)
+        self.assertEqual(self.runtime.journal.verify()["exact_response_reuses"], 1)
+        self.runtime.config["purpose"] = "qualification_recovery"
+        with self.assertRaises(ValueError): self.runtime.generate({"question": "Synthetic?"}, review=True)
+        self.assertEqual(self.runtime._http.call_count, 2)
 
     def test_known_invalid_terminal_output_is_replayed_as_failure_without_resampling(self):
         self.runtime.config["response_cache"] = True

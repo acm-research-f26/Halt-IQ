@@ -12,12 +12,54 @@ from unittest.mock import Mock, patch
 
 from haltiq_supervisor.plan import PACKAGES, inspect, validate
 from haltiq_tau_hotpot.hobson import file_hash
-from haltiq_tau_hotpot.runtime import decision_state
-from haltiq_tau_hotpot.runtime_probe import synthetic_input, verify_dispatch, probe, pilot_binding
+from haltiq_tau_hotpot.generation import MAIN_PROFILE, generation_payload
+from haltiq_tau_hotpot.journal import CallJournal
+from haltiq_tau_hotpot.runtime import LocalRuntime, decision_state
+from haltiq_tau_hotpot.runtime_probe import generation_check, synthetic_input, verify_dispatch, probe, pilot_binding
 from tests import test_supervisor_plan as plan_tests
 
 
 class SyntheticInputTests(unittest.TestCase):
+    def technical_generation(self, root, *, bad_main=False):
+        config = {"purpose": "runtime_probe", "generation_profile": deepcopy(MAIN_PROFILE),
+                  "writer_digest": "synthetic-not-a-model", "response_cache": True}
+        control = SimpleNamespace(before_work=lambda **_: None, rest_after_block=lambda _: None)
+        runtime = LocalRuntime(config, root, control)
+        runtime._writer_ready = Mock()
+        def raw(content, reason="stop"):
+            return {"done": True, "done_reason": reason, "prompt_eval_count": 20, "eval_count": 10,
+                    "message": {"content": content}}
+        runtime._http = Mock(side_effect=[raw(json.dumps({"answer": "control", "supporting_facts": []})),
+            raw("Incomplete old review.", "length"), raw("word " * 121 if bad_main else "Retain."),
+            raw("Revise the cited entity."), raw("Incomplete old review.", "length")])
+        return runtime
+
+    def test_ab_keeps_known_legacy_failures_and_reuses_only_predeclared_main_response(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            runtime = self.technical_generation(root)
+            answer, rows = generation_check(runtime, root)
+            self.assertEqual([row["status"] for row in rows], ["known_terminal_failure", "completed", "completed", "known_terminal_failure"])
+            self.assertEqual(len(answer), 1)
+            self.assertEqual(runtime._http.call_count, 5)
+            self.assertEqual(runtime.journal.verify()["by_role"], {"writer": 1, "reviewer": 4})
+            self.assertEqual(runtime.journal.summary()["exact_response_reuses"], 2)
+            reused = [e for e in runtime.journal.records if e["event"] == "exact_response_reuse" and e["role"] == "reviewer"]
+            self.assertEqual(reused[0]["id"], rows[1]["physical_call_id"])
+
+    def test_failed_main_word_limit_preserves_cell_then_stops_without_resampling(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            runtime = self.technical_generation(root, bad_main=True)
+            with self.assertRaisesRegex(ValueError, "Predeclared main reviewer"):
+                generation_check(runtime, root)
+            self.assertEqual(runtime._http.call_count, 3)
+            row = json.loads((root / "reviewer-ab/1.json").read_text())
+            self.assertEqual(row["metadata"]["words"], 121)
+            self.assertEqual(row["status"], "known_terminal_failure")
+            self.assertFalse(runtime.journal.verify()["pending_or_uncertain"])
+            self.assertFalse((root / "reviewer-ab/2.json").exists())
+
     def test_token_fitting_changes_only_invented_filler_and_preserves_explicit_criterion(self):
         requests = []
         def prepare(state, criterion):
@@ -47,9 +89,21 @@ class SyntheticInputTests(unittest.TestCase):
             trained.write_bytes(b"synthetic head, never loaded")
             (root / "supervisor.json").write_text(json.dumps({"source_sha256": {"synthetic.py": "a" * 64}}))
             events, observed = [], set()
+            journal, responses = CallJournal(root / "probe/physical"), {}
+            config = {"purpose": "runtime_probe", "generation_profile": deepcopy(MAIN_PROFILE), "combined_pilot_proof_sha256": "b" * 64}
             def generation(state, **kwargs):
                 events.append("generation")
-                return "retain" if kwargs.get("review") else {"answer": "control", "supporting_facts": []}
+                payload = generation_payload(config, state, **kwargs)
+                key = json.dumps(payload, sort_keys=True)
+                value = "Retain." if kwargs.get("review") else {"answer": "control", "supporting_facts": []}
+                if key in responses:
+                    journal.reuse(responses[key], payload)
+                else:
+                    journal.call("reviewer" if kwargs.get("review") else "writer", payload,
+                        lambda: {"done": True, "done_reason": "stop", "prompt_eval_count": 20, "eval_count": 10,
+                            "message": {"content": value if isinstance(value, str) else json.dumps(value)}})
+                    responses[key] = deepcopy(journal.records[-1])
+                return value
             def observe(public, draft, **kwargs):
                 events.append("native_or_cpu")
                 key = (public["id"], kwargs["criterion"])
@@ -67,9 +121,12 @@ class SyntheticInputTests(unittest.TestCase):
             runtime.observe.side_effect = observe
             runtime.cleanup = {"verified": True}
             runtime.timings = {}
+            runtime.config = config
+            runtime.journal.records = journal.records
+            runtime.journal.directory = journal.directory
             runtime.journal.verify.return_value = {"by_role": {"native_startup": 1, "native_answer": 3,
                 "native_evidence": 3, "cached_head_answer": 6, "cached_head_evidence": 6,
-                "writer_load": 1, "writer": 1, "reviewer": 1, "writer_unload": 1},
+                "writer_load": 1, "writer": 1, "reviewer": 4, "writer_unload": 1},
                 "exact_response_reuses": 2, "pending_or_uncertain": False}
             proof = {"run_id": "synthetic", "model_binding": {"released_head_sha256": "a" * 64}}
             args = SimpleNamespace(output=root / "probe", previous=root)
@@ -78,8 +135,8 @@ class SyntheticInputTests(unittest.TestCase):
                     patch("haltiq_tau_hotpot.runtime_probe.LocalRuntime", return_value=runtime), \
                     patch("haltiq_tau_hotpot.runtime_probe.completion"), \
                     patch.dict("os.environ", {"HALTIQ_PLAN_SHA256": "a" * 64}):
-                probe(args, {"combined_pilot_proof_sha256": "b" * 64}, control)
-            self.assertEqual(events, ["generation"] * 4 + ["native_placement"] + ["native_or_cpu"] * 18)
+                probe(args, config, control)
+            self.assertEqual(events, ["generation"] * 7 + ["native_placement"] + ["native_or_cpu"] * 18)
             runtime._native_ready.assert_called_once()
 
     def test_recovered_pilot_uses_verified_two_owner_binding_and_original_trained_head(self):
@@ -110,7 +167,8 @@ class ProbeScopeTests(unittest.TestCase):
         self.addCleanup(self.base.doCleanups)
         self.root, self.plan = self.base.root, self.base.plan
         config = {"purpose": "runtime_probe", "targets": [512, 2048, 4096], "criteria": ["answer", "evidence"],
-            "native_feature_cache": True, "response_cache": True, "new_learning": False, "benchmark_questions": 0}
+            "native_feature_cache": True, "response_cache": True, "new_learning": False, "benchmark_questions": 0,
+            "generation_profile": deepcopy(MAIN_PROFILE)}
         self.config = self.root / "config.json"
         self.config.write_text(json.dumps(config))
         spec = {"path": str(self.config), "sha256": file_hash(self.config)}
@@ -119,7 +177,7 @@ class ProbeScopeTests(unittest.TestCase):
             deadline=(start + timedelta(minutes=30)).isoformat(), hard_deadline=(start + timedelta(minutes=35)).isoformat(),
             source_paths=[*PACKAGES, "pyproject.toml"], runtime_probe=spec, inputs=[spec],
             private_port=11435, gpu_lease=str(self.root / "gpu.lock"), study_lease=str(self.root / "study.lock"))
-        self.plan["stages"] = [{"id": "probe", "model_work": True, "gpu": True, "planned_units": 22,
+        self.plan["stages"] = [{"id": "probe", "model_work": True, "gpu": True, "planned_units": 25,
             "argv": [sys.executable, "-B", "-m", "haltiq_tau_hotpot.runtime_probe", "probe", "--config", str(self.config),
                 "--output", "{run}/probe", "--previous", "{run}", "--deadline", "{deadline}",
                 "--control", "{control}", "--allow-model-calls"],
@@ -136,7 +194,7 @@ class ProbeScopeTests(unittest.TestCase):
         for kind in ("phase", "count", "clock", "config", "argv"):
             self.plan = deepcopy(original)
             if kind == "phase": self.plan["stages"].append(deepcopy(self.plan["stages"][0]))
-            elif kind == "count": self.plan["stages"][0]["planned_units"] = 23
+            elif kind == "count": self.plan["stages"][0]["planned_units"] = 26
             elif kind == "clock": self.plan["start_time"] = (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat()
             elif kind == "argv": self.plan["stages"][0]["argv"][-2] = "wrong-control"
             else:

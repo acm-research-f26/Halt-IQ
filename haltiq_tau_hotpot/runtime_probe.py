@@ -16,13 +16,54 @@ import time
 from pc_strands.control import RunControl
 from .hobson import file_hash
 from .journal import durable_write
+from .generation import MAIN_PROFILE, REVIEW_SEQUENCE, response_metadata, synthetic_reviews
 from .protocol import pinned, read
 from .runtime import LocalRuntime, decision_state
 from .worker import completion
 
 TARGETS = (512, 2048, 4096)
 CRITERIA = ("answer", "evidence")
-UNITS = 22  # 6 native + 12 CPU rescoring + 2 generation + 2 exact-response reuse.
+UNITS = 25  # 6 native + 12 CPU + writer/reuse2 + reviewer A/B4/reuse1.
+
+
+def generation_check(runtime, output):
+    """Fixed technical A/B; legacy failures are observations, not retry signals."""
+    state = {"question": "What is the synthetic key?", "evidence": [{
+        "title": "Synthetic runtime note", "sentences": [{"index": 0, "text": "The synthetic key is control."}]}],
+        "previous_draft": None}
+    answer = runtime.generate(state)
+    if answer != runtime.generate(state):
+        raise ValueError("Exact writer reuse changed its committed response")
+    states, rows = synthetic_reviews(), []
+    for index, (case_id, profile) in enumerate(REVIEW_SEQUENCE):
+        feedback, failure = None, None
+        before = len(runtime.journal.records)
+        try:
+            feedback = runtime.generate(states[case_id], review=True, profile=profile)
+        except ValueError as error:
+            failure = str(error)
+        events = runtime.journal.records[before:]
+        completed = [e for e in events if e["event"] == "completed" and e["role"] == "reviewer"]
+        if len(completed) != 1:
+            raise ValueError("Each A/B cell requires exactly one new committed physical review")
+        event = completed[0]
+        raw = read(runtime.journal.directory / event["response"])
+        metadata = response_metadata(raw)
+        if profile == "main" and (failure is not None or raw.get("done") is not True or raw.get("done_reason") != "stop"
+                                  or metadata["words"] is None or metadata["words"] > 120):
+            failure = failure or "Declared main reviewer did not stop within120words"
+        row = {"case_id": case_id, "profile": profile, "state": states[case_id],
+            "status": "completed" if failure is None else "known_terminal_failure", "feedback": feedback,
+            "failure": failure, "physical_call_id": event["id"], "metadata": metadata,
+            "request_sha256": next(e["request_sha256"] for e in events if e["event"] == "pending" and e["id"] == event["id"])}
+        durable_write(output / "reviewer-ab" / f"{index}.json", row)
+        rows.append(row)
+        if profile == "main" and failure is not None:
+            raise ValueError("Predeclared main reviewer technical check failed; do not choose another profile")
+    first_main = rows[1]
+    if runtime.generate(states[first_main["case_id"]], review=True, profile="main") != first_main["feedback"]:
+        raise ValueError("Exact B review reuse changed its committed response")
+    return [answer], rows
 
 
 def synthetic_input(backend, target, criterion):
@@ -101,17 +142,7 @@ def probe(args, config, control):
     try:
         with runtime:
             # Materialize exact generation prefixes before native placement.
-            state = {"question": "What is the synthetic key?", "evidence": [{
-                "title": "Synthetic runtime note", "sentences": [{"index": 0, "text": "The synthetic key is control."}]}],
-                "previous_draft": None}
-            answer = runtime.generate(state)
-            repeated = runtime.generate(state)
-            review_state = {**state, "draft": answer}
-            feedback = runtime.generate(review_state, review=True)
-            repeated_feedback = runtime.generate(review_state, review=True)
-            if answer != repeated or feedback != repeated_feedback:
-                raise ValueError("An exact repeated generation request changed its committed response")
-            generation = [answer, feedback]
+            generation, reviewer_ab = generation_check(runtime, args.output)
             runtime._native_ready()
             # One declared public passage: no retrieval model is needed to choose
             # among nonexistent alternatives. This is not a retrieval benchmark.
@@ -139,13 +170,15 @@ def probe(args, config, control):
     calls = runtime.journal.verify()
     expected = {"native_startup": 1, "native_answer": 3, "native_evidence": 3,
                 "cached_head_answer": 6, "cached_head_evidence": 6,
-                "writer_load": 1, "writer": 1, "reviewer": 1, "writer_unload": 1}
+                "writer_load": 1, "writer": 1, "reviewer": 4, "writer_unload": 1}
     if calls["by_role"] != expected or calls["exact_response_reuses"] != 2 or calls["pending_or_uncertain"]:
         raise ValueError("Synthetic probe work differed from its fixed bounded physical route")
-    value = {"schema": "haltiq-runtime-probe-v1", "status": "PASS_RUNTIME_PROBE",
+    value = {"schema": "haltiq-runtime-probe-v2", "status": "PASS_RUNTIME_PROBE",
         "engineering_only": True, "benchmark_quality_claim": False, "new_learning": False,
         "score_scope": "T=1 technical replay only; the trained weights learned answer correctness, not evidence correctness",
-        "points": points, "generation_results": generation, "calls": calls,
+        "points": points, "generation_results": generation, "reviewer_ab": reviewer_ab,
+        "generation_profile": MAIN_PROFILE, "reviewer_selection": "Main profile predeclared; A/B measures technical termination/length only, never answer quality",
+        "calls": calls,
         "pilot_proof_sha256": config["combined_pilot_proof_sha256"], "pilot_run_id": proof["run_id"],
         "released_head_sha256": proof["model_binding"]["released_head_sha256"],
         "trained_head_sha256": file_hash(trained), "wrapper_plan_sha256": os.environ["HALTIQ_PLAN_SHA256"],

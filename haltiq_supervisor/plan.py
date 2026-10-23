@@ -229,21 +229,24 @@ def validate(plan):
         from haltiq_tau_hotpot.recovery import validate_plan
         validate_plan(plan)
     if purpose == "runtime_probe":
+        from haltiq_tau_hotpot.generation import MAIN_PROFILE, generation_profile
         spec = plan.get("runtime_probe")
         config = _pinned_json(spec, "Synthetic runtime probe config")
+        generation_profile(config)
         stages = plan["stages"]
         start, end = clock(plan["start_time"]), clock(plan["deadline"])
         if (config.get("purpose") != "runtime_probe" or config.get("targets") != [512, 2048, 4096]
                 or config.get("criteria") != ["answer", "evidence"]
+                or config.get("generation_profile") != MAIN_PROFILE
                 or config.get("native_feature_cache") is not True or config.get("response_cache") is not True
                 or config.get("new_learning") is not False or type(config.get("benchmark_questions")) is not int
                 or config.get("benchmark_questions") != 0
                 or not 0 < (end - start).total_seconds() <= 1800
-                or len(stages) != 1 or stages[0]["id"] != "probe" or stages[0].get("planned_units") != 22
+                or len(stages) != 1 or stages[0]["id"] != "probe" or stages[0].get("planned_units") != 25
                 or stages[0]["argv"][:5] != [plan["python"], "-B", "-m", "haltiq_tau_hotpot.runtime_probe", "probe"]
                 or not stages[0]["model_work"] or not stages[0]["gpu"]
                 or {"path": spec["path"], "sha256": spec["sha256"]} not in plan.get("inputs", [])):
-            raise ValueError("Only the fixed22-operation synthetic runtime probe is permitted")
+            raise ValueError("Only the fixed25-operation synthetic runtime probe is permitted")
         flags = stages[0]["argv"][5:]
         expected = ["--config", spec["path"], "--output", "{run}/probe", "--previous", "{run}",
                     "--deadline", "{deadline}", "--control", "{control}", "--allow-model-calls"]

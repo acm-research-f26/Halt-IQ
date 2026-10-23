@@ -14,8 +14,8 @@ from . import qualification as q
 
 ROLES = {"native_startup": 1, "native_answer": 3, "native_evidence": 3,
          "cached_head_answer": 6, "cached_head_evidence": 6,
-         "writer_load": 1, "writer": 1, "reviewer": 1, "writer_unload": 1}
-SCHEMA = "haltiq-qualified-runtime-probe-v1"
+         "writer_load": 1, "writer": 1, "reviewer": 4, "writer_unload": 1}
+SCHEMA = "haltiq-qualified-runtime-probe-v2"
 
 
 def terminal_owner(run, expected_plan_sha256):
@@ -49,7 +49,7 @@ def physical(directory, journal_class):
         summary = journal.verify()
     except (ValueError, RuntimeError) as error:
         raise q.QualificationError("Invalid/unresolved physical probe journal: " + str(error)) from error
-    q.require(summary == {"dispatched": 23, "completed": 23, "uncertain": 0,
+    q.require(summary == {"dispatched": 26, "completed": 26, "uncertain": 0,
               "pending_or_uncertain": False, "exact_response_reuses": 2, "by_role": ROLES}, "Wrong bounded physical route")
     active, pending, calls, reuses, previous = None, {}, [], [], None
     for event in journal.records:
@@ -132,22 +132,55 @@ def points(run, probe, config, encoder, trained, calls, used, runtime, hobson):
     return result
 
 
-def generation(probe, calls, used, runtime):
+def generation(run, probe, config, physical, used, module):
     state = {"question": "What is the synthetic key?", "evidence": [{"title": "Synthetic runtime note",
         "sentences": [{"index": 0, "text": "The synthetic key is control."}]}], "previous_draft": None}
-    for review, expected in zip((False, True), probe["generation_results"], strict=True):
-        payload = {"model": "qwen3:8b", "messages": [{"role": "system", "content": runtime.REVIEWER_SYSTEM if review else runtime.WRITER_SYSTEM},
-            {"role": "user", "content": json.dumps({"state": state, "feedback": ""}, ensure_ascii=False)}],
-            "stream": False, "think": False, "keep_alive": "5m", "options": {"temperature": 0, "seed": 42,
-            "num_predict": 384, "num_ctx": 16384, "num_thread": 4, "num_gpu": 99}}
-        if not review:
-            payload["format"] = runtime.ANSWER_SCHEMA
-        raw = bound(calls, used, "reviewer" if review else "writer", payload)["value"]
-        q.require(raw.get("done") is True and raw.get("done_reason") != "length"
-                  and raw.get("prompt_eval_count", 0) + raw.get("eval_count", 0) < 16384, "Incomplete generation")
-        text = raw["message"]["content"]
-        q.require((text if review else json.loads(text)) == expected, "Generation result is not the committed response")
-        state = {**state, "draft": expected} if not review else state
+    calls = physical["calls"]
+    writer = bound(calls, used, "writer", module.generation_payload(config, state))
+    answer = module.parse_response(writer["value"])
+    q.require(probe["generation_results"] == [answer], "Writer generation result is not the committed response")
+    states, rows = module.synthetic_reviews(), probe["reviewer_ab"]
+    q.require([(r["case_id"], r["profile"]) for r in rows] == list(module.REVIEW_SEQUENCE), "Synthetic reviewer A/B order changed")
+    measured, ids = [], []
+    for index, row in enumerate(rows):
+        case_id, profile = row["case_id"], row["profile"]
+        q.require(row == q.read(run / "probe/reviewer-ab" / f"{index}.json")
+            and row["state"] == states[case_id], "Synthetic A/B cell/public state changed")
+        payload = module.generation_payload(config, states[case_id], review=True, profile=profile)
+        call = bound(calls, used, "reviewer", payload)
+        raw, failure, feedback = call["value"], None, None
+        try:
+            feedback = module.parse_response(raw, review=True)
+        except ValueError as error:
+            failure = str(error)
+        metadata = module.response_metadata(raw)
+        q.require(row["physical_call_id"] == call["completed"]["id"]
+            and row["request_sha256"] == q.fingerprint(payload) and row["metadata"] == metadata
+            and row["feedback"] == feedback and row["failure"] == failure
+            and row["status"] == ("completed" if failure is None else "known_terminal_failure"),
+            "A/B result differs from its committed response/technical status")
+        if profile == "main":
+            q.require(failure is None and raw.get("done") is True and raw.get("done_reason") == "stop" and metadata["words"] <= 120,
+                      "Predeclared main reviewer did not satisfy its technical completion/length check")
+        ids.append(call["completed"]["id"])
+        measured.append({"id": call["completed"]["id"], "case_id": case_id, "profile": profile,
+            "state_sha256": q.fingerprint(states[case_id]), "request_sha256": q.fingerprint(payload),
+            "seconds": call["completed"]["elapsed_seconds"], "metadata": metadata, "status": row["status"]})
+    expected_reuses = {"writer": writer["completed"]["id"], "reviewer": ids[1]}
+    q.require({e["role"]: e["id"] for e in physical["reuses"]} == expected_reuses,
+              "Exact generation reuse must bind writer and the first main-profile review")
+    q.require({p.name for p in (run / "probe/reviewer-ab").rglob("*") if p.is_file()} == {f"{i}.json" for i in range(4)},
+              "Unexpected/missing synthetic review cell artifact")
+    # The intended memory route places writer once, completes all generation,
+    # unloads it, then places native once; no generation follows native startup.
+    roles = [c["completed"]["role"] for c in calls]
+    q.require(roles[:8] == ["writer_load", "writer", "reviewer", "reviewer", "reviewer", "reviewer", "writer_unload", "native_startup"]
+        and not any(role in {"writer", "reviewer", "writer_load"} for role in roles[8:]),
+        "All generation must precede the single native placement")
+    native_start = calls[7]["pending"]["at"]
+    q.require(all(q.aware(e["at"]) <= q.aware(native_start) for e in physical["reuses"]),
+              "Generation reuse must finish before native placement")
+    return measured
 
 
 def timing(run, plan, state, physical, terminal, point_rows):
@@ -183,9 +216,9 @@ def audit_run(run, *, expected_plan_sha256):
         q.require(protocol.READINESS <= plan.get("readiness", {}).keys()
                   and all(specs and all(s.get("sha256") for s in specs) for specs in plan["readiness"].values()), "Missing implementation/pilot readiness")
         protocol.verify_frozen(plan, state, run)
-        runtime, worker = [importlib.import_module("haltiq_tau_hotpot." + name) for name in ("runtime", "runtime_probe")]
+        runtime, worker, generation_module = [importlib.import_module("haltiq_tau_hotpot." + name) for name in ("runtime", "runtime_probe", "generation")]
         journal_module = importlib.import_module("haltiq_tau_hotpot.journal")
-        for module in (runtime, worker, journal_module):
+        for module in (runtime, worker, journal_module, generation_module):
             q.within(module.__file__, run / "source")
         config = q.read(plan["runtime_probe"]["path"])
         pinned_inputs = {str(Path(s["path"]).resolve()): s["sha256"] for s in
@@ -201,13 +234,14 @@ def audit_run(run, *, expected_plan_sha256):
             q.safe_tensors(head, q.HEAD_SHAPES)
         engine.verify_completion(plan["stages"][0], state, q.read(run / "probe/completion.json"))
         completion = q.read(run / "probe/completion.json")
-        q.require((completion["completed_units"], completion["failed_units"], completion["not_run_units"]) == (22, 0, 0), "Incomplete logical probe units")
+        q.require((completion["completed_units"], completion["failed_units"], completion["not_run_units"]) == (25, 0, 0), "Incomplete logical probe units")
         probe, terminal = q.read(run / "probe/probe.json"), q.read(run / "probe/runtime-terminal.json")
-        q.require(probe.get("schema") == "haltiq-runtime-probe-v1" and probe.get("status") == "PASS_RUNTIME_PROBE"
+        q.require(probe.get("schema") == "haltiq-runtime-probe-v2" and probe.get("status") == "PASS_RUNTIME_PROBE"
                   and probe.get("engineering_only") is True and all(probe.get(k) is False for k in ("benchmark_quality_claim", "new_learning", "long_study_started"))
                   and probe["wrapper_plan_sha256"] == state["plan_sha256"] and probe["source_sha256"] == state["source_sha256"]
                   and probe["pilot_proof_sha256"] == config["combined_pilot_proof_sha256"] and probe["pilot_run_id"] == pilot["run_id"]
-                  and probe["released_head_sha256"] == binding["released_head_sha256"] and probe["trained_head_sha256"] == q.sha(trained), "Probe provenance changed")
+                  and probe["released_head_sha256"] == binding["released_head_sha256"] and probe["trained_head_sha256"] == q.sha(trained)
+                  and probe["generation_profile"] == config["generation_profile"] == generation_module.MAIN_PROFILE, "Probe provenance changed")
         cleanup = terminal["cleanup"]
         q.require(all(cleanup.get(k) is True for k in ("verified", "private_port_closed", "owned_server_exited", "gpu_lease_released"))
                   and cleanup["errors"] == [] and cleanup["native_unloads"]
@@ -215,13 +249,13 @@ def audit_run(run, *, expected_plan_sha256):
         physical_work, used = physical(run / "probe/physical", journal_module.CallJournal), set()
         q.require(probe["calls"] == terminal["calls"] == physical_work["summary"], "Physical summaries differ")
         rows = points(run, probe, config, encoder, trained, physical_work["calls"], used, runtime, hobson)
-        generation(probe, physical_work["calls"], used, runtime)
+        reviewer_ab = generation(run, probe, config, physical_work, used, generation_module)
         startup = bound(physical_work["calls"], used, "native_startup", {"checkpoint": config["checkpoint"]})["value"]["metadata"]
         q.require(startup["encoder_sha256"] == encoder and startup["released_head_sha256"] == binding["released_head_sha256"]
                   and startup["head_parameters"] == 1053184, "Native placement binding changed")
         for role in ("writer_load", "writer_unload"):
             bound(physical_work["calls"], used, role, {"model": "qwen3:8b"})
-        q.require(len(used) == 23, "An actual physical operation was not bound")
+        q.require(len(used) == 26, "An actual physical operation was not bound")
         timing_value = timing(run, plan, state, physical_work, terminal, rows)
         for lease in (Path(plan["study_lease"]), run / "supervisor.lock"):
             q.require(lease.is_file(), "Missing actual ownership lease")
@@ -237,6 +271,7 @@ def audit_run(run, *, expected_plan_sha256):
             "pinned_inputs_sha256": pinned_inputs,
             "pilot_proof_sha256": config["combined_pilot_proof_sha256"], "physical_calls": physical_work["summary"],
             "journal_sha256": physical_work["journal_sha256"], "timing": timing_value,
+            "generation_profile": config["generation_profile"], "reviewer_ab": reviewer_ab,
             "output_sha256": {p.relative_to(run).as_posix(): q.sha(p) for p in (run / "probe").rglob("*") if p.is_file()},
             "new_model_forwards": 0, "new_head_scores": 0, "long_study_started_by_audit": False}
 

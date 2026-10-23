@@ -13,7 +13,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from haltiq_supervisor import engine, plan as supervisor
-from haltiq_tau_hotpot import hobson, probe_audit as audit, qualification as q, runtime, runtime_probe
+from haltiq_tau_hotpot import generation, hobson, probe_audit as audit, qualification as q, runtime, runtime_probe
 from haltiq_tau_hotpot.journal import CallJournal, canonical
 from tests.test_tau_hotpot_qualification import dump, tensors
 
@@ -25,7 +25,7 @@ class SyntheticProbe:
         self.output = self.run / "probe"
         source = self.run / "source"
         source.mkdir(parents=True)
-        for name in ("runtime", "runtime_probe", "journal", "hobson"):
+        for name in ("runtime", "runtime_probe", "journal", "hobson", "generation"):
             dump(source / "haltiq_tau_hotpot" / (name + ".py"), {"synthetic_not_executable": name})
         python = root / "fixture-python.exe"
         python.write_bytes(b"SYNTHETIC-NEVER-EXECUTED")
@@ -57,7 +57,7 @@ class SyntheticProbe:
         dump(prior / "supervisor.json", state)
         self.config = {"purpose": "runtime_probe", "targets": [512, 2048, 4096], "criteria": ["answer", "evidence"],
             "native_feature_cache": True, "response_cache": True, "new_learning": False, "benchmark_questions": 0,
-            "checkpoint": str(checkpoint), "base": str(base), "combined_pilot_proof": str(root / "pilot-proof.json")}
+            "generation_profile": deepcopy(generation.MAIN_PROFILE), "checkpoint": str(checkpoint), "base": str(base), "combined_pilot_proof": str(root / "pilot-proof.json")}
         self.binding = q.model_binding(self.config, {"encoder_sha256": self.encoder,
             "released_head_sha256": q.sha(checkpoint / "head.safetensors")})
         proof = {"schema": "haltiq-tau-hotpot-qualified-pilot-v1", "status": "PASS_QUALIFIED_ENGINEERING_PILOT",
@@ -81,7 +81,7 @@ class SyntheticProbe:
             "gpu_lease": str(root / "gpu.lock"), "study_lease": str(root / "study.lock"),
             "resources": {"ram_gib": 7, "vram_gib": 3, "startup_ram_gib": 8.5, "startup_vram_gib": 9,
                 "stability_seconds": 30, "minimum_rest_seconds": 5, "cpu_threads": 4, "gpu_owners": 1, "duty_cycle": .5},
-            "stages": [{"id": "probe", "model_work": True, "gpu": True, "planned_units": 22,
+            "stages": [{"id": "probe", "model_work": True, "gpu": True, "planned_units": 25,
                 "argv": [str(python), "-B", "-m", "haltiq_tau_hotpot.runtime_probe", "probe", "--config", str(root / "config.json"),
                     "--output", "{run}/probe", "--previous", "{run}", "--deadline", "{deadline}", "--control", "{control}", "--allow-model-calls"],
                 "completion_receipt": "{run}/probe/completion.json", "outputs": [{"path": "{run}/probe/" + n}
@@ -93,6 +93,30 @@ class SyntheticProbe:
             "stages": {"probe": {"status": "completed", "exit_code": 0, "owned_tree_clear": True, "os_handoff_verified": True,
                 "started_at": start.isoformat(), "finished_at": (datetime.now(timezone.utc) + timedelta(seconds=2)).isoformat()}}}
         self.journal, self.values = CallJournal(self.output / "physical"), {}
+        self.call("writer_load", {"model": "qwen3:8b"}, {"done": True})
+        state = {"question": "What is the synthetic key?", "evidence": [{"title": "Synthetic runtime note",
+            "sentences": [{"index": 0, "text": "The synthetic key is control."}]}], "previous_draft": None}
+        answer = {"answer": "control", "supporting_facts": [["Synthetic runtime note", 0]]}
+        payload = generation.generation_payload(self.config, state)
+        self.call("writer", payload, {"done": True, "done_reason": "stop", "prompt_eval_count": 50,
+            "eval_count": 10, "message": {"content": json.dumps(answer)}})
+        self.journal.reuse(deepcopy(self.journal.records[-1]), payload)
+        review_rows, review_states, main_event = [], generation.synthetic_reviews(), None
+        for index, (case_id, profile) in enumerate(generation.REVIEW_SEQUENCE):
+            payload = generation.generation_payload(self.config, review_states[case_id], review=True, profile=profile)
+            raw = {"done": True, "done_reason": "length" if profile == "legacy" else "stop", "prompt_eval_count": 50,
+                "eval_count": 384 if profile == "legacy" else 12, "message": {"content": "Retain. Synthetic technical fixture."}}
+            self.call("reviewer", payload, raw)
+            event = deepcopy(self.journal.records[-1])
+            if index == 1: main_event, main_payload = event, payload
+            review_rows.append({"case_id": case_id, "profile": profile, "state": review_states[case_id],
+                "status": "known_terminal_failure" if profile == "legacy" else "completed",
+                "feedback": None if profile == "legacy" else raw["message"]["content"],
+                "failure": "Writer/reviewer did not complete within its output budget" if profile == "legacy" else None,
+                "physical_call_id": event["id"], "metadata": generation.response_metadata(raw),
+                "request_sha256": q.fingerprint(payload)})
+        self.journal.reuse(main_event, main_payload)
+        self.call("writer_unload", {"model": "qwen3:8b"}, {"done": True})
         self.call("native_startup", {"checkpoint": str(checkpoint)}, {"metadata": {
             "encoder_sha256": self.encoder, "released_head_sha256": self.binding["released_head_sha256"], "head_parameters": 1053184}})
         rows = []
@@ -125,31 +149,17 @@ class SyntheticProbe:
                     cached.append(value)
                 rows.append({"criterion": criterion, "target_tokens": target, "input_tokens": n, "public": public, "draft": draft,
                     "actual": actual, "cached_released": cached[0], "cached_trained": cached[1], "cold_first_forward_after_placement": not rows})
-        self.call("writer_load", {"model": "qwen3:8b"}, {"done": True})
-        state = {"question": "What is the synthetic key?", "evidence": [{"title": "Synthetic runtime note",
-            "sentences": [{"index": 0, "text": "The synthetic key is control."}]}], "previous_draft": None}
-        answer = {"answer": "control", "supporting_facts": [["Synthetic runtime note", 0]]}
-        for review, value in ((False, answer), (True, "retain")):
-            payload = {"model": "qwen3:8b", "messages": [{"role": "system", "content": runtime.REVIEWER_SYSTEM if review else runtime.WRITER_SYSTEM},
-                {"role": "user", "content": json.dumps({"state": state, "feedback": ""}, ensure_ascii=False)}], "stream": False,
-                "think": False, "keep_alive": "5m", "options": {"temperature": 0, "seed": 42, "num_predict": 384, "num_ctx": 16384, "num_thread": 4, "num_gpu": 99}}
-            if not review: payload["format"] = runtime.ANSWER_SCHEMA
-            self.call("reviewer" if review else "writer", payload, {"done": True, "done_reason": "stop", "prompt_eval_count": 50,
-                "eval_count": 10, "message": {"content": value if review else json.dumps(value)}})
-            self.journal.reuse(deepcopy(self.journal.records[-1]), payload)
-            state = {**state, "draft": value} if not review else state
-        self.call("writer_unload", {"model": "qwen3:8b"}, {"done": True})
-        self.probe = {"schema": "haltiq-runtime-probe-v1", "status": "PASS_RUNTIME_PROBE", "engineering_only": True,
+        self.probe = {"schema": "haltiq-runtime-probe-v2", "status": "PASS_RUNTIME_PROBE", "engineering_only": True,
             "benchmark_quality_claim": False, "new_learning": False, "long_study_started": False, "points": rows,
-            "generation_results": [answer, "retain"], "calls": self.journal.verify(), "pilot_proof_sha256": self.config["combined_pilot_proof_sha256"],
+            "generation_results": [answer], "reviewer_ab": review_rows, "generation_profile": deepcopy(generation.MAIN_PROFILE), "calls": self.journal.verify(), "pilot_proof_sha256": self.config["combined_pilot_proof_sha256"],
             "pilot_run_id": proof["run_id"], "released_head_sha256": self.binding["released_head_sha256"], "trained_head_sha256": q.sha(self.trained),
             "wrapper_plan_sha256": self.state["plan_sha256"], "source_sha256": self.state["source_sha256"]}
         self.terminal = {"cleanup": {"verified": True, "private_port_closed": True, "owned_server_exited": True,
             "gpu_lease_released": True, "errors": [], "native_unloads": [{"allocated_bytes": 0, "reserved_bytes": 0}]},
             "calls": self.journal.verify(), "timings": {"startup_seconds": 0., "switch_seconds": 0.}, "active_seconds": 100., "intentional_idle_seconds": 100.}
         self.completion = {"run_id": self.state["run_id"], "plan_sha256": self.state["plan_sha256"], "phase": "probe", "terminal": True,
-            "pending_or_uncertain": False, "cleanup_verified": True, "planned_units_accounted": True, "planned_units": 22,
-            "completed_units": 22, "failed_units": 0, "not_run_units": 0, "finished_at": datetime.now(timezone.utc).isoformat()}
+            "pending_or_uncertain": False, "cleanup_verified": True, "planned_units_accounted": True, "planned_units": 25,
+            "completed_units": 25, "failed_units": 0, "not_run_units": 0, "finished_at": datetime.now(timezone.utc).isoformat()}
         self.timing = {"wall_seconds": 250., "active_seconds": 100., "intentional_idle_seconds": 100.}
         self.handoff = Mock()
         self.helpers = {"haltiq_supervisor.plan": supervisor, "haltiq_supervisor.engine": SimpleNamespace(verify_completion=engine.verify_completion, check_handoff=self.handoff),
@@ -158,6 +168,8 @@ class SyntheticProbe:
                 INSTRUCTIONS_BY_CRITERION=hobson.INSTRUCTIONS_BY_CRITERION, encoder_binding=lambda *_: self.encoder)}
         self.modules = {"haltiq_tau_hotpot.runtime": SimpleNamespace(__file__=str(source / "haltiq_tau_hotpot/runtime.py"),
             **{name: getattr(runtime, name) for name in ("decision_state", "WRITER_SYSTEM", "REVIEWER_SYSTEM", "ANSWER_SCHEMA")}),
+            "haltiq_tau_hotpot.generation": SimpleNamespace(__file__=str(source / "haltiq_tau_hotpot/generation.py"),
+                **{name: getattr(generation, name) for name in ("MAIN_PROFILE", "REVIEW_SEQUENCE", "synthetic_reviews", "generation_payload", "parse_response", "response_metadata")}),
             "haltiq_tau_hotpot.runtime_probe": SimpleNamespace(__file__=str(source / "haltiq_tau_hotpot/runtime_probe.py"), pilot_binding=runtime_probe.pilot_binding),
             "haltiq_tau_hotpot.journal": SimpleNamespace(__file__=str(source / "haltiq_tau_hotpot/journal.py"), CallJournal=CallJournal)}
         for path in (Path(self.plan["gpu_lease"]), Path(self.plan["study_lease"]), self.run / "supervisor.lock"): path.write_bytes(b"fixture")
@@ -174,6 +186,8 @@ class SyntheticProbe:
             if event["event"] == "completed":
                 path = self.journal.directory / event["response"]
                 path.write_bytes(canonical(self.values[event["id"]]) + b"\n"); event["response_sha256"] = q.sha(path)
+        for index, row in enumerate(self.probe["reviewer_ab"]):
+            dump(self.output / "reviewer-ab" / f"{index}.json", row)
         for row in self.probe["points"]:
             dump(self.output / "points" / f"{row['criterion']}-{row['target_tokens']}.json", row)
         self.journal.path.write_text("".join(json.dumps(e) + "\n" for e in self.journal.records))
@@ -200,7 +214,7 @@ class ProbeAuditTests(unittest.TestCase):
     def test_bound_fixture_checks_all_actual_bytes_without_new_model_or_head_execution(self):
         result = self.fixture.audit()
         self.assertTrue(result["qualified"])
-        self.assertEqual(result["physical_calls"]["completed"], 23)
+        self.assertEqual(result["physical_calls"]["completed"], 26)
         self.assertEqual(result["physical_calls"]["exact_response_reuses"], 2)
         self.assertEqual(result["new_model_forwards"], 0)
         self.assertEqual(result["new_head_scores"], 0)
@@ -303,6 +317,30 @@ class ProbeAuditTests(unittest.TestCase):
         self.fixture.probe["generation_results"][0] = {"answer": "forged", "supporting_facts": []}
         self.fixture.sync()
         with self.assertRaisesRegex(q.QualificationError, "committed response"): self.fixture.audit()
+
+    def test_ab_profile_order_metadata_and_main_completion_are_checked_against_raw_calls(self):
+        rows = self.fixture.probe["reviewer_ab"]
+        for field, value in (("profile", "legacy"), ("metadata", {"invented": True}), ("feedback", "forged feedback")):
+            original = deepcopy(rows[1][field])
+            rows[1][field] = value
+            self.fixture.sync()
+            try:
+                with self.subTest(field=field), self.assertRaises(q.QualificationError): self.fixture.audit()
+            finally:
+                rows[1][field] = original
+                self.fixture.sync()
+        self.fixture.values[rows[1]["physical_call_id"]]["done_reason"] = "length"
+        self.fixture.sync()
+        with self.assertRaises(q.QualificationError): self.fixture.audit()
+
+    def test_review_reuse_cannot_redirect_to_legacy_even_with_rebound_summary(self):
+        rows = self.fixture.probe["reviewer_ab"]
+        reuse = next(e for e in self.fixture.journal.records if e["event"] == "exact_response_reuse" and e["role"] == "reviewer")
+        legacy = next(e for e in self.fixture.journal.records if e["event"] == "completed" and e["id"] == rows[0]["physical_call_id"])
+        pending = next(e for e in self.fixture.journal.records if e["event"] == "pending" and e["id"] == legacy["id"])
+        reuse.update(id=legacy["id"], request_sha256=pending["request_sha256"], response_sha256=legacy["response_sha256"])
+        self.fixture.sync()
+        with self.assertRaisesRegex(q.QualificationError, "first main-profile"): self.fixture.audit()
 
     def test_cleanup_failure_bad_phase_time_and_live_handoff_failure_suppress_qualification(self):
         self.fixture.terminal["cleanup"]["native_unloads"][0]["allocated_bytes"] = 1
