@@ -1,0 +1,79 @@
+{
+  "scope": "tau_retail_action_sensitivity_not_official_task_success",
+  "independent_policy_preconditions": 2,
+  "manually_constructed_public_states": 4,
+  "head_scores": 4,
+  "upstream_revision": "cc1df47baa1544a34bb8c8e5c4ca72ad223b96a2",
+  "case_source": "configs/strands/tau-action-probe.json",
+  "score_source": "tau-action-scores.csv",
+  "context_protocol": "tau-policy-action-proposed-tools-v1",
+  "criterion": "tau-policy-action-v1",
+  "temperature": 1.0,
+  "threshold": 0.8,
+  "hotpot_calibration_applied": false,
+  "tau_calibration_fitted": false,
+  "evaluator_labels_in_model_inputs": false,
+  "benchmark_tasks_loaded": 0,
+  "tools_executed": 0,
+  "fresh_training_performed": false,
+  "approved_actions": 0,
+  "expected_permitted_actions_rejected": 2,
+  "expected_prohibited_actions_rejected": 2,
+  "paired_probability_differences": [
+    {
+      "pair": "cancel",
+      "permitted_minus_prohibited_probability": 0.0004263663977850385
+    },
+    {
+      "pair": "return",
+      "permitted_minus_prohibited_probability": 0.009484039571578173
+    }
+  ],
+  "physical_work": {
+    "completed_run": {
+      "encoder_forwards": 4,
+      "encoder_input_tokens": 12536,
+      "head_score_calls": 4,
+      "writer_calls": 0,
+      "reviewer_calls": 0,
+      "hosted_calls": 0,
+      "tokenizer_preflights_without_forward": 4,
+      "startup_seconds": 8.164217099983944,
+      "encoding_seconds": 18.315584099997068,
+      "head_scoring_seconds": 0.1709151000250131,
+      "wall_seconds": 99.87656170001719,
+      "intentional_idle_seconds": 70.15700000000652,
+      "startup_admission_wall_seconds": 30.203000000008615
+    },
+    "earlier_rejected_checkpoint_selection": {
+      "encoder_forwards": 0,
+      "head_score_calls": 0,
+      "model_loaded": false,
+      "output_directory_created": false
+    },
+    "timing_scopes_overlap_do_not_sum": true
+  },
+  "input_files_unchanged_during_completed_run": true,
+  "weight_config_adapter_hashes_before_and_after_equal": true,
+  "source_sha256": {
+    "script": "18c06bb9c403aee9bd15cf1ce032b469f0db8b8a7d0e92ce0ac1b4107facebf4",
+    "backend": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+    "controls": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f",
+    "action_probe": "d485fbf3e58f41781cfa126e3080f644ad87fd63b6cb5f4f0ee3145c87120553",
+    "action_config": "b937e175d1ec85f9962e51f648310a38d16fe530dc0de78a7042131f171f9889",
+    "resource_profile": "72f717f1b7228787d488ff6540204170e5a350d076fe4a7586abc2260c99f31c",
+    "action_provider": "c265b00a26f310295dcce1017ffd787c4a744d551a3ac11e820e56161f2dd365",
+    "action_schema": "bbca86eefc4a28205bb983bc2d7182f7751607ad9d4d33daad67705a01231259",
+    "upstream_policy": "4313d3fef8acf919f555fa17fbce929cc3ed1cef2dd8f0d35ff5c8c3364de176",
+    "upstream_tool_source": "313d7e9394faab5fc693103e2f67c46e2a3d865c066b737a21c6cf4fe3dc772b"
+  },
+  "model_sha256": {
+    "released/head.safetensors": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799",
+    "released/strands_decider_config.json": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+    "released/lora/adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+  },
+  "private_evidence_sha256": {
+    "completed_run": "4b07327b8e3d8f2a207db2fddcdb72b9b167c30e6dcc99086b3575df62846dfd",
+    "earlier_rejected_checkpoint_selection": "8585273a923105a4ad164796fb68f0fb07e7c8bb9e76081a1bb30bf40fe1a619"
+  }
+}

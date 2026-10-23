@@ -71,6 +71,11 @@ Task completion uses the official environment evaluator, including each task's
 required checks. Word-overlap F1 is not the τ-bench success metric. Scripted
 controls validate the harness; they are not model-performance results.
 
+The [native model checks](experiments/strands/README.md) show strong sensitivity
+to simple answer contradictions but weak sensitivity to retail order-status
+rules. The four retail cases are controlled diagnostics, not a completed
+multi-task benchmark or evidence of improved orchestration.
+
 See [research methods](Docs/STRANDS_STUDY.md) for the comparison design and
 [the pilot configuration](configs/tau2/pilot.example.json) for explicit tasks,
 models and limits. Real runs need configured providers; no model or paid API is

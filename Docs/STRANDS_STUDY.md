@@ -61,3 +61,25 @@ Expand a new evaluation only after small controlled runs establish valid tool
 execution, scoring and physical usage. Select tasks without inspecting outcomes,
 report domains/types separately, and keep development distinct from final testing.
 A large numerical difference is an observation to test, not a required output.
+
+## Controlled checks and next refinements
+
+The [native sensitivity checks](../experiments/strands/README.md) separate two
+capabilities. Strands strongly distinguishes correct from contradictory answers
+on two simple facts. On two fictional retail-policy pairs, changing only the
+observed order status produces very small confidence changes. At the declared
+0.8 threshold it rejects both permitted and prohibited actions. These small
+diagnostics identify a weakness to investigate; they are not task-success estimates.
+
+The next controlled study should compare two refinements on separate tasks:
+
+- **Action-specific head training:** learn from permitted/prohibited proposals
+  and their observed prerequisites, then calibrate on a disjoint partition.
+  This directly targets the weak distinction, but needs reliable labels and can
+  overfit repeated task templates. Group related tasks before splitting data.
+- **Separate policy checks:** score authorization, required confirmation and
+  tool validity separately before routing to a reviewer. This makes rejection
+  reasons easier to inspect, but adds inference cost and may reject more valid
+  actions. Compare it with the single-check gate on the same task/seed pairs.
+
+Neither refinement has been shown to improve official benchmark completion yet.
