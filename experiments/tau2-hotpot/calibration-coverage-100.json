@@ -1,0 +1,88 @@
+{
+  "schema": "haltiq-calibration-gate-coverage-v1",
+  "scope": "Descriptive fitting-set diagnosis on all100 original first-draft calibration questions; not held-out model quality or a selected replacement policy",
+  "calibration_questions": 100,
+  "source_split": "original main_calibration",
+  "evaluation_protocol_unchanged": true,
+  "frozen_approval_threshold": 0.8,
+  "components": {
+    "released_answer": {
+      "n": 100,
+      "positive": 40,
+      "negative": 60,
+      "temperature": 2.324981413171761,
+      "probability_min": 0.3532238927625053,
+      "probability_max": 0.6966609660973975,
+      "approvals_at_existing_threshold": 0,
+      "threshold": 0.8,
+      "calibration_fitting_nll": 0.6708348543524727,
+      "calibration_fitting_brier": 0.23911127739875634,
+      "temperature1_diagnostic": {
+        "n": 100,
+        "positive": 40,
+        "negative": 60,
+        "temperature": 1.0,
+        "probability_min": 0.196806162460352,
+        "probability_max": 0.8735922136116496,
+        "approvals_at_existing_threshold": 17,
+        "threshold": 0.8,
+        "calibration_fitting_nll": 0.7056446561858024,
+        "calibration_fitting_brier": 0.25394037643238027
+      }
+    },
+    "trained_answer": {
+      "n": 100,
+      "positive": 40,
+      "negative": 60,
+      "temperature": 1.110604439295963,
+      "probability_min": 0.24826571719901144,
+      "probability_max": 0.7207486332767866,
+      "approvals_at_existing_threshold": 0,
+      "threshold": 0.8,
+      "calibration_fitting_nll": 0.6548521340797347,
+      "calibration_fitting_brier": 0.23193675530916394,
+      "temperature1_diagnostic": {
+        "n": 100,
+        "positive": 40,
+        "negative": 60,
+        "temperature": 1.0,
+        "probability_min": 0.22610790465661593,
+        "probability_max": 0.7413603091313221,
+        "approvals_at_existing_threshold": 0,
+        "threshold": 0.8,
+        "calibration_fitting_nll": 0.655288406274857,
+        "calibration_fitting_brier": 0.23236613992525917
+      }
+    },
+    "released_evidence": {
+      "n": 100,
+      "positive": 19,
+      "negative": 81,
+      "temperature": 20.0,
+      "probability_min": 0.48520184776925124,
+      "probability_max": 0.5242922067157871,
+      "approvals_at_existing_threshold": 0,
+      "threshold": 0.8,
+      "calibration_fitting_nll": 0.6990604991564521,
+      "calibration_fitting_brier": 0.2529553481364827,
+      "temperature_upper_bound_hit": true,
+      "target": "Strict supporting-facts exact-match proxy; no independently learned entailment head"
+    }
+  },
+  "probability_computation": "logistic((true_logit-false_logit)/temperature), with existing four-decimal served routing >=0.8",
+  "provenance_sha256": {
+    "learning": "693f3e3a7ff7351012eed43c8b64c0e29404a543e1d5879303f604d3f2f731e0",
+    "training_proof": "a77758c3164811be36049043e7b8111f8c3b8f5fcddfe92724dad047d28bfcfa",
+    "features": "46a4c9d39fa5fc2a070a4e4a54ac08cd585d263b50d17fbd58133daf2745a691",
+    "plan": "1fcdf51cbab2817fa1e7ab2bd2861d788f62478d48db27a561e7e2fdf4a43292"
+  },
+  "new_model_encoder_head_or_writer_calls": 0,
+  "heldout_outcomes_used": false,
+  "threshold_selected": false,
+  "interpretation": [
+    "Each calibrated component approves zero of100 calibration states at0.8. Differing probabilities need not produce different approval decisions or different final answers.",
+    "Temperature scaling preserves score ranking while changing confidence magnitude. Temperature1 diagnostics are arithmetic only, not an adopted policy or a held-out improvement.",
+    "Calibration covers first drafts only; do not infer that every future revision must be rejected.",
+    "Do not choose a threshold from the unfinished twenty-question evaluation. Any future policy change needs a separately frozen protocol and new held-out evaluation."
+  ]
+}
