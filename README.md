@@ -125,3 +125,30 @@ See [research methods](Docs/STRANDS_STUDY.md) for the comparison design and
 [the pilot configuration](configs/tau2/pilot.example.json) for explicit tasks,
 models and limits. Real runs need configured providers; no model or paid API is
 called merely by importing the package or running its contract tests.
+
+## Unattended local phases
+
+`haltiq_supervisor/` runs reviewed phases locally without asking ChatGPT to poll.
+It freezes every declared study package, checks input and completion receipts,
+waits for resource admission, forwards pause/stop requests and contains its own
+worker process trees. Successful phases advance automatically. Unknown work or
+a declared review boundary stops for attention; failed phases are never retried.
+
+```bash
+python -B -m haltiq_supervisor inspect --plan /absolute/path/to/local-plan.json
+python -B -m unittest tests.test_supervisor_engine tests.test_supervisor_handoff -v
+```
+
+Preparation and status commands make no model or Codex requests. Completion and
+failure events go to a durable local outbox. An explicitly enabled callback can
+attempt one [documented exact-session resume](https://learn.chatgpt.com/docs/non-interactive-mode#resume-a-non-interactive-session)
+at chosen phase completions, review boundaries or final completion; it never
+uses a polling timer or retries an uncertain
+callback. CLI delivery is not yet verified against a live Codex session.
+
+The custom **HotpotQA environment inside Tau²** is still unimplemented. Its live
+worker, per-call journals, compatible Hobson learner, GPU coordinator and combined
+pilot are required readiness receipts. The supervisor refuses model dispatch
+while those gates are missing. Passing supervision tests does not establish
+training completion or benchmark quality. Existing static and retail results
+retain their original scope.
