@@ -329,19 +329,48 @@ class RuntimeTests(unittest.TestCase):
         self.runtime.generate(state, review=True)
         self.assertEqual(self.runtime._http.call_count, 4)
 
-    def test_invalid_output_is_not_inserted_in_response_cache_or_silently_retried(self):
+    def test_known_invalid_terminal_output_is_replayed_as_failure_without_resampling(self):
         self.runtime.config["response_cache"] = True
         self.runtime._writer_ready = Mock()
         self.runtime._http = Mock(return_value={"done": True, "done_reason": "length"})
         with self.assertRaises(ValueError):
             self.runtime.generate({"evidence": "fixture"})
-        self.assertFalse(self.runtime.response_cache)
+        self.assertEqual(len(self.runtime.response_cache), 1)
+        with self.assertRaises(ValueError):
+            self.runtime.generate({"evidence": "fixture"})
         self.assertEqual(self.runtime._http.call_count, 1)
+        self.assertEqual(self.runtime.journal.summary()["exact_response_reuses"], 1)
         self.runtime._http.return_value = {"done": True, "message": {"content": "[]"}}
         with self.assertRaisesRegex(ValueError, "schema"):
-            self.runtime.generate({"evidence": "fixture"})
-        self.assertFalse(self.runtime.response_cache)
+            self.runtime.generate({"evidence": "different public input"})
+        with self.assertRaisesRegex(ValueError, "schema"):
+            self.runtime.generate({"evidence": "different public input"})
+        self.assertEqual(len(self.runtime.response_cache), 2)
         self.assertEqual(self.runtime._http.call_count, 2)
+        self.assertEqual(self.runtime.journal.summary()["exact_response_reuses"], 2)
+
+    def test_empty_review_reuses_known_failure_but_unknown_transport_never_enters_cache(self):
+        self.runtime.config["response_cache"] = True
+        self.runtime._writer_ready = Mock()
+        self.runtime._http = Mock(return_value={"done": True, "message": {"content": ""}})
+        for _ in range(2):
+            with self.assertRaisesRegex(ValueError, "empty"):
+                self.runtime.generate({"evidence": "fixture"}, review=True)
+        self.assertEqual(self.runtime._http.call_count, 1)
+        self.assertEqual(self.runtime.journal.summary()["exact_response_reuses"], 1)
+        before = len(self.runtime.response_cache)
+        self.runtime._http.side_effect = TimeoutError("actual completion unknown")
+        with self.assertRaises(UncertainCall):
+            self.runtime.generate({"evidence": "changed input"}, review=True)
+        self.assertEqual(len(self.runtime.response_cache), before)
+        self.assertTrue(self.runtime.journal.summary()["pending_or_uncertain"])
+
+    def test_failed_startup_wait_still_has_honest_idle_accounting(self):
+        guard = SimpleNamespace(idle_seconds=120., before_work=Mock(side_effect=RuntimeError("RAM hold expired")))
+        with patch("haltiq_tau_hotpot.runtime.RunControl", return_value=guard):
+            with self.assertRaisesRegex(RuntimeError, "RAM hold"):
+                self.runtime._startup_guard()
+        self.assertEqual(self.control.idle_seconds, 120.)
 
     def test_mutated_cached_response_stops_before_new_load_or_dispatch(self):
         self.runtime.config["response_cache"] = True

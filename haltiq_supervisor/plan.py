@@ -159,8 +159,8 @@ def validate(plan):
     if plan.get("version") != 1 or plan.get("scope") not in {"custom_tau2_hotpot", "offline_supervision_fixture"}:
         raise ValueError("Explicit supported supervision schema/scope required")
     purpose = plan.get("purpose", "main_study")
-    if purpose not in {"main_study", "qualification_pilot"} or (
-            purpose == "qualification_pilot" and plan["scope"] != "custom_tau2_hotpot"):
+    if purpose not in {"main_study", "qualification_pilot", "runtime_probe"} or (
+            purpose in {"qualification_pilot", "runtime_probe"} and plan["scope"] != "custom_tau2_hotpot"):
         raise ValueError("Explicit supported supervision purpose required")
     source = Path(plan["source_root"])
     if not source.is_absolute() or not source.is_dir() or not Path(plan["python"]).is_file():
@@ -225,6 +225,27 @@ def validate(plan):
             raise ValueError("Use one absolute shared study lease separate from GPU ownership")
     if purpose == "qualification_pilot":
         qualification(plan)
+    if purpose == "runtime_probe":
+        spec = plan.get("runtime_probe")
+        config = _pinned_json(spec, "Synthetic runtime probe config")
+        stages = plan["stages"]
+        start, end = clock(plan["start_time"]), clock(plan["deadline"])
+        if (config.get("purpose") != "runtime_probe" or config.get("targets") != [512, 2048, 4096]
+                or config.get("criteria") != ["answer", "evidence"]
+                or config.get("native_feature_cache") is not True or config.get("response_cache") is not True
+                or config.get("new_learning") is not False or type(config.get("benchmark_questions")) is not int
+                or config.get("benchmark_questions") != 0
+                or not 0 < (end - start).total_seconds() <= 1800
+                or len(stages) != 1 or stages[0]["id"] != "probe" or stages[0].get("planned_units") != 22
+                or stages[0]["argv"][:5] != [plan["python"], "-B", "-m", "haltiq_tau_hotpot.runtime_probe", "probe"]
+                or not stages[0]["model_work"] or not stages[0]["gpu"]
+                or {"path": spec["path"], "sha256": spec["sha256"]} not in plan.get("inputs", [])):
+            raise ValueError("Only the fixed22-operation synthetic runtime probe is permitted")
+        flags = stages[0]["argv"][5:]
+        expected = ["--config", spec["path"], "--output", "{run}/probe", "--previous", "{run}",
+                    "--deadline", "{deadline}", "--control", "{control}", "--allow-model-calls"]
+        if flags != expected or stages[0].get("completion_receipt") != "{run}/probe/completion.json":
+            raise ValueError("Synthetic probe arguments must match its owned invocation exactly")
     return plan
 
 

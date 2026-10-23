@@ -47,6 +47,14 @@ def port_open(port):
         return probe.connect_ex(("127.0.0.1", port)) == 0
 
 
+def decision_state(public, draft, indices, criterion):
+    evidence = "\n".join(public["context"][index][0] + ": " + " ".join(public["context"][index][1])
+                         for index in indices)
+    return (f"Question: {public['question']}\nEvidence: {evidence}\nDraft answer: {draft['answer']}"
+            + ("\nCitations: " + json.dumps(draft["supporting_facts"], ensure_ascii=False)
+               if criterion == "evidence" else ""))
+
+
 class LocalRuntime:
     def __init__(self, config, directory, control):
         self.config, self.directory, self.control = config, Path(directory), control
@@ -115,8 +123,10 @@ class LocalRuntime:
     def _startup_guard(self):
         guard = RunControl(self.control.directory, self.control.deadline.isoformat(),
             minimum_ram_gib=8.5, minimum_free_vram_gib=9, maximum_pause_seconds=120)
-        guard.before_work(require_gpu=True)
-        self.control.idle_seconds += guard.idle_seconds
+        try:
+            guard.before_work(require_gpu=True)
+        finally:
+            self.control.idle_seconds += guard.idle_seconds
 
     def _close_native(self):
         if self.backend is not None:
@@ -215,7 +225,6 @@ class LocalRuntime:
             payload["format"] = ANSWER_SCHEMA
         role = "reviewer" if review else "writer"
         key = fingerprint({"writer_digest": self.config["writer_digest"], "payload": payload})
-        new_event = None
         if self.config.get("response_cache") and key in self.response_cache:
             self.control.before_work(require_gpu=False)
             raw = self.journal.reuse(self.response_cache[key], payload)
@@ -223,6 +232,11 @@ class LocalRuntime:
             self._writer_ready()
             raw = self._physical(role, payload, lambda: self._http("/api/chat", payload), gpu=True)
             new_event = deepcopy(self.journal.records[-1])
+            if self.config.get("response_cache"):
+                # A committed terminal response is paired evidence even when its
+                # parser rejects it. Repeated exact requests reproduce that
+                # known failure; transport/uncertain calls never reach here.
+                self.response_cache[key] = new_event
         if not raw.get("done") or raw.get("done_reason") == "length":
             raise ValueError("Writer/reviewer did not complete within its output budget")
         if raw.get("prompt_eval_count", 0) + raw.get("eval_count", 0) >= 16384:
@@ -231,8 +245,6 @@ class LocalRuntime:
         if review:
             if not isinstance(text, str) or not text.strip():
                 raise ValueError("Reviewer returned empty feedback")
-            if self.config.get("response_cache") and new_event is not None:
-                self.response_cache[key] = new_event
             return text
         draft = json.loads(text)
         if (type(draft) is not dict or set(draft) != {"answer", "supporting_facts"}
@@ -241,16 +253,11 @@ class LocalRuntime:
                 or any(type(f) is not list or len(f) != 2 or type(f[0]) is not str
                        or type(f[1]) is not int or f[1] < 0 for f in draft["supporting_facts"])):
             raise ValueError("Writer output schema mismatch")
-        if self.config.get("response_cache") and new_event is not None:
-            self.response_cache[key] = new_event
         return draft
 
     def observe(self, public, draft, *, criterion="answer", head_path=None, temperature=None):
         ranked = self.rank(public, draft["answer"])
-        evidence = "\n".join(public["context"][index][0] + ": " + " ".join(public["context"][index][1])
-                             for index in ranked["indices"])
-        state = (f"Question: {public['question']}\nEvidence: {evidence}\nDraft answer: {draft['answer']}"
-                 + ("\nCitations: " + json.dumps(draft["supporting_facts"], ensure_ascii=False) if criterion == "evidence" else ""))
+        state = decision_state(public, draft, ranked["indices"], criterion)
         cache_key = fingerprint({"state": state, "criterion": criterion,
                                  "frozen_inputs": self.config.get("model_inputs", [])})
         if self.config.get("native_feature_cache") and cache_key in self.native_cache:
