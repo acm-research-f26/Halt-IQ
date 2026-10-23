@@ -12,7 +12,7 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from haltiq_tau_hotpot.journal import UncertainCall
+from haltiq_tau_hotpot.journal import UncertainCall, fingerprint
 from haltiq_tau_hotpot.runtime import LocalRuntime
 
 
@@ -165,6 +165,58 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(self.runtime.journal.summary()["dispatched"], 0)
         self.assertFalse(self.runtime.journal.summary()["pending_or_uncertain"])
 
+    def test_main_native_cache_reuses_only_hash_bound_real_observation_with_one_cpu_score(self):
+        self.runtime.config["native_feature_cache"] = True
+        checkpoint = self.root / "released"
+        checkpoint.mkdir()
+        (checkpoint / "head.safetensors").write_bytes(b"SYNTHETIC HEAD; NEVER LOADED")
+        self.runtime.config["checkpoint"] = str(checkpoint)
+        self.runtime.rank = Mock(return_value={"indices": [2, 1, 0]})
+        self.runtime._native_ready = Mock()
+        def forward(state, **kwargs):
+            return {"physical_forwards": 1, "head_scores": 2, "feature": {"decide": TensorFixture(),
+                "options": TensorFixture(), "provenance_sha256": "synthetic",
+                "provenance": {"state_sha256": fingerprint(state)}}}
+        self.runtime.backend = SimpleNamespace(prepare_state=Mock(return_value={}), observe=Mock(side_effect=forward))
+        modules = self.fake_modules()
+        modules["safetensors.torch"].load_file = lambda *args, **kwargs: {
+            "decide": TensorFixture(), "options": TensorFixture()}
+        score = {"physical_forwards": 0, "head_scores": 1, "p_true": .9}
+        with patch.dict(sys.modules, modules), \
+             patch("haltiq_tau_hotpot.hobson.load_head", return_value="SYNTHETIC-HEAD-NOT-A-MODEL"), \
+             patch("haltiq_tau_hotpot.hobson.score_head", return_value=score) as cpu_score:
+            first = self.runtime.observe(self.public, self.draft)
+            self.runtime.writer_loaded = True
+            second = self.runtime.observe(self.public, self.draft)
+            self.assertEqual(self.runtime._native_ready.call_count, 1)
+            self.assertTrue(self.runtime.writer_loaded)
+            self.assertEqual(second["physical_forwards"], 0)
+            self.assertEqual(second["head_scores"], 1)
+            self.assertTrue(second["cache_reused"])
+            self.assertEqual(cpu_score.call_count, 1)
+            self.assertEqual(self.runtime.journal.summary()["by_role"], {"native_answer": 1, "cached_head_answer": 1})
+            entry = next(iter(self.runtime.native_cache.values()))
+            original_id = entry["physical_event"]["id"]
+            entry["physical_event"]["id"] = "forged"
+            with self.assertRaisesRegex(ValueError, "cache evidence changed"):
+                self.runtime.observe(self.public, self.draft)
+            entry["physical_event"]["id"] = original_id
+            original_state = entry["request"]["state"]
+            entry["request"]["state"] = "another public state"
+            with self.assertRaisesRegex(ValueError, "cache evidence changed"):
+                self.runtime.observe(self.public, self.draft)
+            entry["request"]["state"] = original_state
+            trained = self.root / "trained.safetensors"
+            trained.write_bytes(b"DIFFERENT SYNTHETIC HEAD")
+            self.runtime.observe(self.public, self.draft, head_path=trained, temperature=2.)
+            self.assertEqual(cpu_score.call_count, 2)
+            self.assertEqual(cpu_score.call_args.kwargs["temperature"], 2.)
+            Path(first["feature"]["path"]).write_bytes(b"CHANGED")
+            with self.assertRaisesRegex(ValueError, "cache evidence changed"):
+                self.runtime.observe(self.public, self.draft)
+            self.assertEqual(cpu_score.call_count, 2)
+            self.assertEqual(self.runtime._native_ready.call_count, 1)
+
     def test_native_startup_orders_writer_unload_admission_activation_then_postload_guard(self):
         events = []
         self.runtime._unload_writer = lambda: events.append("writer_unloaded")
@@ -206,6 +258,25 @@ class RuntimeTests(unittest.TestCase):
         self.assertFalse(self.runtime.writer_loaded)
         self.assertEqual(self.runtime._http.call_count, 2)
 
+    def test_evicted_writer_after_pause_requires_startup_admission_before_reload(self):
+        events = []
+        self.runtime.writer_loaded = True
+        self.runtime._close_native = lambda: events.append("native_closed")
+        self.runtime._startup_guard = lambda: events.append("startup_admitted")
+        responses = iter([{"models": []}, {}, {"models": [{"digest": "pinned-writer"}]}])
+        def request(path, *args, **kwargs):
+            events.append(path)
+            return next(responses)
+        self.runtime._http = request
+        self.runtime._writer_ready()
+        self.assertEqual(events, ["/api/ps", "native_closed", "startup_admitted", "/api/generate", "/api/ps"])
+        self.assertTrue(self.runtime.writer_loaded)
+        self.assertEqual(self.runtime.journal.verify()["by_role"], {"writer_load": 1})
+        self.runtime._http = Mock(return_value={"models": [{"digest": "foreign"}]})
+        with self.assertRaisesRegex(RuntimeError, "resident writer identity"):
+            self.runtime._writer_ready()
+        self.runtime._http.assert_called_once()
+
     def test_unload_requires_empty_resident_models_and_records_physical_request_once(self):
         self.runtime.writer_loaded = True
         self.runtime._http = Mock(side_effect=[{}, {"models": [{"digest": "still-owned"}]}])
@@ -234,6 +305,56 @@ class RuntimeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "context bound"):
             self.runtime.generate({"evidence": "x" * 17000})
         self.runtime._http.assert_not_called()
+
+    def test_exact_response_cache_reuses_only_identical_role_prompt_and_feedback(self):
+        self.runtime.config["response_cache"] = True
+        self.runtime._writer_ready = Mock()
+        self.runtime._http = Mock(return_value={"done": True, "done_reason": "stop",
+            "message": {"content": json.dumps(self.draft)}})
+        state = {"question": "fixture", "evidence": "public passage"}
+        first = self.runtime.generate(state)
+        self.assertEqual(self.runtime.generate(state), first)
+        self.assertEqual(self.runtime._writer_ready.call_count, 1)
+        self.assertEqual(self.runtime._http.call_count, 1)
+        self.assertEqual(self.runtime.journal.summary()["exact_response_reuses"], 1)
+        self.runtime.generate(state, "different feedback")
+        self.assertEqual(self.runtime._http.call_count, 2)
+        self.runtime._http.return_value = {"done": True, "message": {"content": "Retain the answer."}}
+        self.assertEqual(self.runtime.generate(state, review=True), "Retain the answer.")
+        self.assertEqual(self.runtime.generate(state, review=True), "Retain the answer.")
+        self.assertEqual(self.runtime._http.call_count, 3)
+        self.assertEqual(self.runtime.journal.verify()["by_role"], {"writer": 2, "reviewer": 1})
+        self.assertEqual(self.runtime.journal.summary()["exact_response_reuses"], 2)
+        self.runtime.config["writer_digest"] = "changed-model"
+        self.runtime.generate(state, review=True)
+        self.assertEqual(self.runtime._http.call_count, 4)
+
+    def test_invalid_output_is_not_inserted_in_response_cache_or_silently_retried(self):
+        self.runtime.config["response_cache"] = True
+        self.runtime._writer_ready = Mock()
+        self.runtime._http = Mock(return_value={"done": True, "done_reason": "length"})
+        with self.assertRaises(ValueError):
+            self.runtime.generate({"evidence": "fixture"})
+        self.assertFalse(self.runtime.response_cache)
+        self.assertEqual(self.runtime._http.call_count, 1)
+        self.runtime._http.return_value = {"done": True, "message": {"content": "[]"}}
+        with self.assertRaisesRegex(ValueError, "schema"):
+            self.runtime.generate({"evidence": "fixture"})
+        self.assertFalse(self.runtime.response_cache)
+        self.assertEqual(self.runtime._http.call_count, 2)
+
+    def test_mutated_cached_response_stops_before_new_load_or_dispatch(self):
+        self.runtime.config["response_cache"] = True
+        self.runtime._writer_ready = Mock()
+        self.runtime._http = Mock(return_value={"done": True,
+            "message": {"content": json.dumps(self.draft)}})
+        self.runtime.generate({"evidence": "fixture"})
+        event = self.runtime.journal.records[-1]
+        (self.runtime.journal.directory / event["response"]).write_text("{}")
+        with self.assertRaisesRegex(ValueError, "changed"):
+            self.runtime.generate({"evidence": "fixture"})
+        self.assertEqual(self.runtime._http.call_count, 1)
+        self.assertEqual(self.runtime._writer_ready.call_count, 1)
 
     def cleanup_fixture(self, *, failed_actions=()):
         events = []

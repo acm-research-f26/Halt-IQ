@@ -6,6 +6,7 @@ decider are never resident on the GPU together. No hosted services are used.
 from __future__ import annotations
 
 from argparse import Namespace
+from copy import deepcopy
 import gc
 import json
 import os
@@ -54,6 +55,9 @@ class LocalRuntime:
         self.server = self.log = self.lease = self.ranker = self.backend = None
         self.writer_loaded = False
         self.retrieval_cache = {}
+        self.native_cache = {}
+        self.cpu_heads = {}
+        self.response_cache = {}
         self.url = "http://127.0.0.1:11435"
         self.timings = {"startup_seconds": 0., "switch_seconds": 0.}
         self.cleanup = {"verified": False}
@@ -136,7 +140,13 @@ class LocalRuntime:
 
     def _writer_ready(self):
         if self.writer_loaded:
-            return
+            resident = self._http("/api/ps", timeout=5).get("models")
+            if resident == []:
+                self.writer_loaded = False
+            elif isinstance(resident, list) and len(resident) == 1 and resident[0].get("digest") == self.config["writer_digest"]:
+                return
+            else:
+                raise RuntimeError("Unexpected resident writer identity")
         started = time.monotonic()
         idle_before = self.control.idle_seconds
         self._close_native()
@@ -192,7 +202,6 @@ class LocalRuntime:
         return self.retrieval_cache[key]
 
     def generate(self, state, feedback="", *, review=False):
-        self._writer_ready()
         messages = [{"role": "system", "content": REVIEWER_SYSTEM if review else WRITER_SYSTEM},
                     {"role": "user", "content": json.dumps({"state": state, "feedback": feedback}, ensure_ascii=False)}]
         # UTF-8 bytes upper-bound tokenizer tokens; reserve output and template
@@ -204,18 +213,36 @@ class LocalRuntime:
                 "num_ctx": 16384, "num_thread": 4, "num_gpu": 99}}
         if not review:
             payload["format"] = ANSWER_SCHEMA
-        raw = self._physical("reviewer" if review else "writer", payload,
-                             lambda: self._http("/api/chat", payload), gpu=True)
+        role = "reviewer" if review else "writer"
+        key = fingerprint({"writer_digest": self.config["writer_digest"], "payload": payload})
+        new_event = None
+        if self.config.get("response_cache") and key in self.response_cache:
+            self.control.before_work(require_gpu=False)
+            raw = self.journal.reuse(self.response_cache[key], payload)
+        else:
+            self._writer_ready()
+            raw = self._physical(role, payload, lambda: self._http("/api/chat", payload), gpu=True)
+            new_event = deepcopy(self.journal.records[-1])
         if not raw.get("done") or raw.get("done_reason") == "length":
             raise ValueError("Writer/reviewer did not complete within its output budget")
         if raw.get("prompt_eval_count", 0) + raw.get("eval_count", 0) >= 16384:
             raise ValueError("Potential local context truncation")
         text = raw["message"]["content"]
         if review:
+            if not isinstance(text, str) or not text.strip():
+                raise ValueError("Reviewer returned empty feedback")
+            if self.config.get("response_cache") and new_event is not None:
+                self.response_cache[key] = new_event
             return text
         draft = json.loads(text)
-        if set(draft) != {"answer", "supporting_facts"}:
+        if (type(draft) is not dict or set(draft) != {"answer", "supporting_facts"}
+                or type(draft["answer"]) is not str or not draft["answer"].strip()
+                or type(draft["supporting_facts"]) is not list
+                or any(type(f) is not list or len(f) != 2 or type(f[0]) is not str
+                       or type(f[1]) is not int or f[1] < 0 for f in draft["supporting_facts"])):
             raise ValueError("Writer output schema mismatch")
+        if self.config.get("response_cache") and new_event is not None:
+            self.response_cache[key] = new_event
         return draft
 
     def observe(self, public, draft, *, criterion="answer", head_path=None, temperature=None):
@@ -224,6 +251,11 @@ class LocalRuntime:
                              for index in ranked["indices"])
         state = (f"Question: {public['question']}\nEvidence: {evidence}\nDraft answer: {draft['answer']}"
                  + ("\nCitations: " + json.dumps(draft["supporting_facts"], ensure_ascii=False) if criterion == "evidence" else ""))
+        cache_key = fingerprint({"state": state, "criterion": criterion,
+                                 "frozen_inputs": self.config.get("model_inputs", [])})
+        if self.config.get("native_feature_cache") and cache_key in self.native_cache:
+            return self._score_cached_native(self.native_cache[cache_key], criterion=criterion,
+                                              head_path=head_path, temperature=temperature, state=state)
         self._native_ready()
         # Strict token fitting is pre-dispatch and never truncates evidence.
         prepared = self.backend.prepare_state(state, criterion=criterion)
@@ -246,8 +278,50 @@ class LocalRuntime:
             observed.update(feature={**feature, "path": str(candidate), "sha256": digest(candidate)},
                             retrieval_indices=ranked["indices"])
             return observed
-        return self._physical("native_" + criterion, {"state": state, "criterion": criterion,
-            "head": str(head_path) if head_path else "released", "temperature": temperature}, forward, gpu=True)
+        request = {"state": state, "criterion": criterion,
+                   "head": str(head_path) if head_path else "released", "temperature": temperature}
+        result = self._physical("native_" + criterion, request, forward, gpu=True)
+        if self.config.get("native_feature_cache"):
+            self.native_cache[cache_key] = {"observed": deepcopy(result),
+                                           "request": deepcopy(request),
+                                           "physical_event": deepcopy(self.journal.records[-1])}
+        return result
+
+    def _score_cached_native(self, entry, *, criterion, head_path, temperature, state):
+        """Only a genuine, hash-bound encoder observation can avoid a new forward."""
+        from haltiq_hotpot.protocol import digest
+        from .hobson import HOBSON_TEMPERATURE, load_head, score_head
+        from safetensors.torch import load_file
+        event, original = entry["physical_event"], entry["observed"]
+        pending = next((r for r in self.journal.records if r["event"] == "pending" and r["id"] == event["id"]), None)
+        response = self.journal.directory / event["response"]
+        if (event not in self.journal.records or event["event"] != "completed" or event["role"] != "native_" + criterion
+                or pending is None or pending["role"] != event["role"]
+                or pending["request_sha256"] != fingerprint(entry["request"])
+                or entry["request"]["state"] != state or entry["request"]["criterion"] != criterion
+                or original["feature"]["provenance"]["state_sha256"] != fingerprint(state)
+                or digest(response) != event["response_sha256"]
+                or json.loads(response.read_text(encoding="utf-8")) != original
+                or digest(original["feature"]["path"]) != original["feature"]["sha256"]):
+            raise ValueError("Original native cache evidence changed; no cached score")
+        head = Path(head_path) if head_path else Path(self.config["checkpoint"]) / "head.safetensors"
+        identity = (str(head.resolve()), digest(head))
+        if identity not in self.cpu_heads:
+            self.cpu_heads[identity] = load_head(self.config["checkpoint"], head)
+        if temperature is None:
+            if head_path is not None:
+                raise ValueError("A trained head requires separate calibration")
+            temperature = HOBSON_TEMPERATURE if criterion == "answer" else 1.0
+        material = {**original["feature"], **load_file(original["feature"]["path"], device="cpu")}
+        def score():
+            value = score_head(self.cpu_heads[identity], material, temperature=temperature)
+            return {**value, "feature": original["feature"], "cache_reused": True,
+                    "original_native_call_id": event["id"],
+                    "original_native_response_sha256": event["response_sha256"],
+                    "retrieval_indices": original["retrieval_indices"]}
+        return self._physical("cached_head_" + criterion, {"original_native_call_id": event["id"],
+            "feature_sha256": original["feature"]["sha256"], "head_sha256": identity[1],
+            "criterion": criterion, "temperature": temperature}, score)
 
     def release_models(self):
         self._close_native()
@@ -278,6 +352,9 @@ class LocalRuntime:
             if self.ranker is not None:
                 cleanup_action(self.ranker.close)
                 self.ranker = None
+            self.cpu_heads.clear()
+            self.native_cache.clear()
+            self.response_cache.clear()
         finally:
             if self.lease is not None:
                 cleanup_action(self.lease.__exit__)

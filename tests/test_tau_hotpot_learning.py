@@ -23,6 +23,26 @@ TORCH_RUNTIME = all(importlib.util.find_spec(name) is not None for name in
 
 
 class ImportBoundaryTests(unittest.TestCase):
+    def test_resource_pause_does_not_become_active_training_or_an_extra_work_rest(self):
+        from haltiq_tau_hotpot.learning import _Budget
+        now, rests = [0.], []
+        class Control:
+            idle_seconds = 0.
+            def before_work(self, **kwargs):
+                now[0] += 30.
+                self.idle_seconds += 30.
+            def rest_after_block(self, seconds):
+                rests.append(seconds)
+                now[0] += seconds
+                self.idle_seconds += seconds
+        with patch("haltiq_tau_hotpot.learning.time.perf_counter", side_effect=lambda: now[0]):
+            budget = _Budget(Control(), 900)
+            now[0] += 6.
+            budget.check()
+            now[0] += 4.
+            budget.finish()
+        self.assertEqual(rests, [6., 4.])
+
     def test_importing_interfaces_does_not_import_torch_transformers_or_peft(self):
         code = ("import sys;import haltiq_tau_hotpot.hobson,haltiq_tau_hotpot.learning;"
                 "assert not any(x in sys.modules for x in ('torch','transformers','peft'));print('safe')")

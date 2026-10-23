@@ -40,6 +40,57 @@ class PhysicalJournalTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 CallJournal(temp)
 
+    def test_exact_reuse_is_bound_to_completed_request_and_counts_zero_new_calls(self):
+        with tempfile.TemporaryDirectory() as temp:
+            journal = CallJournal(temp)
+            request = {"payload": "unchanged", "seed": 42}
+            original = journal.call("writer", request, lambda: {"answer": "fixture"})
+            completed = dict(journal.records[-1])
+            self.assertEqual(journal.reuse(completed, request), original)
+            self.assertEqual(journal.verify()["by_role"], {"writer": 1})
+            self.assertEqual(journal.summary()["exact_response_reuses"], 1)
+            reopened = CallJournal(temp)
+            self.assertEqual(reopened.verify(), journal.verify())
+            with self.assertRaisesRegex(ValueError, "changed"):
+                journal.reuse(completed, {**request, "seed": 43})
+            self.assertEqual(journal.summary()["exact_response_reuses"], 1)
+
+    def test_forged_cached_event_and_tampered_response_are_not_reused(self):
+        with tempfile.TemporaryDirectory() as temp:
+            journal = CallJournal(temp)
+            journal.call("reviewer", {"x": 1}, lambda: {"feedback": "fixture"})
+            event = dict(journal.records[-1])
+            with self.assertRaises(UncertainCall):
+                journal.reuse({**event, "role": "writer"}, {"x": 1})
+            (Path(temp) / event["response"]).write_text("{}")
+            with self.assertRaises(ValueError):
+                journal.reuse(event, {"x": 1})
+            with self.assertRaises(ValueError):
+                CallJournal(temp)
+
+    def test_caught_uncertain_exception_cannot_enable_another_dispatch(self):
+        with tempfile.TemporaryDirectory() as temp:
+            journal = CallJournal(temp)
+            def failure():
+                raise TimeoutError("response unknown")
+            with self.assertRaises(UncertainCall):
+                journal.call("writer", {}, failure)
+            calls = []
+            with self.assertRaises(UncertainCall):
+                journal.call("writer", {}, lambda: calls.append(1))
+            self.assertFalse(calls)
+
+    def test_unbound_reuse_event_is_rejected_on_read(self):
+        with tempfile.TemporaryDirectory() as temp:
+            journal = CallJournal(temp)
+            journal.call("writer", {}, lambda: {"fixture": 1})
+            event = journal.records[-1]
+            journal._append({"event": "exact_response_reuse", "id": event["id"], "role": "writer",
+                "request_sha256": "0" * 64, "response_sha256": event["response_sha256"],
+                "new_physical_calls": 0})
+            with self.assertRaisesRegex(ValueError, "Unbound"):
+                CallJournal(temp)
+
 
 if __name__ == "__main__":
     unittest.main()

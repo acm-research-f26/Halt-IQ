@@ -144,6 +144,7 @@ class _Budget:
     def __init__(self, control, max_seconds):
         self.control, self.started = control, time.perf_counter()
         self.block = self.started
+        self.block_idle = getattr(control, "idle_seconds", 0.)
         self.max_seconds = max_seconds
         if control is not None:
             control.before_work(require_gpu=False)
@@ -153,14 +154,18 @@ class _Budget:
             raise TimeoutError("Bounded head-learning time expired; no complete proof")
         if self.control is not None:
             self.control.before_work(require_gpu=False)
-            if time.perf_counter() - self.block >= 5:
-                self.control.rest_after_block(time.perf_counter() - self.block)
+            active = max(0., time.perf_counter() - self.block
+                         - (getattr(self.control, "idle_seconds", 0.) - self.block_idle))
+            if active >= 5:
+                self.control.rest_after_block(active)
                 self.control.before_work(require_gpu=False)
                 self.block = time.perf_counter()
+                self.block_idle = getattr(self.control, "idle_seconds", 0.)
 
     def finish(self):
         if self.control is not None:
-            self.control.rest_after_block(time.perf_counter() - self.block)
+            self.control.rest_after_block(max(0., time.perf_counter() - self.block
+                - (getattr(self.control, "idle_seconds", 0.) - self.block_idle)))
 
 
 def train_heads(checkpoint, base, fit_rows, tune_rows, calibration_rows, output, baseline_receipt,
