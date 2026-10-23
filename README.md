@@ -153,7 +153,9 @@ reviewer can revise an answer before the gate permits submission. The compatible
 Hobson learner updates only its existing pointer head; the encoder and adapter
 stay frozen. See [the integration method](experiments/tau2-hotpot/README.md).
 
-A bounded qualification pilot may establish the missing live integration proof.
-The full study still requires that real proof before dispatch. Passing offline
-controls does not establish training completion or benchmark quality. Existing
+The [completed four-question engineering pilot](experiments/tau2-hotpot/engineering-pilot-4.json)
+includes real untouched inference and compatible head training. It found no
+quality improvement and exposed reviewer limits and cap abstention. The larger
+study remains unstarted; its local supervisor needs reviewed source, fresh
+resource admission and a measured whole-route forecast before launch. Existing
 static and retail results retain their original scope.

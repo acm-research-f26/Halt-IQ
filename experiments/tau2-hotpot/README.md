@@ -9,7 +9,10 @@ disjoint preparation and evaluation cohorts; it is not a withheld test-set resul
 
 The agent searches and reads public passages, proposes an answer with citations,
 and submits through a real environment tool. Rejected drafts go to a separate
-reviewer before revision. A rejected or missing final submission scores zero.
+reviewer before revision. In the completed pilot, a rejected or missing final
+submission scores zero. The future stopping-policy study instead returns the
+last valid draft when its declared revision budget ends. Budget fallback is
+separate from gate approval and never rescues a technical failure.
 Draft, review, tool and time limits apply to the whole episode.
 
 Question-only MiniLM top-three retrieval supplies the initial evidence to every
@@ -64,6 +67,32 @@ Known completed but invalid writer/reviewer responses are also replayed from
 their original bytes and fail the same parser again. They are never resampled
 for a later arm. An uncertain request has no reusable cache entry.
 
+## Completed engineering pilot
+
+The [four-question pilot](engineering-pilot-4.json) completed real collection,
+untouched Strands inference, head training, calibration and native Tau² comparison.
+Fixed1 scored 50% answer EM/F1, Fixed3 scored 25%, and both gates scored 0%.
+Nine episodes failed on reviewer output limits and two ended without an accepted
+answer at the cap. The nine reviewer failures shared three truncated physical
+responses through exact request reuse. All 16 planned episodes remain counted;
+no improvement is established.
+
+Training used 40 fitting, 10 tuning and 10 calibration questions, separate from
+the four comparison questions. The selected head received nine updates; the two
+learning-rate candidates required 18 updates in total. The encoder and adapter
+stayed unchanged, and saved-head logits reloaded exactly. Both fitted temperatures
+reached the declared upper bound; at the unchanged 0.8 threshold, neither head
+approved a first draft. Their probability metrics differ despite tied answer scores.
+
+The original comparison stopped under RAM pressure. Its failed owner and costs
+remain recorded; a separate comparison reused the verified preparation without
+repeating training. Two questions of each type cannot rule out question-type effects.
+
+Before the larger study, the reviewer uses a predeclared concise response and a
+larger output allowance. A synthetic A/B checks termination rather than answer
+quality. The future cap policy returns the last valid visited draft, matching the
+stopping-policy objective. These changes do not alter the completed pilot.
+
 ## Common evaluation
 
 Every method uses the same [official HotpotQA scoring definitions](https://github.com/hotpotqa/hotpot/blob/fa3a36370899e1d85822de61e58c85ea19993154/hotpot_evaluate_v1.py):
@@ -90,7 +119,7 @@ python -B -m haltiq_tau_hotpot --help
 
 The supervisor runs collection, native baseline/features, learning/calibration
 and comparison without ChatGPT polling. A qualification purpose is restricted to
-60 preparation questions, eight heldout questions and three drafts; it cannot
+60 preparation questions, four heldout questions and three drafts; it cannot
 silently become the long study. Status, pause and stop use the supervisor CLI.
 All model calls have fsynced pending/result receipts. Uncertain work stops without
 retry. Runtime assets, machine paths, operator receipts and routine reports stay
