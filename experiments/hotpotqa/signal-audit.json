@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "scope": "existing_outputs_no_new_model_calls",
+  "trajectory_signal": {
+    "questions": 20,
+    "saved_draft_states": 200,
+    "drafts_per_question": 10,
+    "raw_answer_variants_per_question": {
+      "1": 18,
+      "2": 2
+    },
+    "questions_with_changing_em": 0,
+    "questions_with_changing_f1": 0,
+    "stored_metric_mismatches": 0,
+    "quality_by_draft": [
+      {
+        "draft": 1,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 2,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 3,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 4,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 5,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 6,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 7,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 8,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 9,
+        "em": 0.5,
+        "token_f1": 0.54
+      },
+      {
+        "draft": 10,
+        "em": 0.5,
+        "token_f1": 0.54
+      }
+    ],
+    "oracle_any_saved_draft_em": 0.5,
+    "oracle_best_saved_draft_f1": 0.54,
+    "oracle_em_gain_over_first": 0.0,
+    "oracle_f1_gain_over_first": 0.0
+  },
+  "export_rows_checked": 420,
+  "distinct_export_policies": 11,
+  "answer_policies": {
+    "fixed-1-prefix": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 1.0
+    },
+    "fixed-2-prefix": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 2.0
+    },
+    "fixed-3-prefix": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 3.0
+    },
+    "fixed-5-prefix": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 5.0
+    },
+    "fixed-10-prefix": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 10.0
+    },
+    "strands-untuned": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 5.5
+    },
+    "strands-untuned-cap3": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 2.0
+    },
+    "strands-trained": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 5.5
+    },
+    "strands-trained-cap3": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 2.0
+    },
+    "jev-1.13-single-correctness": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 3.75
+    },
+    "jev-1.13-single-correctness-cap3": {
+      "questions": 20,
+      "em": 0.5,
+      "token_f1": 0.54,
+      "mean_selected_drafts": 1.65
+    }
+  },
+  "first_decision_threshold": 0.8,
+  "first_decision_metrics": {
+    "untuned": {
+      "scored_first_drafts": 20,
+      "auroc": 0.38,
+      "brier": 0.3362596895416724,
+      "nll": 0.9106471480591203,
+      "approved_first_drafts": 10,
+      "first_draft_approval_precision": 0.5,
+      "approval_coverage_of_planned": 0.5,
+      "wrong_first_approvals": 5
+    },
+    "trained": {
+      "scored_first_drafts": 20,
+      "auroc": 0.38,
+      "brier": 0.33632178010319286,
+      "nll": 0.9108216123945739,
+      "approved_first_drafts": 10,
+      "first_draft_approval_precision": 0.5,
+      "approval_coverage_of_planned": 0.5,
+      "wrong_first_approvals": 5
+    },
+    "jev": {
+      "scored_first_drafts": 20,
+      "auroc": 0.915,
+      "brier": 0.1412,
+      "nll": 0.4697145233969935,
+      "approved_first_drafts": 13,
+      "first_draft_approval_precision": 0.7692307692307693,
+      "approval_coverage_of_planned": 0.65,
+      "wrong_first_approvals": 3
+    }
+  },
+  "head_change": {
+    "first_logit_pairs_changed": 20,
+    "max_absolute_logit_change": 0.014443397521972656,
+    "first_approval_disagreements": 0
+  },
+  "input_sha256": {
+    "data/fresh20-evaluator-only.jsonl": "6584e2bf7a66bade630b1f1f88687c6e6962e4dc6192b27384503924d2b304ad",
+    "data/fresh20-writer-trajectories.json": "3e7847b89da869c36b3fb6d2027e073b16216cb37891cb226e7dcbad67c3fb38",
+    "analyses/primary-paired-analysis.json": "2dc952d28420b06558d4d04d161dd1ac948e3301398b7bd629dc7da8214cfab2",
+    "audits/optional-jev-independent-audit.json": "adea3878e052dd89aaaa11536c89510795caca1eea162532b2501172a816874f",
+    "exports/untuned-common-schema-results.jsonl": "f69158f56d5fb74c33261a8ba5f50c093c7664caa4034328f31307842571ad6c",
+    "exports/untuned-first-draft-logits.jsonl": "646e565e949e2f859b0cfd89f62bf22b5421e0aecc51c6ecbd630585b051606c",
+    "exports/trained-common-schema-results.jsonl": "6d7c9f6f90b1f9c9e90e91d707f6309a1a6c82bda513e607965b3bf131be1613",
+    "exports/trained-first-draft-logits.jsonl": "37103db6650d0d2cd791c6be25c681cf9aa9eece4ca998218a73f47a2af91886",
+    "exports/jev-common-schema-results.jsonl": "cdd48603ddece8e0baad28584cd24a86493fefd16f5d7944638d518f75499d4d",
+    "exports/jev-first-draft-logits.jsonl": "fa161781ecce8e9af50b19c705bfdfc21ac22d98e3f6e6857538f835aba3ac9e",
+    "proofs/released-calibrated-calibration-proof.json": "fe0f8ebdd94fd58a7015a109f8c2dbcd7ca38ac45bbfb7cf9504c013a2808d11",
+    "proofs/head-trained-calibration-proof.json": "68896ee86f945c9b5c351911acfb42fa23b35e30fd18b5d9c409f5a186274a87"
+  }
+}

@@ -5,17 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "haltiq-jev-critic"
 version = "0.1.0"
-description = "A budget-aware Jev critic experiment with a local writer"
+description = "Strands and Jev decision controllers for answer revision and tool-agent orchestration"
 requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
 data = ["pyarrow==25.0.1"]
 plots = ["matplotlib>=3.8,<4"]
+tau = ["tau2 @ git+https://github.com/sierra-research/tau2-bench.git@cc1df47baa1544a34bb8c8e5c4ca72ad223b96a2"]
 
 [project.scripts]
 haltiq = "haltiq.cli:main"
 haltiq-study-control = "pc_strands.control:main"
+haltiq-tau = "haltiq_tau.__main__:main"
 
 [tool.setuptools]
-packages = ["haltiq", "pc_strands"]
+packages = ["haltiq", "pc_strands", "haltiq_tau"]

@@ -29,6 +29,6 @@ Use the development split to settle prompts, thresholds, parsing, and resource l
 
 Acceptable aliases are deliberately narrow. `UNKNOWN` is the only gold response for an indeterminate question; an unsupported guess is wrong. Return short answers, without reasoning, for the final answer field. Normalized exact match and token F1 are calculated against each accepted answer, taking the best score. Document the exact normalization used by the evaluator before reporting results.
 
-See [the experiment protocol](../Docs/EXPERIMENT.md) for how to use these cases in the Monday prototype.
+See the [current research methods](../Docs/STRANDS_STUDY.md) for the distinction between diagnostic controls and measured model results.
 
 Real benchmark rows additionally carry `benchmark`, `metric`, and evaluator-only `metadata`. HotpotQA rows use `benchmark: "hotpotqa-distractor"` and `metric: "hotpotqa"`, so the harness selects official answer normalization automatically. Gold supporting-fact annotations stay inside metadata and never enter model prompts.

@@ -1,0 +1,28 @@
+{
+  "kind": "scripted_official_mock_harness_check",
+  "upstream_revision": "cc1df47baa1544a34bb8c8e5c4ca72ad223b96a2",
+  "tracked_checkout_clean": true,
+  "import_bound_to_checkout": true,
+  "results": [
+    {
+      "path": "correct_write",
+      "task_id": "create_task_1",
+      "reward": 1.0,
+      "db_match": true,
+      "actual_tool_executed": true,
+      "native_model_calls": 0,
+      "hosted_calls": 0
+    },
+    {
+      "path": "wrong_write",
+      "task_id": "create_task_1",
+      "reward": 0.0,
+      "db_match": false,
+      "actual_tool_executed": true,
+      "native_model_calls": 0,
+      "hosted_calls": 0
+    }
+  ],
+  "model_quality_result": false,
+  "scope": "Official environment/DB evaluator; no LLM/user simulator/judge calls."
+}

@@ -36,8 +36,8 @@ wrapped training/calibration proofs as review provenance; do not rename them as
 original raw proof files or use them to satisfy historical campaign hash gates. Do not
 overwrite the released checkpoint or previous experiment outputs. Verify hashes
 before loading; retain the supplied trained temperature rather than the released
-temperature. A newly reviewed runtime/plan is required for native model execution;
-the historical plans in this bundle are data only, with expired deadlines.
+temperature. Recorded source/model settings describe the completed experiment;
+create a new explicit plan for native execution rather than reusing old deadlines.
 
 The model author explicitly releases the checkpoint under Apache-2.0 in the pinned
 `LICENSE-Strands.md`; its full text and notes are retained byte-exact here. The

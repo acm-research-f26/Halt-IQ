@@ -1,0 +1,71 @@
+{
+  "scope": "mechanistic_input_sensitivity_not_benchmark_quality",
+  "independent_facts": 2,
+  "draft_states": 4,
+  "head_scores": 8,
+  "threshold": 0.8,
+  "case_source": "configs/strands/input-probe.json",
+  "score_source": "input-sensitivity-scores.csv",
+  "shared_frozen_encoder": true,
+  "evaluator_labels_in_model_inputs": false,
+  "fresh_training_performed": false,
+  "paired_correct_minus_contradictory_probability": [
+    {
+      "pair": "landmark",
+      "released_calibrated": 0.7535630119188435,
+      "trained_calibrated": 0.7538808745037877
+    },
+    {
+      "pair": "planet",
+      "released_calibrated": 0.7068240771566454,
+      "trained_calibrated": 0.7072134209430401
+    }
+  ],
+  "physical_work": {
+    "completed_run": {
+      "encoder_forwards": 4,
+      "encoder_input_tokens": 586,
+      "head_score_calls": 8,
+      "writer_calls": 0,
+      "hosted_calls": 0,
+      "native_startup_seconds": 7.7012830000021495,
+      "encoding_seconds": 17.061436400021194,
+      "head_scoring_seconds": 0.07136619996163063,
+      "wall_seconds": 97.54928070001188,
+      "intentional_idle_seconds": 69.31200000000536,
+      "startup_admission_wall_seconds": 30.17200000002049
+    },
+    "earlier_interrupted_startup": {
+      "encoder_forwards": 0,
+      "head_score_calls": 0,
+      "writer_calls": 0,
+      "hosted_calls": 0,
+      "native_startup_seconds": 22.93188079999527,
+      "wall_seconds": 74.01758840002003,
+      "intentional_idle_seconds": 47.780999999988126,
+      "only_source_script_changed": true,
+      "uncertain_forwards": false
+    },
+    "timing_scopes_overlap_do_not_sum": true
+  },
+  "model_inputs_unchanged_during_completed_run": true,
+  "weight_config_adapter_hashes_before_and_after_equal": true,
+  "model_sha256": {
+    "released/head.safetensors": "2492613e72eac53becb9ff855023261ac2722c5111b9f1e03be59a87328dd799",
+    "released/strands_decider_config.json": "a75610b67f13e038bc351bc6e037da2c8cad992205678b5d036fa4bd6341e3ae",
+    "released/lora/adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7",
+    "comparison/head.safetensors": "d95b640d54ccc004cc136dfbb38d896e942f299d972bed555bf07f7ab648ccf5",
+    "comparison/strands_decider_config.json": "c8524a28dd0b38acbfd9462f19a03d576cea0533ae148a3b3382c00a32c729d1",
+    "comparison/lora/adapter_model.safetensors": "ae1d0cd1ac3edec6df0a519a3ad18f1c382099032d493f8f98c96a80cfebb4c7"
+  },
+  "source_sha256": {
+    "script": "18c06bb9c403aee9bd15cf1ce032b469f0db8b8a7d0e92ce0ac1b4107facebf4",
+    "config": "72f717f1b7228787d488ff6540204170e5a350d076fe4a7586abc2260c99f31c",
+    "backend": "f280e2e8844cb59a92198df8283365ab029e1e22b2a0571357e13a8e8d604dee",
+    "controls": "bfcc4f506388b86036e97a37939065964cb9b6e8a17b56ba24f591e8e4a5f11f"
+  },
+  "private_evidence_sha256": {
+    "completed_run": "cc7d0583f5379a13c970d1bd1c4fc2ff0a8a4b2e226b4b1b5cdfa007e043c52d",
+    "earlier_interrupted_startup": "cc5bea1ed9aba36ee6724526945cb782cde2fcc31740135c0185c9a4c26db354"
+  }
+}

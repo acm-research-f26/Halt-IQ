@@ -1,0 +1,56 @@
+{
+  "scope": "mechanistic_input_sensitivity_not_benchmark_quality",
+  "max_wall_seconds": 600,
+  "threads": 4,
+  "threshold": 0.8,
+  "startup_admission": {
+    "samples": 4,
+    "sample_interval_seconds": 10,
+    "minimum_ram_gib": 8.5,
+    "minimum_free_vram_gib": 9
+  },
+  "runtime_limits": {
+    "minimum_ram_gib": 7,
+    "minimum_free_vram_gib": 3,
+    "duty_cycle": 0.5,
+    "minimum_rest_seconds": 5
+  },
+  "cases": [
+    {
+      "pair": "landmark",
+      "evaluator_expected_correct": true,
+      "public_state": {
+        "question": "In which city is the Eiffel Tower located?",
+        "evidence": ["The Eiffel Tower is located in Paris, France."],
+        "draft": "Paris"
+      }
+    },
+    {
+      "pair": "landmark",
+      "evaluator_expected_correct": false,
+      "public_state": {
+        "question": "In which city is the Eiffel Tower located?",
+        "evidence": ["The Eiffel Tower is located in Paris, France."],
+        "draft": "London"
+      }
+    },
+    {
+      "pair": "planet",
+      "evaluator_expected_correct": true,
+      "public_state": {
+        "question": "Which planet is the largest in the Solar System?",
+        "evidence": ["Jupiter is the largest planet in the Solar System."],
+        "draft": "Jupiter"
+      }
+    },
+    {
+      "pair": "planet",
+      "evaluator_expected_correct": false,
+      "public_state": {
+        "question": "Which planet is the largest in the Solar System?",
+        "evidence": ["Jupiter is the largest planet in the Solar System."],
+        "draft": "Mars"
+      }
+    }
+  ]
+}

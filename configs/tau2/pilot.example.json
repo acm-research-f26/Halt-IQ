@@ -1,0 +1,18 @@
+{
+  "upstream_revision": "cc1df47baa1544a34bb8c8e5c4ca72ad223b96a2",
+  "benchmark_version": "2.0.0",
+  "context_protocol": "tau-policy-action-proposed-tools-v1",
+  "language": "en",
+  "domain": "retail",
+  "task_ids": ["33", "34"],
+  "seeds": [42, 43],
+  "arms": ["no_gate", "fixed_review", "strands", "jev"],
+  "max_steps": 20,
+  "max_reviews": 2,
+  "threshold": 0.8,
+  "writer_model": "REPLACE_WITH_SAME_TOOL_CAPABLE_WRITER_FOR_ALL_ARMS",
+  "reviewer_model": "REPLACE_WITH_SAME_INDEPENDENT_REVIEWER_FOR_ALL_ARMS",
+  "user_model": "REPLACE_WITH_SAME_PINNED_USER_SIMULATOR_FOR_ALL_ARMS",
+  "evaluation_type": "all",
+  "communicate_scorer": "semantic"
+}
