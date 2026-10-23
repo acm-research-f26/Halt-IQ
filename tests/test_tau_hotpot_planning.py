@@ -5,6 +5,7 @@ from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -70,7 +71,7 @@ class PlanningTests(unittest.TestCase):
             "os_gpu_lease_free": True, "study_lease_free": True, "private_port_closed": True,
             "config": self.runtime_spec,
             "samples": [{"at": (self.now - timedelta(seconds=31 - index * 10)).isoformat(),
-                "available_ram_gib": 8.6, "free_vram_gib": 9.2, "gpu_temperature_c": 45} for index in range(4)]}
+                "available_ram_gib": 11.1, "free_vram_gib": 9.2, "gpu_temperature_c": 45} for index in range(4)]}
         self.resource_spec = self.save("resources", self.resource)
         self.pilot = self.make_pilot()
         self.pilot_spec = self.save("pilot", self.pilot)
@@ -152,11 +153,18 @@ class PlanningTests(unittest.TestCase):
             "physical_calls": physical, "timing": {"phases": timing}}
 
     def compile(self, name="compiled"):
-        return planning.compile_main(self.template, self.root / name, start_time=self.now.isoformat(),
-            review_receipt=self.review_spec["path"], pilot_proof=self.pilot_spec["path"],
-            resource_receipt=self.resource_spec["path"], now=self.now)
+        # Isolate compilation mechanics from the separate V2 lineage adapter.
+        # These are invented unit-test observations, never live readiness.
+        actual_forecast = forecasting.forecast_route
+        def synthetic_complete_forecast(measured, **kwargs):
+            measured = {**measured, "per_question_validation_overhead_max_seconds": 2., "runtime_instances_measured": 6}
+            return actual_forecast(measured, **kwargs)
+        with patch.object(planning, "forecast_route", side_effect=synthetic_complete_forecast):
+            return planning.compile_main(self.template, self.root / name, start_time=self.now.isoformat(),
+                review_receipt=self.review_spec["path"], pilot_proof=self.pilot_spec["path"],
+                resource_receipt=self.resource_spec["path"], now=self.now)
 
-    def make_probe(self):
+    def make_probe(self, version=1):
         run = self.root / "synthetic-runtime-probe"
         (run / "source").mkdir(parents=True)
         (run / "source/fixture.py").write_text("# No models; synthetic scheduling fixture.\n", encoding="utf-8")
@@ -164,12 +172,13 @@ class PlanningTests(unittest.TestCase):
         directory = run / "probe/physical"
         (directory / "responses").mkdir(parents=True)
         records, points = [], []
-        def append(role, value, seconds=.01):
+        def append(role, value, seconds=.01, request=None):
             identity = "call-" + str(sum(r["event"] == "pending" for r in records))
             response = directory / "responses" / (identity + ".json")
             durable_write(response, value)
             at = self.now.isoformat()
-            pending = {"event": "pending", "id": identity, "role": role, "request_sha256": "0" * 64, "at": at}
+            pending = {"event": "pending", "id": identity, "role": role,
+                "request_sha256": fingerprint(request) if request is not None else "0" * 64, "at": at}
             event = {"event": "completed", "id": identity, "role": role, "at": at,
                 "elapsed_seconds": seconds, "response": "responses/" + response.name, "response_sha256": file_hash(response)}
             records.extend((pending, event))
@@ -189,9 +198,46 @@ class PlanningTests(unittest.TestCase):
                     "actual": actual, "cached_released": same, "cached_trained": trained,
                     "cold_first_forward_after_placement": not points, "public": {"type": "synthetic_control"}})
         append("writer_load", {"scope": "synthetic fixture"})
-        records.append(append("writer", {"scope": "synthetic generation fixture"}, seconds=24.))
-        records.append(append("reviewer", {"scope": "synthetic review fixture"}))
+        ab, compact = [], []
+        if version == 1:
+            records.append(append("writer", {"scope": "synthetic generation fixture"}, seconds=24.))
+            records.append(append("reviewer", {"scope": "synthetic review fixture"}))
+        else:
+            from haltiq_tau_hotpot.generation import (MAIN_PROFILE, REVIEW_SEQUENCE, generation_payload,
+                response_metadata, synthetic_reviews)
+            config = {"purpose": "runtime_probe", "generation_profile": deepcopy(MAIN_PROFILE)}
+            config_spec = self.save("probe-config", config)
+            state = {"question": "What is the synthetic key?", "evidence": [{"title": "Synthetic runtime note",
+                "sentences": [{"index": 0, "text": "The synthetic key is control."}]}], "previous_draft": None}
+            answer = {"answer": "control", "supporting_facts": [["Synthetic runtime note", 0]]}
+            raw = {"done": True, "done_reason": "stop", "prompt_eval_count": 100, "eval_count": 12,
+                   "message": {"content": json.dumps(answer)}}
+            records.append(append("writer", raw, seconds=24., request=generation_payload(config, state)))
+            reuse = None
+            for index, (case_id, profile) in enumerate(REVIEW_SEQUENCE):
+                state = synthetic_reviews()[case_id]
+                # Legacy truncation is retained as a technical failure; main
+                # cells are two predeclared successful synthetic responses.
+                raw = {"done": True, "done_reason": 'length' if index == 0 else 'stop',
+                    "prompt_eval_count": 120, "eval_count": 12, "message": {"content": "Retain: public synthetic note supports this."}}
+                request = generation_payload(config, state, review=True, profile=profile)
+                event = append("reviewer", raw, seconds=[4., 7., 11., 5.][index], request=request)
+                failure = 'Writer/reviewer did not complete within its output budget' if index == 0 else None
+                row = {"case_id": case_id, "profile": profile, "state": state,
+                    "status": 'known_terminal_failure' if failure else 'completed', "failure": failure,
+                    "feedback": None if failure else raw['message']['content'], "physical_call_id": event['id'],
+                    "metadata": response_metadata(raw), "request_sha256": fingerprint(request)}
+                durable_write(run / 'probe/reviewer-ab' / f'{index}.json', row)
+                ab.append(row)
+                compact.append({"id": event['id'], "case_id": case_id, "profile": profile,
+                    "state_sha256": fingerprint(state), "request_sha256": fingerprint(request),
+                    "seconds": [4., 7., 11., 5.][index], "metadata": response_metadata(raw), "status": row['status']})
+                if index == 1: reuse = event
+            records.append(reuse)
         append("writer_unload", {"scope": "synthetic fixture"})
+        if version == 2:
+            generation_roles = {'writer_load', 'writer', 'reviewer', 'writer_unload'}
+            records = [r for r in records if r['role'] in generation_roles] + [r for r in records if r['role'] not in generation_roles]
         (directory / "calls.jsonl").write_text("\n".join(map(json.dumps, records)) + "\n", encoding="utf-8")
         from haltiq_tau_hotpot.journal import CallJournal
         stats = CallJournal(directory).verify()
@@ -200,33 +246,78 @@ class PlanningTests(unittest.TestCase):
         plan = {"purpose": "runtime_probe", "python": sys.executable, "reviewed_source_sha256": source,
             "inputs": [self.runtime_spec, self.pilot_spec],
             "readiness": {key: [{**readiness, "json_equals": {"ready": True}}] for key in READINESS},
-            "stages": [{"id": "probe", "planned_units": 22, "outputs": [{"path": "{run}/probe/" + name} for name in outputs]}]}
+            "stages": [{"id": "probe", "planned_units": 25 if version == 2 else 22,
+                        "outputs": [{"path": "{run}/probe/" + name} for name in outputs]}]}
+        if version == 2:
+            plan['runtime_probe'] = config_spec
+            plan['inputs'].append(config_spec)
         durable_write(run / "plan.json", plan)
         plan_sha, run_id = file_hash(run / "plan.json"), "SYNTHETIC-RUNTIME-PROBE"
-        value = {"schema": "haltiq-runtime-probe-v1", "status": "PASS_RUNTIME_PROBE", "engineering_only": True,
+        value = {"schema": "haltiq-runtime-probe-v" + str(version), "status": "PASS_RUNTIME_PROBE", "engineering_only": True,
             "benchmark_quality_claim": False, "new_learning": False, "long_study_started": False,
             "wrapper_plan_sha256": plan_sha, "source_sha256": source, "pilot_proof_sha256": self.pilot_spec["sha256"],
             "released_head_sha256": self.model_binding["released_head_sha256"], "trained_head_sha256": "e" * 64,
             "points": points, "calls": stats}
+        if version == 2:
+            value.update(generation_profile=deepcopy(MAIN_PROFILE), reviewer_ab=ab, generation_results=[answer])
         durable_write(run / "probe/probe.json", value)
         durable_write(run / "probe/runtime-terminal.json", {"cleanup": {"verified": True}, "calls": stats,
             "timings": {"startup_seconds": .01, "switch_seconds": .01}})
         durable_write(run / "probe/completion.json", {"run_id": run_id, "plan_sha256": plan_sha,
             "phase": "probe", "terminal": True, "pending_or_uncertain": False, "cleanup_verified": True,
-            "planned_units_accounted": True, "planned_units": 22, "completed_units": 22, "failed_units": 0, "not_run_units": 0})
+            "planned_units_accounted": True, "planned_units": 25 if version == 2 else 22,
+            "completed_units": 25 if version == 2 else 22, "failed_units": 0, "not_run_units": 0})
         hashes = {str(run / "probe" / name): file_hash(run / "probe" / name) for name in outputs}
         state = {"run_id": run_id, "plan_sha256": plan_sha, "source_sha256": source, "status": "completed",
             "python_sha256": file_hash(sys.executable), "stages": {"probe": {"status": "completed", "exit_code": 0,
                 "owned_tree_clear": True, "os_handoff_verified": True, "output_sha256": hashes}}}
         durable_write(run / "supervisor.json", state)
-        proof = {"schema": "haltiq-qualified-runtime-probe-v1", "status": "PASS_QUALIFIED_RUNTIME_PROBE",
+        proof = {"schema": "haltiq-qualified-runtime-probe-v" + str(version), "status": "PASS_QUALIFIED_RUNTIME_PROBE",
             "qualified": True, "terminal": True, "cleanup_verified": True, "pending_or_uncertain": False,
             "pilot_proof_sha256": self.pilot_spec["sha256"], "model_binding": self.model_binding,
             "run": str(run), "plan_sha256": plan_sha, "supervisor_sha256": file_hash(run / "supervisor.json"),
             "source_sha256": source, "output_sha256": {"probe/" + name: file_hash(run / "probe" / name) for name in outputs}}
+        if version == 2:
+            proof.update(generation_profile=deepcopy(MAIN_PROFILE), reviewer_ab=compact)
+            proof['output_sha256'].update({'probe/reviewer-ab/' + str(i) + '.json': file_hash(run / 'probe/reviewer-ab' / f'{i}.json') for i in range(4)})
         proof["pinned_inputs_sha256"] = {spec["path"]: spec["sha256"] for spec in plan["inputs"]
             + [item for group in plan["readiness"].values() for item in group]}
         return self.save("probe-proof", proof)
+
+    def recovered_measurement_fixture(self):
+        """Scheduling adapter fixture, not a real qualified recovery run."""
+        from haltiq_tau_hotpot.journal import CallJournal
+        old, new = Path(self.pilot["run"]), self.root / "synthetic-recovery"
+        sources, timings, physical = {}, {}, {}
+        for phase in ("collect", "features", "train"):
+            directory = old / phase
+            sources[phase] = {"run": str(old), "phase": phase,
+                "physical_dir": str(directory / "physical"), "timing_path": str(directory / "phase-timing.json"),
+                "runtime_terminal_path": str(directory / "runtime-terminal.json") if phase != "train" else None}
+            timings[phase] = deepcopy(self.pilot["timing"]["phases"][phase])
+            physical[phase] = CallJournal(directory / "physical").verify()
+        for index in range(1, 5):
+            phase = "compare_q" + str(index)
+            directory = new / phase
+            shutil.copytree(old / "compare/physical", directory / "compare/physical")
+            for filename, target in (("phase-timing.json", directory / "phase-timing.json"),
+                                     ("runtime-terminal.json", directory / "compare/runtime-terminal.json")):
+                shutil.copyfile(old / "compare" / filename, target)
+            sources[phase] = {"run": str(new), "phase": phase,
+                "physical_dir": str(directory / "compare/physical"), "timing_path": str(directory / "phase-timing.json"),
+                "runtime_terminal_path": str(directory / "compare/runtime-terminal.json")}
+            timings[phase] = deepcopy(self.pilot["timing"]["phases"]["compare"])
+            timings[phase]["supervisor_stage_wall_seconds"] = 4. + index
+            physical[phase] = CallJournal(directory / "compare/physical").verify()
+        proof = {**deepcopy(self.pilot), "schema": "haltiq-tau-hotpot-qualified-pilot-v2",
+            "run": str(new), "measurement_sources": sources, "physical_calls": physical,
+            "timing": {"phases": timings}, "preparation_owner": {"source_sha256": self.pilot["source_sha256"]},
+            "source_sha256": {"recovery_fixture.py": "f" * 64},
+            "historical_failed_compare": {"scope": "synthetic prior failed expense, not new outcomes", "completed": 6}}
+        inputs = [planning._spec(path) for origin in sources.values() for path in
+                  (Path(origin["physical_dir"]) / "calls.jsonl", Path(origin["timing_path"]))]
+        inputs += [self.model_inputs[-1]]
+        return self.save("recovered-pilot", proof), proof, {"measurement_sources": sources, "verification_inputs": inputs}
 
     def test_import_and_prepare_have_no_model_process_or_clock_adoption(self):
         result = subprocess.run([sys.executable, "-B", "-c",
@@ -249,6 +340,7 @@ class PlanningTests(unittest.TestCase):
         plan = planning.read(directory / "plan.json")
         self.assertEqual([stage["planned_units"] for stage in plan["stages"]], [620, 1240, 1, result["selected_n"] * 8, 1])
         self.assertEqual(inspect(plan)["status"], "ready_not_started")
+        self.assertEqual(plan["resources"]["startup_ram_gib"], 11)
         self.assertIsNone(plan["codex_argv"])
         self.assertFalse((directory / "supervisor.json").exists())
         self.assertEqual((planning._aware(plan["deadline"]) - self.now).total_seconds(), 14 * 3600)
@@ -275,6 +367,18 @@ class PlanningTests(unittest.TestCase):
         self.assertEqual(again["selected_n"], value["selected_n"])
         self.assertEqual(again["candidates"], value["candidates"])
 
+    def test_main_profile_is_explicit_and_legacy_review_cost_is_widened_before_new_measurement(self):
+        from haltiq_tau_hotpot.generation import MAIN_PROFILE
+        config = planning.read(self.template / 'main-config-template.json')
+        self.assertEqual(config['generation_profile'], MAIN_PROFILE)
+        measured = planning.pilot_measurements(self.pilot_spec['path'])
+        measured['steady_role_max_seconds']['reviewer'] = 8.
+        route = forecasting.forecast_route(measured)
+        self.assertTrue(route['reviewer_cost_is_unmeasured_proxy'])
+        self.assertEqual(route['main_reviewer_seconds_per_call'], 16.)
+        self.assertEqual(route['candidates'][0]['components_seconds']['reviewer'], 180 * 32.)
+        self.assertIn('768-token', route['reviewer_timing_basis'])
+
     def test_prefix_forecast_requires_exact_known_failure_memoization(self):
         from haltiq_tau_hotpot.runtime import LocalRuntime
         control = SimpleNamespace(before_work=lambda **_: None, rest_after_block=lambda _: None)
@@ -295,6 +399,42 @@ class PlanningTests(unittest.TestCase):
         policy["known_terminal_failure_cache"] = False
         with self.assertRaisesRegex(ValueError, "canonical protocol"):
             forecasting.forecast_route(planning.pilot_measurements(self.pilot_spec["path"]), policy=policy)
+
+    def test_recovery_measurements_use_seven_real_directories_and_separate_failed_history(self):
+        spec, proof, owners = self.recovered_measurement_fixture()
+        with patch("haltiq_tau_hotpot.recovery.verify_qualified_pilot", create=True,
+                   return_value=(proof, self.checkpoint / "head.safetensors", owners)) as verified:
+            measured = forecasting.pilot_measurements(spec["path"])
+        verified.assert_called_once_with(spec["path"])
+        self.assertEqual(set(measured["phase_wall_seconds"]), set(proof["measurement_sources"]))
+        self.assertNotIn("compare", measured["phase_wall_seconds"])
+        self.assertEqual(measured["runtime_instances_measured"], 6)
+        self.assertEqual(measured["per_question_validation_overhead_max_seconds"], 6.)
+        self.assertEqual(measured["historical_failed_compare"], proof["historical_failed_compare"])
+        self.assertFalse(measured["historical_failed_expense_in_forecast_rates"])
+        self.assertEqual(measured["physical_calls"], sum(v["completed"] for v in proof["physical_calls"].values()))
+        self.assertEqual(measured["qualification"], spec)
+
+    def test_recovery_missing_child_or_changed_import_is_blocked_without_legacy_fallback(self):
+        spec, proof, owners = self.recovered_measurement_fixture()
+        with patch("haltiq_tau_hotpot.recovery.verify_qualified_pilot", create=True,
+                   return_value=(proof, self.checkpoint / "head.safetensors", owners)):
+            saved = owners["measurement_sources"].pop("compare_q4")
+            with self.assertRaisesRegex(ValueError, "all genuine owners"):
+                forecasting.pilot_measurements(spec["path"])
+            owners["measurement_sources"]["compare_q4"] = saved
+            Path(self.model_inputs[-1]["path"]).write_bytes(b"CHANGED IMPORTED SOURCE")
+            with self.assertRaisesRegex(ValueError, "changed"):
+                forecasting.pilot_measurements(spec["path"])
+
+    def test_recovery_binding_failure_never_fabricates_one_completed_owner(self):
+        spec, _, _ = self.recovered_measurement_fixture()
+        with patch("haltiq_tau_hotpot.recovery.verify_qualified_pilot", create=True,
+                   side_effect=ValueError("Original failed owner is not reconciled")), \
+                patch.object(forecasting, "terminal_owner") as legacy:
+            with self.assertRaisesRegex(ValueError, "not reconciled"):
+                forecasting.pilot_measurements(spec["path"])
+        legacy.assert_not_called()
 
     def test_pilot_qualification_pin_is_not_shadowed_by_external_inputs(self):
         external = self.model_inputs[-1]
@@ -331,6 +471,19 @@ class PlanningTests(unittest.TestCase):
         self.assertIsNone(value["selected_n"])
         self.assertIn("full-window", value["measurement_blocker"])
 
+    def test_per_question_route_requires_actual_child_timing_and_prices_all_instances(self):
+        measured = planning.pilot_measurements(self.pilot_spec["path"])
+        blocked = forecasting.forecast_route(measured)
+        self.assertFalse(blocked["whole_route_fits"])
+        self.assertIn("recovery child", blocked["measurement_blocker"])
+        measured.update(per_question_validation_overhead_max_seconds=20., runtime_instances_measured=6)
+        valid = forecasting.forecast_route(measured)
+        costs = valid["candidates"][0]["components_seconds"]
+        self.assertEqual(costs["question_resource_admissions"], 20 * 30)
+        self.assertEqual(costs["question_validation_and_bootstrap"], 20 * 40)
+        self.assertEqual(costs["outer_model_stage_admissions"], 4 * 30)
+        self.assertEqual(costs["runtime_initialization"], 22 * 5.01)
+
     def test_real_contract_probe_can_supply_missing_context_without_repricing_cold_writer(self):
         proof = self.make_probe()
         technical = forecasting.runtime_probe_measurements(proof["path"], self.pilot_spec["path"])
@@ -344,6 +497,29 @@ class PlanningTests(unittest.TestCase):
         self.assertEqual(first["components_seconds"]["writer"], 820 * 5.01)
         self.assertGreaterEqual(first["components_seconds"]["cold_first_forward_after_each_placement"], 21 * 24 * 2)
         self.assertEqual(len(technical["native_by_criterion"]["evidence"]), 3)
+
+    def test_v2_both_main_review_timings_replace_legacy_proxy_without_quality_selection(self):
+        spec = self.make_probe(version=2)
+        technical = forecasting.runtime_probe_measurements(spec['path'], self.pilot_spec['path'])
+        self.assertEqual(technical['reviewer_main_max_seconds'], 11.)
+        self.assertEqual(len(technical['reviewer_ab']), 4)
+        self.assertEqual(technical['reviewer_ab'][0]['status'], 'known_terminal_failure')
+        measured = planning.pilot_measurements(self.pilot_spec['path'])
+        route = forecasting.forecast_route(measured, runtime_probe=technical)
+        self.assertFalse(route['reviewer_cost_is_unmeasured_proxy'])
+        self.assertEqual(route['main_reviewer_seconds_per_call'], 11.)
+        self.assertEqual(route['candidates'][0]['components_seconds']['reviewer'], 180 * 22.)
+
+    def test_v2_main_review_metadata_or_profile_cannot_be_relabelled(self):
+        spec = self.make_probe(version=2)
+        proof = planning.read(spec['path'])
+        for change in ('timing', 'profile'):
+            altered = deepcopy(proof)
+            if change == 'timing': altered['reviewer_ab'][1]['seconds'] = .001
+            else: altered['generation_profile']['reviewer_max_tokens'] = 384
+            Path(spec['path']).write_text(json.dumps(altered))
+            with self.subTest(change=change), self.assertRaisesRegex(ValueError, 'timings|profile'):
+                forecasting.runtime_probe_measurements(spec['path'], self.pilot_spec['path'])
 
     def test_probe_qualified_for_a_different_pilot_is_rejected(self):
         spec = self.make_probe()
@@ -411,6 +587,16 @@ class PlanningTests(unittest.TestCase):
             self.compile()
         self.assertFalse((self.root / "compiled").exists())
 
+    def test_main_admission_accepts11gib_boundary_and_rejects_old_startup_floor(self):
+        for sample in self.resource["samples"]:
+            sample["available_ram_gib"] = 11.
+        self.resource_spec = self.save("resources", self.resource)
+        planning.verify_resources(self.resource_spec["path"], now=self.now)
+        self.resource["samples"][0]["available_ram_gib"] = 10.99
+        self.resource_spec = self.save("resources", self.resource)
+        with self.assertRaisesRegex(ValueError, "reserves"):
+            planning.verify_resources(self.resource_spec["path"], now=self.now)
+
     def test_resource_receipt_from_different_os_lease_is_rejected(self):
         other = deepcopy(self.runtime)
         other["gpu_lease"] = str(self.root / "different-gpu.lock")
@@ -454,7 +640,7 @@ class PlanningTests(unittest.TestCase):
             def __exit__(_, *args): held.remove(_.path)
         def sampler():
             self.assertEqual(len(held), 2)
-            return {"available_ram_bytes": 8.6 * 1024**3, "gpu_free_mib": 9.2 * 1024, "gpu_temperature_c": 40}
+            return {"available_ram_bytes": 11.1 * 1024**3, "gpu_free_mib": 9.2 * 1024, "gpu_temperature_c": 40}
         output = self.root / "sampled-resources.json"
         with patch("subprocess.Popen") as spawn, patch.object(planning.socket, "socket") as socket:
             socket.return_value.__enter__.return_value.connect_ex.return_value = 1

@@ -21,7 +21,7 @@ from .journal import durable_write
 from .protocol import MAIN_SETTINGS, PHASES, _cohort, load_main, pinned, read, settings_match
 from .forecasting import FORECAST_POLICY, pilot_measurements, runtime_probe_measurements, forecast_route
 
-RESOURCES = {"ram_gib": 7, "vram_gib": 3, "startup_ram_gib": 8.5,
+RESOURCES = {"ram_gib": 7, "vram_gib": 3, "startup_ram_gib": 11,
     "startup_vram_gib": 9, "stability_seconds": 30, "minimum_rest_seconds": 5,
     "cpu_threads": 4, "gpu_owners": 1, "duty_cycle": .5, "admission_timeout_seconds": 1200}
 RUNTIME_KEYS = ("checkpoint", "base", "reranker", "ollama", "ollama_models", "writer_digest",
@@ -144,6 +144,9 @@ def prepare_template(runtime_config, data_freeze, source_root, python, output):
         protocol=str(output / "research-protocol.json"), protocol_sha256=file_hash(output / "research-protocol.json"),
         combined_pilot_proof=None, combined_pilot_proof_sha256=None, fresh_n_freeze=None,
         fresh_n_freeze_sha256=None, native_feature_cache=True, response_cache=True,
+        compare_process_layout="per_question",
+        generation_profile=deepcopy(research["generation_profile"]),
+        cap_fallback=research["cap_fallback"],
         hosted_services=False, new_downloads=False, long_study_started=False)
     durable_write(output / "main-config-template.json", config)
     plan = _plan(output / "main-config-template.json", source, python)
@@ -208,7 +211,7 @@ def verify_resources(path, *, now=None, config=None):
     for sample in samples:
         values = [sample.get(key) for key in ("available_ram_gib", "free_vram_gib", "gpu_temperature_c")]
         if (any(type(v) not in (float, int) or not math.isfinite(v) for v in values)
-                or values[0] < 8.5 or values[1] < 9 or not 0 <= values[2] < 80):
+                or values[0] < 11 or values[1] < 9 or not 0 <= values[2] < 80):
             raise ValueError("Startup resource reserves must hold throughout admission")
     if config is not None:
         origin = _checked(value.get("config"))
@@ -270,7 +273,7 @@ def sample_resources(runtime_config, output, *, sampler=None, sleep=time.sleep, 
         if elapsed < 30 or any(type(v) not in (int, float) or not math.isfinite(v)
                 for row in samples for key, v in row.items() if key != "at"):
             raise ValueError("Four finite resource observations must span at least30seconds")
-        if any(row["available_ram_gib"] < 8.5 or row["free_vram_gib"] < 9
+        if any(row["available_ram_gib"] < 11 or row["free_vram_gib"] < 9
                 or not 0 <= row["gpu_temperature_c"] < 80 for row in samples):
             raise ValueError("Resource reserve/temperature admission did not pass")
     except Exception as error:

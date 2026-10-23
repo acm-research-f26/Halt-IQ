@@ -60,12 +60,13 @@ class HotpotEpisodeAgent(HalfDuplexAgent[EpisodeState]):
     additional_stop_tool_names = frozenset({"submit_answer"})
 
     def __init__(self, tools, domain_policy, *, public, writer, reviewer, gate,
-                 arm, max_drafts, threshold, caps, timeout_seconds):
+                 arm, max_drafts, threshold, caps, timeout_seconds, cap_fallback=None):
         super().__init__(tools, domain_policy)
         self.public, self.writer, self.reviewer, self.gate = json_copy(public), writer, reviewer, gate
         self.arm, self.max_drafts, self.threshold, self.caps = arm, max_drafts, threshold, caps
         self.timeout_seconds, self.wall_deadline = timeout_seconds, None
         self.state, self.failure_category = None, None
+        self.cap_fallback, self.submission_reason = cap_fallback, None
 
     def set_seed(self, seed):
         # Model identities/seeds and mutable runtime configuration stay outside this adapter.
@@ -155,9 +156,16 @@ class HotpotEpisodeAgent(HalfDuplexAgent[EpisodeState]):
             state.previous_draft = deepcopy(draft)
             if approved:
                 event["route"] = "submit"
+                self.submission_reason = "fixed_target" if target is not None else "gate_approved"
                 return self._call_tool(state, "submit_answer", draft)
             event["route"] = "review"
             if state.counts["answer_drafts"] >= self.max_drafts:
+                if self.cap_fallback == "last_valid" and target is None:
+                    event["route"] = "submit_budget_fallback"
+                    self.submission_reason = "budget_fallback"
+                    state.trace.append({"event": "budget_fallback", "reason": "draft_cap",
+                        "selected_draft_number": state.counts["answer_drafts"], "gate_approved": False})
+                    return self._call_tool(state, "submit_answer", draft)
                 return self._stop(state, "draft_cap_no_accepted_submission")
             if state.counts["reviewer_calls"] >= self.caps["reviewer_calls"]:
                 return self._stop(state, "reviewer_call_cap")
@@ -199,7 +207,8 @@ class HotpotEpisodeAgent(HalfDuplexAgent[EpisodeState]):
 
 
 def run_episode(case, writer, reviewer=None, gate=None, arm="fixed1", max_drafts=3,
-                threshold=.8, passage_indices=None, caps=None, seed=42, timeout_seconds=600) -> dict:
+                threshold=.8, passage_indices=None, caps=None, seed=42, timeout_seconds=600,
+                cap_fallback=None) -> dict:
     """Run one real native episode; provider failures retain actual partial traces.
 
     No automatic retry, model import, training or hosted request occurs here.
@@ -209,6 +218,8 @@ def run_episode(case, writer, reviewer=None, gate=None, arm="fixed1", max_drafts
     indices = validate_indices(passage_indices, public)
     if arm not in FIXED.keys() | GATED or type(max_drafts) is not int or not 1 <= max_drafts <= 10:
         raise ValueError("declare a supported arm and one through ten total drafts")
+    if cap_fallback not in (None, "last_valid"):
+        raise ValueError("Declare legacy abstention or the explicit last-valid draft-cap policy")
     if arm in FIXED and FIXED[arm] > max_drafts:
         raise ValueError("fixed control exceeds the episode-wide draft cap")
     if not callable(writer) or (max_drafts > 1 and arm != "fixed1" and not callable(reviewer)):
@@ -235,7 +246,7 @@ def run_episode(case, writer, reviewer=None, gate=None, arm="fixed1", max_drafts
     validate_task(task)
     agent = HotpotEpisodeAgent(environment.get_tools(), POLICY, public=public,
         writer=writer, reviewer=reviewer, gate=gate, arm=arm, max_drafts=max_drafts,
-        threshold=threshold, caps=limits, timeout_seconds=timeout_seconds)
+        threshold=threshold, caps=limits, timeout_seconds=timeout_seconds, cap_fallback=cap_fallback)
     orchestrator = Orchestrator(domain=DOMAIN, agent=agent, user=DeterministicQuestionUser(public["question"]),
         environment=environment, task=task, max_steps=limits["tau_steps"], max_errors=1,
         seed=seed, timeout=timeout_seconds, validate_communication=True)
@@ -267,4 +278,9 @@ def run_episode(case, writer, reviewer=None, gate=None, arm="fixed1", max_drafts
         "trace": deepcopy(state.trace), "passage_indices": indices, "seed": seed,
         "critic_threshold": threshold, "physical_cost_scope": "provider callbacks own actual physical work accounting",
         "scorer": {"revision": OFFICIAL_REVISION, "sha256": OFFICIAL_SHA256, "url": OFFICIAL_URL}}
+    if cap_fallback is not None:
+        result.update(cap_fallback=cap_fallback,
+            submission_reason=agent.submission_reason if completed else None,
+            budget_fallback_used=completed and agent.submission_reason == "budget_fallback",
+            gate_approved=completed and agent.submission_reason == "gate_approved")
     return json_copy(result)

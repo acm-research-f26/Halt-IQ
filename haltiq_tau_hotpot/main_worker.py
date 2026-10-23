@@ -205,75 +205,120 @@ def analyse(episodes, context, initial):
                                  "score": gate["score"]})
     result.update(scope="heldout_custom_HotpotQA_in_Tau2_main_study", fresh_n_freeze=context["fresh_freeze"],
         evidence_first_draft_decision=diagnostics(observations, len(ids)),
+        submission_routes={arm: {"planned_n": len(ids),
+            "submitted": sum(row["status"] == "completed" and row["submitted"] is not None for row in by_arm[arm].values()),
+            "submission_coverage": sum(row["status"] == "completed" and row["submitted"] is not None for row in by_arm[arm].values()) / len(ids),
+            "budget_fallback_submissions": sum(row.get("budget_fallback_used") is True for row in by_arm[arm].values()),
+            "gate_approved_submissions": sum(row.get("gate_approved") is True for row in by_arm[arm].values()) if arm not in ARMS[:5] else None,
+            "gate_approval_coverage_of_planned": sum(row.get("gate_approved") is True for row in by_arm[arm].values()) / len(ids) if arm not in ARMS[:5] else None}
+            for arm in ARMS},
         policy_definitions={"released": "calibrated released answer gate", "trained": "calibrated trained answer gate only",
                             "decomposed": "separately calibrated released answer AND released evidence gates"},
-        interpretation="All planned questions/failures retained. Paired evidence may be positive, negative or inconclusive; tied answer scores are possible.")
+        interpretation="All planned questions/failures retained. Budget fallback submits the last valid draft without claiming gate approval. Paired evidence may be positive, negative or inconclusive; tied answer scores are possible.")
     return result
 
 
 def compare(args, context, control):
-    from .agent import run_episode
-    from .runtime import LocalRuntime
-    config = context["config"]
-    learning = read(args.previous / "train/learning.json")
-    criterion, evidence_t = learning["criteria"]["answer"], learning["released_evidence_calibration"]["temperature"]
-    trained_path = args.previous / "train/learned/answer-head.safetensors"
-    if (learning["status"] != "completed" or not learning["frozen_torso_adapter_files_unchanged"]
-            or _digest(trained_path) != criterion["trained_head_sha256"]):
-        raise ValueError("Actual compatible head training and separate calibration proof required")
-    rows, initial = [], {}
-    runtime = LocalRuntime(config, args.output, control)
-    try:
-        with runtime:
-            # Fresh writer generation starts only after load_main verified the
-            # answer-blind N freeze. No fresh answer influences cohort selection.
-            for case in context["cohorts"]["main_fresh"]:
-                qid, public = case["public"]["id"], case["public"]
-                ranked = runtime.rank(public)
-                first = run_episode(bare_case(case), runtime.generate, arm="fixed1", max_drafts=1,
-                                    passage_indices=ranked["indices"])
-                draft = first["submitted"]
-                initial[qid] = draft
-                durable_write(args.output / "initial" / (qid + ".json"), first)
-                for arm in ARMS:
-                    def writer(state, feedback):
-                        if state["previous_draft"] is None:
-                            if draft is None:
-                                raise ValueError("Shared initial draft failed; never redispatch it")
-                            return deepcopy(draft)
-                        return runtime.generate(state, feedback)
-                    def reviewer(state, proposed):
-                        selection = runtime.rank(public, proposed["answer"])
-                        evidence = [{"title": public["context"][i][0], "sentences": [
-                            {"index": n, "text": text} for n, text in enumerate(public["context"][i][1])]}
-                            for i in selection["indices"]]
-                        return runtime.generate({"question": public["question"], "evidence": evidence,
-                                                 "draft": proposed}, review=True)
-                    def gate(state, proposed, component):
-                        if component == "evidence":
-                            if arm != "decomposed": raise ValueError("Only decomposed uses an evidence gate")
-                            selected_path, temperature = None, evidence_t
-                        else:
-                            selected_path = trained_path if arm == "trained" else None
-                            temperature = criterion[("trained" if arm == "trained" else "released") + "_calibration"]["temperature"]
-                        return runtime.observe(public, proposed, criterion=component, head_path=selected_path, temperature=temperature)
-                    episode = run_episode(bare_case(case), writer, reviewer, gate, arm=arm, max_drafts=10,
-                        threshold=.8, passage_indices=ranked["indices"], timeout_seconds=3600)
-                    episode.update(shared_initial_draft_sha256=fingerprint(draft), shared_initial_physical_calls=0)
-                    durable_write(args.output / "episodes" / (qid + "-" + arm + ".json"), episode)
-                    rows.append(episode)
-    finally:
-        _runtime_terminal(args, runtime, control)
+    """Run one owned child per question; never retain model imports in parent."""
+    import subprocess
+    from .main_question import await_process_binding, exited_process_binding, question_directory, stamp
+    from .hobson import file_hash
+    from haltiq_supervisor.engine import check_handoff
+    config, rows, initial, receipts, terminals = context["config"], [], {}, [], []
+    if config.get("compare_process_layout") != "per_question":
+        raise ValueError("Main compare requires the predeclared per-question process layout")
+    plan, state = read(args.previous / "plan.json"), read(args.previous / "supervisor.json")
+    for index, case in enumerate(context["cohorts"]["main_fresh"]):
+        control._check_stop()
+        qid = case["public"]["id"]
+        directory = question_directory(args.output, index)
+        directory.mkdir(parents=True, exist_ok=False)
+        command = [plan["python"], "-B", "-m", "haltiq_tau_hotpot.main_question",
+            "--config", str(args.config), "--output", str(args.output), "--previous", str(args.previous),
+            "--control", str(args.control), "--deadline", args.deadline, "--question-index", str(index),
+            "--allow-model-calls"]
+        started, at = time.monotonic(), stamp()
+        durable_write(directory / "dispatch-pending.json", {"run_id": state["run_id"],
+            "plan_sha256": state["plan_sha256"], "question_index": index, "question_id": qid,
+            "argv": command, "at": at, "compare_parent_pid": os.getpid(), "automatic_retry": False})
+        remaining = (control.deadline - datetime.now(timezone.utc)).total_seconds()
+        if remaining <= 0:
+            raise TimeoutError("Model cutoff reached before question dispatch")
+        with (directory / "stdout.log").open("xb") as stdout, (directory / "stderr.log").open("xb") as stderr:
+            child = subprocess.Popen(command, cwd=args.previous / "source", stdin=subprocess.DEVNULL,
+                stdout=stdout, stderr=stderr, creationflags=0x08000000 if os.name == "nt" else 0)
+            try:
+                import sys
+                identities = await_process_binding(child, directory, read(directory / "dispatch-pending.json"),
+                    executables=list(dict.fromkeys([plan["python"], sys.executable, sys._base_executable])),
+                    timeout_seconds=min(300, remaining))
+                code = child.wait(timeout=max(0, (control.deadline - datetime.now(timezone.utc)).total_seconds()) + 60)
+            except BaseException:
+                # Only this owned handle is touched. The outer pre-GO OS job also
+                # contains its descendants and reconciles them on parent failure.
+                if child.poll() is None:
+                    child.terminate()
+                raise
+        cleared = exited_process_binding(identities)
+        exited = {"launcher_pid": child.pid, "worker_pid": identities["worker"]["pid"], "identity_exit_check": cleared,
+            "identity_sha256": file_hash(directory / "identity-verified.json"), "exit_code": code, "process_exit_observed": True,
+            "started_at": at, "finished_at": stamp(), "wall_seconds": time.monotonic() - started,
+            "question_index": index, "question_id": qid, "run_id": state["run_id"], "plan_sha256": state["plan_sha256"]}
+        durable_write(directory / "process-exit.json", exited)
+        if code:
+            raise RuntimeError("Question worker exited nonzero; preserve evidence and never retry it")
+        receipt = read(directory / "receipt.json")
+        if (receipt.get("pid") != identities["worker"]["pid"] or receipt.get("launcher_pid") != child.pid
+                or receipt.get("parent_pid") != identities["worker"]["parent_pid"]
+                or receipt.get("identity_sha256") != exited["identity_sha256"] or receipt.get("question_id") != qid
+                or receipt.get("question_index") != index or receipt.get("run_id") != state["run_id"]
+                or receipt.get("plan_sha256") != state["plan_sha256"] or receipt.get("terminal") is not True
+                or receipt.get("cleanup_verified") is not True or receipt.get("pending_or_uncertain") is not False):
+            raise ValueError("Question terminal receipt differs from the actual owned child")
+        check_handoff(plan)
+        terminal = read(directory / "runtime-terminal.json")
+        if (terminal.get("cleanup", {}).get("verified") is not True
+                or terminal.get("calls", {}).get("pending_or_uncertain") is not False):
+            raise ValueError("Question cleanup or physical journal is unresolved")
+        for key in ("admission", "runtime_terminal"):
+            target = directory / (key.replace("_", "-") + ".json")
+            if file_hash(target) != receipt[key + "_sha256"]:
+                raise ValueError("Question admission/runtime evidence changed")
+        for relative, expected in receipt["outputs_sha256"].items():
+            if file_hash(args.output / relative) != expected:
+                raise ValueError("Question source outcome changed")
+        first = read(args.output / "initial" / (qid + ".json"))
+        initial[qid] = first["submitted"]
+        rows.extend(read(args.output / "episodes" / (qid + "-" + arm + ".json")) for arm in ARMS)
+        control.active_seconds += receipt["active_seconds"]
+        control.idle_seconds += receipt["intentional_idle_seconds"]
+        receipts.append({"question_index": index, "question_id": qid, "path": str(directory / "receipt.json"),
+            "sha256": file_hash(directory / "receipt.json"), "process_exit_sha256": file_hash(directory / "process-exit.json"),
+            "dispatch_sha256": file_hash(directory / "dispatch-pending.json"),
+            "identity_sha256": file_hash(directory / "identity-verified.json"), "owned_runtime_clear": True})
+        terminals.append(terminal)
+    # Each child journal summary is cumulative. Read the serial journal ONCE;
+    # only independent child wall/idle/startup/switch durations may be summed.
+    calls = CallJournal(args.output / "physical").verify()
+    cleanup = {"verified": all(t["cleanup"]["verified"] for t in terminals),
+        "private_port_closed": all(t["cleanup"]["private_port_closed"] for t in terminals),
+        "owned_server_exited": all(t["cleanup"]["owned_server_exited"] for t in terminals),
+        "gpu_lease_released": all(t["cleanup"]["gpu_lease_released"] for t in terminals),
+        "native_unloads": [u for t in terminals for u in t["cleanup"]["native_unloads"]],
+        "errors": [error for t in terminals for error in t["cleanup"]["errors"]]}
+    durable_write(args.output / "runtime-terminal.json", {"cleanup": cleanup, "calls": calls,
+        "timings": {key: sum(t["timings"][key] for t in terminals) for key in ("startup_seconds", "switch_seconds")},
+        "active_seconds": control.active_seconds, "intentional_idle_seconds": control.idle_seconds,
+        "comparison_process_layout": "per_question", "question_receipts": receipts,
+        "timing_scope": "Nonoverlapping child durations are summed; physical journal totals are cumulative and counted once"})
     durable_write(args.output / "episodes.json", rows)
     durable_write(args.output / "initial-drafts.json", initial)
     result = analyse(rows, context, initial)
-    result.update(wrapper_plan_sha256=os.environ["HALTIQ_PLAN_SHA256"],
-        fresh_n_freeze_sha256=config["fresh_n_freeze_sha256"])
+    result.update(wrapper_plan_sha256=os.environ["HALTIQ_PLAN_SHA256"], fresh_n_freeze_sha256=config["fresh_n_freeze_sha256"])
     durable_write(args.output / "comparison.json", result)
     completed = sum(row["status"] == "completed" for row in rows)
     return completion(args, planned=context["fresh_n"] * len(ARMS), completed=completed,
-        failed=len(rows) - completed, cleanup=runtime.cleanup["verified"],
-        pending=runtime.journal.summary()["pending_or_uncertain"])
+        failed=len(rows) - completed, cleanup=cleanup["verified"], pending=calls["pending_or_uncertain"])
 
 
 def audit(args, context, control):

@@ -131,10 +131,11 @@ class MainAuditTests(unittest.TestCase):
             return self.score(self.states[feature['provenance']['state_sha256']], trained=head == 'trained', temperature=temperature)
         def load(_, path): return 'trained' if 'answer-head' in str(path) else 'released'
         bare = {'public': public, 'evaluator': self.case['evaluator']}
+        fallback = {'cap_fallback': self.config['cap_fallback']} if 'cap_fallback' in self.config else {}
         with patch.dict(sys.modules, self.modules()), patch('haltiq_tau_hotpot.hobson.load_head', side_effect=load), \
              patch('haltiq_tau_hotpot.hobson.score_head', side_effect=cpu):
             indices = runtime.rank(public)['indices']
-            first = self.run_episode(bare, runtime.generate, arm='fixed1', max_drafts=1, passage_indices=indices)
+            first = self.run_episode(bare, runtime.generate, arm='fixed1', max_drafts=1, passage_indices=indices, **fallback)
             initial = {'synthetic': first['submitted']}
             dump(self.root / 'compare/initial/synthetic.json', first)
             episodes = []
@@ -153,7 +154,7 @@ class MainAuditTests(unittest.TestCase):
                     return runtime.observe(public, draft, criterion=criterion,
                         head_path=self.root / 'train/learned/answer-head.safetensors' if arm == 'trained' else None,
                         temperature=2. if arm == 'trained' else 1.)
-                episode = self.run_episode(bare, writer, reviewer, gate, arm=arm, max_drafts=10, passage_indices=indices)
+                episode = self.run_episode(bare, writer, reviewer, gate, arm=arm, max_drafts=10, passage_indices=indices, **fallback)
                 episode.update(shared_initial_draft_sha256=fingerprint(first['submitted']), shared_initial_physical_calls=0)
                 dump(self.root / 'compare/episodes' / ('synthetic-' + arm + '.json'), episode)
                 episodes.append(episode)
@@ -185,6 +186,23 @@ class MainAuditTests(unittest.TestCase):
         self.assertEqual(result['new_encoder_forwards'], 0)
         self.assertEqual(episodes[-1]['submitted']['answer'], 'wrong')
         self.assertGreater(len(runtime.native_cache), 1)
+
+    def test_main_reviewer_profile_is_reconstructed_exactly_and_legacy_relabel_fails(self):
+        from haltiq_tau_hotpot.generation import MAIN_PROFILE
+        self.config.update(purpose='main_study', generation_profile=deepcopy(MAIN_PROFILE), cap_fallback='last_valid')
+        runtime, context, episodes, initial = self.build()
+        self.assertEqual(self.verify(context, episodes, initial)['planned_episodes'], 8)
+        reviewer = next(r for r in runtime.journal.records if r['event'] == 'pending' and r['role'] == 'reviewer')
+        from haltiq_tau_hotpot.main_audit import payload
+        state = {'question': self.case['public']['question'], 'evidence': [{'title': 'Public', 'sentences': [
+            {'index': 0, 'text': 'The correct name is right.'}]}], 'draft': {'answer': 'wrong', 'supporting_facts': [['Public', 0]]}}
+        request = payload(state, '', review=True, config=self.config)
+        self.assertEqual(request['options']['num_predict'], 768)
+        self.assertIn('120 words', request['messages'][0]['content'])
+        self.assertEqual(reviewer['request_sha256'], fingerprint(request))
+        self.config.pop('purpose'); self.config.pop('generation_profile')
+        with self.assertRaises(AuditIntegrityError):
+            self.verify(context, episodes, initial)
 
     def test_pre_dispatch_window_failure_and_post_response_parse_or_citation_failures_keep_all_arms(self):
         for failure in ('overflow', 'parse', 'citation', 'gate_window', 'revision_parse', 'review_empty'):

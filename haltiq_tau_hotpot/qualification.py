@@ -248,13 +248,20 @@ def native_episode(row, case, indices, helpers, *, arm, max_drafts):
         if event["status"] == "failed":
             raise ValueError("Recorded known gate failure")
         return event["score"]
+    fallback = {"cap_fallback": row["cap_fallback"]} if "cap_fallback" in row else {}
+    if not fallback:
+        require(not any(key in row for key in ("submission_reason", "budget_fallback_used", "gate_approved")),
+                "Legacy episode cannot acquire undeclared fallback metadata")
     result = agent.run_episode({"public": case["public"], "evaluator": case["evaluator"]}, writer,
         reviewer, gate, arm=arm, max_drafts=max_drafts, threshold=.8, passage_indices=indices,
-        caps={k: v for k, v in row["caps"].items() if k != "answer_drafts"}, seed=42, timeout_seconds=1800)
+        caps={k: v for k, v in row["caps"].items() if k != "answer_drafts"}, seed=42, timeout_seconds=1800, **fallback)
     require(next(queue, None) is None, "Extra unconsumed callback event")
     for key in ("scope", "upstream_revision", "scorer", "status", "failure_category", "submitted",
                 "metrics", "native_reward", "counts", "caps", "trace", "physical_cost_scope"):
         require(result[key] == row[key], "Native episode replay differs: " + key)
+    if "cap_fallback" in row:
+        for key in ("cap_fallback", "submission_reason", "budget_fallback_used", "gate_approved"):
+            require(result[key] == row[key], "Native fallback replay differs: " + key)
     actual, replay = row["native_simulation"], result["native_simulation"]
     require(actual is not None and actual["task_id"] == case["public"]["id"]
             and actual["mode"] == "half_duplex" and actual["seed"] == 42,

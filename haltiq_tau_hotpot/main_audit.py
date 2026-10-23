@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from collections import Counter
 from copy import deepcopy
+from datetime import datetime
 import json
 import math
 from pathlib import Path
@@ -25,38 +26,17 @@ def read(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def payload(state, feedback, *, review=False):
-    # These are the frozen runtime's exact serialization/options, not a new prompt.
-    from .runtime import ANSWER_SCHEMA, REVIEWER_SYSTEM, WRITER_SYSTEM
-    value = {"model": "qwen3:8b", "messages": [
-        {"role": "system", "content": REVIEWER_SYSTEM if review else WRITER_SYSTEM},
-        {"role": "user", "content": json.dumps({"state": state, "feedback": feedback}, ensure_ascii=False)}],
-        "stream": False, "think": False, "keep_alive": "5m", "options": {
-            "temperature": 0, "seed": 42, "num_predict": 384, "num_ctx": 16384, "num_thread": 4, "num_gpu": 99}}
-    if not review:
-        value["format"] = ANSWER_SCHEMA
-    return value
+def payload(state, feedback, *, review=False, config=None):
+    # Reconstruct the selected owner's exact request. Original qualification
+    # keeps its legacy profile; future main uses the declared shared profile.
+    from .generation import generation_payload
+    return generation_payload(config or {}, state, feedback, review=review)
 
 
 def parsed_response(raw, *, review):
     """Repeat only the runtime's output validation, including known failures."""
-    if not raw.get("done") or raw.get("done_reason") == "length":
-        raise ValueError("Incomplete output")
-    if raw.get("prompt_eval_count", 0) + raw.get("eval_count", 0) >= 16384:
-        raise ValueError("Context budget")
-    text = raw["message"]["content"]
-    if review:
-        if not isinstance(text, str) or not text.strip():
-            raise ValueError("Empty review")
-        return text
-    draft = json.loads(text)
-    if (type(draft) is not dict or set(draft) != {"answer", "supporting_facts"}
-            or type(draft["answer"]) is not str or not draft["answer"].strip()
-            or type(draft["supporting_facts"]) is not list
-            or any(type(f) is not list or len(f) != 2 or type(f[0]) is not str
-                   or type(f[1]) is not int or f[1] < 0 for f in draft["supporting_facts"])):
-        raise ValueError("Invalid writer schema")
-    return draft
+    from .generation import parse_response
+    return parse_response(raw, review=review)
 
 
 class Evidence:
@@ -103,7 +83,7 @@ class Evidence:
         return sorted(range(len(scores)), key=lambda i: (-scores[i], i))[:3]
 
     def generation(self, state, feedback, event, public, *, review):
-        request = payload(state, feedback, review=review)
+        request = payload(state, feedback, review=review, config=self.config)
         role = "reviewer" if review else "writer"
         self.logical[role] += 1
         overflow = sum(len(m["content"].encode("utf-8")) for m in request["messages"]) + 1536 > 16384
@@ -284,6 +264,148 @@ def replay(row, case, evidence, *, initial=False):
     require(next(callbacks, None) is None, "Unconsumed callback trace")
 
 
+def verify_question_owners(run, state, cases, records):
+    """Bind each serial child, fresh admission and disjoint journal slice."""
+    from .protocol import ARMS
+    from .main_question import validate_process_binding
+    import sys
+    terminal = read(run / "compare/runtime-terminal.json")
+    plan = read(run / "plan.json")
+    def summary(prefix):
+        pending = {e["id"] for e in prefix if e["event"] == "pending"}
+        completed = {e["id"] for e in prefix if e["event"] == "completed"}
+        uncertain = {e["id"] for e in prefix if e["event"] == "uncertain"}
+        return {"dispatched": len(pending), "completed": len(completed), "uncertain": len(uncertain),
+            "pending_or_uncertain": bool(pending-completed or uncertain),
+            "exact_response_reuses": sum(e["event"] == "exact_response_reuse" for e in prefix),
+            "by_role": dict(Counter(e["role"] for e in prefix if e["event"] == "completed"))}
+    entries = terminal.get("question_receipts", [])
+    require(terminal.get("comparison_process_layout") == "per_question" and len(entries) == len(cases),
+            "Every question requires its own actual process receipt")
+    previous_end, previous_time, child_active, child_idle = 0, None, 0., 0.
+    startup, switches, child_pids = 0., 0., []
+    for index, (entry, case) in enumerate(zip(entries, cases)):
+        qid = case["public"]["id"]
+        directory = run / "compare/questions" / f"{index:03d}"
+        path = directory / "receipt.json"
+        require(entry.get("question_index") == index and entry.get("question_id") == qid
+                and Path(entry["path"]).resolve() == path and sha(path) == entry["sha256"]
+                and entry.get("owned_runtime_clear") is True, "Question receipt order/path/hash changed")
+        receipt, dispatched, exited, started, identity = [read(directory / name) for name in
+            ("receipt.json", "dispatch-pending.json", "process-exit.json", "started.json", "identity-verified.json")]
+        require(sha(directory / "dispatch-pending.json") == entry["dispatch_sha256"]
+                and sha(directory / "process-exit.json") == entry["process_exit_sha256"], "Question dispatch/exit bytes changed")
+        require(sha(directory / "identity-verified.json") == entry["identity_sha256"]
+                == receipt["identity_sha256"] == exited["identity_sha256"]
+                and identity["started_sha256"] == sha(directory / "started.json")
+                and identity["dispatch_sha256"] == sha(directory / "dispatch-pending.json")
+                and identity.get("schema") == "haltiq-main-question-process-binding-v1"
+                and identity.get("verified_before_admission") is True, "Question live identity binding changed")
+        executables = list(dict.fromkeys([plan["python"], sys.executable, sys._base_executable]))
+        require(identity.get("executables") == executables
+                and identity.get("executable_sha256") == {str(Path(p).resolve()): sha(p) for p in executables},
+                "Question interpreter identity differs from its frozen runtime")
+        validate_process_binding(identity["launcher"], identity["worker"], started, dispatched, identity["observed_at"],
+            launcher_pid=exited["launcher_pid"], parent_pid=identity["compare_parent_pid"], executables=executables,
+            compare_parent=identity["compare_parent"])
+        for value in (receipt, dispatched, exited, started):
+            require(value.get("run_id") == state["run_id"] and value.get("plan_sha256") == state["plan_sha256"]
+                    and value.get("question_index") == index, "Question belongs to a different current owner")
+        expected_argv = [plan["python"], "-B", "-m", "haltiq_tau_hotpot.main_question",
+            "--config", plan["main_protocol"]["path"], "--output", str(run / "compare"), "--previous", str(run),
+            "--control", str(run / "workers/compare"), "--deadline", plan["deadline"], "--question-index", str(index),
+            "--allow-model-calls"]
+        require(dispatched.get("argv") == expected_argv and dispatched.get("automatic_retry") is False,
+                "Question process was not the exact frozen finite command")
+        require(receipt.get("schema") == "haltiq-main-question-v1" and receipt.get("question_id") == qid
+                and dispatched.get("question_id") == qid and exited.get("question_id") == qid
+                and receipt.get("terminal") is True and receipt.get("cleanup_verified") is True
+                and receipt.get("pending_or_uncertain") is False and exited.get("exit_code") == 0
+                and exited.get("process_exit_observed") is True
+                and type(receipt.get("pid")) is int and receipt["pid"] > 0
+                and receipt["pid"] == exited.get("worker_pid") == started.get("pid") == identity["worker"]["pid"]
+                and receipt.get("parent_pid") == started.get("parent_pid") == identity["worker"]["parent_pid"]
+                and receipt.get("launcher_pid") == exited["launcher_pid"] == identity["launcher"]["pid"]
+                and started.get("at") == receipt.get("started_at")
+                and receipt.get("source_sha256") == fingerprint(state["source_sha256"])
+                and receipt.get("config_sha256") == sha(plan["main_protocol"]["path"]), "Question terminal identity/source changed")
+        for role in ("launcher", "worker"):
+            cleared = exited["identity_exit_check"][role]
+            current, original = cleared["current_identity"], identity[role]
+            require(cleared.get("original_identity_absent") is True and cleared["pid"] == original["pid"]
+                    and cleared["original_created_at"] == original["created_at"]
+                    and (current is None or current["created_at"] != original["created_at"]),
+                    "Original owned launcher/worker identity was not cleared")
+        begin, end = [datetime.fromisoformat(receipt[key]) for key in ("started_at", "finished_at")]
+        outer_begin, outer_end = [datetime.fromisoformat(exited[key]) for key in ("started_at", "finished_at")]
+        require(all(t.tzinfo is not None for t in (begin,end,outer_begin,outer_end)) and outer_begin <= begin <= end <= outer_end
+                and (previous_time is None or previous_time <= outer_begin), "Question processes overlap or have invalid clocks")
+        previous_time = outer_end
+        child_pids.append(receipt["pid"])
+        for key in ("wall_seconds", "active_seconds", "intentional_idle_seconds"):
+            require(type(receipt.get(key)) in (int,float) and math.isfinite(receipt[key]) and receipt[key] >= 0,
+                    "Question timing is not finite")
+        require(receipt["active_seconds"] + receipt["intentional_idle_seconds"] <= receipt["wall_seconds"] + 2,
+                "Question active/idle scopes exceed containing wall")
+        child_active += receipt["active_seconds"]
+        child_idle += receipt["intentional_idle_seconds"]
+        require(sha(directory / "admission.json") == receipt["admission_sha256"]
+                and sha(directory / "runtime-terminal.json") == receipt["runtime_terminal_sha256"], "Question resource/runtime evidence changed")
+        admitted, runtime = read(directory / "admission.json"), read(directory / "runtime-terminal.json")
+        require(admitted.get("schema") == "haltiq-main-question-admission-v1" and admitted.get("status") == "PASS_ADMISSION"
+                and admitted.get("gpu_lease_released") is True and admitted.get("private_port_closed") is True
+                and admitted.get("ram_gib") == 11 and admitted.get("vram_gib") == 9
+                and type(admitted.get("model_calls")) is int and admitted.get("model_calls") == 0
+                and admitted.get("automatic_retry") is False,
+                "Fresh child admission was not actually established")
+        samples = admitted.get("samples", [])
+        times = [datetime.fromisoformat(sample["at"]) for sample in samples]
+        require(len(samples) == 4 and all(t.tzinfo is not None for t in times)
+                and begin <= times[0] <= times[-1] <= end and (times[-1]-times[0]).total_seconds() >= 30
+                and all((b-a).total_seconds() >= 10 for a,b in zip(times,times[1:])), "Fresh question admission window changed")
+        require(begin <= datetime.fromisoformat(identity["observed_at"]) <= times[0],
+                "Question admission preceded live parent/worker identity approval")
+        for sample in samples:
+            values = [sample.get(k) for k in ("available_ram_gib", "free_vram_gib", "gpu_temperature_c")]
+            require(all(type(v) in (int,float) and math.isfinite(v) for v in values)
+                    and values[0] >= 11 and values[1] >= 9 and 0 <= values[2] < 80,
+                    "Question startup reserves were lowered or unavailable")
+        cleanup = runtime["cleanup"]
+        require(all(cleanup.get(k) is True for k in ("verified", "private_port_closed", "owned_server_exited", "gpu_lease_released"))
+                and not cleanup["errors"] and all(u["allocated_bytes"] == u["reserved_bytes"] == 0 for u in cleanup["native_unloads"]),
+                "Question owned-runtime cleanup did not succeed")
+        start, stop = receipt["physical_record_start"], receipt["physical_record_end"]
+        require(type(start) is int and type(stop) is int and start == previous_end <= stop <= len(records)
+                and receipt["physical_record_prefix_sha256"] == fingerprint(records[:start])
+                and receipt["physical_record_slice_sha256"] == fingerprint(records[start:stop]), "Question physical slice overlaps or changed")
+        roles = [r["role"] for r in records[start:stop] if r["event"] == "pending"]
+        require(roles.count("writer_load") <= 1 and roles.count("native_startup") <= 1
+                and ("native_startup" not in roles or "writer_load" not in roles[roles.index("native_startup")+1:]),
+                "Question exceeded its physical placement envelope")
+        require(runtime["active_seconds"] == receipt["active_seconds"]
+                and runtime["intentional_idle_seconds"] == receipt["intentional_idle_seconds"]
+                and runtime["calls"] == summary(records[:stop]) and not runtime["calls"]["pending_or_uncertain"],
+                "Question cumulative journal/control totals changed")
+        call_times = [datetime.fromisoformat(e["at"]) for e in records[start:stop]]
+        require(all(t.tzinfo is not None and times[-1] <= t <= end for t in call_times)
+                and call_times == sorted(call_times), "Question physical operation precedes admission or escapes its clock")
+        require(all(type(v) in (int,float) and math.isfinite(v) and v >= 0 for v in runtime["timings"].values()),
+                "Invalid question startup/switch timing")
+        startup += runtime["timings"]["startup_seconds"]
+        switches += runtime["timings"]["switch_seconds"]
+        expected_outputs = {"initial/" + qid + ".json"} | {"episodes/" + qid + "-" + arm + ".json" for arm in ARMS}
+        require(set(receipt["outputs_sha256"]) == expected_outputs, "Question source outcome set is incomplete")
+        for relative, expected_hash in receipt["outputs_sha256"].items():
+            require(sha(within(run / "compare" / relative, run / "compare")) == expected_hash, "Question source outcome bytes changed")
+        previous_end = stop
+    require(previous_end == len(records) and terminal["calls"] == summary(records) and terminal["active_seconds"] == child_active
+            and terminal["intentional_idle_seconds"] == child_idle
+            and terminal["timings"] == {"startup_seconds": startup, "switch_seconds": switches},
+            "Question aggregate double-counts cumulative work or omits physical records")
+    return {"verified": True, "questions": len(cases), "processes": len(child_pids),
+            "physical_record_slices": len(cases), "timing_scope": "Disjoint child control totals; cumulative physical journal counted once"}
+
+
 def verify_compare(args, context, episodes, initial):
     """Validate every planned fresh episode against its real physical evidence."""
     from haltiq_supervisor.engine import verify_completion
@@ -305,10 +427,19 @@ def verify_compare(args, context, episodes, initial):
             "Every planned fresh question/arm must have one native outcome")
     require(episodes == read(run / "compare/episodes.json") and initial == read(run / "compare/initial-drafts.json"),
             "Fresh audit arguments differ from saved source outcomes")
+    if config.get("purpose") == "main_study":
+        require(config.get("cap_fallback") == "last_valid"
+                and all(row.get("cap_fallback") == "last_valid" for row in episodes),
+                "Main policy must preserve its predeclared last-valid draft-cap behavior")
     evidence = Evidence(run, config, read(run / "train/learning.json"))
+    question_owners = None
+    if config.get("compare_process_layout") == "per_question":
+        question_owners = verify_question_owners(run, state, cases, evidence.journal.records)
     for case in cases:
         qid = case["public"]["id"]
         first = read(run / "compare/initial" / (qid + ".json"))
+        if config.get("purpose") == "main_study":
+            require(first.get("cap_fallback") == "last_valid", "Main initial control belongs to a different cap policy")
         require(first["submitted"] == initial[qid] and first["passage_indices"] == evidence.rank(case["public"]),
                 "Initial native answer/retrieval changed")
         replay(first, case, evidence, initial=True)
@@ -330,4 +461,5 @@ def verify_compare(args, context, episodes, initial):
         "gate_label_bindings_sha256": fingerprint(evidence.labels), "compare_journal_sha256": sha(evidence.journal.path),
         "episodes_sha256": sha(run / "compare/episodes.json"), "initial_sha256": sha(run / "compare/initial-drafts.json"),
         "new_encoder_forwards": 0, "new_head_scores": 0,
+        "question_processes": question_owners,
         "scope": "Saved physical evidence and deterministic native replay; no new inference or quality-gain claim"}

@@ -12,18 +12,20 @@ from pathlib import Path
 from pc_strands.data import question_key
 from .hobson import file_hash
 from haltiq_hotpot.native import PINS
+from .generation import MAIN_PROFILE
 
 PHASES = ("collect", "features", "train", "compare", "audit")
 ARMS = ["fixed1", "fixed2", "fixed3", "fixed5", "fixed10", "released", "decomposed", "trained"]
 MAIN_SETTINGS = {"hours": 14, "training": {"fit": 400, "tune": 100, "calibration": 100},
     "development": 20, "criteria": ["answer", "evidence"], "arms": ARMS,
-    "max_drafts": 10, "threshold": .8,
+    "max_drafts": 10, "threshold": .8, "cap_fallback": "last_valid",
     "minimum_valid": {"fit": 320, "tune": 80, "calibration": 80},
     "minimum_evidence_calibration": 80, "trained_criteria": ["answer"],
     "trained_gate": "answer_only", "decomposed_gate": "released_answer_and_released_evidence",
     "baseline_before_weight_updates": True, "shared_initial_drafts": True,
     "native_feature_cache": True, "response_cache": True,
-    "model_budget_seconds": 46800, "finalization_reserve_seconds": 3600}
+    "model_budget_seconds": 46800, "finalization_reserve_seconds": 3600,
+    "generation_profile": MAIN_PROFILE}
 
 
 def read(path):
@@ -93,8 +95,11 @@ def load_main(config):
     """Verify the full pre-outcome protocol, disjoint cohorts and fresh selection."""
     if config.get("purpose") != "main_study":
         raise ValueError("The main worker cannot execute a qualification or unspecified configuration")
-    if config.get("native_feature_cache") is not True or config.get("response_cache") is not True:
-        raise ValueError("Main route requires both predeclared exact-input cache policies")
+    if (config.get("native_feature_cache") is not True or config.get("response_cache") is not True
+            or config.get("compare_process_layout") != "per_question"
+            or config.get("generation_profile") != MAIN_PROFILE
+            or config.get("cap_fallback") != "last_valid"):
+        raise ValueError("Main route requires predeclared caches, per-question processes, last-valid draft-cap policy and the exact generation profile")
     research = pinned(config["protocol"], config["protocol_sha256"])
     settings_match(research)
     freeze = pinned(config["data_freeze"], config["data_freeze_sha256"])
@@ -111,7 +116,7 @@ def load_main(config):
         "adapter_sha256": Path(config["checkpoint"]) / "lora/adapter_model.safetensors",
         "base_weights_sha256": Path(config["base"]) / "model.safetensors-00001-of-00001.safetensors"}
     upstream = {name: PINS["upstream/" + name] for name in ("modeling.py", "infer.py", "prompting.py", "schema.py")}
-    if (pilot.get("schema") != "haltiq-tau-hotpot-qualified-pilot-v1"
+    if (pilot.get("schema") not in {"haltiq-tau-hotpot-qualified-pilot-v1", "haltiq-tau-hotpot-qualified-pilot-v2"}
             or pilot.get("status") != "PASS_QUALIFIED_ENGINEERING_PILOT"
             or pilot.get("qualified") is not True or pilot.get("terminal") is not True
             or pilot.get("pending_or_uncertain") is not False or pilot.get("cleanup_verified") is not True

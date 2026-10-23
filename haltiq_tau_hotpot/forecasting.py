@@ -41,43 +41,77 @@ FORECAST_POLICY = {"method": "terminal_pilot_warm_role_maxima_cold_placement_ful
     "fixed_safety_seconds": 600, "minimum_local_overhead_per_operation_seconds": .1,
     "compilation_dispatch_reserve_seconds": 300,
     "known_terminal_failure_cache": True,
+    "comparison_process_layout": "per_question",
+    "question_admission_seconds": 30,
+    "question_validation_floor_seconds": 30,
+    "question_validation_measured_multiplier": 2,
+    "unmeasured_main_reviewer_proxy_multiplier": 2,
+    "main_reviewer_budget_tokens": 768,
     "failure_cache_scope": "Exact payload/model only; revalidate committed raw terminal responses, including known failures; never reuse or retry uncertain calls",
     "scope": "Upper scheduling estimate with explicit unmeasured evidence proxy; no quality-based selection"}
 
 def pilot_measurements(path):
     """Read only verified scheduling metadata; never inspect labels/quality to select N."""
     proof = read(path)
-    if (proof.get("schema") != "haltiq-tau-hotpot-qualified-pilot-v1"
+    recovered = proof.get("schema") == "haltiq-tau-hotpot-qualified-pilot-v2"
+    if (proof.get("schema") not in {"haltiq-tau-hotpot-qualified-pilot-v1", "haltiq-tau-hotpot-qualified-pilot-v2"}
             or proof.get("status") != "PASS_QUALIFIED_ENGINEERING_PILOT"
             or any(proof.get(key) is not True for key in ("qualified", "terminal", "cleanup_verified", "actual_os_handoff_verified"))
             or proof.get("pending_or_uncertain") is not False or proof.get("planned_units") != [64, 64, 1, 16]):
         raise ValueError("A real terminal qualified four-phase pilot is required")
-    run = Path(proof["run"]).resolve()
-    _, state = terminal_owner(run, proof["plan_sha256"])
-    if (proof.get("run_id") != state["run_id"] or proof.get("supervisor_sha256") != file_hash(run / "supervisor.json")
-            or proof.get("source_sha256") != state["source_sha256"]):
-        raise ValueError("Qualified pilot owner/source receipt changed")
-    for input_path, expected in proof["pinned_inputs_sha256"].items():
-        _checked({"path": input_path, "sha256": expected})
-    for relative, expected in proof["output_sha256"].items():
-        target = (run / relative).resolve()
-        if run not in target.parents:
-            raise ValueError("Pilot generated-output path escapes its run")
-        _checked({"path": str(target), "sha256": expected})
-    verification = [_spec(path), _spec(run / "plan.json"), _spec(run / "supervisor.json")]
-    verification += [{"path": str(run / "source" / key), "sha256": value} for key, value in state["source_sha256"].items()]
-    verification += [{"path": str(run / key), "sha256": value} for key, value in proof["output_sha256"].items()]
-    verification += [{"path": key, "sha256": value} for key, value in proof["pinned_inputs_sha256"].items()]
+    if recovered:
+        from .recovery import verify_qualified_pilot
+        proof, _, owners = verify_qualified_pilot(path)
+        order = ("collect", "features", "train", "compare_q1", "compare_q2", "compare_q3", "compare_q4")
+        sources = owners["measurement_sources"]
+        if (set(sources) != set(order) or sources != proof["measurement_sources"]
+                or not owners.get("verification_inputs") or not proof.get("historical_failed_compare")):
+            raise ValueError("Recovery measurements require all genuine owners and separate historical expense")
+        verification = [_spec(path)] + [_checked(spec) for spec in owners["verification_inputs"]]
+        source_identity = fingerprint({"preparation": proof["preparation_owner"]["source_sha256"],
+                                       "recovery": proof["source_sha256"]})
+    else:
+        run = Path(proof["run"]).resolve()
+        _, state = terminal_owner(run, proof["plan_sha256"])
+        if (proof.get("run_id") != state["run_id"] or proof.get("supervisor_sha256") != file_hash(run / "supervisor.json")
+                or proof.get("source_sha256") != state["source_sha256"]):
+            raise ValueError("Qualified pilot owner/source receipt changed")
+        for input_path, expected in proof["pinned_inputs_sha256"].items():
+            _checked({"path": input_path, "sha256": expected})
+        for relative, expected in proof["output_sha256"].items():
+            target = (run / relative).resolve()
+            if run not in target.parents:
+                raise ValueError("Pilot generated-output path escapes its run")
+            _checked({"path": str(target), "sha256": expected})
+        verification = [_spec(path), _spec(run / "plan.json"), _spec(run / "supervisor.json")]
+        verification += [{"path": str(run / "source" / key), "sha256": value} for key, value in state["source_sha256"].items()]
+        verification += [{"path": str(run / key), "sha256": value} for key, value in proof["output_sha256"].items()]
+        verification += [{"path": key, "sha256": value} for key, value in proof["pinned_inputs_sha256"].items()]
+        order = PHASES[:-1]
+        sources = {phase: {"run": str(run), "phase": phase, "physical_dir": str(run / phase / "physical"),
+            "timing_path": str(run / phase / "phase-timing.json"),
+            "runtime_terminal_path": str(run / phase / "runtime-terminal.json") if phase != "train" else None}
+            for phase in order}
+        source_identity = fingerprint(state["source_sha256"])
     durations, warm, cold, native_rates, total_calls = {}, {}, {"writer": [], "native": []}, [], 0
     timing = proof["timing"]["phases"]
     phase_walls, startup, switch_residual, local_residual = {}, [], [], 0.
+    child_validation = []
     journal_specs = []
-    for phase in PHASES[:-1]:
-        physical = journal(run / phase / "physical")
-        declared = {key: value for key, value in physical.items() if key != "responses"}
+    for phase in order:
+        origin = sources[phase]
+        directory, timing_path = Path(origin["physical_dir"]), Path(origin["timing_path"])
+        if recovered:
+            actual = CallJournal(directory)
+            declared = actual.verify()
+            physical = {"calls": declared["completed"], "responses": [{"completed": event,
+                "value": read(directory / event["response"])} for event in actual.records if event["event"] == "completed"]}
+        else:
+            physical = journal(directory)
+            declared = {key: value for key, value in physical.items() if key != "responses"}
         if declared != proof["physical_calls"][phase]:
             raise ValueError("Pilot physical timing/journal binding changed")
-        phase_timing = pinned(run / phase / "phase-timing.json", timing[phase]["receipt_sha256"])
+        phase_timing = pinned(timing_path, timing[phase]["receipt_sha256"])
         if any(phase_timing.get(key) != timing[phase].get(key)
                 for key in ("wall_seconds", "active_seconds", "intentional_idle_seconds")):
             raise ValueError("Pilot phase timing changed")
@@ -89,7 +123,9 @@ def pilot_measurements(path):
         for call in physical["responses"]:
             event, response = call["completed"], call["value"]
             role, seconds = event["role"], event["elapsed_seconds"]
-            verification.append({"path": str(run / phase / "physical" / event["response"]), "sha256": event["response_sha256"]})
+            if not _finite(seconds):
+                raise ValueError("Physical scheduling durations must be finite and nonnegative")
+            verification.append({"path": str(directory / event["response"]), "sha256": event["response_sha256"]})
             durations.setdefault(role, []).append(seconds)
             if role == "writer_load":
                 first_writer = True
@@ -112,7 +148,7 @@ def pilot_measurements(path):
                 else:
                     warm.setdefault(role, []).append(seconds)
         if phase != "train":
-            terminal = read(run / phase / "runtime-terminal.json")
+            terminal = read(origin["runtime_terminal_path"])
             runtime = timing[phase]["runtime_startup_and_switch"]
             if terminal["timings"] != runtime:
                 raise ValueError("Pilot startup/switch timing binding changed")
@@ -125,10 +161,15 @@ def pilot_measurements(path):
             local_residual += max(0, phase_timing["wall_seconds"]
                 - phase_timing["active_seconds"] - phase_timing["intentional_idle_seconds"])
         total_calls += physical["calls"]
-        journal_specs.append(_spec(run / phase / "physical/calls.jsonl"))
-        verification += [_spec(run / phase / "physical/calls.jsonl"), _spec(run / phase / "phase-timing.json")]
+        journal_specs.append(_spec(directory / "calls.jsonl"))
+        verification += [_spec(directory / "calls.jsonl"), _spec(timing_path)]
         if phase != "train":
-            verification.append(_spec(run / phase / "runtime-terminal.json"))
+            verification.append(_spec(origin["runtime_terminal_path"]))
+        if phase.startswith("compare_q"):
+            containing = timing[phase].get("supervisor_stage_wall_seconds")
+            if not _finite(containing) or containing + 2 < phase_timing["wall_seconds"]:
+                raise ValueError("Recovery child validation requires a containing measured owner wall")
+            child_validation.append(max(0., containing - phase_timing["wall_seconds"]))
     required = {"writer", "reviewer", "retrieval", "native_answer", "cpu_head", "writer_load", "native_startup", "writer_unload", "head_training_and_calibration"}
     if required - durations.keys() or not native_rates or not warm.get("native_answer") or not warm.get("writer"):
         raise ValueError("Pilot lacks required real cold/warm role measurements")
@@ -141,14 +182,75 @@ def pilot_measurements(path):
         "native_samples": native_rates, "phase_wall_seconds": phase_walls, "physical_calls": total_calls,
         "runtime_startup_max_seconds": max(startup), "switch_residual_max_seconds": max(switch_residual),
         "local_residual_seconds": local_residual,
-        "pilot_source_sha256": fingerprint(state["source_sha256"]), "journals": journal_specs,
+        "pilot_source_sha256": source_identity, "journals": journal_specs,
+        "measurement_sources": deepcopy(sources), "runtime_instances_measured": len(startup),
+        "per_question_validation_overhead_max_seconds": max(child_validation) if child_validation else None,
+        "historical_failed_compare": deepcopy(proof.get("historical_failed_compare")),
+        "historical_failed_expense_in_forecast_rates": False,
         "qualification": _spec(path), "verification_inputs": verification, "quality_values_used": False}
+
+
+def _reviewer_profile_measurements(run, proof, value, physical, config):
+    """Bind the predeclared technical A/B to committed raw responses only."""
+    from .generation import (MAIN_PROFILE, REVIEW_SEQUENCE, generation_payload,
+                             parse_response, response_metadata, synthetic_reviews)
+    if proof.get("generation_profile") != MAIN_PROFILE or value.get("generation_profile") != MAIN_PROFILE:
+        raise ValueError("Reviewer measurements require the exact declared main generation profile")
+    states, rows = synthetic_reviews(), value.get("reviewer_ab", [])
+    if [(r["case_id"], r["profile"]) for r in rows] != list(REVIEW_SEQUENCE):
+        raise ValueError("Reviewer measurements must preserve the full predeclared A/B order")
+    pending = {r["id"]: r for r in physical.records if r["event"] == "pending"}
+    events = [r for r in physical.records if r["event"] == "completed"]
+    reviews = [r for r in events if r["role"] == "reviewer"]
+    measured, main = [], []
+    for index, (row, event) in enumerate(zip(rows, reviews)):
+        state, profile = states[row["case_id"]], row["profile"]
+        request = generation_payload(config, state, review=True, profile=profile)
+        raw = read(physical.directory / event["response"])
+        failure, feedback = None, None
+        try:
+            feedback = parse_response(raw, review=True)
+        except ValueError as error:
+            failure = str(error)
+        metadata = response_metadata(raw)
+        status = "completed" if failure is None else "known_terminal_failure"
+        if (row != read(run / "probe/reviewer-ab" / f"{index}.json") or row["state"] != state
+                or row["physical_call_id"] != event["id"] or row["metadata"] != metadata
+                or row["feedback"] != feedback or row["failure"] != failure or row["status"] != status
+                or row["request_sha256"] != fingerprint(request)
+                or pending[event["id"]]["request_sha256"] != fingerprint(request)):
+            raise ValueError("Reviewer A/B metadata differs from its actual raw response/request")
+        if profile == "main":
+            if failure is not None or raw.get("done_reason") != "stop" or not 0 < metadata["words"] <= 120:
+                raise ValueError("Both predeclared main reviewer states must complete within120words")
+            main.append(event["elapsed_seconds"])
+        measured.append({"id": event["id"], "case_id": row["case_id"], "profile": profile,
+            "state_sha256": fingerprint(state), "request_sha256": fingerprint(request),
+            "seconds": event["elapsed_seconds"], "metadata": metadata, "status": status})
+    if len(measured) != 4 or len(main) != 2 or proof.get("reviewer_ab") != measured:
+        raise ValueError("Qualified reviewer timings do not bind all four technical cells")
+    writer = next(r for r in events if r["role"] == "writer")
+    if ([r["role"] for r in events[:8]] != ["writer_load", "writer", "reviewer", "reviewer", "reviewer", "reviewer", "writer_unload", "native_startup"]
+            or any(r["role"] in {"writer_load", "writer", "reviewer"} for r in events[8:])):
+        raise ValueError("Technical generation must precede the single native placement")
+    state = {"question": "What is the synthetic key?", "evidence": [{"title": "Synthetic runtime note",
+        "sentences": [{"index": 0, "text": "The synthetic key is control."}]}], "previous_draft": None}
+    if (pending[writer["id"]]["request_sha256"] != fingerprint(generation_payload(config, state))
+            or value.get("generation_results") != [parse_response(read(physical.directory / writer["response"]))]):
+        raise ValueError("Technical writer timing lacks the original complete request/response")
+    reuses = [r for r in physical.records if r["event"] == "exact_response_reuse"]
+    if Counter((r["role"], r["id"]) for r in reuses) != Counter({
+            ("writer", writer["id"]): 1, ("reviewer", reviews[1]["id"]): 1}):
+        raise ValueError("Technical reuse must bind writer and the first main-profile review")
+    return {"reviewer_main_max_seconds": max(main), "reviewer_ab": measured,
+            "reviewer_profile_basis": "Actual predeclared main-profile maximum across both synthetic states"}
 
 
 def runtime_probe_measurements(path, pilot_path):
     """Accept only an independently qualified actual six-point/cache probe."""
     proof, pilot = read(path), read(pilot_path)
-    if (proof.get("schema") != "haltiq-qualified-runtime-probe-v1"
+    v2 = proof.get("schema") == "haltiq-qualified-runtime-probe-v2"
+    if (proof.get("schema") not in {"haltiq-qualified-runtime-probe-v1", "haltiq-qualified-runtime-probe-v2"}
             or proof.get("status") != "PASS_QUALIFIED_RUNTIME_PROBE"
             or any(proof.get(key) is not True for key in ("qualified", "terminal", "cleanup_verified"))
             or proof.get("pending_or_uncertain") is not False
@@ -174,8 +276,9 @@ def runtime_probe_measurements(path, pilot_path):
             or set(stage.get("output_sha256", {})) != expected):
         raise ValueError("Runtime probe requires exact completed outputs and owned-runtime cleanup")
     from haltiq_supervisor.engine import verify_completion
-    if plan["stages"][0].get("planned_units") != 22:
-        raise ValueError("Runtime probe scope must remain exactly22planned units")
+    units = 25 if v2 else 22
+    if plan["stages"][0].get("planned_units") != units:
+        raise ValueError("Runtime probe scope differs from its versioned planned units")
     verify_completion(plan["stages"][0], state, read(run / "probe/completion.json"))
     verification = [_spec(path), _spec(run / "plan.json"), _spec(run / "supervisor.json")]
     if not plan.get("inputs") or set(plan.get("readiness", {})) != READINESS:
@@ -202,7 +305,7 @@ def runtime_probe_measurements(path, pilot_path):
                 raise ValueError("Probe evidence path escapes its frozen run")
             verification.append(_checked({"path": str(target), "sha256": expected_hash}))
     value, directory = read(run / "probe/probe.json"), run / "probe/physical"
-    if (value.get("schema") != "haltiq-runtime-probe-v1" or value.get("status") != "PASS_RUNTIME_PROBE"
+    if (value.get("schema") != ("haltiq-runtime-probe-v2" if v2 else "haltiq-runtime-probe-v1") or value.get("status") != "PASS_RUNTIME_PROBE"
             or value.get("engineering_only") is not True or value.get("benchmark_quality_claim") is not False
             or value.get("new_learning") is not False or value.get("long_study_started") is not False
             or value.get("wrapper_plan_sha256") != proof["plan_sha256"]
@@ -216,7 +319,7 @@ def runtime_probe_measurements(path, pilot_path):
     physical = CallJournal(directory)
     stats = physical.verify()
     expected_roles = {"native_startup": 1, "native_answer": 3, "native_evidence": 3,
-        "cached_head_answer": 6, "cached_head_evidence": 6, "writer_load": 1, "writer": 1, "reviewer": 1, "writer_unload": 1}
+        "cached_head_answer": 6, "cached_head_evidence": 6, "writer_load": 1, "writer": 1, "reviewer": 4 if v2 else 1, "writer_unload": 1}
     if stats != value.get("calls") or stats["by_role"] != expected_roles or stats["exact_response_reuses"] != 2 or stats["pending_or_uncertain"]:
         raise ValueError("Runtime probe physical calls/reuses do not reconcile")
     responses, seconds = {}, {}
@@ -263,12 +366,21 @@ def runtime_probe_measurements(path, pilot_path):
     if (terminal.get("cleanup", {}).get("verified") is not True or terminal["calls"] != stats
             or not _finite(terminal["timings"]["startup_seconds"])):
         raise ValueError("Runtime probe cleanup/physical terminal receipt changed")
+    reviewer = {"reviewer_main_max_seconds": None,
+        "reviewer_profile_basis": "Legacy384-token reviewer only; future main requires an explicit2x timing proxy"}
+    if v2:
+        config_spec = _checked(plan["runtime_probe"])
+        if original_hashes.get(str(Path(config_spec["path"]).resolve())) != config_spec["sha256"]:
+            raise ValueError("Reviewer profile configuration must be an original frozen probe input")
+        verification.append(config_spec)
+        config = read(config_spec["path"])
+        reviewer = _reviewer_profile_measurements(run, proof, value, physical, config)
     return {"qualification": _spec(path), "verification_inputs": verification, "native_by_criterion": profile,
         "cpu_head_max_seconds": max(seconds["cached_head_answer"] + seconds["cached_head_evidence"]),
         "role_max_seconds": {k: max(v) for k, v in seconds.items()},
         "cold_placement_max_seconds": {"writer": seconds["writer"][0],
             "native": next(row["seconds"] for rows in profile.values() for row in rows if row["cold_after_placement"])},
-        "startup_seconds": terminal["timings"]["startup_seconds"], "quality_values_used": False}
+        "startup_seconds": terminal["timings"]["startup_seconds"], "quality_values_used": False, **reviewer}
 
 
 def forecast_route(measurements, *, policy=None, available_seconds=46800, runtime_probe=None):
@@ -278,7 +390,7 @@ def forecast_route(measurements, *, policy=None, available_seconds=46800, runtim
         raise ValueError("Forecast policy must match the predeclared canonical protocol")
     if not _finite(available_seconds) or available_seconds > 46800:
         raise ValueError("Remaining model window must be finite and cannot exceed13hours")
-    rates = measurements["steady_role_max_seconds"]
+    rates = deepcopy(measurements["steady_role_max_seconds"])
     if (any(not _finite(value) for value in rates.values())
             or any(type(r["input_tokens"]) is not int or not 0 < r["input_tokens"] <= 4096
                 or not _finite(r["seconds"]) or type(r["cold_after_placement"]) is not bool
@@ -293,15 +405,23 @@ def forecast_route(measurements, *, policy=None, available_seconds=46800, runtim
     sufficient = max(row["input_tokens"] for row in measurements["native_samples"]
                      if not row["cold_after_placement"]) >= 1024
     evidence, evidence_proxy = native * 2, True
+    reviewer_proxy = True
+    reviewer_basis = "Unmeasured768-token main reviewer:2x maximum measured legacy384-token review"
+    rates["reviewer"] *= 2
+    child_validation = measurements.get("per_question_validation_overhead_max_seconds")
+    child_measured = _finite(child_validation) and measurements.get("runtime_instances_measured", 0) >= 6
     if runtime_probe is not None:
         measured_native = runtime_probe["native_by_criterion"]
         native = max(v["seconds"] for v in measured_native["answer"] if not v["cold_after_placement"])
         evidence = max(v["seconds"] for v in measured_native["evidence"])
         sufficient, evidence_proxy = True, False
         rates = {key: max(value, runtime_probe["role_max_seconds"].get(key, 0))
-                 if key in {"writer_load", "native_startup", "writer_unload", "reviewer"} else value
+                 if key in {"writer_load", "native_startup", "writer_unload"} else value
                  for key, value in rates.items()}
         rates["cpu_head"] = max(rates["cpu_head"], runtime_probe["cpu_head_max_seconds"])
+        if _finite(runtime_probe.get("reviewer_main_max_seconds")):
+            rates["reviewer"] = max(measurements["steady_role_max_seconds"]["reviewer"], runtime_probe["reviewer_main_max_seconds"])
+            reviewer_proxy, reviewer_basis = False, runtime_probe["reviewer_profile_basis"]
     overhead = max(.1, measurements["local_residual_seconds"] / max(1, measurements["physical_calls"]))
     def duty(seconds):
         return seconds + max(5, seconds)
@@ -321,8 +441,11 @@ def forecast_route(measurements, *, policy=None, available_seconds=46800, runtim
         # whole pilot training phase by ten; never add its overlapping call wall.
         seconds["training_and_answer_calibration"] = measurements["phase_wall_seconds"]["train"] * 10
         seconds["evidence_calibration_cpu"] = max(5, rates["head_training_and_calibration"])
-        seconds["runtime_initialization"] = 3 * duty(max(measurements["runtime_startup_max_seconds"],
+        seconds["runtime_initialization"] = (2 + n) * duty(max(measurements["runtime_startup_max_seconds"],
             runtime_probe["startup_seconds"] if runtime_probe else 0))
+        seconds["outer_model_stage_admissions"] = 4 * 30
+        seconds["question_resource_admissions"] = n * 30
+        seconds["question_validation_and_bootstrap"] = n * max(30, 2 * child_validation if child_measured else 0)
         seconds["switch_non_call_overhead"] = (2 + 2 * n) * 2 * measurements["switch_residual_max_seconds"]
         seconds["cold_first_forward_after_each_placement"] = sum(
             (1 + n) * max(measurements["cold_placement_max_seconds"][family],
@@ -336,7 +459,7 @@ def forecast_route(measurements, *, policy=None, available_seconds=46800, runtim
         total = subtotal * 1.25 + 600
         candidates.append({"n": n, "counts": counts, "components_seconds": seconds,
             "before_safety_seconds": subtotal, "safety_seconds": subtotal * .25 + 600,
-            "model_route_seconds": total, "fits_model_budget": sufficient and total + 300 <= available_seconds})
+            "model_route_seconds": total, "fits_model_budget": sufficient and child_measured and total + 300 <= available_seconds})
     eligible = [row["n"] for row in candidates if row["fits_model_budget"]]
     return {"schema": "haltiq-main-whole-route-forecast-v1", "answer_blind": True,
         "quality_values_used": False, "fresh_scoring_started": False,
@@ -344,10 +467,16 @@ def forecast_route(measurements, *, policy=None, available_seconds=46800, runtim
         "selected_n": max(eligible) if eligible else None, "policy": deepcopy(policy),
         "measurements": measurements, "candidates": candidates, "model_budget_seconds": 46800,
         "available_model_seconds_at_compile": available_seconds, "native_context_measurement_sufficient": sufficient,
+        "per_question_validation_measured": child_measured,
         "runtime_probe": runtime_probe, "evidence_cost_is_unmeasured_proxy": evidence_proxy,
-        "measurement_blocker": None if sufficient else "Warm native samples below1024tokens need a separately reviewed full-window technical measurement",
+        "reviewer_cost_is_unmeasured_proxy": reviewer_proxy, "reviewer_timing_basis": reviewer_basis,
+        "main_reviewer_seconds_per_call": rates["reviewer"],
+        "measurement_blocker": ("Warm native samples below1024tokens need a separately reviewed full-window technical measurement"
+            if not sufficient else "Four genuine recovery child validation timings are required for the per-question layout"
+            if not child_measured else None),
         "finalization_reserve_seconds": 3600, "native_full_window_proxy_seconds": native,
-        "unmeasured_components": (["evidence criterion uses explicit 2x full-window answer proxy"] if evidence_proxy else []) + [
+        "unmeasured_components": (["evidence criterion uses explicit 2x full-window answer proxy"] if evidence_proxy else [])
+            + ([reviewer_basis] if reviewer_proxy else []) + [
             "future sustained resource pressure cannot be guaranteed by a forecast"],
         "cache_scope": "Exact complete payloads/features only; logical paths share physical work. No independent live-arm latency claim.",
         "overlapping_scopes_added": False}

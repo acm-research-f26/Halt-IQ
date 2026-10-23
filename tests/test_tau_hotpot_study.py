@@ -57,7 +57,8 @@ class MainProtocolTests(unittest.TestCase):
                 "upstream_sha256": {name: protocol.PINS["upstream/" + name]
                     for name in ("modeling.py", "infer.py", "prompting.py", "schema.py")}}}
         self.config = {"purpose": "main_study", "checkpoint": str(checkpoint), "base": str(base),
-                       "native_feature_cache": True, "response_cache": True}
+                       "native_feature_cache": True, "response_cache": True, "compare_process_layout": "per_question",
+                       "generation_profile": deepcopy(protocol.MAIN_PROFILE), "cap_fallback": "last_valid"}
         for key, value in (("protocol", self.research), ("data_freeze", self.freeze),
                 ("combined_pilot_proof", self.pilot)):
             spec = self.save(key, value)
@@ -109,8 +110,8 @@ class MainProtocolTests(unittest.TestCase):
             with self.subTest(change=change), self.assertRaises(ValueError): protocol.load_main(config)
 
     def test_main_requires_declared_caches_and_exact_model_identity_from_real_pilot(self):
-        for key in ("native_feature_cache", "response_cache"):
-            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "cache"):
+        for key in ("native_feature_cache", "response_cache", "compare_process_layout", "generation_profile", "cap_fallback"):
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "caches"):
                 protocol.load_main({**self.config, key: False})
         proof = deepcopy(self.pilot)
         proof["model_binding"]["released_head_sha256"] = "0" * 64
