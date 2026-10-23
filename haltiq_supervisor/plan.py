@@ -13,9 +13,11 @@ import uuid
 from pc_strands.campaign import clock, digest, load, save
 from .handoff import validate_callback
 
-PACKAGES = ("haltiq", "pc_strands", "haltiq_hotpot", "haltiq_tau", "haltiq_supervisor")
+PACKAGES = ("haltiq", "pc_strands", "haltiq_hotpot", "haltiq_tau", "haltiq_supervisor", "haltiq_tau_hotpot")
 READINESS = {"custom_domain", "durable_call_journals", "hobson_training", "gpu_coordinator", "combined_pilot"}
 SAFE_ID = re.compile(r"[a-zA-Z0-9_-]{1,80}\Z")
+QUALIFICATION_PHASES = ("collect", "features", "train", "compare")
+QUALIFICATION_ARMS = ["fixed1", "fixed3", "released", "trained"]
 
 
 def within(path, root):
@@ -49,9 +51,117 @@ def satisfied(spec, directory=None):
     return True
 
 
+def _pinned_json(spec, label):
+    if (not isinstance(spec, dict) or not isinstance(spec.get("path"), str)
+            or not Path(spec["path"]).is_absolute()
+            or not isinstance(spec.get("sha256"), str)
+            or not re.fullmatch(r"[0-9a-f]{64}", spec["sha256"])):
+        raise ValueError(label + " requires an absolute path and SHA256")
+    path = Path(spec["path"])
+    if not path.is_file() or digest(path) != spec["sha256"]:
+        raise ValueError(label + " is missing or changed")
+    return load(path)
+
+
+def qualification(plan):
+    """Permit only the bounded pilot that establishes the missing live proof."""
+    spec = plan.get("qualification_protocol")
+    config = _pinned_json(spec, "Qualification config")
+    if not isinstance(config, dict) or config.get("purpose") != "qualification_pilot":
+        raise ValueError("Qualification config must explicitly declare its purpose")
+    freeze_spec = {"path": config.get("data_freeze"), "sha256": config.get("data_freeze_sha256")}
+    freeze = _pinned_json(freeze_spec, "Qualification data freeze")
+    if not isinstance(freeze, dict) or freeze.get("schema") != "tau2-hotpot-qualification-v1":
+        raise ValueError("Explicit qualification data schema required")
+    pilot = freeze.get("pilot", {})
+    if not isinstance(pilot, dict) or not isinstance(pilot.get("training"), dict):
+        raise ValueError("Qualification training counts must be explicit")
+    training = pilot.get("training", {})
+    if (set(training) != {"fit", "tune", "calibration"}
+            or any(type(n) is not int or n <= 0 for n in training.values())
+            or sum(training.values()) > 60
+            or type(pilot.get("heldout")) is not int or not 1 <= pilot["heldout"] <= 8
+            or type(pilot.get("max_drafts")) is not int or not 1 <= pilot["max_drafts"] <= 3
+            or pilot.get("arms") != QUALIFICATION_ARMS or pilot.get("threshold") != .8
+            or pilot.get("criteria") != ["answer"]
+            or pilot.get("engineering_only") is not True
+            or pilot.get("baseline_before_weight_updates") is not True):
+        raise ValueError("Qualification counts, arms or baseline contract exceed the bounded pilot")
+    selection = freeze.get("selection", {})
+    if (selection.get("answer_blind") is not True
+            or any(selection.get(key) is not False for key in ("quality_filtering", "length_filtering", "replacement_allowed"))):
+        raise ValueError("Qualification selection must remain answer-blind without filtering or replacement")
+    required = [spec, freeze_spec]
+    seen_ids, seen_questions = set(), set()
+    for partition, count in {**training, "heldout": pilot["heldout"]}.items():
+        cohort = freeze.get("files", {}).get("pilot_" + partition)
+        cases = _pinned_json(cohort, "Qualification cohort")
+        if (not isinstance(cases, list) or type(cohort.get("count")) is not int
+                or cohort["count"] != count or len(cases) != count):
+            raise ValueError("Qualification cohort counts differ from the frozen protocol")
+        counts = {kind: 0 for kind in ("bridge", "comparison")}
+        for case in cases:
+            public = case.get("public", {}) if isinstance(case, dict) else {}
+            identifier, question, kind = (public.get(k) for k in ("id", "question", "type"))
+            expected_partition = "engineering_heldout" if partition == "heldout" else partition
+            if (not isinstance(identifier, str) or not identifier or not isinstance(question, str)
+                    or not question.strip() or kind not in counts or case.get("partition") != expected_partition):
+                raise ValueError("Qualification cohort has invalid question identity or partition")
+            from pc_strands.data import question_key
+            key = question_key(question)
+            if identifier in seen_ids or key in seen_questions:
+                raise ValueError("Qualification question-grouped partitions overlap")
+            seen_ids.add(identifier)
+            seen_questions.add(key)
+            counts[kind] += 1
+        if cohort.get("type_counts") != counts or counts["bridge"] != counts["comparison"]:
+            raise ValueError("Qualification question-type counts must match balanced frozen cohorts")
+        required.append(cohort)
+    inputs = {(str(Path(s["path"]).resolve()), s.get("sha256")) for s in plan.get("inputs", [])}
+    if any((str(Path(s["path"]).resolve()), s["sha256"]) not in inputs for s in required):
+        raise ValueError("Qualification config, data freeze and cohorts must also be pinned inputs")
+    stages = plan["stages"]
+    if tuple(s["id"] for s in stages) != QUALIFICATION_PHASES:
+        raise ValueError("Qualification permits exactly collect/features/train/compare in order")
+    prep, heldout = sum(training.values()), pilot["heldout"]
+    units = {"collect": prep + heldout, "features": prep + heldout, "train": 1, "compare": 4 * heldout}
+    for stage in stages:
+        argv = stage.get("argv") or []
+        expected = [plan["python"], "-B", "-m", "haltiq_tau_hotpot.worker", stage["id"]]
+        if (not stage["model_work"] or argv[:5] != expected
+                or stage.get("planned_units") != units[stage["id"]]):
+            raise ValueError("Qualification phase commands/counts must match the frozen pilot")
+        flags = argv[5:]
+        expected_flags = {"--config", "--output", "--previous", "--deadline", "--control", "--allow-model-calls"}
+        if (len(flags) != 11 or {x for x in flags if x.startswith("--")} != expected_flags
+                or flags.count("--allow-model-calls") != 1):
+            raise ValueError("Qualification worker arguments must be explicit and unique")
+        values = {}
+        index = 0
+        while index < len(flags):
+            flag = flags[index]
+            if flag == "--allow-model-calls":
+                index += 1
+                continue
+            if flag not in expected_flags or index + 1 >= len(flags) or flag in values:
+                raise ValueError("Qualification worker arguments must be explicit and unique")
+            values[flag] = flags[index + 1]
+            index += 2
+        if (values.get("--config") != spec["path"] or values.get("--deadline") != "{deadline}"
+                or values.get("--control") != "{control}" or values.get("--previous") != "{run}"
+                or values.get("--output") != "{run}/" + stage["id"]
+                or stage.get("completion_receipt") != "{run}/" + stage["id"] + "/completion.json"):
+            raise ValueError("Qualification worker must use its pinned config and owned phase output")
+    return freeze
+
+
 def validate(plan):
     if plan.get("version") != 1 or plan.get("scope") not in {"custom_tau2_hotpot", "offline_supervision_fixture"}:
         raise ValueError("Explicit supported supervision schema/scope required")
+    purpose = plan.get("purpose", "main_study")
+    if purpose not in {"main_study", "qualification_pilot"} or (
+            purpose == "qualification_pilot" and plan["scope"] != "custom_tau2_hotpot"):
+        raise ValueError("Explicit supported supervision purpose required")
     source = Path(plan["source_root"])
     if not source.is_absolute() or not source.is_dir() or not Path(plan["python"]).is_file():
         raise ValueError("Existing absolute source and Python paths required")
@@ -113,6 +223,8 @@ def validate(plan):
         if (not Path(plan.get("study_lease", "")).is_absolute()
                 or plan["study_lease"] == plan["gpu_lease"]):
             raise ValueError("Use one absolute shared study lease separate from GPU ownership")
+    if purpose == "qualification_pilot":
+        qualification(plan)
     return plan
 
 
@@ -127,7 +239,8 @@ def inspect(plan):
         blockers.append("Question/episode counts require answer-blind throughput selection")
     ready = plan.get("readiness", {})
     if any(s["model_work"] for s in plan["stages"]):
-        blockers.extend("Missing verified readiness: " + key for key in sorted(READINESS - ready.keys()))
+        required = READINESS - {"combined_pilot"} if plan.get("purpose") == "qualification_pilot" else READINESS
+        blockers.extend("Missing verified readiness: " + key for key in sorted(required - ready.keys()))
         if not plan.get("reviewed_source_sha256"):
             blockers.append("Reviewed complete source manifest is not bound")
     for key, specs in ready.items():

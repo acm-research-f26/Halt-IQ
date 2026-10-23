@@ -1,0 +1,18 @@
+HotpotQA evaluation attribution
+
+Copyright 2018 Zhilin Yang, Peng Qi, Saizheng Zhang.
+Licensed under the Apache License, Version 2.0; see LICENSE.txt here.
+
+haltiq_tau_hotpot/scoring.py adapts the official HotpotQA v1 evaluator:
+https://github.com/hotpotqa/hotpot/blob/fa3a36370899e1d85822de61e58c85ea19993154/hotpot_evaluate_v1.py
+Original file SHA256:
+d35fc91a6db21d791dbdda11daf3856e9359f5701d54e3eefba20d88fecc02c0
+
+Changes: standard-library imports, an in-memory single-question interface,
+explicit zero metrics for an absent submission, and typed result dictionaries.
+Answer normalization, answer/supporting-fact metrics and the joint
+precision/recall construction retain the official definitions.
+
+This custom HotpotQA environment uses Tau2 orchestration. Its scores are not
+official released Tau2 benchmark scores, and this adaptation does not imply
+endorsement by the HotpotQA authors.

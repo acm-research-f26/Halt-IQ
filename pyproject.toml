@@ -20,6 +20,7 @@ haltiq-study-control = "pc_strands.control:main"
 haltiq-tau = "haltiq_tau.__main__:main"
 haltiq-hotpot = "haltiq_hotpot.__main__:main"
 haltiq-supervisor = "haltiq_supervisor.__main__:main"
+haltiq-tau-hotpot = "haltiq_tau_hotpot.__main__:main"
 
 [tool.setuptools]
-packages = ["haltiq", "pc_strands", "haltiq_tau", "haltiq_hotpot", "haltiq_supervisor"]
+packages = ["haltiq", "pc_strands", "haltiq_tau", "haltiq_hotpot", "haltiq_supervisor", "haltiq_tau_hotpot"]

@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from haltiq_supervisor.engine import run, verify_completion
+from haltiq_supervisor.engine import run, verify_completion, wait_owned_tree_clear
 from pc_strands.campaign import load, save
 from tests import test_supervisor_engine as fixtures
 
@@ -23,6 +23,25 @@ class CompletionTests(unittest.TestCase):
                         {"failed_units": -1}, {"not_run_units": True}):
             with self.subTest(changes=changes), self.assertRaises(ValueError):
                 verify_completion(stage, state, {**receipt, **changes})
+
+    def test_windows_exit_accounting_may_drain_but_true_descendants_remain_blocked(self):
+        clock = {"now": 0}
+        def sleep(seconds):
+            clock["now"] += seconds
+        with patch("haltiq_supervisor.engine.os.name", "nt"), \
+             patch("haltiq_supervisor.engine.time.monotonic", side_effect=lambda: clock["now"]), \
+             patch("haltiq_supervisor.engine.descendants_remain", side_effect=[True, True, False]):
+            self.assertTrue(wait_owned_tree_clear(None, None, hard_monotonic=100, sleep=sleep))
+        self.assertGreater(clock["now"], 0)
+        self.assertLess(clock["now"], 2)
+        for hard, stop, expected in ((100, None, 2), (.3, None, .3), (100, .15, .15)):
+            clock["now"] = 0
+            with self.subTest(hard=hard, stop=stop), patch("haltiq_supervisor.engine.os.name", "nt"), \
+                 patch("haltiq_supervisor.engine.time.monotonic", side_effect=lambda: clock["now"]), \
+                 patch("haltiq_supervisor.engine.descendants_remain", return_value=True):
+                self.assertFalse(wait_owned_tree_clear(None, None, hard_monotonic=hard,
+                                                      stop_deadline=stop, sleep=sleep))
+            self.assertAlmostEqual(clock["now"], expected)
 
 
 class PhaseCallbackTests(unittest.TestCase):

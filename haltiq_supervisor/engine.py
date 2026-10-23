@@ -59,6 +59,18 @@ def descendants_remain(containment, child):
     return value.active != 0
 
 
+def wait_owned_tree_clear(containment, child, *, hard_monotonic, stop_deadline=None, sleep=time.sleep):
+    """Allow Windows exit accounting to drain, never a lingering owned process."""
+    cutoff = min(time.monotonic() + 2, hard_monotonic,
+                 stop_deadline if stop_deadline is not None else math.inf)
+    while descendants_remain(containment, child):
+        remaining = cutoff - time.monotonic()
+        if os.name != "nt" or remaining <= 0:
+            return False
+        sleep(min(.02, remaining))
+    return True
+
+
 def close_owned(containment, child, *, clean=False):
     if os.name != "nt" and child is not None and not clean:
         try:
@@ -276,7 +288,9 @@ def run(directory, *, resume=False, allow_model_calls=False, allow_codex_handoff
                         row["exit_code"] = child.returncode
                         if child.returncode:
                             raise RuntimeError("Worker exited nonzero; outputs retained and never retried")
-                    if descendants_remain(containment, child):
+                    stop_deadline = stop_at + plan.get("stop_grace_seconds", 60) if stop_at is not None else None
+                    if not wait_owned_tree_clear(containment, child, hard_monotonic=hard_monotonic,
+                                                 stop_deadline=stop_deadline):
                         raise RuntimeError("Worker left owned descendants; cleanup failure blocks handoff")
                     if checked:
                         check_handoff(plan)

@@ -15,6 +15,7 @@ this repository.
 | --- | --- |
 | `haltiq_tau/` | Proposed-action checking and bounded reviewer feedback for τ-bench agents. |
 | `haltiq_hotpot/` | Paired partner-method checks with source-rebuilt evidence and the compatible Hobson checkpoint. |
+| `haltiq_tau_hotpot/` | Native custom Tau² HotpotQA tools, live revision teams, compatible Hobson features and head learning. |
 | `pc_strands/` | Native Strands inference, head training, calibration and saved-draft evaluation. |
 | `haltiq/` | Writer/provider adapters, answer metrics and persistent hosted-call budgeting. |
 | `configs/` | Explicit model, resource and experiment settings. |
@@ -146,9 +147,13 @@ at chosen phase completions, review boundaries or final completion; it never
 uses a polling timer or retries an uncertain
 callback. CLI delivery is not yet verified against a live Codex session.
 
-The custom **HotpotQA environment inside Tau²** is still unimplemented. Its live
-worker, per-call journals, compatible Hobson learner, GPU coordinator and combined
-pilot are required readiness receipts. The supervisor refuses model dispatch
-while those gates are missing. Passing supervision tests does not establish
-training completion or benchmark quality. Existing static and retail results
-retain their original scope.
+The custom **HotpotQA environment inside Tau²** implements actual search, passage
+reading and final-answer submission under the native orchestrator. A separate
+reviewer can revise an answer before the gate permits submission. The compatible
+Hobson learner updates only its existing pointer head; the encoder and adapter
+stay frozen. See [the integration method](experiments/tau2-hotpot/README.md).
+
+A bounded qualification pilot may establish the missing live integration proof.
+The full study still requires that real proof before dispatch. Passing offline
+controls does not establish training completion or benchmark quality. Existing
+static and retail results retain their original scope.
