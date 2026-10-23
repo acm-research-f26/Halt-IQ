@@ -72,6 +72,10 @@ def verify_dispatch(args, plan, state):
 def pilot_binding(config):
     from .qualification import terminal_owner
     proof = pinned(config["combined_pilot_proof"], config["combined_pilot_proof_sha256"])
+    if proof.get("schema") == "haltiq-tau-hotpot-qualified-pilot-v2":
+        from .recovery import verify_qualified_pilot
+        qualified, trained, _ = verify_qualified_pilot(proof, config=config)
+        return qualified, trained
     if (proof.get("schema") != "haltiq-tau-hotpot-qualified-pilot-v1"
             or proof.get("status") != "PASS_QUALIFIED_ENGINEERING_PILOT"
             or proof.get("qualified") is not True or proof.get("pending_or_uncertain") is not False

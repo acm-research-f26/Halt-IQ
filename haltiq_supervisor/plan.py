@@ -159,8 +159,8 @@ def validate(plan):
     if plan.get("version") != 1 or plan.get("scope") not in {"custom_tau2_hotpot", "offline_supervision_fixture"}:
         raise ValueError("Explicit supported supervision schema/scope required")
     purpose = plan.get("purpose", "main_study")
-    if purpose not in {"main_study", "qualification_pilot", "runtime_probe"} or (
-            purpose in {"qualification_pilot", "runtime_probe"} and plan["scope"] != "custom_tau2_hotpot"):
+    if purpose not in {"main_study", "qualification_pilot", "runtime_probe", "qualification_recovery"} or (
+            purpose in {"qualification_pilot", "runtime_probe", "qualification_recovery"} and plan["scope"] != "custom_tau2_hotpot"):
         raise ValueError("Explicit supported supervision purpose required")
     source = Path(plan["source_root"])
     if not source.is_absolute() or not source.is_dir() or not Path(plan["python"]).is_file():
@@ -225,6 +225,9 @@ def validate(plan):
             raise ValueError("Use one absolute shared study lease separate from GPU ownership")
     if purpose == "qualification_pilot":
         qualification(plan)
+    if purpose == "qualification_recovery":
+        from haltiq_tau_hotpot.recovery import validate_plan
+        validate_plan(plan)
     if purpose == "runtime_probe":
         spec = plan.get("runtime_probe")
         config = _pinned_json(spec, "Synthetic runtime probe config")
@@ -260,7 +263,7 @@ def inspect(plan):
         blockers.append("Question/episode counts require answer-blind throughput selection")
     ready = plan.get("readiness", {})
     if any(s["model_work"] for s in plan["stages"]):
-        required = READINESS - {"combined_pilot"} if plan.get("purpose") == "qualification_pilot" else READINESS
+        required = READINESS - {"combined_pilot"} if plan.get("purpose") in {"qualification_pilot", "qualification_recovery"} else READINESS
         blockers.extend("Missing verified readiness: " + key for key in sorted(required - ready.keys()))
         if not plan.get("reviewed_source_sha256"):
             blockers.append("Reviewed complete source manifest is not bound")

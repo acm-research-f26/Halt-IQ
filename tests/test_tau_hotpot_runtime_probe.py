@@ -13,7 +13,7 @@ from unittest.mock import Mock, patch
 from haltiq_supervisor.plan import PACKAGES, inspect, validate
 from haltiq_tau_hotpot.hobson import file_hash
 from haltiq_tau_hotpot.runtime import decision_state
-from haltiq_tau_hotpot.runtime_probe import synthetic_input, verify_dispatch, probe
+from haltiq_tau_hotpot.runtime_probe import synthetic_input, verify_dispatch, probe, pilot_binding
 from tests import test_supervisor_plan as plan_tests
 
 
@@ -81,6 +81,22 @@ class SyntheticInputTests(unittest.TestCase):
                 probe(args, {"combined_pilot_proof_sha256": "b" * 64}, control)
             self.assertEqual(events, ["generation"] * 4 + ["native_placement"] + ["native_or_cpu"] * 18)
             runtime._native_ready.assert_called_once()
+
+    def test_recovered_pilot_uses_verified_two_owner_binding_and_original_trained_head(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            proof = {"schema": "haltiq-tau-hotpot-qualified-pilot-v2", "run": str(root / "comparison-only-owner")}
+            path = root / "qualified.json"
+            path.write_text(json.dumps(proof))
+            original_head = root / "original-preparation-owner/train/learned/answer-head.safetensors"
+            config = {"combined_pilot_proof": str(path), "combined_pilot_proof_sha256": file_hash(path)}
+            with patch("haltiq_tau_hotpot.recovery.verify_qualified_pilot", return_value=(proof, original_head, {})) as verify, \
+                    patch("haltiq_tau_hotpot.qualification.terminal_owner", side_effect=AssertionError("V1 owner route is forbidden")):
+                actual, head = pilot_binding(config)
+            verify.assert_called_once_with(proof, config=config)
+            self.assertEqual(actual, proof)
+            self.assertEqual(head, original_head)
+            self.assertNotIn("comparison-only-owner", str(head))
 
     def test_import_has_no_model_runtime_or_tau_initialization(self):
         result = subprocess.run([sys.executable, "-B", "-c", "import sys;import haltiq_tau_hotpot.runtime_probe;assert not any(x in sys.modules for x in ('torch','transformers','tau2'))"], capture_output=True, text=True)
