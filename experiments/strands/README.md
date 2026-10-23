@@ -31,3 +31,16 @@ earlier zero-forward setup attempts separately. Startup, encoding, scoring, idle
 and wall timings overlap and must not be added. Configurations are in
 `../../configs/strands/`; native reproduction uses the corresponding
 `../../scripts/probe_*` scripts with external local weights and resource checks.
+
+For the action probe, first export an unchanged CPU control copy of the pinned
+released checkpoint in the Strands runtime:
+
+```python
+from pc_strands.train_head import copy_control_checkpoint
+copy_control_checkpoint("path/to/released-checkpoint", "path/to/new-control-copy")
+```
+
+Pass the new copy as `--checkpoint-dir`. This preparation reproduced the frozen
+head-file hash locally without training or inference. The raw downloaded file
+uses different serialization. Action scoring still uses temperature 1; the
+factual checks use the separately recorded Hotpot calibration temperatures.
