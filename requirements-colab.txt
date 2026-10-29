@@ -1,0 +1,13 @@
+strands-agents[openai]==1.62.0
+strands-decider==0.2.0
+transformers==5.17.0
+peft==0.21.0
+torch>=2.7
+accelerate>=1.10,<2
+datasets==5.1.0
+fastapi==0.162.0
+uvicorn==0.54.0
+requests>=2.32,<3
+sentencepiece>=0.2,<0.3
+scipy>=1.15,<2
+scikit-learn>=1.6,<2

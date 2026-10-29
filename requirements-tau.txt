@@ -1,0 +1,3 @@
+# Python 3.12 or 3.13. No additions beyond requirements-colab.txt and the
+# separately installed editable Tau checkout. The notebook clones then installs
+# cc1df47baa1544a34bb8c8e5c4ca72ad223b96a2; runtime verifies the import and revision.

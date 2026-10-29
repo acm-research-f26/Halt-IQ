@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haltiq-pair"
+version = "0.1.0"
+description = "Vedanshi Strands and Shree linear-classifier paired simulations"
+requires-python = ">=3.12,<3.14"
+
+[tool.setuptools.packages.find]
+include = ["haltiq_pair*"]
