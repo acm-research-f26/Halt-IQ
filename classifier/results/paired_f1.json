@@ -1,0 +1,29 @@
+[
+  {
+    "variant": "original",
+    "mean_f1_difference_vs_original": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "n_independent_questions": 80
+  },
+  {
+    "variant": "replace",
+    "mean_f1_difference_vs_original": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "n_independent_questions": 80
+  },
+  {
+    "variant": "add",
+    "mean_f1_difference_vs_original": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "n_independent_questions": 80
+  }
+]

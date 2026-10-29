@@ -1,0 +1,5 @@
+{
+  "scope": "80 local test first drafts only; threshold 0.8 fixed from supplied notebook",
+  "strands_auroc_vs_em": 0.6704014939309056,
+  "note": "Controller predicts p_stop, so no p_correct AUROC is claimed."
+}

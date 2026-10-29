@@ -1,0 +1,1201 @@
+id,policy,seed,rounds,answer,f1,em,qwen_tokens,fixed6_qwen_tokens,writer_tokens,qwen_critic_tokens,qwen_calls,strands_decisions,strands_unique_draft_scores
+hotpot_5a728dc65542992359bc30ef,original,0,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,0,0
+hotpot_5a730a6b5542992359bc3210,original,0,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,0,0
+hotpot_5a7624b85542992db947372c,original,0,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,0,0
+hotpot_5a7636fb55429976ec32bd79,original,0,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,0,0
+hotpot_5a76d15e55429966f1a36bfa,original,0,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,0,0
+hotpot_5a77a7db5542995d8318124d,original,0,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,0,0
+hotpot_5a77cb5e55429967ab1052a7,original,0,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,0,0
+hotpot_5a7c43c65542990527d5547e,original,0,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,0,0
+hotpot_5a7e618155429949594199b0,original,0,1,New York County,0.0,0.0,4247,25517,2124,2123,2,0,0
+hotpot_5a7f010955429934daa2fc8b,original,0,1,yes,1.0,1.0,2189,13159,1095,1094,2,0,0
+hotpot_5a7f341655429930675136a0,original,0,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,0,0
+hotpot_5a8008b95542992097ad2fcf,original,0,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,0,0
+hotpot_5a8019db5542992097ad2fd5,original,0,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,0,0
+hotpot_5a80274e5542992e7d278dfb,original,0,1,France,0.0,0.0,2967,17827,1484,1483,2,0,0
+hotpot_5a802e135542992bc0c4a6c7,original,0,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,0,0
+hotpot_5a80a1b25542992bc0c4a78c,original,0,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,0,0
+hotpot_5a80b9df5542992bc0c4a7ec,original,0,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,0,0
+hotpot_5a81e89d5542995ce29dcc72,original,0,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,0,0
+hotpot_5a8341c255429954d2e2ec6e,original,0,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,0,0
+hotpot_5a8468c95542990548d0b2b1,original,0,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,0,0
+hotpot_5a848eff5542990548d0b2cd,original,0,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,0,0
+hotpot_5a84eecd5542994c784dda8e,original,0,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,0,0
+hotpot_5a851cc85542997b5ce3ffa3,original,0,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,0,0
+hotpot_5a865e785542991e7718161b,original,0,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,0,0
+hotpot_5a86ab7755429960ec39b6bf,original,0,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,0,0
+hotpot_5a875fee5542996e4f3087ab,original,0,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,0,0
+hotpot_5a88981c554299206df2b307,original,0,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,0,0
+hotpot_5a88fa145542997e5c09a6e1,original,0,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,0,0
+hotpot_5a89bf18554299669944a591,original,0,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,0,0
+hotpot_5a89e85c5542992e4fca846f,original,0,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,0,0
+hotpot_5a8ae00e5542992d82986fc7,original,0,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,0,0
+hotpot_5a8b7dab5542997f31a41d4c,original,0,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,0,0
+hotpot_5a8bd9c95542997f31a41de2,original,0,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,0,0
+hotpot_5a8d841955429941ae14dfe6,original,0,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,0,0
+hotpot_5a8db9b3554299068b959dde,original,0,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,0,0
+hotpot_5a8ed7b455429917b4a5bdd1,original,0,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,0,0
+hotpot_5a9070dd5542995b442420b5,original,0,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,0,0
+hotpot_5a908aaa55429933b8a20545,original,0,1,No.,1.0,1.0,2341,14071,1171,1170,2,0,0
+hotpot_5ab42a2b5542996a3a969f5a,original,0,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,0,0
+hotpot_5ab4428c5542990594ba9bda,original,0,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,0,0
+hotpot_5ab4f8c95542990594ba9cbb,original,0,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,0,0
+hotpot_5ab80e1455429916710eafd7,original,0,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,0,0
+hotpot_5ab8848d55429916710eb07b,original,0,1,Australia,0.0,0.0,1979,11899,990,989,2,0,0
+hotpot_5abae14b5542996606241657,original,0,1,1999,1.0,1.0,2829,17014,1415,1414,2,0,0
+hotpot_5abaee4f5542996cc5e49f15,original,0,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,0,0
+hotpot_5abba3255542996cc5e4a031,original,0,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,0,0
+hotpot_5abbd3b4554299642a094b4f,original,0,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,0,0
+hotpot_5abcd44655429959677d6af1,original,0,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,0,0
+hotpot_5abd1daa55429933744ab72e,original,0,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,0,0
+hotpot_5abd332e5542993062266bdd,original,0,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,0,0
+hotpot_5abe535055429976d4830aea,original,0,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,0,0
+hotpot_5abeebe25542993fe9a41d9c,original,0,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,0,0
+hotpot_5abf8ae85542990832d3a14b,original,0,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,0,0
+hotpot_5ac00de75542996f0d89cb13,original,0,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,0,0
+hotpot_5ac2610f55429951e9e68593,original,0,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,0,0
+hotpot_5ac4920d5542996feb3fe8d3,original,0,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,0,0
+hotpot_5ac4f8705542995c82c4ad8d,original,0,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,0,0
+hotpot_5adbf34955429947ff173862,original,0,1,No.,0.0,0.0,2937,17647,1469,1468,2,0,0
+hotpot_5adc6ded55429947ff17395d,original,0,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,0,0
+hotpot_5adc93a4554299438c868e01,original,0,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,0,0
+hotpot_5add10ca5542994ed6169c59,original,0,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,0,0
+hotpot_5addcb215542997dc7907033,original,0,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,0,0
+hotpot_5ade17d255429939a52fe80e,original,0,1,yes,1.0,1.0,3163,19003,1582,1581,2,0,0
+hotpot_5ade653f55429975fa854ebb,original,0,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,0,0
+hotpot_5ae0006755429925eb1afbd3,original,0,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,0,0
+hotpot_5ae0e0125542993d6555ec79,original,0,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,0,0
+hotpot_5ae1443855429920d5234362,original,0,1,World War II,1.0,1.0,5621,33761,2811,2810,2,0,0
+hotpot_5ae1b1aa5542997283cd223f,original,0,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,0,0
+hotpot_5ae20c245542997283cd2367,original,0,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,0,0
+hotpot_5ae322b75542994393b9e622,original,0,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,0,0
+hotpot_5ae376a35542990afbd1e163,original,0,1,No.,0.0,0.0,3645,21895,1823,1822,2,0,0
+hotpot_5ae406f055429970de88d874,original,0,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,0,0
+hotpot_5ae471fa55429970de88d965,original,0,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,0,0
+hotpot_5ae52cb955429908b6326540,original,0,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,0,0
+hotpot_5ae552bb55429908b63265d9,original,0,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,0,0
+hotpot_5ae628f55542995703ce8b32,original,0,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,0,0
+hotpot_5ae74351554299572ea5479f,original,0,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,0,0
+hotpot_5ae779a555429952e35ea931,original,0,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,0,0
+hotpot_5ae80f73554299540e5a5722,original,0,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,0,0
+hotpot_5ae824295542997ec272772f,original,0,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,0,0
+hotpot_5a728dc65542992359bc30ef,original,1,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,0,0
+hotpot_5a730a6b5542992359bc3210,original,1,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,0,0
+hotpot_5a7624b85542992db947372c,original,1,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,0,0
+hotpot_5a7636fb55429976ec32bd79,original,1,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,0,0
+hotpot_5a76d15e55429966f1a36bfa,original,1,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,0,0
+hotpot_5a77a7db5542995d8318124d,original,1,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,0,0
+hotpot_5a77cb5e55429967ab1052a7,original,1,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,0,0
+hotpot_5a7c43c65542990527d5547e,original,1,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,0,0
+hotpot_5a7e618155429949594199b0,original,1,1,New York County,0.0,0.0,4247,25517,2124,2123,2,0,0
+hotpot_5a7f010955429934daa2fc8b,original,1,1,yes,1.0,1.0,2189,13159,1095,1094,2,0,0
+hotpot_5a7f341655429930675136a0,original,1,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,0,0
+hotpot_5a8008b95542992097ad2fcf,original,1,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,0,0
+hotpot_5a8019db5542992097ad2fd5,original,1,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,0,0
+hotpot_5a80274e5542992e7d278dfb,original,1,1,France,0.0,0.0,2967,17827,1484,1483,2,0,0
+hotpot_5a802e135542992bc0c4a6c7,original,1,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,0,0
+hotpot_5a80a1b25542992bc0c4a78c,original,1,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,0,0
+hotpot_5a80b9df5542992bc0c4a7ec,original,1,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,0,0
+hotpot_5a81e89d5542995ce29dcc72,original,1,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,0,0
+hotpot_5a8341c255429954d2e2ec6e,original,1,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,0,0
+hotpot_5a8468c95542990548d0b2b1,original,1,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,0,0
+hotpot_5a848eff5542990548d0b2cd,original,1,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,0,0
+hotpot_5a84eecd5542994c784dda8e,original,1,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,0,0
+hotpot_5a851cc85542997b5ce3ffa3,original,1,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,0,0
+hotpot_5a865e785542991e7718161b,original,1,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,0,0
+hotpot_5a86ab7755429960ec39b6bf,original,1,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,0,0
+hotpot_5a875fee5542996e4f3087ab,original,1,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,0,0
+hotpot_5a88981c554299206df2b307,original,1,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,0,0
+hotpot_5a88fa145542997e5c09a6e1,original,1,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,0,0
+hotpot_5a89bf18554299669944a591,original,1,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,0,0
+hotpot_5a89e85c5542992e4fca846f,original,1,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,0,0
+hotpot_5a8ae00e5542992d82986fc7,original,1,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,0,0
+hotpot_5a8b7dab5542997f31a41d4c,original,1,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,0,0
+hotpot_5a8bd9c95542997f31a41de2,original,1,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,0,0
+hotpot_5a8d841955429941ae14dfe6,original,1,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,0,0
+hotpot_5a8db9b3554299068b959dde,original,1,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,0,0
+hotpot_5a8ed7b455429917b4a5bdd1,original,1,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,0,0
+hotpot_5a9070dd5542995b442420b5,original,1,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,0,0
+hotpot_5a908aaa55429933b8a20545,original,1,1,No.,1.0,1.0,2341,14071,1171,1170,2,0,0
+hotpot_5ab42a2b5542996a3a969f5a,original,1,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,0,0
+hotpot_5ab4428c5542990594ba9bda,original,1,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,0,0
+hotpot_5ab4f8c95542990594ba9cbb,original,1,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,0,0
+hotpot_5ab80e1455429916710eafd7,original,1,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,0,0
+hotpot_5ab8848d55429916710eb07b,original,1,1,Australia,0.0,0.0,1979,11899,990,989,2,0,0
+hotpot_5abae14b5542996606241657,original,1,1,1999,1.0,1.0,2829,17014,1415,1414,2,0,0
+hotpot_5abaee4f5542996cc5e49f15,original,1,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,0,0
+hotpot_5abba3255542996cc5e4a031,original,1,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,0,0
+hotpot_5abbd3b4554299642a094b4f,original,1,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,0,0
+hotpot_5abcd44655429959677d6af1,original,1,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,0,0
+hotpot_5abd1daa55429933744ab72e,original,1,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,0,0
+hotpot_5abd332e5542993062266bdd,original,1,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,0,0
+hotpot_5abe535055429976d4830aea,original,1,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,0,0
+hotpot_5abeebe25542993fe9a41d9c,original,1,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,0,0
+hotpot_5abf8ae85542990832d3a14b,original,1,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,0,0
+hotpot_5ac00de75542996f0d89cb13,original,1,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,0,0
+hotpot_5ac2610f55429951e9e68593,original,1,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,0,0
+hotpot_5ac4920d5542996feb3fe8d3,original,1,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,0,0
+hotpot_5ac4f8705542995c82c4ad8d,original,1,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,0,0
+hotpot_5adbf34955429947ff173862,original,1,1,No.,0.0,0.0,2937,17647,1469,1468,2,0,0
+hotpot_5adc6ded55429947ff17395d,original,1,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,0,0
+hotpot_5adc93a4554299438c868e01,original,1,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,0,0
+hotpot_5add10ca5542994ed6169c59,original,1,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,0,0
+hotpot_5addcb215542997dc7907033,original,1,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,0,0
+hotpot_5ade17d255429939a52fe80e,original,1,1,yes,1.0,1.0,3163,19003,1582,1581,2,0,0
+hotpot_5ade653f55429975fa854ebb,original,1,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,0,0
+hotpot_5ae0006755429925eb1afbd3,original,1,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,0,0
+hotpot_5ae0e0125542993d6555ec79,original,1,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,0,0
+hotpot_5ae1443855429920d5234362,original,1,1,World War II,1.0,1.0,5621,33761,2811,2810,2,0,0
+hotpot_5ae1b1aa5542997283cd223f,original,1,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,0,0
+hotpot_5ae20c245542997283cd2367,original,1,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,0,0
+hotpot_5ae322b75542994393b9e622,original,1,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,0,0
+hotpot_5ae376a35542990afbd1e163,original,1,1,No.,0.0,0.0,3645,21895,1823,1822,2,0,0
+hotpot_5ae406f055429970de88d874,original,1,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,0,0
+hotpot_5ae471fa55429970de88d965,original,1,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,0,0
+hotpot_5ae52cb955429908b6326540,original,1,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,0,0
+hotpot_5ae552bb55429908b63265d9,original,1,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,0,0
+hotpot_5ae628f55542995703ce8b32,original,1,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,0,0
+hotpot_5ae74351554299572ea5479f,original,1,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,0,0
+hotpot_5ae779a555429952e35ea931,original,1,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,0,0
+hotpot_5ae80f73554299540e5a5722,original,1,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,0,0
+hotpot_5ae824295542997ec272772f,original,1,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,0,0
+hotpot_5a728dc65542992359bc30ef,original,2,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,0,0
+hotpot_5a730a6b5542992359bc3210,original,2,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,0,0
+hotpot_5a7624b85542992db947372c,original,2,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,0,0
+hotpot_5a7636fb55429976ec32bd79,original,2,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,0,0
+hotpot_5a76d15e55429966f1a36bfa,original,2,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,0,0
+hotpot_5a77a7db5542995d8318124d,original,2,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,0,0
+hotpot_5a77cb5e55429967ab1052a7,original,2,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,0,0
+hotpot_5a7c43c65542990527d5547e,original,2,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,0,0
+hotpot_5a7e618155429949594199b0,original,2,1,New York County,0.0,0.0,4247,25517,2124,2123,2,0,0
+hotpot_5a7f010955429934daa2fc8b,original,2,1,yes,1.0,1.0,2189,13159,1095,1094,2,0,0
+hotpot_5a7f341655429930675136a0,original,2,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,0,0
+hotpot_5a8008b95542992097ad2fcf,original,2,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,0,0
+hotpot_5a8019db5542992097ad2fd5,original,2,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,0,0
+hotpot_5a80274e5542992e7d278dfb,original,2,1,France,0.0,0.0,2967,17827,1484,1483,2,0,0
+hotpot_5a802e135542992bc0c4a6c7,original,2,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,0,0
+hotpot_5a80a1b25542992bc0c4a78c,original,2,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,0,0
+hotpot_5a80b9df5542992bc0c4a7ec,original,2,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,0,0
+hotpot_5a81e89d5542995ce29dcc72,original,2,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,0,0
+hotpot_5a8341c255429954d2e2ec6e,original,2,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,0,0
+hotpot_5a8468c95542990548d0b2b1,original,2,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,0,0
+hotpot_5a848eff5542990548d0b2cd,original,2,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,0,0
+hotpot_5a84eecd5542994c784dda8e,original,2,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,0,0
+hotpot_5a851cc85542997b5ce3ffa3,original,2,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,0,0
+hotpot_5a865e785542991e7718161b,original,2,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,0,0
+hotpot_5a86ab7755429960ec39b6bf,original,2,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,0,0
+hotpot_5a875fee5542996e4f3087ab,original,2,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,0,0
+hotpot_5a88981c554299206df2b307,original,2,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,0,0
+hotpot_5a88fa145542997e5c09a6e1,original,2,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,0,0
+hotpot_5a89bf18554299669944a591,original,2,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,0,0
+hotpot_5a89e85c5542992e4fca846f,original,2,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,0,0
+hotpot_5a8ae00e5542992d82986fc7,original,2,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,0,0
+hotpot_5a8b7dab5542997f31a41d4c,original,2,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,0,0
+hotpot_5a8bd9c95542997f31a41de2,original,2,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,0,0
+hotpot_5a8d841955429941ae14dfe6,original,2,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,0,0
+hotpot_5a8db9b3554299068b959dde,original,2,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,0,0
+hotpot_5a8ed7b455429917b4a5bdd1,original,2,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,0,0
+hotpot_5a9070dd5542995b442420b5,original,2,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,0,0
+hotpot_5a908aaa55429933b8a20545,original,2,1,No.,1.0,1.0,2341,14071,1171,1170,2,0,0
+hotpot_5ab42a2b5542996a3a969f5a,original,2,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,0,0
+hotpot_5ab4428c5542990594ba9bda,original,2,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,0,0
+hotpot_5ab4f8c95542990594ba9cbb,original,2,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,0,0
+hotpot_5ab80e1455429916710eafd7,original,2,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,0,0
+hotpot_5ab8848d55429916710eb07b,original,2,1,Australia,0.0,0.0,1979,11899,990,989,2,0,0
+hotpot_5abae14b5542996606241657,original,2,1,1999,1.0,1.0,2829,17014,1415,1414,2,0,0
+hotpot_5abaee4f5542996cc5e49f15,original,2,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,0,0
+hotpot_5abba3255542996cc5e4a031,original,2,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,0,0
+hotpot_5abbd3b4554299642a094b4f,original,2,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,0,0
+hotpot_5abcd44655429959677d6af1,original,2,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,0,0
+hotpot_5abd1daa55429933744ab72e,original,2,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,0,0
+hotpot_5abd332e5542993062266bdd,original,2,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,0,0
+hotpot_5abe535055429976d4830aea,original,2,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,0,0
+hotpot_5abeebe25542993fe9a41d9c,original,2,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,0,0
+hotpot_5abf8ae85542990832d3a14b,original,2,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,0,0
+hotpot_5ac00de75542996f0d89cb13,original,2,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,0,0
+hotpot_5ac2610f55429951e9e68593,original,2,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,0,0
+hotpot_5ac4920d5542996feb3fe8d3,original,2,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,0,0
+hotpot_5ac4f8705542995c82c4ad8d,original,2,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,0,0
+hotpot_5adbf34955429947ff173862,original,2,1,No.,0.0,0.0,2937,17647,1469,1468,2,0,0
+hotpot_5adc6ded55429947ff17395d,original,2,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,0,0
+hotpot_5adc93a4554299438c868e01,original,2,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,0,0
+hotpot_5add10ca5542994ed6169c59,original,2,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,0,0
+hotpot_5addcb215542997dc7907033,original,2,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,0,0
+hotpot_5ade17d255429939a52fe80e,original,2,1,yes,1.0,1.0,3163,19003,1582,1581,2,0,0
+hotpot_5ade653f55429975fa854ebb,original,2,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,0,0
+hotpot_5ae0006755429925eb1afbd3,original,2,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,0,0
+hotpot_5ae0e0125542993d6555ec79,original,2,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,0,0
+hotpot_5ae1443855429920d5234362,original,2,1,World War II,1.0,1.0,5621,33761,2811,2810,2,0,0
+hotpot_5ae1b1aa5542997283cd223f,original,2,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,0,0
+hotpot_5ae20c245542997283cd2367,original,2,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,0,0
+hotpot_5ae322b75542994393b9e622,original,2,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,0,0
+hotpot_5ae376a35542990afbd1e163,original,2,1,No.,0.0,0.0,3645,21895,1823,1822,2,0,0
+hotpot_5ae406f055429970de88d874,original,2,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,0,0
+hotpot_5ae471fa55429970de88d965,original,2,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,0,0
+hotpot_5ae52cb955429908b6326540,original,2,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,0,0
+hotpot_5ae552bb55429908b63265d9,original,2,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,0,0
+hotpot_5ae628f55542995703ce8b32,original,2,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,0,0
+hotpot_5ae74351554299572ea5479f,original,2,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,0,0
+hotpot_5ae779a555429952e35ea931,original,2,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,0,0
+hotpot_5ae80f73554299540e5a5722,original,2,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,0,0
+hotpot_5ae824295542997ec272772f,original,2,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,0,0
+hotpot_5a728dc65542992359bc30ef,original,3,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,0,0
+hotpot_5a730a6b5542992359bc3210,original,3,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,0,0
+hotpot_5a7624b85542992db947372c,original,3,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,0,0
+hotpot_5a7636fb55429976ec32bd79,original,3,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,0,0
+hotpot_5a76d15e55429966f1a36bfa,original,3,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,0,0
+hotpot_5a77a7db5542995d8318124d,original,3,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,0,0
+hotpot_5a77cb5e55429967ab1052a7,original,3,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,0,0
+hotpot_5a7c43c65542990527d5547e,original,3,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,0,0
+hotpot_5a7e618155429949594199b0,original,3,1,New York County,0.0,0.0,4247,25517,2124,2123,2,0,0
+hotpot_5a7f010955429934daa2fc8b,original,3,1,yes,1.0,1.0,2189,13159,1095,1094,2,0,0
+hotpot_5a7f341655429930675136a0,original,3,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,0,0
+hotpot_5a8008b95542992097ad2fcf,original,3,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,0,0
+hotpot_5a8019db5542992097ad2fd5,original,3,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,0,0
+hotpot_5a80274e5542992e7d278dfb,original,3,1,France,0.0,0.0,2967,17827,1484,1483,2,0,0
+hotpot_5a802e135542992bc0c4a6c7,original,3,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,0,0
+hotpot_5a80a1b25542992bc0c4a78c,original,3,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,0,0
+hotpot_5a80b9df5542992bc0c4a7ec,original,3,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,0,0
+hotpot_5a81e89d5542995ce29dcc72,original,3,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,0,0
+hotpot_5a8341c255429954d2e2ec6e,original,3,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,0,0
+hotpot_5a8468c95542990548d0b2b1,original,3,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,0,0
+hotpot_5a848eff5542990548d0b2cd,original,3,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,0,0
+hotpot_5a84eecd5542994c784dda8e,original,3,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,0,0
+hotpot_5a851cc85542997b5ce3ffa3,original,3,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,0,0
+hotpot_5a865e785542991e7718161b,original,3,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,0,0
+hotpot_5a86ab7755429960ec39b6bf,original,3,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,0,0
+hotpot_5a875fee5542996e4f3087ab,original,3,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,0,0
+hotpot_5a88981c554299206df2b307,original,3,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,0,0
+hotpot_5a88fa145542997e5c09a6e1,original,3,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,0,0
+hotpot_5a89bf18554299669944a591,original,3,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,0,0
+hotpot_5a89e85c5542992e4fca846f,original,3,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,0,0
+hotpot_5a8ae00e5542992d82986fc7,original,3,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,0,0
+hotpot_5a8b7dab5542997f31a41d4c,original,3,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,0,0
+hotpot_5a8bd9c95542997f31a41de2,original,3,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,0,0
+hotpot_5a8d841955429941ae14dfe6,original,3,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,0,0
+hotpot_5a8db9b3554299068b959dde,original,3,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,0,0
+hotpot_5a8ed7b455429917b4a5bdd1,original,3,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,0,0
+hotpot_5a9070dd5542995b442420b5,original,3,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,0,0
+hotpot_5a908aaa55429933b8a20545,original,3,1,No.,1.0,1.0,2341,14071,1171,1170,2,0,0
+hotpot_5ab42a2b5542996a3a969f5a,original,3,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,0,0
+hotpot_5ab4428c5542990594ba9bda,original,3,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,0,0
+hotpot_5ab4f8c95542990594ba9cbb,original,3,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,0,0
+hotpot_5ab80e1455429916710eafd7,original,3,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,0,0
+hotpot_5ab8848d55429916710eb07b,original,3,1,Australia,0.0,0.0,1979,11899,990,989,2,0,0
+hotpot_5abae14b5542996606241657,original,3,1,1999,1.0,1.0,2829,17014,1415,1414,2,0,0
+hotpot_5abaee4f5542996cc5e49f15,original,3,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,0,0
+hotpot_5abba3255542996cc5e4a031,original,3,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,0,0
+hotpot_5abbd3b4554299642a094b4f,original,3,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,0,0
+hotpot_5abcd44655429959677d6af1,original,3,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,0,0
+hotpot_5abd1daa55429933744ab72e,original,3,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,0,0
+hotpot_5abd332e5542993062266bdd,original,3,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,0,0
+hotpot_5abe535055429976d4830aea,original,3,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,0,0
+hotpot_5abeebe25542993fe9a41d9c,original,3,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,0,0
+hotpot_5abf8ae85542990832d3a14b,original,3,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,0,0
+hotpot_5ac00de75542996f0d89cb13,original,3,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,0,0
+hotpot_5ac2610f55429951e9e68593,original,3,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,0,0
+hotpot_5ac4920d5542996feb3fe8d3,original,3,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,0,0
+hotpot_5ac4f8705542995c82c4ad8d,original,3,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,0,0
+hotpot_5adbf34955429947ff173862,original,3,1,No.,0.0,0.0,2937,17647,1469,1468,2,0,0
+hotpot_5adc6ded55429947ff17395d,original,3,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,0,0
+hotpot_5adc93a4554299438c868e01,original,3,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,0,0
+hotpot_5add10ca5542994ed6169c59,original,3,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,0,0
+hotpot_5addcb215542997dc7907033,original,3,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,0,0
+hotpot_5ade17d255429939a52fe80e,original,3,1,yes,1.0,1.0,3163,19003,1582,1581,2,0,0
+hotpot_5ade653f55429975fa854ebb,original,3,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,0,0
+hotpot_5ae0006755429925eb1afbd3,original,3,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,0,0
+hotpot_5ae0e0125542993d6555ec79,original,3,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,0,0
+hotpot_5ae1443855429920d5234362,original,3,1,World War II,1.0,1.0,5621,33761,2811,2810,2,0,0
+hotpot_5ae1b1aa5542997283cd223f,original,3,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,0,0
+hotpot_5ae20c245542997283cd2367,original,3,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,0,0
+hotpot_5ae322b75542994393b9e622,original,3,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,0,0
+hotpot_5ae376a35542990afbd1e163,original,3,1,No.,0.0,0.0,3645,21895,1823,1822,2,0,0
+hotpot_5ae406f055429970de88d874,original,3,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,0,0
+hotpot_5ae471fa55429970de88d965,original,3,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,0,0
+hotpot_5ae52cb955429908b6326540,original,3,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,0,0
+hotpot_5ae552bb55429908b63265d9,original,3,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,0,0
+hotpot_5ae628f55542995703ce8b32,original,3,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,0,0
+hotpot_5ae74351554299572ea5479f,original,3,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,0,0
+hotpot_5ae779a555429952e35ea931,original,3,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,0,0
+hotpot_5ae80f73554299540e5a5722,original,3,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,0,0
+hotpot_5ae824295542997ec272772f,original,3,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,0,0
+hotpot_5a728dc65542992359bc30ef,original,4,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,0,0
+hotpot_5a730a6b5542992359bc3210,original,4,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,0,0
+hotpot_5a7624b85542992db947372c,original,4,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,0,0
+hotpot_5a7636fb55429976ec32bd79,original,4,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,0,0
+hotpot_5a76d15e55429966f1a36bfa,original,4,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,0,0
+hotpot_5a77a7db5542995d8318124d,original,4,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,0,0
+hotpot_5a77cb5e55429967ab1052a7,original,4,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,0,0
+hotpot_5a7c43c65542990527d5547e,original,4,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,0,0
+hotpot_5a7e618155429949594199b0,original,4,1,New York County,0.0,0.0,4247,25517,2124,2123,2,0,0
+hotpot_5a7f010955429934daa2fc8b,original,4,1,yes,1.0,1.0,2189,13159,1095,1094,2,0,0
+hotpot_5a7f341655429930675136a0,original,4,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,0,0
+hotpot_5a8008b95542992097ad2fcf,original,4,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,0,0
+hotpot_5a8019db5542992097ad2fd5,original,4,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,0,0
+hotpot_5a80274e5542992e7d278dfb,original,4,1,France,0.0,0.0,2967,17827,1484,1483,2,0,0
+hotpot_5a802e135542992bc0c4a6c7,original,4,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,0,0
+hotpot_5a80a1b25542992bc0c4a78c,original,4,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,0,0
+hotpot_5a80b9df5542992bc0c4a7ec,original,4,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,0,0
+hotpot_5a81e89d5542995ce29dcc72,original,4,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,0,0
+hotpot_5a8341c255429954d2e2ec6e,original,4,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,0,0
+hotpot_5a8468c95542990548d0b2b1,original,4,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,0,0
+hotpot_5a848eff5542990548d0b2cd,original,4,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,0,0
+hotpot_5a84eecd5542994c784dda8e,original,4,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,0,0
+hotpot_5a851cc85542997b5ce3ffa3,original,4,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,0,0
+hotpot_5a865e785542991e7718161b,original,4,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,0,0
+hotpot_5a86ab7755429960ec39b6bf,original,4,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,0,0
+hotpot_5a875fee5542996e4f3087ab,original,4,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,0,0
+hotpot_5a88981c554299206df2b307,original,4,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,0,0
+hotpot_5a88fa145542997e5c09a6e1,original,4,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,0,0
+hotpot_5a89bf18554299669944a591,original,4,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,0,0
+hotpot_5a89e85c5542992e4fca846f,original,4,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,0,0
+hotpot_5a8ae00e5542992d82986fc7,original,4,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,0,0
+hotpot_5a8b7dab5542997f31a41d4c,original,4,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,0,0
+hotpot_5a8bd9c95542997f31a41de2,original,4,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,0,0
+hotpot_5a8d841955429941ae14dfe6,original,4,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,0,0
+hotpot_5a8db9b3554299068b959dde,original,4,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,0,0
+hotpot_5a8ed7b455429917b4a5bdd1,original,4,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,0,0
+hotpot_5a9070dd5542995b442420b5,original,4,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,0,0
+hotpot_5a908aaa55429933b8a20545,original,4,1,No.,1.0,1.0,2341,14071,1171,1170,2,0,0
+hotpot_5ab42a2b5542996a3a969f5a,original,4,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,0,0
+hotpot_5ab4428c5542990594ba9bda,original,4,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,0,0
+hotpot_5ab4f8c95542990594ba9cbb,original,4,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,0,0
+hotpot_5ab80e1455429916710eafd7,original,4,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,0,0
+hotpot_5ab8848d55429916710eb07b,original,4,1,Australia,0.0,0.0,1979,11899,990,989,2,0,0
+hotpot_5abae14b5542996606241657,original,4,1,1999,1.0,1.0,2829,17014,1415,1414,2,0,0
+hotpot_5abaee4f5542996cc5e49f15,original,4,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,0,0
+hotpot_5abba3255542996cc5e4a031,original,4,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,0,0
+hotpot_5abbd3b4554299642a094b4f,original,4,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,0,0
+hotpot_5abcd44655429959677d6af1,original,4,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,0,0
+hotpot_5abd1daa55429933744ab72e,original,4,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,0,0
+hotpot_5abd332e5542993062266bdd,original,4,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,0,0
+hotpot_5abe535055429976d4830aea,original,4,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,0,0
+hotpot_5abeebe25542993fe9a41d9c,original,4,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,0,0
+hotpot_5abf8ae85542990832d3a14b,original,4,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,0,0
+hotpot_5ac00de75542996f0d89cb13,original,4,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,0,0
+hotpot_5ac2610f55429951e9e68593,original,4,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,0,0
+hotpot_5ac4920d5542996feb3fe8d3,original,4,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,0,0
+hotpot_5ac4f8705542995c82c4ad8d,original,4,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,0,0
+hotpot_5adbf34955429947ff173862,original,4,1,No.,0.0,0.0,2937,17647,1469,1468,2,0,0
+hotpot_5adc6ded55429947ff17395d,original,4,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,0,0
+hotpot_5adc93a4554299438c868e01,original,4,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,0,0
+hotpot_5add10ca5542994ed6169c59,original,4,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,0,0
+hotpot_5addcb215542997dc7907033,original,4,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,0,0
+hotpot_5ade17d255429939a52fe80e,original,4,1,yes,1.0,1.0,3163,19003,1582,1581,2,0,0
+hotpot_5ade653f55429975fa854ebb,original,4,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,0,0
+hotpot_5ae0006755429925eb1afbd3,original,4,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,0,0
+hotpot_5ae0e0125542993d6555ec79,original,4,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,0,0
+hotpot_5ae1443855429920d5234362,original,4,1,World War II,1.0,1.0,5621,33761,2811,2810,2,0,0
+hotpot_5ae1b1aa5542997283cd223f,original,4,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,0,0
+hotpot_5ae20c245542997283cd2367,original,4,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,0,0
+hotpot_5ae322b75542994393b9e622,original,4,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,0,0
+hotpot_5ae376a35542990afbd1e163,original,4,1,No.,0.0,0.0,3645,21895,1823,1822,2,0,0
+hotpot_5ae406f055429970de88d874,original,4,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,0,0
+hotpot_5ae471fa55429970de88d965,original,4,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,0,0
+hotpot_5ae52cb955429908b6326540,original,4,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,0,0
+hotpot_5ae552bb55429908b63265d9,original,4,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,0,0
+hotpot_5ae628f55542995703ce8b32,original,4,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,0,0
+hotpot_5ae74351554299572ea5479f,original,4,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,0,0
+hotpot_5ae779a555429952e35ea931,original,4,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,0,0
+hotpot_5ae80f73554299540e5a5722,original,4,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,0,0
+hotpot_5ae824295542997ec272772f,original,4,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,0,0
+hotpot_5a728dc65542992359bc30ef,replace,0,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,replace,0,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,replace,0,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,replace,0,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,replace,0,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,replace,0,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,replace,0,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,replace,0,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,replace,0,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,replace,0,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,replace,0,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,replace,0,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,replace,0,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,replace,0,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,replace,0,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,replace,0,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,replace,0,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,replace,0,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,replace,0,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,replace,0,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,replace,0,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,replace,0,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,replace,0,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,replace,0,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,replace,0,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,replace,0,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,replace,0,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,replace,0,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,replace,0,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,replace,0,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,replace,0,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,replace,0,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,replace,0,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,replace,0,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,replace,0,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,replace,0,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,replace,0,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,replace,0,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,replace,0,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,replace,0,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,replace,0,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,replace,0,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,replace,0,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,replace,0,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,replace,0,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,replace,0,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,replace,0,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,replace,0,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,replace,0,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,replace,0,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,replace,0,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,replace,0,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,replace,0,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,replace,0,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,replace,0,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,replace,0,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,replace,0,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,replace,0,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,replace,0,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,replace,0,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,replace,0,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,replace,0,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,replace,0,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,replace,0,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,replace,0,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,replace,0,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,replace,0,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,replace,0,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,replace,0,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,replace,0,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,replace,0,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,replace,0,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,replace,0,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,replace,0,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,replace,0,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,replace,0,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,replace,0,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,replace,0,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,replace,0,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,replace,0,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,replace,1,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,replace,1,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,replace,1,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,replace,1,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,replace,1,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,replace,1,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,replace,1,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,replace,1,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,replace,1,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,replace,1,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,replace,1,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,replace,1,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,replace,1,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,replace,1,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,replace,1,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,replace,1,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,replace,1,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,replace,1,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,replace,1,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,replace,1,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,replace,1,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,replace,1,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,replace,1,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,replace,1,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,replace,1,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,replace,1,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,replace,1,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,replace,1,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,replace,1,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,replace,1,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,replace,1,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,replace,1,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,replace,1,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,replace,1,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,replace,1,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,replace,1,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,replace,1,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,replace,1,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,replace,1,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,replace,1,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,replace,1,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,replace,1,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,replace,1,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,replace,1,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,replace,1,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,replace,1,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,replace,1,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,replace,1,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,replace,1,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,replace,1,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,replace,1,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,replace,1,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,replace,1,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,replace,1,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,replace,1,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,replace,1,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,replace,1,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,replace,1,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,replace,1,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,replace,1,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,replace,1,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,replace,1,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,replace,1,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,replace,1,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,replace,1,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,replace,1,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,replace,1,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,replace,1,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,replace,1,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,replace,1,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,replace,1,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,replace,1,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,replace,1,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,replace,1,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,replace,1,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,replace,1,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,replace,1,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,replace,1,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,replace,1,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,replace,1,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,replace,2,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,replace,2,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,replace,2,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,replace,2,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,replace,2,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,replace,2,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,replace,2,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,replace,2,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,replace,2,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,replace,2,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,replace,2,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,replace,2,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,replace,2,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,replace,2,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,replace,2,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,replace,2,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,replace,2,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,replace,2,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,replace,2,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,replace,2,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,replace,2,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,replace,2,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,replace,2,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,replace,2,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,replace,2,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,replace,2,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,replace,2,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,replace,2,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,replace,2,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,replace,2,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,replace,2,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,replace,2,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,replace,2,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,replace,2,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,replace,2,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,replace,2,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,replace,2,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,replace,2,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,replace,2,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,replace,2,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,replace,2,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,replace,2,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,replace,2,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,replace,2,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,replace,2,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,replace,2,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,replace,2,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,replace,2,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,replace,2,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,replace,2,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,replace,2,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,replace,2,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,replace,2,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,replace,2,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,replace,2,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,replace,2,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,replace,2,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,replace,2,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,replace,2,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,replace,2,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,replace,2,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,replace,2,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,replace,2,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,replace,2,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,replace,2,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,replace,2,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,replace,2,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,replace,2,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,replace,2,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,replace,2,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,replace,2,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,replace,2,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,replace,2,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,replace,2,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,replace,2,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,replace,2,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,replace,2,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,replace,2,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,replace,2,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,replace,2,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,replace,3,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,replace,3,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,replace,3,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,replace,3,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,replace,3,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,replace,3,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,replace,3,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,replace,3,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,replace,3,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,replace,3,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,replace,3,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,replace,3,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,replace,3,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,replace,3,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,replace,3,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,replace,3,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,replace,3,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,replace,3,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,replace,3,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,replace,3,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,replace,3,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,replace,3,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,replace,3,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,replace,3,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,replace,3,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,replace,3,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,replace,3,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,replace,3,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,replace,3,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,replace,3,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,replace,3,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,replace,3,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,replace,3,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,replace,3,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,replace,3,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,replace,3,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,replace,3,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,replace,3,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,replace,3,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,replace,3,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,replace,3,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,replace,3,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,replace,3,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,replace,3,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,replace,3,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,replace,3,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,replace,3,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,replace,3,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,replace,3,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,replace,3,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,replace,3,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,replace,3,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,replace,3,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,replace,3,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,replace,3,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,replace,3,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,replace,3,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,replace,3,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,replace,3,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,replace,3,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,replace,3,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,replace,3,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,replace,3,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,replace,3,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,replace,3,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,replace,3,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,replace,3,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,replace,3,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,replace,3,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,replace,3,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,replace,3,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,replace,3,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,replace,3,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,replace,3,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,replace,3,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,replace,3,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,replace,3,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,replace,3,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,replace,3,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,replace,3,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,replace,4,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,replace,4,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,replace,4,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,replace,4,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,replace,4,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,replace,4,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,replace,4,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,replace,4,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,replace,4,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,replace,4,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,replace,4,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,replace,4,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,replace,4,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,replace,4,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,replace,4,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,replace,4,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,replace,4,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,replace,4,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,replace,4,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,replace,4,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,replace,4,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,replace,4,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,replace,4,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,replace,4,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,replace,4,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,replace,4,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,replace,4,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,replace,4,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,replace,4,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,replace,4,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,replace,4,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,replace,4,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,replace,4,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,replace,4,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,replace,4,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,replace,4,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,replace,4,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,replace,4,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,replace,4,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,replace,4,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,replace,4,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,replace,4,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,replace,4,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,replace,4,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,replace,4,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,replace,4,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,replace,4,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,replace,4,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,replace,4,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,replace,4,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,replace,4,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,replace,4,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,replace,4,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,replace,4,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,replace,4,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,replace,4,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,replace,4,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,replace,4,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,replace,4,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,replace,4,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,replace,4,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,replace,4,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,replace,4,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,replace,4,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,replace,4,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,replace,4,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,replace,4,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,replace,4,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,replace,4,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,replace,4,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,replace,4,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,replace,4,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,replace,4,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,replace,4,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,replace,4,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,replace,4,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,replace,4,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,replace,4,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,replace,4,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,replace,4,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,add,0,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,add,0,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,add,0,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,add,0,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,add,0,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,add,0,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,add,0,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,add,0,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,add,0,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,add,0,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,add,0,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,add,0,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,add,0,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,add,0,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,add,0,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,add,0,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,add,0,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,add,0,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,add,0,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,add,0,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,add,0,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,add,0,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,add,0,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,add,0,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,add,0,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,add,0,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,add,0,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,add,0,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,add,0,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,add,0,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,add,0,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,add,0,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,add,0,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,add,0,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,add,0,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,add,0,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,add,0,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,add,0,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,add,0,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,add,0,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,add,0,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,add,0,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,add,0,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,add,0,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,add,0,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,add,0,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,add,0,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,add,0,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,add,0,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,add,0,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,add,0,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,add,0,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,add,0,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,add,0,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,add,0,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,add,0,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,add,0,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,add,0,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,add,0,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,add,0,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,add,0,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,add,0,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,add,0,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,add,0,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,add,0,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,add,0,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,add,0,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,add,0,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,add,0,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,add,0,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,add,0,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,add,0,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,add,0,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,add,0,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,add,0,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,add,0,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,add,0,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,add,0,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,add,0,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,add,0,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,add,1,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,add,1,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,add,1,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,add,1,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,add,1,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,add,1,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,add,1,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,add,1,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,add,1,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,add,1,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,add,1,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,add,1,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,add,1,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,add,1,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,add,1,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,add,1,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,add,1,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,add,1,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,add,1,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,add,1,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,add,1,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,add,1,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,add,1,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,add,1,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,add,1,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,add,1,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,add,1,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,add,1,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,add,1,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,add,1,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,add,1,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,add,1,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,add,1,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,add,1,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,add,1,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,add,1,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,add,1,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,add,1,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,add,1,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,add,1,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,add,1,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,add,1,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,add,1,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,add,1,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,add,1,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,add,1,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,add,1,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,add,1,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,add,1,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,add,1,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,add,1,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,add,1,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,add,1,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,add,1,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,add,1,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,add,1,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,add,1,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,add,1,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,add,1,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,add,1,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,add,1,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,add,1,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,add,1,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,add,1,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,add,1,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,add,1,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,add,1,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,add,1,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,add,1,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,add,1,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,add,1,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,add,1,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,add,1,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,add,1,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,add,1,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,add,1,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,add,1,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,add,1,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,add,1,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,add,1,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,add,2,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,add,2,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,add,2,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,add,2,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,add,2,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,add,2,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,add,2,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,add,2,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,add,2,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,add,2,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,add,2,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,add,2,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,add,2,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,add,2,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,add,2,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,add,2,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,add,2,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,add,2,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,add,2,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,add,2,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,add,2,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,add,2,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,add,2,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,add,2,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,add,2,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,add,2,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,add,2,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,add,2,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,add,2,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,add,2,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,add,2,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,add,2,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,add,2,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,add,2,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,add,2,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,add,2,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,add,2,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,add,2,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,add,2,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,add,2,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,add,2,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,add,2,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,add,2,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,add,2,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,add,2,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,add,2,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,add,2,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,add,2,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,add,2,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,add,2,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,add,2,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,add,2,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,add,2,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,add,2,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,add,2,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,add,2,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,add,2,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,add,2,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,add,2,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,add,2,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,add,2,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,add,2,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,add,2,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,add,2,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,add,2,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,add,2,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,add,2,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,add,2,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,add,2,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,add,2,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,add,2,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,add,2,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,add,2,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,add,2,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,add,2,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,add,2,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,add,2,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,add,2,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,add,2,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,add,2,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,add,3,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,add,3,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,add,3,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,add,3,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,add,3,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,add,3,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,add,3,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,add,3,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,add,3,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,add,3,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,add,3,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,add,3,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,add,3,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,add,3,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,add,3,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,add,3,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,add,3,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,add,3,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,add,3,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,add,3,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,add,3,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,add,3,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,add,3,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,add,3,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,add,3,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,add,3,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,add,3,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,add,3,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,add,3,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,add,3,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,add,3,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,add,3,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,add,3,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,add,3,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,add,3,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,add,3,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,add,3,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,add,3,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,add,3,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,add,3,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,add,3,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,add,3,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,add,3,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,add,3,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,add,3,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,add,3,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,add,3,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,add,3,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,add,3,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,add,3,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,add,3,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,add,3,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,add,3,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,add,3,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,add,3,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,add,3,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,add,3,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,add,3,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,add,3,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,add,3,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,add,3,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,add,3,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,add,3,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,add,3,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,add,3,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,add,3,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,add,3,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,add,3,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,add,3,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,add,3,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,add,3,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,add,3,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,add,3,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,add,3,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,add,3,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,add,3,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,add,3,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,add,3,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,add,3,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,add,3,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1
+hotpot_5a728dc65542992359bc30ef,add,4,1,Adnan Januzaj,0.0,0.0,2735,16455,1368,1367,2,1,1
+hotpot_5a730a6b5542992359bc3210,add,4,1,Craig Nicholls is older than Norman Blake.,0.4444444444444445,0.0,2251,13566,1126,1125,2,1,1
+hotpot_5a7624b85542992db947372c,add,4,1,"March 9, 1826",0.0,0.0,2307,13907,1154,1153,2,1,1
+hotpot_5a7636fb55429976ec32bd79,add,4,1,Abigail Bainbridge,0.6666666666666666,0.0,2711,16306,1356,1355,2,1,1
+hotpot_5a76d15e55429966f1a36bfa,add,4,1,Gillian Anderson,1.0,1.0,2647,15917,1324,1323,2,1,1
+hotpot_5a77a7db5542995d8318124d,add,4,1,Josephine Tey was born first.,0.0,0.0,1855,11220,928,927,2,1,1
+hotpot_5a77cb5e55429967ab1052a7,add,4,1,"The voice of Homer Simpson also voices the alien character Trans-Dimensional Control in the television series ""The Simpsons"".",0.0,0.0,3458,20621,1729,1729,2,1,1
+hotpot_5a7c43c65542990527d5547e,add,4,1,Mary Pierce is older than Gustavo Kuerten.,0.4444444444444445,0.0,2351,14171,1176,1175,2,1,1
+hotpot_5a7e618155429949594199b0,add,4,1,New York County,0.0,0.0,4247,25517,2124,2123,2,1,1
+hotpot_5a7f010955429934daa2fc8b,add,4,1,yes,1.0,1.0,2189,13159,1095,1094,2,1,1
+hotpot_5a7f341655429930675136a0,add,4,1,Bookforum,0.0,0.0,4351,26136,2176,2175,2,1,1
+hotpot_5a8008b95542992097ad2fcf,add,4,1,Charles Perrault,0.0,0.0,3937,23657,1969,1968,2,1,1
+hotpot_5a8019db5542992097ad2fd5,add,4,1,300 km,0.6666666666666666,0.0,3077,18502,1539,1538,2,1,1
+hotpot_5a80274e5542992e7d278dfb,add,4,1,France,0.0,0.0,2967,17827,1484,1483,2,1,1
+hotpot_5a802e135542992bc0c4a6c7,add,4,1,Play-by-post role-playing game,1.0,1.0,1955,11780,978,977,2,1,1
+hotpot_5a80a1b25542992bc0c4a78c,add,4,1,"No, neither Edward H. Griffith nor Edward Burns is from Germany.",0.0,0.0,2139,12919,1070,1069,2,1,1
+hotpot_5a80b9df5542992bc0c4a7ec,add,4,1,"The nickname of Judy Lewis's father was ""The King.""",0.4,0.0,2451,14786,1226,1225,2,1,1
+hotpot_5a81e89d5542995ce29dcc72,add,4,1,Sergio,0.0,0.0,3337,20164,1669,1668,2,1,1
+hotpot_5a8341c255429954d2e2ec6e,add,4,1,"Hershey, Pennsylvania",1.0,1.0,3583,21543,1792,1791,2,1,1
+hotpot_5a8468c95542990548d0b2b1,add,4,1,George Orwell,0.0,0.0,3217,19332,1609,1608,2,1,1
+hotpot_5a848eff5542990548d0b2cd,add,4,1,Uttarakhand,0.0,0.0,1991,11986,996,995,2,1,1
+hotpot_5a84eecd5542994c784dda8e,add,4,1,Pablo Carballo and the Argentine Air Force have both served in the Argentine Air Force.,0.0,0.0,3315,20000,1658,1657,2,1,1
+hotpot_5a851cc85542997b5ce3ffa3,add,4,1,"No, not both French Spaniel and Beagle are universally recognized breeds.",0.0,0.0,3023,18228,1512,1511,2,1,1
+hotpot_5a865e785542991e7718161b,add,4,1,Americas Tower is located on a higher numbered street than One Penn Plaza.,0.2857142857142857,0.0,2485,15000,1243,1242,2,1,1
+hotpot_5a86ab7755429960ec39b6bf,add,4,1,"The novel from which the fast-food restaurant specializing in seafood derives its name is ""Treasure Island"" by Robert Louis Stevenson.",0.09999999999999999,0.0,2363,14318,1182,1181,2,1,1
+hotpot_5a875fee5542996e4f3087ab,add,4,1,Lysiloma has more species.,0.4,0.0,2803,16873,1402,1401,2,1,1
+hotpot_5a88981c554299206df2b307,add,4,1,Nathaniel Starbuck and Bernard Cornwell have both written historical fiction novels set during the American Civil War.,0.11764705882352941,0.0,2971,17956,1486,1485,2,1,1
+hotpot_5a88fa145542997e5c09a6e1,add,4,1,"The benefit of reintroducing piston power and replacing the most popular turboprop engine in history was improved fuel economy, which Orenda Aerospace felt would be attractive for older aircraft whose engines were reaching the end of their lifespan.",0.10256410256410256,0.0,2241,13686,1121,1120,2,1,1
+hotpot_5a89bf18554299669944a591,add,4,1,"No, John O'Hara and Bobbie Ann Mason do not share the same nationality. John O'Hara was an American writer, while Bobbie Ann Mason is from Kentucky.",0.0,0.0,2073,12633,1037,1036,2,1,1
+hotpot_5a89e85c5542992e4fca846f,add,4,1,Whitfield County,1.0,1.0,4519,27154,2260,2259,2,1,1
+hotpot_5a8ae00e5542992d82986fc7,add,4,1,Canada Goose,0.0,0.0,3305,19860,1653,1652,2,1,1
+hotpot_5a8b7dab5542997f31a41d4c,add,4,1,Los Angeles Memorial Coliseum,0.0,0.0,3275,19695,1638,1637,2,1,1
+hotpot_5a8bd9c95542997f31a41de2,add,4,1,University of Oxford,1.0,1.0,4401,26441,2201,2200,2,1,1
+hotpot_5a8d841955429941ae14dfe6,add,4,1,Eve Hewson,1.0,1.0,2073,12478,1037,1036,2,1,1
+hotpot_5a8db9b3554299068b959dde,add,4,1,"The Mahratta Greyhound and the Tibetan Spaniel share the same origin, both originating in India.",0.0,0.0,2323,14058,1162,1161,2,1,1
+hotpot_5a8ed7b455429917b4a5bdd1,add,4,1,Chene Lawson,0.0,0.0,3055,18365,1528,1527,2,1,1
+hotpot_5a9070dd5542995b442420b5,add,4,1,Tiger Pataudi was the son of Iftikhar Ali Khan Pataudi.,0.1818181818181818,0.0,2827,17072,1414,1413,2,1,1
+hotpot_5a908aaa55429933b8a20545,add,4,1,No.,1.0,1.0,2341,14071,1171,1170,2,1,1
+hotpot_5ab42a2b5542996a3a969f5a,add,4,1,Benjamin Banneker,1.0,1.0,3089,18579,1545,1544,2,1,1
+hotpot_5ab4428c5542990594ba9bda,add,4,1,"No, Lush and P.O.D. do not both consist of four band members.",0.0,0.0,3113,18783,1557,1556,2,1,1
+hotpot_5ab4f8c95542990594ba9cbb,add,4,1,Trappist beer,1.0,1.0,2227,13402,1114,1113,2,1,1
+hotpot_5ab80e1455429916710eafd7,add,4,1,"Italy is associated with the G20, the EU trio, NATO Quint, and the G7.",0.16666666666666669,0.0,2715,16410,1358,1357,2,1,1
+hotpot_5ab8848d55429916710eb07b,add,4,1,Australia,0.0,0.0,1979,11899,990,989,2,1,1
+hotpot_5abae14b5542996606241657,add,4,1,1999,1.0,1.0,2829,17014,1415,1414,2,1,1
+hotpot_5abaee4f5542996cc5e49f15,add,4,1,"No, Cinderella and The Emperor's New Groove were not released by the same picture company.",0.0,0.0,2571,15541,1286,1285,2,1,1
+hotpot_5abba3255542996cc5e4a031,add,4,1,"No, John O'Hara and Rabindranath Tagore are not the same nationality. Tagore was an Indian poet, while O'Hara was an American writer.",0.0,0.0,4171,25216,2086,2085,2,1,1
+hotpot_5abbd3b4554299642a094b4f,add,4,1,German Shepherd,0.0,0.0,2859,17184,1430,1429,2,1,1
+hotpot_5abcd44655429959677d6af1,add,4,1,"4,486",0.0,0.0,2573,15483,1287,1286,2,1,1
+hotpot_5abd1daa55429933744ab72e,add,4,1,"No, Singapore Sling and Fish House Punch do not both contain alcohol.",0.0,0.0,2463,14868,1232,1231,2,1,1
+hotpot_5abd332e5542993062266bdd,add,4,1,The season of Shark Tank where Roominate received investments was the sixth season.,0.5882352941176471,0.0,2435,14588,1218,1217,2,1,1
+hotpot_5abe535055429976d4830aea,add,4,1,"Paducah, Kentucky",0.0,0.0,1980,11985,985,995,2,1,1
+hotpot_5abeebe25542993fe9a41d9c,add,4,1,Joseph Conrad,1.0,1.0,4577,27492,2289,2288,2,1,1
+hotpot_5abf8ae85542990832d3a14b,add,4,1,Russian Empire,1.0,1.0,5091,30576,2546,2545,2,1,1
+hotpot_5ac00de75542996f0d89cb13,add,4,1,Sheldon Adelson designed the casino that The Venetian Macao is modeled on.,0.0,0.0,2603,15723,1302,1301,2,1,1
+hotpot_5ac2610f55429951e9e68593,add,4,1,Vijay Mallya,0.8,0.0,3587,21572,1794,1793,2,1,1
+hotpot_5ac4920d5542996feb3fe8d3,add,4,1,"October 25, 1931",0.8571428571428571,0.0,2658,16073,1324,1334,2,1,1
+hotpot_5ac4f8705542995c82c4ad8d,add,4,1,Mauthausen-Gusen concentration camp,0.6666666666666666,0.0,4001,24071,2001,2000,2,1,1
+hotpot_5adbf34955429947ff173862,add,4,1,No.,0.0,0.0,2937,17647,1469,1468,2,1,1
+hotpot_5adc6ded55429947ff17395d,add,4,1,Copa Airlines,1.0,1.0,3519,21149,1760,1759,2,1,1
+hotpot_5adc93a4554299438c868e01,add,4,1,Dupont Circle,0.0,0.0,2461,14801,1231,1230,2,1,1
+hotpot_5add10ca5542994ed6169c59,add,4,1,"No, Illinois Institute of Technology and Boise State University were not both bounded before 1950. Illinois Institute of Technology was founded in 1874, while Boise State University was founded in 1891.",0.0,0.0,3339,20284,1670,1669,2,1,1
+hotpot_5addcb215542997dc7907033,add,4,1,Naomi Campbell,0.8,0.0,4821,28961,2411,2410,2,1,1
+hotpot_5ade17d255429939a52fe80e,add,4,1,yes,1.0,1.0,3163,19003,1582,1581,2,1,1
+hotpot_5ade653f55429975fa854ebb,add,4,1,Livin' la Vida Loco,0.75,0.0,2565,15450,1283,1282,2,1,1
+hotpot_5ae0006755429925eb1afbd3,add,4,1,"The Bubblegum Alley is located in the 700 block of Higuera Street in downtown San Luis Obispo, California.",0.4,0.0,2795,16930,1398,1397,2,1,1
+hotpot_5ae0e0125542993d6555ec79,add,4,1,Pierre Boulez,0.6666666666666666,0.0,3301,19846,1651,1650,2,1,1
+hotpot_5ae1443855429920d5234362,add,4,1,World War II,1.0,1.0,5621,33761,2811,2810,2,1,1
+hotpot_5ae1b1aa5542997283cd223f,add,4,1,"The other Los Angeles team that the 1999 Clippers top draft pick, Lamar Odom, played for and won two championships with was the Los Angeles Lakers.",0.23076923076923078,0.0,4943,29597,2472,2471,2,1,1
+hotpot_5ae20c245542997283cd2367,add,4,1,Lawsonia inermis,0.0,0.0,2551,15356,1276,1275,2,1,1
+hotpot_5ae322b75542994393b9e622,add,4,1,Taikoo Place,0.5,0.0,2413,14518,1207,1206,2,1,1
+hotpot_5ae376a35542990afbd1e163,add,4,1,No.,0.0,0.0,3645,21895,1823,1822,2,1,1
+hotpot_5ae406f055429970de88d874,add,4,1,Chicago Slovak,0.0,0.0,2803,16848,1402,1401,2,1,1
+hotpot_5ae471fa55429970de88d965,add,4,1,Hillside Terrace,0.0,0.0,4137,24862,2069,2068,2,1,1
+hotpot_5ae52cb955429908b6326540,add,4,1,libertarianism,0.0,0.0,3495,21010,1748,1747,2,1,1
+hotpot_5ae552bb55429908b63265d9,add,4,1,December 1995,0.0,0.0,3183,19148,1592,1591,2,1,1
+hotpot_5ae628f55542995703ce8b32,add,4,1,Torremaggiore,0.0,0.0,2283,13738,1142,1141,2,1,1
+hotpot_5ae74351554299572ea5479f,add,4,1,Bob Zmuda,1.0,1.0,2979,17914,1490,1489,2,1,1
+hotpot_5ae779a555429952e35ea931,add,4,1,in Europe,0.6666666666666666,0.0,2801,16836,1401,1400,2,1,1
+hotpot_5ae80f73554299540e5a5722,add,4,1,24 hours,0.8,0.0,2413,14513,1207,1206,2,1,1
+hotpot_5ae824295542997ec272772f,add,4,1,Blurt,0.0,0.0,3379,20304,1690,1689,2,1,1

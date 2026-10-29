@@ -1,0 +1,4 @@
+variant,seeds,test_questions_per_seed,f1_mean,f1_seed_sd,em_mean,em_seed_sd,avg_rounds_mean,avg_rounds_seed_sd,avg_qwen_tokens_mean,avg_qwen_tokens_seed_sd,tokens_percent_of_fixed6_mean,tokens_percent_of_fixed6_seed_sd
+original,5,80,0.35878474874798405,0.0,0.2125,0.0,1,0.0,3027.7125,0.0,16.610809709852425,0.0
+replace,5,80,0.35878474874798405,0.0,0.2125,0.0,1,0.0,3027.7125,0.0,16.610809709852425,0.0
+add,5,80,0.35878474874798405,0.0,0.2125,0.0,1,0.0,3027.7125,0.0,16.610809709852425,0.0

@@ -1,0 +1,18 @@
+{
+  "epochs": 20,
+  "group_size": 8,
+  "cost": 0.1,
+  "learning_rate": 0.01,
+  "max_rounds": 6,
+  "threshold": 0.5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "selection": "strictly highest validation reward; keep earliest tie",
+  "reward": "answer_f1 - 0.1 * original_Qwen_prefix_tokens / original_Qwen_six_round_tokens",
+  "algorithm": "original single-update group-relative policy gradient, no KL; not full GRPO"
+}
