@@ -30,6 +30,15 @@ METRICS = (
     "em", "f1", "prec", "recall", "sp_em", "sp_f1", "sp_prec", "sp_recall",
     "joint_em", "joint_f1", "joint_prec", "joint_recall",
 )
+CITATION_FORMAT_POLICY = {
+    "version": 2,
+    "list_pair": "[string_title, nonnegative_integer_sentence_index]",
+    "object_key_sets": [["exact_passage_title", "sentence_index"],
+                        ["title", "sentence_index"]],
+    "object_extra_keys": "reject",
+    "index_coercion": False, "title_repair": False,
+    "canonical_output": "two_item_list_pairs",
+}
 
 WRITER_SYSTEM = (
     "You are the writer in a multi-agent question-answering team. Answer using "
@@ -217,12 +226,21 @@ def parse_draft(text: str) -> dict[str, Any]:
     answer, facts = parsed.get("answer"), parsed.get("supporting_facts")
     if not isinstance(answer, str) or not answer.strip() or not isinstance(facts, list):
         raise ValueError("Writer must return a nonempty answer string and supporting_facts list")
+    canonical_facts = []
     for fact in facts:
+        if isinstance(fact, dict):
+            if set(fact) == {"exact_passage_title", "sentence_index"}:
+                fact = [fact["exact_passage_title"], fact["sentence_index"]]
+            elif set(fact) == {"title", "sentence_index"}:
+                fact = [fact["title"], fact["sentence_index"]]
+            else:
+                raise ValueError("Supporting fact objects require exactly title or exact_passage_title, and sentence_index")
         if not isinstance(fact, list) or len(fact) != 2:
             raise ValueError("Each supporting fact must be [title, sentence_index]")
         if not isinstance(fact[0], str) or type(fact[1]) is not int or fact[1] < 0:
             raise ValueError("Supporting facts need a string title and nonnegative integer index")
-    return {"answer": answer.strip(), "supporting_facts": facts}
+        canonical_facts.append(fact)
+    return {"answer": answer.strip(), "supporting_facts": canonical_facts}
 
 
 def parse_review(text: str) -> dict[str, Any]:
@@ -436,6 +454,7 @@ def run_hotpot(agents: Any, gate: Any, output: str | Path, *, limit: int = 20, s
         "excluded_ids": sorted(exclusions), "agent_identity": _agent_identity(agents),
         "gate_provenance": gate_provenance, "source_sha256": _source_hashes(),
         "writer_system": WRITER_SYSTEM, "reviewer_system": REVIEWER_SYSTEM,
+        "citation_format_policy": CITATION_FORMAT_POLICY,
         "selection": "Proportional type/level strata; SHA256(seed,id) ordering; no gold-dependent selection",
     }
     # JSON round-trip makes tuple/list identity stable across resume.
