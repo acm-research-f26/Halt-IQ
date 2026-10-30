@@ -59,6 +59,10 @@ reference answers and supporting labels are not used for conversion.
 Incremental journals retain failures and actual token receipts. Runtime-owned
 processes stop on normal completion or an exception. Colab's runtime allocation
 and lifetime are controlled by Google; save/export artifacts before releasing it.
+New writer runs also publish one flushed, fsynced JSON receipt per response in
+`runtime/writer/requests/`. These are the primary response records; the JSONL
+file remains a best-effort compatibility mirror. Preserve and disclose any
+ledger-integrity errors rather than treating missing usage as zero.
 
 ## What the existing evidence says
 
