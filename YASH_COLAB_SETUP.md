@@ -44,6 +44,17 @@ Tau summary's `technical_failures` field is a broad failed/error bucket; inspect
 route events to distinguish malformed output, gate rejection at the revision
 cap, and simulator or evaluator errors.
 
+The writer processes prefill in 512-token chunks while retaining the complete
+16,384-token context and KV cache. This changes computation, not the supplied
+conversation; context overflow fails explicitly without truncation. Writer
+receipts record the attention backend, chunk size and library versions.
+
+Hotpot citation pairs and exact two-field objects using `sentence_index` with
+either `title` or `exact_passage_title` share a canonical pair representation.
+Titles and integer indices are preserved. Extra fields, ambiguous objects and
+invalid indices fail validation. The manifest freezes this format policy;
+reference answers and supporting labels are not used for conversion.
+
 `plan.json`/`manifest.json` freeze source, models, questions/tasks and policies.
 Incremental journals retain failures and actual token receipts. Runtime-owned
 processes stop on normal completion or an exception. Colab's runtime allocation
