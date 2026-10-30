@@ -117,7 +117,7 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def _bare_id(value: Any) -> str:
-    return str(value).removeprefix("hotpotqa:")
+    return str(value).removeprefix("hotpotqa:").removeprefix("hotpot_")
 
 
 def teammate_exclusions(root: Path | None = None) -> set[str]:
