@@ -3,6 +3,7 @@
 Both AWS Strands agents and the official Tau user/evaluators share this model.
 No tool is executed here: tool requests are data returned to Tau's orchestrator.
 """
+from copy import deepcopy
 import json
 import re
 import time
@@ -11,6 +12,55 @@ from pathlib import Path
 
 MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 REVISION = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+
+
+def normalize_messages(messages):
+    """Convert text-only OpenAI chat messages to the pinned Qwen template.
+
+    Strands sends standard OpenAI text-block lists. Qwen2.5's template requires
+    string content and serializes tool arguments itself, so arguments must be
+    objects rather than JSON strings. The caller's request remains unchanged.
+    """
+    if not isinstance(messages, list) or not messages:
+        raise ValueError("A nonempty list of chat messages is required")
+    normalized = deepcopy(messages)
+    for message in normalized:
+        if not isinstance(message, dict) or message.get("role") not in {
+                "system", "user", "assistant", "tool"}:
+            raise ValueError("Unsupported chat message role")
+        content = message.get("content")
+        if content is None:
+            message["content"] = ""
+        elif isinstance(content, str):
+            pass
+        elif isinstance(content, list):
+            parts = []
+            for block in content:
+                if (not isinstance(block, dict) or block.get("type") != "text"
+                        or not isinstance(block.get("text"), str)):
+                    raise ValueError("This local writer supports only OpenAI text content blocks")
+                parts.append(block["text"])
+            message["content"] = "".join(parts)
+        else:
+            raise ValueError("Chat content must be text, text blocks, or null")
+        calls = message.get("tool_calls")
+        if calls is None:
+            continue
+        if not isinstance(calls, list):
+            raise ValueError("tool_calls must be a list")
+        for call in calls:
+            if not isinstance(call, dict):
+                raise ValueError("Invalid tool call")
+            function = call.get("function", call)
+            if not isinstance(function, dict) or not isinstance(function.get("name"), str):
+                raise ValueError("Invalid tool-call function")
+            arguments = function.get("arguments", {})
+            if isinstance(arguments, str):
+                arguments = json.loads(arguments)
+            if not isinstance(arguments, dict):
+                raise ValueError("Tool-call arguments must be a JSON object")
+            function["arguments"] = arguments
+    return normalized
 
 
 def parse_tool_calls(text):
@@ -49,7 +99,7 @@ class Writer:
 
     def complete(self, body):
         import torch
-        messages = [dict(m) for m in body["messages"]]
+        messages = normalize_messages(body["messages"])
         response_format = body.get("response_format", {})
         if response_format.get("type") in {"json_object", "json_schema"}:
             schema = response_format.get("json_schema", {}).get("schema")
