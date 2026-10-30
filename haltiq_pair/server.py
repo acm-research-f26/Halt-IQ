@@ -5,6 +5,8 @@ No tool is executed here: tool requests are data returned to Tau's orchestrator.
 """
 from copy import deepcopy
 import json
+import logging
+import os
 import re
 import time
 import uuid
@@ -15,6 +17,49 @@ REVISION = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
 ATTENTION_IMPLEMENTATION = "sdpa"
 PREFILL_CHUNK_SIZE = 512
 LOGITS_TO_KEEP = 1
+logger = logging.getLogger(__name__)
+
+
+def _atomic_request_receipt(path, record):
+    """Publish one complete response receipt from an exclusive temporary file."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name("." + path.name + "." + uuid.uuid4().hex + ".tmp")
+    try:
+        with temporary.open("x", encoding="utf-8", newline="\n") as stream:
+            json.dump(record, stream, ensure_ascii=False)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+    except BaseException:
+        try:
+            temporary.unlink(missing_ok=True)
+        except OSError:
+            pass
+        raise
+
+
+def persist_request(output, record):
+    """Keep primary receipts even if the optional compatibility append fails."""
+    primary = Path(output) / "requests" / (record["id"] + ".json")
+    record["logging"] = {"primary_receipt": "requests/" + primary.name,
+                         "compatibility_journal": "model_requests.jsonl",
+                         "compatibility_policy": "best_effort_mirror"}
+    _atomic_request_receipt(primary, record)
+    try:
+        with (Path(output) / "model_requests.jsonl").open("a", encoding="utf-8", newline="\n") as stream:
+            stream.write(json.dumps(record, ensure_ascii=False) + "\n")
+            stream.flush()
+    except Exception as exc:
+        logger.warning("Compatibility journal append failed for %s (%s); primary receipt retained",
+                       record["id"], type(exc).__name__)
+        record["logging"]["compatibility_append_error"] = {
+            "type": type(exc).__name__, "message": str(exc)}
+        try:
+            _atomic_request_receipt(primary, record)
+        except Exception as annotation_error:
+            logger.warning("Could not annotate compatibility error for %s (%s); original primary receipt retained",
+                           record["id"], type(annotation_error).__name__)
 
 
 def normalize_messages(messages):
@@ -103,6 +148,9 @@ class Writer:
                          "attention_implementation": self.model.config._attn_implementation,
                          "prefill_chunk_size": PREFILL_CHUNK_SIZE,
                          "logits_to_keep": LOGITS_TO_KEEP, "use_cache": True,
+                         "request_receipt_primary": "requests/<response_id>.json",
+                         "request_receipt_policy": "exclusive_temp_flush_fsync_replace",
+                         "request_receipt_compatibility": "model_requests.jsonl (best-effort mirror)",
                          "torch": torch.__version__,
                          "transformers": transformers.__version__, "new_training": False}
         (self.output / "writer.json").write_text(json.dumps(self.metadata, indent=2))
@@ -145,9 +193,7 @@ class Writer:
         record = {"id": rid, "timestamp": time.time(), "usage": usage,
                   "seconds": time.monotonic() - started, "finish_reason": finish,
                   "request": body, "response_text": text}
-        with (self.output / "model_requests.jsonl").open("a", encoding="utf-8") as f:
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
-            f.flush()
+        persist_request(self.output, record)
         message = {"role": "assistant", "content": content}
         if calls:
             message["tool_calls"] = calls
