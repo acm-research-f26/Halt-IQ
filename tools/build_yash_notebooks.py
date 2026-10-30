@@ -55,12 +55,31 @@ checked(sys.executable, "-m", "pip", "install", "-q", "-e", str(TAU_ROOT))
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import uuid, os, json
-drive.mount("/content/drive")
+USE_DRIVE = True  # Set False to use runtime storage without another mount attempt.
+storage_root = pathlib.Path("/content/Yash_HaltIQ_Results")
+storage_backend = "runtime"
+drive_mount_error_type = None
+if USE_DRIVE:
+    try:
+        drive.mount("/content/drive")
+        storage_root = pathlib.Path("/content/drive/MyDrive/Yash_HaltIQ_Pair")
+        storage_backend = "google_drive"
+    except Exception as error:
+        drive_mount_error_type = type(error).__name__
+        print("Google Drive could not be mounted; falling back to this runtime only.")
 RUN_ID = datetime.now(ZoneInfo("America/Chicago")).strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:6]
-OUT = pathlib.Path("/content/drive/MyDrive/Yash_HaltIQ_Pair") / "{slug}" / RUN_ID
+OUT = storage_root / "{slug}" / RUN_ID
 OUT.mkdir(parents=True, exist_ok=False)
+storage_metadata = dict(requested_drive=USE_DRIVE, backend=storage_backend,
+                        persistent=storage_backend == "google_drive",
+                        drive_mount_error_type=drive_mount_error_type,
+                        requires_download_before_disconnect=storage_backend != "google_drive",
+                        result_directory=str(OUT))
+(OUT/"storage.json").write_text(json.dumps(storage_metadata, indent=2), encoding="utf-8")
 (OUT/"environment.txt").write_text(subprocess.check_output([sys.executable,"-m","pip","freeze"],text=True))
 print("Yash's result folder:", OUT)
+if not storage_metadata["persistent"]:
+    print("WARNING: results are stored only in this temporary Colab VM. Download the evidence ZIP before disconnecting or releasing the runtime.")
 '''
     verification = '''checked("nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader")
 test_env = dict(os.environ, LOGURU_LEVEL="ERROR")
@@ -123,17 +142,34 @@ command = [sys.executable, "-u", "-B", "-m", "haltiq_pair", {command},
 print((LIVE/"Research Writeup.txt").read_text())
 print("Saved all results:", OUT)
 '''
-    export = '''import shutil
+    export = '''import zipfile
+from pathlib import Path
 from google.colab import files
-archive = shutil.make_archive("/content/Yash_HaltIQ_Results_"+RUN_ID, "zip", OUT)
+def create_evidence_zip(result_directory, archive_path):
+    result_directory, archive_path = Path(result_directory).resolve(), Path(archive_path)
+    if archive_path.resolve().is_relative_to(result_directory):
+        raise ValueError("Create the evidence ZIP outside the result directory")
+    serving_receipts = {"hobson_config.json", "haltiq-serving-provenance.json"}
+    with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as evidence:
+        for path in sorted(result_directory.rglob("*")):
+            relative = path.relative_to(result_directory)
+            if not path.is_file() or "__pycache__" in relative.parts:
+                continue
+            if "critic-cache" in relative.parts and path.name not in serving_receipts:
+                continue
+            evidence.write(path, arcname=relative.as_posix())
+    return str(archive_path)
+archive = create_evidence_zip(OUT, "/content/Yash_HaltIQ_Results_"+RUN_ID+".zip")
 files.download(archive)
-print("Drive journals and this ZIP are Yash's new study artifacts.")
+print("Yash's evidence ZIP excludes model cache files and preserves serving receipts, runtime metadata, logs and results.")
+if not storage_metadata["persistent"]:
+    print("Keep the downloaded ZIP: the remaining runtime files are temporary.")
 '''
     cells = [
-        cell("markdown", f"# {title}\n\nThis is a **new notebook for Yash**. Save your own copy in Drive; do not edit a teammate's notebook. It uses only Vedanshi's and Shree's prior evidence. Your earlier experiments are excluded.\n\nSelect **Runtime → Change runtime type → GPU** before running. No AWS or paid model API key is required. A standard Colab Drive mount saves results incrementally."),
+        cell("markdown", f"# {title}\n\nThis is a **new notebook for Yash**. Save your own copy in Drive; do not edit a teammate's notebook. It uses only Vedanshi's and Shree's prior evidence. Your earlier experiments are excluded.\n\nSelect **Runtime → Change runtime type → GPU** before running. No AWS or paid model API key is required. Results save incrementally to Drive when available. Runtime-only fallback requires downloading the evidence ZIP before disconnecting."),
         cell("markdown", "## 1. Install the frozen source\nThe source commit, model revisions, tasks, policies and thresholds are recorded. No training or threshold tuning on evaluation questions is performed."),
         cell("code", setup),
-        cell("markdown", "## 2. Save Yash's results to Drive\nApprove the ordinary Colab Drive connection in your research account. No credentials are written to the notebook or result files."),
+        cell("markdown", "## 2. Choose Yash's result storage\nDrive is enabled by default. Approve the ordinary Colab Drive connection in your research account, or set USE_DRIVE=False for runtime-only storage. A failed mount also falls back to the temporary runtime, with persistent=False recorded in storage.json. Download the evidence ZIP before disconnecting when using that fallback. No credentials are written to the notebook or result files."),
         cell("code", storage),
         cell("markdown", "## 3. Verify the GPU and software wiring\nOffline tests are engineering checks. Their synthetic fixtures are not benchmark results."),
         cell("code", verification),
@@ -141,9 +177,9 @@ print("Drive journals and this ZIP are Yash's new study artifacts.")
         cell("code", replay),
         cell("markdown", "## 5. Run a real GPU smoke test\nThis checks the new AWS Strands agents, local writer and pinned Hobson/BGE critic with an invented fact. FP16 on T4 is recorded rather than treated as identical to historical BF16 probabilities."),
         cell("code", smoke),
-        cell("markdown", "## 6. Run the new live simulation\n" + ("Ten official English retail tasks × four arms. The local user and judges differ from released leaderboard conditions. Failed episodes stay in denominators; rejected tool proposals never execute. These are official-domain local simulations." if tau else "Twenty fresh HotpotQA validation questions × five arms. Full public distractor evidence is available; gold answers and supporting facts stay in the evaluator. Each arm runs independently. Six-round budget exits are distinguished from gate approvals.") + "\n\nThe console prints incremental results; full traces and logs remain in Drive. Run this cell once per new output directory."),
+        cell("markdown", "## 6. Run the new live simulation\n" + ("Ten official English retail tasks × four arms. The local user and judges differ from released leaderboard conditions. Failed episodes stay in denominators; rejected tool proposals never execute. These are official-domain local simulations." if tau else "Twenty fresh HotpotQA validation questions × five arms. Full public distractor evidence is available; gold answers and supporting facts stay in the evaluator. Each arm runs independently. Six-round budget exits are distinguished from gate approvals.") + "\n\nThe console prints incremental results; full traces and logs remain in the selected result folder. Run this cell once per new output directory."),
         cell("code", live),
-        cell("markdown", "## 7. Download Yash's evidence and writeup\nThe ZIP includes manifests, runtime provenance, model receipts, traces, outcomes and a plain-language writeup. Keep incomplete/failing outputs labeled as such."),
+        cell("markdown", "## 7. Download Yash's evidence and writeup\nThe ZIP includes manifests, runtime provenance, serving configuration/precision receipts, logs, traces, outcomes and a plain-language writeup. Model cache weights/tokenizers are excluded without deleting them from the runtime. Keep incomplete/failing outputs labeled as such. A runtime-only result folder is temporary: download this ZIP before disconnecting."),
         cell("code", export),
     ]
     return {"nbformat": 4, "nbformat_minor": 5, "metadata": {
