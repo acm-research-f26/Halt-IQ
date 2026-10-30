@@ -15,9 +15,17 @@ stop probability. The paired policy requires both stop >= 0.5 and approval >=
 ## Colab
 
 Open a new notebook in Colab, save a copy under Yash's name, select a GPU and
-run its cells in order. The bootstrap pins the source before installing. Google
-Drive holds the result journals; the provisioned Google account supplies compute,
-not an LLM API key. No paid API account or AWS credential is needed.
+run its cells in order. The bootstrap pins the source before installing. Saved
+Yash copies are [HotpotQA](https://colab.research.google.com/drive/161BXIOvt_kKGgmOPC0Uv5dXQLaWS9Mpb)
+and [Tau2](https://colab.research.google.com/drive/1vjkuOGxrOinXnnXMzCZEeX-RxTzCcEQv?authuser=1).
+The provisioned Google account supplies compute, not an LLM API key. No paid API
+account or AWS credential is needed.
+
+Drive saves the result journals when its mount succeeds. Set `USE_DRIVE=False`
+to use runtime storage; a failed mount also falls back to
+`/content/Yash_HaltIQ_Results`. `storage.json` records whether results are
+persistent. Download the evidence ZIP before disconnecting a temporary runtime.
+The ZIP retains results, logs and serving receipts while excluding model caches.
 
 HotpotQA defaults to 20 fresh validation questions across five independent arms
 (Fixed-1, Fixed-6, linear, Strands, combined). It excludes all 170 question IDs in
@@ -27,10 +35,14 @@ answer/support/joint metrics are saved; failures count as zero. Each continuing
 adaptive round has a real reviewer call before its gate, included in usage.
 
 Tau defaults to ten pinned official English retail tasks across four arms
-(first valid proposal, linear, Strands, combined). Tau alone executes approved
+(first proposal, linear, Strands, combined). Tau alone executes approved
 tool calls. Rejected proposals route to review/revision; a rejection at the cap
 fails the episode. Its local user/judges differ from leaderboard conditions, so
 these are official-domain local simulations, not leaderboard-comparable scores.
+Malformed model output fails the attempt without automatic retries. The frozen
+Tau summary's `technical_failures` field is a broad failed/error bucket; inspect
+route events to distinguish malformed output, gate rejection at the revision
+cap, and simulator or evaluator errors.
 
 `plan.json`/`manifest.json` freeze source, models, questions/tasks and policies.
 Incremental journals retain failures and actual token receipts. Runtime-owned
