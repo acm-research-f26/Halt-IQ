@@ -12,6 +12,9 @@ from pathlib import Path
 
 MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 REVISION = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+ATTENTION_IMPLEMENTATION = "sdpa"
+PREFILL_CHUNK_SIZE = 512
+LOGITS_TO_KEEP = 1
 
 
 def normalize_messages(messages):
@@ -83,18 +86,25 @@ def parse_tool_calls(text):
 class Writer:
     def __init__(self, output, device="cuda", max_context=16384):
         import torch
+        import transformers
         from transformers import AutoModelForCausalLM, AutoTokenizer
         self.output, self.max_context = Path(output), max_context
         self.output.mkdir(parents=True, exist_ok=True)
         self.tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=REVISION)
         dtype = torch.float16 if device == "cuda" else torch.float32
         self.model = AutoModelForCausalLM.from_pretrained(
-            MODEL, revision=REVISION, torch_dtype=dtype).to(device).eval()
+            MODEL, revision=REVISION, torch_dtype=dtype,
+            attn_implementation=ATTENTION_IMPLEMENTATION).to(device).eval()
         self.device = device
         self.metadata = {"model": MODEL, "revision": REVISION,
                          "dtype": str(dtype), "device": device,
                          "max_context": max_context,
-                         "torch": torch.__version__, "new_training": False}
+                         "context_policy": "reject_overflow_without_truncation",
+                         "attention_implementation": self.model.config._attn_implementation,
+                         "prefill_chunk_size": PREFILL_CHUNK_SIZE,
+                         "logits_to_keep": LOGITS_TO_KEEP, "use_cache": True,
+                         "torch": torch.__version__,
+                         "transformers": transformers.__version__, "new_training": False}
         (self.output / "writer.json").write_text(json.dumps(self.metadata, indent=2))
 
     def complete(self, body):
@@ -118,8 +128,12 @@ class Writer:
             raise ValueError(f"Context overflow: {prompt_tokens}+{max_new}>{self.max_context}; no silent truncation")
         started = time.monotonic()
         with torch.inference_mode():
+            # Process every prompt token while bounding temporary prefill tensors.
+            # The cumulative KV cache preserves the complete conversation.
             result = self.model.generate(**encoded, max_new_tokens=max_new,
                                          do_sample=False,
+                                         prefill_chunk_size=PREFILL_CHUNK_SIZE,
+                                         logits_to_keep=LOGITS_TO_KEEP, use_cache=True,
                                          pad_token_id=self.tokenizer.eos_token_id)
         ids = result[0, prompt_tokens:]
         text = self.tokenizer.decode(ids, skip_special_tokens=True)
