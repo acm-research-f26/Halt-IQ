@@ -19,13 +19,15 @@ bootstrap. A head with no such file is marked "pending".
 
 For each method: F1, EM, tokens (% of fixed 6), avg rounds, F1 95% CI, and the fixed-round
 baseline with the closest token cost with the paired F1 difference and CI.
-Writes eval/results_table.csv and eval/f1_vs_tokens.png.
+Writes eval/results_table.csv and eval/f1_vs_tokens.png. The chart also draws the test curve of
+the routing threshold sweep from eval/headroom.py.
 """
 import csv
 import sys
 from pathlib import Path
 
 import answer_selection as sel
+import headroom
 
 HERE = Path(__file__).resolve().parent
 CLASSIFIER_RESULTS = HERE.parent / "classifier" / "results"
@@ -150,6 +152,14 @@ def plot(rows):
     for r in fixed:
         ax.annotate(r["method"].split()[1], (r["tokens_pct"], r["f1"]), textcoords="offset points", xytext=(0, 7),
                     ha="center", fontsize=8, color="0.35")
+    traj = sel.load()
+    full = sel.full_tokens(traj)
+    curve = [(t, sel.summary(res, full)) for t, res in headroom.sweep(traj).items()]
+    ax.plot([s["tokens_pct"] for _, s in curve], [s["f1"] for _, s in curve], "--s", color="0.7", markersize=3.5,
+            label=f"routing threshold sweep ({headroom.THRESHOLDS[0]}-{headroom.THRESHOLDS[-1]})", zorder=1)
+    for t, s in (curve[0], curve[-1]):
+        ax.annotate(f"t={t}", (s["tokens_pct"], s["f1"]), textcoords="offset points", xytext=(-7, -2),
+                    ha="right", va="center", fontsize=7, color="0.5")
     # Methods that land on the same point share one marker and one label.
     points = {}
     for r in other:

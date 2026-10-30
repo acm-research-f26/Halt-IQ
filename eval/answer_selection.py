@@ -65,12 +65,17 @@ def answer_repeats(R):
     return next((k for k in range(2, len(R) + 1) if same_answer(R[k - 1], R[k - 2])), len(R))
 
 
-def routing(R):
-    """Stop if Strands >= T_HI, else revise until the answer repeats."""
-    for k in range(1, len(R) + 1):
-        if R[k - 1]["strands"] >= T_HI or (k > 1 and same_answer(R[k - 1], R[k - 2])):
-            return k
-    return len(R)
+def routing_at(threshold):
+    """Stop if Strands >= threshold, else revise until the answer repeats."""
+    def rule(R):
+        for k in range(1, len(R) + 1):
+            if R[k - 1]["strands"] >= threshold or (k > 1 and same_answer(R[k - 1], R[k - 2])):
+                return k
+        return len(R)
+    return rule
+
+
+routing = routing_at(T_HI)
 
 
 def sri_critic(R):
