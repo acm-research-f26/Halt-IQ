@@ -27,6 +27,18 @@ if not ROOT.exists():
 checked("git", "-C", str(ROOT), "fetch", "--depth", "1", "origin", SOURCE_COMMIT)
 checked("git", "-C", str(ROOT), "checkout", "--detach", SOURCE_COMMIT)
 checked(sys.executable, "-m", "pip", "install", "-q", "-r", str(ROOT/"requirements-colab.txt"))
+# These FP16 models do not use TorchAO. Older Colab images preinstall a version
+# that PEFT 0.21 rejects while importing its optional quantization dispatcher.
+from importlib.metadata import PackageNotFoundError, version
+from packaging.version import Version
+try:
+    unused_torchao_version = version("torchao")
+except PackageNotFoundError:
+    unused_torchao_version = None
+if unused_torchao_version is not None and Version(unused_torchao_version) < Version("0.16"):
+    print("Removing unused preinstalled TorchAO", unused_torchao_version,
+          "because PEFT requires TorchAO >= 0.16 when it is installed; this study uses FP16.")
+    checked(sys.executable, "-m", "pip", "uninstall", "-y", "torchao")
 checked(sys.executable, "-m", "pip", "install", "-q", "-e", str(ROOT))
 '''
     if tau:
