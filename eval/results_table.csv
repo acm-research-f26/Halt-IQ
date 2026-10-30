@@ -1,0 +1,14 @@
+method,status,f1,em,tokens_pct,avg_rounds,avg_strands_calls,f1_ci_low,f1_ci_high,nearest_fixed,nearest_fixed_tokens_pct,f1_diff_vs_nearest_fixed,diff_ci_low,diff_ci_high,note
+fixed 1,done,0.3588,0.2125,9.0594,1.0,0.0,0.268,0.4533,,,,,,
+fixed 2,done,0.3849,0.2375,27.2501,2.0,0.0,0.2908,0.4815,,,,,,
+fixed 3,done,0.3824,0.225,45.4356,3.0,0.0,0.2911,0.4759,,,,,,
+fixed 4,done,0.3849,0.2375,63.6266,4.0,0.0,0.2908,0.4815,,,,,,
+fixed 5,done,0.3753,0.225,81.8123,5.0,0.0,0.2824,0.4697,,,,,,
+fixed 6,done,0.3921,0.2375,100.0,6.0,0.0,0.2987,0.4875,,,,,,
+answer repeats,done,0.3921,0.2375,30.3712,2.1625,0.0,0.2987,0.4875,fixed 2,27.2501,0.0071,0.0,0.0214,
+"routing (Strands >= 0.8, else repeat)",done,0.3784,0.225,21.0303,1.7,1.7,0.2881,0.4717,fixed 2,27.2501,-0.0065,-0.0329,0.0174,
+Sri critic stop,done,0.3588,0.2125,19.8661,1.125,0.0,0.268,0.4533,fixed 2,27.2501,-0.0261,-0.0607,0.0,
+routing + best-Strands answer,done,0.3784,0.225,21.0303,1.7,1.7,0.2881,0.4717,fixed 2,27.2501,-0.0065,-0.0329,0.0174,"best of the best_strands variants, picked on this test split"
+Sri stop head: original,pending,,,,,,,,,,,,,no per_question.csv under classifier/results/original/
+Sri stop head: strands_replace,pending,,,,,,,,,,,,,no per_question.csv under classifier/results/strands_replace/
+Sri stop head: strands_add,pending,,,,,,,,,,,,,no per_question.csv under classifier/results/strands_add/

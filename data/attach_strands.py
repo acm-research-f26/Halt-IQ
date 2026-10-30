@@ -10,6 +10,7 @@ sri_rounds_with_strands.csv: one row per (question, round), 150 x 6 = 900 rows.
 Columns:
 - id, split, round (1-6), answer, strands
 - f1, em: her per-round `quality` (answer F1) and `answer_em`
+- critic_approved: 1 if her LLM critic returned APPROVED that round, else 0
 - tokens: her per-round total, writer total_tokens + critic total_tokens
 - writer_* / critic_*: prompt, completion, total and cached prompt tokens from each call's usage
 
@@ -31,7 +32,7 @@ OUT = HERE / "sri_rounds_with_strands.csv"
 EXPECTED_QUESTIONS, EXPECTED_ROUNDS = 150, 6
 ROLES = ("writer", "critic")
 USAGE = ("prompt_tokens", "completion_tokens", "total_tokens", "cached_tokens")
-COLUMNS = (["id", "split", "round", "answer", "strands", "f1", "em", "tokens"]
+COLUMNS = (["id", "split", "round", "answer", "strands", "f1", "em", "critic_approved", "tokens"]
            + [f"{role}_{field}" for role in ROLES for field in USAGE])
 
 
@@ -75,7 +76,8 @@ def main():
                 misses.append((t["id"], k, r["answer"]))
                 continue
             used.add(key)
-            rows.append([t["id"], t["split"], k, r["answer"], scores[key], r["quality"], r["answer_em"], r["tokens"]]
+            rows.append([t["id"], t["split"], k, r["answer"], scores[key], r["quality"], r["answer_em"],
+                         int(r["critic_approved"]), r["tokens"]]
                         + usage(r["writer"]) + usage(r["critic"]))
 
     print(f"{len(paths)} trajectories, {len(rows) + len(misses)} rounds, {len(rows)} scored, {len(misses)} missing")

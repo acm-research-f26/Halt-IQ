@@ -9,4 +9,4 @@ Record the source and checksum of anything added here.
   commit 5503cab with git. Run `python3 data/attach_strands.py`; it exits without writing if any
   round lacks a score.
 - `sri_rounds_with_strands.csv`: its output, 900 rows (150 questions x 6 rounds): id, split
-  (train 50 / dev 20 / test 80), round, answer, strands, f1, em, tokens, and writer/critic token usage.
+  (train 50 / dev 20 / test 80), round, answer, strands, f1, em, critic_approved, tokens, and writer/critic token usage.
