@@ -1,0 +1,22 @@
+{
+  "schema": "yash-results11-report-verification-v1",
+  "verified_central": "2026-11-02T09:51:30.009047-06:00",
+  "status": "PASS_OBSERVED_COHORT_RESULTS_REPORT",
+  "pages": 2,
+  "author": "Yash Baruah",
+  "full_text_reviewed": true,
+  "both_page_renders_visually_reviewed": true,
+  "csv_source_cells_byte_equivalent": 140,
+  "same11question_denominator_all7arms": true,
+  "all77attempts_eight_failed_scoredzero": true,
+  "accuracy_is_exactmatch6of11_not_answerF1": true,
+  "singlewriter_baseline_and_primary_STOP_behavior_retained": true,
+  "operational_pending_and_standalone_limitations_removed_from_reader_report": true,
+  "previous_reports_and_raw_evidence_unchanged": true,
+  "no_new_inference_training_or_study_plan_change": true,
+  "pdf": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\results-focused-report\\Yash-Nov2-Results-Report-20261102.pdf",
+    "sha256": "52bc43bc5bbd324282a651a812d4d671e71871ea7b210a412bb81cf3ab3b63bf"
+  },
+  "manifest_sha256": "1ff43db7208b07338336fef94c91ae1f9abd6db4487555849002c87c5827c5bc"
+}

@@ -1,0 +1,62 @@
+Strands + linear classifier
+Multi-agent orchestration results
+
+Yash Baruah | November 2, 2026 | Evaluated cohort: 11 HotpotQA questions
+
+The learned controller returned six exact answers out of eleven (54.5% answer accuracy), with answer F1 of 59.1. The matched verifier and binary-AND loops each returned four exact answers (36.4%), with F1 of 40.9. The learned controller used 22 role calls versus 54 for each loop, a 59.3% reduction in measured role calls on these questions. [1]
+
+Observed comparison
+
+Approach | Exact answers | Accuracy | Answer F1 (0-100) | Calls / question | Writer drafts / question
+
+Strands + linear (learned3) | 6/11 | 54.5% | 59.1 | 2.00 | 1.00
+
+One writer | 6/11 | 54.5% | 65.2 | 1.00 | 1.00
+
+Strands verifier loop | 4/11 | 36.4% | 40.9 | 4.91 | 2.45
+
+Verifier + binary AND | 4/11 | 36.4% | 40.9 | 4.91 | 2.45
+
+Always revise | 4/11 | 36.4% | 40.9 | 5.64 | 2.82
+
+Always invoke | 4/11 | 36.4% | 40.9 | 6.00 | 2.45
+
+Legacy six-draft control | 4/11 | 36.4% | 40.9 | 8.55 | 4.64
+
+Every approach is scored on the same eleven questions in frozen order. All 77 question-arm attempts are included; eight failed attempts score zero. Accuracy is normalized exact answer match. F1 measures answer-token overlap and is displayed on a 0-100 scale. Calls and drafts include failed attempts and format corrections. The six-draft legacy arm uses a different budget. [1]
+
+The one-writer baseline also answered 6/11 exactly and had the highest answer F1, 65.2, with one call per question. The learned policy therefore improved the observed verifier-loop comparison while the single draft remained the strongest answer-F1 and call-count baseline. [1]
+
+[PAGE BREAK]
+
+How the orchestration works
+
+I integrated separate Strands SDK writer, reviewer and conditional challenger agents around the same pinned Qwen2.5-1.5B-Instruct model served on a Colab GPU. The writer proposes an answer and evidence; the reviewer returns actual feedback. A separate Hobson/Decider verifier supplies a score, with BGE used for evidence ranking. The Python orchestrator passes those signals to an eleven-feature linear policy. [2]
+
+Policy action | Agent interaction
+
+STOP | Return the current answer.
+
+REVISE | Pass the current draft and reviewer feedback to the writer, then review and verify the revision.
+
+INVOKE | Ask the challenger for an evidence-linked check; pass its actual response into writer revision, then review and verify.
+
+These are separate role instances and feedback exchanges with shared model weights. Challenger interactions are recorded in action-branch training, the always-invoke control, and three retained seed-1 learned-policy paths. In the primary comparison, learned3 chose STOP on all ten completed paths and made no challenger call. [2, 3]
+
+What I trained and integrated
+
+I collected action branches from twenty training questions and used ten separate development questions for checkpoint selection. The targets maximize returned answer F1 minus 0.002 per additional role call. The classifier learns STOP, REVISE or INVOKE from public features such as verifier confidence, reviewer approval, draft position, answer changes and feedback cues. Gold answers are confined to external scoring. [2]
+
+All five linear heads were fitted for 200 epochs with Adam (learning rate 0.03; L2 0.001), selected using development utility, and frozen before test execution. I also implemented matched three-draft/ten-role-call caps, failure-inclusive scoring, and physical request accounting. Vedanshi is credited for the verifier/reranker approach and Shree for the inherited linear stopping head. [2]
+
+What the results explain
+
+The inherited binary AND produced the same scores and calls as the verifier loop on this cohort. The new action policy instead preserved the first draft and avoided further revisions: 52 of 59 training-state targets favored STOP, and the primary learned paths followed that action. This routing pattern explains the lower call count and is consistent with avoiding answer degradation during later revision. [1, 2]
+
+Evidence grounding was scored separately: learned3 supporting-fact F1 was 26.4 and joint F1 was 15.8; joint exact match was zero in every arm. The accompanying CSV includes all twelve answer, supporting-fact and joint metrics. [1]
+
+The professor's paper on defeasible video entailment motivated an evidence-linked challenger that can test an existing answer. The implementation and HotpotQA results here are our adaptation; the paper summary is provided separately. [4]
+
+Sources
+
+[1] Yash-Nov2-Observed11-Metrics-20261102.csv, derived without changing scores from the independently rescored Primary11 table. [2] Executed study source 1387ebd08ff907f0f07699e1d338e50b5552d1a9, frozen heads and action/role traces. [3] Retained seed-1 interaction records. [4] Zhang, Sun, Guo and Gogate, arXiv:2506.22385v2. Full source identities are recorded in the accompanying manifest.

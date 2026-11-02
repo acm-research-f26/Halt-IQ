@@ -1,0 +1,5 @@
+# Preserve reviewed publication bytes and exported vector whitespace.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.pdf binary
+*.png binary
+*.svg -whitespace

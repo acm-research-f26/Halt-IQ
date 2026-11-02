@@ -1,0 +1,71 @@
+{
+  "schema": "yash-observed11-results-report-v1",
+  "prepared_central": "2026-11-02T09:50:24.623069-06:00",
+  "author": "Yash Baruah",
+  "scope": "Same11questions/sevenarms; all77attempts including8failures scoredzero; observational results, not a changed study plan",
+  "new_inference": false,
+  "scores_changed": false,
+  "sources": [
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Table-20261102.csv",
+      "bytes": 2008,
+      "sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164"
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Independent-Analysis-20261102.json",
+      "bytes": 59416,
+      "sha256": "55be6bf5a44cf23101d5398f59e9ea93f7a0005cb3788295ebeb63e5c300b36c"
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-Evidence-Manifest-20261102.json",
+      "bytes": 21734,
+      "sha256": "ed41c1f468ce7cb2291071d84d0640b50893182b992441dce7c1f33c4ccd8941"
+    }
+  ],
+  "products": [
+    {
+      "name": "Yash-Nov2-Observed11-Accuracy-Calls-20261102.png",
+      "bytes": 82589,
+      "sha256": "e46a07ddac89a40b673be74b97eaf422cac3fb9b29bed0318405d5a8d9383e66"
+    },
+    {
+      "name": "Yash-Nov2-Observed11-Accuracy-Calls-20261102.svg",
+      "bytes": 18991,
+      "sha256": "7ec0e6400afcf2d790088bb39b78b875dc0b8fdbf7f1c23fca6ccd3608b85d9f"
+    },
+    {
+      "name": "Yash-Nov2-Observed11-Metrics-20261102.csv",
+      "bytes": 1966,
+      "sha256": "9f99585f64da8543de2e6d43c6e174702c5b645132757eae8dccfd4f4c82bdea"
+    },
+    {
+      "name": "Yash-Nov2-Results-Report-20261102.pdf",
+      "bytes": 189530,
+      "sha256": "52bc43bc5bbd324282a651a812d4d671e71871ea7b210a412bb81cf3ab3b63bf"
+    },
+    {
+      "name": "Yash-Nov2-Results-Report-20261102.txt",
+      "bytes": 4980,
+      "sha256": "20502a48ebd4a395716ceaf516de295838bc7d72aa675ec88ba0434800979a07"
+    },
+    {
+      "name": "Yash-Nov2-Separate-Paper-Summary-20261102.txt",
+      "bytes": 1912,
+      "sha256": "dad15f99731191e5af51e6cc8e2983e22e8932d5f252157eef73af242f5011ec"
+    }
+  ],
+  "visual_qa": "PASS: root visually reviewed both125dpi page renders; no clipping, overlap, unreadable table/chart, missing glyph or pagination defect",
+  "pages": 2,
+  "visual_renders": [
+    {
+      "name": "Yash-Nov2-Results-1.png",
+      "bytes": 223634,
+      "sha256": "5cb5114166be5e3f7bd4f0898281cf120cc870367202164135ff66abdd8644c5"
+    },
+    {
+      "name": "Yash-Nov2-Results-2.png",
+      "bytes": 324577,
+      "sha256": "71065efc80d9f21b2fa96ed619e3cf4fb55bc626a69b73be260b3a77706c88ec"
+    }
+  ]
+}
