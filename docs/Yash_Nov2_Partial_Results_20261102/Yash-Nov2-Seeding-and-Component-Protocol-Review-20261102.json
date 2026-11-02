@@ -1,0 +1,127 @@
+{
+  "schema": "yash-seeding-and-components-readonly-review-v1",
+  "prepared_local": "2026-11-02T04:07:34.433538-06:00",
+  "full_modules_read": [
+    "nov2_runner.py",
+    "nov2_orchestration.py",
+    "nov2_runtime.py",
+    "nov2_policy.py",
+    "server.py"
+  ],
+  "additional_full_functions_read": [
+    "hotpot._question_prompt",
+    "hotpot.run_episode"
+  ],
+  "sources": {
+    "nov2_runner.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\nov2_runner.py",
+      "sha256": "868a553ade0eb1787e4417e0de0b995de435d0e61f0c4355c356a83a9d0fd0be"
+    },
+    "nov2_orchestration.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\nov2_orchestration.py",
+      "sha256": "a529bc271ddf3c83f1d86e22828217da6b58b01c7e3d18d4320d371c7e13bed7"
+    },
+    "nov2_runtime.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\nov2_runtime.py",
+      "sha256": "a0c30051263d3ffebd2bf83cd61f97b0a6bbf838cff27022df22a4868c99c48a"
+    },
+    "nov2_policy.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\nov2_policy.py",
+      "sha256": "8be1c7345630503e57a72628aec11708577020934aed46489632eb152c3e8b67"
+    },
+    "server.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\server.py",
+      "sha256": "af859a8c2e5e5d7b65ff5b1f89d1a46001aad12cc59983ffbafc54d4c4ce7bef"
+    },
+    "hotpot.py": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\haltiq_pair\\hotpot.py",
+      "sha256": "856f413f02e4fa885e0d45fa1f1f0a1385a82195f3311e253b62a3ab419260a8"
+    }
+  },
+  "findings": [
+    {
+      "claim": "Matched test arms independently call begin and pay separate initial writer/reviewer/verifier chains; fixed1/legacy independently run the same initial writer prompt.",
+      "lines": {
+        "nov2_runner.py": [
+          306,
+          330
+        ],
+        "nov2_orchestration.py": [
+          360,
+          379
+        ],
+        "hotpot.py": [
+          281,
+          325
+        ]
+      }
+    },
+    {
+      "claim": "Training obtains one common initial state per question and clones it for measured action branches, then reuses successful depth-one children.",
+      "lines": {
+        "nov2_runner.py": [
+          229,
+          280
+        ]
+      }
+    },
+    {
+      "claim": "Each RoleAgents.generate creates a fresh SDK Agent with temperature zero and declared role cap; metadata UUID is an identity, not a seed.",
+      "lines": {
+        "nov2_orchestration.py": [
+          212,
+          228
+        ]
+      }
+    },
+    {
+      "claim": "Writer model is eval and generation explicitly uses do_sample=False, with no per-generation RNG seed.",
+      "lines": {
+        "server.py": [
+          131,
+          185
+        ]
+      }
+    },
+    {
+      "claim": "All five CPU heads initialize under torch.manual_seed(seed); full-batch Adam and strict development improvement choose each seed's earliest best epoch.",
+      "lines": {
+        "nov2_policy.py": [
+          238,
+          279
+        ]
+      }
+    },
+    {
+      "claim": "Deployment seed selects a frozen head and cyclic arm order; separate runs independently recollect and fit all five heads.",
+      "lines": {
+        "nov2_runner.py": [
+          569,
+          594
+        ]
+      }
+    },
+    {
+      "claim": "The SDK role instances are distinct from the inherited team verifier. Runtime starts separate critic services and wraps a Critic with CPU evidence ranking.",
+      "lines": {
+        "nov2_runtime.py": [
+          344,
+          390
+        ],
+        "nov2_orchestration.py": [
+          308,
+          324
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "No source guarantee of identical independent greedy requests across hardware.",
+    "Cross-run initialization-only interpretation requires matching train/dev record digests.",
+    "Seed1 is not an independently sampled writer run.",
+    "Primary observed learned STOP and zero INVOKE must not be described as challenger deployment."
+  ],
+  "read_only_no_active_changes": true,
+  "no_new_inference": true,
+  "operational_boundary": "08:50 enforced only by new repaired templates; old primary 09:20 monitor/backend status remains separate."
+}

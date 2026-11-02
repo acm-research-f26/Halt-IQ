@@ -1,0 +1,635 @@
+{
+  "schema": "yash-interrupted-best-prefix-diagnostic-v1",
+  "prepared_local": "2026-11-02T03:54:21.035024-06:00",
+  "status": "VERIFIED_EXPLORATORY_INCOMPLETE_PANEL",
+  "scope": "predeclared public maximum-verifier-score prefix, earliest tie; independent post-freeze rescoring; primary last-draft scores unchanged",
+  "no_policy_model_prompt_budget_or_active_runtime_changes": true,
+  "new_inference_calls": 0,
+  "sources": {
+    "partial_zip": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\cloud-exports\\Yash_HotpotQA_Orchestration_replication_20261102-015450-04111781.zip",
+      "sha256": "76b2ab477b5c3dd8d2d8c5cfc76fdaef8638e116a17ba9931651349bb429b2fe"
+    },
+    "gold_reference": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Pinned-HotpotQA-Reference-After-Freeze-20261102.json",
+      "sha256": "00458b31b95130319e5ce023e9bad5ecb4c9f1c9eab707d6e571f7a69697ad18"
+    },
+    "gold_reference_receipt": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Pinned-Reference-Post-Freeze-Verification-20261102.json",
+      "sha256": "c555c3d7ba527c93edd0612c336ec0cb840b3a032191ebe6b188104d0c631233"
+    },
+    "episodes_sha256": "2fa5cb5f7af63c5099ee5a6c4cb8291bf56327c8a7dfca0c8774307616ac510d",
+    "physical_calls_sha256": "08aafc204a5dbbb2ba45b91a1cf337518893646a739083462c3b441620d0a813",
+    "critics_sha256": "3573bfda82498d8e4f3e36db87adb86c548702f136553a95dd5cf9be1d48a332",
+    "frozen_utc": "2026-11-02T08:34:02.261708+00:00",
+    "source_commit": "1387ebd08ff907f0f07699e1d338e50b5552d1a9",
+    "deployment_seed": 1
+  },
+  "frozen_reference_digest_checks": {
+    "train": {
+      "public_inputs_sha256": "70bd8328b2ec46448435f158e906519274297a60cb5991c00c052c3103c86591",
+      "label_digest": "5e397d86a875c609ecc2942de4e1b1369a006afc52b408dab587c3a76517b359",
+      "status": "PASS"
+    },
+    "dev": {
+      "public_inputs_sha256": "ca13283b92b9b2c4246426ad8afe9c55af445c8e1e28f93193ffe0e20151e431",
+      "label_digest": "84285124365a0300c72094f32eeec9ec4ba9580f51fa6fd043b14749dc386302",
+      "status": "PASS"
+    },
+    "test": {
+      "public_inputs_sha256": "6a7aba4a5794e7d98b15a14fae298e366260bd279147c923f9e8a1d738288f2d",
+      "label_digest": "f5907ec5c2a371601f387dad25b227d93a7e18fb5bc71e19446279e7a89af4d3",
+      "status": "PASS"
+    }
+  },
+  "checks": {
+    "completed_primary_predictions_rescored_all_twelve_metrics": 19,
+    "primary_max_abs_difference": 0.0,
+    "matched_diagnostic_predictions_rescored_all_twelve_metrics": 14,
+    "diagnostic_max_abs_difference": 0.0,
+    "physical_response_bindings_verified": 84,
+    "raw_writer_to_history_bindings_verified": 39,
+    "history_verifier_to_physical_receipt_bindings_verified": 39,
+    "selected_round_counts": {
+      "1": 14
+    },
+    "full_path_costs_preserved_for_every_diagnostic": true
+  },
+  "rows": [
+    {
+      "question_id": "5a80870d5542992bc0c4a752",
+      "arm": "strands",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "c301e32fef894212876c6a99eefb4b6b",
+      "maximum_verifier_score": 0.2098,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 14810,
+        "elapsed_seconds": 24.9532557550001
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a80870d5542992bc0c4a752",
+      "arm": "binary_and",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "fba458e24e274393be1ad2b12cb6c358",
+      "maximum_verifier_score": 0.2098,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 14810,
+        "elapsed_seconds": 25.50198973999977
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a80870d5542992bc0c4a752",
+      "arm": "always_revise3",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "270f730e05e64910980bb29ef14506e1",
+      "maximum_verifier_score": 0.2098,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 14810,
+        "elapsed_seconds": 25.898156340999776
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a80870d5542992bc0c4a752",
+      "arm": "always_invoke",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "5c42e94878634cd28860b57791932ce4",
+      "maximum_verifier_score": 0.2098,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 7,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3,
+          "challenger": 1
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 17504,
+        "elapsed_seconds": 32.0783598779999
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a80870d5542992bc0c4a752",
+      "arm": "learned3",
+      "last_draft": 2,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "6f729a1373794f1594e3f0e112e166af",
+      "maximum_verifier_score": 0.2098,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 5,
+        "completed_role_calls": {
+          "writer": 2,
+          "reviewer": 2,
+          "challenger": 1
+        },
+        "writer_generations": 2,
+        "verifier_calls": 2,
+        "response_tokens": 12546,
+        "elapsed_seconds": 24.870802071999606
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7bf84b5542996dd594b875",
+      "arm": "learned3",
+      "last_draft": 2,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "540e5a6804384280ac5262f7ebd1f92c",
+      "maximum_verifier_score": 0.6393,
+      "primary": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 5,
+        "completed_role_calls": {
+          "writer": 2,
+          "reviewer": 2,
+          "challenger": 1
+        },
+        "writer_generations": 2,
+        "verifier_calls": 2,
+        "response_tokens": 9750,
+        "elapsed_seconds": 17.404669294000087
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7bf84b5542996dd594b875",
+      "arm": "strands",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "50dacd87fa654f8bb3525c34ab5a8e3d",
+      "maximum_verifier_score": 0.6393,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic_minus_primary": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 11665,
+        "elapsed_seconds": 30.14324953800042
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7bf84b5542996dd594b875",
+      "arm": "binary_and",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "58136d24e2174f069e7053b1eaa291d9",
+      "maximum_verifier_score": 0.6393,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic_minus_primary": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 11665,
+        "elapsed_seconds": 29.958089439000105
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7bf84b5542996dd594b875",
+      "arm": "always_revise3",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "7397d8bb645e4e29bcbcf0fa32e673b0",
+      "maximum_verifier_score": 0.6393,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic_minus_primary": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 11665,
+        "elapsed_seconds": 30.030507217000377
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7bf84b5542996dd594b875",
+      "arm": "always_invoke",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "dba789e545cd4d829effcd93f88dd24d",
+      "maximum_verifier_score": 0.6393,
+      "primary": {
+        "f1": 1.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.6666666666666666,
+        "joint_f1": 0.6666666666666666
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 7,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3,
+          "challenger": 1
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 13645,
+        "elapsed_seconds": 29.023858131999987
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7723fa55429966f1a36ca0",
+      "arm": "binary_and",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "21a17ea4ad414083938a0a50a60b2a43",
+      "maximum_verifier_score": 0.6308,
+      "primary": {
+        "f1": 1.0,
+        "sp_f1": 0.5,
+        "joint_f1": 0.5
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": -0.09999999999999998,
+        "joint_f1": -0.09999999999999998
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 12670,
+        "elapsed_seconds": 35.42271313400033
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7723fa55429966f1a36ca0",
+      "arm": "always_revise3",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "c634c389803c456fbbe7f1d1718edea7",
+      "maximum_verifier_score": 0.6308,
+      "primary": {
+        "f1": 1.0,
+        "sp_f1": 0.5,
+        "joint_f1": 0.5
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": -0.09999999999999998,
+        "joint_f1": -0.09999999999999998
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 6,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 12670,
+        "elapsed_seconds": 34.4176329259999
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7723fa55429966f1a36ca0",
+      "arm": "always_invoke",
+      "last_draft": 3,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "cd9c8ffc8997426096275f0ed0ff6f23",
+      "maximum_verifier_score": 0.6308,
+      "primary": {
+        "f1": 0.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "diagnostic_minus_primary": {
+        "f1": 1.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 7,
+        "completed_role_calls": {
+          "writer": 3,
+          "reviewer": 3,
+          "challenger": 1
+        },
+        "writer_generations": 3,
+        "verifier_calls": 3,
+        "response_tokens": 14862,
+        "elapsed_seconds": 30.05755495199992
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    },
+    {
+      "question_id": "5a7723fa55429966f1a36ca0",
+      "arm": "learned3",
+      "last_draft": 2,
+      "diagnostic_selected_draft": 1,
+      "diagnostic_writer_call_id": "f6648a6579834492a91207e430b85392",
+      "maximum_verifier_score": 0.6308,
+      "primary": {
+        "f1": 1.0,
+        "sp_f1": 0.0,
+        "joint_f1": 0.0
+      },
+      "diagnostic": {
+        "f1": 1.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "diagnostic_minus_primary": {
+        "f1": 0.0,
+        "sp_f1": 0.4,
+        "joint_f1": 0.4
+      },
+      "full_path_cost_for_both": {
+        "attempted_role_calls": 5,
+        "completed_role_calls": {
+          "writer": 2,
+          "reviewer": 2,
+          "challenger": 1
+        },
+        "writer_generations": 2,
+        "verifier_calls": 2,
+        "response_tokens": 10677,
+        "elapsed_seconds": 22.74922830200012
+      },
+      "all_twelve_diagnostic_metrics_max_abs_difference": 0.0
+    }
+  ],
+  "exploratory_plot_data": {
+    "scope": "complete-case comparison on the same two observed questions across all five matched arms in the interrupted seed1 run; not the primary20-question estimand",
+    "question_ids": [
+      "5a7bf84b5542996dd594b875",
+      "5a80870d5542992bc0c4a752"
+    ],
+    "independent_questions": 2,
+    "question_arm_rows": 10,
+    "arms": [
+      {
+        "arm": "strands",
+        "common_completed_questions": 2,
+        "primary_answer_f1": 0.0,
+        "diagnostic_answer_f1": 0.5,
+        "primary_joint_f1": 0.0,
+        "diagnostic_joint_f1": 0.3333333333333333,
+        "mean_full_path_attempted_role_calls_unchanged": 6.0,
+        "mean_full_path_writer_generations_unchanged": 3.0,
+        "mean_full_path_verifier_calls_unchanged": 3.0,
+        "mean_full_path_response_tokens_unchanged": 13237.5
+      },
+      {
+        "arm": "binary_and",
+        "common_completed_questions": 2,
+        "primary_answer_f1": 0.0,
+        "diagnostic_answer_f1": 0.5,
+        "primary_joint_f1": 0.0,
+        "diagnostic_joint_f1": 0.3333333333333333,
+        "mean_full_path_attempted_role_calls_unchanged": 6.0,
+        "mean_full_path_writer_generations_unchanged": 3.0,
+        "mean_full_path_verifier_calls_unchanged": 3.0,
+        "mean_full_path_response_tokens_unchanged": 13237.5
+      },
+      {
+        "arm": "always_revise3",
+        "common_completed_questions": 2,
+        "primary_answer_f1": 0.0,
+        "diagnostic_answer_f1": 0.5,
+        "primary_joint_f1": 0.0,
+        "diagnostic_joint_f1": 0.3333333333333333,
+        "mean_full_path_attempted_role_calls_unchanged": 6.0,
+        "mean_full_path_writer_generations_unchanged": 3.0,
+        "mean_full_path_verifier_calls_unchanged": 3.0,
+        "mean_full_path_response_tokens_unchanged": 13237.5
+      },
+      {
+        "arm": "always_invoke",
+        "common_completed_questions": 2,
+        "primary_answer_f1": 0.5,
+        "diagnostic_answer_f1": 0.5,
+        "primary_joint_f1": 0.0,
+        "diagnostic_joint_f1": 0.3333333333333333,
+        "mean_full_path_attempted_role_calls_unchanged": 7.0,
+        "mean_full_path_writer_generations_unchanged": 3.0,
+        "mean_full_path_verifier_calls_unchanged": 3.0,
+        "mean_full_path_response_tokens_unchanged": 15574.5
+      },
+      {
+        "arm": "learned3",
+        "common_completed_questions": 2,
+        "primary_answer_f1": 0.5,
+        "diagnostic_answer_f1": 0.5,
+        "primary_joint_f1": 0.3333333333333333,
+        "diagnostic_joint_f1": 0.3333333333333333,
+        "mean_full_path_attempted_role_calls_unchanged": 5.0,
+        "mean_full_path_writer_generations_unchanged": 2.0,
+        "mean_full_path_verifier_calls_unchanged": 2.0,
+        "mean_full_path_response_tokens_unchanged": 11148.0
+      }
+    ],
+    "do_not_imply": "No diagnostic cost discount, no completed panel, no forty-question pool, no superiority or significance claim"
+  },
+  "interpretation_limits": [
+    "Only three distinct test questions have any completed diagnostic; only two are observed for all five matched arms.",
+    "All14selected diagnostic candidates are draft1 in this partial subset; repeated arms are correlated observations.",
+    "Some last-draft revisions lose answer correctness or citations; another later draft improves jointF1 relative to the earliest tied candidate. Candidate selection therefore is not uniformly better.",
+    "Verifier-based prefix selection is public and predeclared, while the displayed outcome comparison is descriptive and incomplete.",
+    "Role response tokens exclude verifier/reranker total compute and do not establish dollar savings."
+  ]
+}

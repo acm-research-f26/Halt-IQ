@@ -1,0 +1,16 @@
+Paper summary
+
+Can Video Large Multimodal Models Think Like Doubters-or Double-Down: A Study on Defeasible Video Entailment
+Yue Zhang, Jilei Sun, Yunhui Guo, Vibhav Gogate
+arXiv:2506.22385v2, revised October 7, 2025
+https://arxiv.org/pdf/2506.22385v2
+
+The paper introduces a video reasoning task: decide whether new information makes a hypothesis more or less plausible, or generate an update in a requested direction. Its dataset contains 986 examples, equally divided between strengthening and weakening updates.
+
+The classification pipeline generates opposing explanations, combines video descriptions with Whisper transcripts, and uses a separate language model to correct and select an explanation. A related pipeline revises generated updates. Table 3 reports Video-ChatGPT accuracy increasing from 61.05% to 77.79%.
+
+The paper evaluates video reasoning. It does not demonstrate a learned stopping controller, AWS Strands integration, linear-head training, or STOP/REVISE/INVOKE orchestration. It supplies prompts but no controller-training loss or hyperparameters. Its results do not establish benefits for HaltIQ.
+
+Proposed HaltIQ adaptation - our hypothesis, not a paper result
+
+Use a writer to propose an answer, a reviewer to check evidence, and a challenger to provide an independent evidence-linked check. Our implemented orchestrator chooses STOP, REVISE or INVOKE; the challenger uses existing HotpotQA passages and its response reaches the writer. The new linear policy trains on measured action branches, freezes all five development-selected heads before testing, and compares policies on the same fresh questions under matched caps. Implementation checks alone do not establish benchmark improvement. The separate November 2 study report presents the observed routing and partial experimental results. This adaptation and its evaluation are our work, not results of the paper.

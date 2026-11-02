@@ -4,6 +4,8 @@ Updated November 2, 2026 (America/Chicago). **The new study has audited partial 
 
 ## Current evidence and results
 
+The [professor report](Yash_Nov2_Partial_Results_20261102/Yash-Nov2-Professor-Report-20261102.pdf), [twelve-metric CSV](Yash_Nov2_Partial_Results_20261102/Yash-Nov2-Primary11-Prefix-Table-20261102.csv), [figures and evidence](Yash_Nov2_Partial_Results_20261102/README.md), and [separate paper brief](Yash_Nov2_Partial_Results_20261102/Yash-Nov2-Paper-Brief-20261102.txt) are available as byte-preserved publication artifacts.
+
 The recovered primary snapshot contains all seven arms on the first **11 of 20 planned test questions**: 77 recorded attempts, 69 completed predictions and 8 failures. The other 63 planned attempts remain unknown. The table below uses those same 11 questions for every arm, with failures scored zero; it is a descriptive partial-panel comparison, not a completed 20-question result.
 
 | Arm | Completed / 11 | Answer F1 | Recorded role calls / question |

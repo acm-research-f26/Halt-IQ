@@ -1,0 +1,117 @@
+{
+  "schema": "yash-professor-partial-report-v1",
+  "prepared_local": "2026-11-02T04:31:17.263969-06:00",
+  "status": "PARTIAL_EVIDENCE_REPORT_VERIFIED_FOR_ROOT_REVIEW",
+  "pages": 5,
+  "pdf": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Professor-Report-20261102.pdf",
+    "sha256": "49f7e85a670aa38d54434ffa506a1a4f90826eae6288badf591d72e48cfbe4fd"
+  },
+  "txt": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Professor-Report-20261102.txt",
+    "sha256": "3074b5182affe70e3d2b233bdc4c55e36fde5616d0db857ddb1051b312842656"
+  },
+  "seed_review": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Seeding-and-Component-Protocol-Review-20261102.json",
+    "sha256": "ea1cc94a022eeace9307eecfeb79a103d81d6def0ab83f20b83bc82fc4c4f149"
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "all_latest_pages_visually_inspected": true,
+    "dpi": 140,
+    "pages": [
+      {
+        "label": "Latest page1 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\partial-report\\Yash-Nov2-Report-1.png",
+        "bytes": 273794,
+        "sha256": "9fe9f98c3f28e291577ecbfd22c6e2332d5673f3bfea1627d9cd3aa68cc218da",
+        "page": 1,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2510,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page2 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\partial-report\\Yash-Nov2-Report-2.png",
+        "bytes": 290103,
+        "sha256": "95236ff2f1893f6af9d480c61879ae284558a5427fbcca9d2e566bea417e58ab",
+        "page": 2,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2842,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page3 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\partial-report\\Yash-Nov2-Report-3.png",
+        "bytes": 240648,
+        "sha256": "49a38c677554a6ebc1e30714e21b9a21ddff54d7f7f99e7c276c66c0f1001717",
+        "page": 3,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 1601,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page4 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\partial-report\\Yash-Nov2-Report-4.png",
+        "bytes": 267233,
+        "sha256": "eb380f2a49d506a17b8dd39481c53f89ce4f9f48df8d4863e46c93d2dc021e28",
+        "page": 4,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2509,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page5 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\partial-report\\Yash-Nov2-Report-5.png",
+        "bytes": 368240,
+        "sha256": "d63bbb86dcfea06960c0da1e3de879e379e02e58734141e73a897dc1fc177926",
+        "page": 5,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 3602,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      }
+    ],
+    "all5_header_pixel_strips_identical": "2329725c621d8be24ff9914bb5865ecc7624fff8ef14fb016c5d0d538fce4830",
+    "all5_left_footer_pixel_strips_identical": "da6edb8068dd9472e59ed3c94293a46c53bf45b94f70f01d01171d28192bc8c4"
+  },
+  "quality_table_and_chart": "independently rescored descriptive first11 prefix; no missing-question zero fill",
+  "new_inference": false,
+  "evidence_manifest": {
+    "label": "Full reference1-8 sources and product hashes",
+    "kind": "source",
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Professor-Report-Evidence-Manifest-20261102.json",
+    "bytes": 17667,
+    "sha256": "6b058e47a1fa3c58d8ce206e4c630b0b11cada7f709c4755de83d137c525b03d"
+  },
+  "factual_qa": {
+    "all12_csv_exact": true,
+    "branch_counts_both_runs": "238 total, 234 completed, 4 failed",
+    "report_text_full_read": true,
+    "partial_scope_not_complete_study": true,
+    "original_derived_explicit": true
+  },
+  "pdf_skill_full_read": true,
+  "workspace_dependencies_loaded": true,
+  "marker_successfully_run_once_before_first_pdf_authoring": true,
+  "source_or_vault_changes": false
+}

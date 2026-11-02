@@ -1,0 +1,13 @@
+{
+  "schema": "yash-primary-root-publication-qa-v1",
+  "verified_central": "2026-11-02T04:35:11.039203-06:00",
+  "report_pdf_sha256": "49f7e85a670aa38d54434ffa506a1a4f90826eae6288badf591d72e48cfbe4fd",
+  "report_txt_sha256": "3074b5182affe70e3d2b233bdc4c55e36fde5616d0db857ddb1051b312842656",
+  "report_manifest_sha256": "6b058e47a1fa3c58d8ce206e4c630b0b11cada7f709c4755de83d137c525b03d",
+  "source_entries_byte_hash_verified": 43,
+  "visual_review": "Primary inspected all five page layouts/content, then the final page2 measured-call wording; report author inspected all five final renders. Full-size all-seven-arm figure inspected by both. No clipping/overlap/glyph defects.",
+  "content_review": "Primary fully read report narrative, all seven CSV rows/all12metrics, separate current paper brief and complete evidence/QA manifests.",
+  "independent_csv_agreement_receipt": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary11-CSV-Root-Verification-20261102.json",
+  "scientific_status": "Partial only: 11/20 primary questions; whole-run EVIDENCE_MISMATCH retained; original seed1 interrupted; both new presence checks pending at last recorded browser checkpoint.",
+  "new_inference_or_policy_changes": false
+}

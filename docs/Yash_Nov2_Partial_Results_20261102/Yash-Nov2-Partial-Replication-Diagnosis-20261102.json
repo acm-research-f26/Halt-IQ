@@ -1,0 +1,327 @@
+{
+  "schema": "yash-professor-partial-replication-diagnosis-v1",
+  "prepared_local": "2026-11-02T03:46:46.021026-06:00",
+  "author": "Yash Baruah",
+  "status": "partial_benchmark_only_not_final_comparison",
+  "no_policy_or_model_changes": true,
+  "no_extraction_or_exported_code_execution": true,
+  "sources": {
+    "zip": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\cloud-exports\\Yash_HotpotQA_Orchestration_replication_20261102-015450-04111781.zip",
+      "bytes": 4966256,
+      "sha256": "76b2ab477b5c3dd8d2d8c5cfc76fdaef8638e116a17ba9931651349bb429b2fe"
+    },
+    "independent_audit": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Interrupted-Replication-Independent-Audit-20261102.json",
+      "sha256": "b7d41462c9428b4179fbf478907d841b29fc5aa01d2379bda6ffa247417d8edc",
+      "status": "INCOMPLETE",
+      "scoring_scope": "raw-answer and supporting/joint metrics independently rescored against provided pinned digest-verified dataset",
+      "mismatch_findings": 0
+    },
+    "member_sha256": {
+      "notebook-storage.json": "05d26377bc4d0bebf91f11229ba645ff97a72905e92550d61734dfbc4c0d56e8",
+      "study/study-config.json": "3053e20d7c1951f5ae25d0c43e111977203e46a7955e5d8ad0dae7c392a2efd0",
+      "study/freeze.json": "e09a48c75596b10d261e7c29856d433441788ff41fab665ae3dbdb07392b6e66",
+      "study/heads/protocol.json": "9bf6d18212f8a3568a44050ec3999e54532fd70536ddfad1198d316d4d8a725f",
+      "study/heads/training-freeze.json": "54082cf50a50ec50151da2855762290444915cdfab0e49de9221d80b10b07992",
+      "study/training-examples.jsonl": "5cfc4ce594e3a4caa4d5110654f04bde6e74131ccba7fd64978c5398c8883925",
+      "study/training-branches.jsonl": "1e3e83e5baafde862227440bacb37f6e262f17fbf5dc06a44547dd49746811e6",
+      "study/policy-analysis.json": "b1694695b8dea9456d4bcfc79026a4abf3e16af100d88a2b8fe9b7979d34e761",
+      "study/episodes.jsonl": "2fa5cb5f7af63c5099ee5a6c4cb8291bf56327c8a7dfca0c8774307616ac510d",
+      "study/physical-calls.jsonl": "08aafc204a5dbbb2ba45b91a1cf337518893646a739083462c3b441620d0a813",
+      "study/critic-calls.jsonl": "3573bfda82498d8e4f3e36db87adb86c548702f136553a95dd5cf9be1d48a332",
+      "study/runtime/qualification.json": "b8ed0344ac51d6bba816d3f0fccae1f171aee87deeb939080e41872f7d4611b0"
+    },
+    "watcher_recovery_verification": {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Notebook-Watcher-Recovery-Verification-20261102.json",
+      "sha256": "4ed5afbbab3ee43f5bcb1418e6b925739ccef667265a0412ffa7998f5c9c286e",
+      "scope": "prepared monitor repair, pinned source/cohort unchanged, retained interrupted benchmark, deadline; episode KeyboardInterrupt independently in raw ZIP"
+    }
+  },
+  "executed_source_commit": "1387ebd08ff907f0f07699e1d338e50b5552d1a9",
+  "deployment_seed": 1,
+  "frozen_utc": "2026-11-02T08:34:02.261708+00:00",
+  "qualification": {
+    "status": "PASS",
+    "recorded_role_calls": 5,
+    "recorded_critic_calls": 2,
+    "feedback_binding": "independent audit binds actual challenger raw response to recorded state and next writer request"
+  },
+  "train_dev_labels": {
+    "train": {
+      "questions": 20,
+      "states": 59,
+      "target_actions": {
+        "STOP": 52,
+        "INVOKE": 3,
+        "REVISE": 4
+      }
+    },
+    "dev": {
+      "questions": 10,
+      "states": 30,
+      "target_actions": {
+        "STOP": 20,
+        "REVISE": 6,
+        "INVOKE": 4
+      }
+    }
+  },
+  "branch_statuses": {
+    "train": {
+      "completed": 154,
+      "failed": 4
+    },
+    "dev": {
+      "completed": 80
+    }
+  },
+  "failed_training_branches": [
+    {
+      "stage": "train",
+      "question_id": "5ab48ec25542991779162cdc",
+      "state_id": "initial/REVISE",
+      "action": "REVISE",
+      "status": "failed",
+      "attempted_agent_calls": 2,
+      "known_recorded_tokens": 5208,
+      "utility": -0.004,
+      "error": {
+        "message": "Error code: 400 - {'error': {'type': 'ValueError', 'message': 'Generated raw output failed strict owned schema validation'}}",
+        "type": "BadRequestError"
+      }
+    },
+    {
+      "stage": "train",
+      "question_id": "5ab48ec25542991779162cdc",
+      "state_id": "initial/REVISE",
+      "action": "INVOKE",
+      "status": "failed",
+      "attempted_agent_calls": 3,
+      "known_recorded_tokens": 7879,
+      "utility": -0.006,
+      "error": {
+        "message": "Error code: 400 - {'error': {'type': 'ValueError', 'message': 'Generated raw output failed strict owned schema validation'}}",
+        "type": "BadRequestError"
+      }
+    },
+    {
+      "stage": "train",
+      "question_id": "5ab48ec25542991779162cdc",
+      "state_id": "initial/INVOKE",
+      "action": "REVISE",
+      "status": "failed",
+      "attempted_agent_calls": 2,
+      "known_recorded_tokens": 5208,
+      "utility": -0.004,
+      "error": {
+        "message": "Error code: 400 - {'error': {'type': 'ValueError', 'message': 'Generated raw output failed strict owned schema validation'}}",
+        "type": "BadRequestError"
+      }
+    },
+    {
+      "stage": "train",
+      "question_id": "5ae73d505542991e8301cc2c",
+      "state_id": "initial",
+      "action": "INVOKE",
+      "status": "failed",
+      "attempted_agent_calls": 2,
+      "known_recorded_tokens": 3720,
+      "utility": -0.004,
+      "error": {
+        "message": "Challenger cites an absent public sentence",
+        "type": "ValueError"
+      }
+    }
+  ],
+  "failed_physical_calls": [
+    {
+      "call_id": "fdb096f33eb8440c8fef0cac2fbcb4d7",
+      "stage": "train",
+      "role": "reviewer",
+      "question_id": "5ab48ec25542991779162cdc",
+      "finish_reason": "length",
+      "format_status": "incomplete_length",
+      "format_error": {
+        "message": "The output exhausted its declared token budget",
+        "type": "ValueError"
+      },
+      "known_response_tokens": 2656
+    },
+    {
+      "call_id": "463375c975504991a72f82f6451fa81b",
+      "stage": "train",
+      "role": "reviewer",
+      "question_id": "5ab48ec25542991779162cdc",
+      "finish_reason": "length",
+      "format_status": "incomplete_length",
+      "format_error": {
+        "message": "The output exhausted its declared token budget",
+        "type": "ValueError"
+      },
+      "known_response_tokens": 2656
+    },
+    {
+      "call_id": "642d2277c7ff4febad05bd8b7eeddcf5",
+      "stage": "train",
+      "role": "reviewer",
+      "question_id": "5ab48ec25542991779162cdc",
+      "finish_reason": "length",
+      "format_status": "incomplete_length",
+      "format_error": {
+        "message": "The output exhausted its declared token budget",
+        "type": "ValueError"
+      },
+      "known_response_tokens": 2656
+    }
+  ],
+  "heads": [
+    {
+      "seed": 0,
+      "sha256": "f040868f09c47f0980a5fbb18ca158fa0e997dc3c8c91a4928727a3af40934f4",
+      "selected_epoch": 2,
+      "selected_dev_utility": 0.47051113565017777,
+      "epochs_completed": 200
+    },
+    {
+      "seed": 1,
+      "sha256": "64c360a3722e39287e4e1f3b4ef382daf10bdd6682e2992d78a1d6395b9eccbe",
+      "selected_epoch": 1,
+      "selected_dev_utility": 0.43295557813594737,
+      "epochs_completed": 200
+    },
+    {
+      "seed": 2,
+      "sha256": "5de7ec522c754d0a70aeffb608aa389559471ef3c50641fa93fcd5d5f0de993e",
+      "selected_epoch": 133,
+      "selected_dev_utility": 0.41528891054789224,
+      "epochs_completed": 200
+    },
+    {
+      "seed": 3,
+      "sha256": "9e5cbf134a216d3d459add1b82c549270a7f9f78913f001c72597fad0edf3a26",
+      "selected_epoch": 146,
+      "selected_dev_utility": 0.41528891054789224,
+      "epochs_completed": 200
+    },
+    {
+      "seed": 4,
+      "sha256": "20e118be89578862ff450dcf3b07779f30fff1af2b1b6b80b621d72910c1e475",
+      "selected_epoch": 2,
+      "selected_dev_utility": 0.4459555788139502,
+      "epochs_completed": 200
+    }
+  ],
+  "physical_work_by_stage": {
+    "train": {
+      "attempted_role_calls": 277,
+      "role_counts": {
+        "writer": 118,
+        "reviewer": 118,
+        "challenger": 41
+      },
+      "statuses": {
+        "completed": 274,
+        "failed": 3
+      },
+      "known_response_tokens": 602418,
+      "unknown_token_calls": 0,
+      "critic_calls": 115
+    },
+    "dev": {
+      "attempted_role_calls": 140,
+      "role_counts": {
+        "writer": 60,
+        "reviewer": 60,
+        "challenger": 20
+      },
+      "statuses": {
+        "completed": 140
+      },
+      "known_response_tokens": 315723,
+      "unknown_token_calls": 0,
+      "critic_calls": 60
+    },
+    "test": {
+      "attempted_role_calls": 116,
+      "role_counts": {
+        "writer": 58,
+        "reviewer": 52,
+        "challenger": 6
+      },
+      "statuses": {
+        "completed": 116
+      },
+      "known_response_tokens": 253535,
+      "unknown_token_calls": 0,
+      "critic_calls": 54
+    }
+  },
+  "partial_test": {
+    "planned": 140,
+    "attempted": 20,
+    "completed": 19,
+    "interrupted": 1,
+    "pending": 120,
+    "distinct_observed_test_questions": 3,
+    "deployed_actions_by_arm": {
+      "fixed1": {
+        "STOP": 3
+      },
+      "legacy_combined6": {
+        "REVISE": 10,
+        "STOP": 2
+      },
+      "strands": {
+        "REVISE": 4
+      },
+      "binary_and": {
+        "REVISE": 6
+      },
+      "always_revise3": {
+        "REVISE": 6
+      },
+      "always_invoke": {
+        "INVOKE": 3,
+        "REVISE": 3
+      },
+      "learned3": {
+        "INVOKE": 3,
+        "STOP": 3
+      }
+    },
+    "learned3_completed_attempts": 3,
+    "learned3_observed_pattern": [
+      "INVOKE",
+      "STOP"
+    ],
+    "full_comparison_deltas": null
+  },
+  "inherited_head_diagnostic": {
+    "AND_vs_strands_disagreements": 0,
+    "checkpoint_seed": 0,
+    "head_threshold": 0.5,
+    "observed_states": 39,
+    "raw_head_vs_strands_disagreements": 39,
+    "scope": "same observed public draft prefixes in matched test trajectories; repeated tasks across arms are not independent samples",
+    "strands_threshold": 0.8
+  },
+  "operational_retry": {
+    "cause": "parent watcher status-file existence/read race; interruption cause supplied by root operational audit, not inferred from answer scores",
+    "recorded_episode_error": "KeyboardInterrupt",
+    "first_partial_run_retained": true,
+    "replacement_rule": "first full post-watcher-repair run on same frozen cohort/seed/settings; no quality-based choice",
+    "replacement_completion": "pending verified export"
+  },
+  "interpretation_limits": [
+    "Train targets are strongly STOP-weighted, a descriptive observation rather than proof of causal performance.",
+    "Three learned deployment attempts demonstrate actual challenger use in this partial run, not its benefit.",
+    "Four failed action branches retain zero answer score and measured action-call penalty; missing child is not imputed.",
+    "All pending test outcomes and full-panel response-token totals remain unknown.",
+    "No final answer-quality table or primary-versus-replication conclusion is drawn from this partial panel.",
+    "Freeze markers and response completion times do not independently prove invocation-start timing."
+  ],
+  "deadline_local": "2026-11-02T09:00:00-06:00",
+  "hard_stop_local": "2026-11-02T08:50:00-06:00",
+  "frozen_plan_sha256": "100586312f72919898729f288c11934e9c9cc2c6dde1174d5778fc75796028d2"
+}

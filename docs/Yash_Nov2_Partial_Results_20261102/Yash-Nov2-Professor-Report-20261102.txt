@@ -1,0 +1,173 @@
+HaltIQ Orchestration Study
+
+Yash Baruah | Partial primary results | November 2, 2026
+
+One writer led the recovered prefix
+
+On the first eleven planned questions, learned3 reached answer F1 0.591 versus 0.409 for the verifier loop and inherited binary AND. The one-writer baseline reached 0.652 with fewer calls. These are descriptive partial results: all eight failed question-arm attempts score zero, while the other nine questions remain unknown. Joint exact match was zero in every arm. The full twenty-question comparison is not complete. [1]
+
+Evidence available | Recorded status | What it supports
+
+Recovered primary, seed 0 | 77 / 140 attempts: 69 completed, 8 failed, 63 pending | Twelve-metric rescoring and 785 raw bindings reconcile. Whole-run audit retains EVIDENCE_MISMATCH for incomplete capture.
+
+Retained replication, seed 1 | 20 / 140 attempts: 19 completed, 1 interrupted, 120 pending | Audited incomplete panel; kept separate from primary and operational retry.
+
+Outstanding completion | Nine primary questions unknown; one unresolved later writer invocation | No full-panel gains or completed recovery run are claimed. Backend status remains unknown.
+
+My contribution and the team components
+
+I integrated the roles, the new three-action linear policy, frozen data splits and evidence accounting into new Yash-owned Colab notebooks. I added action-branch collection, development-only checkpoint selection, failure-inclusive evaluation, and correlation of physical requests with costs. Vedanshi's Hobson/Decider and BGE verifier/reranker method and Shree's inherited linear stopping head are credited comparison components. [3, 4]
+
+Real interactions with shared weights
+
+Separate Strands SDK Agent instances serve as writer, reviewer and conditional challenger. All three use the same pinned, locally served Qwen model on Colab. The reviewer returns actual feedback; INVOKE adds a real challenger response and evidence to the next writer prompt. The inherited team verifier supplies a separate score. The Python orchestrator and linear policy are the control plane. [3, 4]
+
+Primary learned3 stopped after its first draft on all ten completed attempts and never invoked the challenger; one initial reviewer chain failed. The partial seed 1 learned arm instead invoked and then stopped on three attempts. These observations do not demonstrate an adaptive three-action advantage or a challenger benefit. [1, 2]
+
+
+[PAGE BREAK]
+
+
+Frozen methods
+
+The pinned HotpotQA distractor validation plan contains 20 training, 10 development and 20 test questions. All fifty IDs are unique and excluded from 350 previously used or prepared IDs. Selection is seeded and stratified using public type, level and IDs. Gold labels are confined to external scoring; they never enter role prompts, features or the action mask. [3]
+
+Action | Actual transition
+
+STOP | Return the current draft; no further role call.
+
+REVISE | Writer uses previous draft and reviewer feedback; then reviewer and team verifier assess the revision.
+
+INVOKE | Challenger examines the public evidence; its actual response enters writer revision, then review and verification.
+
+Matched paths allow at most three drafts, ten attempted role calls, and one INVOKE transition. A parser-level format correction is another measured call within that cap. Server/SDK failures propagate. A cap return is not gate approval. [3, 4]
+
+Training obtains one initial state per question, then clones it to measure every legal one-step action and reachable depth-one branches. Utility is returned answer F1 minus 0.002 per additional attempted role call; failed branches retain zero answer F1 and their measured penalty. Physical shared-prefix calls are counted once. The classifier uses eleven public features and question-balanced masked cross-entropy. [3]
+
+Five CPU linear heads use initialization seeds 0-4, Adam, 200 epochs, learning rate 0.03 and L2 0.001. Each keeps its earliest best development-utility epoch. All five freeze before test work; deployment head 0 is primary and head 1 is predeclared replication. This is one-step supervised action learning, not language-model fine-tuning. [3]
+
+Features summarize verifier confidence, reviewer approval, draft position, answer change/repetition, feedback cues, challenger use and text lengths. Runtime uses Qwen2.5-1.5B-Instruct in FP16, with output caps of 512 writer tokens and 256 each for reviewer/challenger. Hobson v19 via Decider and BGE provide separate verification/evidence ranking. Shared LMFE 0.11.3 schema filtering and strict postvalidation apply to every arm. They do not ensure factual support or avoid truncation; numeric minimum bounds require postvalidation. [3, 4]
+
+Arm | Rule | Role/draft budget
+
+fixed1 | One writer answer | 1 draft; writer only
+
+legacy_combined6 | Inherited six-draft combined function | Secondary unmatched 6-draft control
+
+strands | Stop when team-verifier score >= 0.8 | 3 drafts; <= 10 role calls
+
+binary_and | Verifier stop AND inherited head >= 0.5 | Same matched cap
+
+always_revise3 | Revise to the matched cap | Same matched cap
+
+always_invoke | One challenger transition, then revise | Same matched cap
+
+learned3 | Learned STOP / REVISE / INVOKE choice | Same matched cap
+
+
+[PAGE BREAK]
+
+
+Primary comparison on the first 11 of 20 questions
+
+The denominator is eleven for every arm. Selection is the longest fully attempted prefix of the frozen question order, including all eight failures at zero. It is not a valid-only or favorable subset. The remaining nine questions and 63 planned attempts are unknown. Primary scoring returns the last draft. [1]
+
+Primary arm | Valid / 11 | Answer F1 | Joint F1 | Mean calls | Mean writers
+
+fixed1 | 11/11 | 0.652 | 0.158 | 1.00 | 1.00
+
+legacy_combined6 | 10/11 | 0.409 | 0.000 | 8.55 | 4.64
+
+strands | 10/11 | 0.409 | 0.045 | 4.91 | 2.45
+
+binary_and | 10/11 | 0.409 | 0.045 | 4.91 | 2.45
+
+always_revise3 | 10/11 | 0.409 | 0.045 | 5.64 | 2.82
+
+always_invoke | 8/11 | 0.409 | 0.045 | 6.00 | 2.45
+
+learned3 | 10/11 | 0.591 | 0.158 | 2.00 | 1.00
+
+Chart source: Yash-Nov2-Primary11-Report-Chart-20261102.png; all seven arms retained in the table and standalone PNG/SVG.
+
+Within this prefix, 363 recorded role calls match 363 start events and 783,702 response tokens reconcile to raw receipts. Calls and writer generations include failures and corrections. The later unmatched invocation is on question 12, outside the prefix; its outcome and resources remain unknown. Verifier/reranker hardware work is separate. [1, 5]
+
+Learned3 used 2.00 role calls per question versus 4.91 for the verifier/AND loops, but the one-writer baseline used 1.00 and had the highest answer F1. The legacy six-draft arm used 8.55 calls and is a secondary, unmatched-budget control. Supporting-fact exact match and joint exact match were zero for every arm; answer quality did not establish complete evidence grounding. All twelve metrics are supplied in the accompanying CSV. [1]
+
+
+[PAGE BREAK]
+
+
+Training and action diagnostics
+
+Both retained runs used identical training-example bytes: 59 usable states from twenty training questions and thirty states from ten development questions. All five corresponding head parameter sets also match across runs. Seed 0 selected epoch 2; seed 1 selected epoch 1 by development utility. Both fits completed all 200 epochs before freezing. Seed deployment was predeclared, not chosen by test quality. [1, 2, 7]
+
+Partition | Questions | States | STOP | REVISE | INVOKE
+
+Training | 20 | 59 | 52 | 4 | 3
+
+Development | 10 | 30 | 20 | 6 | 4
+
+Of 238 recorded action branches per run, four training branches failed: three reviewer outputs hit the 256-token cap, and one challenger branch still cited an absent public sentence after correction. Their zero answer scores and measured penalties remain. STOP is 52 of 59 training targets; this reflects these measured utilities, not proof that class balancing would improve the policy. [1, 2]
+
+Retained run | Collection calls | Collection tokens | Test calls | Test tokens
+
+Primary seed 0 | 417 | 918,141 | 363 | 783,702
+
+Interrupted seed 1 | 417 | 918,141 | 116 | 253,535
+
+These are scoped, known role-response sums, not full-run totals. Collection also made 175 verifier calls per run; the recorded test portions made 168 and 54 respectively. Each qualification separately made five role calls and two verifier calls, excluded above. The interrupted benchmark and its costs are retained separately. [1, 2]
+
+Predeclared best-prefix diagnostic
+
+Independent post-freeze scoring reproduced all twelve metrics for 69 completed primary predictions and 48 diagnostic candidates exactly. Prefix selection uses maximum observed team-verifier score, earliest tie; it adds no generation and retains all full path costs. All eleven questions stay in this diagnostic denominator, with failed attempts at zero. [1, 6]
+
+Arm | Last F1 | Prefix F1 | Last joint F1 | Prefix joint F1
+
+strands | 0.409 | 0.591 | 0.045 | 0.158
+
+binary_and | 0.409 | 0.591 | 0.045 | 0.158
+
+always_revise3 | 0.409 | 0.591 | 0.045 | 0.158
+
+always_invoke | 0.409 | 0.409 | 0.045 | 0.158
+
+learned3 | 0.591 | 0.591 | 0.158 | 0.158
+
+The diagnostic selected draft 1 in 45 cases and draft 2 in three. Later revisions sometimes lost a correct answer or citations, but prefix selection was not uniformly better: one later joint score was 0.5 versus 0.4 at the earliest tied prefix. Candidate retention is a future hypothesis, not a replacement primary result or a changed policy. [6]
+
+
+[PAGE BREAK]
+
+
+Interpretation limits and outstanding work
+
+Each arm made a fresh writer request; initial draft objects matched across all seven on these eleven questions. Only training clones parent states. Both runs used identical collected examples and corresponding head parameters. Deployment 0/1 chooses the head initialization/checkpoint and arm order, not stochastic language-model sampling: the writer decodes greedily. Exact cross-hardware reproducibility is not established. [1, 7]
+
+No trained feature-removal ablation isolates the continuous verifier feature. Primary learned3 chose neither REVISE nor INVOKE. Always-invoke made real challenges but did not improve answer F1 here. Adaptive benefit, component synergy and statistical superiority remain unestablished. Arms and seeds repeat twenty planned questions, not forty independent questions. [1, 3]
+
+The unchanged audit remains EVIDENCE_MISMATCH: summary.json is absent, 77/140 episodes were recovered, and 781 starts have 780 ledger entries. The unmatched writer start is on question 12. Original journal entries match all 785 original correlation hashes; reconstituted receipt files are explicitly derived. No cloud summary or missing outcome was invented. [1, 5]
+
+The first replication watcher interruption and retained benchmark costs remain separate from any operational retry. No full recovery panel is present in this evidence set. New repaired templates enforce 08:50 CST for the 09:00 deadline; the old primary had a 09:20 monitor and its backend remains unknown. Full twenty-question quality, remaining resources and completion require new evidence. Role-response costs exclude verifier/reranker total compute and dollar pricing. [2, 5]
+
+Connection to the paper
+
+Zhang, Sun, Guo and Gogate's defeasible video-entailment paper uses competing rationales and additional evidence to refine a decision. I adapted that evidence-linked challenge into a callable role. The paper does not supply this learned routing objective or any HaltIQ experimental gain. Its short summary is a separate document. [8]
+
+Evidence references
+
+[1] Primary11-Prefix-Independent-Analysis and twelve-metric CSV; unchanged whole-run audit SHA256 07cf821aaee1... (EVIDENCE_MISMATCH). The accompanying evidence manifest supplies full paths/hashes.
+
+[2] Retained seed 1 ZIP 20261102-015450-04111781, SHA256 76b2ab477b5c...; independent raw-scoring audit b7d41462c942...; Partial-Replication-Diagnosis receipt ba60656133ff... (incomplete).
+
+[3] Executed study source 1387ebd08ff907f0f07699e1d338e50b5552d1a9; frozen plan SHA256 100586312f72...; new runner, protocol and policy modules in the preserved source bundle.
+
+[4] Preserved role/orchestration source and qualification/response receipts; team components credited above.
+
+[5] Primary lossless-recovery verification 5f4be7977d8a...; unmatched-invocation scope receipt 3267739fad30...; watcher repair receipt 4ed5afbbab3e.... Existing-primary backend status remains outstanding.
+
+[6] Primary independent candidate rescoring in [1]; separate interrupted-replication diagnostic 9a7f4365dbc9...; pinned post-freeze reference SHA256 00458b31b951.... No new inference.
+
+[7] Seeding-and-Component-Protocol-Review receipt: module hashes and source-line evidence. Actual record/head comparison in [1].
+
+[8] Yue Zhang, Jilei Sun, Yunhui Guo and Vibhav Gogate. Can Video Large Multimodal Models Think Like Doubters-or Double-Down: A Study on Defeasible Video Entailment. arXiv:2506.22385v2 (2025). https://arxiv.org/pdf/2506.22385v2

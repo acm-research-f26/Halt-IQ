@@ -1,0 +1,372 @@
+{
+  "schema": "yash-independent-export-audit-batch-v1",
+  "audited_utc": "2026-11-02T09:39:38.451791+00:00",
+  "runs": [
+    {
+      "input": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\cloud-exports\\Yash_HotpotQA_Orchestration_replication_20261102-015450-04111781.zip",
+      "schema": "yash-independent-export-audit-v1",
+      "scoring_scope": "raw-answer and supporting/joint metrics independently rescored against provided pinned digest-verified dataset",
+      "test_question_ids": [
+        "5a80870d5542992bc0c4a752",
+        "5a7bf84b5542996dd594b875",
+        "5a7723fa55429966f1a36ca0",
+        "5ac43c7b5542997ea680ca34",
+        "5abb73425542996cc5e49ff5",
+        "5ae76dfd5542997b22f6a755",
+        "5ade8ad95542992fa25da7b8",
+        "5ab7ef0f5542991d322237ca",
+        "5adc0d2955429947ff1738e6",
+        "5a7c716d55429935c91b51b3",
+        "5a8f24cc55429924144829e7",
+        "5a84ed765542994c784dda8b",
+        "5a9072dd5542990a98493656",
+        "5adc294c5542996e685252cf",
+        "5a726ba35542997f827839c0",
+        "5a775f8a5542994aec3b72ba",
+        "5ae7ea695542994a481bbe17",
+        "5ae340a85542994393b9e668",
+        "5a8ee6915542990e94052bad",
+        "5a85fa815542996432c57155"
+      ],
+      "qualification_status": "PASS",
+      "planned_test_episodes": 140,
+      "attempted_test_episodes": 20,
+      "metrics": {
+        "fixed1": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 3,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 17,
+          "metrics": {
+            "em": 0.1,
+            "f1": 0.1,
+            "prec": 0.1,
+            "recall": 0.1,
+            "sp_em": 0.0,
+            "sp_f1": 0.05333333333333333,
+            "sp_prec": 0.075,
+            "sp_recall": 0.041666666666666664,
+            "joint_em": 0.0,
+            "joint_f1": 0.05333333333333333,
+            "joint_prec": 0.075,
+            "joint_recall": 0.041666666666666664
+          },
+          "iterations": 3,
+          "mean_writer_iterations": 0.15,
+          "agent_calls": {
+            "writer": 3
+          },
+          "attempted_agent_calls": 3,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 6494,
+          "journal_complete": false,
+          "critic_calls": 0
+        },
+        "legacy_combined6": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 2,
+          "failed": 0,
+          "interrupted": 1,
+          "pending": 17,
+          "metrics": {
+            "em": 0.05,
+            "f1": 0.05,
+            "prec": 0.05,
+            "recall": 0.05,
+            "sp_em": 0.0,
+            "sp_f1": 0.0,
+            "sp_prec": 0.0,
+            "sp_recall": 0.0,
+            "joint_em": 0.0,
+            "joint_f1": 0.0,
+            "joint_prec": 0.0,
+            "joint_recall": 0.0
+          },
+          "iterations": 16,
+          "mean_writer_iterations": 0.8,
+          "agent_calls": {
+            "reviewer": 13,
+            "writer": 16
+          },
+          "attempted_agent_calls": 29,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 63292,
+          "journal_complete": false,
+          "critic_calls": 15
+        },
+        "strands": {
+          "planned": 20,
+          "attempted": 2,
+          "completed": 2,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 18,
+          "metrics": {
+            "em": 0.0,
+            "f1": 0.0,
+            "prec": 0.0,
+            "recall": 0.0,
+            "sp_em": 0.0,
+            "sp_f1": 0.0,
+            "sp_prec": 0.0,
+            "sp_recall": 0.0,
+            "joint_em": 0.0,
+            "joint_f1": 0.0,
+            "joint_prec": 0.0,
+            "joint_recall": 0.0
+          },
+          "iterations": 6,
+          "mean_writer_iterations": 0.3,
+          "agent_calls": {
+            "reviewer": 6,
+            "writer": 6
+          },
+          "attempted_agent_calls": 12,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 26475,
+          "journal_complete": false,
+          "critic_calls": 6
+        },
+        "binary_and": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 3,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 17,
+          "metrics": {
+            "em": 0.05,
+            "f1": 0.05,
+            "prec": 0.05,
+            "recall": 0.05,
+            "sp_em": 0.0,
+            "sp_f1": 0.025,
+            "sp_prec": 0.05,
+            "sp_recall": 0.016666666666666666,
+            "joint_em": 0.0,
+            "joint_f1": 0.025,
+            "joint_prec": 0.05,
+            "joint_recall": 0.016666666666666666
+          },
+          "iterations": 9,
+          "mean_writer_iterations": 0.45,
+          "agent_calls": {
+            "reviewer": 9,
+            "writer": 9
+          },
+          "attempted_agent_calls": 18,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 39145,
+          "journal_complete": false,
+          "critic_calls": 9
+        },
+        "always_revise3": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 3,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 17,
+          "metrics": {
+            "em": 0.05,
+            "f1": 0.05,
+            "prec": 0.05,
+            "recall": 0.05,
+            "sp_em": 0.0,
+            "sp_f1": 0.025,
+            "sp_prec": 0.05,
+            "sp_recall": 0.016666666666666666,
+            "joint_em": 0.0,
+            "joint_f1": 0.025,
+            "joint_prec": 0.05,
+            "joint_recall": 0.016666666666666666
+          },
+          "iterations": 9,
+          "mean_writer_iterations": 0.45,
+          "agent_calls": {
+            "reviewer": 9,
+            "writer": 9
+          },
+          "attempted_agent_calls": 18,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 39145,
+          "journal_complete": false,
+          "critic_calls": 9
+        },
+        "always_invoke": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 3,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 17,
+          "metrics": {
+            "em": 0.05,
+            "f1": 0.05,
+            "prec": 0.05,
+            "recall": 0.05,
+            "sp_em": 0.0,
+            "sp_f1": 0.0,
+            "sp_prec": 0.0,
+            "sp_recall": 0.0,
+            "joint_em": 0.0,
+            "joint_f1": 0.0,
+            "joint_prec": 0.0,
+            "joint_recall": 0.0
+          },
+          "iterations": 9,
+          "mean_writer_iterations": 0.45,
+          "agent_calls": {
+            "challenger": 3,
+            "reviewer": 9,
+            "writer": 9
+          },
+          "attempted_agent_calls": 21,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 46011,
+          "journal_complete": false,
+          "critic_calls": 9
+        },
+        "learned3": {
+          "planned": 20,
+          "attempted": 3,
+          "completed": 3,
+          "failed": 0,
+          "interrupted": 0,
+          "pending": 17,
+          "metrics": {
+            "em": 0.1,
+            "f1": 0.1,
+            "prec": 0.1,
+            "recall": 0.1,
+            "sp_em": 0.0,
+            "sp_f1": 0.03333333333333333,
+            "sp_prec": 0.05,
+            "sp_recall": 0.025,
+            "joint_em": 0.0,
+            "joint_f1": 0.03333333333333333,
+            "joint_prec": 0.05,
+            "joint_recall": 0.025
+          },
+          "iterations": 6,
+          "mean_writer_iterations": 0.3,
+          "agent_calls": {
+            "challenger": 3,
+            "reviewer": 6,
+            "writer": 6
+          },
+          "attempted_agent_calls": 15,
+          "total_tokens": null,
+          "mean_total_tokens": null,
+          "known_recorded_tokens": 32973,
+          "journal_complete": false,
+          "critic_calls": 6
+        }
+      },
+      "deployment_seed": 1,
+      "physical_test_by_arm": {
+        "fixed1": {
+          "attempted_calls": 3,
+          "known_recorded_tokens": 6494
+        },
+        "legacy_combined6": {
+          "attempted_calls": 29,
+          "known_recorded_tokens": 63292
+        },
+        "strands": {
+          "attempted_calls": 12,
+          "known_recorded_tokens": 26475
+        },
+        "binary_and": {
+          "attempted_calls": 18,
+          "known_recorded_tokens": 39145
+        },
+        "always_revise3": {
+          "attempted_calls": 18,
+          "known_recorded_tokens": 39145
+        },
+        "always_invoke": {
+          "attempted_calls": 21,
+          "known_recorded_tokens": 46011
+        },
+        "learned3": {
+          "attempted_calls": 15,
+          "known_recorded_tokens": 32973
+        }
+      },
+      "failed_or_interrupted_test_episodes": 1,
+      "reported_study_status": "interrupted",
+      "physical_receipts": {
+        "study_calls": 533,
+        "qualification_calls": 5,
+        "reconciled_responses": 538,
+        "known_study_response_tokens": 1171676,
+        "unknown_response_calls": 0,
+        "scope": "writer/reviewer/challenger responses; no verifier token-pricing or hardware-total claim"
+      },
+      "critic_work": {
+        "recorded_study_calls": 229,
+        "qualification_calls": 2,
+        "scope": "separate verifier/reranker attempts and time; no language-model response token-pricing"
+      },
+      "heads": {
+        "heads": [
+          {
+            "seed": 0,
+            "sha256": "f040868f09c47f0980a5fbb18ca158fa0e997dc3c8c91a4928727a3af40934f4",
+            "selected_epoch": 2
+          },
+          {
+            "seed": 1,
+            "sha256": "64c360a3722e39287e4e1f3b4ef382daf10bdd6682e2992d78a1d6395b9eccbe",
+            "selected_epoch": 1
+          },
+          {
+            "seed": 2,
+            "sha256": "5de7ec522c754d0a70aeffb608aa389559471ef3c50641fa93fcd5d5f0de993e",
+            "selected_epoch": 133
+          },
+          {
+            "seed": 3,
+            "sha256": "9e5cbf134a216d3d459add1b82c549270a7f9f78913f001c72597fad0edf3a26",
+            "selected_epoch": 146
+          },
+          {
+            "seed": 4,
+            "sha256": "20e118be89578862ff450dcf3b07779f30fff1af2b1b6b80b621d72910c1e475",
+            "selected_epoch": 2
+          }
+        ],
+        "freeze_markers_checked": true,
+        "limitation": "Journal order, declared zero-test markers and response timestamps support the freeze; response completion timestamps do not independently prove invocation-start time."
+      },
+      "status": "INCOMPLETE",
+      "findings": [
+        {
+          "level": "incomplete",
+          "code": "incomplete_test_grid",
+          "detail": "20/140 attempted"
+        }
+      ],
+      "limitations": [
+        "A matching archive manifest provides internal integrity, not independent proof of execution or protection against coordinated rewriting of all evidence.",
+        "Default answer EM/F1 aggregation trusts each recorded metric; independent raw-answer scoring needs the explicit post-freeze dataset opt-in.",
+        "Each run has the same twenty test questions; seeds/arms are correlated repeats and are never pooled into forty independent questions.",
+        "Known response-token sums exclude unknown/missing responses and verifier/reranker hardware work; no end-to-end dollar or total-compute claim."
+      ]
+    }
+  ],
+  "same_test_questions_across_runs": true,
+  "independent_test_questions": 20,
+  "pooled_forty_question_claim": false,
+  "no_network_models_or_inference": true
+}

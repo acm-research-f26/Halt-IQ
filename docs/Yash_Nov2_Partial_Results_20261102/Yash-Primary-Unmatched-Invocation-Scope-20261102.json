@@ -1,0 +1,136 @@
+{
+  "schema": "yash-primary-unmatched-start-scope-audit-v1",
+  "checked_central": "2026-11-02T04:18:17.761123-06:00",
+  "scope": "read-only trace/ledger/source analysis; no source changes, new inference, fabricated output or change to original audit status",
+  "sources": {
+    "traces.jsonl": "35e53ea0ae1f6e9a51279b542805f72e051961959e2ba782fe6e4e5da0c607fe",
+    "physical-calls.jsonl": "87389b8428b5f58877ccafed1c455fa8cc05cd40808dc900f2acb1619069f846",
+    "episodes.jsonl": "4e5c14d854f3b5b76e598fe205c31c57b02c3151889329b27862ed986b3c85a6"
+  },
+  "source_commit": "1387ebd08ff907f0f07699e1d338e50b5552d1a9",
+  "counts": {
+    "all_stage_agent_starts": 781,
+    "all_stage_recorded_calls": 780,
+    "test_agent_starts": 364,
+    "test_recorded_calls": 363,
+    "prefix11_test_agent_starts": 363,
+    "prefix11_test_recorded_calls": 363
+  },
+  "all_first780_start_contexts_match_physical_rows_in_order": true,
+  "ledger_rows_without_matching_start": 0,
+  "unmatched_trace": {
+    "arm": "fixed1",
+    "event": "agent_invocation_started",
+    "question_id": "5a84ed765542994c784dda8b",
+    "role": "writer",
+    "stage": "test"
+  },
+  "unmatched_trace_index_zero_based": 3341,
+  "unmatched_question_plan_position_one_based": 12,
+  "unmatched_question_outside_recorded11_prefix": true,
+  "unmatched_question_has_saved_episode": false,
+  "unmatched_call_id": null,
+  "unmatched_call_start_timestamp": null,
+  "missing_identity_explanation": "_TrackedAgents.generate emits context+role-only agent_invocation_started at nov2_runner.py:174 before delegate.generate; RoleAgents.generate creates UUID at nov2_orchestration.py:215 and appends its usage only in finally. Snapshot ends before any physical ledger row/usage receipt for this start. No UUID/timestamp/outcome can be recovered from available evidence.",
+  "last_recorded_response_id": "chatcmpl-667bed7191814af392ed518456c8e2dd",
+  "last_recorded_response_timestamp_utc": "2026-11-02T09:02:19.737533+00:00",
+  "last_recorded_episode_question_id": "5a8f24cc55429924144829e7",
+  "prefix11_question_ids": [
+    "5a80870d5542992bc0c4a752",
+    "5a7bf84b5542996dd594b875",
+    "5a7723fa55429966f1a36ca0",
+    "5ac43c7b5542997ea680ca34",
+    "5abb73425542996cc5e49ff5",
+    "5ae76dfd5542997b22f6a755",
+    "5ade8ad95542992fa25da7b8",
+    "5ab7ef0f5542991d322237ca",
+    "5adc0d2955429947ff1738e6",
+    "5a7c716d55429935c91b51b3",
+    "5a8f24cc55429924144829e7"
+  ],
+  "per_arm_prefix_counts": {
+    "fixed1": {
+      "prefix_call_starts": 11,
+      "prefix_recorded_physical_calls": 11,
+      "prefix_completed_role_calls": 11,
+      "prefix_failed_role_calls": 0,
+      "prefix_attempted_writer_generations": 11,
+      "prefix_known_response_tokens": 22961,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "legacy_combined6": {
+      "prefix_call_starts": 94,
+      "prefix_recorded_physical_calls": 94,
+      "prefix_completed_role_calls": 93,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 51,
+      "prefix_known_response_tokens": 205402,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "strands": {
+      "prefix_call_starts": 54,
+      "prefix_recorded_physical_calls": 54,
+      "prefix_completed_role_calls": 53,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 27,
+      "prefix_known_response_tokens": 117160,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "binary_and": {
+      "prefix_call_starts": 54,
+      "prefix_recorded_physical_calls": 54,
+      "prefix_completed_role_calls": 53,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 27,
+      "prefix_known_response_tokens": 117160,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "always_revise3": {
+      "prefix_call_starts": 62,
+      "prefix_recorded_physical_calls": 62,
+      "prefix_completed_role_calls": 61,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 31,
+      "prefix_known_response_tokens": 130846,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "always_invoke": {
+      "prefix_call_starts": 66,
+      "prefix_recorded_physical_calls": 66,
+      "prefix_completed_role_calls": 65,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 27,
+      "prefix_known_response_tokens": 144214,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    },
+    "learned3": {
+      "prefix_call_starts": 22,
+      "prefix_recorded_physical_calls": 22,
+      "prefix_completed_role_calls": 21,
+      "prefix_failed_role_calls": 1,
+      "prefix_attempted_writer_generations": 11,
+      "prefix_known_response_tokens": 45959,
+      "prefix_recorded_calls_with_unknown_tokens": 0,
+      "whole20_question_total_tokens": null
+    }
+  },
+  "legacy_recorded_failed_call": {
+    "invocation_index": 676,
+    "call_id": "ce04a8cd60154bd8b7e5ce63ece7318e",
+    "question_id": "5ab7ef0f5542991d322237ca",
+    "arm": "legacy_combined6",
+    "role": "reviewer",
+    "error_type": "BadRequestError",
+    "total_tokens": 2145
+  },
+  "interpretation": "The unknown unmatched start belongs to fixed1 on question12, outside the descriptive11-question prefix. Within the77saved episodes, all363calls have matching starts/receipts and known response tokens, including SDK-failed role calls. These are scoped recorded-response token sums, not full20-question/whole-run/hardware totals. Full-study unknown remains unknown; qualification and verifier costs are separate.",
+  "whole_audit_status_unchanged": "EVIDENCE_MISMATCH",
+  "unmatched_outcome_inferred": false,
+  "unknown_cost_assumed_zero": false
+}

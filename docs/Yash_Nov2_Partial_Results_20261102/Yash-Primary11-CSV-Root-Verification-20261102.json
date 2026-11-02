@@ -1,0 +1,18 @@
+{
+  "schema": "yash-root-independent-csv-agreement-v1",
+  "verified_central": "2026-11-02T04:30:18.196214-06:00",
+  "csv": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Table-20261102.csv",
+  "csv_sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164",
+  "source_audit": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Recovery-Offline-Audit-Final-20261102.json",
+  "source_audit_sha256": "07cf821aaee1483020b9daf02344e8cba7d3d1c32cd9a87088845c03577f1c2f",
+  "audit_status_retained": "EVIDENCE_MISMATCH",
+  "arms_verified": 7,
+  "primary_metrics_verified": 84,
+  "denominator_each_arm": 11,
+  "failures_retained_at_zero": 8,
+  "unknown_questions_each_arm": 9,
+  "recorded_prefix_role_calls": 363,
+  "recorded_prefix_response_tokens": 783702,
+  "scope": "All 12 CSV metrics in all 7 arms match the unchanged raw-scoring auditor after explicit observed-prefix denominator conversion; calls, writer generations, valid/failed counts and token scopes also match. Full-panel missingness and next-question unknown invocation are not removed.",
+  "new_inference_or_policy_change": false
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "yash-primary-selective-recovery-closeout-verification-v1",
+  "verified_central": "2026-11-02T04:15:16.166344-06:00",
+  "source_commit": "1387ebd08ff907f0f07699e1d338e50b5552d1a9",
+  "original_assembled_snapshot": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102",
+  "derived_container": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102",
+  "original_archives_preserved": [
+    "Yash-Primary-Study-And-Heads-Recovery-20261102.zip",
+    "Yash-Primary-Root-And-Frozen-Recovery-20261102.zip",
+    "Yash-Primary-Critic-And-Runtime-Metadata-Recovery-20261102.zip",
+    "Yash-Primary-Writer-Configuration-And-Ledger-Recovery-20261102.zip",
+    "Yash-Primary-Writer-Correlation-And-Format-Recovery-20261102.zip"
+  ],
+  "reconstituted_requests_count": 785,
+  "all_reconstituted_requests_match_separate_original_primary_sha256": true,
+  "independent_original_individual_downloads_byte_equal": 21,
+  "derived_provenance": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102\\Yash-Derived-Request-Recovery-Provenance-20261102.json",
+    "sha256": "0401b8aa5065e32f7d0a3252a4a8fd315e6ff2d0761875b972ac8d9971ca518f"
+  },
+  "derived_manifest": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102\\Yash-Archive-Manifest.json",
+    "sha256": "25739ed0790b08e35487d5991f992adce8bd039293d30f4817da1c6bbc0e47e7"
+  },
+  "unchanged_offline_auditor": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\tools\\audit_yash_nov2_exports.py",
+    "sha256": "db0b0b430e220aa4f32329efa993905a9a9c21a7cbc730abd8c03a46a50c2639"
+  },
+  "post_freeze_reference": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Pinned-HotpotQA-Reference-After-Freeze-20261102.json",
+    "sha256": "00458b31b95130319e5ce023e9bad5ecb4c9f1c9eab707d6e571f7a69697ad18",
+    "explicit_parent_opt_in": true
+  },
+  "offline_audit": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Recovery-Offline-Audit-Final-20261102.json",
+    "sha256": "07cf821aaee1483020b9daf02344e8cba7d3d1c32cd9a87088845c03577f1c2f",
+    "status": "EVIDENCE_MISMATCH",
+    "scoring_scope": "raw-answer and supporting/joint metrics independently rescored against provided pinned digest-verified dataset",
+    "findings": [
+      {
+        "level": "incomplete",
+        "code": "missing_file",
+        "detail": "study/summary.json"
+      },
+      {
+        "level": "mismatch",
+        "code": "required_summary_structure",
+        "detail": "All seven arm summaries are required"
+      },
+      {
+        "level": "incomplete",
+        "code": "incomplete_test_grid",
+        "detail": "77/140 attempted"
+      },
+      {
+        "level": "mismatch",
+        "code": "started_agent_call_coverage",
+        "detail": "traces vs physical ledger: recorded=781, independently computed=780"
+      }
+    ],
+    "qualification": "PASS",
+    "physical_receipts": {
+      "study_calls": 780,
+      "qualification_calls": 5,
+      "reconciled_responses": 785,
+      "known_study_response_tokens": 1701843,
+      "unknown_response_calls": 0,
+      "scope": "writer/reviewer/challenger responses; no verifier token-pricing or hardware-total claim"
+    },
+    "critic_work": {
+      "recorded_study_calls": 343,
+      "qualification_calls": 2,
+      "scope": "separate verifier/reranker attempts and time; no language-model response token-pricing"
+    },
+    "head_freeze_checks": {
+      "heads": [
+        {
+          "seed": 0,
+          "sha256": "82a638ac71035abf0009d0d0a26da7bf40bf981b78f62790e563bb00d729a116",
+          "selected_epoch": 2
+        },
+        {
+          "seed": 1,
+          "sha256": "905e9ba157cce728499f5f9e717edb4bd1417cde20cb98dec6e77b2fbe49bd10",
+          "selected_epoch": 1
+        },
+        {
+          "seed": 2,
+          "sha256": "d45e174b82b985d39a32cce2b625f4dc3781d7c34c2bb0255346f946e9fc1d90",
+          "selected_epoch": 133
+        },
+        {
+          "seed": 3,
+          "sha256": "8596a922696da74c4502e4327d1dfb0f138506d3d382c822618e15183396ecc4",
+          "selected_epoch": 146
+        },
+        {
+          "seed": 4,
+          "sha256": "b362290b4c42438b9cf71c6e006800076b1d6afc7114c484bc18c19534beba85",
+          "selected_epoch": 2
+        }
+      ],
+      "freeze_markers_checked": true,
+      "limitation": "Journal order, declared zero-test markers and response timestamps support the freeze; response completion timestamps do not independently prove invocation-start time."
+    }
+  },
+  "coverage": {
+    "planned_episodes": 140,
+    "recorded_episodes": 77,
+    "completed": 69,
+    "failed": 8,
+    "pending": 63,
+    "observed_prefix_questions": 11,
+    "planned_test_questions": 20,
+    "arms": 7
+  },
+  "missing_final_run_receipt": true,
+  "missing_final_summary": true,
+  "open_started_invocation_unknown": 1,
+  "no_original_final_summary_or_manifest_fabricated": true,
+  "unknown_cost_not_assumed_zero": true,
+  "separate_descriptive_prefix_report": "Owned by results_writeup agent; recorded11 questions across7arms are correlated, not77independent questions. No full20-question completion or backend shutdown claim.",
+  "new_inference_or_source_policy_changes": false,
+  "old_partial_archives_preserved": true,
+  "partial_capture_status_not_relaxed_to_pass": true
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "yash-professor-report-evidence-manifest-v1",
+  "prepared_local": "2026-11-02T04:32:18.256665-06:00",
+  "author": "Yash Baruah",
+  "scientific_status": "PARTIAL_ONLY; report preparation does not complete the 20-question study",
+  "references": {
+    "1": {
+      "scope": "Primary first 11 descriptive scoring; unchanged whole-run EVIDENCE_MISMATCH",
+      "files": [
+        {
+          "label": "Own stdlib scorer, candidates and raw correlation checks",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Independent-Analysis-20261102.json",
+          "bytes": 59416,
+          "sha256": "55be6bf5a44cf23101d5398f59e9ea93f7a0005cb3788295ebeb63e5c300b36c"
+        },
+        {
+          "label": "Seven arms, all twelve metrics, denominator11",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Table-20261102.csv",
+          "bytes": 2008,
+          "sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164"
+        },
+        {
+          "label": "Unchanged auditor and four retained findings",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Recovery-Offline-Audit-Final-20261102.json",
+          "bytes": 12785,
+          "sha256": "07cf821aaee1483020b9daf02344e8cba7d3d1c32cd9a87088845c03577f1c2f"
+        }
+      ]
+    },
+    "2": {
+      "scope": "Separately retained interrupted replication benchmark",
+      "files": [
+        {
+          "label": "Original replication export; not pooled with primary",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\cloud-exports\\Yash_HotpotQA_Orchestration_replication_20261102-015450-04111781.zip",
+          "bytes": 4966256,
+          "sha256": "76b2ab477b5c3dd8d2d8c5cfc76fdaef8638e116a17ba9931651349bb429b2fe"
+        },
+        {
+          "label": "Independent raw scoring audit INCOMPLETE",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Interrupted-Replication-Independent-Audit-20261102.json",
+          "bytes": 12109,
+          "sha256": "b7d41462c9428b4179fbf478907d841b29fc5aa01d2379bda6ffa247417d8edc"
+        },
+        {
+          "label": "Retained training labels and interruption accounting",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Partial-Replication-Diagnosis-20261102.json",
+          "bytes": 11685,
+          "sha256": "ba60656133ffc152643452f45b69237295a7c563335b377f661aa821a077bab0"
+        }
+      ]
+    },
+    "3": {
+      "scope": "Frozen executed source and question plan",
+      "executed_source_commit": "1387ebd08ff907f0f07699e1d338e50b5552d1a9",
+      "files": [
+        {
+          "label": "Original preserved executed source",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\frozen\\Yash-Nov2-Source.zip",
+          "bytes": 108885,
+          "sha256": "58ce7bab2786c45ced19389f4e3398e5fe446049c026f82b0c68f1e5c55b34d5"
+        },
+        {
+          "label": "Original frozen plan for 50 questions",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\frozen\\Yash_Nov2_HotpotQA_Plan.json",
+          "bytes": 16176,
+          "sha256": "100586312f72919898729f288c11934e9c9cc2c6dde1174d5778fc75796028d2"
+        },
+        {
+          "label": "Original run configuration and module identities",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\study-config.json",
+          "bytes": 26654,
+          "sha256": "9e7e6e1697c632d8c78e625125f2d0c33bfc90e2f25cc0fcde11347533e4db79"
+        },
+        {
+          "label": "Original five-head pre-test freeze",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\freeze.json",
+          "bytes": 936,
+          "sha256": "85fca33ec1ec8c632cd96b65b65c50397fb6ee1599b0277fb86c0d1df16be6d0"
+        }
+      ]
+    },
+    "4": {
+      "scope": "SDK roles distinct from inherited team verifier; local inference",
+      "files": [
+        {
+          "label": "Original primary model, package, GPU and schema provenance",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\runtime\\runtime.json",
+          "bytes": 4505,
+          "sha256": "3973c7a6a36c82095f63e35c9c843d61b1682d3c49d2c4c3240419989e81699a"
+        },
+        {
+          "label": "Original successful synthetic interaction; not benchmark accuracy",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\runtime\\qualification.json",
+          "bytes": 45065,
+          "sha256": "93d0ac6d72e01aaac061750e5ffe66ce2ecdfd37bc8897617293b34624ca301f"
+        },
+        {
+          "label": "Complete source review with exact hashes and line evidence",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Seeding-and-Component-Protocol-Review-20261102.json",
+          "bytes": 4445,
+          "sha256": "ea1cc94a022eeace9307eecfeb79a103d81d6def0ab83f20b83bc82fc4c4f149"
+        }
+      ]
+    },
+    "5": {
+      "scope": "Lossless recovery, later unresolved invocation and watcher repair",
+      "files": [
+        {
+          "label": "Root verification of 785 hashes and 21 direct downloads",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Lossless-Receipt-Recovery-Root-Verification-20261102.json",
+          "bytes": 201870,
+          "sha256": "5f4be7977d8a867b8644a04f0ff7901a9689c71b8670edbcacbd24d9888fe399"
+        },
+        {
+          "label": "Unmatched question 12 start outside first 11",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Unmatched-Invocation-Scope-20261102.json",
+          "bytes": 5921,
+          "sha256": "3267739fad30410b8d3ab557b5aa7e600bb2f56ecc3ac8c47693c5cc935b2a3d"
+        },
+        {
+          "label": "Unchanged source/plan; repaired templates only enforce 08:50",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Notebook-Watcher-Recovery-Verification-20261102.json",
+          "bytes": 3060,
+          "sha256": "4ed5afbbab3ee43f5bcb1418e6b925739ccef667265a0412ffa7998f5c9c286e"
+        }
+      ]
+    },
+    "6": {
+      "scope": "Predeclared public verifier-prefix choice; full costs retained",
+      "files": [
+        {
+          "label": "48 diagnostic candidates, independently rescored across 12 metrics",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Independent-Analysis-20261102.json",
+          "bytes": 59416,
+          "sha256": "55be6bf5a44cf23101d5398f59e9ea93f7a0005cb3788295ebeb63e5c300b36c"
+        },
+        {
+          "label": "Separate exploratory interrupted-replication diagnostic",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Interrupted-Best-Prefix-Diagnostic-20261102.json",
+          "bytes": 20857,
+          "sha256": "9a7f4365dbc95fe3f971b13602350c9897e11d92a333efbefdfc3cf22bd972e6"
+        },
+        {
+          "label": "Authorized pinned post-freeze reference with 50 rows",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Pinned-HotpotQA-Reference-After-Freeze-20261102.json",
+          "bytes": 307290,
+          "sha256": "00458b31b95130319e5ce023e9bad5ecb4c9f1c9eab707d6e571f7a69697ad18"
+        },
+        {
+          "label": "All three public/label digests, not a content hash for all 7405 rows",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Pinned-Reference-Post-Freeze-Verification-20261102.json",
+          "bytes": 1524,
+          "sha256": "c555c3d7ba527c93edd0612c336ec0cb840b3a032191ebe6b188104d0c631233"
+        }
+      ]
+    },
+    "7": {
+      "scope": "Seeding and actual collected-example/head parameter equality",
+      "files": [
+        {
+          "label": "Read-only complete source review",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Seeding-and-Component-Protocol-Review-20261102.json",
+          "bytes": 4445,
+          "sha256": "ea1cc94a022eeace9307eecfeb79a103d81d6def0ab83f20b83bc82fc4c4f149"
+        },
+        {
+          "label": "Original train/dev record digests and fitting protocol",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\heads\\protocol.json",
+          "bytes": 4751,
+          "sha256": "adfef1796a28c960c2c19f164fcf348bfdb98d025854d77fa6a8902661ff4125"
+        },
+        {
+          "label": "Original records byte-equal across retained runs",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\training-examples.jsonl",
+          "bytes": 25915,
+          "sha256": "5cfc4ce594e3a4caa4d5110654f04bde6e74131ccba7fd64978c5398c8883925"
+        }
+      ]
+    },
+    "8": {
+      "scope": "Paper facts separate from our adaptation and results",
+      "url": "https://arxiv.org/pdf/2506.22385v2",
+      "files": [
+        {
+          "label": "Original full paper, 18 pages including appendices",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-paper-2506-22385\\arxiv-2506.22385v2.pdf",
+          "bytes": 13191819,
+          "sha256": "d292be42fc3a5f910c1554f85b466f72be3b8f37470411f7154afb0cf18d8c93"
+        },
+        {
+          "label": "Separate current brief, byte copy of root-reviewed source",
+          "kind": "deliverable",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Paper-Brief-20261102.txt",
+          "bytes": 1912,
+          "sha256": "dad15f99731191e5af51e6cc8e2983e22e8932d5f252157eef73af242f5011ec"
+        },
+        {
+          "label": "Root-owned source brief, unchanged by report agent",
+          "kind": "source",
+          "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\strands-work\\docs\\Yash_Paper_Summary_20261102.txt",
+          "bytes": 1912,
+          "sha256": "dad15f99731191e5af51e6cc8e2983e22e8932d5f252157eef73af242f5011ec"
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "label": "Five-page partial-evidence professor report",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Professor-Report-20261102.pdf",
+      "bytes": 181425,
+      "sha256": "49f7e85a670aa38d54434ffa506a1a4f90826eae6288badf591d72e48cfbe4fd"
+    },
+    {
+      "label": "Matching plain-text report",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Professor-Report-20261102.txt",
+      "bytes": 13184,
+      "sha256": "3074b5182affe70e3d2b233bdc4c55e36fde5616d0db857ddb1051b312842656"
+    },
+    {
+      "label": "All twelve metrics and resources for seven arms, denominator11",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Table-20261102.csv",
+      "bytes": 2008,
+      "sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164"
+    },
+    {
+      "label": "Five-bar report-size figure, including one-writer baseline",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Report-Chart-20261102.png",
+      "bytes": 74552,
+      "sha256": "1d01ec44b414511cc708fe1ab3f2b543f65e903bca9d173254c8698935a8595b"
+    },
+    {
+      "label": "Vector report-size figure",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Report-Chart-20261102.svg",
+      "bytes": 69805,
+      "sha256": "8cca0a6dce162fd958fc03186f3523d802fa3cc4247a3e8a74d1412cd9ff82de"
+    },
+    {
+      "label": "Full-size seven-arm figure",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-All-Arms-Chart-20261102.png",
+      "bytes": 98123,
+      "sha256": "b495f6e109cd332af3bf64f1d5bb2fd43e2a6880266b563784e2290505491d72"
+    },
+    {
+      "label": "Vector seven-arm figure",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-All-Arms-Chart-20261102.svg",
+      "bytes": 80503,
+      "sha256": "5b8e4f5d69cb01ae1513655c08d41085594cb13454aa550dd9ca38993b00a541"
+    },
+    {
+      "label": "Separate paper/adaptation brief",
+      "kind": "deliverable",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Paper-Brief-20261102.txt",
+      "bytes": 1912,
+      "sha256": "dad15f99731191e5af51e6cc8e2983e22e8932d5f252157eef73af242f5011ec"
+    }
+  ],
+  "original_vs_derived": {
+    "original_selective_primary_directory": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102",
+    "original_writer_journal": {
+      "label": "Original downloaded journal preserved unchanged",
+      "kind": "source",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\runtime\\writer\\model_requests.jsonl",
+      "bytes": 7490579,
+      "sha256": "815e6b563a71458ed3c1e66adf213450e6754e5c85fdd05d7828c4da69696302"
+    },
+    "original_correlation_directory": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Recovery-Assembled-20261102\\study\\runtime\\writer\\by-client",
+    "derived_request_directory": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102\\study\\runtime\\writer\\requests",
+    "derived_rule": "Journal raw line plus LF matches every original correlation primary_sha256; not 785 individually downloaded request files.",
+    "derived_provenance": {
+      "label": "Separate explicitly derived-container provenance",
+      "kind": "source",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102\\Yash-Derived-Request-Recovery-Provenance-20261102.json",
+      "bytes": 1086051,
+      "sha256": "0401b8aa5065e32f7d0a3252a4a8fd315e6ff2d0761875b972ac8d9971ca518f"
+    },
+    "derived_container_manifest": {
+      "label": "Internal membership/integrity; not independent execution proof",
+      "kind": "source",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Request-Recovery-20261102\\Yash-Archive-Manifest.json",
+      "bytes": 562436,
+      "sha256": "25739ed0790b08e35487d5991f992adce8bd039293d30f4817da1c6bbc0e47e7"
+    },
+    "no_cloud_summary_or_missing_outcome_created": true
+  },
+  "scoped_checks": {
+    "csv_all12_exactly_match_analysis": true,
+    "primary_scored": 69,
+    "diagnostic_scored": 48,
+    "max_metric_difference": 0,
+    "first11_all7_attempts": 77,
+    "failed_zero": 8,
+    "remaining_unknown_questions": 9,
+    "whole_panel_pending_attempts": 63,
+    "prefix_starts_and_recorded_calls": 363,
+    "prefix_known_response_tokens": 783702,
+    "whole_run_cost_totals": null,
+    "all_joint_and_supporting_exact_match_zero": true,
+    "whole_run_auditor_status": "EVIDENCE_MISMATCH"
+  },
+  "no_new_inference_or_policy_changes": true,
+  "hash_cycle_policy": "Manifest omits itself and final QA receipt. QA may hash this manifest; no self-hash cycle."
+}
