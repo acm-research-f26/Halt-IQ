@@ -114,11 +114,11 @@ BOOTSTRAP = r'''
 import base64, hashlib, io, json, os, pathlib, re, subprocess, sys, uuid, zipfile
 from datetime import datetime
 from zoneinfo import ZoneInfo
-DEADLINE = datetime(2026, 11, 2, 9, 20, tzinfo=ZoneInfo("America/Chicago"))
+DEADLINE = datetime(2026, 11, 2, 8, 50, tzinfo=ZoneInfo("America/Chicago"))
 def remaining_seconds():
     return (DEADLINE - datetime.now(ZoneInfo("America/Chicago"))).total_seconds()
 if remaining_seconds() <= 0:
-    raise RuntimeError("NO RUN: the frozen November 2 09:20 Central stop time has passed. No inference was started.")
+    raise RuntimeError("NO RUN: the frozen November 2 08:50 Central stop time has passed. No inference was started.")
 assert (3, 12) <= sys.version_info[:2] < (3, 14), "Use a Python 3.12/3.13 Colab runtime"
 assert re.fullmatch(r"[0-9a-f]{40}", SOURCE_COMMIT)
 SOURCE_RAW = base64.b64decode(EMBEDDED_SOURCE_B64, validate=True)
@@ -185,7 +185,7 @@ if not torch.cuda.is_available():
 import PIL, matplotlib
 print("Verified code-only source:", SOURCE_COMMIT)
 print("Plan SHA256:", PLAN_SHA256, "Pillow:", PIL.__version__, "matplotlib:", matplotlib.__version__)
-print("GPU:", torch.cuda.get_device_name(), "remaining seconds before 09:20 Central:", int(remaining_seconds()))
+print("GPU:", torch.cuda.get_device_name(), "remaining seconds before 08:50 Central:", int(remaining_seconds()))
 '''
 
 
@@ -230,6 +230,28 @@ import signal, time, traceback
 from IPython.display import display, Image, Markdown
 from google.colab import files
 
+def read_status_text(path, monitor):
+    # Drive can remove/replace a status file between filesystem operations.
+    # This optional observation must never decide whether the owned job lives.
+    monitor["poll_attempts"] += 1
+    try:
+        return path.read_text(encoding="utf-8")
+    except OSError as error:
+        name = type(error).__name__
+        monitor["read_errors"] += 1
+        monitor["errors_by_type"][name] = monitor["errors_by_type"].get(name, 0) + 1
+        monitor["last_error_type"] = name
+        if monitor["warnings_emitted"] < 5:
+            monitor["warnings_emitted"] += 1
+            try:
+                print("Optional status read unavailable; owned job continues:", name,
+                      "read errors:", monitor["read_errors"], flush=True)
+            except OSError:
+                monitor["warning_output_errors"] += 1
+        else:
+            monitor["warnings_suppressed"] += 1
+        return None
+
 def interrupt_owned(child):
     if child.poll() is not None:
         return "already_exited"
@@ -270,13 +292,16 @@ def export_evidence():
     return archive
 
 process = None
+monitor_counts = dict(poll_attempts=0, read_errors=0, errors_by_type={},
+    warnings_emitted=0, warnings_suppressed=0, warning_output_errors=0, last_error_type=None)
 run_record = dict(status="not_started",source_commit=SOURCE_COMMIT,seed=DEPLOYMENT_SEED,
-                  deadline_central=DEADLINE.isoformat(),no_positive_outcome_promised=True)
+                  deadline_central=DEADLINE.isoformat(),no_positive_outcome_promised=True,
+                  monitor=monitor_counts)
 console = OUT/"study-console.log"
 try:
     remaining = remaining_seconds()
     if remaining <= 0:
-        raise RuntimeError("NO RUN: frozen 09:20 Central stop time has passed; no study inference started.")
+        raise RuntimeError("NO RUN: frozen 08:50 Central stop time has passed; no study inference started.")
     allowance = min(27000.,remaining)
     hard_stop_at = time.monotonic() + allowance  # Includes runtime startup and qualification.
     arguments = [sys.executable,"-u","-B","-m","haltiq_pair.nov2_runner",
@@ -292,12 +317,11 @@ try:
                 run_record.update(status="deadline_or_27000_second_stop_requested",cleanup=interrupt_owned(process))
                 break
             status_path = STUDY/"status.json"
-            if status_path.exists():
-                current = status_path.read_text(encoding="utf-8")
-                if current != previous:
-                    print("Progress:",current.strip(),flush=True)
-                    previous = current
-                    last_print = time.monotonic()
+            current = read_status_text(status_path, monitor_counts)
+            if current is not None and current != previous:
+                print("Progress:",current.strip(),flush=True)
+                previous = current
+                last_print = time.monotonic()
             if time.monotonic()-last_print >= 30:
                 print("Running; seconds before frozen stop:",max(0,int(remaining_seconds())),"log:",console,flush=True)
                 last_print = time.monotonic()
@@ -362,7 +386,7 @@ def build(commit, arm, source_raw, manifest, plan_raw):
         "always revise to three drafts; always invoke the challenger once; learned three-action routing. Matched controls share draft/call caps, "
         "model weights, role output caps, formatting policy and last-draft answer selection. Legacy6 is a secondary control with a different budget. "
         "One optional best-prefix diagnostic stays separate from the primary results.\n\n"
-        "The notebook stops requesting work by **November 2, 2026, 9:20 AM America/Chicago** and exports partial evidence. "
+        "The notebook stops requesting work by **November 2, 2026, 8:50 AM America/Chicago** and exports partial evidence. "
         "After that time it refuses a new run. Installation or GPU capacity may prevent completion; failed and pending attempts remain visible.")
     notebook = {"nbformat": 4, "nbformat_minor": 5, "metadata": {
         "colab": {"name": FILENAMES[arm], "provenance": []},
