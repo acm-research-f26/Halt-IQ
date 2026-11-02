@@ -72,11 +72,10 @@ class CorrelatedWriter(Writer):
         return response
 
 
-def serve_writer(output, port=8001):
+def create_writer_app(writer):
+    """Build the real HTTP surface without loading a model or starting a port."""
     from fastapi import FastAPI, Request
     from fastapi.responses import JSONResponse, StreamingResponse
-    import uvicorn
-    writer = CorrelatedWriter(output, "cuda", max_context=16384)
     app = FastAPI()
 
     @app.get("/health")
@@ -87,8 +86,7 @@ def serve_writer(output, port=8001):
     def models():
         return {"object": "list", "data": [{"id": MODEL, "object": "model"}]}
 
-    @app.post("/v1/chat/completions")
-    async def complete(request: Request):
+    async def complete(request):
         body = await request.json()
         try:
             response = writer.complete(body)
@@ -98,6 +96,17 @@ def serve_writer(output, port=8001):
             return StreamingResponse(stream_response(response), media_type="text/event-stream")
         return response
 
+    # Future annotations would turn a locally imported Request into an
+    # unresolved string. Bind the actual class before FastAPI inspects it.
+    complete.__annotations__["request"] = Request
+    app.add_api_route("/v1/chat/completions", complete, methods=["POST"])
+    return app
+
+
+def serve_writer(output, port=8001):
+    import uvicorn
+    writer = CorrelatedWriter(output, "cuda", max_context=16384)
+    app = create_writer_app(writer)
     uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
 
 

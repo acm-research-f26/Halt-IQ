@@ -101,6 +101,74 @@ class CorrelationControls(unittest.TestCase):
                 generate.assert_not_called()
 
 
+class WriterHTTPControls(unittest.TestCase):
+    def response(self):
+        return {"id": RESPONSE, "object": "chat.completion", "created": 1, "model": runtime.MODEL,
+                "choices": [{"index": 0, "message": {"role": "assistant", "content": "Paris"},
+                             "finish_reason": "stop"}],
+                "usage": {"prompt_tokens": 8, "completion_tokens": 2, "total_tokens": 10}}
+
+    def test_actual_post_binds_json_body_without_request_query_parameter(self):
+        from fastapi.testclient import TestClient
+        fake = SimpleNamespace(metadata={"model": runtime.MODEL, "revision": runtime.REVISION},
+                               complete=Mock(return_value=self.response()))
+        body = {"model": runtime.MODEL, "messages": [{"role": "user", "content": "public question"}]}
+        with TestClient(runtime.create_writer_app(fake)) as client:
+            response = client.post("/v1/chat/completions", json=body)
+            self.assertEqual(response.status_code, 200, response.text)
+            self.assertEqual(response.json(), self.response())
+            fake.complete.assert_called_once_with(body)
+            self.assertEqual(client.get("/health").json()["client_correlation"], "by-client/<call_id>.json")
+            self.assertEqual(client.get("/v1/models").json()["data"][0]["id"], runtime.MODEL)
+            operation = client.get("/openapi.json").json()["paths"]["/v1/chat/completions"]["post"]
+            self.assertNotIn("request", [item["name"] for item in operation.get("parameters", [])])
+
+    def test_actual_streaming_post_publishes_correlated_primary_tokens(self):
+        from fastapi.testclient import TestClient
+        from haltiq_pair.server import persist_request
+        response = self.response()
+        with tempfile.TemporaryDirectory() as tmp:
+            writer = object.__new__(runtime.CorrelatedWriter)
+            writer.output = Path(tmp)
+            writer.metadata = {"model": runtime.MODEL, "revision": runtime.REVISION}
+
+            def generated_without_model(instance, body):
+                persist_request(instance.output, {"id": RESPONSE, "request": body,
+                    "usage": response["usage"], "finish_reason": "stop", "response_text": "Paris"})
+                return response
+
+            body = {"model": runtime.MODEL, "stream": True,
+                    "metadata": {"yash_call_id": CALL, "yash_role": "writer"},
+                    "messages": [{"role": "user", "content": "public question"}]}
+            with patch.object(runtime.Writer, "complete", new=generated_without_model), \
+                    TestClient(runtime.create_writer_app(writer)) as client:
+                with client.stream("POST", "/v1/chat/completions", json=body) as streamed:
+                    self.assertEqual(streamed.status_code, 200)
+                    self.assertTrue(streamed.headers["content-type"].startswith("text/event-stream"))
+                    text = streamed.read().decode()
+                payloads = [line[6:] for line in text.splitlines() if line.startswith("data: ")]
+                self.assertEqual(payloads[-1], "[DONE]")
+                chunks = [json.loads(value) for value in payloads[:-1]]
+                self.assertEqual(chunks[0]["choices"][0]["delta"]["content"], "Paris")
+                self.assertEqual(chunks[-1]["usage"], response["usage"])
+            correlation = json.loads((Path(tmp) / "by-client" / (CALL + ".json")).read_bytes())
+            primary = (Path(tmp) / "requests" / (RESPONSE + ".json")).read_bytes()
+            self.assertEqual(correlation["call_id"], CALL)
+            self.assertEqual(correlation["response_id"], RESPONSE)
+            self.assertEqual(correlation["usage"], response["usage"])
+            self.assertEqual(correlation["primary_sha256"], hashlib.sha256(primary).hexdigest())
+            self.assertEqual(json.loads(primary)["request"], body)
+
+    def test_actual_post_returns_structured_writer_failure(self):
+        from fastapi.testclient import TestClient
+        fake = SimpleNamespace(metadata={}, complete=Mock(side_effect=ValueError("synthetic refused request")))
+        with TestClient(runtime.create_writer_app(fake)) as client:
+            response = client.post("/v1/chat/completions", json={"messages": []})
+            self.assertEqual(response.status_code, 400)
+            self.assertEqual(response.json()["error"]["type"], "ValueError")
+            fake.complete.assert_called_once_with({"messages": []})
+
+
 class RecordingControls(unittest.TestCase):
     def test_success_is_durable_with_input_hash_context_and_provenance(self):
         critic = Mock(provenance={"critic_revision": "pinned"}, last_record={"usage": {"total_tokens": 7}})
