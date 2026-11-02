@@ -132,6 +132,19 @@ class OrchestrationControls(unittest.TestCase):
         self.assertEqual(len(context.exception.usage), 2)
         self.assertEqual(context.exception.critic_records[0]["status"], "failed")
 
+    def test_descriptive_citation_aliases_stay_invalid_and_both_raw_attempts_remain(self):
+        raw = '```json\n{"answer":"Paris","supporting_facts":[{"exact passage title":"Evidence","zero-based sentence index":0}]}\n```'
+        agents = FakeAgents({"writer": [raw, raw]})
+        trace = []
+        with self.assertRaises(OrchestrationError) as context:
+            Orchestrator(agents, FakeCritic(), format_corrections=1).begin(PUBLIC, trace.append)
+        self.assertEqual([item["raw"] for item in trace if item["event"] == "agent_output"], [raw, raw])
+        self.assertEqual(sum(item["event"] == "format_failure" for item in trace), 2)
+        self.assertEqual(len(context.exception.usage), 2)
+        self.assertEqual([role for role, _, _ in agents.prompts], ["writer", "writer"])
+        with self.assertRaises(ValueError):
+            hotpot.parse_draft(raw)
+
     def test_sdk_metadata_and_failure_receipt_keep_real_tokens(self):
         captured = {}
         with tempfile.TemporaryDirectory() as tmp:

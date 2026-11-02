@@ -18,6 +18,23 @@ from .linear import lexical_distance
 
 ACTIONS = ("STOP", "REVISE", "INVOKE")
 ROLES = ("writer", "reviewer", "challenger")
+ROLE_FORMAT_VERSION = "canonical-json-array-pairs-v1"
+ROLE_FORMAT_EXAMPLES = {
+    "writer": '{"answer":"ANSWER_TEXT","supporting_facts":[["EXACT_PUBLIC_TITLE",0]]}',
+    "reviewer": '{"approved":false,"feedback":"ACTIONABLE_PUBLIC_FEEDBACK"}',
+    "challenger": '{"alternative":"ANSWER_TEXT","evidence":[["EXACT_PUBLIC_TITLE",0]],"feedback":"ACTIONABLE_PUBLIC_FEEDBACK"}',
+}
+ROLE_FORMAT_GUIDANCE = {
+    role: ("\nOutput-format example (structure only; replace all placeholders with your "
+           "own answer, exact supplied public title, sentence index and feedback):\n" + example +
+           "\nReturn one JSON object only, without markdown fences. " +
+           ("Citations must be two-item JSON arrays [title,index], never citation objects "
+            "with descriptive label keys. An empty citation list is allowed when unsupported."
+            if role != "reviewer" else
+            "Choose the approved value true or false from your independent review; "
+            "the example illustrates only the boolean type."))
+    for role, example in ROLE_FORMAT_EXAMPLES.items()
+}
 CHALLENGER_SYSTEM = (
     "You are an independent evidence challenger in a question-answering team. "
     "Inspect the proposed answer and reviewer criticism. Check the strongest "
@@ -166,6 +183,9 @@ class RoleAgents:
                 "base_url": self.base_url, "temperature": 0,
                 "max_tokens": self.max_tokens, "roles": list(ROLES),
                 "role_output_caps": dict(self.role_tokens),
+                "shared_format_guidance": {"version": ROLE_FORMAT_VERSION,
+                    "examples": dict(ROLE_FORMAT_EXAMPLES), "text_by_role": dict(ROLE_FORMAT_GUIDANCE),
+                    "scope": "every role call, including all controls and collection/evaluation arms"},
                 "independent_role_prompts_shared_weights": True}
 
     def generate(self, role, system, prompt):
@@ -173,7 +193,8 @@ class RoleAgents:
             raise ValueError("Unknown November 2 agent role")
         call_id = uuid.uuid4().hex
         started = time.perf_counter()
-        row = {"call_id": call_id, "role": role, "usage": {}, "status": "failed"}
+        row = {"call_id": call_id, "role": role, "usage": {}, "status": "failed",
+               "format_guidance_version": ROLE_FORMAT_VERSION}
         try:
             from strands import Agent
             from strands.models.openai import OpenAIModel
@@ -182,7 +203,7 @@ class RoleAgents:
                                 model_id=self.model_id,
                                 params={"temperature": 0, "max_tokens": self.role_tokens[role],
                                         "metadata": {"yash_call_id": call_id, "yash_role": role}})
-            result = Agent(name=role, model=model, system_prompt=system,
+            result = Agent(name=role, model=model, system_prompt=system + ROLE_FORMAT_GUIDANCE[role],
                            callback_handler=None, retry_strategy=None)(prompt)
             usage = dict(getattr(result.metrics, "accumulated_usage", {}) or {})
             row["usage"] = usage
