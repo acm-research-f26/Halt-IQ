@@ -1,0 +1,34 @@
+{
+  "schema": "yash-nov2-ashley-brief-independent-content-review-v1",
+  "reviewed_central": "2026-11-02T09:25:55.197116-06:00",
+  "status": "PASS_WITH_DECLARED_PARTIAL_STUDY_LIMITS",
+  "full_txt_read": true,
+  "txt": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Ashley-Explanation-20261102.txt",
+    "sha256": "e141317eedb4205448ac88328a8a22db6be6534b140fc2384ae320a25d9f8021",
+    "bytes": 2136
+  },
+  "pdf": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Ashley-Explanation-20261102.pdf",
+    "sha256": "42184ba63271e78bdd7ffebb9a3352c504fe8918cd09a4489c0c6179ecdbb150",
+    "bytes": 75075,
+    "visual_review": "owned by author/root; not repeated by this content reviewer"
+  },
+  "one_precision_fix_requested_and_verified": "successful attempts -> completed attempts, distinguishing protocol completion from correctness",
+  "checks": {
+    "nov2_only_team_methods_credited": true,
+    "77attempts69valid8failures_first11of20": true,
+    "learned_f1_59point1_verifier40point9_writer65point2": true,
+    "f1_not_accuracy_explained": true,
+    "6of11_exact_answers_distinguished_from10completed": true,
+    "primary_stop_only_no_challenger_benefit_claim": true,
+    "retained_seed1_three_invokes_distinct": true,
+    "shared_model_weights_and_actual_role_feedback": true,
+    "full_benchmark_unfinished_current_tau_and7b_unrun": true,
+    "no_new_experiment_or_compute_savings_claim": true,
+    "session_closeout_receipt_supported_not_missing_outcome_recovery": true
+  },
+  "material_content_findings": [],
+  "source_closeout_content_review": "Yash-Nov2-Study-Closeout-Independent-Content-Review-20261102.json",
+  "new_tests_inference_recovery_network_source_or_vault_edits": false
+}

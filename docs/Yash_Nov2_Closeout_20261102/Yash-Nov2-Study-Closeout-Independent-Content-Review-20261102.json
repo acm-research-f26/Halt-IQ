@@ -1,0 +1,83 @@
+{
+  "schema": "yash-nov2-closeout-independent-content-review-v1",
+  "reviewed_central": "2026-11-02T09:22:01.869950-06:00",
+  "reviewer": "latest_team_code independent scientific-content review",
+  "status": "PASS_WITH_DECLARED_PARTIAL_STUDY_LIMITS",
+  "fully_read": [
+    "professor-writeup/Yash-Nov2-Study-Closeout-20261102.txt",
+    "professor-writeup/Yash-Nov2-Study-Closeout-Brief-20261102.txt",
+    "Yash-Study-Execution-Closeout-20261102.json",
+    "Yash-Study-Final-Saved-Data-Check-20261102.json"
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-20261102.txt",
+      "sha256": "860deecc4c40a548c4fdb17b69be57f8b717c81062b0b177b11aefb33315c8d4",
+      "bytes": 13709
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-Brief-20261102.txt",
+      "sha256": "eacabb45a714937867865b60404be52e4c844ba35481976c018b192720addd6c",
+      "bytes": 3508
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-20261102.pdf",
+      "sha256": "f7e8e1adf89724bb1ff25a4f957afd13d7f9b4380aa0325236524a550a3e6d1d",
+      "bytes": 181689
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Study-Execution-Closeout-20261102.json",
+      "sha256": "3a65947f8ee6e1b8eb5ea00972a49643be213c935022b8e66ffc107934e4e860",
+      "bytes": 1264
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Study-Final-Saved-Data-Check-20261102.json",
+      "sha256": "be343dcecfcdfc78a099527d673553024b38abdc752849d418ad0fc2c60a6cff",
+      "bytes": 2838
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Derived-Recovery-Offline-Audit-Final-20261102.json",
+      "sha256": "07cf821aaee1483020b9daf02344e8cba7d3d1c32cd9a87088845c03577f1c2f",
+      "bytes": 12785
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Interrupted-Replication-Independent-Audit-20261102.json",
+      "sha256": "b7d41462c9428b4179fbf478907d841b29fc5aa01d2379bda6ffa247417d8edc",
+      "bytes": 12109
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Primary-Unmatched-Invocation-Scope-20261102.json",
+      "sha256": "3267739fad30410b8d3ab557b5aa7e600bb2f56ecc3ac8c47693c5cc935b2a3d",
+      "bytes": 5921
+    }
+  ],
+  "checks": {
+    "current_nov2_only_no_historical_yash_results_promoted": true,
+    "credited_vedanshi_shree_baseline_methods": true,
+    "primary77_of140_69completed8failed63pending": true,
+    "same_first11_of20_questions_all7arms_descriptive": true,
+    "retained_replication20_of140_19completed1interrupted_separate": true,
+    "no_pooled40_independent_question_claim": true,
+    "no_full_hotpot_completion_claim": true,
+    "current_tau_and7b_unrun_explicit": true,
+    "fixed1_strongest_prefix_f1_and_fewest_calls_explicit": true,
+    "learned_primary_stop_only_no_adaptive_or_challenger_benefit_claim": true,
+    "all5heads_200epochs_dev_selection_pretest_freeze_distinct_from_llm_finetuning": true,
+    "failed_paths_caps_and_known_response_cost_scope_preserved": true,
+    "whole_audit_evidence_mismatch_missing_outcomes_unchanged": true,
+    "unmatched_start_question12_outside11_prefix_and_unknown_cost": true,
+    "derived785_receipts_not_misrepresented_as_downloaded_originals": true,
+    "execution_closure_supported_by0910_source_receipt": true,
+    "final_saved_data_check_matches_retained_snapshot_no_new_outcomes": true,
+    "poster_ideas_distinguished_from_finished_poster": true,
+    "submission_presentation_eligibility_attendance_not_claimed": true
+  },
+  "material_content_findings": [],
+  "scope_limits": [
+    "Scientific content reviewed from full TXT and brief; PDF byte hash checked, visual page QA belongs to parent/writer and was not repeated.",
+    "Execution closure is checked against the existing source receipt, not a fresh independent browser observation.",
+    "Existing audits/results are used; no new model inference, training, tests, recovery, network calls or source/config/vault edits.",
+    "A content-review PASS does not change the incomplete benchmark or whole-run EVIDENCE_MISMATCH status."
+  ],
+  "ashley_brief_review": "Pending separate brief availability; not covered by this receipt."
+}

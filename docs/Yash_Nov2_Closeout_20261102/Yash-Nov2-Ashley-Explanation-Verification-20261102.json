@@ -1,0 +1,58 @@
+{
+  "schema": "yash-ashley-explanation-v1",
+  "prepared_local": "2026-11-02T09:25:35.205160-06:00",
+  "author": "Yash Baruah",
+  "pages": 1,
+  "script_words": 130,
+  "total_words": 321,
+  "pdf": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Ashley-Explanation-20261102.pdf",
+    "sha256": "42184ba63271e78bdd7ffebb9a3352c504fe8918cd09a4489c0c6179ecdbb150"
+  },
+  "txt": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Ashley-Explanation-20261102.txt",
+    "sha256": "e141317eedb4205448ac88328a8a22db6be6534b140fc2384ae320a25d9f8021"
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-20261102.txt",
+      "sha256": "860deecc4c40a548c4fdb17b69be57f8b717c81062b0b177b11aefb33315c8d4"
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Primary11-Prefix-Table-20261102.csv",
+      "sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164"
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Study-Execution-Closeout-20261102.json",
+      "sha256": "3a65947f8ee6e1b8eb5ea00972a49643be213c935022b8e66ffc107934e4e860"
+    },
+    {
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\Yash-Study-Final-Saved-Data-Check-20261102.json",
+      "sha256": "be343dcecfcdfc78a099527d673553024b38abdc752849d418ad0fc2c60a6cff"
+    }
+  ],
+  "scope": "Current November2 partial11-question evidence; no new testing or external communication",
+  "visual_qa": {
+    "status": "PASS",
+    "reviewed_local": "2026-11-02T09:25:56.223020-06:00",
+    "png": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\ashley\\Yash-Nov2-Ashley-1.png",
+    "sha256": "e12770547e53df4866ae3bc6b7fa85bcd4556e7a2527ddfbfc3532ef1db0978f",
+    "dpi": 150,
+    "pixels": [
+      1275,
+      1650
+    ],
+    "one_page_fully_visually_inspected": true,
+    "layout": "readable; no clipping, overlap or missing glyphs"
+  },
+  "new_inference": false,
+  "sent_to_ashley": false,
+  "factual_qa": {
+    "F1_not_accuracy_explicit": true,
+    "exact6of11_verified": true,
+    "77attempts69valid8failed_verified": true,
+    "completed_not_correct_wording": true,
+    "all5QAs_full_read": true,
+    "no_new_inference_or_external_message": true
+  }
+}

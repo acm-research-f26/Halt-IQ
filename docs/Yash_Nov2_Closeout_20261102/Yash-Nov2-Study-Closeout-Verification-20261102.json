@@ -1,0 +1,140 @@
+{
+  "schema": "yash-study-closeout-report-v1",
+  "prepared_local": "2026-11-02T09:19:06.623825-06:00",
+  "status": "STUDY_CLOSED_WITH_PARTIAL_EVIDENCE",
+  "pages": 5,
+  "pdf": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-20261102.pdf",
+    "sha256": "f7e8e1adf89724bb1ff25a4f957afd13d7f9b4380aa0325236524a550a3e6d1d"
+  },
+  "txt": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-20261102.txt",
+    "sha256": "860deecc4c40a548c4fdb17b69be57f8b717c81062b0b177b11aefb33315c8d4"
+  },
+  "seed_review": {
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Seeding-and-Component-Protocol-Review-20261102.json",
+    "sha256": "ea1cc94a022eeace9307eecfeb79a103d81d6def0ab83f20b83bc82fc4c4f149"
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "all_latest_pages_visually_inspected": true,
+    "dpi": 140,
+    "pages": [
+      {
+        "label": "Latest page1 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\study-closeout\\Yash-Nov2-Closeout-1.png",
+        "bytes": 304324,
+        "sha256": "1657b9851969d1b2cdd38f8f51b7b3510d40f00910e2d7018b16dd2e4f0c45ae",
+        "page": 1,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2816,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page2 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\study-closeout\\Yash-Nov2-Closeout-2.png",
+        "bytes": 289675,
+        "sha256": "be4217258b727080bbf6e5474c9b4052102fa22b9400b860e0e3769053193368",
+        "page": 2,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2839,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page3 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\study-closeout\\Yash-Nov2-Closeout-3.png",
+        "bytes": 240809,
+        "sha256": "7d5c18ca43c70fb0e81112073f3fd36fc3d550519e19a8459ffd40a720e470cc",
+        "page": 3,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 1597,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page4 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\study-closeout\\Yash-Nov2-Closeout-4.png",
+        "bytes": 268322,
+        "sha256": "5db27b951c7d43ab8d14e9e401f89c66efa4f04d42e0d4c8cec73ae1587e282c",
+        "page": 4,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 2552,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      },
+      {
+        "label": "Latest page5 render",
+        "kind": "visual_qa",
+        "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\tmp\\pdfs\\study-closeout\\Yash-Nov2-Closeout-5.png",
+        "bytes": 381211,
+        "sha256": "6899493c3b2abf095cd744d6a4cbaec715981f4224a4166a342ec8b15d74e2f4",
+        "page": 5,
+        "pixels": [
+          1190,
+          1540
+        ],
+        "text_characters": 3764,
+        "visual_review": "PASS - latest full page visually inspected, readable, no clipping/overlap/glyph defects"
+      }
+    ],
+    "all5_header_pixel_strips_identical": "816bd31273a71d12712978c7f9490d0bc8a55050a8f92c1423c48b0d8860e23e",
+    "all5_left_footer_pixel_strips_identical": "4356328285d71468ace0f03386258c9dd61b48575d64cc73feece44f44524d82"
+  },
+  "quality_table_and_chart": "independently rescored descriptive first11 prefix; no missing-question zero fill",
+  "new_inference": false,
+  "evidence_manifest": {
+    "label": "Full reference1-8 sources and product hashes",
+    "kind": "source",
+    "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-Evidence-Manifest-20261102.json",
+    "bytes": 21734,
+    "sha256": "ed41c1f468ce7cb2291071d84d0640b50893182b992441dce7c1f33c4ccd8941"
+  },
+  "factual_qa": {
+    "all12_csv_exact": true,
+    "branch_counts_both_runs": "238 total, 234 completed, 4 failed",
+    "report_text_full_read": true,
+    "partial_scope_not_complete_study": true,
+    "original_derived_explicit": true,
+    "execution_closure_bound": true,
+    "final_saved_data_cutoff_bound": true,
+    "earlier_partial_report_bytes_unchanged": {
+      "Yash-Nov2-Professor-Report-20261102.pdf": "49f7e85a670aa38d54434ffa506a1a4f90826eae6288badf591d72e48cfbe4fd",
+      "Yash-Nov2-Professor-Report-20261102.txt": "3074b5182affe70e3d2b233bdc4c55e36fde5616d0db857ddb1051b312842656",
+      "Yash-Nov2-Professor-Report-Evidence-Manifest-20261102.json": "6b058e47a1fa3c58d8ce206e4c630b0b11cada7f709c4755de83d137c525b03d"
+    },
+    "no_october_yash_result_promotion": true,
+    "poster_ideas_prepared": 3,
+    "finished_poster_claimed": false
+  },
+  "precision_edit_qa": {
+    "changed_page": 4,
+    "changed_page_visually_reviewed": true,
+    "other4_png_hashes_exactly_unchanged": true,
+    "no_numeric_changes": true,
+    "prior_render_hashes": {
+      "label": "Previously reviewed closeout render hashes",
+      "kind": "source",
+      "path": "C:\\Users\\yashb\\Desktop\\Halt IQ\\testing\\nov2-orchestration-2026-11-02\\professor-writeup\\Yash-Nov2-Study-Closeout-Pre-Precision-Edit-Render-Hashes-20261102.json",
+      "bytes": 385,
+      "sha256": "7cce9e2e955e735badb2c4c03198a3becafed77f14a19a6a32fb88356e2edd29"
+    }
+  },
+  "pdf_skill_full_read": true,
+  "workspace_dependencies_loaded": true,
+  "marker_successfully_run_once_before_first_pdf_authoring": true,
+  "source_or_vault_changes": false
+}

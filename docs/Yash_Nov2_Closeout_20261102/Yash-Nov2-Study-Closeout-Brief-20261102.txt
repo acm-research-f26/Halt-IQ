@@ -1,0 +1,37 @@
+Yash Baruah - November 2 Study Closeout
+November 2, 2026
+
+Scope
+The study record is closed at Yash's request using the current November 2 evidence. No new GPU run, retry or policy training is part of this closeout. Earlier Yash experiments are excluded from completion and scientific claims; Vedanshi and Shree are credited for the baseline methods.
+
+Finished and verified
+- Implemented separate Strands SDK writer, reviewer and conditional challenger roles, with actual feedback entering revisions.
+- Collected training/development action branches and fitted all five linear heads for 200 epochs, with development-only selection and pre-test freeze.
+- Independently audited the retained responses, twelve HotpotQA metrics, best-prefix diagnostic and scoped resource records.
+- Prepared the professor PDF/TXT, twelve-metric CSV, figures, separate paper summary and evidence manifest.
+- Prepared three concrete poster ideas; no final poster is claimed.
+
+Poster ideas prepared
+1. When should the team STOP, REVISE or INVOKE? Show the real role/feedback flow beside observed action counts, clearly distinguishing the implemented challenger from its zero use in primary learned3.
+2. Do extra agents earn their cost? Compare all seven arms on answer quality and recorded calls/tokens, including the strongest and cheapest one-writer baseline.
+3. Correct answers versus supported answers. Contrast answer F1, joint F1 and zero joint exact match to explain why a plausible answer does not establish complete evidence grounding.
+These are prepared concepts and source figures for a poster, not a finished poster or submission.
+
+Retained simulation evidence
+- Primary: 77 of 140 planned question-arm attempts, with 69 completed predictions and 8 failures. The same first 11 of 20 questions were attempted across all seven arms; the other 9 questions and 63 attempts are unknown.
+- Original replication: 20 of 140 attempts, with 19 completed predictions and 1 interrupted episode. It uses the same question cohort and is retained separately.
+- On the primary 11-question prefix, learned3 answer F1 is 0.591, the verifier/AND loops 0.409, and one writer 0.652. Failed attempts remain zero. One writer was the strongest answer baseline and used the fewest role calls.
+- Primary learned3 chose STOP on all ten completed attempts and never invoked the challenger. No adaptive three-action advantage or continuous-verifier feature benefit is established.
+
+Not completed at closure
+- Full 20-question HotpotQA panels or a completed planned replication.
+- A current tau-squared benchmark or 7B-model condition.
+- A final cloud summary or complete whole-run resource accounting for the unresolved later writer invocation.
+- A complete poster, professor submission, or presentation/attendance coordination is not established by these artifacts.
+
+Execution closure
+At 09:10 CST, both study accounts showed no active Colab sessions and both pending connection attempts had been cancelled. No new model run was started for the closeout. The historical missing writer outcome and full-panel results remain unknown; current session closure does not recover them.
+
+The final saved-data check matched the recovered 03:02 primary snapshot exactly. Its saved running label is historical; no later persisted result was found. The retained eleven-question metrics are unchanged.
+
+The unchanged whole-run audit remains EVIDENCE_MISMATCH. Analysis and documentation closure do not convert the partial benchmark into a completed full study.

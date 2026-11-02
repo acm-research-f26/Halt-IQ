@@ -1,0 +1,7 @@
+# Preserve original exported bytes for recorded SHA256 values.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.pdf binary
+*.png binary
+*.zip binary
+# Matplotlib SVG coordinate separators are retained as exported.
+*.svg -whitespace

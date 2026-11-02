@@ -1,0 +1,29 @@
+Yash Baruah - Explaining the HaltIQ Study to Ashley
+
+November 2, 2026 | About 60 seconds, then short answers
+
+Read-aloud script
+
+I integrated a writer, reviewer and optional challenger using the Strands SDK around one locally served Qwen model. Their actual feedback enters answer revisions. A linear classifier chooses STOP, REVISE or INVOKE, and we froze it before testing. We recovered the first 11 of 20 planned HotpotQA questions across seven arms: 77 attempts, 69 valid outputs and 8 failures. Learned answer F1 was 59.1 versus 40.9 for verifier loops, but one writer reached 65.2 and used the fewest calls. F1 measures answer overlap, not percent correct. The primary learned policy stopped after its first draft in all 10 completed attempts and never used the challenger. We demonstrated working orchestration and partial results, not an adaptive three-action advantage. The full panel is unfinished; the record is closed with the available evidence.
+
+What makes it multi-agent?
+
+Separate agents use different prompts and actual feedback but share weights. Primary learned3 used no challenger; retained seed 1 actually used INVOKE three times.
+
+What did the classifier learn?
+
+Which action best balanced measured answer F1 and additional role calls, using public features. Training and development were separate from testing.
+
+Is 59.1 an accuracy percentage?
+
+No: it is mean answer-token F1. Learned3 and one writer both had 6/11 exact answers (54.5%); one writer had stronger F1 and fewer role calls. Valid outputs are not necessarily correct.
+
+Why is the full panel unfinished?
+
+A monitoring error interrupted seed 1, and primary recovery remained partial. No later completed results were found. Nine primary questions remain unknown; both Colab accounts showed no active sessions at closeout.
+
+What can we claim?
+
+Implemented role flow, fitted frozen heads, and descriptive 11-question results. No full benchmark, current tau-squared or 7B completion, adaptive synergy, or end-to-end compute savings is proven.
+
+November 2 evidence only. Vedanshi and Shree are credited for the baseline methods.

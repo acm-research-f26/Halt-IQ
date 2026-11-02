@@ -1,0 +1,18 @@
+{
+  "schema": "yash-study-closeout-root-qa-v1",
+  "verified_central": "2026-11-02T09:23:43.239855-06:00",
+  "status": "CLOSEOUT_DOCUMENTS_VERIFIED_BENCHMARK_PARTIAL",
+  "full_txt_and_brief_read": true,
+  "all_five_page_layouts_visually_reviewed": true,
+  "latest_precision_page4_visually_reviewed": true,
+  "other_four_pngs_unchanged_per_author_qa": true,
+  "all_source_and_product_entries_byte_hash_checked": 52,
+  "closeout_pdf_sha256": "f7e8e1adf89724bb1ff25a4f957afd13d7f9b4380aa0325236524a550a3e6d1d",
+  "closeout_txt_sha256": "860deecc4c40a548c4fdb17b69be57f8b717c81062b0b177b11aefb33315c8d4",
+  "manifest_sha256": "ed41c1f468ce7cb2291071d84d0640b50893182b992441dce7c1f33c4ccd8941",
+  "csv_sha256": "8d288fd55a593d3617be1bf8673ea6caecc1adaf103910ad98bf989b54b9e164",
+  "no_new_inference_or_policy_change": true,
+  "boundary": "Current Nov2 results only; old discarded Yash panels excluded. Execution closed; full20 benchmark incomplete; pending/missing outcomes not invented.",
+  "ashley_explanation_deadline_central": "2026-11-02T09:35:00-06:00",
+  "report_package_deadline_central": "2026-11-02T09:45:00-06:00"
+}

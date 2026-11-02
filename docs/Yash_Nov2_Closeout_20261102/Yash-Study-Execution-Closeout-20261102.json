@@ -1,0 +1,26 @@
+{
+  "schema": "yash-study-execution-closeout-v1",
+  "recorded_utc": "2026-11-02T15:10:10.118Z",
+  "user_instruction": "It is too late now. Finish up testing and wrap things up with what I have.",
+  "new_model_runs_started": false,
+  "primary": {
+    "notebook_id": "1-QHNAHw6DnjqDfvo_DH0Nq0ltxwI-GkM",
+    "pending_reconnection_cancelled": true,
+    "active_sessions_ui": "No active sessions",
+    "interrupt_execution_disabled": true,
+    "disconnect_delete_runtime_disabled": true,
+    "remaining_ui": "Reconnect GPU",
+    "save_conflict_preserved_without_overwrite": true,
+    "proof": "browser-checks/Yash-Primary-No-Active-Sessions-Closeout-20261102.png"
+  },
+  "replication": {
+    "notebook_id": "1K2S7xQp-00Y_oD-qdLRspLh8HY0l-qAE",
+    "pending_recovery_connection_cancelled": true,
+    "active_sessions_ui": "No active sessions",
+    "interrupt_execution_disabled": true,
+    "disconnect_delete_runtime_disabled": true,
+    "remaining_ui": "Reconnect GPU",
+    "proof": "browser-checks/Yash-Replication-No-Active-Sessions-Closeout-20261102.png"
+  },
+  "scope": "Both study accounts have no active Colab sessions at this check. No unrelated runtime was terminated; no CAPTCHA solved. This is execution closure, not completion of the declared benchmark."
+}

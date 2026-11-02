@@ -1,0 +1,38 @@
+{
+  "schema": "yash-final-saved-data-check-v1",
+  "observed_utc": "2026-11-02T15:11:49.188Z",
+  "source": "Signed-in Google Drive UI; original primary study folder/status.json",
+  "folder_url": "https://drive.google.com/drive/u/0/folders/179JyCw6tIHZ83c-PmP5fnTzyydyJTdWR",
+  "observed_status": {
+    "current": {
+      "arm": "legacy_combined6",
+      "question_id": "5a8f24cc55429924144829e7",
+      "stage": "test"
+    },
+    "planned_test_attempts": 140,
+    "recorded_agent_invocations": 780,
+    "recorded_critic_calls": 343,
+    "recorded_test_attempts": 77,
+    "stage": "test",
+    "status": "running",
+    "valid_test_predictions": 69
+  },
+  "folder_rows": [
+    "303 row (selectable) heads Folder Owned by me Modified 2:32 AM me Size not available More actions (Alt+A)",
+    "319 row (selectable) runtime Folder Owned by me Modified 1:54 AM me Size not available More actions (Alt+A)",
+    "335 row (selectable) critic-calls.jsonl Binary Owned by me Modified 3:02 AM me Size: 955 KB Storage used: 955 KB More actions (Alt+A)",
+    "351 row (selectable) episodes.jsonl Binary Owned by me Modified 3:02 AM me Size: 1.2 MB Storage used: 1.2 MB More actions (Alt+A)",
+    "367 row (selectable) freeze.json Unknown Owned by me Modified 2:32 AM me Size: 936 bytes Storage used: 936 bytes More actions (Alt+A)",
+    "383 row (selectable) physical-calls.jsonl Binary Owned by me Modified 3:02 AM me Size: 1.3 MB Storage used: 1.3 MB More actions (Alt+A)",
+    "399 row (selectable) status.json Unknown Owned by me Modified 3:02 AM me Size: 294 bytes Storage used: 294 bytes More actions (Alt+A)",
+    "415 row (selectable) study-claim.json Unknown Owned by me Modified 1:56 AM me Size: 83 bytes Storage used: 83 bytes More actions (Alt+A)",
+    "431 row (selectable) study-config.json Unknown Owned by me Modified 1:56 AM me Size: 26 KB Storage used: 26 KB More actions (Alt+A)",
+    "447 row (selectable) traces.jsonl Binary Owned by me Modified 3:02 AM me Size: 7.4 MB Storage used: 7.4 MB More actions (Alt+A)",
+    "463 row (selectable) training-branches.jsonl Binary Owned by me Modified 2:32 AM me Size: 5.1 MB Storage used: 5.1 MB More actions (Alt+A)",
+    "479 row (selectable) training-examples.jsonl Binary Owned by me Modified 2:32 AM me Size: 25 KB Storage used: 25 KB More actions (Alt+A)",
+    "495 row (selectable) training-states.jsonl Binary Owned by me Modified 2:31 AM me Size: 1.5 MB Storage used: 1.5 MB More actions (Alt+A)"
+  ],
+  "no_summary_in_visible_complete_13_item_study_folder": true,
+  "current_runtime_verification": "Both accounts separately show No active sessions; persisted status.running is historical and not treated as current activity",
+  "scope": "No new models or testing. Existing cloud status remains77 recorded attempts/69 valid; this does not establish outcomes for the missing tasks."
+}

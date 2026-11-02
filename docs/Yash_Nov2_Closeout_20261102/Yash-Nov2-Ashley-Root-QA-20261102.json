@@ -1,0 +1,13 @@
+{
+  "schema": "yash-ashley-root-qa-v1",
+  "verified_central": "2026-11-02T09:28:32.832566-06:00",
+  "full321word_text_and_five_answers_read": true,
+  "one_page_visual_layout_reviewed": true,
+  "pdf_sha256": "42184ba63271e78bdd7ffebb9a3352c504fe8918cd09a4489c0c6179ecdbb150",
+  "txt_sha256": "e141317eedb4205448ac88328a8a22db6be6534b140fc2384ae320a25d9f8021",
+  "completed_not_correct_wording_verified": true,
+  "F1_not_accuracy_and6of11_EM_explicit": true,
+  "existing_Nov2_only_no_new_inference": true,
+  "brief_link_provided_to_user_before_0935": true,
+  "not_sent_to_ashley": true
+}
