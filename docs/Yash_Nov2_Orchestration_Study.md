@@ -1,6 +1,28 @@
 # Yash — November 2 orchestration study
 
-Prepared November 2, 2026 (America/Chicago). **No new GPU benchmark results are claimed by this document.** Teammate files and previous results are preserved. The user approved this new study and selected Colab rather than local GPU execution. Subsequent account/presence/Drive approvals allowed both new Yash Drive copies to be started; the pre-benchmark engineering checkpoint below supersedes the initial manual-start-only status.
+Updated November 2, 2026 (America/Chicago). **The new study has audited partial Colab results, not a completed benchmark.** Teammate files and previous results are preserved. The user approved this study and selected Colab rather than local GPU execution. Its current delivery target is **09:00 Central**. Both notebooks currently require new Google presence checks before reconnection/recovery can proceed.
+
+## Current evidence and results
+
+The recovered primary snapshot contains all seven arms on the first **11 of 20 planned test questions**: 77 recorded attempts, 69 completed predictions and 8 failures. The other 63 planned attempts remain unknown. The table below uses those same 11 questions for every arm, with failures scored zero; it is a descriptive partial-panel comparison, not a completed 20-question result.
+
+| Arm | Completed / 11 | Answer F1 | Recorded role calls / question |
+|---|---:|---:|---:|
+| fixed1 | 11 | 65.2% | 1.00 |
+| legacy_combined6 | 10 | 40.9% | 8.55 |
+| strands | 10 | 40.9% | 4.91 |
+| binary_and | 10 | 40.9% | 4.91 |
+| always_revise3 | 10 | 40.9% | 5.64 |
+| always_invoke | 8 | 40.9% | 6.00 |
+| learned3 | 10 | 59.1% | 2.00 |
+
+The learned policy retained more answer quality with fewer calls than the matched verifier-gated loops in this prefix, but the one-writer baseline was better and cheaper. The primary learned policy chose STOP on all ten completed attempts and used no challenger; actual challenger interactions are verified in the invoke control, training/qualification and the interrupted seed-1 replication. This does not establish an advantage from adaptive three-action routing or from the verifier feature alone. Joint exact match was zero throughout this prefix.
+
+The primary raw-answer, supporting-fact and joint metrics were independently rescored against the pinned dataset. Its unchanged export auditor retains **EVIDENCE_MISMATCH**: the final summary is absent, 77/140 attempts are recorded, and one started writer call on question 12 has no recorded outcome. All 363 physical calls inside the 11-question prefix reconcile, with 783,702 known role-response tokens; whole-run totals remain unknown. A separately labeled derived recovery restores 785 raw receipts byte-exactly from the original compatibility journal, verified against all separately downloaded original receipt hashes and 21 individually downloaded originals. It does not invent a final summary or missing response.
+
+The original seed-1 replication stopped after 20/140 test attempts (19 completed, one interrupted) because a parent-notebook status-file read race interrupted its child. Both runs completed train/development collection and fitted/froze all five heads before testing. The monitor was repaired without changing the frozen inference source, scientific settings or question plan. The full replication recovery is queued behind a new presence check; the original primary backend remains unverified.
+
+Current local evidence includes `Yash-Primary-Derived-Recovery-Offline-Audit-Final-20261102.json`, `Yash-Primary-Derived-Recovery-Verification-20261102.json`, `Yash-Primary-Unmatched-Invocation-Scope-20261102.json`, and `Yash-Interrupted-Replication-Independent-Audit-20261102.json` under `testing/nov2-orchestration-2026-11-02`. The dated preparation/startup sections below are historical method records.
 
 ## Research question
 
@@ -18,7 +40,7 @@ An explicit orchestrator maintains public question/evidence, current draft, revi
 2. **Reviewer:** independently checks that answer against the supplied public passages and returns approval plus feedback.
 3. **Challenger, when invoked:** supplies an alternative/check and citations; its actual response is passed into the writer's revision prompt. It uses the existing HotpotQA passages, not an external search tool or hidden evidence.
 
-The Strands verifier/reranker provides another observation. It is not counted as a third language-model agent. Every mixed episode starts with writer → reviewer → verifier. The orchestrator then executes:
+Vedanshi's separate Hobson/Decider verifier and BGE reranker provide another observation. This score is not an AWS Strands SDK correctness score, and the verifier is not counted as a third language-model role. The Strands SDK runs the separate role agents against Qwen served on the Colab GPU; no Bedrock or AWS-hosted inference is claimed. Every mixed episode starts with writer → reviewer → verifier. The orchestrator then executes:
 
 | Action | Actual transition |
 |---|---|
@@ -26,7 +48,7 @@ The Strands verifier/reranker provides another observation. It is not counted as
 | REVISE | Writer uses current reviewer feedback → reviewer checks the new draft → verifier scores it. |
 | INVOKE | Challenger returns an evidence-linked check → writer uses it → reviewer checks the revision → verifier scores it. |
 
-There is at most one challenger invocation, three drafts, and ten attempted role calls in matched arms. One format correction is allowed and consumes that call budget. A budget cap is recorded separately from policy approval. The final answer is the **last returned draft** for every primary comparison.
+There is at most one INVOKE transition, three drafts, and ten attempted role calls in matched arms. A transport-completed response rejected by subsequent parsing may receive one format correction, consuming another call inside that budget; one INVOKE transition can therefore make two physical challenger calls. Transport/server-validation exceptions fail the branch or episode. A budget cap is recorded separately from policy approval. The final answer is the **last returned draft** for every primary comparison.
 
 ## Training and freeze
 
@@ -62,7 +84,9 @@ Primary comparisons are learned3 against matched strands, binary_and, and always
 
 Record answer EM/F1, supporting-fact and joint metrics, attempted/completed role calls, attempted writer iterations, route counts, critic calls, response tokens, wall time, failure coverage, and termination reasons. Raw response receipts correlate client and response IDs; missing or invalid receipts yield unknown tokens, not zero. Verifier/reranker compute and training collection costs are reported separately from test role-response tokens. No dollar-cost saving is inferred from token counts alone.
 
-All planned questions remain in denominators, including failed, interrupted, and pending attempts. Two runs on the same panel are **20 distinct questions, not 40 independent questions**. This is a small paired pilot. Report negative, identical, and positive results; do not change the frozen policy from held-out feedback.
+The full-plan auditor retains all 20 planned questions and explicitly reports pending coverage; its zero-filled incomplete totals are not final quality estimates. The separately labeled descriptive prefix above uses only the same first 11 fully attempted planned questions, retains all failures at zero and leaves the remaining nine questions unknown. Two runs on the same panel are **20 distinct questions, not 40 independent questions**. This is a small paired pilot. Report negative, identical, and positive results; do not change the frozen policy from held-out feedback.
+
+Test arms make separate initial writer calls rather than sharing one cached draft. In the recovered first 11 questions, their initial draft objects match across all seven arms. Common-state cloning is used during action-branch training. Generation is greedy; seeds 0/1 select the deployed learned checkpoint and cyclic arm order, not language-model sampling randomness. The two recorded collections have identical training-example bytes and train/development record digests; corresponding fitted weight/bias arrays match, while provenance makes head payload hashes differ.
 
 ## Manual start and outputs
 
@@ -70,7 +94,7 @@ Use the new Yash primary notebook on one provisioned account and the new Yash re
 
 The runner exports `summary.json`, `results.csv`, `Yash-Nov2-Study-Report.txt`, `Yash-Nov2-Answer-F1.png`, all five heads, the freeze/configuration, public state/route traces, training branches, and physical agent/critic receipts. The notebook exports an evidence ZIP, excluding model weights and caches. Keep it for review and the professor/poster writeup.
 
-The automatic pre-deadline stop targets November 2 at 09:20 Chicago, leaving time to export before the requested 09:30 cutoff. Runtime availability and manual startup still determine how much completes. An interrupted export is evidence of partial work, not a completed study. New tau-squared testing is outside this HotpotQA reopening; earlier tau artifacts remain separate.
+New/repaired templates stop and export at **08:50 Central** for the user's revised **09:00** delivery target. The original primary notebook was started with the earlier 09:20 stop and its backend is currently unverified; this document does not claim that its live deadline was changed or that it has stopped. The repaired replication is queued, awaiting its current presence check. Runtime availability and user presence still determine whether a full recovery completes. An interrupted export is evidence of partial work, not a completed study. New tau-squared testing is outside this HotpotQA reopening; earlier tau artifacts remain separate.
 
 ## Pre-benchmark engineering checkpoint
 
@@ -78,7 +102,7 @@ At the November 2, approximately 01:40 Central checkpoint, both new Yash Drive c
 
 The first attempt exposed an HTTP route-binding error, corrected by binding the actual FastAPI `Request` class before route registration and verifying a real streaming HTTP request on CPU. The next two attempts exposed invalid writer messages: descriptive citation keys, then an extra trailing quote and numeric citation titles despite explicit examples. The strict parser rejected these messages. No citation was guessed or repaired into a scored answer. Failed engineering attempts and their raw-response/archive locators are retained separately from benchmark denominators and costs.
 
-The new schema-constrained implementation is being qualified before any benchmark collection. It applies identically across every comparison arm, preserves existing token/context/call limits, and retains strict final validation. Each request gets a fresh parser and token enforcer; only tokenizer preprocessing is cached. Citation objects use the existing accepted `title`/`sentence_index` contract. Required fields and JSON types are constrained during decoding; negative sentence indices, incomplete output, duplicate keys and malformed raw JSON remain rejected after generation, with physical receipts/correlation retained before an HTTP failure. A formatting constraint establishes message structure; it does not establish answer correctness or valid supporting evidence. This checkpoint is a record of startup failures and a pending live qualification, not evidence that the classifier or orchestration improves accuracy.
+At that checkpoint, the new schema-constrained implementation was awaiting qualification before benchmark collection. It applies identically across every comparison arm, preserves existing token/context/call limits, and retains strict final validation. Each request gets a fresh parser and token enforcer; only tokenizer preprocessing is cached. Citation objects use the existing accepted `title`/`sentence_index` contract. Required fields and JSON types are constrained during decoding; negative sentence indices, incomplete output, duplicate keys and malformed raw JSON remain rejected after generation, with physical receipts/correlation retained before an HTTP failure. A formatting constraint establishes message structure; it does not establish answer correctness or valid supporting evidence. This historical checkpoint records startup failures; later raw evidence above separately verifies successful qualification and partial benchmark work.
 
 `requirements-nov2-colab.txt` preserves the original dependencies and adds `lm-format-enforcer==0.11.3`. Its released Transformers helper uses an import removed in Transformers 5.17, so the owned runtime adapts the library's MIT-licensed tokenizer bridge and uses the public `TokenEnforcer` and `generate(prefix_allowed_tokens_fn=...)` APIs without changing the model or installed package. Effective limits are frozen: at most 20 citation items, 12 consecutive whitespace characters, and flexible field order. The library does not enforce numeric `minimum`; strict postvalidation enforces nonnegative integer indices. It can filter some valid merged-token encodings of escaped quotes, although an alternative tokenization of the same JSON is accepted. Tokenizer checks establish these limits, not model accuracy. Primary references: [released integration](https://github.com/noamgat/lm-format-enforcer/blob/v0.11.3/lmformatenforcer/integrations/transformers.py), [release](https://pypi.org/project/lm-format-enforcer/0.11.3/). A reporting repair also retains measured token subsets when an episode's full token total is unknown; it does not replace an unknown total with zero.
 
