@@ -236,6 +236,8 @@ def _validate_record(record: Mapping[str, Any], arms: set[str]) -> None:
         raise ValueError("Attempted calls cannot be fewer than completed role calls")
     if record["total_tokens"] is not None:
         _count(record["total_tokens"], "total_tokens")
+    if "known_recorded_tokens" in record:
+        _count(record["known_recorded_tokens"], "known_recorded_tokens")
     _finite(record["elapsed_seconds"], "elapsed_seconds")
     if (not isinstance(record["actions"], list)
             or any(not isinstance(action, str) or action not in {"STOP", "REVISE", "INVOKE"}
@@ -276,10 +278,10 @@ def summarize(records: Sequence[Mapping[str, Any]], arms: Sequence[str], planned
         calls = Counter()
         for row in rows:
             calls.update(row["agent_calls"])
-        known_tokens = sum(row["total_tokens"] for row in rows if row["total_tokens"] is not None)
+        known_tokens = sum(row.get("known_recorded_tokens", row["total_tokens"] or 0) for row in rows)
         journal_complete = len(rows) == planned_count and all(
             row["total_tokens"] is not None and row.get("journal_complete", True) is True for row in rows)
-        tokens = known_tokens if journal_complete else None
+        tokens = sum(row["total_tokens"] for row in rows) if journal_complete else None
         elapsed = sum(row["elapsed_seconds"] for row in rows)
         iterations = sum(row["iterations"] for row in rows)
         summaries[arm] = {

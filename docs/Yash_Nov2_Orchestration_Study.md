@@ -1,6 +1,6 @@
 # Yash — November 2 orchestration study
 
-Prepared November 2, 2026 (America/Chicago). **Prepared for manual Colab execution; no new GPU benchmark results are claimed by this document.** Teammate files and previous results are preserved. The user approved this new study and selected manual Colab startup rather than local GPU execution.
+Prepared November 2, 2026 (America/Chicago). **No new GPU benchmark results are claimed by this document.** Teammate files and previous results are preserved. The user approved this new study and selected Colab rather than local GPU execution. Subsequent account/presence/Drive approvals allowed both new Yash Drive copies to be started; the pre-benchmark engineering checkpoint below supersedes the initial manual-start-only status.
 
 ## Research question
 
@@ -71,6 +71,18 @@ Use the new Yash primary notebook on one provisioned account and the new Yash re
 The runner exports `summary.json`, `results.csv`, `Yash-Nov2-Study-Report.txt`, `Yash-Nov2-Answer-F1.png`, all five heads, the freeze/configuration, public state/route traces, training branches, and physical agent/critic receipts. The notebook exports an evidence ZIP, excluding model weights and caches. Keep it for review and the professor/poster writeup.
 
 The automatic pre-deadline stop targets November 2 at 09:20 Chicago, leaving time to export before the requested 09:30 cutoff. Runtime availability and manual startup still determine how much completes. An interrupted export is evidence of partial work, not a completed study. New tau-squared testing is outside this HotpotQA reopening; earlier tau artifacts remain separate.
+
+## Pre-benchmark engineering checkpoint
+
+At the November 2, approximately 01:40 Central checkpoint, both new Yash Drive copies had connected to Tesla T4 GPUs and their approved Drives. Three startup attempts per account had exited during the invented Paris qualification; no training, development, or test questions had been collected and no new study head had been fitted.
+
+The first attempt exposed an HTTP route-binding error, corrected by binding the actual FastAPI `Request` class before route registration and verifying a real streaming HTTP request on CPU. The next two attempts exposed invalid writer messages: descriptive citation keys, then an extra trailing quote and numeric citation titles despite explicit examples. The strict parser rejected these messages. No citation was guessed or repaired into a scored answer. Failed engineering attempts and their raw-response/archive locators are retained separately from benchmark denominators and costs.
+
+The new schema-constrained implementation is being qualified before any benchmark collection. It applies identically across every comparison arm, preserves existing token/context/call limits, and retains strict final validation. Each request gets a fresh parser and token enforcer; only tokenizer preprocessing is cached. Citation objects use the existing accepted `title`/`sentence_index` contract. Required fields and JSON types are constrained during decoding; negative sentence indices, incomplete output, duplicate keys and malformed raw JSON remain rejected after generation, with physical receipts/correlation retained before an HTTP failure. A formatting constraint establishes message structure; it does not establish answer correctness or valid supporting evidence. This checkpoint is a record of startup failures and a pending live qualification, not evidence that the classifier or orchestration improves accuracy.
+
+`requirements-nov2-colab.txt` preserves the original dependencies and adds `lm-format-enforcer==0.11.3`. Its released Transformers helper uses an import removed in Transformers 5.17, so the owned runtime adapts the library's MIT-licensed tokenizer bridge and uses the public `TokenEnforcer` and `generate(prefix_allowed_tokens_fn=...)` APIs without changing the model or installed package. Effective limits are frozen: at most 20 citation items, 12 consecutive whitespace characters, and flexible field order. The library does not enforce numeric `minimum`; strict postvalidation enforces nonnegative integer indices. It can filter some valid merged-token encodings of escaped quotes, although an alternative tokenization of the same JSON is accepted. Tokenizer checks establish these limits, not model accuracy. Primary references: [released integration](https://github.com/noamgat/lm-format-enforcer/blob/v0.11.3/lmformatenforcer/integrations/transformers.py), [release](https://pypi.org/project/lm-format-enforcer/0.11.3/). A reporting repair also retains measured token subsets when an episode's full token total is unknown; it does not replace an unknown total with zero.
+
+Local evidence: `testing/nov2-orchestration-2026-11-02/Yash-Live-Colab-Qualification-Failures-20261102.json` and its six saved browser-output views. Cloud archives have observed identities; their bytes had not yet been downloaded and independently hash-checked at this checkpoint.
 
 ## Separate paper summary
 

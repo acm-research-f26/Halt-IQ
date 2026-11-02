@@ -21,7 +21,8 @@ REPO = Path(__file__).resolve().parents[1]
 PLAN_PATH = "data/Yash_Nov2_HotpotQA_Plan.json"
 REQUIRED = {"haltiq_pair/nov2_orchestration.py", "haltiq_pair/nov2_policy.py",
             "haltiq_pair/nov2_protocol.py", "haltiq_pair/nov2_runner.py",
-            "haltiq_pair/nov2_runtime.py", "pyproject.toml", "requirements-colab.txt"}
+            "haltiq_pair/nov2_runtime.py", "pyproject.toml", "requirements-colab.txt",
+            "requirements-nov2-colab.txt"}
 FILENAMES = {"Primary": "Yash_HotpotQA_Orchestration_Primary_20261102.ipynb",
              "Replication": "Yash_HotpotQA_Orchestration_Replication_20261102.ipynb"}
 
@@ -39,7 +40,7 @@ def _safe_name(name):
     return bool(name and "\\" not in name and not path.is_absolute()
                 and all(part not in {"", ".", ".."} for part in path.parts)
                 and (re.fullmatch(r"haltiq_pair/[A-Za-z0-9_]+\.py", name)
-                     or name in {"pyproject.toml", "requirements-colab.txt"}))
+                     or name in {"pyproject.toml", "requirements-colab.txt", "requirements-nov2-colab.txt"}))
 
 
 def verify_payload(source_raw, manifest, plan_raw):
@@ -132,7 +133,7 @@ with zipfile.ZipFile(io.BytesIO(SOURCE_RAW)) as bundle:
         name = member.filename
         parts = pathlib.PurePosixPath(name)
         assert not parts.is_absolute() and "\\" not in name and all(p not in {"", ".", ".."} for p in parts.parts)
-        assert re.fullmatch(r"haltiq_pair/[A-Za-z0-9_]+\.py", name) or name in {"pyproject.toml", "requirements-colab.txt"}
+        assert re.fullmatch(r"haltiq_pair/[A-Za-z0-9_]+\.py", name) or name in {"pyproject.toml", "requirements-colab.txt", "requirements-nov2-colab.txt"}
         assert not member.is_dir() and member.file_size <= 2000000
         assert (member.external_attr >> 16) & 0o170000 in {0, 0o100000}, "Nonregular bundle member"
         raw = bundle.read(member)
@@ -159,7 +160,7 @@ with (ROOT/"Yash-Source-Manifest.json").open("x", encoding="utf-8") as stream:
         files=SOURCE_MANIFEST, plan_sha256=PLAN_SHA256, prepared_notebook_has_no_results=True), stream, indent=2)
 def checked(*arguments):
     subprocess.run(list(arguments), check=True, cwd=ROOT)
-checked(sys.executable, "-m", "pip", "install", "-q", "-r", str(ROOT/"requirements-colab.txt"),
+checked(sys.executable, "-m", "pip", "install", "-q", "-r", str(ROOT/"requirements-nov2-colab.txt"),
         "Pillow>=11,<13", "matplotlib>=3.9,<4")
 from importlib.metadata import PackageNotFoundError, version
 from packaging.version import Version
@@ -172,11 +173,12 @@ if torchao_version is not None and Version(torchao_version) < Version("0.16"):
     checked(sys.executable, "-m", "pip", "uninstall", "-y", "torchao")
 checked(sys.executable, "-m", "pip", "install", "-q", "--no-deps", "-e", str(ROOT))
 PINNED_PACKAGES = {"strands-agents":"1.62.0", "strands-decider":"0.2.0", "transformers":"5.17.0",
-                   "peft":"0.21.0", "datasets":"5.1.0", "fastapi":"0.162.0", "uvicorn":"0.54.0"}
+                   "peft":"0.21.0", "datasets":"5.1.0", "fastapi":"0.162.0", "uvicorn":"0.54.0",
+                   "lm-format-enforcer":"0.11.3"}
 for package, expected in PINNED_PACKAGES.items():
     assert version(package) == expected, ("Installed package differs from frozen requirements", package, version(package), expected)
 # A new interpreter avoids trusting a notebook kernel's previously imported packages.
-checked(sys.executable, "-B", "-c", "import strands, strands_decider, transformers, peft, datasets, fastapi, uvicorn, torch; print('Fresh-child dependency import smoke passed; torch=' + torch.__version__)")
+checked(sys.executable, "-B", "-c", "import strands, strands_decider, transformers, peft, datasets, fastapi, uvicorn, torch, lmformatenforcer; from haltiq_pair.nov2_runtime import constraint_dependencies; constraint_dependencies(); print('Fresh-child dependency import smoke passed; torch=' + torch.__version__)")
 import torch
 if not torch.cuda.is_available():
     raise RuntimeError("Select a GPU under Runtime > Change runtime type. No model inference was started.")

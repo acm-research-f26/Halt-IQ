@@ -210,6 +210,16 @@ class FailureInclusiveSummaryTests(unittest.TestCase):
         self.assertTrue(final["complete"])
         self.assertFalse(final["all_episodes_succeeded"])
 
+    def test_partially_unknown_episode_retains_its_measured_token_subset(self):
+        partial = record(row(0)["id"], tokens=None)
+        partial["known_recorded_tokens"] = 13
+        known = record(row(1)["id"], tokens=30)
+        arm = protocol.summarize([partial, known], ("combined",), 2)["arms"]["combined"]
+        self.assertEqual(arm["known_recorded_tokens"], 43)
+        self.assertIsNone(arm["total_tokens"])
+        self.assertIsNone(arm["mean_total_tokens"])
+        self.assertFalse(arm["journal_complete"])
+
     def test_rejects_duplicates_unknown_arms_overcoverage_and_invalid_bounds(self):
         good = record(row(0)["id"])
         for rows, arms, count in [([good, deepcopy(good)], ("combined",), 2),
