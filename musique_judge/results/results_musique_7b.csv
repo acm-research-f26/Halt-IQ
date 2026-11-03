@@ -1,0 +1,8 @@
+method,f1,em,tokens_pct,tokens_saved_pct
+Fixed 1,0.207,0.11,16.4,83.6
+Fixed 2,0.2245,0.135,33.1,66.9
+Fixed 6,0.2343,0.145,100.0,0.0
+Oracle stopping,0.2736,0.17,18.5,81.5
+Answer repeats,0.2343,0.145,42.7,57.3
+Repeats + CoCT judge,0.2325,0.13,56.0,44.0
+Repeats + direct judge,0.2495,0.145,46.6,53.4

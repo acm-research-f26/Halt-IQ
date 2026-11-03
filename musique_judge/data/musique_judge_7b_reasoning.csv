@@ -1,0 +1,131 @@
+id,round,old,new,f1_old,f1_new,label,coct,coct_tokens,direct,direct_tokens
+2hop__802991_443552,2,The capital of the county where Fort Deposit is located is Montgomery,"Fort Deposit is located in Lowndes County, Alabama, United States",0.0,0.1667,help,BETTER,8309,BETTER,2666
+2hop__802991_443552,3,"Fort Deposit is located in Lowndes County, Alabama, United States","Lowndes County, Alabama, United States",0.1667,0.2857,help,WORSE,8341,WORSE,2644
+2hop__25788_25855,2,Answer: Power-off USB,PowerShare,0.0,1.0,help,WORSE,9956,BETTER,3186
+2hop__276637_126089,2,Johan Remkes served as the King's Commissioner of North Holland from 2010,Ernest Rutherford,0.3077,0.0,hurt,WORSE,8945,WORSE,2838
+3hop1__273571_834494_34053,2,The wettest year for the city in the same county as Summit was 1905 with 24.17 inches of precipitation,1905,0.1176,1.0,help,BETTER,8343,BETTER,2678
+2hop__141456_6455,2,GNU IceCat,Mozilla Firefox,0.0,1.0,help,BETTER,7605,BETTER,2428
+4hop3__507819_88460_30152_20999,2,The Ajuran Empire and the Ottomans,Myanmar,0.2222,0.0,hurt,WORSE,9635,WORSE,3066
+2hop__690412_526810,2,Gulf of Thailand,Pa Sak River,0.0,0.3333,help,WORSE,5744,BETTER,1774
+2hop__106864_80460,2,The 2017 population of the country where Bedari was made was 207.77 million,207.77 million,0.2857,0.8,help,BETTER,8400,BETTER,2677
+2hop__347652_47134,2,The mascot of the institution that owns Memorial Union is Benny Beaver,Benny Beaver,0.3333,1.0,help,BETTER,6276,BETTER,2001
+2hop__82378_158266,2,The top ballet company in the top bauxite-producing country is The Australian Ballet,Tulsa Ballet,0.3333,0.5,help,WORSE,8058,WORSE,2522
+2hop__756620_127399,2,2007,2005,0.0,1.0,help,BETTER,7518,BETTER,2375
+2hop__89403_602275,2,Einstein,Albert Einstein,0.5,0.8,help,BETTER,9370,BETTER,3019
+2hop__809785_606637,2,Secret City Records,No specific record label is mentioned for Adventures in Your Own Backyard in the provided paragraphs,1.0,0.0,hurt,WORSE,4682,WORSE,1465
+2hop__809785_606637,3,No specific record label is mentioned for Adventures in Your Own Backyard in the provided paragraphs,Secret City Records,0.0,1.0,help,WORSE,4929,BETTER,1535
+2hop__809785_606637,4,Secret City Records,No specific record label is mentioned for Adventures in Your Own Backyard in the provided paragraphs,1.0,0.0,hurt,WORSE,4885,WORSE,1536
+2hop__809785_606637,5,No specific record label is mentioned for Adventures in Your Own Backyard in the provided paragraphs,Secret City Records,0.0,1.0,help,WORSE,4929,BETTER,1535
+2hop__809785_606637,6,Secret City Records,No specific record label is mentioned for Adventures in Your Own Backyard in the provided paragraphs,1.0,0.0,hurt,WORSE,4885,WORSE,1536
+4hop1__89632_32392_823060_610794,2,South Carolina,Virginia,0.6667,0.0,hurt,WORSE,10393,WORSE,3317
+2hop__53433_59035,2,The beautiful country used as a backdrop for the movie The Lord of the Rings was founded on 6 February 1840,6 February 1840,0.3158,1.0,help,WORSE,10167,BETTER,3251
+3hop2__326964_789654_7713,2,23 years,Not specified,0.4,0.0,hurt,WORSE,9062,WORSE,2939
+3hop2__90098_76623_10557,2,"The last name Sylvester originated from the Latin word ""silva,"" which means ""woodland",Latin,0.1538,0.6667,help,BETTER,10208,BETTER,3269
+2hop__14092_8311,2,"John III, Margrave of Brandenburg-Salzwedel, was crowned in 1216",1220,0.2,0.0,hurt,BETTER,7638,BETTER,2405
+2hop__83489_747874,2,Jamie Murray,Not enough information,1.0,0.0,hurt,WORSE,8985,BETTER,2877
+2hop__83489_747874,3,Not enough information,Andy Murray,0.0,0.5,help,WORSE,9033,BETTER,2903
+2hop__83489_747874,4,Andy Murray,Not enough information,0.5,0.0,hurt,WORSE,9082,WORSE,2900
+2hop__83489_747874,5,Not enough information,Andy Murray,0.0,0.5,help,WORSE,9039,BETTER,2899
+2hop__83489_747874,6,Andy Murray,Not enough information,0.5,0.0,hurt,WORSE,9082,WORSE,2900
+3hop1__572324_568433_47686,3,No specific information found,Philadelphia Greyhound Terminal,0.0,0.3333,help,WORSE,7623,BETTER,2420
+2hop__20685_712629,2,"The spouse of the British queen was Philip Mountbatten, Duke of Edinburgh",King Xerxes I of Persia,0.3333,0.0,hurt,WORSE,9086,WORSE,2919
+2hop__15650_77173,2,"The Ozark Mountains are located within the state of Oklahoma, where Robert Patton worked in May 2014",Missouri,0.125,0.0,hurt,WORSE,7334,WORSE,2345
+3hop1__103881_443779_52195,2,The president of the newly declared independent country that is part of the Commission of Truth and Friendship with the country that Tony Gunawan is from is Francisco Guterres,Francisco Guterres,0.1481,1.0,help,WORSE,11272,BETTER,3623
+2hop__71900_712629,2,"The spouse of the longest reigning British monarch is Prince Philip, Duke of Edinburgh","Prince Philip, Duke of Edinburgh",0.1429,0.2857,help,BETTER,8668,BETTER,2781
+3hop2__38326_92991_76291,2,2015,None provided,0.6667,0.0,hurt,WORSE,9088,WORSE,2899
+2hop__335418_279684,2,The New Orleans VooDoo,Pittsburgh Pirates,0.3333,1.0,help,BETTER,8323,BETTER,2680
+2hop__161151_42429,2,The French and Indian War ended in 1763,1763,0.2,0.5,help,BETTER,9210,BETTER,2959
+2hop__161151_42429,3,1763,10 February 1763,0.5,1.0,help,BETTER,9091,BETTER,2898
+4hop3__15567_29339_508306_70744,2,Answer: The University of South Carolina has more national championships between the two universities,The University of South Carolina has more national championships between the two universities,0.5,0.5333,help,BETTER,8782,BETTER,2817
+2hop__593397_224832,2,"Al Janoub Stadium is part of the Qatar Stars League, which is owned by Al-Janoub Group",The Qatar Stars League,0.3333,1.0,help,WORSE,9827,BETTER,3124
+2hop__485221_544917,2,Lake Superior,None,1.0,0.0,hurt,BETTER,7306,BETTER,2335
+2hop__39954_80940,2,The largest national park in Tanzania where hunters are estimated to spend fifty to one hundred times that of the average ecotourist is Katavi National Park,Katavi National Park,0.1481,0.6667,help,WORSE,8898,BETTER,2870
+2hop__862994_69048,2,The Chief Justice of Nigeria is Bart Magunda Katureebe,Bart Magunda Katureebe,0.1667,0.0,hurt,WORSE,5993,BETTER,1875
+2hop__71016_75184,2,Claudia Wells,Elisabeth Shue,1.0,0.0,hurt,BETTER,8918,BETTER,2835
+2hop__71016_75184,3,Elisabeth Shue,Claudia Wells,0.0,1.0,help,WORSE,8747,BETTER,2807
+2hop__71016_75184,4,Claudia Wells,Elisabeth Shue,1.0,0.0,hurt,BETTER,8792,BETTER,2807
+2hop__71016_75184,5,Elisabeth Shue,Claudia Wells,0.0,1.0,help,WORSE,8747,BETTER,2807
+2hop__71016_75184,6,Claudia Wells,Elisabeth Shue,1.0,0.0,hurt,BETTER,8792,BETTER,2807
+2hop__388523_75487,2,The federal leader of the Conservative Party of Canada is Andrew Scheer,Stephen Harper,0.3333,0.0,hurt,WORSE,7902,WORSE,2494
+2hop__92385_2072,2,"New York City is home to the New York Public Library, which is the largest public library system in the United States. The Cosbys reside in Brooklyn Heights, within the boundaries of this extensive ne",New York Public Library,0.1818,0.5714,help,BETTER,6637,BETTER,2090
+3hop1__144439_443779_52195,3,David Dacko,Francisco Guterres,0.0,1.0,help,WORSE,11515,WORSE,3706
+3hop1__857_846_7701,2,Nanjing became the Chinese national capital in 1127 when the Southern Song Dynasty moved its capital from Nanjing to Hangzhou,1127,0.1,0.0,hurt,WORSE,12063,WORSE,3890
+2hop__135963_486257,2,Physics,Quantum physics,1.0,0.6667,hurt,BETTER,7598,BETTER,2413
+2hop__94507_654855,2,The person that Adversary in the House is based on a member of the Socialist Party of America,Socialist Party of America,0.4444,1.0,help,BETTER,7184,BETTER,2271
+2hop__135822_46621,2,"The star to which Solgränd is named after, the Sun, was discovered to be the center of the solar system in the 3rd century BC by Aristarchus of Samos","The star to which Solgränd is named after, the Sun, was proposed to be the center of the solar system in the 3rd century BC by Aristarchus of Samos",0.2,0.2,tie,WORSE,9216,BETTER,2946
+2hop__700093_455653,2,Alfredo César Aguirre,Janatha Vimukthi Peramuna,0.0,0.0,tie,WORSE,6633,WORSE,2086
+2hop__365236_19320,2,UNAM,The paragraph does not provide information about Mario Pani's alma mater or any ranking associated with it,0.0,0.0,tie,WORSE,8900,BETTER,2866
+2hop__365236_19320,3,The paragraph does not provide information about Mario Pani's alma mater or any ranking associated with it,The National Autonomous University of Mexico (UNAM) holds the highest ranking in the Top 200 World University Ranking published by Times Higher Education (then called Times Higher Education Supplement,0.0,0.0,tie,WORSE,9033,BETTER,2903
+4hop1__161765_53706_795904_580996,2,Sacramento,Arizona State University,0.0,0.0,tie,WORSE,7661,WORSE,2514
+2hop__38030_23241,2,"According to Pew Research Center, in 2010, 46.5% of Nigeria's population was Christian, slightly bigger than the Muslim population of 45.5%",46.5%,0.0,0.0,tie,BETTER,12648,BETTER,4117
+2hop__276637_126089,3,Ernest Rutherford,Wilhelm Kaisen,0.0,0.0,tie,WORSE,9442,WORSE,3068
+2hop__276637_126089,4,Wilhelm Kaisen,The occupier of the area where Villa Welgelegen is located is unknown based solely on the provided information,0.0,0.0,tie,WORSE,9703,WORSE,3078
+2hop__7906_78851,2,New York Giants,None,0.0,0.0,tie,WORSE,8359,BETTER,2651
+2hop__20268_42004,2,Scotland,Spain,0.0,0.0,tie,WORSE,8247,WORSE,2618
+2hop__20268_42004,3,Spain,Scotland,0.0,0.0,tie,WORSE,8237,BETTER,2611
+2hop__20268_42004,4,Scotland,Spain,0.0,0.0,tie,WORSE,8239,WORSE,2612
+2hop__20268_42004,5,Spain,Scotland,0.0,0.0,tie,WORSE,8237,BETTER,2611
+2hop__20268_42004,6,Scotland,Spain,0.0,0.0,tie,WORSE,8239,WORSE,2612
+2hop__31085_23241,2,45.5%,49.3%,0.0,0.0,tie,WORSE,12418,BETTER,4002
+2hop__31085_23241,3,49.3%,"According to Pew, in 2010, 49.3% of Nigeria's population was Christian",0.0,0.0,tie,BETTER,12505,BETTER,4046
+2hop__31085_23241,4,"According to Pew, in 2010, 49.3% of Nigeria's population was Christian",49.3%,0.0,0.0,tie,BETTER,12452,BETTER,4043
+2hop__31085_23241,5,49.3%,"According to Pew, in 2010, 49.3% of Nigeria's population was Christian",0.0,0.0,tie,BETTER,12478,BETTER,4043
+2hop__31085_23241,6,"According to Pew, in 2010, 49.3% of Nigeria's population was Christian",49.3%,0.0,0.0,tie,BETTER,12452,BETTER,4043
+4hop1__726391_153080_33897_81096,2,No Indy Car race winner can be directly associated with Oklahoma City,Oklahoma City,0.0,0.0,tie,WORSE,8859,BETTER,2833
+3hop1__108833_720914_41132,2,The plague occurred 10 times in the city where the painter of The Bacchanal of the Andrians died,The plague occurred 10 times in the city where the painter of The Bacchanal,0.0,0.0,tie,WORSE,10849,BETTER,3454
+3hop1__108833_720914_41132,3,The plague occurred 10 times in the city where the painter of The Bacchanal,"The plague occurred multiple times in Tallinn, but without precise dates, we cannot specify the exact number",0.0,0.0,tie,BETTER,10969,BETTER,3584
+3hop1__109196_720914_41132,2,The plague occurred twice in the place of death of the creator of the Malchiostro Annunciation,2,0.0,0.0,tie,BETTER,8972,BETTER,2828
+2hop__731956_126089,2,"Castricum was in charge of the Special Administrator, Ms. Andri Antoniadou, who ran the legacy entity for two years, from March 2013 until 3 March 2015",Ms. Andri Antoniadou,0.0,0.0,tie,WORSE,9221,WORSE,2970
+3hop1__28404_160713_77246,2,Answer: Islam,Islam,0.0,0.0,tie,BETTER,11053,BETTER,3574
+4hop3__773800_152874_161616_77103,2,Switzerland,1800,0.0,0.0,tie,WORSE,9177,WORSE,2887
+4hop3__773800_152874_161616_77103,3,1800,N/A,0.0,0.0,tie,WORSE,9093,WORSE,2862
+4hop3__773800_152874_161616_77103,4,N/A,1800,0.0,0.0,tie,WORSE,8997,BETTER,2861
+4hop3__773800_152874_161616_77103,5,1800,N/A,0.0,0.0,tie,WORSE,9093,WORSE,2862
+4hop3__773800_152874_161616_77103,6,N/A,1800,0.0,0.0,tie,WORSE,8997,BETTER,2861
+2hop__33288_157788,2,"The Japanese invasion of Manchuria in 1931 was the first instance of a foreign power invading Manchuria, setting off a chain reaction of conflicts that eventually led to World War II",Japan,0.0,0.0,tie,WORSE,9288,BETTER,2984
+4hop2__105527_14670_8987_8974,2,Vietnam,Poland,0.0,0.0,tie,WORSE,7577,WORSE,2388
+2hop__2299_1783,2,William Lafayette Strong,"No specific mayor is mentioned during the historical period of ""The Outsiders",0.0,0.0,tie,WORSE,6881,WORSE,2228
+2hop__635185_141338,2,Brooklyn College,Wachusett Shirt Company,0.0,0.0,tie,WORSE,7272,BETTER,2306
+2hop__635185_141338,3,Wachusett Shirt Company,Brooklyn College,0.0,0.0,tie,BETTER,7602,BETTER,2375
+2hop__635185_141338,4,Brooklyn College,Wachusett Shirt Company,0.0,0.0,tie,WORSE,7463,WORSE,2489
+2hop__635185_141338,5,Wachusett Shirt Company,Brooklyn College,0.0,0.0,tie,BETTER,7602,BETTER,2375
+2hop__635185_141338,6,Brooklyn College,Wachusett Shirt Company,0.0,0.0,tie,WORSE,7463,WORSE,2489
+4hop1__199881_378185_282674_759393,2,"Appleton, Wisconsin",Baranya County,0.0,0.0,tie,WORSE,5959,WORSE,1872
+4hop2__161602_474028_88460_63559,2,1986,"The paragraph does not contain any relevant information regarding the change in Burma's name or the relationship between the country that hosted the tournament and the location of A Don. Thus, there i",0.0,0.0,tie,WORSE,8941,BETTER,2893
+4hop2__161602_474028_88460_63559,3,"The paragraph does not contain any relevant information regarding the change in Burma's name or the relationship between the country that hosted the tournament and the location of A Don. Thus, there i",1986,0.0,0.0,tie,WORSE,9101,WORSE,2918
+4hop2__161602_474028_88460_63559,4,1986,"The paragraph does not contain any relevant information regarding the change in Burma's name or the relationship between the country that hosted the tournament and the location of A Don. Thus, there i",0.0,0.0,tie,WORSE,9047,WORSE,2918
+4hop2__161602_474028_88460_63559,5,"The paragraph does not contain any relevant information regarding the change in Burma's name or the relationship between the country that hosted the tournament and the location of A Don. Thus, there i",1986,0.0,0.0,tie,WORSE,9101,WORSE,2918
+4hop2__161602_474028_88460_63559,6,1986,"The paragraph does not contain any relevant information regarding the change in Burma's name or the relationship between the country that hosted the tournament and the location of A Don. Thus, there i",0.0,0.0,tie,WORSE,9047,WORSE,2918
+2hop__581084_828685,2,"The author of ""Ravenswood: The Steelworkers' Victory and the Revival of American Labor"" employed by the Northwestern Elevated Railroad",Kate Bronfenbrenner,0.0,0.0,tie,WORSE,7490,BETTER,2362
+2hop__133241_33564,2,1949,1950,0.0,0.0,tie,WORSE,7580,BETTER,2392
+3hop1__572324_568433_47686,2,"Kristiansand, Norway",No specific information found,0.0,0.0,tie,WORSE,7696,WORSE,2457
+3hop1__131829_39743_24526,2,"The average winter daytime temperature in the region containing Richmond, in the state where WXBX is located, is around 20-25°C (68-77°F)",20-25°C (68-77°F),0.0,0.0,tie,WORSE,13539,BETTER,4363
+4hop1__726152_153080_33897_81096,2,Answer: None,None,0.0,0.0,tie,WORSE,10997,WORSE,3628
+2hop__779424_75487,2,The federal leader of the party that Pierre-Hugues Boisvenu is a member of is Stephen Harper,No information provided,0.0,0.0,tie,WORSE,8551,BETTER,2725
+2hop__779424_75487,3,No information provided,Stephen Harper,0.0,0.0,tie,BETTER,8307,BETTER,2628
+2hop__678516_179720,2,"Ruby Loftus was married to the creator of the painting ""Ruby Loftus Screwing a Breech Ring,"" which features her working at an industrial lathe during World War II","Ruby Loftus was married to the creator of the painting ""Ruby Loftus Screwing a Breech Ring,"" which features her working at an industrial lathe during World War II. The painting was commissioned by the",0.0,0.0,tie,BETTER,7681,BETTER,2438
+2hop__412633_15781,2,**Final Line:** They argued that governments derive from consent rather than rulers' authority.,They argued that governments derive from consent rather than rulers' authority,0.0,0.0,tie,BETTER,9455,BETTER,3036
+3hop2__304722_330033_63959,2,1963–64,The last time Tony Richards' team beat the 1894-95 FA Cup Winner was in 1963 when they defeated Aston Villa 4–0 in the FA Cup Final,0.0,0.0,tie,WORSE,13098,WORSE,4227
+3hop1__103890_10659_67187,2,"Ágnes Konkoly is from Hungary, and many expelled French Jews relocated to Alsace, where they formed a distinct Jewish community",France,0.0,0.0,tie,BETTER,12192,BETTER,3965
+2hop__862994_69048,3,Bart Magunda Katureebe,Gloria Kemasuode,0.0,0.0,tie,WORSE,6046,WORSE,1867
+2hop__862994_69048,4,Gloria Kemasuode,Bart Magunda Katureebe,0.0,0.0,tie,WORSE,6157,WORSE,1889
+2hop__862994_69048,5,Bart Magunda Katureebe,Gloria Kemasuode,0.0,0.0,tie,WORSE,6000,WORSE,1889
+2hop__862994_69048,6,Gloria Kemasuode,Bart Magunda Katureebe,0.0,0.0,tie,WORSE,6157,WORSE,1889
+3hop1__831499_228453_10972,2,2011-2015,1866,0.0,0.0,tie,WORSE,7426,WORSE,2325
+3hop1__831499_228453_10972,3,1866,"- Since the text clearly indicates that John J. Barton was the first mayor of Indianapolis, we can conclude that the city where Barton Premium Blend's manufacturer is headquartered (Indianapolis) elec",0.0,0.0,tie,WORSE,7631,WORSE,2514
+3hop1__831499_228453_10972,4,"- Since the text clearly indicates that John J. Barton was the first mayor of Indianapolis, we can conclude that the city where Barton Premium Blend's manufacturer is headquartered (Indianapolis) elec",1970,0.0,0.0,tie,WORSE,7192,WORSE,2366
+3hop1__831499_228453_10972,5,1970,1973,0.0,0.0,tie,BETTER,7093,BETTER,2248
+3hop1__831499_228453_10972,6,1973,1850,0.0,0.0,tie,WORSE,7621,WORSE,2468
+4hop2__567956_39078_8987_8974,2,Azerbaijan,Albania,0.0,0.0,tie,WORSE,9453,WORSE,3032
+2hop__388523_75487,3,Stephen Harper,The federal leader of the party that James Rajotte is a member of is not specified in the provided information,0.0,0.0,tie,WORSE,7836,WORSE,2519
+2hop__622308_61845,2,Malcolm Graham,Barnsley,0.0,0.0,tie,WORSE,8130,BETTER,2590
+2hop__622308_61845,3,Barnsley,Falkland Islands Dependencies Survey,0.0,0.0,tie,WORSE,8447,WORSE,2786
+4hop1__47210_53706_795904_580996,2,Dahongliutan,California,0.0,0.0,tie,BETTER,7547,BETTER,2367
+4hop1__47210_53706_795904_580996,3,California,Nevada,0.0,0.0,tie,WORSE,7568,BETTER,2418
+2hop__9930_21567,2,"Hampartsoum Limondjian introduced the Hamparsum notation, which was instrumental in the transcription and survival of thousands of pieces of music in the Ottoman Empire",Hampartsoum Limondjian,0.0,0.0,tie,BETTER,8738,BETTER,2799
+4hop1__146971_698949_157828_162309,2,The Federal Republic of Yugoslavia,1992,0.0,0.0,tie,WORSE,10224,BETTER,3211
+3hop1__144439_443779_52195,2,Xanana Gusmão,David Dacko,0.0,0.0,tie,WORSE,11148,WORSE,3617
+2hop__575188_342798,2,The child of Mahmoud Mirza's father is Abbas Mirza,Abbas Mirza,0.0,0.0,tie,WORSE,5595,BETTER,1769
+2hop__575188_342798,3,Abbas Mirza,The child of Mahmoud Mirza's father is not explicitly mentioned in the provided paragraphs,0.0,0.0,tie,WORSE,6076,WORSE,1965
+2hop__663184_57816,2,The U.S. News ranking of the law school at Bruce Nissen's employer is 18th nationally,18th nationally,0.0,0.0,tie,WORSE,9130,BETTER,2908
+3hop1__857_846_7701,3,1127,1421,0.0,0.0,tie,WORSE,11898,BETTER,3796
